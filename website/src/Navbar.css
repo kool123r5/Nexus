@@ -1,0 +1,30 @@
+.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 3em;
+    background-color: black;
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    position: fixed;
+    color: white;
+}
+
+.home {
+    left: 1.5em;
+}
+
+.studentForum {
+    left: 7em;
+}
+
+.schoolHub {
+    left: 17em;
+}
+
+.profile {
+    left: 87em;
+}

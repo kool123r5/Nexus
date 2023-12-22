@@ -8,13 +8,13 @@ export default function Navbar() {
                 <a className="home" href="/">
                     Home
                 </a>
-                <a className="studentForum" href="/">
+                <a className="studentForum" href="/forum">
                     Student Forum
                 </a>
-                <a className="schoolHub" href="/">
+                <a className="schoolHub" href="/school">
                     School Hub
                 </a>
-                <a className="profile" href="/">
+                <a className="profile" href="/profile">
                     Profile
                 </a>
             </div>

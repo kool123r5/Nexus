@@ -23,9 +23,14 @@ export default function Navbar() {
                         Profile
                     </a>
                 ) : (
-                    <a className="login" href="/login">
-                        Login
-                    </a>
+                    <>
+                        <a className="signup" href="/signup">
+                            Sign Up
+                        </a>
+                        <a className="login" href="/login">
+                            Login
+                        </a>
+                    </>
                 )}
             </div>
         </>

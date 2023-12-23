@@ -41,6 +41,10 @@
     right: 2em;
 }
 
+.signup {
+    right: 6em;
+}
+
 @media (prefers-color-scheme: light) {
     .navbar {
         background-color: white;

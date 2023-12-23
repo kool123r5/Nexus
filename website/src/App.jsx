@@ -1,16 +1,23 @@
-import { useState } from "react";
 import "./App.css";
-import Navbar from "./Navbar";
+import Home from "./Home";
+import Forum from "./Forum";
+import School from "./School";
+import Profile from "./Profile";
+import Login from "./Login";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
-    const [count, setCount] = useState(0);
     return (
         <>
-            <Navbar />
-            <div className="app">
-                <p>{count}</p>
-                <button onClick={() => setCount(count + 1)}>Click to update count</button>
-            </div>
+            <Router>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/forum" element={<Forum />} />
+                    <Route path="/school" element={<School />} />
+                    <Route path="/profile" element={<Profile />} />
+                    <Route path="/login" element={<Login />} />
+                </Routes>
+            </Router>
         </>
     );
 }

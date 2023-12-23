@@ -1,7 +1,11 @@
 import {} from "react";
+import { useAuthContext } from "./hooks/useAuthContext";
 import "./Navbar.css";
 
 export default function Navbar() {
+    let authContext = useAuthContext();
+    let user = authContext.user;
+    let authIsReady = authContext.authIsReady;
     return (
         <>
             <div className="navbar">
@@ -14,9 +18,15 @@ export default function Navbar() {
                 <a className="schoolHub" href="/school">
                     School Hub
                 </a>
-                <a className="profile" href="/profile">
-                    Profile
-                </a>
+                {user != null && authIsReady == true ? (
+                    <a className="profile" href="/profile">
+                        Profile
+                    </a>
+                ) : (
+                    <a className="login" href="/login">
+                        Login
+                    </a>
+                )}
             </div>
         </>
     );

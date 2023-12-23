@@ -40,7 +40,8 @@
     left: 17em;
 }
 
-.profile {
+.profile,
+.login {
     right: 2em;
 }
 

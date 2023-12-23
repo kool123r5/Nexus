@@ -1,3 +1,14 @@
+:root {
+    --bar-width: 40px;
+    --bar-height: 8px;
+    --hamburger-gap: 6px;
+    --foreground: black;
+    --background: white;
+    --hamburger-margin: 8px;
+    --animation-timing: 200ms ease-in-out;
+    --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+}
+
 .navbar {
     position: absolute;
     top: 0;
@@ -6,6 +17,10 @@
     background-color: black;
     display: flex;
     align-items: center;
+}
+
+.menu {
+    display: none;
 }
 
 .navbar a {
@@ -27,4 +42,22 @@
 
 .profile {
     right: 2em;
+}
+
+@media (prefers-color-scheme: light) {
+    .navbar {
+        background-color: white;
+    }
+
+    .navbar a {
+        color: black;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        display: none;
+    }
+
+    /* the hamburger div should be display:block here when you make it  */
 }

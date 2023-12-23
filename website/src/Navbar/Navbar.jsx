@@ -3,6 +3,8 @@ import { useAuthContext } from "../hooks/useAuthContext";
 import "./Navbar.css";
 
 export default function Navbar() {
+    // TO-DO: HAMBURGER MENU WHEN WIDTH < 600 PX
+
     let authContext = useAuthContext();
     let user = authContext.user;
     let authIsReady = authContext.authIsReady;
@@ -23,9 +25,14 @@ export default function Navbar() {
                         Profile
                     </a>
                 ) : (
-                    <a className="login" href="/login">
-                        Login
-                    </a>
+                    <>
+                        <a className="signup" href="/signup">
+                            Sign Up
+                        </a>
+                        <a className="login" href="/login">
+                            Login
+                        </a>
+                    </>
                 )}
             </div>
         </>

@@ -21,23 +21,13 @@ export const useLogin = () => {
             // login
             const res = await projectAuth.signInWithEmailAndPassword(email, password);
 
-            // update online status
-            const documentRef = projectFirestore.collection("users").doc(res.user.uid);
-            const userDoc = await documentRef.get();
-            const userType = userDoc.data().type;
 
             // dispatch login action
 
-            if (userType !== "user") {
-                setUserFailure(true);
-                throw new Error("You must be an user to log in to this page.");
-            } else if (!projectAuth.currentUser.emailVerified) {
-                throw new Error("You must verify your email before logging in.");
-            } else {
-                if (userType === "user") {
-                    dispatch({ type: "LOGIN", payload: res.user });
-                }
-            }
+           
+            dispatch({ type: "LOGIN", payload: res.user });
+            
+        
             if (!isCancelled && !userFailure) {
                 setIsPending(false);
                 console.log(isPending);
@@ -58,5 +48,5 @@ export const useLogin = () => {
         return () => setIsCancelled(true);
     }, []);
 
-    return { login, isPending, error, type };
+    return { login, isPending, error };
 };

@@ -38,6 +38,7 @@ export const useLogin = () => {
                     dispatch({ type: "LOGIN", payload: res.user });
                 }
             }
+
             if (!isCancelled && !userFailure) {
                 setIsPending(false);
                 console.log(isPending);

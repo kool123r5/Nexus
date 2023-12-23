@@ -5,7 +5,7 @@ export default function Signup() {
     return (
         <>
             <Navbar />
-            <div>Signup</div>
+            <div>Sign Up</div>
         </>
     );
 }

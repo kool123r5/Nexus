@@ -1,5 +1,5 @@
 import {} from "react";
-import { useAuthContext } from "./hooks/useAuthContext";
+import { useAuthContext } from "../hooks/useAuthContext";
 import "./Navbar.css";
 
 export default function Navbar() {

@@ -1,7 +1,7 @@
-import firebase from 'firebase/app'
-import 'firebase/firestore' 
-import 'firebase/auth'
-import 'firebase/storage'
+import firebase from "firebase/app";
+import "firebase/firestore";
+import "firebase/auth";
+import "firebase/storage";
 
 const firebaseConfig = {
     apiKey: import.meta.env.VITE_REACT_APP_FIREBASE_API_KEY,
@@ -13,14 +13,12 @@ const firebaseConfig = {
     measurementId: import.meta.env.VITE_REACT_APP_FIREBASE_MEASUREMENT_ID,
 };
 
- firebase.initializeApp(firebaseConfig)
-
-
+firebase.initializeApp(firebaseConfig);
 
 //init services
 
-const projectFirestore=firebase.firestore()
-const projectAuth=firebase.auth()
-const projectStorage=firebase.storage()
-const timestamp=firebase.firestore.Timestamp
-export {projectFirestore,projectAuth,timestamp,projectStorage}
+const projectFirestore = firebase.firestore();
+const projectAuth = firebase.auth();
+const projectStorage = firebase.storage();
+const timestamp = firebase.firestore.Timestamp;
+export { projectFirestore, projectAuth, timestamp, projectStorage };

@@ -24,7 +24,7 @@ export const useLogin = () => {
 
             // dispatch login action
 
-           
+        
             dispatch({ type: "LOGIN", payload: res.user });
             
         
@@ -32,7 +32,6 @@ export const useLogin = () => {
                 setIsPending(false);
                 console.log(isPending);
                 setError(null);
-                setType("user");
                 console.log(type);
             }
         } catch (error) {

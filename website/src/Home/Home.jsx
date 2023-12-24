@@ -1,28 +1,43 @@
-import Card from "../Card/CardGrid";
+import { useState, useEffect } from "react";
 import Navbar from "../Navbar/Navbar";
 import "./Home.css";
 import { useCollection } from "../hooks/useCollection";
+import sortDocuments from "../functions/sortDocuments";
+import HomeSection from "../HomeSection/HomeSection";
+import getUniqueTypes from "../functions/getUniqueTypes";
 
 export default function Home() {
-    let collection = useCollection("activities");
-    let title = [];
-    let text = [];
-    let type = [];
-    if (collection.error != null) {
-        console.log("ERROR FETCHING DOCUMENTS");
+    const [sorted_documents, setSortedDocuments] = useState(null);
+    // when we make the model, change the query to reflect the type the user would actually want to see
+    const { documents, error } = useCollection("activities");
+
+    useEffect(() => {
+        if (error) {
+            console.log("ERROR FETCHING DOCUMENTS");
+        } else if (documents) {
+            const sortedDocs = sortDocuments(documents);
+            setSortedDocuments(sortedDocs);
+        }
+    }, [documents, error]);
+
+    let uniqueTypeArr = null;
+    if (sorted_documents) {
+        uniqueTypeArr = getUniqueTypes(sorted_documents);
     }
-    let array_of_documents = collection.documents;
-    if (array_of_documents != null) {
-        array_of_documents.forEach((document) => {
-            title.push(document.title);
-            text.push(document.text);
-            type.push(document.type);
-        });
-    }
+
     return (
         <>
             <Navbar />
-            <div>Home</div>
+            {uniqueTypeArr &&
+                uniqueTypeArr.map((uniqueTypeObj) => {
+                    return (
+                        <HomeSection
+                            key={uniqueTypeObj + Math.random()}
+                            uniqueTypeObj={uniqueTypeObj}
+                            sorted_documents={sorted_documents}
+                        />
+                    );
+                })}
         </>
     );
 }

@@ -1,64 +1,64 @@
 :root {
-    --bar-width: 40px;
-    --bar-height: 8px;
-    --hamburger-gap: 6px;
-    --foreground: black;
-    --background: white;
-    --hamburger-margin: 8px;
-    --animation-timing: 200ms ease-in-out;
-    --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+  --bar-width: 40px;
+  --bar-height: 8px;
+  --hamburger-gap: 6px;
+  --foreground: black;
+  --background: white;
+  --hamburger-margin: 8px;
+  --animation-timing: 200ms ease-in-out;
+  --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
 }
 
 .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 3.2em;
-    background-color: black;
-    display: flex;
-    align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 3.2em;
+  background-color: black;
+  display: flex;
+  align-items: center;
 }
 
 .navbar a {
-    position: fixed;
-    color: white;
+  position: fixed;
+  color: white;
 }
 
 .home {
-    left: 1.5em;
+  left: 1.5em;
 }
 
 .studentForum {
-    left: 7em;
+  left: 7em;
 }
 
 .schoolHub {
-    left: 17em;
+  left: 17em;
 }
 
 .profile,
 .login {
-    right: 2em;
+  right: 2em;
 }
 
 .signup {
-    right: 6em;
+  right: 6em;
 }
 
 @media (prefers-color-scheme: light) {
-    .navbar {
-        background-color: white;
-    }
+  .navbar {
+    background-color: white;
+  }
 
-    .navbar a {
-        color: black;
-    }
+  .navbar a {
+    color: black;
+  }
 }
 
 @media (max-width: 600px) {
-    .navbar {
-        display: none;
-    }
+  .navbar {
+    display: none;
+  }
 
-    /* the hamburger div should be display:block here when you make it  */
+  /* the hamburger div should be display:block here when you make it  */
 }

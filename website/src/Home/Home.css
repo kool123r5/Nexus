@@ -1,23 +1,23 @@
 .section {
-    position: absolute;
-    display: flex;
-    top: 10%;
+  position: absolute;
+  display: flex;
+  top: 10%;
 }
 
 #section2 {
-    top: 40%;
+  top: 40%;
 }
 
 .section h2 {
-    margin-bottom: -2%;
+  margin-bottom: -2%;
 }
 
 .sectionTitle {
-    padding-left: 1%;
-    margin-left: 2%;
-    text-align: left;
+  padding-left: 1%;
+  margin-left: 2%;
+  text-align: left;
 }
 
 .cardWrapper {
-    display: flex;
+  display: flex;
 }

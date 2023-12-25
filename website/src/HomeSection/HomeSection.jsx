@@ -12,13 +12,21 @@ export default function HomeSection({ uniqueTypeObj, sorted_documents }) {
         postObjectArray.push({
             title: documentObject.title,
             text: documentObject.text,
+            author: documentObject.username,
         });
     }
     return (
         <div>
             <h2>{type}</h2>
             {postObjectArray.map((postObject) => {
-                return <Card key={postObject + Math.random()} title={postObject.title} text={postObject.text} />;
+                return (
+                    <Card
+                        key={postObject + Math.random()}
+                        title={postObject.title}
+                        text={postObject.text}
+                        author={postObject.author}
+                    />
+                );
             })}
         </div>
     );

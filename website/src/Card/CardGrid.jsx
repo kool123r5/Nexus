@@ -30,11 +30,11 @@ function wrapText(text, chunkSize) {
     return wrappedText;
 }
 
-export default function Card({ title, text, author }) {
+export default function Card({ title, text, author, id }) {
     let wrapped_text = wrapText(text, 20);
 
     function showFullActivity() {
-        location.href = location.href + "activity";
+        location.href = location.href + "activity/" + id;
     }
 
     return (
@@ -51,4 +51,5 @@ Card.propTypes = {
     title: PropTypes.string,
     text: PropTypes.string,
     author: PropTypes.string,
+    id: PropTypes.string,
 };

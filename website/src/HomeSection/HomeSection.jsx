@@ -13,6 +13,7 @@ export default function HomeSection({ uniqueTypeObj, sorted_documents }) {
             title: documentObject.title,
             text: documentObject.text,
             author: documentObject.username,
+            id: documentObject.id,
         });
     }
     return (
@@ -25,6 +26,7 @@ export default function HomeSection({ uniqueTypeObj, sorted_documents }) {
                         title={postObject.title}
                         text={postObject.text}
                         author={postObject.author}
+                        id={postObject.id}
                     />
                 );
             })}

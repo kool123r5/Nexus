@@ -10,7 +10,7 @@ import Navbar from "./Navbar/Navbar";
 import Signup from "./Signup/Signup";
 import Activity from "./Activity/Activity";
 
-function App() {
+export default function App() {
     const { user, authIsReady } = useAuthContext();
 
     return (

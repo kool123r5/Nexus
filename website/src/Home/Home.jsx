@@ -1,39 +1,43 @@
-import Card from "../Card/CardGrid";
+import { useState, useEffect } from "react";
 import Navbar from "../Navbar/Navbar";
 import "./Home.css";
 import { useCollection } from "../hooks/useCollection";
-import { useAuthContext } from "../hooks/useAuthContext";
-import { useState } from "react";
-import { useEffect } from "react";
+import sortDocuments from "../functions/sortDocuments";
+import HomeSection from "../HomeSection/HomeSection";
+import getUniqueTypes from "../functions/getUniqueTypes";
+
 export default function Home() {
-  let collection = useCollection("activities");
-  let title = [];
+    const [sorted_documents, setSortedDocuments] = useState(null);
+    // when we make the model, change the query to reflect the type the user would actually want to see
+    const { documents, error } = useCollection("activities");
 
-  const { user } = useAuthContext();
-  const [isUser, setIsUser] = useState(false);
+    useEffect(() => {
+        if (error) {
+            console.log("ERROR FETCHING DOCUMENTS");
+        } else if (documents) {
+            const sortedDocs = sortDocuments(documents);
+            setSortedDocuments(sortedDocs);
+        }
+    }, [documents, error]);
 
-  if (user && isUser == false) {
-    setIsUser(true);
-  }
-  let text = [];
-  let type = [];
-  if (collection.error != null) {
-    console.log("ERROR FETCHING DOCUMENTS");
-  }
-  let array_of_documents = collection.documents;
-  if (array_of_documents != null) {
-    array_of_documents.forEach((document) => {
-      title.push(document.title);
-      text.push(document.text);
-      type.push(document.type);
-    });
-  }
+    let uniqueTypeArr = null;
+    if (sorted_documents) {
+        uniqueTypeArr = getUniqueTypes(sorted_documents);
+    }
 
-  return (
-    <>
-      <Navbar />
-      <div>Home</div>
-      {user && <p>Welcome: {user.displayName}</p>}
-    </>
-  );
+    return (
+        <>
+            <Navbar />
+            {uniqueTypeArr &&
+                uniqueTypeArr.map((uniqueTypeObj) => {
+                    return (
+                        <HomeSection
+                            key={uniqueTypeObj + Math.random()}
+                            uniqueTypeObj={uniqueTypeObj}
+                            sorted_documents={sorted_documents}
+                        />
+                    );
+                })}
+        </>
+    );
 }

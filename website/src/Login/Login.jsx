@@ -6,8 +6,8 @@ import { useLogin } from "../hooks/useLogin";
 export default function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState(null);
-    const { login, error, isPending, type } = useLogin();
-
+    const { login, error, isPending, loginWithGoogle } = useLogin();
+    
     const handleSubmit = async (e) => {
         e.preventDefault();
         login(email, password);
@@ -35,6 +35,9 @@ export default function Login() {
                         </button>
                     )}
                     {error && <div className="error">{error}</div>}
+                    <button onClick={loginWithGoogle}>Login with Google</button>
+
+                    {isPending && <p>Loading...</p>}
                 </form>
             </div>
         </>

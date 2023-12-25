@@ -15,7 +15,7 @@ import Navbar from "./Navbar/Navbar";
 import Signup from "./Signup/Signup";
 
 function App() {
-  const { user } = useAuthContext();
+  const { user,authIsReady } = useAuthContext();
 
   return (
     <>
@@ -26,7 +26,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/forum" element={<Forum />} />
           <Route path="/school" element={<School />} />
-          <Route path="/profile/:id" element={user ? <Profile></Profile>  :  <Navigate to="/" /> } />
+          {authIsReady && <Route path="/profile/:id" element={user ? <Profile></Profile>  :  <Navigate to="/" /> } />}
           <Route
             path="/login"
             element={user ? <Navigate to="/" /> : <Login />}

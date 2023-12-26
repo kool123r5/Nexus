@@ -21,6 +21,7 @@ export default function App() {
                     <Route path="/forum" element={<Forum />} />
                     <Route path="/school" element={<School />} />
                     {authIsReady && <Route path="/profile/:id" element={user ? <Profile /> : <Navigate to="/" />} />}
+
                     {authIsReady && (
                         <Route path="/activity/:id" element={user ? <Activity /> : <Navigate to={"/login"} />} />
                     )}

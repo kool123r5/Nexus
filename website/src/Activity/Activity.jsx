@@ -8,7 +8,6 @@ export default function Activity() {
     if (error) {
         console.log("ERROR FETCHING DOCUMENT");
     }
-    console.log(document);
     return (
         <div>
             Not sure what goes here for now, so just keeping this:

@@ -1,13 +1,13 @@
 import Navbar from "../Navbar/Navbar";
 import "./Login.css";
 import { useState } from "react";
-
 import { useLogin } from "../hooks/useLogin";
+
 export default function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState(null);
     const { login, error, isPending, loginWithGoogle } = useLogin();
-    
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         login(email, password);

@@ -1,0 +1,63 @@
+:root{
+    --orange: #FF6D00
+}
+
+
+
+
+.card{
+    background-color: white;
+    width: 250px;
+    height:100px;
+    padding-top:10px;
+    padding-bottom:10px;
+    margin:10px;
+    margin-left:30px;
+    border-radius: 7px;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    transition: all 1s;
+    text-align: center;
+    border-style: solid;
+    box-shadow: 0px 0px 0px 0px;
+    position: relative;
+}
+
+
+.card:hover{
+    transform: scaleX(1.2) scaleY(1.25);
+    transition-delay: 1s;
+    text-align: center;
+    border-style: solid;
+    box-shadow: 0px 0px 3px 3px var(--orange);
+    z-index: 1;
+}
+.card:hover .card_body_text,
+.card:hover .card_title_text{
+    transform:scaleX(0.833) scaleY(0.8);
+    transition-delay: 1s;
+}
+
+
+.card_body_text{
+    color: black;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    transition: all 1s;
+}
+
+
+
+
+.card_title_text{
+    color:black;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    transition: all 1s;
+}
+
+
+

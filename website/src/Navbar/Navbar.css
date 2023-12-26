@@ -47,6 +47,10 @@
 }
 
 @media (prefers-color-scheme: light) {
+    :root{
+        --foreground:white;
+        --background:black;
+    }
     .navbar {
         background-color: white;
     }
@@ -124,7 +128,7 @@
 }
 
 .sidebar nav a {
-    color: white;
+    color: var(--background);
 }
 
 .hamburger-menu:has(input:checked) + .sidebar {

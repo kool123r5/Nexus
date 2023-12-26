@@ -23,7 +23,7 @@ export default function Navbar() {
                     School Hub
                 </a>
                 {user != null && authIsReady == true ? (
-                    <Link className="profile" to={`profile/${user.uid}`}>
+                    <Link className="profile" exact to={`profile/${user.uid}`}>
                         Profile
                     </Link>
                 ) : (
@@ -52,7 +52,7 @@ export default function Navbar() {
                         School Hub
                     </a>
                     {user != null && authIsReady == true ? (
-                        <Link className="profile_burger" to={`profile/${user.uid}`}>
+                        <Link className="profile_burger" exact to={`profile/${user.uid}`}>
                             Profile
                         </Link>
                     ) : (

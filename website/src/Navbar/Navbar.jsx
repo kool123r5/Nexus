@@ -3,7 +3,7 @@ import { useAuthContext } from "../hooks/useAuthContext";
 import "./Navbar.css";
 import { useState, useEffect } from 'react'
 
-
+import { Link } from "react-router-dom";
 export default function Navbar() {
     // TO-DO: HAMBURGER MENU WHEN WIDTH < 600 PX
 
@@ -26,9 +26,9 @@ export default function Navbar() {
                     School Hub
                 </a>
                 {user != null && authIsReady == true ? (
-                    <a className="profile" href="/profile">
-                        Profile
-                    </a>
+                    <Link className="profile" to={`profile/${user.uid}`}>
+                    Profile
+                </Link>
                 ) : (
                     <>
                         <a className="signup" href="/signup">
@@ -55,9 +55,9 @@ export default function Navbar() {
                             School Hub
                         </a>
                         {user != null && authIsReady == true ? (
-                            <a className="profile_burger" href="/profile">
+                            <Link className="profile_burger" to={`profile/${user.uid}`}>
                                 Profile
-                            </a>
+                            </Link>
                         ) : (
                             <>
                                 <a className="signup_burger" href="/signup">

@@ -33,7 +33,10 @@ export default function Navbar() {
               </a>
               <a className="login" href="/login">
                 Login
-              </a>
+                
+              </a>      
+
+
             </>
           )}
         </div>

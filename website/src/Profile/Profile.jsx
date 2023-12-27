@@ -4,11 +4,13 @@ import { useDocument } from "../hooks/useDocument";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
+import ProjectFilter from "../Filter/ProjectFilter";
 
 export default function Profile() {
     const { id } = useParams();
     const { document, error } = useDocument("users", id);
-    const [activity,setActivity]=useState(null)
+    const [activities,setActivities]=useState(null)
+    const [filter, setFilter] = useState('All');
 
     const [searchQuery, setSearchQuery] = useState('');
     const [currentPage, setCurrentPage] = useState(1);
@@ -35,7 +37,7 @@ export default function Profile() {
 
       const activityDocs = await Promise.all(activityDocsPromises);
       console.log(activityDocs)
-      setActivity(activityDocs)
+      setActivities(activityDocs)
     }
   };
 
@@ -53,7 +55,43 @@ export default function Profile() {
     };
     
   
+    const filteredActivities = activities
+    ? activities.filter((document) => {
+        switch (filter) {
+          case 'All':
+            return true;
+          case "Completed":
+          case "Pending":
+            return document.completed === filter;
+          default:
+            return true;
+        }
+      })
+    : null;
+
     
+  
+
+    const searchedActivities = filteredActivities
+    ? filteredActivities.filter((document) =>
+        document.title.toLowerCase().includes(searchQuery.toLowerCase())
+      )
+    : null;
+
+    const lastRowIndex = currentPage * rowsPerPage;
+    const firstRowIndex = lastRowIndex - rowsPerPage;
+    const currentActivities = searchedActivities
+      ? searchedActivities.slice(firstRowIndex, lastRowIndex)
+      : null;
+
+      const handlePageChange = (pageNumber) => {
+        setCurrentPage(pageNumber);
+      };
+      
+
+  const totalPages = Math.ceil(
+    (searchedActivities?.length || 0) / rowsPerPage
+  );
     return (
         <>
             <Navbar />
@@ -63,12 +101,37 @@ export default function Profile() {
             {document && (
                 <div>
                     Profile
+                    <ProjectFilter changeFilter={changeFilter} />
+                    <input
+                type="text"
+                value={searchQuery}
+                onChange={changeSearchQuery}
+                placeholder="Search by name"
+              />
                     <p>Welcome: {document.displayName}</p>
                     <br></br>
                     <p>Your activities</p>
-                      {document.activities && <p>Will map through</p>}
-                      {!document.activities && <p>No activities yet</p>}
-                    <p>Other info.....</p>
+                      {currentActivities && currentActivities.map((document)=>(
+                        <>
+                        <p>{document.title}</p>
+                        </>
+                      )
+
+                      )}
+                      {!currentActivities && <p>No activities yet</p>}
+                    
+
+                    <pagination className="mt-3">
+            {Array.from({ length: totalPages }).map((_, index) => (
+              <item
+                key={index}
+                active={currentPage === index + 1}
+                onClick={() => handlePageChange(index + 1)}
+              >
+                {index + 1}
+              </item>
+            ))}
+          </pagination> 
                 </div>
             )}
         </>

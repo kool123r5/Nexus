@@ -3,7 +3,6 @@ import "./Signup.css";
 import { useState } from "react";
 import { useSignup } from "../hooks/useSignup";
 import useGoogleSignIn from "../hooks/useGoogleSignIn";
-import getDefaultPfp from "../functions/getDefaultPfp";
 
 export default function Signup() {
     const [email, setEmail] = useState("");
@@ -25,8 +24,6 @@ export default function Signup() {
             signup(email, password, confirmPassword, displayName, age, grade, location, activities, profilePicture);
         }
     };
-
-    const currentPfp = profilePicture || getDefaultPfp(displayName);
 
     const handleGoogleSignIn = async () => {
         signInWithGoogle();
@@ -77,10 +74,8 @@ export default function Signup() {
                         Activities: <input type={"text"} onChange={(e) => setActivities(e.target.value)}></input>
                     </label>
                     <label>
-                        Profile Picture: <input type={"file"} onChange={(e) => setProfilePicture(e.target.value)}></input>
+                        Profile Picture: <input type={"file"} onChange={(e) => setProfilePicture(e.target.files[0])}></input>
                     </label>
-                    <br />
-                    <img src={currentPfp} alt="" height={100} width={100} />
                     <br />
                     <br />
                     <button type="submit">Submit</button>

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { projectAuth, projectFirestore } from "../firebase/config";
 import { useNavigate } from "react-router-dom";
+import { projectStorage } from "../firebase/config";
 
 export const useSignup = () => {
     const [isCancelled, setIsCancelled] = useState(false);
@@ -26,8 +27,12 @@ export const useSignup = () => {
                 throw new Error("Passwords don't match");
             }
 
-            await res.user.updateProfile({ displayName });
-            console.log(res.user);
+            const uploadPath = `pfp/${res.user.uid}`;
+            const profilePic = await projectStorage.ref(uploadPath).put(pfp);
+            const url = await profilePic.ref.getDownloadURL();
+            console.log(url);
+
+            await res.user.updateProfile({ displayName, photoURL: url });
 
             // create a user document
             await projectFirestore.collection("users").doc(res.user.uid).set({
@@ -37,7 +42,8 @@ export const useSignup = () => {
                 grade,
                 userLocation,
                 activities,
-                pfp,
+                pfp: url,
+                friends: [],
             });
 
             if (!isCancelled) {

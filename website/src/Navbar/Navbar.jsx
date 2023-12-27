@@ -2,39 +2,58 @@ import {} from "react";
 import { useAuthContext } from "../hooks/useAuthContext";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 
 export default function Navbar() {
-    // TO-DO: HAMBURGER MENU WHEN WIDTH < 600 PX
 
     let authContext = useAuthContext();
     let user = authContext.user;
     let authIsReady = authContext.authIsReady;
+    const navigate = useNavigate();
+    const handleSignUpClick = () => {
+      navigate("/signup"); 
+    };
+    const handleHomeClick = () => {
+      navigate("/"); 
+    };
+    const handleForumClick = () => {
+      navigate("/forum");
+    };
+    const handleSchoolClick = () => {
+      navigate("/school");
+    };
+    const handleLoginClick = () => {
+      navigate("/login");
+    };
+
 
     return (
       <>
         <div className="navbar">
-          <a className="home" href="/">
+          <button className="home" onClick={handleHomeClick}>
             Home
-          </a>
-          <a className="studentForum" href="/forum">
+          </button>
+          <button className="studentForum" onClick={handleForumClick}>
             Student Forum
-          </a>
-          <a className="schoolHub" href="/school">
+          </button>
+          <button className="schoolHub" onClick={handleSchoolClick}>
             School Hub
-          </a>
+          </button>
           {user != null && authIsReady == true ? (
             <Link className="profile" exact to={`profile/${user.uid}`}>
               Profile
             </Link>
           ) : (
             <>
-              <a className="signup" href="/signup">
+            <div className="right-buttons">
+              <button className="signup" onClick={handleSignUpClick}>
                 Sign Up
-              </a>
-              <a className="login" href="/login">
+              </button>
+              <button className="login" onClick={handleLoginClick}>
                 Login
-                
-              </a>      
+              </button>
+            </div>   
 
 
             </>
@@ -45,27 +64,27 @@ export default function Navbar() {
         </label>
         <aside className="sidebar">
           <nav>
-            <a className="home_burger" href="/">
+            <button className="home_burger" onClick={handleHomeClick}>
               Home
-            </a>
-            <a className="studentForum_burger" href="/forum">
+            </button>
+            <button className="studentForum_burger" onClick={handleForumClick}>
               Student Forum
-            </a>
-            <a className="schoolHub_burger" href="/school">
+            </button>
+            <button className="schoolHub_burger" onClick={handleSchoolClick}>
               School Hub
-            </a>
+            </button>
             {user != null && authIsReady == true ? (
               <Link className="profile_burger" exact to={`profile/${user.uid}`}>
                 Profile
               </Link>
             ) : (
               <>
-                <a className="signup_burger" href="/signup">
+                <button className="signup_burger" onClick={handleSignUpClick}>
                   Sign Up
-                </a>
-                <a className="login_burger" href="/login">
+                </button>
+                <button className="login_burger" onClick={handleLoginClick}>
                   Login
-                </a>
+                </button>
               </>
             )}
           </nav>

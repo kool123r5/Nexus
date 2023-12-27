@@ -7,44 +7,77 @@
     --hamburger-margin: 8px;
     --animation-timing: 200ms ease-in-out;
     --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+    
+    --orange: #FF6D00;
+    --gray_A: #1C1C21;
+    --gray_B: #343434;
+    --gray_C: #464646;
 }
 
 .navbar {
     position: fixed;
     top: 0;
-    width: 100%;
-    height: 3.2em;
+    height: 4em;
     background-color: black;
     display: flex;
+    flex-direction: row;
     align-items: center;
     margin-bottom: 20px;
+    max-width: 100%;
+    width: 100%;
 }
 
-.navbar a {
-    position: fixed;
+.navbar button {
+    position: relative;
     color: white;
+    height: 4em;
+    border-radius: 0;
+    border: 0px;
+    background-color: black;
+    transition: all 1s;
 }
+
+.navbar button:hover{
+    background-color: var(--gray_C);
+}
+
+.navbar button:focus{
+    outline: none;
+}
+
 
 .home {
-    left: 1.5em;
+
+    left: 0em;
 }
 
 .studentForum {
-    left: 7em;
+
+    left: 0em;
 }
 
 .schoolHub {
-    left: 17em;
+
+    left: 0em;
+}
+
+.right-buttons {
+    display: flex; 
+    margin-left: auto;
+    justify-content: flex-end;
+    
 }
 
 .profile,
-.login {
-    right: 2em;
+.login{
+    margin-left:auto;
 }
 
 .signup {
-    right: 6em;
+    margin-left:auto;
+
 }
+
 
 @media (prefers-color-scheme: light) {
     :root{
@@ -66,8 +99,8 @@
     gap: var(--hamburger-gap);
     width: max-content;
     position: absolute;
-    top: 8px;
-    left: 5px;
+    top: 0.85em;
+    left: 1em;
     z-index: 3;
     cursor: pointer;
 }
@@ -112,6 +145,7 @@
     padding: 0.5rem 1rem;
     background-color: var(--foreground);
     position: absolute;
+    top:0;
     padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1rem);
     color: var(--foreground);
     max-width: 10rem;
@@ -122,21 +156,31 @@
 .sidebar nav {
     display: flex;
     flex-direction: column;
-    padding: 10px;
-    justify-content: space-between;
     height: 100%;
 }
 
-.sidebar nav a {
+.sidebar nav button {
     color: var(--background);
+    position: relative;
+    height: 4em;
+    width: 10rem;
+    border-radius: 0;
+    border: 0px;
+    background-color: black;
+    transition: all 1s;
 }
+
+.sidebar nav button:hover{
+    background-color: var(--gray_C);
+}
+
 
 .hamburger-menu:has(input:checked) + .sidebar {
     translate: 0;
 }
 
 @media (max-width: 600px) {
-    .navbar a {
+    .navbar button {
         display: none;
     }
     .hamburger-menu {

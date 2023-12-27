@@ -1,5 +1,10 @@
 :root{
-    --orange: #FF6D00
+    
+    --orange: #FF6D00;
+    --gray_A: #1C1C21;
+    --gray_B: #343434;
+    --gray_C: #464646;
+    
 }
 
 
@@ -12,7 +17,6 @@
     padding-top:10px;
     padding-bottom:10px;
     margin:10px;
-    margin-left:30px;
     border-radius: 7px;
     -webkit-transition: all 1s;
     -moz-transition: all 1s;
@@ -22,6 +26,7 @@
     border-style: solid;
     box-shadow: 0px 0px 0px 0px;
     position: relative;
+    cursor:pointer;
 }
 
 

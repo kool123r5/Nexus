@@ -8,7 +8,7 @@ export const useSignup = () => {
     const [isPending, setIsPending] = useState(false);
     const navigateTo = useNavigate();
 
-    const signup = async (email, password, confirmPassword, displayName, age, grade, userLocation, activities, friends) => {
+    const signup = async (email, password, confirmPassword, displayName, age, grade, userLocation, activities, pfp) => {
         setError(null);
         setIsPending(true);
 
@@ -37,7 +37,7 @@ export const useSignup = () => {
                 grade,
                 userLocation,
                 activities,
-                friends,
+                pfp,
             });
 
             if (!isCancelled) {

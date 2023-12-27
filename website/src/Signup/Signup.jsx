@@ -3,6 +3,7 @@ import "./Signup.css";
 import { useState } from "react";
 import { useSignup } from "../hooks/useSignup";
 import useGoogleSignIn from "../hooks/useGoogleSignIn";
+import getDefaultPfp from "../functions/getDefaultPfp";
 
 export default function Signup() {
     const [email, setEmail] = useState("");
@@ -13,7 +14,7 @@ export default function Signup() {
     const [grade, setGrade] = useState(null);
     const [location, setLocation] = useState(null);
     const [activities, setActivities] = useState([]);
-    const [friends, setFriends] = useState([]);
+    const [profilePicture, setProfilePicture] = useState(null);
 
     const { signup, isPending, error } = useSignup();
     const { signInWithGoogle, error2 } = useGoogleSignIn();
@@ -21,9 +22,11 @@ export default function Signup() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (password == confirmPassword && password.length >= 6 && hasNumber(password) && email != "" && displayName != "") {
-            signup(email, password, confirmPassword, displayName, age, grade, location, activities, friends);
+            signup(email, password, confirmPassword, displayName, age, grade, location, activities, profilePicture);
         }
     };
+
+    const currentPfp = profilePicture || getDefaultPfp(displayName);
 
     const handleGoogleSignIn = async () => {
         signInWithGoogle();
@@ -74,8 +77,10 @@ export default function Signup() {
                         Activities: <input type={"text"} onChange={(e) => setActivities(e.target.value)}></input>
                     </label>
                     <label>
-                        Friends: <input type={"text"} onChange={(e) => setFriends(e.target.value)}></input>
+                        Profile Picture: <input type={"file"} onChange={(e) => setProfilePicture(e.target.value)}></input>
                     </label>
+                    <br />
+                    <img src={currentPfp} alt="" height={100} width={100} />
                     <br />
                     <br />
                     <button type="submit">Submit</button>

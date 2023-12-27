@@ -120,7 +120,7 @@ export default function Profile() {
                       )}
                       {!currentActivities && <p>No activities yet</p>}
                     
-
+{/* 
                     <pagination className="mt-3">
             {Array.from({ length: totalPages }).map((_, index) => (
               <item
@@ -131,7 +131,8 @@ export default function Profile() {
                 {index + 1}
               </item>
             ))}
-          </pagination> 
+          </pagination>  */}
+
                 </div>
             )}
         </>

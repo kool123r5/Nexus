@@ -24,6 +24,9 @@ export default function Navbar() {
     const handleLoginClick = () => {
         navigate("/login");
     };
+    const handleProfileClick = () => {
+      navigate(`/profile/${user.uid}`);
+  };
 
     return (
       <>
@@ -39,7 +42,7 @@ export default function Navbar() {
           </button>
           {user != null && authIsReady == true ? (
             <div className="right-buttons">
-              <button className="profileButton">
+              <button className="profileButton" onClick={handleProfileClick}>
                 <Link className="profile" exact to={`profile/${user.uid}`}>
                   Profile
                 </Link>
@@ -76,7 +79,7 @@ export default function Navbar() {
             </button>
             {user != null && authIsReady == true ? (
             <div className="right-buttons">
-            <button className="profileButton">
+            <button className="profileButton" onClick={handleProfileClick}>
               <Link className="profile" exact to={`profile/${user.uid}`}>
                 Profile
               </Link>

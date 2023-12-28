@@ -73,6 +73,14 @@
     margin-left:auto;
 }
 
+.profile{
+    color:white;
+}
+
+.profile:hover{
+    color:white;
+}
+
 .signup {
     margin-left:auto;
 

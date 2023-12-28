@@ -4,29 +4,26 @@ import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
-
 export default function Navbar() {
-
     let authContext = useAuthContext();
     let user = authContext.user;
     let authIsReady = authContext.authIsReady;
     const navigate = useNavigate();
     const handleSignUpClick = () => {
-      navigate("/signup"); 
+        navigate("/signup");
     };
     const handleHomeClick = () => {
-      navigate("/"); 
+        navigate("/");
     };
     const handleForumClick = () => {
-      navigate("/forum");
+        navigate("/forum");
     };
     const handleSchoolClick = () => {
-      navigate("/school");
+        navigate("/school");
     };
     const handleLoginClick = () => {
-      navigate("/login");
+        navigate("/login");
     };
-
 
     return (
       <>
@@ -41,13 +38,9 @@ export default function Navbar() {
             School Hub
           </button>
           {user != null && authIsReady == true ? (
-            <div className="right-buttons">
-              <button className = "profileButton">
-                <Link className="profile" exact to={`profile/${user.uid}`}>
-                  Profile
-                </Link>
-              </button>
-            </div>
+            <Link className="profile" exact to={`profile/${user.uid}`}>
+              Profile
+            </Link>
           ) : (
             <>
             <div className="right-buttons">

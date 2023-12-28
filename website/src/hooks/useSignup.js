@@ -30,7 +30,9 @@ export const useSignup = () => {
             const uploadPath = `pfp/${res.user.uid}`;
             const profilePic = await projectStorage.ref(uploadPath).put(pfp);
             const url = await profilePic.ref.getDownloadURL();
-            console.log(url);
+
+            // sends the user a verification email
+            await res.user.sendEmailVerification();
 
             await res.user.updateProfile({ displayName, photoURL: url });
 

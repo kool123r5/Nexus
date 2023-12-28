@@ -7,9 +7,9 @@
     --hamburger-margin: 8px;
     --animation-timing: 200ms ease-in-out;
     --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
-    
-    --orange: #FF6D00;
-    --gray_A: #1C1C21;
+
+    --orange: #ff6d00;
+    --gray_A: #1c1c21;
     --gray_B: #343434;
     --gray_C: #464646;
 }
@@ -37,52 +37,45 @@
     transition: all 1s;
 }
 
-.navbar button:hover{
+.navbar button:hover {
     background-color: var(--gray_C);
 }
 
-.navbar button:focus{
+.navbar button:focus {
     outline: none;
 }
 
-
 .home {
-
     left: 0em;
 }
 
 .studentForum {
-
     left: 0em;
 }
 
 .schoolHub {
-
     left: 0em;
 }
 
 .right-buttons {
-    display: flex; 
+    display: flex;
     margin-left: auto;
     justify-content: flex-end;
-    
 }
 
 .profile,
-.login{
-    margin-left:auto;
+.login {
+    margin-left: auto;
 }
 
 .signup {
-    margin-left:auto;
-
+    margin-left: auto;
 }
 
-
 @media (prefers-color-scheme: light) {
-    :root{
-        --foreground:white;
-        --background:black;
+    :root {
+        --foreground: white;
+        --background: black;
     }
     .navbar {
         background-color: white;
@@ -104,7 +97,6 @@
     z-index: 3;
     cursor: pointer;
 }
-
 
 .hamburger-menu::before,
 .hamburger-menu::after,
@@ -145,7 +137,7 @@
     padding: 0.5rem 1rem;
     background-color: var(--foreground);
     position: absolute;
-    top:0;
+    top: 0;
     padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1rem);
     color: var(--foreground);
     max-width: 10rem;
@@ -170,10 +162,9 @@
     transition: all 1s;
 }
 
-.sidebar nav button:hover{
+.sidebar nav button:hover {
     background-color: var(--gray_C);
 }
-
 
 .hamburger-menu:has(input:checked) + .sidebar {
     translate: 0;
@@ -187,8 +178,8 @@
         display: flex;
         z-index: 5;
     }
-    .sidebar{
-        display:flex;
+    .sidebar {
+        display: flex;
         flex-direction: column;
     }
 }

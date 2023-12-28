@@ -40,7 +40,7 @@ export default function Navbar() {
           {user != null && authIsReady == true ? (
             <div className="right-buttons">
               <button className="profileButton">
-                <Link className="profile" exact to={`profile/${user.uid}`}>
+                <Link className="profile" exact="true" to={`/profile/${user.uid}`}>
                   Profile
                 </Link>
               </button>

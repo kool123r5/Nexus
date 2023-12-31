@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { projectAuth, projectFirestore } from "../firebase/config";
 import { useNavigate } from "react-router-dom";
 import { projectStorage } from "../firebase/config";
+import resizeImg from "../functions/resizeImg";
 
 export const useSignup = () => {
     const [isCancelled, setIsCancelled] = useState(false);
@@ -12,7 +13,6 @@ export const useSignup = () => {
     const signup = async (email, password, confirmPassword, displayName, age, grade, userLocation, activities, pfp) => {
         setError(null);
         setIsPending(true);
-
         try {
             // signup
             const res = await projectAuth.createUserWithEmailAndPassword(email, password).catch((err) => {
@@ -27,16 +27,18 @@ export const useSignup = () => {
                 throw new Error("Passwords don't match");
             }
 
+            const pfpResized = await resizeImg(pfp);
             const uploadPath = `pfp/${res.user.uid}`;
-            const profilePic = await projectStorage.ref(uploadPath).put(pfp);
-            const url = await profilePic.ref.getDownloadURL();
+            const blob = await fetch(pfpResized).then((res) => res.blob());
+            const profilePicResized = await projectStorage.ref(uploadPath).put(blob);
+            const url = await profilePicResized.ref.getDownloadURL();
 
             // sends the user a verification email
             await res.user.sendEmailVerification();
 
             await res.user.updateProfile({ displayName, photoURL: url });
 
-            // create a user document
+            // // create a user document
             await projectFirestore.collection("users").doc(res.user.uid).set({
                 displayName,
                 email,

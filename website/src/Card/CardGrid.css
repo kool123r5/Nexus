@@ -10,13 +10,13 @@
 
 
 
-.card{
+.card {
     background-color: white;
-    width: 250px;
-    height:100px;
-    padding-top:10px;
-    padding-bottom:10px;
-    margin:10px;
+    width: 250px; 
+    height: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 10px;
     border-radius: 7px;
     -webkit-transition: all 1s;
     -moz-transition: all 1s;
@@ -26,9 +26,9 @@
     border-style: solid;
     box-shadow: 0px 0px 0px 0px;
     position: relative;
-    cursor:pointer;
-}
-
+    cursor: pointer;
+    flex: 0 0 auto;
+  }
 
 .card:hover{
     transform: scaleX(1.2) scaleY(1.25);

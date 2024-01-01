@@ -34,7 +34,7 @@
     border-radius: 0;
     border: 0px;
     background-color: black;
-    transition: all 1s;
+    transition: all 0.1s;
 }
 
 .navbar button:hover {

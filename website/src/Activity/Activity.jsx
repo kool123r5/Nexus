@@ -29,7 +29,7 @@ export default function Activity() {
             rating: null,
             completed: "Pending",
         };
-
+        let taken = false;
         console.log(activities);
         activities.forEach((activityDoc) => {
             if (
@@ -40,19 +40,25 @@ export default function Activity() {
                 // and don't let them re-add it
                 // i have no idea how to do this
                 // i tried using state and stuff doesn't work so idk
+                taken = true;
             }
         });
 
-        // Update the activities array in the user's document
-        const updatedActivities = [...activities, newActivity];
+        if (taken == false) {
+            // Update the activities array in the user's document
+            const updatedActivities = [...activities, newActivity];
 
-        // Update the user's document with the new activities array
-        projectFirestore.collection("users").doc(user.uid).update({
-            activities: updatedActivities,
-        });
+            // Update the user's document with the new activities array
+            projectFirestore.collection("users").doc(user.uid).update({
+                activities: updatedActivities,
+            });
 
-        setText("Successfully added activity");
-        setDisabled(true);
+            setText("Successfully added activity");
+            setDisabled(true);
+        } else {
+            setText("This activity has already been added");
+            setDisabled(true);
+        }
     };
 
     return (

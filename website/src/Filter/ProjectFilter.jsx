@@ -1,28 +1,29 @@
-import { useState } from 'react';
+import { useState } from "react";
+import PropTypes from "prop-types";
 
-const filterList = ['All', "Completed", "Pending"];
+const filterList = ["All", "Completed", "Pending"];
 
 export default function ProjectFilter({ changeFilter }) {
-  const [currentFilter, setCurrentFilter] = useState('All');
+    const [currentFilter, setCurrentFilter] = useState("All");
 
-  const handleClick = (newFilter) => {
-    setCurrentFilter(newFilter);
-    changeFilter(newFilter);
-  }; 
+    const handleClick = (newFilter) => {
+        setCurrentFilter(newFilter);
+        changeFilter(newFilter);
+    };
 
-  return (
-    <div className="project-filter">
-      <h6>Filter by:</h6>
+    return (
+        <div className="project-filter">
+            <h6>Filter by:</h6>
 
-        {filterList.map((f) => (
-          <button
-            key={f}
-            onClick={() => handleClick(f)}
-            
-          >
-            {f}
-          </button>
-        ))}
-    </div>
-  );
+            {filterList.map((f) => (
+                <button key={f} onClick={() => handleClick(f)}>
+                    {f}
+                </button>
+            ))}
+        </div>
+    );
 }
+
+ProjectFilter.propTypes = {
+    changeFilter: PropTypes.func,
+};

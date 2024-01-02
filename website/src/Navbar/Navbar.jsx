@@ -43,9 +43,7 @@ export default function Navbar() {
           {user != null && authIsReady == true ? (
             <div className="right-buttons">
               <button className="profileButton" onClick={handleProfileClick}>
-                <Link className="profile" exact = 'true' to={`profile/${user.uid}`}>
-                  Profile
-                </Link>
+                Profile
               </button>
             </div>
           ) : (

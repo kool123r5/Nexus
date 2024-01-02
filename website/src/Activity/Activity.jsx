@@ -8,91 +8,90 @@ import { projectFirestore } from "../firebase/config";
 import Navbar from "../Navbar/Navbar";
 
 export default function Activity() {
-    const { id } = useParams();
-    const { user, authIsReady } = useAuthContext();
-    const [text, setText] = useState("Add Activity");
-    const [disabled, setDisabled] = useState(false);
-    const { document, error } = useDocument("activities", id);
-    const newActivity = {
-        activity: projectFirestore.doc(`activities/${id}`),
-        startDate: new Date(),
-        endDate: null,
-        comment: null,
-        rating: null,
-        completed: "Pending",
-    };
-    const userDoc = useDocument("users", user.uid);
-    
-    useEffect(()=>{
-    if (userDoc.document!=null){
+  const { id } = useParams();
+  const { user, authIsReady } = useAuthContext();
+  const [text, setText] = useState("Add Activity");
+  const [disabled, setDisabled] = useState(false);
+  const { document, error } = useDocument("activities", id);
+  const newActivity = {
+    activity: projectFirestore.doc(`activities/${id}`),
+    startDate: new Date(),
+    endDate: null,
+    comment: null,
+    rating: null,
+    completed: "Pending",
+  };
+  const userDoc = useDocument("users", user.uid);
 
-    
-    const activities = userDoc.document.activities || [];
-    console.log(activities)
-    activities.forEach((activityDoc) => {
+  useEffect(() => {
+    if (userDoc.document != null) {
+      const activities = userDoc.document.activities || [];
+      console.log(activities);
+      activities.forEach((activityDoc) => {
         if (
-            activityDoc["activity"]["_delegate"]["_key"]["path"]["segments"].at(-1) ==
-            newActivity["activity"]["_delegate"]["_key"]["path"]["segments"].at(-1)
+          activityDoc["activity"]["_delegate"]["_key"]["path"]["segments"].at(
+            -1
+          ) ==
+          newActivity["activity"]["_delegate"]["_key"]["path"]["segments"].at(
+            -1
+          )
         ) {
-            setDisabled(true)
-            console.log(disabled)
+          setDisabled(true);
+          console.log(disabled);
         }
-    })};
-    }, [userDoc])
-        
-   
-    
+      });
+    }
+  }, [userDoc]);
 
-    const handleClick = () => {
-        const activities = userDoc.document.activities || [];
+  const handleClick = () => {
+    const activities = userDoc.document.activities || [];
 
-        // Create a new activity object with the required structure
-        const newActivity = {
-            activity: projectFirestore.doc(`activities/${id}`),
-            startDate: new Date(),
-            endDate: null,
-            comment: null,
-            rating: null,
-            completed: "Pending",
-        };
-        console.log(activities);
-       
-
-    
-            // Update the activities array in the user's document
-            const updatedActivities = [...activities, newActivity];
-
-            // Update the user's document with the new activities array
-            projectFirestore.collection("users").doc(user.uid).update({
-                activities: updatedActivities,
-            });
-
-            setText("Successfully added activity");
-            setDisabled(true);
-        
+    // Create a new activity object with the required structure
+    const newActivity = {
+      activity: projectFirestore.doc(`activities/${id}`),
+      startDate: new Date(),
+      endDate: null,
+      comment: null,
+      rating: null,
+      completed: "Pending",
     };
+    console.log(activities);
 
-    return (
-        <>
-            <Navbar />
-            <div>
-                Not sure what goes here for now, so just keeping this:
-                {document && userDoc && user && (
-                    <div className="fullActivity">
-                        <h2>Posted by User: {document.username}</h2>
-                        <h1>Title: {document.title}</h1>
-                        <h3>Text: {document.text}</h3>
-                        <p>{userDoc.document.email}</p>
-                        <p>{user.uid}</p>
+    // Update the activities array in the user's document
+    const updatedActivities = [...activities, newActivity];
 
-                        {!disabled && <button id="btn" onClick={handleClick} disabled={disabled}>
-                            {text}
-                        </button>}
+    // Update the user's document with the new activities array
+    projectFirestore.collection("users").doc(user.uid).update({
+      activities: updatedActivities,
+    });
 
-                        {disabled && <p>Update activity stuff to come:</p>}
-                    </div>
-                )}
-            </div>
-        </>
-    );
+    setText("Successfully added activity");
+    setDisabled(true);
+  };
+
+  return (
+    <>
+      <Navbar />
+      <div>
+        Not sure what goes here for now, so just keeping this:
+        {document && userDoc && user && (
+          <div className="fullActivity">
+            <h2>Posted by User: {document.username}</h2>
+            <h1>Title: {document.title}</h1>
+            <h3>Text: {document.text}</h3>
+            <p>{userDoc.document.email}</p>
+            <p>{user.uid}</p>
+
+            {!disabled && (
+              <button id="btn" onClick={handleClick} disabled={disabled}>
+                {text}
+              </button>
+            )}
+
+            {disabled && <p>Update activity stuff to come:</p>}
+          </div>
+        )}
+      </div>
+    </>
+  );
 }

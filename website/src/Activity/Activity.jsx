@@ -12,10 +12,36 @@ export default function Activity() {
     const { user, authIsReady } = useAuthContext();
     const [text, setText] = useState("Add Activity");
     const [disabled, setDisabled] = useState(false);
-
     const { document, error } = useDocument("activities", id);
-
+    const newActivity = {
+        activity: projectFirestore.doc(`activities/${id}`),
+        startDate: new Date(),
+        endDate: null,
+        comment: null,
+        rating: null,
+        completed: "Pending",
+    };
     const userDoc = useDocument("users", user.uid);
+    
+    useEffect(()=>{
+    if (userDoc.document!=null){
+
+    
+    const activities = userDoc.document.activities || [];
+    console.log(activities)
+    activities.forEach((activityDoc) => {
+        if (
+            activityDoc["activity"]["_delegate"]["_key"]["path"]["segments"].at(-1) ==
+            newActivity["activity"]["_delegate"]["_key"]["path"]["segments"].at(-1)
+        ) {
+            setDisabled(true)
+            console.log(disabled)
+        }
+    })};
+    }, [userDoc])
+        
+   
+    
 
     const handleClick = () => {
         const activities = userDoc.document.activities || [];
@@ -29,22 +55,10 @@ export default function Activity() {
             rating: null,
             completed: "Pending",
         };
-        let taken = false;
         console.log(activities);
-        activities.forEach((activityDoc) => {
-            if (
-                activityDoc["activity"]["_delegate"]["_key"]["path"]["segments"].at(-1) ==
-                newActivity["activity"]["_delegate"]["_key"]["path"]["segments"].at(-1)
-            ) {
-                // here there should be a way to realize the user added this activity previously
-                // and don't let them re-add it
-                // i have no idea how to do this
-                // i tried using state and stuff doesn't work so idk
-                taken = true;
-            }
-        });
+       
 
-        if (taken == false) {
+    
             // Update the activities array in the user's document
             const updatedActivities = [...activities, newActivity];
 
@@ -55,10 +69,7 @@ export default function Activity() {
 
             setText("Successfully added activity");
             setDisabled(true);
-        } else {
-            setText("This activity has already been added");
-            setDisabled(true);
-        }
+        
     };
 
     return (
@@ -74,9 +85,11 @@ export default function Activity() {
                         <p>{userDoc.document.email}</p>
                         <p>{user.uid}</p>
 
-                        <button id="btn" onClick={handleClick} disabled={disabled}>
+                        {!disabled && <button id="btn" onClick={handleClick} disabled={disabled}>
                             {text}
-                        </button>
+                        </button>}
+
+                        {disabled && <p>Update activity stuff to come:</p>}
                     </div>
                 )}
             </div>

@@ -2,15 +2,21 @@ import Navbar from "../Navbar/Navbar";
 import "./Login.css";
 import { useState } from "react";
 import { useLogin } from "../hooks/useLogin";
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState(null);
     const { login, error, isPending, loginWithGoogle } = useLogin();
+    const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         login(email, password);
+    };
+
+    const handleForgotPwClick = () => {
+        navigate("/forgot-password");
     };
 
     return (
@@ -28,6 +34,10 @@ export default function Login() {
                     </label>
 
                     <button type="submit">Submit</button>
+
+                    <br />
+
+                    <button onClick={handleForgotPwClick}>Forgot password?</button>
 
                     {isPending && (
                         <button className="btn" disabled>

@@ -12,7 +12,7 @@ export default function Signup() {
     const [age, setAge] = useState(null);
     const [grade, setGrade] = useState(null);
     const [location, setLocation] = useState(null);
-    const [activities, setActivities] = useState([]);
+    const [interests, setInterests] = useState([]);
     const [profilePicture, setProfilePicture] = useState(null);
 
     const { signup, isPending, error } = useSignup();
@@ -21,7 +21,7 @@ export default function Signup() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (password == confirmPassword && password.length >= 6 && hasNumber(password) && email != "" && displayName != "") {
-            signup(email, password, confirmPassword, displayName, age, grade, location, activities, profilePicture);
+            signup(email, password, confirmPassword, displayName, age, grade, location, interests, profilePicture);
         }
     };
 
@@ -71,7 +71,7 @@ export default function Signup() {
                     </label>
                     <br />
                     <label>
-                        Activities: <input type={"text"} onChange={(e) => setActivities(e.target.value)}></input>
+                        Interests: <input type={"text"} onChange={(e) => setInterests(e.target.value)}></input>
                     </label>
                     <label>
                         Profile Picture: <input type={"file"} onChange={(e) => setProfilePicture(e.target.files[0])}></input>

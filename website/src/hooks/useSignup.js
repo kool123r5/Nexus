@@ -10,8 +10,9 @@ export const useSignup = () => {
     const [isPending, setIsPending] = useState(false);
     const navigateTo = useNavigate();
 
-    const signup = async (email, password, confirmPassword, displayName, age, grade, userLocation, activities, pfp) => {
+    const signup = async (email, password, confirmPassword, displayName, age, grade, userLocation, interests, pfp) => {
         setError(null);
+        const activities=null
         setIsPending(true);
         try {
             // signup
@@ -48,6 +49,7 @@ export const useSignup = () => {
                 age,
                 grade,
                 userLocation,
+                interests,
                 activities,
                 pfp: url,
                 friends: [],

@@ -12,6 +12,12 @@ export default function Activity() {
   const { user, authIsReady } = useAuthContext();
   const [text, setText] = useState("Add Activity");
   const [disabled, setDisabled] = useState(false);
+  const [formSubmitted, setFormSubmitted] = useState(false);
+  const [activityRemoved, setActivityRemoved] = useState(false);
+
+  const [rating, setRating] = useState("");
+  const [comment, setComment] = useState("");
+
   const { document, error } = useDocument("activities", id);
   const newActivity = {
     activity: projectFirestore.doc(`activities/${id}`),
@@ -23,6 +29,51 @@ export default function Activity() {
   };
   const userDoc = useDocument("users", user.uid);
 
+
+  useEffect(() => {
+    const fetchUpdatedData = async () => {
+      const updatedUserDoc = await projectFirestore.collection("users").doc(user.uid).get();
+      const updatedActivities = updatedUserDoc.data().activities || [];
+      
+      // Find the updated activity in the array
+      const updatedActivity = updatedActivities.find(
+        (activityDoc) =>
+          activityDoc.activity._delegate._key.path.segments.at(-1) === id
+      );
+  
+      // Display the updated details
+      if (updatedActivity) {
+        setRating(updatedActivity.rating);
+        setComment(updatedActivity.comment);
+      }
+    };
+  
+    if (formSubmitted) {
+      fetchUpdatedData();
+    }
+  }, [formSubmitted, id, user.uid]);
+
+
+
+  useEffect(() => {
+    if (userDoc.document != null) {
+      const activities = userDoc.document.activities || [];
+      console.log(activities);
+      activities.forEach((activityDoc) => {
+        console.log(activityDoc)
+        if (
+          activityDoc["activity"]["_delegate"]["_key"]["path"]["segments"].at(
+            -1
+          ) ==
+          newActivity["activity"]["_delegate"]["_key"]["path"]["segments"].at(
+            -1
+          )
+        && activityDoc.completed=="Completed") {
+          setFormSubmitted(true);
+        }
+      });
+    }
+  }, [userDoc]);
   useEffect(() => {
     if (userDoc.document != null) {
       const activities = userDoc.document.activities || [];
@@ -42,7 +93,57 @@ export default function Activity() {
       });
     }
   }, [userDoc]);
+  const handleComplete = (e) => {
+    e.preventDefault();
+    const activities = userDoc.document.activities
+    const updatedActivities = activities.map((activityDoc) => {
+      if (
+        activityDoc["activity"]["_delegate"]["_key"]["path"]["segments"].at(
+          -1
+        ) ===
+        newActivity["activity"]["_delegate"]["_key"]["path"]["segments"].at(-1)
+      ) {
+        return {
+          ...activityDoc,
+          endDate: new Date(),
+          rating: parseInt(rating),
+          comment: comment,
+          completed: "Completed",
+        };
+      }
+      return activityDoc;
+    });
 
+    // Update the user's document with the updated activities array
+    projectFirestore.collection("users").doc(user.uid).update({
+      activities: updatedActivities,
+    });
+    setFormSubmitted(true)
+  };
+
+  const handleRemove = async () => {
+    const activities = userDoc.document.activities || [];
+
+    try {
+      // Remove the activity from the user's document
+      const updatedActivities = activities.filter(
+        (activityDoc) =>
+          activityDoc.activity._delegate._key.path.segments.at(-1) !== id
+      );
+  
+      await projectFirestore.collection("users").doc(user.uid).update({
+        activities: updatedActivities,
+      });
+  
+      setActivityRemoved(true);
+      setText("Activity removed successfully");
+      window.location.reload() 
+    } catch (error) {
+      console.error("Error removing activity:", error);
+      // Handle error if needed
+    }
+  };
+  
   const handleClick = () => {
     const activities = userDoc.document.activities || [];
 
@@ -88,7 +189,48 @@ export default function Activity() {
               </button>
             )}
 
-            {disabled && <p>Update activity stuff to come:</p>}
+            {disabled && !activityRemoved && (
+              <button id="btn" onClick={handleRemove} >
+                Remove Activity
+              </button>
+            )}
+
+            {disabled && !formSubmitted && (
+              <div>
+                <form onSubmit={handleComplete}>
+                  <label>
+                    Rating:
+                    <input
+                      type="number"
+                      min="1"
+                      max="5"
+                      value={rating}
+                      onChange={(e) => setRating(e.target.value)}
+                      required
+                    />
+                  </label>
+                  <br />
+
+                  <label>
+                    Comment:
+                    <textarea
+                      value={comment}
+                      onChange={(e) => setComment(e.target.value)}
+                      required
+                    />
+                  </label>
+                  <br />
+
+                  <button type="submit">Complete Activity</button>
+                </form>
+              </div>
+            )}
+
+            {formSubmitted && disabled && (<div>
+                <h6>Your Ratings and comment:</h6>
+                <p>Rating: {rating}</p>
+                <p>Comment: {comment}</p>
+                </div>)}
           </div>
         )}
       </div>

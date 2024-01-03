@@ -1,7 +1,7 @@
 import Navbar from "../Navbar/Navbar";
 import "./Profile.css";
 import { useDocument } from "../hooks/useDocument";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
 import ProjectFilter from "../Filter/ProjectFilter";
@@ -94,7 +94,13 @@ export default function Profile() {
                     <p>Welcome: {document.displayName}</p>
                     <br></br>
                     <p>Your activities</p>
-                    {currentActivities && currentActivities.map((document) => <p key={Math.random()}>{document.title}</p>)}
+                    {currentActivities && currentActivities.map((document) =>{
+                    console.log(document)
+                    return (<>
+                     <Link  to={`/activity/${document.uid}`}> 
+                     
+                    <p key={Math.random()}>{document.title}</p> </Link>
+                    </>)})}
                     {!currentActivities && <p>No activities yet</p>}
                     {/* 
                     <pagination className="mt-3">

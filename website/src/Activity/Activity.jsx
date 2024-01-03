@@ -148,14 +148,7 @@ export default function Activity() {
     const activities = userDoc.document.activities || [];
 
     // Create a new activity object with the required structure
-    const newActivity = {
-      activity: projectFirestore.doc(`activities/${id}`),
-      startDate: new Date(),
-      endDate: null,
-      comment: null,
-      rating: null,
-      completed: "Pending",
-    };
+   
     console.log(activities);
 
     // Update the activities array in the user's document

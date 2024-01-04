@@ -12,7 +12,7 @@ export const useSignup = () => {
 
     const signup = async (email, password, confirmPassword, displayName, age, grade, userLocation, interests, pfp) => {
         setError(null);
-        const activities=null
+        const activities = null;
         setIsPending(true);
         try {
             // signup
@@ -43,17 +43,21 @@ export const useSignup = () => {
             await res.user.updateProfile({ displayName, photoURL: url });
 
             // create a user document
-            await projectFirestore.collection("users").doc(res.user.uid).set({
-                displayName,
-                email,
-                age,
-                grade,
-                userLocation,
-                interests,
-                activities,
-                pfp: url,
-                friends: [],
-            });
+            await projectFirestore
+                .collection("users")
+                .doc(res.user.uid)
+                .set({
+                    displayName,
+                    email,
+                    age,
+                    grade,
+                    userLocation,
+                    interests,
+                    activities,
+                    pfp: url,
+                    friends: [],
+                    authProviders: ["email"],
+                });
 
             if (!isCancelled) {
                 setIsPending(false);

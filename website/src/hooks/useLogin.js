@@ -24,15 +24,23 @@ export const useLogin = () => {
 
         try {
             // login
-            const res = await projectAuth.signInWithEmailAndPassword(email, password);
-
-            // dispatch login action
-
-            dispatch({ type: "LOGIN", payload: res.user });
-
-            if (!isCancelled && !userFailure) {
+            const userDoc = await projectFirestore.collection("users").where("email", "==", email).limit(1).get();
+            if (userDoc.docs[0].data().authProviders.includes("google")) {
+                setError(
+                    "You previously signed up with Google. Login with Google and then set a password in your account settings to be able to sign up with email & password in the future."
+                );
                 setIsPending(false);
-                setError(false);
+            } else {
+                const res = await projectAuth.signInWithEmailAndPassword(email, password);
+
+                // dispatch login action
+
+                dispatch({ type: "LOGIN", payload: res.user });
+
+                if (!isCancelled && !userFailure) {
+                    setIsPending(false);
+                    setError(false);
+                }
             }
         } catch (error) {
             if (!isCancelled) {

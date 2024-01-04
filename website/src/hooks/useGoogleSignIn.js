@@ -20,10 +20,14 @@ const useGoogleSignIn = () => {
             if (userDoc.exists) {
                 throw new Error("User already registered. You have been automatically logged in.");
             } else {
-                await projectFirestore.collection("users").doc(res.user.uid).set({
-                    displayName,
-                    email,
-                });
+                await projectFirestore
+                    .collection("users")
+                    .doc(res.user.uid)
+                    .set({
+                        displayName,
+                        email,
+                        authProviders: ["google"],
+                    });
             }
 
             navigateTo("/");

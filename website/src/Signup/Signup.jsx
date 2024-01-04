@@ -88,7 +88,7 @@ export default function Signup() {
                     {error && <div className="error">{error}</div>}
                 </form>
                 <br />
-                <button onClick={handleGoogleSignIn}>Sign in with Google</button>
+                <button onClick={handleGoogleSignIn}>Sign up with Google</button>
                 {error2 && <div className="error">{error2}</div>}
             </div>
         </>

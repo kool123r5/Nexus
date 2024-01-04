@@ -5,6 +5,8 @@ import { useCollection } from "../hooks/useCollection";
 import sortDocuments from "../functions/sortDocuments";
 import HomeSection from "../HomeSection/HomeSection";
 import getUniqueTypes from "../functions/getUniqueTypes";
+import nexusLogo from "../assets/NEXUS_LOGO-nobackground.png"; 
+
 
 export default function Home() {
     const [sorted_documents, setSortedDocuments] = useState(null);
@@ -27,7 +29,13 @@ export default function Home() {
 
     return (
         <>
-            <Navbar />
+            <Navbar/>
+            <div id = "title_container">
+                <img src={nexusLogo} alt = "Nexus Logo" id = "Home_Logo_Img"/>
+                <h1 id="title">
+                    Nexus
+                </h1>
+            </div>
             {uniqueTypeArr &&
                 uniqueTypeArr.map((uniqueTypeObj) => {
                     return (

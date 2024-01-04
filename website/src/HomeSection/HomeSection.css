@@ -1,5 +1,5 @@
 .carousel_container{
-    width: 100vw;
+    width: 99.3vw;
     overflow:hidden;
     white-space: nowrap;
     position: relative;
@@ -17,6 +17,7 @@
 
 .carousel_title{
     margin-left: 13px;
+    margin-top:3em; 
 }
 
 
@@ -31,7 +32,6 @@
     transition: all 0.5s;
 }
 .previous_button:hover{
-    border-color:black;
     opacity: 70%;
 }
 
@@ -50,7 +50,6 @@
     transition: all 0.5s;
 }
 .next_button:hover{
-    border-color:black;
     opacity: 70%;
 }
 

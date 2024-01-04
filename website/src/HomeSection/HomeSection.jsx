@@ -72,7 +72,79 @@ export default function HomeSection({ uniqueTypeObj, sorted_documents }) {
                 </button>
 
                 <div className="carousel" ref={carouselRef}>
+                {postObjectArray.map((postObject) => {
+                        return (
+                            <Card
+                                className="card"
+                                key={postObject + Math.random()}
+                                title={postObject.title}
+                                text={postObject.text}
+                                author={postObject.author}
+                                id={postObject.id}
+                            />
+                        );
+                    })}
                     {postObjectArray.map((postObject) => {
+                        return (
+                            <Card
+                                className="card"
+                                key={postObject + Math.random()}
+                                title={postObject.title}
+                                text={postObject.text}
+                                author={postObject.author}
+                                id={postObject.id}
+                            />
+                        );
+                    })}
+                {postObjectArray.map((postObject) => {
+                        return (
+                            <Card
+                                className="card"
+                                key={postObject + Math.random()}
+                                title={postObject.title}
+                                text={postObject.text}
+                                author={postObject.author}
+                                id={postObject.id}
+                            />
+                        );
+                    })}
+                {postObjectArray.map((postObject) => {
+                        return (
+                            <Card
+                                className="card"
+                                key={postObject + Math.random()}
+                                title={postObject.title}
+                                text={postObject.text}
+                                author={postObject.author}
+                                id={postObject.id}
+                            />
+                        );
+                    })}
+                {postObjectArray.map((postObject) => {
+                        return (
+                            <Card
+                                className="card"
+                                key={postObject + Math.random()}
+                                title={postObject.title}
+                                text={postObject.text}
+                                author={postObject.author}
+                                id={postObject.id}
+                            />
+                        );
+                    })}
+                {postObjectArray.map((postObject) => {
+                        return (
+                            <Card
+                                className="card"
+                                key={postObject + Math.random()}
+                                title={postObject.title}
+                                text={postObject.text}
+                                author={postObject.author}
+                                id={postObject.id}
+                            />
+                        );
+                    })}
+                {postObjectArray.map((postObject) => {
                         return (
                             <Card
                                 className="card"

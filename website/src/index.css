@@ -2,10 +2,15 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  --black: black;
+  --white:white;
   --orange: #FF6D00;
   --gray_A: #1C1C21;
   --gray_B: #343434;
   --gray_C: #464646;
+  --gray_D: #1e1e1e;
+  --gray_E: #161616;
+  
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -17,6 +22,18 @@
   -moz-osx-font-smoothing: grayscale;
 
 }
+
+h1{
+  color:var(--white)
+}
+
+h2{
+  color:var(--white)
+}
+p{
+  color:var(--white)
+}
+
 
 a {
   font-weight: 500;
@@ -33,6 +50,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: var(--gray_E);
 }
 
 h1 {
@@ -51,9 +69,7 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:hover {
-  border-color: #646cff;
-}
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -71,3 +87,23 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+
+::-webkit-scrollbar {
+  width: 0.7vw;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--gray_E); 
+
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gray_C);
+  border-radius: 1000vw;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gray_B);
+}
+

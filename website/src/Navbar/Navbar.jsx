@@ -61,40 +61,42 @@ export default function Navbar() {
             </>
           )}
         </div>
-        <label className="hamburger-menu">
-          <input type="checkbox" />
-        </label>
-        <aside className="sidebar">
-          <nav>
-            <button className="home_burger" onClick={handleHomeClick}>
-              Home
-            </button>
-            <button className="studentForum_burger" onClick={handleForumClick}>
-              Student Forum
-            </button>
-            <button className="schoolHub_burger" onClick={handleSchoolClick}>
-              School Hub
-            </button>
-            {user != null && authIsReady == true ? (
-            <div className="right-buttons">
-            <button className="profileButton" onClick={handleProfileClick}>
-              <Link className="profile" exact = 'true' to={`profile/${user.uid}`}>
-                Profile
-              </Link>
-            </button>
-          </div>
-            ) : (
-              <>
-                <button className="signup_burger" onClick={handleSignUpClick}>
-                  Sign Up
-                </button>
-                <button className="login_burger" onClick={handleLoginClick}>
-                  Login
-                </button>
-              </>
-            )}
-          </nav>
-        </aside>
+        <div id = "sidebar_parent">
+          <label className="hamburger-menu">
+            <input type="checkbox" />
+          </label>
+          <aside className="sidebar">
+            <nav>
+              <button className="home_burger" onClick={handleHomeClick}>
+                Home
+              </button>
+              <button className="studentForum_burger" onClick={handleForumClick}>
+                Student Forum
+              </button>
+              <button className="schoolHub_burger" onClick={handleSchoolClick}>
+                School Hub
+              </button>
+              {user != null && authIsReady == true ? (
+              <div className="right-buttons">
+              <button className="profileButton" onClick={handleProfileClick}>
+                <Link className="profile" exact = 'true' to={`profile/${user.uid}`}>
+                  Profile
+                </Link>
+              </button>
+            </div>
+              ) : (
+                <>
+                  <button className="signup_burger" onClick={handleSignUpClick}>
+                    Sign Up
+                  </button>
+                  <button className="login_burger" onClick={handleLoginClick}>
+                    Login
+                  </button>
+                </>
+              )}
+            </nav>
+          </aside>
+        </div>
       </>
     );
 }

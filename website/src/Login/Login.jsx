@@ -39,7 +39,7 @@ export default function Login() {
 
                     <button onClick={handleForgotPwClick}>Forgot password?</button>
 
-                    {isPending && (
+                    {isPending && !error && (
                         <button className="btn" disabled>
                             Loading...Do Not Refresh The Page
                         </button>

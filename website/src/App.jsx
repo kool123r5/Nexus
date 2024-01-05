@@ -10,6 +10,7 @@ import Navbar from "./Navbar/Navbar";
 import Signup from "./Signup/Signup";
 import Activity from "./Activity/Activity";
 import PasswordReset from "./PasswordReset/PasswordReset";
+import ProfileSettings from "./Profile/ProfileSettings";
 
 export default function App() {
     const { user, authIsReady } = useAuthContext();
@@ -21,6 +22,9 @@ export default function App() {
                     <Route path="/" element={<Home />} />
                     <Route path="/forum" element={<Forum />} />
                     <Route path="/school" element={<School />} />
+                    {authIsReady && (
+                        <Route path="/profile/settings" element={user ? <ProfileSettings /> : <Navigate to="/" />} />
+                    )}
                     {authIsReady && <Route path="/profile/:id" element={user ? <Profile /> : <Navigate to="/" />} />}
 
                     {authIsReady && (

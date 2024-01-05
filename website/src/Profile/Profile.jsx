@@ -94,14 +94,22 @@ export default function Profile() {
                     <p>Welcome: {document.displayName}</p>
                     <br></br>
                     <p>Your activities</p>
-                    {currentActivities && currentActivities.map((document) =>{
-                    console.log(document)
-                    return (<>
-                     <Link  to={`/activity/${document.uid}`}> 
-                     
-                    <p key={Math.random()}>{document.title}</p> </Link>
-                    </>)})}
+                    {currentActivities &&
+                        currentActivities.map((document) => {
+                            console.log(document);
+                            return (
+                                <>
+                                    <Link to={`/activity/${document.uid}`}>
+                                        <p key={Math.random()}>{document.title}</p>{" "}
+                                    </Link>
+                                </>
+                            );
+                        })}
                     {!currentActivities && <p>No activities yet</p>}
+                    <br />
+                    <Link to={"/profile/settings"}>
+                        <button>Settings</button>
+                    </Link>
                     {/* 
                     <pagination className="mt-3">
             {Array.from({ length: totalPages }).map((_, index) => (

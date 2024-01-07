@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { projectAuth, projectFirestore } from "../firebase/config";
+import { googleProvider, projectAuth, projectFirestore } from "../firebase/config";
 import { useDocument } from "../hooks/useDocument";
 import Navbar from "../Navbar/Navbar";
 import "./ProfileSettings.css";
@@ -13,9 +13,9 @@ export default function ProfileSettings() {
     const [isEmailChangeSent, setIsEmailChangeSent] = useState(false);
     const [errorWhileUpdatingEmail, setErrorWhileUpdatingEmail] = useState("");
 
-    const [changedPassword, setChangedPassword] = useState(null);
-    const [confirmChangedPassword, setConfirmChangedPassword] = useState(null);
-    const [currentPassword, setCurrentPassword] = useState(null);
+    const [changedPassword, setChangedPassword] = useState("");
+    const [confirmChangedPassword, setConfirmChangedPassword] = useState("");
+    const [currentPassword, setCurrentPassword] = useState("");
     const [isPasswordChanged, setIsPasswordChanged] = useState(false);
     const [errorWhileUpdatingPassword, setErrorWhileUpdatingPassword] = useState("");
 
@@ -45,6 +45,25 @@ export default function ProfileSettings() {
             // TODO: if the user used google signup initially, reauthenticate with popup before you can change pw
             if (changedPassword != confirmChangedPassword) {
                 setErrorWhileUpdatingPassword("Passwords do not match");
+                return;
+            }
+
+            if (document.authProviders.length == 1 && document.authProviders[0] == "google") {
+                console.log(projectAuth.currentUser.email);
+                const credential = firebase.auth.EmailAuthProvider.credential(
+                    projectAuth.currentUser.email,
+                    changedPassword
+                );
+                // await projectAuth.currentUser.updatePassword(changedPassword);
+                await projectAuth.currentUser.linkWithCredential(credential);
+                await projectFirestore
+                    .collection("users")
+                    .doc(projectAuth.currentUser.uid)
+                    .update({
+                        authProviders: firebase.firestore.FieldValue.arrayUnion("email"),
+                    });
+                setIsPasswordChanged(true);
+                setErrorWhileUpdatingPassword("");
                 return;
             }
             const credential = firebase.auth.EmailAuthProvider.credential(projectAuth.currentUser.email, currentPassword);

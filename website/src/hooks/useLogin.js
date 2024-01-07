@@ -5,6 +5,7 @@ import { googleProvider } from "../firebase/config";
 import { useNavigate } from "react-router-dom";
 
 import "firebase/firestore";
+import firebase from "firebase/app";
 import { useLogout } from "./useLogout";
 
 export const useLogin = () => {
@@ -25,7 +26,7 @@ export const useLogin = () => {
         try {
             // login
             const userDoc = await projectFirestore.collection("users").where("email", "==", email).limit(1).get();
-            if (userDoc.docs[0].data().authProviders.includes("google")) {
+            if (userDoc.docs[0].data().authProviders.length == 1 && userDoc.docs[0].data().authProviders[0] == "google") {
                 setError(
                     "You previously signed up with Google. Login with Google and then set a password in your account settings to be able to sign up with email & password in the future."
                 );
@@ -59,9 +60,14 @@ export const useLogin = () => {
             const res = await projectAuth.signInWithPopup(googleProvider);
 
             const userDoc = await projectFirestore.collection("users").doc(res.user.uid).get();
-            console.log("hi");
 
             if (userDoc.exists) {
+                await projectFirestore
+                    .collection("users")
+                    .doc(res.user.uid)
+                    .update({
+                        authProviders: firebase.firestore.FieldValue.arrayUnion("google"),
+                    });
                 // dispatch login action
                 dispatch({ type: "LOGIN", payload: res.user });
             } else {

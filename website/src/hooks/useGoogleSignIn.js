@@ -18,7 +18,6 @@ const useGoogleSignIn = () => {
             const userDoc = await projectFirestore.collection("users").doc(res.user.uid).get();
 
             if (userDoc.exists) {
-                // add google as an authProvider in the firestore doc here?
                 throw new Error("User already registered. You have been automatically logged in.");
             } else {
                 await projectFirestore

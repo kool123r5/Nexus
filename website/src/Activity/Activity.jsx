@@ -14,7 +14,7 @@ export default function Activity() {
   const [disabled, setDisabled] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [activityRemoved, setActivityRemoved] = useState(false);
-
+  console.log(user)
   const [rating, setRating] = useState("");
   const [comment, setComment] = useState("");
 

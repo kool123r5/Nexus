@@ -10,7 +10,7 @@ export const useSignup = () => {
     const [isPending, setIsPending] = useState(false);
     const navigateTo = useNavigate();
 
-    const signup = async (email, password, confirmPassword, displayName, age, grade, userLocation, interests, pfp) => {
+    const signup = async (email, password, confirmPassword, displayName) => {
         setError(null);
         const activities = null;
         setIsPending(true);
@@ -28,19 +28,11 @@ export const useSignup = () => {
                 throw new Error("Passwords don't match");
             }
 
-            let url = null;
-            if (pfp != null) {
-                const pfpResized = await resizeImg(pfp);
-                const uploadPath = `pfp/${res.user.uid}`;
-                const blob = await fetch(pfpResized).then((res) => res.blob());
-                const profilePicResized = await projectStorage.ref(uploadPath).put(blob);
-                url = await profilePicResized.ref.getDownloadURL();
-            }
-
+           
             // sends the user a verification email
             await res.user.sendEmailVerification();
 
-            await res.user.updateProfile({ displayName, photoURL: url });
+            await res.user.updateProfile({ displayName});
 
             // create a user document
             await projectFirestore
@@ -48,14 +40,7 @@ export const useSignup = () => {
                 .doc(res.user.uid)
                 .set({
                     displayName,
-                    email,
-                    age,
-                    grade,
-                    userLocation,
-                    interests,
-                    activities,
-                    pfp: url,
-                    friends: [],
+
                     authProviders: ["email"],
                 });
 
@@ -64,8 +49,8 @@ export const useSignup = () => {
                 setError(null);
             }
 
-            navigateTo("/");
-            location.reload();
+            navigateTo("/signup2");
+
         } catch (err) {
             if (!isCancelled) {
                 setError(err.message);

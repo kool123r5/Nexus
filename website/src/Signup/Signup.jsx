@@ -21,7 +21,7 @@ export default function Signup() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (password == confirmPassword && password.length >= 6 && hasNumber(password) && email != "" && displayName != "") {
-            signup(email, password, confirmPassword, displayName, age, grade, location, interests, profilePicture);
+            signup(email, password, confirmPassword, displayName);
         }
     };
 
@@ -58,24 +58,7 @@ export default function Signup() {
                     </label>
                     {confirmPassword != password ? <p>Passwords do not match.</p> : <p></p>}
                     <br />
-                    <label>
-                        Age: <input type={"number"} onChange={(e) => setAge(e.target.value)}></input>
-                    </label>
-
-                    <label>
-                        Grade (6-12): <input type={"number"} onChange={(e) => setGrade(e.target.value)}></input>
-                    </label>
-
-                    <label>
-                        Location: <input type={"text"} onChange={(e) => setLocation(e.target.value)}></input>
-                    </label>
-                    <br />
-                    <label>
-                        Interests: <input type={"text"} onChange={(e) => setInterests(e.target.value)}></input>
-                    </label>
-                    <label>
-                        Profile Picture: <input type={"file"} onChange={(e) => setProfilePicture(e.target.files[0])}></input>
-                    </label>
+                    
                     <br />
                     <br />
                     <button type="submit">Submit</button>

@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
 import { projectAuth, projectFirestore } from "../firebase/config";
 import { useNavigate } from "react-router-dom";
-import { projectStorage } from "../firebase/config";
-import resizeImg from "../functions/resizeImg";
 
 export const useSignup = () => {
     const [isCancelled, setIsCancelled] = useState(false);
@@ -28,11 +26,10 @@ export const useSignup = () => {
                 throw new Error("Passwords don't match");
             }
 
-           
             // sends the user a verification email
             await res.user.sendEmailVerification();
 
-            await res.user.updateProfile({ displayName});
+            await res.user.updateProfile({ displayName });
 
             // create a user document
             await projectFirestore
@@ -40,7 +37,7 @@ export const useSignup = () => {
                 .doc(res.user.uid)
                 .set({
                     displayName,
-
+                    email,
                     authProviders: ["email"],
                 });
 
@@ -50,7 +47,7 @@ export const useSignup = () => {
             }
 
             navigateTo("/signup2");
-
+            location.reload();
         } catch (err) {
             if (!isCancelled) {
                 setError(err.message);

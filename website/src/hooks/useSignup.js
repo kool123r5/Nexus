@@ -39,6 +39,9 @@ export const useSignup = () => {
                     displayName,
                     email,
                     authProviders: ["email"],
+                    friends: [],
+                    friendRequestsSent: [],
+                    friendRequestsReceived: [],
                 });
 
             if (!isCancelled) {

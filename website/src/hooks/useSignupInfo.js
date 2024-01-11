@@ -9,48 +9,41 @@ export const useSignupInfo = () => {
     const [isCancelled, setIsCancelled] = useState(false);
     const [error, setError] = useState(null);
     const [isPending, setIsPending] = useState(false);
-    const navigateTo = useNavigate()
-    const {user,authIsReady}=  useAuthContext();
+    const navigateTo = useNavigate();
+    const { user, authIsReady } = useAuthContext();
 
-
-    const signup2 = async ( age, grade, userLocation, interests, pfp) => {
-        console.log(user)
+    const signup2 = async (age, grade, userLocation, interests, pfp) => {
+        console.log(user);
 
         setError(null);
         const activities = null;
-        
+
         setIsPending(true);
         try {
-            
-           
-
             let url = null;
             if (pfp != null) {
                 const pfpResized = await resizeImg(pfp);
                 const uploadPath = `pfp/${user.uid}`;
                 const blob = await fetch(pfpResized).then((res) => res.blob());
                 const profilePicResized = await projectStorage.ref(uploadPath).put(blob);
-                
+
                 url = await profilePicResized.ref.getDownloadURL();
             }
 
-            console.log("hi")
+            console.log("hi");
             await user.updateProfile({ photoURL: url });
-            console.log(user)
+            console.log(user);
             // create a user document
-            await projectFirestore
-                .collection("users")
-                .doc(user.uid)
-                .update({
-                    age,
-                    grade,
-                    userLocation,
-                    interests,
-                    activities,
-                    pfp: url,
-                    friends: [],
-                    authProviders: ["email"],
-                });
+            await projectFirestore.collection("users").doc(user.uid).update({
+                age,
+                grade,
+                userLocation,
+                interests,
+                activities,
+                pfp: url,
+                // friends: [],
+                // authProviders: ["email"],
+            });
 
             if (!isCancelled) {
                 setIsPending(false);
@@ -68,7 +61,6 @@ export const useSignupInfo = () => {
     };
 
     useEffect(() => {
-
         return () => setIsCancelled(true);
     }, []);
 

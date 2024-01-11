@@ -41,8 +41,10 @@ export const useSignupInfo = () => {
                 interests,
                 activities,
                 pfp: url,
-                // friends: [],
-                // authProviders: ["email"],
+                friends: [],
+                friendRequestsSent: [],
+                friendRequestsReceived: [],
+                // authProviders: what to do here? maybe we pass it in as props or smthn idk,
             });
 
             if (!isCancelled) {

@@ -114,7 +114,7 @@ export default function Profile() {
     };
 
     const removeFriend = async () => {
-        if (areFriends() && !requstSentByCurrentUser() && !requestReceivedByCurrentUser) {
+        if (areFriends() && !requstSentByCurrentUser() && !requestReceivedByCurrentUser()) {
             await projectFirestore
                 .collection("users")
                 .doc(projectAuth.currentUser.uid)
@@ -161,7 +161,7 @@ export default function Profile() {
                 .doc(id)
                 .update({
                     friendRequestsSent: firebase.firestore.FieldValue.arrayRemove(projectAuth.currentUser.uid),
-                    friends: firebase.firestore.FieldValue.arrayUnion(id),
+                    friends: firebase.firestore.FieldValue.arrayUnion(projectAuth.currentUser.uid),
                 });
         }
     };

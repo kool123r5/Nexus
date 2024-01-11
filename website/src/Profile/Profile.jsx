@@ -13,7 +13,6 @@ export default function Profile() {
     const { document, error } = useDocument("users", id);
     const [activities, setActivities] = useState(null);
     const [filter, setFilter] = useState("All");
-    const [btnText, setBtnText] = useState("");
 
     const [searchQuery, setSearchQuery] = useState("");
     const [currentPage, setCurrentPage] = useState(1);
@@ -85,58 +84,104 @@ export default function Profile() {
 
     const yourProfile = id == projectAuth.currentUser.uid;
 
-    // i think i'm gonna have to change the below functions to use the doc's data itself instead of projectAuth
-    // in case the user isn't logged in
-    // or active at the time the other user does the stuff
+    const areFriends = () => {
+        return document.friends.includes(projectAuth.currentUser.uid);
+    };
+
+    const requstSentByCurrentUser = () => {
+        return document.friendRequestsReceived.includes(projectAuth.currentUser.uid);
+    };
+
+    const requestReceivedByCurrentUser = () => {
+        return document.friendRequestsSent.includes(projectAuth.currentUser.uid);
+    };
 
     const sendFriendRequest = async () => {
-        await projectFirestore
-            .collection("users")
-            .doc(projectAuth.currentUser.uid)
-            .update({
-                friendRequestsSent: firebase.firestore.FieldValue.arrayUnion(id),
-            });
-        await projectFirestore
-            .collection("users")
-            .doc(id)
-            .update({
-                friendRequestsReceived: firebase.firestore.FieldValue.arrayUnion(projectAuth.currentUser.uid),
-            });
+        if (!areFriends() && !requstSentByCurrentUser() && !requestReceivedByCurrentUser()) {
+            await projectFirestore
+                .collection("users")
+                .doc(projectAuth.currentUser.uid)
+                .update({
+                    friendRequestsSent: firebase.firestore.FieldValue.arrayUnion(id),
+                });
+            await projectFirestore
+                .collection("users")
+                .doc(id)
+                .update({
+                    friendRequestsReceived: firebase.firestore.FieldValue.arrayUnion(projectAuth.currentUser.uid),
+                });
+        }
     };
 
     const removeFriend = async () => {
-        await projectFirestore
-            .collection("users")
-            .doc(projectAuth.currentUser.uid)
-            .update({
-                friends: firebase.firestore.FieldValue.arrayRemove(id),
-            });
-        await projectFirestore
-            .collection("users")
-            .doc(id)
-            .update({
-                friends: firebase.firestore.FieldValue.arrayRemove(projectAuth.currentUser.uid),
-            });
+        if (areFriends() && !requstSentByCurrentUser() && !requestReceivedByCurrentUser) {
+            await projectFirestore
+                .collection("users")
+                .doc(projectAuth.currentUser.uid)
+                .update({
+                    friends: firebase.firestore.FieldValue.arrayRemove(id),
+                });
+            await projectFirestore
+                .collection("users")
+                .doc(id)
+                .update({
+                    friends: firebase.firestore.FieldValue.arrayRemove(projectAuth.currentUser.uid),
+                });
+        }
     };
 
     const unsendFriendRequest = async () => {
-        await projectFirestore
-            .collection("users")
-            .doc(projectAuth.currentUser.uid)
-            .update({
-                friendRequestsSent: firebase.firestore.FieldValue.arrayRemove(id),
-            });
-        await projectFirestore
-            .collection("users")
-            .doc(id)
-            .update({
-                friendRequestsReceived: firebase.firestore.FieldValue.arrayRemove(projectAuth.currentUser.uid),
-            });
+        if (!areFriends() && requstSentByCurrentUser() && !requestReceivedByCurrentUser()) {
+            await projectFirestore
+                .collection("users")
+                .doc(projectAuth.currentUser.uid)
+                .update({
+                    friendRequestsSent: firebase.firestore.FieldValue.arrayRemove(id),
+                });
+            await projectFirestore
+                .collection("users")
+                .doc(id)
+                .update({
+                    friendRequestsReceived: firebase.firestore.FieldValue.arrayRemove(projectAuth.currentUser.uid),
+                });
+        }
     };
 
-    const acceptFriendRequest = async () => {};
+    const acceptFriendRequest = async () => {
+        if (!areFriends() && requestReceivedByCurrentUser() && !requstSentByCurrentUser()) {
+            await projectFirestore
+                .collection("users")
+                .doc(projectAuth.currentUser.uid)
+                .update({
+                    friendRequestsReceived: firebase.firestore.FieldValue.arrayRemove(id),
+                    friends: firebase.firestore.FieldValue.arrayUnion(id),
+                });
+            await projectFirestore
+                .collection("users")
+                .doc(id)
+                .update({
+                    friendRequestsSent: firebase.firestore.FieldValue.arrayRemove(projectAuth.currentUser.uid),
+                    friends: firebase.firestore.FieldValue.arrayUnion(id),
+                });
+        }
+    };
 
-    const rejectFriendRequest = async () => {};
+    const rejectFriendRequest = async () => {
+        if (!areFriends() && requestReceivedByCurrentUser() && !requstSentByCurrentUser()) {
+            await projectFirestore
+                .collection("users")
+                .doc(projectAuth.currentUser.uid)
+                .update({
+                    friendRequestsReceived: firebase.firestore.FieldValue.arrayRemove(id),
+                });
+            await projectFirestore
+                .collection("users")
+                .doc(id)
+                .update({
+                    friendRequestsSent: firebase.firestore.FieldValue.arrayRemove(projectAuth.currentUser.uid),
+                });
+        }
+    };
 
     return (
         <>
@@ -170,36 +215,25 @@ export default function Profile() {
                         </Link>
                     ) : (
                         <>
-                            {document &&
-                                console.log(typeof document.authProviders) &&
-                                document.friends &&
-                                document.friends.includes(projectAuth.currentUser.uid) && (
-                                    <button onClick={removeFriend}>Remove Friend</button>
-                                )}
-                            {document &&
-                                document.friends &&
-                                document.friendRequestsReceived &&
-                                !document.friends.includes(projectAuth.currentUser.uid) &&
-                                !document.friendRequestsReceived.includes(projectAuth.currentUser.uid)(
-                                    <button onClick={removeFriend}>Add Friend</button>
-                                )}
-                            {document &&
-                                document.friends &&
-                                document.friendRequestsReceived &&
-                                !document.friends.includes(projectAuth.currentUser.uid) &&
-                                document.friendRequestsReceived.includes(projectAuth.currentUser.uid)(
-                                    <button onClick={unsendFriendRequest}>Unsend Friend Request</button>
-                                )}
-                            {document &&
-                                document.friends &&
-                                document.friendRequestsSent &&
-                                !document.friends.includes(projectAuth.currentUser.uid) &&
-                                document.friendRequestsSent.includes(projectAuth.currentUser.uid)(
-                                    <>
-                                        <button onClick={acceptFriendRequest}>Accept Friend Request?</button>
-                                        <button onClick={rejectFriendRequest}>Reject Friend Request?</button>
-                                    </>
-                                )}
+                            {areFriends() ? <button onClick={removeFriend}>Remove Friend</button> : <></>}
+                            {requstSentByCurrentUser() ? (
+                                <button onClick={unsendFriendRequest}>Unsend Friend Request</button>
+                            ) : (
+                                <></>
+                            )}
+                            {requestReceivedByCurrentUser() ? (
+                                <>
+                                    <button onClick={acceptFriendRequest}>Accept Friend Request</button>
+                                    <button onClick={rejectFriendRequest}>Reject Friend Request</button>
+                                </>
+                            ) : (
+                                <></>
+                            )}
+                            {!areFriends() && !requestReceivedByCurrentUser() && !requstSentByCurrentUser() ? (
+                                <button onClick={sendFriendRequest}>Send Friend Request</button>
+                            ) : (
+                                <></>
+                            )}
                         </>
                     )}
                     {yourProfile &&
@@ -211,6 +245,11 @@ export default function Profile() {
                         document.friendRequestsReceived &&
                         document.friendRequestsReceived.map((friendReq) => {
                             return <p key={Math.random()}>You have received a friend request from {friendReq}</p>;
+                        })}
+                    {yourProfile &&
+                        document.friends &&
+                        document.friends.map((friend) => {
+                            return <p key={Math.random()}>You are friends with {friend}</p>;
                         })}
                     {/* 
                     <pagination className="mt-3">

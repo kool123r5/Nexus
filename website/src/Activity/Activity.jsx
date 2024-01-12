@@ -136,8 +136,8 @@ export default function Activity() {
       });
   
       setActivityRemoved(true);
-      setText("Activity removed successfully");
-      window.location.reload() 
+      setText("Add Activity");
+      setDisabled(false)
     } catch (error) {
       console.error("Error removing activity:", error);
       // Handle error if needed
@@ -161,6 +161,7 @@ export default function Activity() {
 
     setText("Successfully added activity");
     setDisabled(true);
+    setActivityRemoved(false);
   };
 
   return (

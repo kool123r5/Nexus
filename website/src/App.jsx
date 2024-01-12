@@ -19,7 +19,6 @@ export default function App() {
 
     return (
         <>
-            <Router>
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/forum" element={<Forum />} />
@@ -38,7 +37,6 @@ export default function App() {
 
                     <Route path="/forgot-password" element={<PasswordReset />} />
                 </Routes>
-            </Router>
         </>
     );
 }

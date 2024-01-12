@@ -9,6 +9,7 @@ import nexusLogo from "../assets/NEXUS_LOGO-nobackground.png";
 
 
 export default function Home() {
+    
     const [sorted_documents, setSortedDocuments] = useState(null);
     // when we make the model, change the query to reflect the type the user would actually want to see
     const { documents, error } = useCollection("activities");

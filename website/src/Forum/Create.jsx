@@ -22,7 +22,7 @@ const Create = () => {
       const postsCollection = projectFirestore.collection('posts');
       const likes = 0;
 
-      await postsCollection.add({
+      const docRef= await postsCollection.add({
         title,
         text,
         type,
@@ -35,8 +35,7 @@ const Create = () => {
       setTitle('');
       setText('');
       setType('');
-      navigateTo('/forum')
-
+      navigateTo(`/forum/${docRef.id}`)
     } catch (error) {
       console.error('Error creating post:', error);
     }

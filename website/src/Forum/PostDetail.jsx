@@ -92,7 +92,7 @@ const documentDetail = () => {
       <p>Text: {document.text}</p>
       <p>Type: {document.type}</p>
       <p>Location: {document.location}</p>
-      <p>Creator: {document.creator}</p>
+      <p>Creator: {document.creatorName}</p>
       <p>Time: {document.time && document.time.toDate().toLocaleString()}</p></>}
 
       {editable && (

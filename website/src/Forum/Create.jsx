@@ -18,7 +18,6 @@ const Create = () => {
     try {
       const currentDate = new Date();
       const userId = user.uid; 
-      
       const postsCollection = projectFirestore.collection('posts');
       const likes = 0;
 
@@ -28,6 +27,7 @@ const Create = () => {
         type,
         likes,
         location,
+        creatorName:user.displayName,
         creator: userId,
         time: currentDate,
       });

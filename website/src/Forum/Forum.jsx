@@ -20,7 +20,7 @@ export default function Forum() {
                             return (
                                 <p key={Math.random()}>
                                     Created by: {doc.creator}
-                                    <br /> Points: {doc.points}
+                                    <br /> Points: {doc.likes}
                                     <br /> Text: {doc.text}
                                     <br /> Title: {doc.title}
                                 </p>

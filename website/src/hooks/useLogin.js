@@ -77,7 +77,6 @@ export const useLogin = () => {
             }
 
             navigateTo("/");
-            location.reload();
 
             if (!isCancelled && !userFailure) {
                 setIsPending(false);

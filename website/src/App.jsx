@@ -12,6 +12,7 @@ import Activity from "./Activity/Activity";
 import PasswordReset from "./PasswordReset/PasswordReset";
 import ProfileSettings from "./Profile/ProfileSettings";
 import Signup2 from "./Signup/Signup2";
+import Create from "./Forum/Create";
 
 
 export default function App() {
@@ -30,6 +31,10 @@ export default function App() {
 
                     {authIsReady && (
                         <Route path="/activity/:id" element={user ? <Activity /> : <Navigate to={"/login"} />} />
+                    )}
+
+                    {authIsReady && (
+                        <Route path="/create" element={user ? <Create /> : <Navigate to={"/login"} />} />
                     )}
                     {authIsReady && <Route path="/login" element={user ? <Navigate to="/" /> : <Login />} />}
                     {authIsReady && <Route path="/signup" element={user ? <Navigate to="/" /> : <Signup />} />}

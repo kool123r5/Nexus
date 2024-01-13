@@ -37,7 +37,6 @@ const documentDetail = () => {
 
   const handleUpdatePost = async () => {
     try {
-      // Add your Firebase configuration here
      
       const postRef = projectFirestore.collection('posts').doc(id);
 
@@ -62,10 +61,8 @@ const documentDetail = () => {
       setUpdatedType('');
       setUpdatedLocation('');
 
-      // You can also add a success message or navigate to another page upon successful update
     } catch (error) {
       console.error('Error updating post:', error);
-      // Handle error, show error message, etc.
     }
   };
 
@@ -73,7 +70,6 @@ const documentDetail = () => {
     try {
       const postRef = projectFirestore.collection('posts').doc(id);
       await postRef.delete();
-      // Redirect to '/forum' after successful deletion
       navigateTo('/forum');
     } catch (error) {
       console.error('Error deleting post:', error);

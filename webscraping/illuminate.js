@@ -6,7 +6,7 @@ const url = "https://illuminate.projectempower.io/";
 const scrape = async (url, numberOfTimesToScroll) => {
     const browser = await puppeteer.launch({ headless: "new" });
     const page = await browser.newPage();
-    page.setDefaultTimeout((numberOfTimesToScroll + 15) * 2000);
+    page.setDefaultTimeout((numberOfTimesToScroll + 150) * 20000);
     await page.goto(url);
 
     await page.setViewport({
@@ -17,7 +17,7 @@ const scrape = async (url, numberOfTimesToScroll) => {
     await page.waitForSelector(".bannerDescription", {
         visible: true,
     });
-    await page.waitForTimeout(10000);
+    await page.waitForTimeout(1000);
 
     await page.mouse.click(450, 450);
     await page.mouse.click(450, 450);

@@ -5,8 +5,11 @@ const url = "https://illuminate.projectempower.io/";
 
 const scrape = async (url, numberOfTimesToScroll) => {
     const browser = await puppeteer.launch({ headless: "new" });
+
     const page = await browser.newPage();
+
     page.setDefaultTimeout((numberOfTimesToScroll + 15) * 2000);
+
     await page.goto(url);
 
     await page.setViewport({
@@ -17,11 +20,9 @@ const scrape = async (url, numberOfTimesToScroll) => {
     await page.waitForSelector(".bannerDescription", {
         visible: true,
     });
+
     await page.waitForTimeout(10000);
 
-    await page.mouse.click(450, 450);
-    await page.mouse.click(450, 450);
-    await page.mouse.click(450, 450);
     await page.mouse.click(450, 450);
     await page.mouse.click(450, 450);
 
@@ -39,27 +40,28 @@ const scrape = async (url, numberOfTimesToScroll) => {
         await page.keyboard.press("PageDown");
         await page.keyboard.press("PageDown");
 
-        // await page.screenshot({ path: `ss_${i}.png`, fullPage: true });
-
         const blob = await page.evaluate(() => {
-            const elements = document.querySelectorAll(".bannerDescription");
-            const elements_titles = document.querySelectorAll(".bannerName");
-            const elements_tags = document.querySelectorAll(".bannerTags");
-            const element_website_button = document.querySelectorAll(".bannerWebsite");
+            const elements = document.querySelectorAll(".bannerDescription:not(.done)");
+            const elements_titles = document.querySelectorAll(".bannerName:not(.done)");
+            const elements_tags = document.querySelectorAll(".bannerTags:not(.done)");
+            const element_website_button = document.querySelectorAll(".bannerWebsite:not(.done)");
             const descriptions = [];
             const titles = [];
             const tags = [];
             const websites = [];
 
             elements.forEach((element) => {
+                element.classList.add("done");
                 descriptions.push(element.textContent.trim());
             });
 
             elements_titles.forEach((titl) => {
+                titl.classList.add("done");
                 titles.push(titl.textContent.trim());
             });
 
             elements_tags.forEach((tagUl) => {
+                tagUl.classList.add("done");
                 const subTagArray = [];
                 tagUl.childNodes.forEach((tagLi) => {
                     subTagArray.push(tagLi.textContent.trim());
@@ -68,6 +70,7 @@ const scrape = async (url, numberOfTimesToScroll) => {
             });
 
             element_website_button.forEach((btn) => {
+                btn.classList.add("done");
                 const aTag = btn.parentElement;
                 const website = aTag.getAttribute("href");
                 websites.push(website);
@@ -94,7 +97,10 @@ const scrape = async (url, numberOfTimesToScroll) => {
             return array_to_return;
         });
         blob.forEach((obj) => {
-            if (!blocks.some((pushedObj) => pushedObj.title === obj.title)) {
+            if (
+                !blocks.some((pushedObj) => pushedObj.title === obj.title) &&
+                !blocks.some((pushedObj) => pushedObj.website === obj.website)
+            ) {
                 blocks.push(obj);
             }
         });
@@ -114,7 +120,7 @@ const writeDataToFile = (fileName, ecList) => {
 
 const callScrape = async (url) => {
     // this is an array of objects that have the title and text info
-    const ecList = await scrape(url, 5000);
+    const ecList = await scrape(url, 20_000);
     const fileName = "ecListIlluminate.json";
     writeDataToFile(fileName, ecList);
 };

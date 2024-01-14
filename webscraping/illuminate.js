@@ -138,7 +138,7 @@ const writeDataToFile = (fileName, ecList) => {
 
 const callScrape = async (url) => {
     // this is an array of objects that have the title and text info
-    const ecList = await scrape(url, 10);
+    const ecList = await scrape(url, 1_000);
     const fileName = "ecListIlluminate.json";
     writeDataToFile(fileName, ecList);
 };

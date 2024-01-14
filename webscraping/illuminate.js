@@ -25,21 +25,23 @@ const scrape = async (url, numberOfTimesToScroll) => {
 
     for (let j = 0; j < 44; j++) {
         const checkboxes = await page.$$("input[type=checkbox]");
-        if (j > 0) {
-            page.evaluate(
-                (box, j, prevBox) => {
-                    box.click();
-                    if (j > 0) {
-                        prevBox.click();
-                    }
-                },
-                checkboxes[j],
-                j,
-                checkboxes[j - 1]
-            );
+        for (let x = 0; x < 1000; x++) {
+            page.keyboard.press("PageUp");
         }
+        page.evaluate(
+            (box, j, prevBox) => {
+                box.click();
+                if (j > 0) {
+                    prevBox.click();
+                }
+            },
+            checkboxes[j],
+            j,
+            checkboxes[j - 1],
+            page
+        );
 
-        await page.screenshot({ path: "ss.png", fullPage: true });
+        // await page.screenshot({ path: "ss.png", fullPage: true });
 
         for (let i = 0; i < numberOfTimesToScroll; i++) {
             await page.keyboard.press("PageDown");

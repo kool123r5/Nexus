@@ -3,6 +3,7 @@ import { useAuthContext } from '../hooks/useAuthContext';
 import { projectFirestore } from '../firebase/config';
 import Navbar from '../Navbar/Navbar';
 import { useNavigate } from "react-router-dom";
+import { useDocument } from '../hooks/useDocument';
 
 const Create = () => {
 
@@ -12,6 +13,8 @@ const Create = () => {
   const [type, setType] = useState('');
   const [location, setLocation] = useState('');
   const navigateTo =useNavigate()
+  const {document,isPending,error} = useDocument('users',user.uid)
+
   
 
   const handleCreatePost = async () => {
@@ -19,6 +22,7 @@ const Create = () => {
       const currentDate = new Date();
       const userId = user.uid; 
       const postsCollection = projectFirestore.collection('posts');
+
       const likes = 0;
 
       const docRef= await postsCollection.add({
@@ -31,6 +35,16 @@ const Create = () => {
         creator: userId,
         time: currentDate,
       });
+
+      if (document.posts){ 
+      await projectFirestore.collection('users').doc(user.uid).update({
+        posts: [...document.posts, projectFirestore.collection('posts').doc(docRef.id)],
+      })}
+      else{
+        await projectFirestore.collection('users').doc(user.uid).update({
+            posts:[ projectFirestore.collection('posts').doc(docRef.id)]
+        })
+      }
 
       setTitle('');
       setText('');

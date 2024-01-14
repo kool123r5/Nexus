@@ -12,6 +12,8 @@ export default function Profile() {
     const { id } = useParams();
     const { document, error } = useDocument("users", id);
     const [activities, setActivities] = useState(null);
+    const [posts, setPosts] = useState(null);
+
     const [filter, setFilter] = useState("All");
 
     const [searchQuery, setSearchQuery] = useState("");
@@ -42,8 +44,25 @@ export default function Profile() {
         }
     };
 
+    const fetchPosts = async () => {
+        if(document&& document.posts){
+            const postDocsPromises = document.posts.map(async (post) => {
+               const postDocSnapShot =await post.get()
+               const postDocData=postDocSnapShot.data()
+               return{...postDocData}
+            
+        })
+
+        const postDocs=await Promise.all(postDocsPromises)
+        console.log(postDocs)
+        setPosts(postDocs)
+
+    }
+    }
+
     useEffect(() => {
         fetchActivities();
+        fetchPosts();
     }, [document]);
 
     const changeFilter = (newFilter) => {
@@ -204,6 +223,16 @@ export default function Profile() {
                                     <Link to={`/activity/${document.uid}`}>
                                         <p key={Math.random()}>{document.title}</p>{" "}
                                     </Link>
+                                </>
+                            );
+                        })}
+
+                    {posts &&
+                        posts.map((document) => {
+                            return (
+                                <>
+                                    
+                                        <p>{document.title}</p>
                                 </>
                             );
                         })}

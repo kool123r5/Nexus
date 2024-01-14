@@ -1,0 +1,1012 @@
+[
+  {
+    "title": "The American Computer Science League",
+    "text": "American Computer Science League (ACSL) organizes computer programming and computer science contests for K-12 schools, organizations and local groups. The 2022-2023 school year will be our 45th year of continuous operation! Last year, over 700 teams in the United States, Canada, Europe, and Asia participated.",
+    "tags": [
+      "All Grades",
+      "Competition",
+      "Computer Science",
+      "Virtual"
+    ],
+    "website": "https://www.acsl.org/"
+  },
+  {
+    "title": "CyberPatriot",
+    "text": "​CyberPatriot is the National Youth Cyber Education Program created by the Air & Space Forces Association to inspire K-12 students toward careers in cybersecurity or other science, technology, engineering, and mathematics (STEM) disciplines critical to our nation's future. ​At the core of the program is the National Youth Cyber Defense Competition, the nation's largest cyber defense competition that puts high school and middle school students in charge of securing virtual networks.",
+    "tags": [
+      "All Grades",
+      "Competition",
+      "Computer Science",
+      "Cybersecurity",
+      "Virtual"
+    ],
+    "website": "https://www.uscyberpatriot.org/"
+  },
+  {
+    "title": "First Robotics Competition",
+    "text": "Combining the excitement of sport with the rigors of science and technology. We call FIRST Robotics Competition the ultimate Sport for the Mind. High-school student participants call it “the hardest fun you'll ever have.” Under strict rules, limited time and resources, teams of students are challenged to raise funds, design a team \"brand,\" hone teamwork skills, and build and program industrial-size robots to play a difficult field game against like-minded competitors. It’s as close to real-world engineering as a student can get. Volunteer professional mentors lend their time and talents to guide each team. Each season ends with an exciting FIRST Championship.",
+    "tags": [
+      "All Grades",
+      "Competition",
+      "Computer Science",
+      "Electrical Engineering",
+      "In-Person",
+      "Mechanical Engineering",
+      "Robotics"
+    ],
+    "website": "https://www.firstinspires.org/robotics/frc"
+  },
+  {
+    "title": "VEX Robotics",
+    "text": "The VEX Robotics competition prepares students to become future innovators with 95% of participants reporting an increased interest in STEM subject areas and pursuing STEM-related careers. Tournaments are held year-round at the regional, state, and national levels and culminate at the VEX Robotics World Championship each April!",
+    "tags": [
+      "All Grades",
+      "Competition",
+      "Computer Science",
+      "Electrical Engineering",
+      "In-Person",
+      "Mechanical Engineering",
+      "Robotics"
+    ],
+    "website": "https://www.vexrobotics.com/"
+  },
+  {
+    "title": "USA Computing Olympiad (USACO)",
+    "text": "The USACO supports computing education in the USA and worldwide by identifying, motivating, and training high-school computing students at all levels. We provide: Hundreds of hours of free online training resources that students can use to improve their programming and computational problem-solving skills. Online programming contests (roughly six per year) for students at all levels. An intensive summer training camp, to which the top students in the USA are invited to further improve their skills and learn advanced material. The opportunity for the top four students in the USA to represent their country at the International Olympiad in Informatics (IOI), the most prestigious international algorithmic programming competition at the high-school level.",
+    "tags": [
+      "All Grades",
+      "Computer Science",
+      "Virtual"
+    ],
+    "website": "http://www.usaco.org/"
+  },
+  {
+    "title": "Project: Empower",
+    "text": "Project: Empower is a 501(c)3 non-profit organization that brings students together to create software that empower underprivileged communities. We are a team of high school and college students from across the world who are passionate about making a difference through technology.",
+    "tags": [
+      "All Grades",
+      "Community Service",
+      "Computer Science",
+      "Virtual"
+    ],
+    "website": "https://projectempower.io/"
+  },
+  {
+    "title": "American Mathematics Competitions (AMC)",
+    "text": "The AMC 10 and AMC 12 are both 25-question, 75-minute, multiple-choice examinations in high school mathematics designed to promote the development and enhancement of problem-solving skills.",
+    "tags": [
+      "All Grades",
+      "Competition",
+      "In-Person",
+      "Mathematics"
+    ],
+    "website": "https://www.maa.org/math-competitions/amc-1012"
+  },
+  {
+    "title": "HOSA",
+    "text": "HOSA-Future Health Professionals is a global student-led organization, whose mission is to promote career opportunities in the health industry and to enhance the delivery of quality health care to all people.",
+    "tags": [
+      "All Grades",
+      "Biology",
+      "Chemistry",
+      "Competition",
+      "In-Person"
+    ],
+    "website": "https://hosa.org/"
+  },
+  {
+    "title": "Quizbowl",
+    "text": "Quiz bowl is a competition in which two teams compete head-to-head to answer questions from all areas of knowledge, including history, literature, science, fine arts, current events, popular culture, sports, and more. There are also tournaments for individual players rather than teams.",
+    "tags": [
+      "All Grades",
+      "Competition",
+      "General",
+      "In-Person"
+    ],
+    "website": "https://www.naqt.com/about/quiz-bowl.html"
+  },
+  {
+    "title": "United States Academic Decathlon",
+    "text": "The United States Academic Decathlon® is a ten-event scholastic competition for teams of high school students. Each high school enters a team of nine students: 3 Honor students (3.80 - 4.00 GPA), 3 Scholastic students (3.20 - 3.799 GPA), and 3 Varsity students (0.00 - 3.199 GPA).",
+    "tags": [
+      "All Grades",
+      "Competition",
+      "General",
+      "In-Person"
+    ],
+    "website": "https://www.usad.org/"
+  },
+  {
+    "title": "National Science Bowl",
+    "text": "A buzzer-style tournament with a 4-player team about general science trivia. Covers core sciences, math, and a bit of comp sci / logic",
+    "tags": [
+      "All Grades",
+      "Astronomy",
+      "Biology",
+      "Chemistry",
+      "Competition",
+      "Environmental Science",
+      "In-Person",
+      "Mathematics"
+    ],
+    "website": "https://science.osti.gov/wdts/nsb"
+  },
+  {
+    "title": "Yale Young Global Scholars",
+    "text": "Yale Young Global Scholars emphasizes an open, exploratory, and collaborative approach to learning. Our program is designed to allow students to experience learning in a variety of different university contexts, from large lectures to small seminars, and even the spontaneous learning that happens in dining halls and around campus.",
+    "tags": [
+      "General",
+      "Junior",
+      "Sophomore",
+      "Summer Program"
+    ],
+    "website": "https://globalscholars.yale.edu/about-yygs"
+  },
+  {
+    "title": "NYU Tisch Summer Program",
+    "text": "Tisch commuter, online, and residential programs for high school students are a way for you to develop your talents and explore the possibilities of a career in the arts. We encourage creativity and self-expression while providing you with a foundation for collaboration. The rigorous, professional training you receive is an outgrowth of the undergraduate programs, offering you an immersive experience in emerging media and the performing and cinematic arts. The high school programs taught by our full-time faculty are intense, engaging and structured; created to give you an enriching college experience.",
+    "tags": [
+      "Art/Design",
+      "Film",
+      "In-Person",
+      "Junior",
+      "Sophomore",
+      "Summer Program"
+    ],
+    "website": "https://tisch.nyu.edu/special-programs/high-school-programs/tisch-summer-high-school"
+  },
+  {
+    "title": "MIT Women's Technology Program",
+    "text": "The MIT Women's Technology Program (WTP) is a rigorous four-week summer academic and residential experience where female high school students explore engineering through hands-on classes, labs, and team-based projects in the summer after 11th grade.",
+    "tags": [
+      "Computer Science",
+      "Electrical Engineering",
+      "In-Person",
+      "Junior",
+      "Mechanical Engineering",
+      "Summer Program"
+    ],
+    "website": "http://wtp.mit.edu/"
+  },
+  {
+    "title": "Columbia University 3-Week Summer Immersion",
+    "text": "Program at Columbia University in New York City for rising freshmen through seniors to choose a course to examine in depth over a three-week time period, and to experience other facets of the college lifestyle. Both residential and commuter options. Financial aid is available for accepted students on a first-come, first-served basis. The $80 application fee is waived for students who apply before February 1st.",
+    "tags": [
+      "All Grades",
+      "In-Person",
+      "Summer Program"
+    ],
+    "website": "http://sps.columbia.edu/highschool/summer-immersion/new-york-city-3-week"
+  },
+  {
+    "title": "Notre Dame Leadership Seminars",
+    "text": "Notre Dame Leadership Seminars, an all expenses paid, college-credit granting program for high school juniors, explores topics affecting the global community. The courses are centered around vibrant discussion and a robust exchange of ideas. This creates a context in which students are encouraged to examine their own conclusions and hone their own leadership capacities by improving their communications and analytical skills.",
+    "tags": [
+      "In-Person",
+      "Junior",
+      "Leadership",
+      "Summer Program"
+    ],
+    "website": "https://precollege.nd.edu/leadership-seminars/"
+  },
+  {
+    "title": "Rise Talent Program",
+    "text": "COVID-19. Climate change. Racial justice. Gender equality. The future of work. The world’s most important problems will be solved by tomorrow’s leaders. Yet too often, the most talented people never realize their full potential for global impact. Rise is on a mission to change that. If you are between the ages of 15 and 17, from any country, with any background, you can apply to be part of the first-ever Rise cohort.",
+    "tags": [
+      "Community Service",
+      "Competition",
+      "Junior",
+      "Senior",
+      "Sophomore",
+      "Virtual"
+    ],
+    "website": "https://www.risefortheworld.org/apply"
+  },
+  {
+    "title": "Stanford Medicine Cardiothoracic Surgical Skills and Education Center Summer Internship",
+    "text": "The Cardiothoracic Surgical Skills and Education Center Stanford Summer Internship is designed to educate high school students considering careers in science, medicine, and public health in cardiovascular anatomy and physiology as well as teach medical and surgical techniques that will be utilized in pre-medical and medical school.",
+    "tags": [
+      "Biology",
+      "In-Person",
+      "Internship",
+      "Junior",
+      "Senior",
+      "Sophomore"
+    ],
+    "website": "http://med.stanford.edu/cssec/summer-internship.html"
+  },
+  {
+    "title": "University of Massachusetts Neuroscience and Mental Health Summer Internship",
+    "text": "This internship offers students the opportunity to be exposed to varying aspects of mental health work. The hope is that each student will be able to learn about the profession that they eventually want to pursue.",
+    "tags": [
+      "All Grades",
+      "In-person",
+      "Internship",
+      "Neuroscience",
+      "Psychology"
+    ],
+    "website": "https://www.umassmed.edu/psychiatry/hiring-mission/highschoolinterns"
+  },
+  {
+    "title": "UNH-IOL High School Summer Internship Program",
+    "text": "HighTech Bound is a paid 4 to 6 week internship program for rising seniors. The program provides an exciting opportunity for ambitious students to experience network technologies in a real world environment.",
+    "tags": [
+      "Computer Science",
+      "In-Person",
+      "Internship",
+      "Senior"
+    ],
+    "website": "https://www.iol.unh.edu/stem/hightech-bound"
+  },
+  {
+    "title": "U.S. Department of Energy Student Programs and Internships",
+    "text": "The Internship Program is designed to provide students with opportunities to work in agencies and explore Federal careers while still in school and while getting paid for the work performed. Students who successfully complete the program may be eligible for conversion to a permanent job in the civil service.",
+    "tags": [
+      "All Grades",
+      "Government/Politics",
+      "In-Person",
+      "Internship"
+    ],
+    "website": "https://www.opm.gov/policy-data-oversight/hiring-information/students-recent-graduates/#url=intern"
+  },
+  {
+    "title": "F=ma (USAPHO)",
+    "text": "F=ma is an annual physics competition organized by the American Association of Physics Teachers, the organization responsible for recruiting, selecting, and training teams each year to compete in the International Physics Olympiad",
+    "tags": [
+      "All Grades",
+      "Competition",
+      "In-Person",
+      "Physics"
+    ],
+    "website": "https://www.aapt.org/physicsteam/2022/registration.cfm"
+  },
+  {
+    "title": "Certamen",
+    "text": "Certamen is a quiz-bowl style game for students of Latin, Greek, and classical civilizations. It allows students to demonstrate their knowledge of the ancient peoples, languages, and cultures, and the relationships between those topics and the modern world. The matches are fun, competitive, informative, and compelling for students.",
+    "tags": [
+      "All Grades",
+      "Competition",
+      "Foreign Language",
+      "History",
+      "In-Person"
+    ],
+    "website": "https://www.njcl.org/certamen"
+  },
+  {
+    "title": "FBLA",
+    "text": "FBLA High School is the high school division of Future Business Leaders of America, Inc. FBLA High School helps high school students prepare for careers in business through academic competitions, leadership development, and educational programs.",
+    "tags": [
+      "All Grades",
+      "Business",
+      "Virtual"
+    ],
+    "website": "https://www.fbla-pbl.org/"
+  },
+  {
+    "title": "University of Florida - Student Science Training Program (SSTP)",
+    "text": "The University of Florida Student Science Training Program (UF SSTP) is a six week residential research program for selected students entering senior year and at least 16 years old by the program start date who are considering science, medicine, math, computer science, or engineering careers. The program emphasis is research participation with a UF faculty research scientist and his or her research team. Students interested in attending the UF SSTP must possess a high level of maturity, an ability to live and learn independently, a desire to work collaboratively, and a sincere interest in research.",
+    "tags": [
+      "In-Person",
+      "Junior",
+      "Research",
+      "STEM",
+      "Senior",
+      "Summer Program"
+    ],
+    "website": "https://www.cpet.ufl.edu/students/uf-cpet-summer-programs/student-science-training-program/"
+  },
+  {
+    "title": "University of Chicago - Research in the Biological Sciences (RIBS)",
+    "text": "This four-week intensive training program is designed to expose students to a broad range of molecular, microbiological, and cell biological techniques currently used in research laboratories. Students are immersed in the research experience, giving them a taste of \"life at the bench\". Using a project-based approach, the course progresses from a survey of basic lab techniques to the application of current molecular techniques in developmental biology and microbiology.",
+    "tags": [
+      "Biology",
+      "Chemistry",
+      "In-Person",
+      "Junior",
+      "Research",
+      "Sophomore",
+      "Summer Program"
+    ],
+    "website": "https://summer.uchicago.edu/programs/research-biological-sciences-ribs"
+  },
+  {
+    "title": "University of Pennsylvania - Engineering Summer Academy Program (ESAP)",
+    "text": "The Engineering Summer Academy at Penn (ESAP) welcomes highly motivated and talented students to explore Engineering at the college level. The Academy’s intensive, three-week programs combine sophisticated theory with hands-on practical experience in cutting edge technologies. Work with leading faculty while earning college credit, live on Penn’s historic campus, and connect with new friends from around the world.",
+    "tags": [
+      "All Grades",
+      "Electrical Engineering",
+      "In-Person",
+      "Mechanical Engineering",
+      "Summer Program"
+    ],
+    "website": "https://esap.seas.upenn.edu/about/"
+  },
+  {
+    "title": "PROMYS | Program in Mathematics for Young Scientists",
+    "text": "PROMYS is a six-week summer program in mathematics for strongly motivated high school students who are carefully selected from across the U.S. and around the world. Founded in 1989, PROMYS is a residential program held on the campus of Boston University with approximately 80 high school students and 25 undergraduate counselors.",
+    "tags": [
+      "All Grades",
+      "In-Person",
+      "Mathematics",
+      "Summer Program"
+    ],
+    "website": "https://promys.org/"
+  },
+  {
+    "title": "The Ross Mathematics Program",
+    "text": "The first year course in the Ross Program is organized around a series of daily problem sets in number theory. These sets invite the participants to contemplate a variety of seemingly simple questions about numbers and their relationships. As the summer progresses the students are encouraged to investigate these questions in increasing depth, and to return to them periodically as their skill at abstract reasoning and their collection of available tools become more powerful.",
+    "tags": [
+      "All Grades",
+      "In-Person",
+      "Mathematics",
+      "Summer Program"
+    ],
+    "website": "https://rossprogram.org/"
+  },
+  {
+    "title": "Stanford University Mathematics Camp",
+    "text": "Stanford University Mathematics Camp (SUMaC) welcomes a select group of mathematically talented rising high school juniors and seniors from around the world for intensive study in advanced mathematics.",
+    "tags": [
+      "",
+      "In-Person",
+      "Junior",
+      "Mathematics",
+      "Senior",
+      "Sophomore",
+      "Summer Program",
+      "Virtual"
+    ],
+    "website": "https://sumac.spcs.stanford.edu/"
+  },
+  {
+    "title": "International Economics Olympiad",
+    "text": "Annual competition for high school students in the field of economics. The competition’s activities are designed to stimulate creative problem-solving skills among students interested in Economics, Business, and Finance.",
+    "tags": [
+      "All Grades",
+      "Business",
+      "Competition",
+      "Economics",
+      "In-Person"
+    ],
+    "website": "https://ecolymp.org/"
+  },
+  {
+    "title": "World Economics Cup",
+    "text": "World Economics Cup (WEC) is an international education initiative and platform for the high school students who are interested in economics. WEC aims to identify, inspire, empower and support the next generation of leaders in the economics field and to develop their international network.",
+    "tags": [
+      "All Grades",
+      "Competition",
+      "Economics",
+      "In-Person",
+      "Virtual"
+    ],
+    "website": "https://www.worldeconcup.org/"
+  },
+  {
+    "title": "The National Economics Challenge",
+    "text": "Each year, close to 10,000 students from across the nation take the chance to shine while being tested on key micro and macroeconomic principles, as well as their knowledge of the world economy. The National Economics Challenge provides a platform for high school students of economics to compete with their peers on a national scale and make themselves and their schools proud.",
+    "tags": [
+      "All Grades",
+      "Competition",
+      "Economics",
+      "In-Person"
+    ],
+    "website": "https://www.councilforeconed.org/programs/for-students/national-economic-challenge/#:~:text=The%20National%20Economics%20Challenge%20(NEC,knowledge%20of%20the%20world%20economy."
+  },
+  {
+    "title": "Samsung Solve for Tomorrow",
+    "text": "Each year Samsung hosts a $2 million national competition for public schools grades 6–12 in which students are asked to consider how science, technology, engineering and math (STEM) can be used to create change in their communities. With the help of their teachers, students can apply to the contest and compete to win up to $100,000 in prizes for their school, plus the opportunity to work with Samsung employees to develop their prototypes.",
+    "tags": [
+      "All Grades",
+      "Competition",
+      "In-Person",
+      "STEM"
+    ],
+    "website": "https://www.samsung.com/us/solvefortomorrow/"
+  },
+  {
+    "title": "ArcGIS Online Competition for US High School & Middle School Students",
+    "text": "Esri challenges US students to conduct and share projects about something in their home state. Esri's 2022 ArcGIS Online Competition is open to high school and middle school students in participating states in the US who can gather, create, analyze, interpret, and present data via an ArcGIS Story Map.",
+    "tags": [
+      "All Grades",
+      "Competition",
+      "Research",
+      "STEM",
+      "Virtual"
+    ],
+    "website": "https://agoschoolcomp-education.hub.arcgis.com/"
+  },
+  {
+    "title": "Plant the Moon Challenge",
+    "text": "Participants in the Plant the Moon Challenge will join a global science experiment and research challenge to examine how vegetable crops can grow in lunar or Martian soil. Each team will receive real soil simulant from the University of Central Florida’s CLASS Exolith Lab! You will design and conduct a set of experiments using this simulant to grow crops for a future long-duration mission.",
+    "tags": [
+      "All Grades",
+      "Competition",
+      "In-Person",
+      "Research",
+      "STEM"
+    ],
+    "website": "https://plantthemoon.com/"
+  },
+  {
+    "title": "FCCLA Knowledge Matters Virtual Business Challenge",
+    "text": "The FCCLA/Knowledge Matters Virtual Business Challenges (Personal Finance and Fashion) encourage FCCLA members to test their personal finance or fashion management skills! This free competitive event consists of two competition rounds, Fall 2022 and Spring 2023. Teams may participate in one or both rounds. Participants will utilize a competition version of the Virtual Business classroom software. The 2022-2023 FCCLA/Knowledge Matters VBC Guidelines are available in the FCCLA Portal.",
+    "tags": [
+      "All Grades",
+      "Business",
+      "Competition",
+      "Virtual"
+    ],
+    "website": "https://fcclainc.org/compete/fcclaknowledge-matters-simulations"
+  },
+  {
+    "title": "Fleet Reserve Association Americanism Essay Contest",
+    "text": "FRA sponsors an annual essay contest to promote the spirit of Americanism and patriotism among our country’s youth. FRA Americanism Essay Contest is open to all students, grades 7 through 12, including those who are home schooled. Students are invited to submit a 350-word essay through an FRA member or local FRA branch before the December 1st deadline. Local winners are forwarded for competition at the regional level and regional winners compete for national prizes.",
+    "tags": [
+      "All Grades",
+      "Competition",
+      "Virtual",
+      "Writing"
+    ],
+    "website": "https://www.fra.org/fra/Web/Events_and_Programs/7_12th_Grade_Essay_Contest/Web/Content/Essay_Contest.aspx"
+  },
+  {
+    "title": "Fresh Films Video Challenge",
+    "text": "In this challenging time, it’s more important than ever to express, create, and connect with others. The Fresh Films Video Challenges allow you to do just that! And along the way, you'll learn some pretty awesome documentary film and storytelling skills that you can use in other classes, for college applications and beyond.",
+    "tags": [
+      "All Grades",
+      "Competition",
+      "Environmental Science",
+      "Film",
+      "Virtual"
+    ],
+    "website": "https://freshfilms.org/videochallenge/"
+  },
+  {
+    "title": "Genes in Space",
+    "text": "Genes in Space invites students to design DNA analysis experiments that solve real-world problems in space exploration. The winning experiment will be launched to the International Space Station (ISS) where it will be carried out by astronauts. The contest is a collaboration between miniPCR and Boeing with generous support from the ISS National Laboratory and New England Biolabs, Inc.",
+    "tags": [
+      "All Grades",
+      "Biology",
+      "Chemistry",
+      "Competition",
+      "In-Person",
+      "Virtual"
+    ],
+    "website": "https://www.genesinspace.org/"
+  },
+  {
+    "title": "Genius Olympiad",
+    "text": "GENIUS Olympiad is an international high school project competition about environmental issues. It is founded and organized by Terra Science and Education and hosted by the Rochester Institute of Technology. GENIUS Olympiad will host projects in five general disciplines with an environmental focus.",
+    "tags": [
+      "All Grades",
+      "Competition",
+      "Environmental Science",
+      "In-Person"
+    ],
+    "website": "https://geniusolympiad.org/"
+  },
+  {
+    "title": "George S. & Stella M. Knight Essay Contest",
+    "text": "To participate, students must submit an original 800- to 1,200-word essay based on an event, person, philosophy or ideal associated with the American Revolution, Declaration of Independence, or the framing of the United States Constitution. Each student’s essay will be judged based upon its historical accuracy, clarity, organization, grammar and spelling, and documentation.",
+    "tags": [
+      "All Grades",
+      "Competition",
+      "History",
+      "Virtual",
+      "Writing"
+    ],
+    "website": "https://www.sar.org/george-s-stella-m-knight-essay-contest/"
+  },
+  {
+    "title": "Reach for the Stars - National Rocket Competition",
+    "text": "AIAA is a proud sponsor of this nation wide competition that honors the first Teacher-in-Space Christa McAuliffe. Competitors (age 10 to 18) build and launch their own rockets in local competitions. After two launches and parachute landings, the closest average distance to an on-field target wins.",
+    "tags": [
+      "Aerospace Engineering",
+      "All Grades",
+      "Competition",
+      "In-Person"
+    ],
+    "website": "https://www.aiaa.org/get-involved/k-12-students/reach-for-the-stars---national-rocket-competition"
+  },
+  {
+    "title": "Real World Design Challenge",
+    "text": "The Real World Design Challenge (RWDC) is an annual competition that provides high school students, grades 9-12, the opportunity to work on real world engineering challenges in a team environment. Each year, student teams will be asked to address a challenge that confronts our nation's leading industries. Students will utilize professional engineering software to develop their solutions and will also generate presentations that convincingly demonstrate the value of their solutions. The RWDC provides students with opportunities to apply the lessons of the classroom to the technical problems that are being faced in the workplace.",
+    "tags": [
+      "Aerospace Engineering",
+      "All Grades",
+      "Competition",
+      "Electrical Engineering",
+      "Mechanical Engineering",
+      "Virtual"
+    ],
+    "website": "http://www.realworlddesignchallenge.org/"
+  },
+  {
+    "title": "Regeneron Science Talent Search (STS)",
+    "text": "Each year, nearly 1,900 students enter the Regeneron STS, submitting original research in critically important scientific fields of study. Unique among high school competitions, the Regeneron STS focuses on identifying, inspiring, and engaging the most promising scientists among the nation’s high school seniors.",
+    "tags": [
+      "All Grades",
+      "Competition",
+      "In-Person",
+      "Research",
+      "STEM"
+    ],
+    "website": "https://www.societyforscience.org/regeneron-sts/"
+  },
+  {
+    "title": "RoboBoat",
+    "text": "Student teams design and build Autonomous Surface Vehicles (ASV) and compete in an international competition. RoboBoat competitions unite an enhanced community of innovators, with results capable of making substantive contributions to the maritime field.",
+    "tags": [
+      "All Grades",
+      "Competition",
+      "Computer Science",
+      "Electrical Engineering",
+      "In-Person",
+      "Mechanical Engineering",
+      "Robotics"
+    ],
+    "website": "https://robonation.org/programs/roboboat/"
+  },
+  {
+    "title": "SchoolsNEXT Design Competition",
+    "text": "The SchoolsNEXT Design Competition offers an opportunity to illustrate the kind of creativity that students bring to the planning and design process. The competition highlights the importance of well-planned, healthy, safe sustainable and resilient schools that foster student and teacher achievement and enhance community vitality. The international annual competition, open to middle school and high school students, challenges student teams to design their learning environments to enhance learning, conserve resources, be environmentally responsive and engage the surrounding community. The multi-disciplinary solution requires students to follow a planning process from the concept phase to completion of the project, with thorough documentation. The students will present their project to a jury for review.",
+    "tags": [
+      "All Grades",
+      "Architecture",
+      "Competition",
+      "Virtual"
+    ],
+    "website": "https://www.a4le.org/A4LE/Programs_Awards/SchoolsNEXT/SchoolsNEXT.aspx"
+  },
+  {
+    "title": "Science Without Borders Challenge - International Art Contest",
+    "text": "The Science Without Borders® Challenge is an international contest that engages students and teachers in ocean conservation through art. This annual competition inspires students to be creative while promoting public awareness of the need to preserve, protect, and restore the world’s oceans and aquatic resources, contributing to the overarching goals of the Khaled bin Sultan Living Oceans Foundation. The Challenge is open to primary and secondary school students 11-19 years old, with scholarships of up to $500 awarded to the winning entries.",
+    "tags": [
+      "All Grades",
+      "Art/Design",
+      "Competition",
+      "Environmental Science",
+      "Virtual"
+    ],
+    "website": "https://www.livingoceansfoundation.org/education/science-without-borders-challenge/"
+  },
+  {
+    "title": "Sea, Air, and Land Challenge",
+    "text": "Sea, Air and Land Challenge is an Office of Naval Research Sponsored program, in which teams of high school students learn the engineering process through the design of a system relevant to the Department of Defense. The systems are then used to compete in challenges that mimic missions encountered by the military, national security agencies and first responders.",
+    "tags": [
+      "Aerospace",
+      "All Grades",
+      "Competition",
+      "Computer Science",
+      "Electrical Engineering",
+      "In-Person",
+      "Mechanical Engineering",
+      "Robotics"
+    ],
+    "website": "https://seaairland.psu.edu/"
+  },
+  {
+    "title": "Leonard L. Milberg ’53 High School Poetry Prize",
+    "text": "The Leonard L. Milberg ’53 High School Poetry Prize recognizes outstanding work by student writers in the 11th grade in the U.S. or abroad. Contest judges are poets on the Princeton University creative writing faculty, which includes Marilyn Chin, Michael Dickman, Lynn Melnick, Paul Muldoon, Kathleen Ossip, Patricia Smith, and Susan Wheeler.",
+    "tags": [
+      "Competition",
+      "Junior",
+      "Virtual",
+      "Writing"
+    ],
+    "website": "https://arts.princeton.edu/about/opportunities/high-school-contests/poetry-contest/"
+  },
+  {
+    "title": "The Patricia Grodd Poetry Prize for Young Writers",
+    "text": "The Patricia Grodd Poetry Prize, created in 2007 to recognize outstanding young poets, is open to high school sophomores and juniors. The contest is named in honor of Patricia Grodd in recognition of her generous support of the Kenyon Review and its programs, as well as her passionate commitment to education and deep love for poetry.",
+    "tags": [
+      "All Grades",
+      "Competition",
+      "Virtual",
+      "Writing"
+    ],
+    "website": "https://kenyonreview.org/contests/patricia-grodd/"
+  },
+  {
+    "title": "Foyle Young Poets Award",
+    "text": "The Foyle Young Poets of the Year Award is an opportunity for any young person aged 11-17 to accelerate their writing career. Since it was founded in 1998, the Award has kick-started the career of some of today’s most exciting new voices, such as Sarah Howe, Jay Bernard, Helen Mort, Richard Osmond, Caroline Bird, Phoebe Stuckes and many more poets from across the world. With entries from over 6,775 young people last year from across the UK and worldwide, it is the largest competition of its kind and its importance is widely attested.",
+    "tags": [
+      "All Grades",
+      "Competition",
+      "Virtual",
+      "Writing"
+    ],
+    "website": "https://foyleyoungpoets.org/"
+  },
+  {
+    "title": "Princeton Summer Journalism Program",
+    "text": "The Princeton Summer Journalism Program (PSJP) is the only program of its kind offering a free, year-long college preparation and journalism program for high school juniors from limited-income backgrounds. Our mission is to diversify the fields that impact our democracy through the exploration of the important connection between journalism and critical social and political events. Every summer, up to 40 students from across the country explore current events and world affairs through workshops and lectures led by Princeton professors, professional journalists, and alumni on campus. The summer program culminates in a 10-day residential experience on Princeton's campus, during which students publish our annual newspaper, the Princeton Summer Journal. During their senior year, students are matched with a personal college adviser, who will work with them on their college admissions process. Since our founding in 2002, PSJP has graduated more than 500 students who have gone on to attend some of the best colleges and universities and produce content for the most respected publications in the nation. Another 40 will join them this spring, as they complete their senior year and the college admission process!",
+    "tags": [
+      "Government/Politics",
+      "In-Person",
+      "Junior",
+      "Senior",
+      "Summer Program",
+      "Writing"
+    ],
+    "website": "https://psjp.princeton.edu/"
+  },
+  {
+    "title": "American Music Talent Competition",
+    "text": "The American Music Talent Competition is an International Music Competition and open to all school students and adult solo performers, ensembles, and small orchestras of all nationalities and countries from November 10th, 2022. All instruments, including Piano, Strings, Woodwinds, Brass, Percussion and Voice are welcome to participate in the Audition. Participants are required to submit video recording as a part of their application materials to enter into the Audition. Multiple winners will be chosen in each group.",
+    "tags": [
+      "All Grades",
+      "Competition",
+      "Music",
+      "Virtual"
+    ],
+    "website": "https://youthmusician.org/american-music-talent-competition/"
+  },
+  {
+    "title": "Lydian String Quartet Commission Prize",
+    "text": "The Lydian String Quartet (LSQ) and Brandeis University announce their biennial competition for the commission of an original work for string quartet. The winning composer will receive a $15,000 commission to compose a large- scale (15- to 30-minute) string quartet that will be premiered by the Lydian String Quartet in Fall 2024. The Lydian String Quartet has long championed the works of living composers. The goal of this commission prize is to encourage creativity and enhance the string quartet literature at the highest level of composition.",
+    "tags": [
+      "All Grades",
+      "Competition",
+      "Music",
+      "Virtual"
+    ],
+    "website": "https://www.lydianquartet.com/prize"
+  },
+  {
+    "title": "Princeton Laboratory Learning Program",
+    "text": "The Laboratory Learning Program is a full-time, free research experience in the sciences or engineering for high school students. Students are included in ongoing research programs where they are closely supervised by Princeton faculty and research staff. The participation dates are customized according to the schedules of the research personnel and the specifics of the project. Internships typically span 5-6 weeks over the summer. Each research opportunity has its own schedule.",
+    "tags": [
+      "All Grades",
+      "Research",
+      "STEM",
+      "Summer Programs",
+      "Virtual"
+    ],
+    "website": "https://research.princeton.edu/about-us/internships/laboratory-learning-program"
+  },
+  {
+    "title": "Princeton Program in Algorithmic and Combinatorial Thinking",
+    "text": "In the main group, most students have limited experience with theoretical computer science. Students start the program by studying topics in discrete mathematics such as systematic counting and methods of proof. They then learn proof techniques, such as induction, and basic graph theory to prove various theorems.",
+    "tags": [
+      "All Grades",
+      "In-Person",
+      "Mathematics",
+      "Summer Program"
+    ],
+    "website": "https://algorithmicthinking.org/"
+  },
+  {
+    "title": "Brown Pre-College Programs",
+    "text": "Brown Pre-College Programs are designed for high school students to explore the challenges and opportunities of the college experience. You'll enjoy the excitement and responsibility that comes from balancing challenging academics and enriching social activities—without the pressure of formal grades.",
+    "tags": [
+      "All Grades",
+      "General",
+      "In-Person",
+      "Junior",
+      "Senior",
+      "Summer Program"
+    ],
+    "website": "https://precollege.brown.edu/"
+  },
+  {
+    "title": "Washington University in St. Louis High School Scholars Program",
+    "text": "Through our High School Summer Scholars Program, students have the opportunity to enroll in courses for credit and study alongside undergraduates. Students select from a broad range of stimulating introductory courses in the humanities, social sciences, natural sciences and mathematics. Students may choose to enroll in one or two 3-unit courses.",
+    "tags": [
+      "General",
+      "In-Person",
+      "Junior",
+      "Senior",
+      "Summer Program"
+    ],
+    "website": "https://precollege.wustl.edu/high-school-summer-scholars-program#:~:text=Program%20Overview,sciences%2C%20natural%20sciences%20and%20mathematics."
+  },
+  {
+    "title": "Johns Hopkins Engineering Innovation Pre-College Programs",
+    "text": "experimenting, designing, creating, and learning to think like an engineer. Create a device to enhance the well-being of the user, improve the efficiency of wind energy, or design a spaghetti bridge to hold upwards of 200 pounds! We've blended collaborative and fun activities that will broaden your thinking about what’s possible with engineering. Top it all off with college credit! Live on-campus like a college student, commute, or log on and join other STEM-loving students from around the world for the experience of a lifetime.",
+    "tags": [
+      "All Grades",
+      "In-Person",
+      "STEM",
+      "Summer Program",
+      "Virtual"
+    ],
+    "website": "https://ei.jhu.edu/programs/"
+  },
+  {
+    "title": "AgDiscovery Program",
+    "text": "AgDiscovery is a free summer outreach program to help teenagers explore careers in agricultural sciences. As an AgDiscovery student, you'll live on a college campus for 2–4 weeks and learn from university professors and USDA experts—plant and animal scientists, biotechnologists, veterinarians, wildlife biologists, administrative professionals, and others. You’ll gain hands-on experience through labs, workshops, and field trips; participate in character- and team-building activities; and join in many other fun and educational events. It’s a unique chance to get a first-hand look at the many exciting career paths in agriculture.",
+    "tags": [
+      "All Grades",
+      "Biology",
+      "Environmental Science",
+      "In-Person",
+      "Summer Program"
+    ],
+    "website": "https://www.aphis.usda.gov/aphis/ourfocus/civilrights/agdiscovery"
+  },
+  {
+    "title": "Stanford Compression Forum Summer Internship",
+    "text": "The Stanford Compression Forum is offering its annual summer internship program for the Summer of 2023. We are looking for passionate high school and early CC students interested in pursuing fun research projects over the summer.\nThis internship is intended to provide early exposure to research transcending traditional disciplinary boundaries. Students will be grouped to multifaceted projects that will benefit from their existing interests and strengths, while exposing them to new areas. Projects will be mentored by students, faculty and staff of the Stanford Compression Forum and its affiliated organizations. Themes will span and combine the science of information and communication, engineering, the arts, linguistics, psychology, biology, neuroscience, computer science, technology, philosophy, and design, among other areas.",
+    "tags": [
+      "General",
+      "In-Person",
+      "Junior",
+      "Research",
+      "Senior",
+      "Summer Program",
+      "Virtual"
+    ],
+    "website": "https://compression.stanford.edu/outreach/shtem-summer-internships-high-schoolers-and-community-college-students"
+  },
+  {
+    "title": "Carnegie Museums Internships",
+    "text": "Unpaid internships are available at all four Carnegie Museums—Carnegie Museum of Art, Carnegie Museum of Natural History, Carnegie Science Center, and The Andy Warhol Museum—allowing high schoolers to either work in public-facing or behind-the-scenes positions. No matter where interns are employed, they'll leave with an incredible work experience, a host of skills, and a bolstered professional network.",
+    "tags": [
+      "Art/Design",
+      "Community Service",
+      "Environmental Science",
+      "In-Person. All Grades",
+      "Internship"
+    ],
+    "website": "https://carnegiemuseums.org/opportunities/volunteer/"
+  },
+  {
+    "title": "AEOP High School Apprenticeship",
+    "text": "What do cutting edge research, state-of-the-art laboratory facilities and unparalleled access to professional scientists and engineers have in common? The AEOP High School Apprenticeship. Spend your summer in a university research lab or in one of the U.S. Army Research Laboratories and Centers through this unique apprenticeship opportunity. You will experience firsthand the innovation and research that is driving the future of our country. Do something meaningful this summer to prepare you for competitive college admissions and the next step in your STEM journey. Submit your application today for a chance to participate in the AEOP Apprenticeship Program. The impacts of this transformative experience will last a lifetime.",
+    "tags": [
+      "All Grades",
+      "In-Person",
+      "Research",
+      "Summer Program"
+    ],
+    "website": "https://www.usaeop.com/program/high-school-apprenticeships/"
+  },
+  {
+    "title": "Princeton Plasma Physics Laboratory Internship",
+    "text": "PPPL Science Education department offers a limited number of internship positions for outstanding high school seniors throughout the school year and the summer after graduation. Each term, which lasts about 8 (summer) to 16 (semester) weeks, offers students the chance to work on a project with a member of our research or engineering staff. The exact dates of the internship depend on the participant's school schedule. The summer internship schedule is typically Monday through Friday, 9am to 5pm, but occasionally, alternate arrangements can be made.",
+    "tags": [
+      "Physics",
+      "Research",
+      "Senior",
+      "Summer Program",
+      "Virtual"
+    ],
+    "website": "https://www.pppl.gov/high-school-semester-long-internship-high-school-summer-internship"
+  },
+  {
+    "title": "Coursera",
+    "text": "Coursera is a global online learning platform that offers anyone, anywhere, access to online courses and degrees from leading universities and companies. They have courses from various top universities such as Yale, Duke, UIUC in various fields such as Data Science, Computer Science, Business, and much more.",
+    "tags": [
+      "All Grades",
+      "General",
+      "Virtual"
+    ],
+    "website": "https://www.coursera.org/"
+  },
+  {
+    "title": "Udemy",
+    "text": "Udemy offers various courses in various subjects for $14.99. The lessons are often in video format with additional resources and support.",
+    "tags": [
+      "All Grades",
+      "General",
+      "Virtual"
+    ],
+    "website": "https://www.udemy.com/"
+  },
+  {
+    "title": "Perry Research Scholars Institute",
+    "text": "Students in grades 8-10 (current academic year) may apply for the Perry Research Scholars Institute (PRSI), a two-week residential academic summer program at The University of Iowa's Belin-Blank Center for Gifted Education and Talent Development. In this program, students will meet different types of researchers across many different fields, such as anthropology, business, education, engineering, medicine, psychology, sustainability, and more. Students will gather in a classroom environment to hear from these researchers about how they came to do the work that they do, and to read and discuss some of the research they have published. Students will then have the opportunity to tour state-of-the-art research facilities for hands-on demonstrations of advanced lab techniques.",
+    "tags": [
+      "Freshman",
+      "General",
+      "In-Person",
+      "STEM",
+      "Sophomore",
+      "Summer Program"
+    ],
+    "website": "https://belinblank.education.uiowa.edu/students/prsi/"
+  },
+  {
+    "title": "Project Uplift",
+    "text": "Project Uplift is a summer enrichment and college access program designed to promote and increase access to higher education for rising high school seniors, especially those underrepresented in postsecondary education. Every summer, approximately 1,000 high school seniors participate in one of multiple Project Uplift sessions. Participants learn about the college admissions process, interact with faculty, staff, and current students, and participate in educational, cultural, and social activities. Project Uplift scholars have the opportunity to immerse themselves in college life and experience the academic rigor and social climate of a four-year institution.",
+    "tags": [
+      "In-Person",
+      "Junior",
+      "Senior",
+      "Summer Program"
+    ],
+    "website": "https://diversity.unc.edu/project-uplift-and-uplift-plus/"
+  },
+  {
+    "title": "Babson Summer Study",
+    "text": "Babson Summer Study is a 3+-week experiential online program for rising high school juniors and seniors to develop an entrepreneurial mindset and become innovators and changemakers. By strengthening your understanding of the United Nation's Global Goals, you will develop the competencies and confidence to address real-world problems, seize opportunities, have an impact, and create change that leads to your desired future. While you work with peers from around the globe, you will develop power skills that allow you to enroll others in your vision, confidently master difficult topics, and embrace other points of view all while earning 4 college credits from Babson, the top-ranked college for entrepreneurship.",
+    "tags": [
+      "Entrepreneurship",
+      "Junior",
+      "Leadership",
+      "Senior",
+      "Sophomore",
+      "Summer Program",
+      "Virtual"
+    ],
+    "website": "https://www.babson.edu/high-school-programs/"
+  },
+  {
+    "title": "Business is Global Summer Language Programs",
+    "text": "If you will be a rising high school sophomore, junior, or senior in the summer of 2023 and interested in experiencing the intersection of business, language, and culture—this two-week program is for you. This intensive experience, presented by IU CIBER (the Indiana University Center for International Business Education and Research) will bring to life the phrase “business is global.”",
+    "tags": [
+      "All Grades",
+      "Business",
+      "Foreign Language",
+      "In-Person",
+      "Summer Program"
+    ],
+    "website": "https://kelley.iu.edu/faculty-research/centers-institutes/international-business/programs-initiatives/business-is-global.html"
+  },
+  {
+    "title": "C-Tech² - Computers and Technology at Virginia Tech",
+    "text": "C-Tech² offers an opportunity to learn about college life--from residence halls to classrooms and everything in-between. It provides access to information and technology necessary to best prepare you for your future. The C-Tech² program targets rising junior and senior high school girls.",
+    "tags": [
+      "In-Person",
+      "Junior",
+      "STEM",
+      "Senior",
+      "Sophomore",
+      "Summer Program"
+    ],
+    "website": "https://eng.vt.edu/ceed/ceed-pre-college-programs/c-tech2.html"
+  },
+  {
+    "title": "California State Summer School for the Arts",
+    "text": "The California State Summer School for the Arts (CSSSA) is a rigorous pre-professional training program in the visual and performing arts, creative writing, animation, and film for talented artists of high school age. Its purpose is to provide a training ground for future artists who wish to pursue careers in the arts and entertainment industries in California.",
+    "tags": [
+      "All Grades",
+      "Art/Design",
+      "Film",
+      "In-Person",
+      "In-Person",
+      "Music",
+      "Performing Arts",
+      "Summer Program",
+      "Writing"
+    ],
+    "website": "https://www.csssa.ca.gov/"
+  },
+  {
+    "title": "Boston University Visual Arts’ Summer Institute",
+    "text": "The Boston University School of Visual Arts’ Summer Institute offers high school students (ages 15–18) an intensive visual arts program designed to help them build exceptional portfolios and get a taste of the collegiate art school experience. Whether preparing portfolios for college admission or simply working to improve technical abilities, students are introduced to materials and methods used in professional artistic practice.",
+    "tags": [
+      "All Grades",
+      "Art/Design",
+      "In-Person",
+      "Summer Program"
+    ],
+    "website": "https://www.bu.edu/cfa/vasi/"
+  },
+  {
+    "title": "Tufts Summit Program",
+    "text": "The Tufts Summit program is designed to offer a select group of rising high school juniors and seniors an opportunity to take a college-level course on International Relations while being immersed in French language and culture.  Classes are complemented by excursions to Geneva and Lyon, and students also enjoy a host of extracurricular activities including hiking and swimming. Students live with carefully selected host families, most often with another student.",
+    "tags": [
+      "Foreign Language",
+      "Global Affairs",
+      "In-Person",
+      "Junior",
+      "Senior",
+      "Sophomore",
+      "Summer Program"
+    ],
+    "website": "https://europeancenter.tufts.edu/tufts-summit/"
+  },
+  {
+    "title": "Young Women's Institute",
+    "text": "The Young Women’s Institute introduces young women to the college experience and business career opportunities. Students are selected from around the country to spend a week at Indiana University in Bloomington, Indiana.",
+    "tags": [
+      "Business",
+      "In-Person",
+      "Junior",
+      "Senior",
+      "Summer Program"
+    ],
+    "website": "https://kelley.iu.edu/programs/undergrad/pre-college/ywi.html"
+  },
+  {
+    "title": "Experiment and Explore: Summer Science Camp",
+    "text": "This one-week hands-on camp is perfect for the budding scientist! Students will work closely with two science faculty members as they explore biology, chemistry, and environmental science. They also get to hear from guest daily and work in labs to deepen their scientific understanding.",
+    "tags": [
+      "All Grades",
+      "Biology",
+      "Chemistry",
+      "Environmental Science",
+      "In-Person",
+      "Summer Program",
+      "Summer Program"
+    ],
+    "website": "https://www.hollins.edu/academics/hollinsummer/experiment-explore-summer-science-camp-hollins/"
+  },
+  {
+    "title": "Key Club",
+    "text": "Key Club is a student-led, high school organization. Our members make the world a better place through service. In doing so, we grow as individuals and as leaders by answering the call to lead, summoning the courage to engage and developing the heart to serve.",
+    "tags": [
+      "All Grades",
+      "Community Service",
+      "In-Person",
+      "Leadership"
+    ],
+    "website": "https://www.keyclub.org/"
+  },
+  {
+    "title": "Habitat for Humanity",
+    "text": "With Habitat for Humanity, you have the opportunity to build in your community and also in communities around the world. Because of the help of people like you, whole neighborhoods improve and completely transform. Through this transformation, families achieve the strength, stability and independence they need to build a better life.",
+    "tags": [
+      "All Grades",
+      "Community Service",
+      "In-Person"
+    ],
+    "website": "https://www.habitat.org/volunteer"
+  },
+  {
+    "title": "EcoLearners New York",
+    "text": "A New York City chapter for EcoLearners (also known as EcoLearning Together), that plans on hosting events and spreading awareness on climate education online. \n\nEcolearners is a registered non-profit and UN partner, currently working on several restoration efforts in their many other chapters throughout the states and around the world.",
+    "tags": [
+      "Community Service",
+      "Research",
+      "Virtual"
+    ],
+    "website": "https://www.ecolearners.org "
+  },
+  {
+    "title": "The CalcuLIT Club",
+    "text": "The CalcuLIT Club is a vibrant math club for high school students passionate about calculus and mathematics. We meet virtually every week to discuss, learn and explore the world of calculus. The CalcuLIT Club has become a hub of intellect, wit, creativity and collaboration.\n\nOur members range from high schoolers to math teachers, and we are always open to new members! Whether you’re an expert or just starting out, we’d love to have you join us. Come be part of the CalcuLIT Club and explore the powers of mathematics.\n\nWe’re offering tutoring and curriculum development positions , give access to free learning resources , and we’ll give you a certification at the end of your term .",
+    "tags": [
+      "Mathematics",
+      "Virtual",
+      "Physics",
+      "STEM",
+      "Mechanical Engineering",
+      "Internship"
+    ],
+    "website": "https://thecalculitclub.wixsite.com/the-calculit-club"
+  },
+  {
+    "title": "Investment Banking Club: Chapter of the IBC Project",
+    "text": "The Investment Banking Club Project is a project that’s mission is to empower students with passion about finance to get their foot in by learning about the infamous sell-side career of investment banking. We provide students with all the materials to start a club of their own, that being our leadership, videos, PowerPoint curriculum, notes, and more. Let’s “un-nichify” finance together!",
+    "tags": [
+      "Business",
+      "Freshman",
+      "Sophomore",
+      "Junior",
+      "Senior",
+      "Economics"
+    ],
+    "website": "https://www.ibcproject.co/"
+  },
+  {
+    "title": "Investment Banking Club Chapter",
+    "text": "The Investment Banking Club Project (IBC Project) is a project that’s mission is to empower students with a passion about finance to get their foot in the door by learning about the infamous sell-side career of investment banking. We provide students with all the materials to start a club of their own, that being our leadership, videos, PowerPoint curriculum, notes, and more. Let’s “un-nichify” finance together!",
+    "tags": [
+      "Business"
+    ],
+    "website": "https://www.ibcproject.co/"
+  },
+  {
+    "title": "Synthesis Publications",
+    "text": "A by teens, for teens online arts magazine. Synthesis Publications features any and all types of media, ranging from poetry to movies to music to oil paintings. Team members can either be publishing artists, team leads, or social media managers. Joining Synthesis allows for professional development in your chosen field, as well a safe space to explore and collaborate on a more personal basis.",
+    "tags": [
+      "Art/Design",
+      "Leadership",
+      "Virtual",
+      "Freshman",
+      "Junior",
+      "Sophomore",
+      "Senior",
+      "Film",
+      "Music",
+      "Writing",
+      "Performing Arts",
+      "Photography"
+    ],
+    "website": "https://synthesispublications.org/apply"
+  }
+]

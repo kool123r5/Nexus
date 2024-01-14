@@ -7,111 +7,119 @@ const scrape = async (url, numberOfTimesToScroll) => {
     const browser = await puppeteer.launch({ headless: "new" });
 
     const page = await browser.newPage();
-<<<<<<< HEAD
     page.setDefaultTimeout((numberOfTimesToScroll + 150) * 20000);
-=======
-
-    page.setDefaultTimeout((numberOfTimesToScroll + 15) * 2000);
-
->>>>>>> 70d7c3cf0bc6a568d6c6248532763fba528403d5
     await page.goto(url);
 
     await page.setViewport({
-        width: 1440,
+        width: 900,
         height: 900,
     });
 
-    await page.waitForSelector(".bannerDescription", {
-        visible: true,
+    await page.waitForSelector("input[type=checkbox]", {
+        visible: false,
     });
-<<<<<<< HEAD
-    await page.waitForTimeout(1000);
-=======
 
-    await page.waitForTimeout(10000);
->>>>>>> 70d7c3cf0bc6a568d6c6248532763fba528403d5
-
-    await page.mouse.click(450, 450);
-    await page.mouse.click(450, 450);
+    await page.waitForTimeout(5000);
 
     const blocks = [];
 
-    for (let i = 0; i < numberOfTimesToScroll; i++) {
-        await page.keyboard.press("PageDown");
-        await page.keyboard.press("PageDown");
-        await page.keyboard.press("PageDown");
-        await page.keyboard.press("PageDown");
-        await page.keyboard.press("PageDown");
-        await page.keyboard.press("PageDown");
-        await page.keyboard.press("PageDown");
-        await page.keyboard.press("PageDown");
-        await page.keyboard.press("PageDown");
-        await page.keyboard.press("PageDown");
+    for (let j = 0; j < 44; j++) {
+        const checkboxes = await page.$$("input[type=checkbox]");
+        if (j > 0) {
+            page.evaluate(
+                (box, j, prevBox) => {
+                    box.click();
+                    if (j > 0) {
+                        prevBox.click();
+                    }
+                },
+                checkboxes[j],
+                j,
+                checkboxes[j - 1]
+            );
+        }
 
-        const blob = await page.evaluate(() => {
-            const elements = document.querySelectorAll(".bannerDescription:not(.done)");
-            const elements_titles = document.querySelectorAll(".bannerName:not(.done)");
-            const elements_tags = document.querySelectorAll(".bannerTags:not(.done)");
-            const element_website_button = document.querySelectorAll(".bannerWebsite:not(.done)");
-            const descriptions = [];
-            const titles = [];
-            const tags = [];
-            const websites = [];
+        await page.screenshot({ path: "ss.png", fullPage: true });
 
-            elements.forEach((element) => {
-                element.classList.add("done");
-                descriptions.push(element.textContent.trim());
-            });
+        for (let i = 0; i < numberOfTimesToScroll; i++) {
+            await page.keyboard.press("PageDown");
+            await page.keyboard.press("PageDown");
+            await page.keyboard.press("PageDown");
+            await page.keyboard.press("PageDown");
+            await page.keyboard.press("PageDown");
+            await page.keyboard.press("PageDown");
+            await page.keyboard.press("PageDown");
+            await page.keyboard.press("PageDown");
+            await page.keyboard.press("PageDown");
+            await page.keyboard.press("PageDown");
 
-            elements_titles.forEach((titl) => {
-                titl.classList.add("done");
-                titles.push(titl.textContent.trim());
-            });
+            const blob = await page.evaluate(() => {
+                const elements = document.querySelectorAll(".bannerDescription:not(.done)");
+                const elements_titles = document.querySelectorAll(".bannerName:not(.done)");
+                const elements_tags = document.querySelectorAll(".bannerTags:not(.done)");
+                const element_website_button = document.querySelectorAll(".bannerWebsite:not(.done)");
+                const descriptions = [];
+                const titles = [];
+                const tags = [];
+                const websites = [];
 
-            elements_tags.forEach((tagUl) => {
-                tagUl.classList.add("done");
-                const subTagArray = [];
-                tagUl.childNodes.forEach((tagLi) => {
-                    subTagArray.push(tagLi.textContent.trim());
+                elements.forEach((element) => {
+                    element.classList.add("done");
+                    descriptions.push(element.textContent.trim());
                 });
-                tags.push(subTagArray);
+
+                elements_titles.forEach((titl) => {
+                    titl.classList.add("done");
+                    titles.push(titl.textContent.trim());
+                });
+
+                elements_tags.forEach((tagUl) => {
+                    tagUl.classList.add("done");
+                    const subTagArray = [];
+                    tagUl.childNodes.forEach((tagLi) => {
+                        subTagArray.push(tagLi.textContent.trim());
+                    });
+                    tags.push(subTagArray);
+                });
+
+                element_website_button.forEach((btn) => {
+                    btn.classList.add("done");
+                    const aTag = btn.parentElement;
+                    const website = aTag.getAttribute("href");
+                    websites.push(website);
+                });
+
+                const array_to_return = [];
+
+                for (let i = 0; i < titles.length; i++) {
+                    const curr_title = titles[i];
+                    const curr_text = descriptions[i];
+                    const curr_tags = tags[i];
+                    const curr_website = websites[i];
+
+                    const new_obj = {
+                        title: curr_title,
+                        text: curr_text,
+                        tags: curr_tags,
+                        website: curr_website,
+                    };
+
+                    array_to_return.push(new_obj);
+                }
+
+                return array_to_return;
             });
 
-            element_website_button.forEach((btn) => {
-                btn.classList.add("done");
-                const aTag = btn.parentElement;
-                const website = aTag.getAttribute("href");
-                websites.push(website);
+            blob.forEach((obj) => {
+                if (
+                    !blocks.some((pushedObj) => pushedObj.title === obj.title) &&
+                    !blocks.some((pushedObj) => pushedObj.website === obj.website)
+                ) {
+                    blocks.push(obj);
+                }
             });
-
-            const array_to_return = [];
-
-            for (let i = 0; i < titles.length; i++) {
-                const curr_title = titles[i];
-                const curr_text = descriptions[i];
-                const curr_tags = tags[i];
-                const curr_website = websites[i];
-
-                const new_obj = {
-                    title: curr_title,
-                    text: curr_text,
-                    tags: curr_tags,
-                    website: curr_website,
-                };
-
-                array_to_return.push(new_obj);
-            }
-
-            return array_to_return;
-        });
-        blob.forEach((obj) => {
-            if (
-                !blocks.some((pushedObj) => pushedObj.title === obj.title) &&
-                !blocks.some((pushedObj) => pushedObj.website === obj.website)
-            ) {
-                blocks.push(obj);
-            }
-        });
+        }
+        // await page.reload();
     }
 
     await browser.close();
@@ -128,7 +136,7 @@ const writeDataToFile = (fileName, ecList) => {
 
 const callScrape = async (url) => {
     // this is an array of objects that have the title and text info
-    const ecList = await scrape(url, 20_000);
+    const ecList = await scrape(url, 10);
     const fileName = "ecListIlluminate.json";
     writeDataToFile(fileName, ecList);
 };

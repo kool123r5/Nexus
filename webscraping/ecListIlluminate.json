@@ -1,0 +1,715 @@
+[
+  {
+    "title": "The American Computer Science League",
+    "text": "American Computer Science League (ACSL) organizes computer programming and computer science contests for K-12 schools, organizations and local groups. The 2022-2023 school year will be our 45th year of continuous operation! Last year, over 700 teams in the United States, Canada, Europe, and Asia participated.",
+    "tags": [
+      "All Grades",
+      "Competition",
+      "Computer Science",
+      "Virtual"
+    ],
+    "website": "https://www.acsl.org/"
+  },
+  {
+    "title": "CyberPatriot",
+    "text": "​CyberPatriot is the National Youth Cyber Education Program created by the Air & Space Forces Association to inspire K-12 students toward careers in cybersecurity or other science, technology, engineering, and mathematics (STEM) disciplines critical to our nation's future. ​At the core of the program is the National Youth Cyber Defense Competition, the nation's largest cyber defense competition that puts high school and middle school students in charge of securing virtual networks.",
+    "tags": [
+      "All Grades",
+      "Competition",
+      "Computer Science",
+      "Cybersecurity",
+      "Virtual"
+    ],
+    "website": "https://www.uscyberpatriot.org/"
+  },
+  {
+    "title": "First Robotics Competition",
+    "text": "Combining the excitement of sport with the rigors of science and technology. We call FIRST Robotics Competition the ultimate Sport for the Mind. High-school student participants call it “the hardest fun you'll ever have.” Under strict rules, limited time and resources, teams of students are challenged to raise funds, design a team \"brand,\" hone teamwork skills, and build and program industrial-size robots to play a difficult field game against like-minded competitors. It’s as close to real-world engineering as a student can get. Volunteer professional mentors lend their time and talents to guide each team. Each season ends with an exciting FIRST Championship.",
+    "tags": [
+      "All Grades",
+      "Competition",
+      "Computer Science",
+      "Electrical Engineering",
+      "In-Person",
+      "Mechanical Engineering",
+      "Robotics"
+    ],
+    "website": "https://www.firstinspires.org/robotics/frc"
+  },
+  {
+    "title": "VEX Robotics",
+    "text": "The VEX Robotics competition prepares students to become future innovators with 95% of participants reporting an increased interest in STEM subject areas and pursuing STEM-related careers. Tournaments are held year-round at the regional, state, and national levels and culminate at the VEX Robotics World Championship each April!",
+    "tags": [
+      "All Grades",
+      "Competition",
+      "Computer Science",
+      "Electrical Engineering",
+      "In-Person",
+      "Mechanical Engineering",
+      "Robotics"
+    ],
+    "website": "https://www.vexrobotics.com/"
+  },
+  {
+    "title": "USA Computing Olympiad (USACO)",
+    "text": "The USACO supports computing education in the USA and worldwide by identifying, motivating, and training high-school computing students at all levels. We provide: Hundreds of hours of free online training resources that students can use to improve their programming and computational problem-solving skills. Online programming contests (roughly six per year) for students at all levels. An intensive summer training camp, to which the top students in the USA are invited to further improve their skills and learn advanced material. The opportunity for the top four students in the USA to represent their country at the International Olympiad in Informatics (IOI), the most prestigious international algorithmic programming competition at the high-school level.",
+    "tags": [
+      "All Grades",
+      "Computer Science",
+      "Virtual"
+    ],
+    "website": "http://www.usaco.org/"
+  },
+  {
+    "title": "Project: Empower",
+    "text": "Project: Empower is a 501(c)3 non-profit organization that brings students together to create software that empower underprivileged communities. We are a team of high school and college students from across the world who are passionate about making a difference through technology.",
+    "tags": [
+      "All Grades",
+      "Community Service",
+      "Computer Science",
+      "Virtual"
+    ],
+    "website": "https://projectempower.io/"
+  },
+  {
+    "title": "National Science Bowl",
+    "text": "A buzzer-style tournament with a 4-player team about general science trivia. Covers core sciences, math, and a bit of comp sci / logic",
+    "tags": [
+      "All Grades",
+      "Astronomy",
+      "Biology",
+      "Chemistry",
+      "Competition",
+      "Environmental Science",
+      "In-Person",
+      "Mathematics"
+    ],
+    "website": "https://science.osti.gov/wdts/nsb"
+  },
+  {
+    "title": "Science Olympiad",
+    "text": "Science Olympiad is an American team competition in which students compete in 23 events pertaining to various fields of science, including earth science, biology, chemistry, physics, and engineering. Over 7,800 middle school and high school teams from 50 U.S. states compete each year.",
+    "tags": [
+      "All Grades",
+      "Astronomy",
+      "Competition",
+      "In-Person",
+      "STEM"
+    ],
+    "website": "https://www.soinc.org/"
+  },
+  {
+    "title": "Boston University Summer Term RISE Internship/Practicum",
+    "text": "Students who are passionate about the sciences and currently in their junior year of high school are invited to apply for the Research in Science & Engineering (RISE) program. Spend six weeks at BU conducting university laboratory research with some of the nation's brightest scientific minds, and advance your knowledge and skills in the sciences.",
+    "tags": [
+      "Astronomy",
+      "In-Person",
+      "Junior",
+      "Research",
+      "STEM",
+      "Summer Program"
+    ],
+    "website": "https://www.bu.edu/summer/high-school-programs/rise-internship-practicum/"
+  },
+  {
+    "title": "NASA",
+    "text": "NASA’s internship program is another exciting opportunity for students interested in the STEM disciplines. The program provides students with “unique NASA-related research and operational experiences.”You’ll work with a mentor while contributing to the operation of a NASA facility and to the advancement of NASA’s missions.",
+    "tags": [
+      "All Grades",
+      "Astronomy",
+      "Environmental Science",
+      "In-Person",
+      "Internship",
+      "STEM",
+      "Virtual"
+    ],
+    "website": "https://intern.nasa.gov/"
+  },
+  {
+    "title": "Princeton Plasma Physics Lab Summer Internship Program",
+    "text": "Princeton Plasma Physics Lab offers a limited number of internship positions for outstanding high school seniors throughout the school year and the summer after graduation. Each term, which lasts about 8 (summer) to 16 (semester) weeks, offers students the chance to work on a project with a member of PPL's research or engineering staff. To be eligible, students must be a graduating senior in high school when the internship begins and obtain transportation to and from the Laboratory.",
+    "tags": [
+      "In-Person",
+      "Research",
+      "STEM",
+      "Senior",
+      "Summer Program"
+    ],
+    "website": "https://www.pppl.gov/education/science-education/programs/high-school-semester-long-internship-high-school-summer"
+  },
+  {
+    "title": "Research Science Institute (RSI)",
+    "text": "Each summer, 80 of the world's most accomplished high school students gather at the Massachusetts Institute of Technology (MIT) for the Research Science Institute (RSI). RSI is the first cost-free to students, summer science & engineering program to combine on-campus course work in scientific theory with off-campus work in science and technology research.",
+    "tags": [
+      "Electrical Engineering",
+      "In-Person",
+      "Junior",
+      "Mechanical Engineering",
+      "STEM",
+      "Summer Program"
+    ],
+    "website": "https://www.cee.org/programs/research-science-institute"
+  },
+  {
+    "title": "USC Summer High School Intensive in Next-Generation Engineering (SHINE)",
+    "text": "At USC Viterbi's Summer High School Intensive in Next-Generation Engineering (SHINE) students can join a USC Viterbi professor's research team for seven weeks to discover how engineering addresses our real world problems in various fields including biomedicine, robotics, aerospace and more.",
+    "tags": [
+      "All Grades",
+      "In-Person",
+      "Research",
+      "STEM",
+      "Summer Program"
+    ],
+    "website": "https://viterbik12.usc.edu/shine/"
+  },
+  {
+    "title": "Clean Tech Competition",
+    "text": "The Clean Tech Competition is a unique, worldwide research and design challenge for pre-college youth. The program encourages scientific understanding of real-world issues and the integration of environmentally responsible energy sources. Each year, the Clean Tech Competition addresses an issue that is grounded in core technological competency areas and focuses on the next great engineering challenges. The competition is designed to foster a deeper understanding of STEM (science, technology, engineering, and math) related concepts, recognize outstanding talent, and prepare the next generation of globally competitive innovators.",
+    "tags": [
+      "All Grades",
+      "Competition",
+      "In-Person",
+      "STEM"
+    ],
+    "website": "https://www.cstl.org/cleantech/"
+  },
+  {
+    "title": "Clarks Scholars Texas Tech",
+    "text": "The Anson L. Clark Scholar Program is an intensive seven-week summer research program for twelve highly qualified high school juniors and seniors. \nThe Program at Texas Tech University helps the Scholars to have a hands-on practical research experience with outstanding and experienced faculty.",
+    "tags": [
+      "In-Person",
+      "Junior",
+      "Research",
+      "STEM",
+      "Senior",
+      "Summer Program"
+    ],
+    "website": "http://www.depts.ttu.edu/honors/academicsandenrichment/affiliatedandhighschool/clarks/"
+  },
+  {
+    "title": "Regeneron ISEF",
+    "text": "Regeneron ISEF is the largest research competition for high school students (grades 9-12 are eligible). Qualify through local level fairs to reach the international competition.",
+    "tags": [
+      "All Grades",
+      "Competition",
+      "In-Person",
+      "STEM"
+    ],
+    "website": "https://www.societyforscience.org/isef/"
+  },
+  {
+    "title": "MIT Beaver Works Summer Institute (BWSI)",
+    "text": "A four-week program at MIT that “teaches STEM skills through project-based, workshop-style courses.”",
+    "tags": [
+      "All Grades",
+      "In-Person",
+      "Research",
+      "STEM",
+      "Summer Program",
+      "Virtual"
+    ],
+    "website": "https://beaverworks.ll.mit.edu/CMS/bw/bwsi"
+  },
+  {
+    "title": "Aspiring Scientists Summer Internship Program (ASSIP)",
+    "text": "The nationally known Aspiring Scientists Summer Internship Program (ASSIP) provides transformative research opportunities for high school and undergraduate students. Selected participants work one-on-one with faculty researchers at George Mason University and collaborating institutions using state-of-the-art technology across many disciplines.",
+    "tags": [
+      "All Grades",
+      "In-Person",
+      "Research",
+      "STEM",
+      "Summer Program",
+      "Virtual"
+    ],
+    "website": "https://science.gmu.edu/assip"
+  },
+  {
+    "title": "C-Tech² - Computers and Technology at Virginia Tech",
+    "text": "C-Tech² offers an opportunity to learn about college life--from residence halls to classrooms and everything in-between. It provides access to information and technology necessary to best prepare you for your future. The C-Tech² program targets rising junior and senior high school girls.",
+    "tags": [
+      "In-Person",
+      "Junior",
+      "STEM",
+      "Senior",
+      "Sophomore",
+      "Summer Program"
+    ],
+    "website": "https://eng.vt.edu/ceed/ceed-pre-college-programs/c-tech2.html"
+  },
+  {
+    "title": "UPenn Engineering Summer Academy",
+    "text": "The Engineering Summer Academy at Penn (ESAP) welcomes highly motivated and talented students to explore Engineering at the college level during the Summer Academy in Applied Science and Technology (SAAST) .  The Academy’s intensive, three-week programs combine sophisticated theory with hands-on practical experience in cutting edge technologies.",
+    "tags": [
+      "All Grades",
+      "In-Person",
+      "STEM",
+      "Summer Program"
+    ],
+    "website": "https://esap.seas.upenn.edu/about/"
+  },
+  {
+    "title": "Frontiers of Science Institute",
+    "text": "The Frontier of Science Institute (FSI) at the University of Northern Colorado (UNC) reches beyond the high school curriculum by indroducing new scientific concepts during a six-week summer program that includes field trips, industrial visitations and seminars led by professionals from academia and industry and laboratory activities.",
+    "tags": [
+      "All Grades",
+      "In-Person",
+      "Research. Summer Program",
+      "STEM",
+      "Virtual"
+    ],
+    "website": "https://www.unco.edu/nhs/mathematics-science-teaching-institute/program-areas/frontiers-science-institute/"
+  },
+  {
+    "title": "Columbia Summer High School Academic Program for Engineers",
+    "text": "Columbia Engineering's Summer High School Academic Program for Engineers (SHAPE) is a selective pre-college program for rising sophomores, juniors, seniors, and recent high school graduates. SHAPE is geared toward students with an aptitude for STEM: science, technology, engineering, and mathematics. Each 3-week session offers college-level, project-based courses in engineering taught by prestigious faculty at Columbia University. Students engage with peers and Columbia University faculty, staff, students, alumni, and industry partners through interactive programming, site visits, and workshops.",
+    "tags": [
+      "All Grades",
+      "In-Person",
+      "STEM",
+      "Summer Program"
+    ],
+    "website": "https://outreach.engineering.columbia.edu/content/shape-summer-high-school-academic-program-engineers"
+  },
+  {
+    "title": "The CalcuLIT Club",
+    "text": "The CalcuLIT Club is a vibrant math club for high school students passionate about calculus and mathematics. We meet virtually every week to discuss, learn and explore the world of calculus. The CalcuLIT Club has become a hub of intellect, wit, creativity and collaboration.\n\nOur members range from high schoolers to math teachers, and we are always open to new members! Whether you’re an expert or just starting out, we’d love to have you join us. Come be part of the CalcuLIT Club and explore the powers of mathematics.\n\nWe’re offering tutoring and curriculum development positions , give access to free learning resources , and we’ll give you a certification at the end of your term .",
+    "tags": [
+      "Mathematics",
+      "Virtual",
+      "Physics",
+      "STEM",
+      "Mechanical Engineering",
+      "Internship"
+    ],
+    "website": "https://thecalculitclub.wixsite.com/the-calculit-club"
+  },
+  {
+    "title": "Astronomy and Astrophysics Olympiad",
+    "text": "The USA Astronomy and Astrophysics Olympiad is a national exam style Astronomy and Astrophysics competition for high school students. Top performers qualify for the International Olympiad on Astronomy and Astrophysics (IOAA).",
+    "tags": [
+      "All Grades",
+      "Astronomy",
+      "Competition",
+      "Physics",
+      "Virtual"
+    ],
+    "website": "https://usaaao.org/"
+  },
+  {
+    "title": "MIT THINK Scholars Program",
+    "text": "Rather than requiring students to have completed a research project before applying, THINK caters to students who have done extensive research on the background of a potential research project and are looking for additional guidance in the early stages of their project. The program is organized by a group of undergraduates at MIT.",
+    "tags": [
+      "All Grades",
+      "Research",
+      "STEM",
+      "Virtual"
+    ],
+    "website": "https://think.mit.edu/"
+  },
+  {
+    "title": "Perry Research Scholars Institute",
+    "text": "Students in grades 8-10 (current academic year) may apply for the Perry Research Scholars Institute (PRSI), a two-week residential academic summer program at The University of Iowa's Belin-Blank Center for Gifted Education and Talent Development. In this program, students will meet different types of researchers across many different fields, such as anthropology, business, education, engineering, medicine, psychology, sustainability, and more. Students will gather in a classroom environment to hear from these researchers about how they came to do the work that they do, and to read and discuss some of the research they have published. Students will then have the opportunity to tour state-of-the-art research facilities for hands-on demonstrations of advanced lab techniques.",
+    "tags": [
+      "Freshman",
+      "General",
+      "In-Person",
+      "STEM",
+      "Sophomore",
+      "Summer Program"
+    ],
+    "website": "https://belinblank.education.uiowa.edu/students/prsi/"
+  },
+  {
+    "title": "Simons Summer Research Program",
+    "text": "The Simons Summer Research Program gives academically talented, motivated high school students the opportunity to engage in hands-on research in science, math or engineering at Stony Brook University. Simons Fellows work with distinguished faculty mentors, learn laboratory techniques and tools, become part of active research teams, and experience life at a research university.",
+    "tags": [
+      "Electrical Engineering",
+      "In-Person",
+      "Junior",
+      "Mechanical Engineering",
+      "Research",
+      "STEM",
+      "Summer Program"
+    ],
+    "website": "https://www.stonybrook.edu/simons/"
+  },
+  {
+    "title": "Samsung Solve for Tomorrow",
+    "text": "Each year Samsung hosts a $2 million national competition for public schools grades 6–12 in which students are asked to consider how science, technology, engineering and math (STEM) can be used to create change in their communities. With the help of their teachers, students can apply to the contest and compete to win up to $100,000 in prizes for their school, plus the opportunity to work with Samsung employees to develop their prototypes.",
+    "tags": [
+      "All Grades",
+      "Competition",
+      "In-Person",
+      "STEM"
+    ],
+    "website": "https://www.samsung.com/us/solvefortomorrow/"
+  },
+  {
+    "title": "Space Settlement Design Competition",
+    "text": "Teams of students work together to design space settlements and produce a 40-page written proposal to be delivered at their regional semi-final in April. The competition emulates, as closely as possible, the experience of working as a member of an aerospace industry proposal team.",
+    "tags": [
+      "All Grades",
+      "Architecture",
+      "Astronomy",
+      "Competition",
+      "Virtual"
+    ],
+    "website": "https://spaceset.org/participate/"
+  },
+  {
+    "title": "Gerard K. O'Neill Space Settlement Contest",
+    "text": "Our annual space settlement contest invites students to design an orbital space habitat. The contest, open for 6-12th grade students, was sponsored by the NASA Ames Research Center from 1994-2018 in conjunction with the National Space Society and since then is being sponsored by NSS. The single highest scoring team or individual attending ISDC will receive the Herman Rubin Award for $5,000.",
+    "tags": [
+      "All Grades",
+      "Architecture",
+      "Astronomy",
+      "Competition",
+      "Virtual"
+    ],
+    "website": "https://space.nss.org/nss-space-settlement-contest/"
+  },
+  {
+    "title": "Summer Science Program (SSP)",
+    "text": "The Summer Science Program offers teens an exhilarating and inspiring immersion into hands-on experimental science. Working in teams of three, 36 participants and 7 faculty form a supportive “living and learning community” over 39 days. Each team completes a real research project, taking and analyzing original data. Afterward, they join a worldwide network of 2,500+ alumni of all ages.",
+    "tags": [
+      "Biology",
+      "Chemistry",
+      "In-Person",
+      "Junior",
+      "Physics",
+      "Research",
+      "STEM",
+      "Summer Program"
+    ],
+    "website": "https://summerscience.org/"
+  },
+  {
+    "title": "Texas Tech University - The Clark Scholars Program",
+    "text": "The Anson L. Clark Scholar Program is an intensive seven-week summer research program for twelve highly qualified high school juniors and seniors.",
+    "tags": [
+      "Business",
+      "Economics",
+      "History",
+      "In-Person",
+      "Junior",
+      "Research",
+      "STEM",
+      "Senior",
+      "Summer Program"
+    ],
+    "website": "https://www.depts.ttu.edu/honors/academicsandenrichment/affiliatedandhighschool/clarks/"
+  },
+  {
+    "title": "Michigan State University - High School Honors Science, Math and Engineering Program (HSHSP)",
+    "text": "The Michigan State University High School Honors Science/Engineering/Mathematics Program (HSHSP) is a seven-week, intensive summer research program designed for motivated students from across the United States who wish to gain more experience conducting research while living on the campus of a major research-intensive university.",
+    "tags": [
+      "In-Person",
+      "Junior",
+      "Research",
+      "STEM",
+      "Summer Program"
+    ],
+    "website": "https://education.msu.edu/hshsp/"
+  },
+  {
+    "title": "University of Florida - Student Science Training Program (SSTP)",
+    "text": "The University of Florida Student Science Training Program (UF SSTP) is a six week residential research program for selected students entering senior year and at least 16 years old by the program start date who are considering science, medicine, math, computer science, or engineering careers. The program emphasis is research participation with a UF faculty research scientist and his or her research team. Students interested in attending the UF SSTP must possess a high level of maturity, an ability to live and learn independently, a desire to work collaboratively, and a sincere interest in research.",
+    "tags": [
+      "In-Person",
+      "Junior",
+      "Research",
+      "STEM",
+      "Senior",
+      "Summer Program"
+    ],
+    "website": "https://www.cpet.ufl.edu/students/uf-cpet-summer-programs/student-science-training-program/"
+  },
+  {
+    "title": "MIT Introduction to Technology, Engineering, and Science",
+    "text": "MITES (formerly OEOP) provides transformative experiences that bolster confidence, create lifelong community, and build an exciting, challenging foundation in STEM for highly motivated 7th–12th grade students from diverse and underrepresented backgrounds. Catalyzing change in STEM, our goal is to advance equity and access through hands-on programs that are free of cost to participants and their families.",
+    "tags": [
+      "In-Person",
+      "Junior",
+      "STEM",
+      "Senior",
+      "Summer Program"
+    ],
+    "website": "https://mites.mit.edu/"
+  },
+  {
+    "title": "ArcGIS Online Competition for US High School & Middle School Students",
+    "text": "Esri challenges US students to conduct and share projects about something in their home state. Esri's 2022 ArcGIS Online Competition is open to high school and middle school students in participating states in the US who can gather, create, analyze, interpret, and present data via an ArcGIS Story Map.",
+    "tags": [
+      "All Grades",
+      "Competition",
+      "Research",
+      "STEM",
+      "Virtual"
+    ],
+    "website": "https://agoschoolcomp-education.hub.arcgis.com/"
+  },
+  {
+    "title": "Plant the Moon Challenge",
+    "text": "Participants in the Plant the Moon Challenge will join a global science experiment and research challenge to examine how vegetable crops can grow in lunar or Martian soil. Each team will receive real soil simulant from the University of Central Florida’s CLASS Exolith Lab! You will design and conduct a set of experiments using this simulant to grow crops for a future long-duration mission.",
+    "tags": [
+      "All Grades",
+      "Competition",
+      "In-Person",
+      "Research",
+      "STEM"
+    ],
+    "website": "https://plantthemoon.com/"
+  },
+  {
+    "title": "AFA StellarXplorers National Space Design Competition",
+    "text": "The StellarXplorers National Space Design Competition is a fun, team building, space system design competition that starts in October and ends in April, where students are challenged to solve orbit planning, satellite component, and launch vehicle selection scenarios presented each round. Working in partnership with leaders in the U.S. space industry, the StellarXplorers Aerospace STEM Program challenges students toward careers in space or other science, technology, engineering, and mathematics (STEM) disciplines essential to our nation’s future.",
+    "tags": [
+      "All Grades",
+      "Competition",
+      "In-Person",
+      "STEM",
+      "Virtual"
+    ],
+    "website": "http://www.stellarxplorers.org/"
+  },
+  {
+    "title": "Battle of the Brains",
+    "text": "Inspired by kids, built by Burns & McDonnell. It’s Kansas City’s most exciting K-12 STEM competition — Burns & McDonnell Battle of the Brains. Metro area schools can earn a piece of $155,000-plus in grants for STEM education by dreaming up an exhibit concept for Science City — and one student team sees its idea come to life in a big way! It’s a fantastic, no-cost experience for students and teachers — thinking big, exploring new things, collaborating and having fun. So far, more than 25,000 students have benefited from this immersive educational opportunity. Battle of the Brains operates on a two-year cycle: one for competition and one for exhibit build-out. The next competition cycle will take place in 2021.",
+    "tags": [
+      "All Grades",
+      "Competition",
+      "In-Person",
+      "STEM"
+    ],
+    "website": "http://www.botbkc.com/"
+  },
+  {
+    "title": "Exploravision",
+    "text": "ExploraVision is a science competition for K–12 students of all interest, skill, and ability levels. The competition encourages students to combine their imaginations with the tools of science to create and explore a vision of a future technology. Students work in groups of two, three or four, and are guided by a team coach and an optional mentor. Each team selects a technology, or an aspect of a technology, which is present in the home, school, or community, or any other technology relevant to their lives. They will explore what the technology does, how it works, and how, when, and why it was invented. The students must then project into the future what that technology could be like 20 years in the future and determine what scientific breakthroughs need to occur to make it a reality.",
+    "tags": [
+      "All Grades",
+      "Competition",
+      "In-Person",
+      "STEM"
+    ],
+    "website": "https://www.exploravision.org/"
+  },
+  {
+    "title": "Imagine Cup (Microsoft)",
+    "text": "Imagine Cup is an annual competition sponsored and hosted by Microsoft Corp. which brings together student developers worldwide to help resolve some of the world's toughest challenges. All Imagine Cup competitors create projects that address the Imagine Cup theme: \"Imagine a world where technology helps solve the toughest problems\".",
+    "tags": [
+      "All Grades",
+      "Competition",
+      "In-Person",
+      "STEM",
+      "Virtual"
+    ],
+    "website": "https://imaginecup.microsoft.com/en-us/Compete"
+  },
+  {
+    "title": "Inventor’s Challenge",
+    "text": "Inventor’s Challenge is brought to you by AT&T and Imagination.org, powered by Two Bit Circus Foundation. Kids around the world are invited to create inventions that will help solve problems in their homes, schools or communities using whatever tools and materials are available. The Inventor’s Challenge fosters critical 21st century skills and attitudes, like creativity and innovation, optimism and empathy, and the willingness to experiment and take risks.",
+    "tags": [
+      "All Grades",
+      "Competition",
+      "STEM",
+      "Virtual"
+    ],
+    "website": "https://inventorschallenge.org/"
+  },
+  {
+    "title": "Regeneron Science Talent Search (STS)",
+    "text": "Each year, nearly 1,900 students enter the Regeneron STS, submitting original research in critically important scientific fields of study. Unique among high school competitions, the Regeneron STS focuses on identifying, inspiring, and engaging the most promising scientists among the nation’s high school seniors.",
+    "tags": [
+      "All Grades",
+      "Competition",
+      "In-Person",
+      "Research",
+      "STEM"
+    ],
+    "website": "https://www.societyforscience.org/regeneron-sts/"
+  },
+  {
+    "title": "Stockholm Junior Water Prize",
+    "text": "Stockholm Junior Water Prize gathers imaginative young minds from all over the world, encouraging their continued interest in water and sustainability issues. The competition draws more than 10,000 entries from over 30 countries. Students conduct water related science projects that start at local or regional levels and advance to national competitions. National finalists are then invited to participate in the annual international Stockholm Junior Water Prize competition.",
+    "tags": [
+      "Competition",
+      "In-Person",
+      "Junior",
+      "Research",
+      "STEM",
+      "Senior",
+      "Sophomore"
+    ],
+    "website": "https://www.wef.org/resources/for-the-public/SJWP/"
+  },
+  {
+    "title": "The Earth Prize",
+    "text": "The Earth Prize is an annual, global $200,000 environmental sustainability competition for students between the ages of 13 and 19, which rewards the team whose projects have the most potential to address environmental issues.",
+    "tags": [
+      "All Grades",
+      "Competition",
+      "Environmental Science",
+      "STEM",
+      "Virtual"
+    ],
+    "website": "https://www.theearthprize.org/"
+  },
+  {
+    "title": "National Science Bee",
+    "text": "The National Science Bee is a science-themed, buzzer-based academic quiz competition for individual students in Elementary School, Middle School and High School. Consisting of both qualifying stages and a National Championships, competing students have a chance to put their science knowledge to use against other students in their respective age divisions in an engaging quiz tournament setting.",
+    "tags": [
+      "All Grades",
+      "Competition",
+      "In-Person",
+      "STEM"
+    ],
+    "website": "https://nationalsciencebee.com/"
+  },
+  {
+    "title": "UC Santa Barbara Research Mentorship Program (RMP)",
+    "text": "The Research Mentorship Program is a competitive, six-week summer program that engages qualified, high-achieving high school students from all over the world in interdisciplinary, hands-on, university-level research. Students will be paired up with a mentor (graduate student, postdoc, or faculty) and choose a research project from a large list of disciplines offered by the program each year.",
+    "tags": [
+      "Freshman",
+      "In-Person",
+      "Junior",
+      "Research",
+      "STEM",
+      "Sophomore",
+      "Summer Program"
+    ],
+    "website": "https://www.summer.ucsb.edu/pre-college/research-mentorship-program-rmp"
+  },
+  {
+    "title": "Rose Hulman Institute of Technology - Operation Catapult",
+    "text": "Integrate and supplement your previous learning. Explore fundamental scientific and engineering principles and systems.Provide an opportunity for group living in a campus setting.",
+    "tags": [
+      "Freshman",
+      "In-Person",
+      "Junior",
+      "STEM",
+      "Sophomore",
+      "Summer Program"
+    ],
+    "website": "https://www.rose-hulman.edu/admissions-and-aid/early-planning/operation-catapult/index.html"
+  },
+  {
+    "title": "Raleigh Residential Camps",
+    "text": "Each summer, the College of Engineering at NC State University offers rising 11th and 12th grade high school students the opportunity to experience engineering and get a glimpse of college life while staying on the NC State campus in Raleigh. The residential program allows students to explore a particular field of engineering in more depth while staying on campus in residential university housing.",
+    "tags": [
+      "In-Person",
+      "Junior",
+      "STEM",
+      "Senior",
+      "Sophomore",
+      "Summer Program"
+    ],
+    "website": "https://www.engr.ncsu.edu/theengineeringplace/summerprograms/hs-residential/"
+  },
+  {
+    "title": "Air Force Research Laboratory (AFRL) Scholars Program",
+    "text": "he Air Force Research Laboratory (AFRL) Scholars Program offers stipend-paid internship opportunities for undergraduate and graduate-level university students pursuing STEM degrees, as well as upper-level high school students; select locations also offer internships to university students pursuing education-related degrees and K–12 professional educators. The selected interns gain valuable hands-on experiences working with full-time AFRL scientists and engineers on cutting-edge research and technology and are able to contribute to unique, research-based projects. Graduate interns are able to collaborate with AFRL on current research and incorporate the research into their graduate work.",
+    "tags": [
+      "In-Person",
+      "Internship",
+      "Junior",
+      "STEM",
+      "Senior"
+    ],
+    "website": "https://afrlscholars.usra.edu/scholarsprogram/"
+  },
+  {
+    "title": "Princeton Laboratory Learning Program",
+    "text": "The Laboratory Learning Program is a full-time, free research experience in the sciences or engineering for high school students. Students are included in ongoing research programs where they are closely supervised by Princeton faculty and research staff. The participation dates are customized according to the schedules of the research personnel and the specifics of the project. Internships typically span 5-6 weeks over the summer. Each research opportunity has its own schedule.",
+    "tags": [
+      "All Grades",
+      "Research",
+      "STEM",
+      "Summer Programs",
+      "Virtual"
+    ],
+    "website": "https://research.princeton.edu/about-us/internships/laboratory-learning-program"
+  },
+  {
+    "title": "Johns Hopkins Engineering Innovation Pre-College Programs",
+    "text": "experimenting, designing, creating, and learning to think like an engineer. Create a device to enhance the well-being of the user, improve the efficiency of wind energy, or design a spaghetti bridge to hold upwards of 200 pounds! We've blended collaborative and fun activities that will broaden your thinking about what’s possible with engineering. Top it all off with college credit! Live on-campus like a college student, commute, or log on and join other STEM-loving students from around the world for the experience of a lifetime.",
+    "tags": [
+      "All Grades",
+      "In-Person",
+      "STEM",
+      "Summer Program",
+      "Virtual"
+    ],
+    "website": "https://ei.jhu.edu/programs/"
+  },
+  {
+    "title": "NASA Langley Student Art Contest",
+    "text": "NASA’s Langley Research Center in Hampton, Virginia is inviting students in grades K-12 to draw, paint or design what’s next in science, aeronautics, and exploration in the 2023 NASA Langley Student Art Contest. The contest is open to all children grades K-12 attending public, private, parochial and homeschools who are residents of the United States",
+    "tags": [
+      "All Grades",
+      "Art/Design",
+      "Astronomy",
+      "Competition",
+      "Virtual"
+    ],
+    "website": "https://artcontest.larc.nasa.gov/"
+  },
+  {
+    "title": "spUN Debate Program of the National Space Society",
+    "text": "The NSS International Space Development Conference has been the incubator for many exciting programs and ideas. ISDC® 2017 gave birth to a remarkable program for students who are space enthusiasts, and, who seek to become leaders in the space arena. The space policy and UNiversalization (spUN) Debates emerged from a conversation between NSS Director of Education Frances Dellutri and 14-year-old Indian students Apoorva B.R. and Souvik Mukherjee after attending the presentation by Dr. Lorna Jean Edmonds, Ohio University, “Do Those Who Control the Galaxy Control Earth: The Century of Universalization”.",
+    "tags": [
+      "All Grades",
+      "Astronomy",
+      "Competition",
+      "Debate",
+      "In-Person"
+    ],
+    "website": "https://space.nss.org/spun-debates/"
+  },
+  {
+    "title": "NASA Cinespace Short Film Competition",
+    "text": "Submit a short film inspired by, and using, actual footage from NASA's digital archives for a chance to earn cash prizes, have your film screened by renowned director Richard Linklater (Boyhood, Dazed and Confused), and get programmed into the Houston Cinema Arts Festival this November.",
+    "tags": [
+      "All Grades",
+      "Astronomy",
+      "Film",
+      "Virtual"
+    ],
+    "website": "https://www.cinespace.org/"
+  },
+  {
+    "title": "Junior Science and Humanities Symposium",
+    "text": "JSHS is designed to challenge and engage students (Grades 9-12) in science, technology, engineering or mathematics (STEM). Individual students compete for scholarships and recognition by presenting the results of their original research efforts before a panel of judges and an audience of their peers. Opportunities for hands-on workshops, panel discussions, career exploration, research lab visits and networking are planned.",
+    "tags": [
+      "All Grades",
+      "Competition",
+      "In-Person",
+      "Research",
+      "STEM"
+    ],
+    "website": "https://jshs.org/"
+  },
+  {
+    "title": "Phoenix Space LaunchPad Challenge",
+    "text": "The Phoenix Space LaunchPad Challenge offers upper high/secondary school and lower-level undergraduate university students the opportunity to develop and present a creative, idea-based solution to a space science-themed problem. This competition affords students an opportunity to apply their classroom learning and research to solving scientific challenges, leverage creativity, and develop presentation and teamwork skills while connecting to and competing against a global community of like-minded students who have an interest in space science.",
+    "tags": [
+      "All Grades",
+      "Competition",
+      "STEM",
+      "Virtual"
+    ],
+    "website": "https://phoenixspace.org/academic-competition/"
+  },
+  {
+    "title": "Summer Academy for Math and Science",
+    "text": "As SAMS Scholars, students engage in a rigorous curriculum taught by our renowned faculty and staff who are deeply committed to student success. The program allows students to develop a deeper understanding of STEM via traditional classroom instruction, through hands-on projects, and sustained engagement with world-renowned faculty and skilled staff mentors. In addition to their academic experiences, students also have the opportunity to collaborate and develop meaningful relationships with peers from across the country.",
+    "tags": [
+      "In-Person",
+      "Junior",
+      "STEM",
+      "Senior",
+      "Summer Program"
+    ],
+    "website": "https://www.cmu.edu/pre-college/academic-programs/sams.html"
+  }
+]

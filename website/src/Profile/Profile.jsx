@@ -226,13 +226,13 @@ export default function Profile() {
                                 </>
                             );
                         })}
-
+                    <p>Your posts</p>
                     {posts &&
                         posts.map((document) => {
                             return (
                                 <>
                                     
-                                        <p>{document.title}</p>
+                                        <p>Title: {document.title}</p>
                                 </>
                             );
                         })}

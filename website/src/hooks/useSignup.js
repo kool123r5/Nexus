@@ -50,7 +50,6 @@ export const useSignup = () => {
             }
 
             navigateTo("/signup2");
-            location.reload();
         } catch (err) {
             if (!isCancelled) {
                 setError(err.message);

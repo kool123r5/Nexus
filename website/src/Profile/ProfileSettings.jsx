@@ -1,9 +1,11 @@
 import { useState } from "react";
-import { googleProvider, projectAuth, projectFirestore } from "../firebase/config";
+import { projectAuth, projectFirestore, projectStorage } from "../firebase/config";
 import { useDocument } from "../hooks/useDocument";
 import Navbar from "../Navbar/Navbar";
 import "./ProfileSettings.css";
 import firebase from "firebase/app";
+import getDefaultPfp from "../functions/getDefaultPfp";
+import resizeImg from "../functions/resizeImg";
 
 export default function ProfileSettings() {
     const { document, error } = useDocument("users", projectAuth.currentUser.uid);
@@ -18,6 +20,9 @@ export default function ProfileSettings() {
     const [currentPassword, setCurrentPassword] = useState("");
     const [isPasswordChanged, setIsPasswordChanged] = useState(false);
     const [errorWhileUpdatingPassword, setErrorWhileUpdatingPassword] = useState("");
+
+    const [pfp, setPfp] = useState(null);
+    const [pfpChanged, setPfpChanged] = useState("");
 
     const changeEmail = async () => {
         try {
@@ -76,6 +81,49 @@ export default function ProfileSettings() {
         }
     };
 
+    const changePfp = async () => {
+        try {
+            let url = null;
+            if (pfp != null) {
+                const pfpResized = await resizeImg(pfp);
+                const uploadPath = `pfp/${projectAuth.currentUser.uid}`;
+                const blob = await fetch(pfpResized).then((res) => res.blob());
+                const profilePicResized = await projectStorage.ref(uploadPath).put(blob);
+                url = await profilePicResized.ref.getDownloadURL();
+            }
+
+            await projectAuth.currentUser.updateProfile({
+                photoURL: url,
+            });
+
+            await projectFirestore.collection("users").doc(projectAuth.currentUser.uid).update({
+                pfp: url,
+            });
+
+            setPfpChanged("Changed Profile Picture");
+        } catch (error) {
+            setPfpChanged(error);
+        }
+    };
+
+    const removePfp = async () => {
+        try {
+            await projectStorage.ref(`pfp/${projectAuth.currentUser.uid}`).delete();
+
+            await projectAuth.currentUser.updateProfile({
+                photoURL: null,
+            });
+
+            await projectFirestore.collection("users").doc(projectAuth.currentUser.uid).update({
+                pfp: null,
+            });
+
+            setPfpChanged("Removed Profile Picture");
+        } catch (error) {
+            setPfpChanged(error);
+        }
+    };
+
     return (
         <>
             <Navbar />
@@ -125,6 +173,22 @@ export default function ProfileSettings() {
                                 {errorWhileUpdatingPassword.toString()}
                             </p>
                         )}
+                    </>
+                    <br />
+                    <br />
+                    <>
+                        <p>Current profile picture: </p>
+                        {document && document.pfp != null ? (
+                            <img src={document.pfp} height={150} width={150} />
+                        ) : (
+                            <img src={getDefaultPfp(document.displayName)} height={150} width={150} />
+                        )}
+                        <label>
+                            Profile Picture: <input type={"file"} onChange={(e) => setPfp(e.target.files[0])}></input>
+                        </label>
+                        <button onClick={changePfp}>Change Profile Picture</button>
+                        <button onClick={removePfp}>Remove Profile Picture</button>
+                        <p>{pfpChanged}</p>
                     </>
                 </>
             ) : (

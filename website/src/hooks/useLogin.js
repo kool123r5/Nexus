@@ -58,7 +58,6 @@ export const useLogin = () => {
 
         try {
             const res = await projectAuth.signInWithPopup(googleProvider);
-
             const userDoc = await projectFirestore.collection("users").doc(res.user.uid).get();
 
             if (userDoc.exists) {

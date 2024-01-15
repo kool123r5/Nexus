@@ -16,7 +16,7 @@ export const useSignupInfo = () => {
         console.log(user);
 
         setError(null);
-        const activities = null;
+        const activities = [];
 
         setIsPending(true);
         try {
@@ -53,7 +53,6 @@ export const useSignupInfo = () => {
             }
 
             navigateTo("/");
-            location.reload();
         } catch (err) {
             if (!isCancelled) {
                 setError(err.message);

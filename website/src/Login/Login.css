@@ -76,6 +76,13 @@
     border: 1px solid var(--gray_B);
     background-color: var(--gray_E);
     transition: all 0.3s;
+    display: flex;
+    align-items: center;
+
+}
+
+.Submit_Login_Button svg {
+    margin-right: 0.7em; 
 }
 
 .Submit_Login_Button:hover {

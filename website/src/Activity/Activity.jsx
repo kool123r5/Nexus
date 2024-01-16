@@ -174,8 +174,7 @@ export default function Activity() {
             <h2>Posted by User: {document.username}</h2>
             <h1>Title: {document.title}</h1>
             <h3>Text: {document.text}</h3>
-            <p>{userDoc.document.email}</p>
-            <p>{user.uid}</p>
+
 
             {!disabled && (
               <button id="btn" onClick={handleClick} disabled={disabled}>

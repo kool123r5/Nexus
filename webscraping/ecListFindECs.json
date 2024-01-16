@@ -1,0 +1,728 @@
+[
+    {
+        "title": "Cooper Hewitt Design",
+        "text": "A competition to design innovative products and win scholarships.",
+        "tags": ["Business"],
+        "website": "https://www.cooperhewitt.org/design-competition/"
+    },
+    {
+        "title": "Math Kangaroo",
+        "text": "A competition for highschoolers to test their math skills in problem-solving and critical thinking.",
+        "tags": ["Math"],
+        "website": "https://mathkangaroo.org/mks/"
+    },
+    {
+        "title": "SAGE World Series of Innovation",
+        "text": "A competition where students create innovative solutions to real-world business challenges.",
+        "tags": ["Business"],
+        "website": "https://www.nfte.com/2022-world-series-of-innovation/"
+    },
+    {
+        "title": "Google Code Jam",
+        "text": "A competition where students solve coding problems to win prizes from Google.",
+        "tags": ["Computer Science"],
+        "website": "https://codingcompetitionsonair.withgoogle.com/"
+    },
+    {
+        "title": "Titration Competition",
+        "text": "A competition where students measure the concentration of a solution using a technique called titration.",
+        "tags": ["Chemistry"],
+        "website": "https://edu.rsc.org/enrichment/schools-analyst"
+    },
+    {
+        "title": "Annual DNA Day Essay Contest",
+        "text": "A competition for highschoolers to write essays about DNA for a chance to win prizes.",
+        "tags": ["Biology"],
+        "website": "https://www.ashg.org/dna-day/"
+    },
+    {
+        "title": "Sir Isaac Newton Exam",
+        "text": "A competition testing your physics knowledge and problem-solving skills.",
+        "tags": ["Physics"],
+        "website": "https://uwaterloo.ca/sir-isaac-newton-exam/exam-information"
+    },
+    {
+        "title": "iGEM Competition",
+        "text": "A competition where students create biological systems to solve real-world problems.",
+        "tags": ["Biology"],
+        "website": "https://competition.igem.org/"
+    },
+    {
+        "title": "FIRST Robotics",
+        "text": "A competition where high school students build and program robots to compete in various challenges.",
+        "tags": ["Engineering"],
+        "website": "https://www.firstinspires.org/robotics/frc"
+    },
+    {
+        "title": "US Brain Bee",
+        "text": "A competition testing knowledge of the brain and neuroscience.",
+        "tags": ["Biology"],
+        "website": "https://www.dental.umaryland.edu/brainbee/"
+    },
+    {
+        "title": "HOSA Future Health Professionals:",
+        "text": "A competition for high schoolers interested in pursuing careers in healthcare.",
+        "tags": ["Medicine"],
+        "website": "https://hosa.org/"
+    },
+    {
+        "title": "INSPIRE",
+        "text": "A competition for history, humanities, and social science students.",
+        "tags": ["History"],
+        "website": "https://kudoswall.com/index.php/easyblog/entry/humanities-and-history-competitions-for-students"
+    },
+    {
+        "title": "Brookhaven National Bridge Building Contest",
+        "text": "A competition to build the strongest bridge at Brookhaven National Laboratory.",
+        "tags": ["Engineering"],
+        "website": "https://www.bnl.gov/bridgebuilding/"
+    },
+    {
+        "title": "USACO",
+        "text": "A competition for highschoolers to solve algorithmic problems using programming skills.",
+        "tags": ["Computer Science"],
+        "website": "http://www.usaco.org/"
+    },
+    {
+        "title": "Australian Math Contest",
+        "text": "A competition testing math skills for high school students in Australia.",
+        "tags": ["Math"],
+        "website": "https://www.amt.edu.au/amc"
+    },
+    {
+        "title": "National Geographic Photo Contest",
+        "text": "A competition for high schoolers to submit their best environmental photos to National Geographic.",
+        "tags": ["Environment"],
+        "website": "https://www.nationalgeographic.com/contests"
+    },
+    {
+        "title": "HPE CodeWars",
+        "text": "A competition for highschoolers to solve coding challenges and compete against other teams.",
+        "tags": ["Computer Science"],
+        "website": "https://hpecodewars.org/"
+    },
+    {
+        "title": "National Robotics League",
+        "text": "A competition where student-built robots battle in a combat arena to win.",
+        "tags": ["Engineering"],
+        "website": "https://gonrl.org/"
+    },
+    {
+        "title": "Technovation Challenge",
+        "text": "A competition where high school students create mobile apps to solve real-world problems.",
+        "tags": ["Business"],
+        "website": "https://my.technovationchallenge.org/"
+    },
+    {
+        "title": "Chemagination",
+        "text": "A competition where students use chemistry to solve real-world problems and present their solutions creatively.",
+        "tags": ["Chemistry"],
+        "website": "https://www.princeton-acs.org/chemagination"
+    },
+    {
+        "title": "Scholastic Art & Writing Awards",
+        "text": "A competition for high school writers and artists to submit their work for recognition and awards.",
+        "tags": ["Writing"],
+        "website": "https://www.artandwriting.org/"
+    },
+    {
+        "title": "YouthBiz",
+        "text": "A competition for high school students to showcase business skills and ideas.",
+        "tags": ["Business"],
+        "website": "https://yacenter.org/youthbiz/"
+    },
+    {
+        "title": "Technovation Girls",
+        "text": "A competition for high school girls to create tech solutions for real-world problems.",
+        "tags": ["Computer Science"],
+        "website": "https://technovationchallenge.org/"
+    },
+    {
+        "title": "Blue Ocean Competition",
+        "text": "A competition for high school students to pitch innovative business ideas.",
+        "tags": ["Business"],
+        "website": "https://blueoceancompetition.org/"
+    },
+    {
+        "title": "American History Essay Contest",
+        "text": "A competition to write the best essay on American history.",
+        "tags": ["History"],
+        "website": "https://www.dar.org/national-society/education/essay-contests"
+    },
+    {
+        "title": "MATE ROV Competition",
+        "text": "A competition where students build underwater robots to complete tasks.",
+        "tags": ["Engineering"],
+        "website": "https://materovcompetition.org/"
+    },
+    {
+        "title": "Girls Programming League Challenge",
+        "text": "A competition for girls to showcase programming skills in teams.",
+        "tags": ["Computer Science"],
+        "website": "https://www.girlsprogrammingleague.org/"
+    },
+    {
+        "title": "USA Biology Olympiad",
+        "text": "A competition for top high school biology students in the US.",
+        "tags": ["Biology"],
+        "website": "https://www.usabo-trc.org/"
+    },
+    {
+        "title": "The Environmental Drawing Contest",
+        "text": "A competition for kids to draw about the environment.",
+        "tags": ["Art"],
+        "website": "https://childrens-drawing.com/en/index.html"
+    },
+    {
+        "title": "Genius Olympiad",
+        "text": "A competition for high schoolers to showcase environmental projects and solutions on a global level.",
+        "tags": ["Environment"],
+        "website": "https:// https://geniusolympiad.org"
+    },
+    {
+        "title": "Global Youth Entrepreneurship Challenge",
+        "text": "A competition for young entrepreneurs to pitch their business ideas on a global stage.",
+        "tags": ["Business"],
+        "website": "https://entreplanet.org/GYEC/"
+    },
+    {
+        "title": "AA Neurology Research Prize",
+        "text": "A competition for high schoolers interested in medical research on the brain and nervous system.",
+        "tags": ["Medicine"],
+        "website": "https://www.aan.com/research/neuroscience-research-prize"
+    },
+    {
+        "title": "Ayn Rand Essay Contests",
+        "text": "A competition for high schoolers to write essays on Ayn Rand's novels for a chance to win prizes.",
+        "tags": ["Writing"],
+        "website": "https://aynrand.org/students/essay-contests/"
+    },
+    {
+        "title": "Venture Capital Investment Competition",
+        "text": "A competition where students pitch business ideas to investors and compete for funding.",
+        "tags": ["Business"],
+        "website": "https://globalyouth.wharton.upenn.edu/investment-competition/"
+    },
+    {
+        "title": "National Biology Bowl",
+        "text": "A competition testing biology knowledge and skills.",
+        "tags": ["Biology"],
+        "website": "https://www.nationalbiologybowl.org/"
+    },
+    {
+        "title": "NSL",
+        "text": "A competition for student engineers to compete in STEM challenges and projects on a national level.",
+        "tags": ["Engineering"],
+        "website": "https://insl.org/national-stem-league-nsl"
+    },
+    {
+        "title": "Bow Seat's Ocean Awareness Contest",
+        "text": "A competition for high school artists to raise awareness about ocean conservation through their art.",
+        "tags": ["Art"],
+        "website": "https://bowseat.org/programs/ocean-awareness-contest/contest-overview/"
+    },
+    {
+        "title": "Harker Programming Invitational",
+        "text": "A competition for high school students to showcase their computer programming skills.",
+        "tags": ["Computer Science"],
+        "website": "https://www.harkerprogrammingclub.org/"
+    },
+    {
+        "title": "International Chemistry Olympiad",
+        "text": "A competition for high schoolers to showcase their chemistry knowledge and skills on an international level.",
+        "tags": ["Chemistry"],
+        "website": "https://www.ichosc.org/"
+    },
+    {
+        "title": "Physics Cup",
+        "text": "A competition where high school students solve physics problems to win the Physics Cup.",
+        "tags": ["Physics"],
+        "website": "https://physicscup.ee/"
+    },
+    {
+        "title": "JFK Profile in Courage Essay Contest",
+        "text": "A competition for high schoolers to write about political courage for a chance to win a scholarship.",
+        "tags": ["Writing"],
+        "website": "https://www.jfklibrary.org/learn/education/profile-in-courage-essay-contest"
+    },
+    {
+        "title": "Brower Youth Awards",
+        "text": "A competition for young environmental leaders making a difference in their communities.",
+        "tags": ["Environment"],
+        "website": "https://www.broweryouthawards.org"
+    },
+    {
+        "title": "Conrad Challenge",
+        "text": "A competition for high school students to pitch and develop business ideas with social impact.",
+        "tags": ["Business"],
+        "website": "https://www.conradchallenge.org/conrad-foundation"
+    },
+    {
+        "title": "Paradigm Challenge",
+        "text": "A competition for high school students to solve real-world problems and create positive social change through innovative business ideas.",
+        "tags": ["Business"],
+        "website": "https://www.projectparadigm.org/"
+    },
+    {
+        "title": "Harvard-MIT Mathematics Tournament",
+        "text": "A competition for high school mathletes at Harvard and MIT.",
+        "tags": ["Math"],
+        "website": "https://www.hmmt.org/"
+    },
+    {
+        "title": "USMDO",
+        "text": "A competition for high schoolers to test their knowledge of medicine and diseases through various challenges and scenarios.",
+        "tags": ["Medicine"],
+        "website": "https://www.usmdo.org/"
+    },
+    {
+        "title": "National Poetry Month Poster Contest",
+        "text": "A competition to design a poster for National Poetry Month.",
+        "tags": ["Writing"],
+        "website": "https://poets.org/national-poetry-month/2022-national-poetry-month-poster-contest-students"
+    },
+    {
+        "title": "American Computer Science League",
+        "text": "A competition for high schoolers to solve computer science problems and compete against other schools.",
+        "tags": ["Computer Science"],
+        "website": "https://www.acsl.org/"
+    },
+    {
+        "title": "National Student Poets Program",
+        "text": "A competition for high school poets to become National Student Poets and share their work with the world.",
+        "tags": ["Writing"],
+        "website": "https://www.artandwriting.org/programs/national-student-poets-program/"
+    },
+    {
+        "title": "BEST Robotics Competition",
+        "text": "A competition where high school students design, build, and program robots to complete specific tasks.",
+        "tags": ["Engineering"],
+        "website": "https://www.bestrobotics.org/site/"
+    },
+    {
+        "title": "Envirothon",
+        "text": "A competition testing environmental knowledge and skills.",
+        "tags": ["Environment"],
+        "website": "https://envirothon.org/"
+    },
+    {
+        "title": "National Ocean Sciences Bowl",
+        "text": "A competition on ocean biology for high schoolers.",
+        "tags": ["Biology"],
+        "website": "https://nosb.org/"
+    },
+    {
+        "title": "International History Olympiad",
+        "text": "A competition for history buffs from around the world to compete and showcase their knowledge and skills.",
+        "tags": ["History"],
+        "website": "https://www.historyolympiad.com"
+    },
+    {
+        "title": "George S. & Stella M. Knight Essay Contest",
+        "text": "A competition for high schoolers to write essays on American history for a chance to win scholarships.",
+        "tags": ["History"],
+        "website": "https://www.sar.org/george-s-stella-m-knight-essay-contest/"
+    },
+    {
+        "title": "Zero Robotics Competition",
+        "text": "A competition where students program satellites to compete in a space-based game.",
+        "tags": ["Engineering"],
+        "website": "https://zerorobotics.mit.edu/"
+    },
+    {
+        "title": "Odyssey of the Mind",
+        "text": "A competition for creative problem-solving in environmental issues.",
+        "tags": ["Environment"],
+        "website": "https://www.odysseyofthemind.com/"
+    },
+    {
+        "title": "Diamond Challenge",
+        "text": "A competition for high schoolers to pitch and develop a business idea for a chance to win prizes.",
+        "tags": ["Business"],
+        "website": "https://diamondchallenge.org/"
+    },
+    {
+        "title": "Science Olympiad",
+        "text": "A competition where students compete in environmental science challenges.",
+        "tags": ["Environment"],
+        "website": "https://www.soinc.org/"
+    },
+    {
+        "title": "Future Engineers Competiton",
+        "text": "A competition for high school students to showcase their engineering skills and creativity.",
+        "tags": ["Engineering"],
+        "website": "https://www.futureengineers.org/"
+    },
+    {
+        "title": "Adroit Prizes for Poetry and Prose",
+        "text": "A competition for high schoolers to submit poetry and prose for a chance to win prizes.",
+        "tags": ["Writing"],
+        "website": "https://theadroitjournal.org/adroit-prizes/"
+    },
+    {
+        "title": "Science without Borders® Challenge",
+        "text": "A competition for high school artists to explore ocean conservation through art.",
+        "tags": ["Art"],
+        "website": "https://www.livingoceansfoundation.org/education/science-without-borders-challenge/"
+    },
+    {
+        "title": "Congressional Art Competition",
+        "text": "A competition for high school students to submit art for the chance to be displayed in the U.S. Capitol.",
+        "tags": ["Art"],
+        "website": "https://www.house.gov/educators-and-students/congressional-art-competition"
+    },
+    {
+        "title": "BioGENEius Challenge",
+        "text": "A competition for high schoolers to showcase their biology research and innovation.",
+        "tags": ["Biology"],
+        "website": "https://biotechinstitute.org/biogeneius/"
+    },
+    {
+        "title": "Math League Contests",
+        "text": "A competition testing math skills in a timed setting.",
+        "tags": ["Math"],
+        "website": "https://mathleague.org/"
+    },
+    {
+        "title": "Rocket City Math League",
+        "text": "A competition with challenging math problems for high school students.",
+        "tags": ["Math"],
+        "website": "https://www.grissommath.org/rcml"
+    },
+    {
+        "title": "Write Your Own Historical Fiction",
+        "text": "A competition to write historical fiction stories.",
+        "tags": ["History"],
+        "website": "https://www.history.org.uk/secondary/categories/531/news/3451/write-your-own-historical-fiction-competition-2024"
+    },
+    {
+        "title": "PicoCTF",
+        "text": "A competition challenging students' computer skills, in cybersecurity and coding challenges.",
+        "tags": ["Computer Science"],
+        "website": "https://picoctf.org/"
+    },
+    {
+        "title": "NACCO",
+        "text": "A competition for high schoolers to showcase their computational chemistry skills in North America.",
+        "tags": ["Chemistry"],
+        "website": "https://www.nacloweb.org/"
+    },
+    {
+        "title": "Medic Mentor Essay Competition",
+        "text": "A competition where highschoolers write essays about medical topics to win awards and opportunities.",
+        "tags": ["Medicine"],
+        "website": "https://medicmentor.co.uk/art-and-essay/"
+    },
+    {
+        "title": "Genes in Space Competition",
+        "text": "A competition to design experiments using DNA in space.",
+        "tags": ["Medicine"],
+        "website": "https://www.genesinspace.org/us-contest/"
+    },
+    {
+        "title": "RoboCup",
+        "text": "A competition where student-built robots play soccer.",
+        "tags": ["Engineering"],
+        "website": "https://2024.robocup.org/"
+    },
+    {
+        "title": "National Science Bowl",
+        "text": "A competition testing chemistry knowledge and skills in a team format.",
+        "tags": ["Chemistry"],
+        "website": "https://science.osti.gov/wdts/nsb"
+    },
+    {
+        "title": "Stanford ACM ProCo",
+        "text": "A competition for high schoolers to showcase their computer science skills at Stanford.",
+        "tags": ["Computer Science"],
+        "website": "https://www.stanfordacm.org/proco"
+    },
+    {
+        "title": "NSPC Health Science Competition",
+        "text": "A competition for high schoolers to showcase their knowledge in health science through biology-related challenges.",
+        "tags": ["Biology"],
+        "website": "https://www.competitionsciences.org/competitions/nspc-health-science-competition/"
+    },
+    {
+        "title": "National History Bowl",
+        "text": "A competition testing history knowledge through buzzer-based and written questions.",
+        "tags": ["History"],
+        "website": "https://International Academic Competitions"
+    },
+    {
+        "title": "TEAMS",
+        "text": "A competition where high school students work in teams to solve environmental challenges.",
+        "tags": ["Environment"],
+        "website": "https://tsaweb.org/teams"
+    },
+    {
+        "title": "National Medical Quiz Bowl",
+        "text": "A competition testing medical knowledge through a quiz bowl format.",
+        "tags": ["Medicine"],
+        "website": "https://www.aapa.org/conference/special-events/aapa-national-medical-challenge-bowl/"
+    },
+    {
+        "title": "ISEF",
+        "text": "A competition for student engineers to showcase projects and solutions on an international level.",
+        "tags": ["Engineering"],
+        "website": "https://www.societyforscience.org/isef/"
+    },
+    {
+        "title": "Rube Goldberg Machine Contest",
+        "text": "A competition to build complex machines that complete simple tasks.",
+        "tags": ["Engineering"],
+        "website": "https://www.rubegoldberg.org/rube-goldberg-contests/"
+    },
+    {
+        "title": "Physics Brawl",
+        "text": "A competition where teams compete in physics challenges and problem-solving activities.",
+        "tags": ["Physics"],
+        "website": "https://physicsbrawl.org/"
+    },
+    {
+        "title": "Clean Tech Challenge",
+        "text": "A competition challenging students to create innovative clean technology solutions for environmental issues.",
+        "tags": ["Environment"],
+        "website": "https://thecleantechchallenge.uk"
+    },
+    {
+        "title": "Project Green Challenge",
+        "text": "A competition challenging students to create eco-friendly solutions for a sustainable future.",
+        "tags": ["Environment"],
+        "website": "https://projectgreenchallenge.com"
+    },
+    {
+        "title": "MITES Summer",
+        "text": "A competition for high schoolers at MIT to design and innovate engineering projects.",
+        "tags": ["Engineering"],
+        "website": "https://mites.mit.edu/discover-mites/mites-summer/"
+    },
+    {
+        "title": "AAPT High School Physics Photo Contest",
+        "text": "A competition to submit physics-related photos for high schoolers.",
+        "tags": ["Physics"],
+        "website": "https://www.aapt.org/Programs/PhotoContest/index.cfm"
+    },
+    {
+        "title": "Chemistry Olympiad Local Sections",
+        "text": "A competition to test high school chemistry knowledge.",
+        "tags": ["Chemistry"],
+        "website": "https://www.acs.org/education/students/highschool/olympiad.html"
+    },
+    {
+        "title": "DECA",
+        "text": "A competition for high school students to showcase their business skills and knowledge through various challenges and events.",
+        "tags": ["Business"],
+        "website": "https:// https://www.deca.org/challenges"
+    },
+    {
+        "title": "National History Bee",
+        "text": "A competition testing knowledge of history with quizzes and trivia.",
+        "tags": ["History"],
+        "website": "https://nationalhistorybee.com/"
+    },
+    {
+        "title": "CyberPatriot",
+        "text": "A competition to protect digital systems and networks from cyber attacks.",
+        "tags": ["Computer Science"],
+        "website": "https://www.uscyberpatriot.org/"
+    },
+    {
+        "title": "FPSPI",
+        "text": "A competition where students solve complex engineering challenges.",
+        "tags": ["Engineering"],
+        "website": "https://www.fpspi.org/"
+    },
+    {
+        "title": "Botball Educational Robotics Program",
+        "text": "A competition where students build and program autonomous robots to complete tasks.",
+        "tags": ["Engineering"],
+        "website": "https://www.kipr.org/botball"
+    },
+    {
+        "title": "Chemistry Challenge",
+        "text": "A competition for high schoolers to test their chemistry knowledge and skills.",
+        "tags": ["Chemistry"],
+        "website": "https://www.rsc.org/events/detail/4679/chemistry-challenge"
+    },
+    {
+        "title": "USA Physics Olympiad",
+        "text": "A competition for high school students to showcase their physics knowledge and problem-solving skills.",
+        "tags": ["Physics"],
+        "website": "https://www.aapt.org/physicsteam/2023/registration.cfm"
+    },
+    {
+        "title": "World Historian Student Essay Competition",
+        "text": "A competition for students to write essays on world history.",
+        "tags": ["History"],
+        "website": "https://www.thewha.org/wha-awards/world-historian-student-essay-competition/"
+    },
+    {
+        "title": "US Association for Young Physicists",
+        "text": "A competition for high school students to showcase their physics knowledge and problem-solving skills.",
+        "tags": ["Physics"],
+        "website": "http://www.usaypt.org/"
+    },
+    {
+        "title": "IAAAC",
+        "text": "A competition testing your knowledge in astronomy and astrophysics.",
+        "tags": ["Physics"],
+        "website": "https://iaac.space/en/"
+    },
+    {
+        "title": "The Bennington Young Writers Awards",
+        "text": "A competition for young writers to submit their work and win awards and recognition.",
+        "tags": ["Writing"],
+        "website": "https://www.bennington.edu/events/young-writers-awards"
+    },
+    {
+        "title": "Apparatus Competition",
+        "text": "A competition testing students' skills in building and using physics apparatus.",
+        "tags": ["Physics"],
+        "website": "https://www.aapt.org/Programs/contests/apparatus_home.cfm"
+    },
+    {
+        "title": "Vans Custom Culture",
+        "text": "A competition to design and customize Vans shoes for highschool students.",
+        "tags": ["Art"],
+        "website": "https://customculture.vans.com/"
+    },
+    {
+        "title": "SeaPerch",
+        "text": "A competition where students build underwater robots to complete tasks.",
+        "tags": ["Engineering"],
+        "website": "https://seaperch.org/"
+    },
+    {
+        "title": "Physics Unlimited Premier Competition",
+        "text": "A competition where high school students showcase their physics knowledge and skills in a premier setting.",
+        "tags": ["Physics"],
+        "website": "http://physicsu.org/premier"
+    },
+    {
+        "title": "Brain Bee",
+        "text": "A competition testing knowledge of the brain and neuroscience for high school students.",
+        "tags": ["Medicine"],
+        "website": "https://www.thebrainbee.org/"
+    },
+    {
+        "title": "National History Day",
+        "text": "A competition for students to research and present historical topics.",
+        "tags": ["History"],
+        "website": "https://nhd.org/en/"
+    },
+    {
+        "title": "Purple Comet! Math Meet",
+        "text": "A competition where high schoolers solve math problems online in teams of up to 6 people.",
+        "tags": ["Math"],
+        "website": "https://purplecomet.org/"
+    },
+    {
+        "title": "Mandelbrot Competition",
+        "text": "A competition testing advanced math skills with challenging problems.",
+        "tags": ["Math"],
+        "website": "https://www.competitionsciences.org/competitions/mandelbrot-competition/"
+    },
+    {
+        "title": "Letters About Literature",
+        "text": "A competition where students write letters to authors about how their book impacted them.",
+        "tags": ["Writing"],
+        "website": "https://read.gov/letters/"
+    },
+    {
+        "title": "Human Exploration Rover Challenge",
+        "text": "A competition where students design and build rovers for simulated Mars exploration.",
+        "tags": ["Engineering"],
+        "website": "https://www.nasa.gov/learning-resources/nasa-human-exploration-rover-challenge/"
+    },
+    {
+        "title": "Vision Global Health",
+        "text": "A competition that focuses on global health issues and medical solutions.",
+        "tags": ["Medicine"],
+        "website": "https://harvardghlc.weebly.com/apply.html"
+    },
+    {
+        "title": "MathCON",
+        "text": "A competition for high schoolers to showcase their math skills and problem-solving abilities.",
+        "tags": ["Math"],
+        "website": "https://www.mathcon.org/"
+    },
+    {
+        "title": "Canadian Chemistry Contest",
+        "text": "A competition testing Canadian high schoolers' chemistry knowledge and skills.",
+        "tags": ["Chemistry"],
+        "website": "https://www.cheminst.ca/discover/canadian-chemistry-contest/"
+    },
+    {
+        "title": "YoungArts Competition",
+        "text": "A competition for young artists to showcase their talents and win scholarships and mentorship opportunities.",
+        "tags": ["Art"],
+        "website": "https://youngarts.org/"
+    },
+    {
+        "title": "American Rocketry Challenge",
+        "text": "A competition to design, build, and launch model rockets with specific requirements.",
+        "tags": ["Engineering"],
+        "website": "https://rocketcontest.org/"
+    },
+    {
+        "title": "Embracing Our Differences",
+        "text": "A competition for students to create art celebrating diversity and inclusion.",
+        "tags": ["Art"],
+        "website": "https://www.embracingourdifferences.org/"
+    },
+    {
+        "title": "AACT High School Chemistry Contest",
+        "text": "A competition testing high schoolers' chemistry knowledge and skills.",
+        "tags": ["Chemistry"],
+        "website": "https://teachchemistry.org/"
+    },
+    {
+        "title": "Physics Bowl",
+        "text": "A competition testing physics knowledge and problem-solving skills.",
+        "tags": ["Physics"],
+        "website": "https://www.aapt.org/programs/physicsbowl/"
+    },
+    {
+        "title": "Math Madness",
+        "text": "A competition where high school students compete in math challenges against other schools.",
+        "tags": ["Math"],
+        "website": "https://www.aretelabs.com/math-madness/events"
+    },
+    {
+        "title": "Sony World Photography Awards",
+        "text": "A competition for young photographers to showcase their skills and creativity on a global scale.",
+        "tags": ["Art"],
+        "website": "https://www.worldphoto.org/sony-world-photography-awards/youth"
+    },
+    {
+        "title": "Creative Communication Contest",
+        "text": "A competition for high schoolers to submit poetry and essays for a chance to win prizes and recognition.",
+        "tags": ["Writing"],
+        "website": "https://www.poeticpower.com/"
+    },
+    {
+        "title": "PLURAL+ Youth Video Festival",
+        "text": "A competition for youth to create videos that promote diversity and inclusion.",
+        "tags": ["Art"],
+        "website": "https://pluralplus.unaoc.org/"
+    },
+    {
+        "title": "VEX Robotics",
+        "text": "A competition where high schoolers build and program robots to complete challenges.",
+        "tags": ["Engineering"],
+        "website": "https://www.vexrobotics.com/"
+    },
+    {
+        "title": "American Mathematics Competitions",
+        "text": "A competition testing high school math skills, offering AMC 10 for 10th graders and AMC 12 for 12th graders.",
+        "tags": ["Math"],
+        "website": "https://maa.org/math-competitions"
+    },
+    {
+        "title": "Patricia Grodd Poetry Prize",
+        "text": "A competition for high school poets to win cash prizes and publication in The Kenyon Review.",
+        "tags": ["Writing"],
+        "website": "https://kenyonreview.org/submit/patricia-grodd/"
+    }
+]

@@ -30,7 +30,11 @@ export default function Login() {
                             <input className = "Login_Input" placeholder = "Email" type="email" onChange={(e) => setEmail(e.target.value)}></input>
 
                             <input className = "Login_Input" placeholder = "Password" type="password" onChange={(e) => setPassword(e.target.value)}></input>
-                            <button className = "Submit_Login_Button" type="submit">Submit</button>
+                            {!isPending && !error && <button className = "Submit_Login_Button" type="submit">Submit</button>}
+                            {isPending && !error && <button className = "Submit_Login_Button"  disabled type="submit">Loading Do Not Refresh the Page</button>}
+                            {error && <button className = "Submit_Login_Button"  disabled type="submit">{error}</button>}
+
+
 
                         </div>
 
@@ -40,11 +44,7 @@ export default function Login() {
                             <br />
 
 
-                            {isPending && !error && (
-                                <button className="Submit_Login_Button" disabled>
-                                    Loading...Do Not Refresh The Page
-                                </button>
-                            )}
+                            
                             {error && <div className="error">{error}</div>}
                             <button className = "Submit_Login_Button" onClick={loginWithGoogle}>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-google" viewBox="0 0 16 16">

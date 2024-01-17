@@ -53,6 +53,7 @@ export const useSignupInfo = () => {
             }
 
             navigateTo("/");
+            location.reload();
         } catch (err) {
             if (!isCancelled) {
                 setError(err.message);

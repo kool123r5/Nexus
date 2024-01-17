@@ -10,7 +10,17 @@ import firebase from "firebase/app";
 
 export default function Profile() {
     const { id } = useParams();
-    const { document, error } = useDocument("users", id);
+    const { document: currentIdDocument, error } = useDocument("users", id);
+    const [userDoc, setUserDoc] = useState(null);
+    if (userDoc == null) {
+        projectFirestore
+            .collection("users")
+            .doc(projectAuth.currentUser.uid)
+            .get()
+            .then((doc) => {
+                setUserDoc(doc.data());
+            });
+    }
     const [activities, setActivities] = useState(null);
     const [posts, setPosts] = useState(null);
 
@@ -21,10 +31,10 @@ export default function Profile() {
     const rowsPerPage = 10;
 
     const fetchActivities = async () => {
-        if (document && document.activities) {
+        if (currentIdDocument && currentIdDocument.activities) {
             // Extract activity references
 
-            const activityDocsPromises = document.activities.map(async (activity) => {
+            const activityDocsPromises = currentIdDocument.activities.map(async (activity) => {
                 const activityRef = activity.activity;
                 const activityDocSnapshot = await activityRef.get();
                 const activityDocData = activityDocSnapshot.data();
@@ -39,31 +49,29 @@ export default function Profile() {
             });
 
             const activityDocs = await Promise.all(activityDocsPromises);
-            console.log(activityDocs);
+            // console.log(activityDocs);
             setActivities(activityDocs);
         }
     };
 
     const fetchPosts = async () => {
-        if(document&& document.posts){
-            const postDocsPromises = document.posts.map(async (post) => {
-               const postDocSnapShot =await post.get()
-               const postDocData=postDocSnapShot.data()
-               return{...postDocData}
-            
-        })
+        if (currentIdDocument && currentIdDocument.posts) {
+            const postDocsPromises = currentIdDocument.posts.map(async (post) => {
+                const postDocSnapShot = await post.get();
+                const postDocData = postDocSnapShot.data();
+                return { ...postDocData };
+            });
 
-        const postDocs=await Promise.all(postDocsPromises)
-        console.log(postDocs)
-        setPosts(postDocs)
-
-    }
-    }
+            const postDocs = await Promise.all(postDocsPromises);
+            // console.log(postDocs);
+            setPosts(postDocs);
+        }
+    };
 
     useEffect(() => {
         fetchActivities();
         fetchPosts();
-    }, [document]);
+    }, [currentIdDocument]);
 
     const changeFilter = (newFilter) => {
         setFilter(newFilter);
@@ -104,15 +112,23 @@ export default function Profile() {
     const yourProfile = id == projectAuth.currentUser.uid;
 
     const areFriends = () => {
-        return document.friends.includes(projectAuth.currentUser.uid);
+        return currentIdDocument.friends.includes(projectAuth.currentUser.uid);
     };
 
     const requstSentByCurrentUser = () => {
-        return document.friendRequestsReceived.includes(projectAuth.currentUser.uid);
+        return currentIdDocument.friendRequestsReceived.includes(projectAuth.currentUser.uid);
     };
 
     const requestReceivedByCurrentUser = () => {
-        return document.friendRequestsSent.includes(projectAuth.currentUser.uid);
+        return currentIdDocument.friendRequestsSent.includes(projectAuth.currentUser.uid);
+    };
+
+    const requestReceivedByCurrentUserOnTheirPageFromCertainId = (id) => {
+        return userDoc.friendRequestsReceived.includes(id);
+    };
+
+    const anyRequestReceivedByCurrentUserOnTheirPage = () => {
+        return userDoc.friendRequestsReceived.length > 0;
     };
 
     const sendFriendRequest = async () => {
@@ -166,8 +182,8 @@ export default function Profile() {
         }
     };
 
-    const acceptFriendRequest = async () => {
-        if (!areFriends() && requestReceivedByCurrentUser() && !requstSentByCurrentUser()) {
+    const acceptFriendRequest = async (id) => {
+        if (!areFriends() && requestReceivedByCurrentUserOnTheirPageFromCertainId(id) && !requstSentByCurrentUser()) {
             await projectFirestore
                 .collection("users")
                 .doc(projectAuth.currentUser.uid)
@@ -183,10 +199,13 @@ export default function Profile() {
                     friends: firebase.firestore.FieldValue.arrayUnion(projectAuth.currentUser.uid),
                 });
         }
+        document.querySelectorAll(`.${id}`).forEach((btn) => {
+            btn.remove();
+        });
     };
 
-    const rejectFriendRequest = async () => {
-        if (!areFriends() && requestReceivedByCurrentUser() && !requstSentByCurrentUser()) {
+    const rejectFriendRequest = async (id) => {
+        if (!areFriends() && requestReceivedByCurrentUserOnTheirPageFromCertainId(id) && !requstSentByCurrentUser()) {
             await projectFirestore
                 .collection("users")
                 .doc(projectAuth.currentUser.uid)
@@ -200,6 +219,9 @@ export default function Profile() {
                     friendRequestsSent: firebase.firestore.FieldValue.arrayRemove(projectAuth.currentUser.uid),
                 });
         }
+        document.querySelectorAll(`.${id}`).forEach((btn) => {
+            btn.remove();
+        });
     };
 
     return (
@@ -208,12 +230,12 @@ export default function Profile() {
             {error && <p>{error}</p>}
             <p>{id}</p>
 
-            {document && (
+            {currentIdDocument && (
                 <div>
                     Profile
                     <ProjectFilter changeFilter={changeFilter} />
                     <input type="text" value={searchQuery} onChange={changeSearchQuery} placeholder="Search by name" />
-                    <p>Welcome: {document.displayName}</p>
+                    <p>Welcome: {currentIdDocument.displayName}</p>
                     <br></br>
                     <p>Your activities</p>
                     {currentActivities &&
@@ -231,30 +253,44 @@ export default function Profile() {
                         posts.map((document) => {
                             return (
                                 <>
-                                    
-                                        <p>Title: {document.title}</p>
+                                    <p>Title: {document.title}</p>
                                 </>
                             );
                         })}
                     {!currentActivities && <p>No activities yet</p>}
                     <br />
+                    <br />
                     {yourProfile ? (
-                        <Link to={"/profile/settings"}>
-                            <button>Settings</button>
-                        </Link>
+                        <>
+                            <Link to={"/profile/settings"}>
+                                <button>Settings</button>
+                            </Link>
+                            <br />
+                            {anyRequestReceivedByCurrentUserOnTheirPage() ? (
+                                <>
+                                    {userDoc &&
+                                        userDoc.friendRequestsReceived.map((reqId) => {
+                                            return (
+                                                <>
+                                                    <button className={reqId} onClick={() => acceptFriendRequest(reqId)}>
+                                                        Accept Request From {reqId}
+                                                    </button>
+                                                    <button className={reqId} onClick={() => rejectFriendRequest(reqId)}>
+                                                        Reject Request From {reqId}
+                                                    </button>
+                                                </>
+                                            );
+                                        })}
+                                </>
+                            ) : (
+                                <></>
+                            )}
+                        </>
                     ) : (
                         <>
                             {areFriends() ? <button onClick={removeFriend}>Remove Friend</button> : <></>}
                             {requstSentByCurrentUser() ? (
                                 <button onClick={unsendFriendRequest}>Unsend Friend Request</button>
-                            ) : (
-                                <></>
-                            )}
-                            {requestReceivedByCurrentUser() ? (
-                                <>
-                                    <button onClick={acceptFriendRequest}>Accept Friend Request</button>
-                                    <button onClick={rejectFriendRequest}>Reject Friend Request</button>
-                                </>
                             ) : (
                                 <></>
                             )}
@@ -266,18 +302,18 @@ export default function Profile() {
                         </>
                     )}
                     {yourProfile &&
-                        document.friendRequestsSent &&
-                        document.friendRequestsSent.map((friendReq) => {
+                        currentIdDocument.friendRequestsSent &&
+                        currentIdDocument.friendRequestsSent.map((friendReq) => {
                             return <p key={Math.random()}>You have sent a friend request to {friendReq}</p>;
                         })}
                     {yourProfile &&
-                        document.friendRequestsReceived &&
-                        document.friendRequestsReceived.map((friendReq) => {
+                        currentIdDocument.friendRequestsReceived &&
+                        currentIdDocument.friendRequestsReceived.map((friendReq) => {
                             return <p key={Math.random()}>You have received a friend request from {friendReq}</p>;
                         })}
                     {yourProfile &&
-                        document.friends &&
-                        document.friends.map((friend) => {
+                        currentIdDocument.friends &&
+                        currentIdDocument.friends.map((friend) => {
                             return <p key={Math.random()}>You are friends with {friend}</p>;
                         })}
                     {/* 

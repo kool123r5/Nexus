@@ -22,12 +22,12 @@ export default function Activity() {
     const { document, error } = useDocument("activities", id);
     const newActivity = {
         activity: projectFirestore.doc(`activities/${id}`),
-        startDate: firebase.firestore.FieldValue.serverTimestamp(),
+        startDate: new Date,
         endDate: null,
         comment: null,
         rating: null,
         completed: "Pending",
-        updatedAt: firebase.firestore.FieldValue.serverTimestamp(),
+        updatedAt: null,
     };
     const userDoc = useDocument("users", user.uid);
 
@@ -94,7 +94,7 @@ export default function Activity() {
             ) {
                 return {
                     ...activityDoc,
-                    endDate: firebase.firestore.FieldValue.serverTimestamp(),
+                    endDate: new Date(),
                     rating: parseInt(rating),
                     comment: comment,
                     completed: "Completed",

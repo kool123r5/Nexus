@@ -12,15 +12,25 @@ export default function Profile() {
     const { id } = useParams();
     const { document: currentIdDocument, error } = useDocument("users", id);
     const [userDoc, setUserDoc] = useState(null);
-    if (userDoc == null) {
-        projectFirestore
+    useEffect(() => {
+        const unsub_ref = projectFirestore
             .collection("users")
             .doc(projectAuth.currentUser.uid)
-            .get()
-            .then((doc) => {
-                setUserDoc(doc.data());
+            .onSnapshot((snapshot) => {
+                if (snapshot.data()) {
+                    setUserDoc(
+                        snapshot.data({
+                            serverTimestamps: "estimate",
+                        })
+                    );
+                }
             });
-    }
+        return unsub_ref;
+        // .get()
+        // .then((doc) => {
+        //     setUserDoc(doc.data());
+        // });
+    });
     const [activities, setActivities] = useState(null);
     const [posts, setPosts] = useState(null);
 
@@ -199,9 +209,6 @@ export default function Profile() {
                     friends: firebase.firestore.FieldValue.arrayUnion(projectAuth.currentUser.uid),
                 });
         }
-        document.querySelectorAll(`.${id}`).forEach((btn) => {
-            btn.remove();
-        });
     };
 
     const rejectFriendRequest = async (id) => {
@@ -219,9 +226,6 @@ export default function Profile() {
                     friendRequestsSent: firebase.firestore.FieldValue.arrayRemove(projectAuth.currentUser.uid),
                 });
         }
-        document.querySelectorAll(`.${id}`).forEach((btn) => {
-            btn.remove();
-        });
     };
 
     return (
@@ -272,10 +276,11 @@ export default function Profile() {
                                         userDoc.friendRequestsReceived.map((reqId) => {
                                             return (
                                                 <>
-                                                    <button className={reqId} onClick={() => acceptFriendRequest(reqId)}>
+                                                    <br />
+                                                    <button onClick={() => acceptFriendRequest(reqId)}>
                                                         Accept Request From {reqId}
                                                     </button>
-                                                    <button className={reqId} onClick={() => rejectFriendRequest(reqId)}>
+                                                    <button onClick={() => rejectFriendRequest(reqId)}>
                                                         Reject Request From {reqId}
                                                     </button>
                                                 </>
@@ -305,11 +310,6 @@ export default function Profile() {
                         currentIdDocument.friendRequestsSent &&
                         currentIdDocument.friendRequestsSent.map((friendReq) => {
                             return <p key={Math.random()}>You have sent a friend request to {friendReq}</p>;
-                        })}
-                    {yourProfile &&
-                        currentIdDocument.friendRequestsReceived &&
-                        currentIdDocument.friendRequestsReceived.map((friendReq) => {
-                            return <p key={Math.random()}>You have received a friend request from {friendReq}</p>;
                         })}
                     {yourProfile &&
                         currentIdDocument.friends &&

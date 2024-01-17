@@ -22,12 +22,12 @@ export default function Activity() {
     const { document, error } = useDocument("activities", id);
     const newActivity = {
         activity: projectFirestore.doc(`activities/${id}`),
-        startDate: new Date,
+        startDate: firebase.firestore.FieldValue.serverTimestamp(),
         endDate: null,
         comment: null,
         rating: null,
         completed: "Pending",
-        updatedAt: null,
+        updatedAt: firebase.firestore.FieldValue.serverTimestamp(),
     };
     const userDoc = useDocument("users", user.uid);
 
@@ -94,7 +94,7 @@ export default function Activity() {
             ) {
                 return {
                     ...activityDoc,
-                    endDate: new Date(),
+                    endDate: firebase.firestore.FieldValue.serverTimestamp(),
                     rating: parseInt(rating),
                     comment: comment,
                     completed: "Completed",
@@ -152,17 +152,16 @@ export default function Activity() {
         setActivityRemoved(false);
     };
 
-  return (
-    <>
-      <Navbar />
-      <div>
-        Not sure what goes here for now, so just keeping this:
-        {document && userDoc && user && (
-          <div className="fullActivity">
-            <h2>Posted by User: {document.username}</h2>
-            <h1>Title: {document.title}</h1>
-            <h3>Text: {document.text}</h3>
-
+    return (
+        <>
+            <Navbar />
+            <div>
+                Not sure what goes here for now, so just keeping this:
+                {document && userDoc && user && (
+                    <div className="fullActivity">
+                        <h2>Posted by User: {document.username}</h2>
+                        <h1>Title: {document.title}</h1>
+                        <h3>Text: {document.text}</h3>
 
                         {!disabled && (
                             <button id="btn" onClick={handleClick} disabled={disabled}>

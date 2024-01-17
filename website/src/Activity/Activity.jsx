@@ -4,9 +4,8 @@ import { useDocument } from "../hooks/useDocument";
 import { useAuthContext } from "../hooks/useAuthContext";
 import { useState } from "react";
 import { useEffect } from "react";
-import { projectFirestore } from "../firebase/config";
+import { projectFirestore, timestamp } from "../firebase/config";
 import Navbar from "../Navbar/Navbar";
-import firebase from "firebase/app";
 
 export default function Activity() {
     const { id } = useParams();
@@ -20,14 +19,15 @@ export default function Activity() {
     const [comment, setComment] = useState("");
 
     const { document, error } = useDocument("activities", id);
+    if (error) console.log(error);
+
     const newActivity = {
         activity: projectFirestore.doc(`activities/${id}`),
-        startDate: firebase.firestore.FieldValue.serverTimestamp(),
+        startDate: timestamp.now(),
         endDate: null,
         comment: null,
         rating: null,
         completed: "Pending",
-        updatedAt: firebase.firestore.FieldValue.serverTimestamp(),
     };
     const userDoc = useDocument("users", user.uid);
 
@@ -56,7 +56,6 @@ export default function Activity() {
     useEffect(() => {
         if (userDoc.document != null) {
             const activities = userDoc.document.activities || [];
-            console.log(activities);
             activities.forEach((activityDoc) => {
                 console.log(activityDoc);
                 if (
@@ -69,10 +68,10 @@ export default function Activity() {
             });
         }
     }, [userDoc]);
+
     useEffect(() => {
         if (userDoc.document != null) {
             const activities = userDoc.document.activities || [];
-            console.log(activities);
             activities.forEach((activityDoc) => {
                 if (
                     activityDoc["activity"]["_delegate"]["_key"]["path"]["segments"].at(-1) ==
@@ -84,6 +83,7 @@ export default function Activity() {
             });
         }
     }, [userDoc]);
+
     const handleComplete = (e) => {
         e.preventDefault();
         const activities = userDoc.document.activities;
@@ -94,7 +94,7 @@ export default function Activity() {
             ) {
                 return {
                     ...activityDoc,
-                    endDate: firebase.firestore.FieldValue.serverTimestamp(),
+                    endDate: timestamp.now(),
                     rating: parseInt(rating),
                     comment: comment,
                     completed: "Completed",
@@ -134,10 +134,6 @@ export default function Activity() {
 
     const handleClick = () => {
         const activities = userDoc.document.activities || [];
-
-        // Create a new activity object with the required structure
-
-        console.log(activities);
 
         // Update the activities array in the user's document
         const updatedActivities = [...activities, newActivity];

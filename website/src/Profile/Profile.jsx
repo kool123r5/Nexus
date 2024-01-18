@@ -25,12 +25,10 @@ export default function Profile() {
                     );
                 }
             });
-        return unsub_ref;
-        // .get()
-        // .then((doc) => {
-        //     setUserDoc(doc.data());
-        // });
-    });
+        return () => {
+            unsub_ref();
+        };
+    }, []);
     const [activities, setActivities] = useState(null);
     const [posts, setPosts] = useState(null);
 

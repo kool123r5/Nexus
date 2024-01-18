@@ -68,8 +68,9 @@ export default function Profile() {
         if (currentIdDocument && currentIdDocument.posts) {
             const postDocsPromises = currentIdDocument.posts.map(async (post) => {
                 const postDocSnapShot = await post.get();
+                const postId=post.id;
                 const postDocData = postDocSnapShot.data();
-                return { ...postDocData };
+                return { ...postDocData,postId };
             });
 
             const postDocs = await Promise.all(postDocsPromises);
@@ -257,7 +258,7 @@ export default function Profile() {
                         posts.map((document) => {
                             return (
                                 <>
-                                    <p>Title: {document.title}</p>
+                                   <Link to={`/forum/${document.postId}`}> Title: {document.title}</Link> 
                                 </>
                             );
                         })}

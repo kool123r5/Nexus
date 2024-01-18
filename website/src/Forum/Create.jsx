@@ -28,7 +28,7 @@ const Create = () => {
                 text,
                 type,
                 likes,
-                location,
+                location,            
                 creatorName: user.displayName,
                 creator: userId,
                 createdAt: currentDate,

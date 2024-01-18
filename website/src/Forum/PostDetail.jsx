@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { projectFirestore } from "../firebase/config";
 import { useDocument } from "../hooks/useDocument";
 import Navbar from "../Navbar/Navbar";
@@ -87,12 +87,12 @@ const PostDetail = () => {
             <Navbar></Navbar>
             {document && (
                 <>
-                    <h2>Post {id}</h2>
+                    <h2>Post {document.title}</h2>
                     <p>Title: {document.title}</p>
                     <p>Text: {document.text}</p>
                     <p>Type: {document.type}</p>
                     <p>Location: {document.location}</p>
-                    <p>Creator: {document.creatorName}</p>
+                   <Link to={`/profile/${document.creator}`}>Creator: {document.creatorName}</Link> 
                     <p>Created At: {document.createdAt && document.createdAt.toDate().toString()}</p>
                     <p>Updated At: {document.updatedAt && document.updatedAt.toDate().toString()}</p>
                 </>

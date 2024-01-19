@@ -27,6 +27,7 @@ export default function Profile() {
             });
         return () => {
             unsub_ref();
+
         };
     }, []);
     const [activities, setActivities] = useState(null);

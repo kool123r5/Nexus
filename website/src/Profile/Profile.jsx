@@ -32,6 +32,8 @@ export default function Profile() {
     }, []);
     const [activities, setActivities] = useState(null);
     const [posts, setPosts] = useState(null);
+    const [postsAdded, setPostsAdded] = useState(null);
+
 
     const [filter, setFilter] = useState("All");
 
@@ -63,6 +65,30 @@ export default function Profile() {
         }
     };
 
+    const fetchPostsAdded = async () => {
+        if (currentIdDocument && currentIdDocument.activities) {
+            // Extract activity references
+
+            const postAddedDocsPromises = currentIdDocument.postsAdded.map(async (post) => {
+                const postRef = post.postDoc;
+                const postDocSnapshot = await postRef.get();
+                const postDocData = postDocSnapshot.data();
+                return {
+                    ...postDocData,
+                    completed: post.completed,
+                    startDate: post.startDate,
+                    rating: post.rating,
+                    comment: post.comment,
+                    endDate: post.endDate,
+                };
+            });
+
+            const postAddedDocs = await Promise.all(postAddedDocsPromises);
+            // console.log(activityDocs);
+            setPostsAdded(postAddedDocs);
+        }
+    };
+
     const fetchPosts = async () => {
         if (currentIdDocument && currentIdDocument.posts) {
             const postDocsPromises = currentIdDocument.posts.map(async (post) => {
@@ -81,6 +107,7 @@ export default function Profile() {
     useEffect(() => {
         fetchActivities();
         fetchPosts();
+        fetchPostsAdded();
     }, [currentIdDocument]);
 
     const changeFilter = (newFilter) => {
@@ -252,6 +279,8 @@ export default function Profile() {
                                 </>
                             );
                         })}
+                                            {!currentActivities && <p>No activities yet</p>}
+
                     <p>Your posts</p>
                     {posts &&
                         posts.map((document) => {
@@ -261,7 +290,15 @@ export default function Profile() {
                                 </>
                             );
                         })}
-                    {!currentActivities && <p>No activities yet</p>}
+                    <p>Student forum posts added: </p>
+                    {postsAdded &&
+                        postsAdded.map((document) => {
+                            return (
+                                <>
+                                   <p> Title: {document.title}</p> 
+                                </>
+                            );
+                        })}
                     <br />
                     <br />
                     {yourProfile ? (

@@ -3,6 +3,10 @@ import "./Signup.css";
 import { useState } from "react";
 import { useSignup } from "../hooks/useSignup";
 import useGoogleSignIn from "../hooks/useGoogleSignIn";
+import { Stepper, Button, Group, MantineProvider } from '@mantine/core';
+import '@mantine/core/styles.css';
+
+
 
 export default function Signup() {
     const [email, setEmail] = useState("");
@@ -14,6 +18,9 @@ export default function Signup() {
     const [location, setLocation] = useState(null);
     const [interests, setInterests] = useState([]);
     const [profilePicture, setProfilePicture] = useState(null);
+    const [active, setActive] = useState(1);
+    const nextStep = () => setActive((current) => (current < 3 ? current + 1 : current));
+    const prevStep = () => setActive((current) => (current > 0 ? current - 1 : current));
 
     const { signup, isPending, error } = useSignup();
     const { signInWithGoogle, error2 } = useGoogleSignIn();
@@ -35,45 +42,60 @@ export default function Signup() {
 
     return (
         <>
-            <Navbar />
-            <div>
-                Sign Up
-                <form onSubmit={handleSubmit}>
-                    <label>
-                        Full Name: <input type="text" onChange={(e) => setName(e.target.value)}></input>
-                    </label>
-                    <label>
-                        Email: <input type="email" onChange={(e) => setEmail(e.target.value)}></input>
-                    </label>
+        <MantineProvider>
+            <div id = "Whole_Container">
+              <div id = "Signup_Text_Container">
+                <h1 id = "Signup_Text">Sign Up</h1>
+              </div>
+                <div id = "Stepper_Container">
+                  <Stepper color = "#FF6D00" active = {active} size = "md" onStepClick={setActive} id = "SignUp_Stepper" allowNextStepsSelect={false}>
+                    <Stepper.Step label = "First Step" description = "Create an Account"/>
+                    <Stepper.Step label="Second step" description="Verify email"/>
+                    <Stepper.Step label="Final step" description="Get full access"/>
+                  </Stepper>
+                </div>
+                <div id = "Steps_Container">
+                  <div className = "Individual_Step" id = "Individual_Step_1">
+                    <form onSubmit={handleSubmit}>
+                      <div className="Form_Container"> 
+                        
+                        <input className = "Signup_Input" placeholder = "Full Name" type="text" onChange={(e) => setName(e.target.value)}></input>
+                        
+                        
+                        <input className = "Signup_Input" placeholder = "Email" type="email" onChange={(e) => setEmail(e.target.value)}></input>
 
-                    <label>
-                        Password: <input type="password" onChange={(e) => setPassword(e.target.value)}></input>
-                    </label>
-                    {password && password.length < 6 ? <p>Password must be at least 6 characters</p> : <></>}
-                    {password && !hasNumber(password) ? <p>Password must have a digit</p> : <></>}
+                        
+                        
+                        <input className = "Signup_Input" placeholder = "Password" type="password" onChange={(e) => setPassword(e.target.value)}></input>
+                        {password && password.length < 6 ? <p>Password must be at least 6 characters</p> : <></>}
+                        {password && !hasNumber(password) ? <p>Password must have a digit</p> : <></>}
 
-                    <label>
-                        Confirm Password:{" "}
-                        <input type="password" onChange={(e) => setConfirmPassword(e.target.value)}></input>
-                    </label>
-                    {confirmPassword != password ? <p>Passwords do not match.</p> : <p></p>}
-                    <br />
-                    
-                    <br />
-                    <br />
-                    <button type="submit">Submit</button>
+                        <input className = "Signup_Input" placeholder = "Confirm Password" type="password" onChange={(e) => setConfirmPassword(e.target.value)}></input>
+                        {confirmPassword != password ? <p>Passwords do not match.</p> : <p></p>}
+                        <br />
+                        
+                        <br />
+                        <br />
 
-                    {isPending && (
-                        <button className="btn" disabled>
-                            Loading...Do Not Refresh The Page
-                        </button>
-                    )}
-                    {error && <div className="error">{error}</div>}
-                </form>
-                <br />
-                <button onClick={handleGoogleSignIn}>Sign up with Google</button>
-                {error2 && <div className="error">{error2}</div>}
-            </div>
+                      </div>
+                    </form>
+                    <br />
+                    <button type="submit" onClick={nextStep}>Next</button>
+
+
+                  </div>
+                          
+                  <div className="Individual_Step" id = "Individual_Step_2">
+                    XYZ
+                  </div>
+
+                  <div className="Individual_Step" id = "Individual_Step_3">
+                    ABC
+                  </div>
+                
+                </div>  
+              </div>              
+          </MantineProvider>
         </>
     );
 }
@@ -81,39 +103,13 @@ export default function Signup() {
 
 
 
-/* Use Later 
+/*                    {isPending && (
+                        <button className="btn" disabled>
+                            Loading...Do Not Refresh The Page
+                        </button>
+                    )}
+                    {error && <div className="error">{error}</div>}
+                    <button onClick={handleGoogleSignIn}>Sign up with Google</button>
+                    {error2 && <div className="error">{error2}</div>}
 
-import { useState } from 'react';
-import { Stepper, Button, Group } from '@mantine/core';
-
-function Demo() {
-  const [active, setActive] = useState(1);
-  const nextStep = () => setActive((current) => (current < 3 ? current + 1 : current));
-  const prevStep = () => setActive((current) => (current > 0 ? current - 1 : current));
-
-  return (
-    <>
-      <Stepper active={active} onStepClick={setActive}>
-        <Stepper.Step label="First step" description="Create an account">
-          Step 1 content: Create an account
-        </Stepper.Step>
-        <Stepper.Step label="Second step" description="Verify email">
-          Step 2 content: Verify email
-        </Stepper.Step>
-        <Stepper.Step label="Final step" description="Get full access">
-          Step 3 content: Get full access
-        </Stepper.Step>
-        <Stepper.Completed>
-          Completed, click back button to get to previous step
-        </Stepper.Completed>
-      </Stepper>
-
-      <Group justify="center" mt="xl">
-        <Button variant="default" onClick={prevStep}>Back</Button>
-        <Button onClick={nextStep}>Next step</Button>
-      </Group>
-    </>
-  );
-}
-
-*/
+*/  

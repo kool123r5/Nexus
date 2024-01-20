@@ -78,6 +78,7 @@
     transition: all 0.3s;
     display: flex;
     align-items: center;
+    font-size: 90%;
 
 }
 
@@ -86,10 +87,12 @@
 }
 
 .Submit_Login_Button:hover {
-    background-color: var(--gray_B);
+    background-color: var(--orange);
+    border: 1px solid var(--orange);
 }
 
 .Submit_Login_Button:focus {
-    background-color: var(--gray_B);
+    background-color: var(--orange);
     outline: none;
+    border:1px solid var(--orange)
 }

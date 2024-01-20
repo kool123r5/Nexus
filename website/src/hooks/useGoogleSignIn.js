@@ -31,6 +31,7 @@ const useGoogleSignIn = () => {
             }
 
             navigateTo("/signup2");
+            location.reload();
         } catch (err) {
             setError(err.message);
         }

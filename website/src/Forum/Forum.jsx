@@ -2,6 +2,7 @@ import Navbar from "../Navbar/Navbar";
 import "./Forum.css";
 import { useCollection } from "../hooks/useCollection";
 import sortPosts from "../functions/sortPosts";
+import { Link } from "react-router-dom";
 
 export default function Forum() {
     const { documents, error } = useCollection("posts");
@@ -22,7 +23,7 @@ export default function Forum() {
                                     Created by: {doc.creatorName}
                                     <br /> Points: {doc.likes}
                                     <br /> Text: {doc.text}
-                                    <br /> Title: {doc.title}
+                                    <br /> <Link to={`/forum/${doc.id}`}> Title: {doc.title} </Link> 
                                 </p>
                             );
                         })}

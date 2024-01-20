@@ -14,10 +14,9 @@ export default function Activity() {
     const [disabled, setDisabled] = useState(false);
     const [formSubmitted, setFormSubmitted] = useState(false);
     const [activityRemoved, setActivityRemoved] = useState(false);
-    console.log(user);
     const [rating, setRating] = useState("");
     const [comment, setComment] = useState("");
-
+ 
     const { document, error } = useDocument("activities", id);
     if (error) console.log(error);
 
@@ -33,8 +32,9 @@ export default function Activity() {
 
     useEffect(() => {
         const fetchUpdatedData = async () => {
-            const updatedUserDoc = await projectFirestore.collection("users").doc(user.uid).get();
-            const updatedActivities = updatedUserDoc.data().activities || [];
+            if(userDoc.document!=null){
+            const updatedActivities = userDoc.document.activities || [];
+            console.log('hi')
 
             // Find the updated activity in the array
             const updatedActivity = updatedActivities.find(
@@ -46,12 +46,12 @@ export default function Activity() {
                 setRating(updatedActivity.rating);
                 setComment(updatedActivity.comment);
             }
-        };
+        }};
 
         if (formSubmitted) {
             fetchUpdatedData();
         }
-    }, [formSubmitted, id, user.uid]);
+    }, [formSubmitted,userDoc, id, user.uid]);
 
     useEffect(() => {
         if (userDoc.document != null) {
@@ -126,6 +126,9 @@ export default function Activity() {
             setActivityRemoved(true);
             setText("Add Activity");
             setDisabled(false);
+            setFormSubmitted(false)
+            setComment(null)
+            setRating(null)
         } catch (error) {
             console.error("Error removing activity:", error);
             // Handle error if needed

@@ -10,7 +10,7 @@ export const useSignup = () => {
 
     const signup = async (email, password, confirmPassword, displayName) => {
         setError(null);
-        const activities = null;
+        // const activities = null;
         setIsPending(true);
         try {
             // signup
@@ -50,6 +50,7 @@ export const useSignup = () => {
             }
 
             navigateTo("/signup2");
+            location.reload();
         } catch (err) {
             if (!isCancelled) {
                 setError(err.message);

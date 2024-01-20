@@ -168,8 +168,12 @@ export default function Activity() {
                             </h3>
                             <h2 className="title">
                                 {document.title}
-                                {document.category.map((c) => {
-                                    <Badge color="#ff6d00">{c}</Badge>;
+                                {document.category.map((c, index) => {
+                                    return (
+                                        <Badge className="badge" key={index} color="#ff6d00">
+                                            {c}
+                                        </Badge>
+                                    );
                                 })}
                             </h2>
                             <h4 className="text">{document.text}</h4>

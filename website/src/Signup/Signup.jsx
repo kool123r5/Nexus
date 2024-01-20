@@ -3,8 +3,7 @@ import "./Signup.css";
 import { useState } from "react";
 import { useSignup } from "../hooks/useSignup";
 import useGoogleSignIn from "../hooks/useGoogleSignIn";
-import { Stepper, Button, Group, MantineProvider } from "@mantine/core";
-import "@mantine/core/styles.css";
+import { Stepper, Button, Group } from "@mantine/core";
 
 export default function Signup() {
     const [email, setEmail] = useState("");
@@ -40,7 +39,7 @@ export default function Signup() {
 
     return (
         <>
-            <MantineProvider>
+            <>
                 <div id="Whole_Container">
                     <div id="Signup_Text_Container">
                         <h1 id="Signup_Text">Sign Up</h1>
@@ -114,7 +113,7 @@ export default function Signup() {
                         </div>
                     </div>
                 </div>
-            </MantineProvider>
+            </>
         </>
     );
 }

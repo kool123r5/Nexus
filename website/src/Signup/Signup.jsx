@@ -3,10 +3,8 @@ import "./Signup.css";
 import { useState } from "react";
 import { useSignup } from "../hooks/useSignup";
 import useGoogleSignIn from "../hooks/useGoogleSignIn";
-import { Stepper, Button, Group, MantineProvider } from '@mantine/core';
-import '@mantine/core/styles.css';
-
-
+import { Stepper, Button, Group, MantineProvider } from "@mantine/core";
+import "@mantine/core/styles.css";
 
 export default function Signup() {
     const [email, setEmail] = useState("");
@@ -42,66 +40,84 @@ export default function Signup() {
 
     return (
         <>
-        <MantineProvider>
-            <div id = "Whole_Container">
-              <div id = "Signup_Text_Container">
-                <h1 id = "Signup_Text">Sign Up</h1>
-              </div>
-                <div id = "Stepper_Container">
-                  <Stepper color = "#FF6D00" active = {active} size = "md" onStepClick={setActive} id = "SignUp_Stepper" allowNextStepsSelect={false}>
-                    <Stepper.Step label = "First Step" description = "Create an Account"/>
-                    <Stepper.Step label="Second step" description="Verify email"/>
-                    <Stepper.Step label="Final step" description="Get full access"/>
-                  </Stepper>
+            <MantineProvider>
+                <div id="Whole_Container">
+                    <div id="Signup_Text_Container">
+                        <h1 id="Signup_Text">Sign Up</h1>
+                    </div>
+                    <div id="Stepper_Container">
+                        <Stepper
+                            color="#FF6D00"
+                            active={active}
+                            size="md"
+                            onStepClick={setActive}
+                            id="SignUp_Stepper"
+                            allowNextStepsSelect={false}
+                        >
+                            <Stepper.Step label="First Step" description="Create an Account" />
+                            <Stepper.Step label="Second step" description="Verify email" />
+                            <Stepper.Step label="Final step" description="Get full access" />
+                        </Stepper>
+                    </div>
+                    <div id="Steps_Container">
+                        <div className="Individual_Step" id="Individual_Step_1">
+                            <form onSubmit={handleSubmit}>
+                                <div className="Form_Container">
+                                    <input
+                                        className="Signup_Input"
+                                        placeholder="Full Name"
+                                        type="text"
+                                        onChange={(e) => setName(e.target.value)}
+                                    ></input>
+
+                                    <input
+                                        className="Signup_Input"
+                                        placeholder="Email"
+                                        type="email"
+                                        onChange={(e) => setEmail(e.target.value)}
+                                    ></input>
+
+                                    <input
+                                        className="Signup_Input"
+                                        placeholder="Password"
+                                        type="password"
+                                        onChange={(e) => setPassword(e.target.value)}
+                                    ></input>
+                                    {password && password.length < 6 ? <p>Password must be at least 6 characters</p> : <></>}
+                                    {password && !hasNumber(password) ? <p>Password must have a digit</p> : <></>}
+
+                                    <input
+                                        className="Signup_Input"
+                                        placeholder="Confirm Password"
+                                        type="password"
+                                        onChange={(e) => setConfirmPassword(e.target.value)}
+                                    ></input>
+                                    {confirmPassword != password ? <p>Passwords do not match.</p> : <p></p>}
+                                    <br />
+
+                                    <br />
+                                    <br />
+                                </div>
+                            </form>
+                            <br />
+                            <button type="submit" onClick={nextStep}>
+                                Next
+                            </button>
+                        </div>
+
+                        <div className="Individual_Step" id="Individual_Step_2">
+                            XYZ
+                        </div>
+
+                        <div className="Individual_Step" id="Individual_Step_3">
+                            ABC
+                        </div>
+                    </div>
                 </div>
-                <div id = "Steps_Container">
-                  <div className = "Individual_Step" id = "Individual_Step_1">
-                    <form onSubmit={handleSubmit}>
-                      <div className="Form_Container"> 
-                        
-                        <input className = "Signup_Input" placeholder = "Full Name" type="text" onChange={(e) => setName(e.target.value)}></input>
-                        
-                        
-                        <input className = "Signup_Input" placeholder = "Email" type="email" onChange={(e) => setEmail(e.target.value)}></input>
-
-                        
-                        
-                        <input className = "Signup_Input" placeholder = "Password" type="password" onChange={(e) => setPassword(e.target.value)}></input>
-                        {password && password.length < 6 ? <p>Password must be at least 6 characters</p> : <></>}
-                        {password && !hasNumber(password) ? <p>Password must have a digit</p> : <></>}
-
-                        <input className = "Signup_Input" placeholder = "Confirm Password" type="password" onChange={(e) => setConfirmPassword(e.target.value)}></input>
-                        {confirmPassword != password ? <p>Passwords do not match.</p> : <p></p>}
-                        <br />
-                        
-                        <br />
-                        <br />
-
-                      </div>
-                    </form>
-                    <br />
-                    <button type="submit" onClick={nextStep}>Next</button>
-
-
-                  </div>
-                          
-                  <div className="Individual_Step" id = "Individual_Step_2">
-                    XYZ
-                  </div>
-
-                  <div className="Individual_Step" id = "Individual_Step_3">
-                    ABC
-                  </div>
-                
-                </div>  
-              </div>              
-          </MantineProvider>
+            </MantineProvider>
         </>
     );
 }
-
-
-
 
 /*                    {isPending && (
                         <button className="btn" disabled>
@@ -112,4 +128,4 @@ export default function Signup() {
                     <button onClick={handleGoogleSignIn}>Sign up with Google</button>
                     {error2 && <div className="error">{error2}</div>}
 
-*/  
+*/

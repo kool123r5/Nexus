@@ -1,0 +1,86 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+}
+
+.fullActivity {
+    flex: 1;
+    overflow-y: auto;
+    background-color: var(--gray_E);
+    height: calc(100vh - 4em);
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.imageDiv {
+    height: 100%;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.details {
+    height: 100%;
+    width: 50vw;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.text {
+    text-align: left;
+    font-weight: 400;
+}
+
+.byUsername {
+    text-align: left;
+    width: 100%;
+}
+
+.by {
+    font-weight: 400;
+}
+
+.username {
+    font-weight: 600;
+    color: var(--orange);
+}
+
+.title {
+    text-align: left;
+    width: 100%;
+    font-weight: 500;
+}
+
+.link {
+    color: var(--orange);
+    display: flex;
+}
+
+.location {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.websiteIcon {
+    margin-right: 1px;
+}
+
+.mapIcon {
+    margin-right: 5px;
+}
+
+.img {
+    height: 85%;
+    width: 80%;
+    border-radius: 10%;
+}

@@ -2,12 +2,12 @@ import "./Activity.css";
 import { useParams } from "react-router-dom";
 import { useDocument } from "../hooks/useDocument";
 import { useAuthContext } from "../hooks/useAuthContext";
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { projectFirestore, timestamp } from "../firebase/config";
 import Navbar from "../Navbar/Navbar";
-import { IconMapPinFilled, IconLink } from "@tabler/icons-react";
+import { IconMapPinFilled, IconLink, IconDeviceLaptop } from "@tabler/icons-react";
 import { Badge } from "@mantine/core";
+import { useViewportSize } from "@mantine/hooks";
 
 export default function Activity() {
     const { id } = useParams();
@@ -21,6 +21,8 @@ export default function Activity() {
 
     const { document, error } = useDocument("activities", id);
     if (error) console.log(error);
+
+    const { width, height } = useViewportSize();
 
     const newActivity = {
         activity: projectFirestore.doc(`activities/${id}`),
@@ -57,7 +59,6 @@ export default function Activity() {
         if (userDoc.document != null) {
             const activities = userDoc.document.activities || [];
             activities.forEach((activityDoc) => {
-                console.log(activityDoc);
                 if (
                     activityDoc["activity"]["_delegate"]["_key"]["path"]["segments"].at(-1) ==
                         newActivity["activity"]["_delegate"]["_key"]["path"]["segments"].at(-1) &&
@@ -82,7 +83,7 @@ export default function Activity() {
                 }
             });
         }
-    }, [userDoc]);
+    }, [userDoc, disabled]);
 
     const handleComplete = (e) => {
         e.preventDefault();
@@ -157,7 +158,7 @@ export default function Activity() {
             <>
                 {document && userDoc && user && (
                     <div className="fullActivity">
-                        {document.image && (
+                        {document.image && width > 950 && (
                             <div className="imageDiv">
                                 <img className="img" src={document.image} alt={document.title + "Image"} />
                             </div>
@@ -168,28 +169,35 @@ export default function Activity() {
                             </h3>
                             <h2 className="title">
                                 {document.title}
-                                {document.category.map((c, index) => {
-                                    return (
-                                        <Badge className="badge" key={index} color="#ff6d00">
-                                            {c}
-                                        </Badge>
-                                    );
-                                })}
+                                {document.category &&
+                                    document.category.map((c, index) => {
+                                        return (
+                                            <Badge className="badge" key={index} color="#ff6d00">
+                                                {c}
+                                            </Badge>
+                                        );
+                                    })}
                             </h2>
                             <h4 className="text">{document.text}</h4>
-                            <h4 className="website">
-                                <a className="link" target="_blank" rel="noreferrer" href={document.website}>
-                                    <IconLink className="websiteIcon" />
-                                    Website
-                                </a>
-                            </h4>
-                            {document.inPerson && (
-                                <div className="location">
-                                    <IconMapPinFilled className="mapIcon" />
-                                    <p>{document.location}</p>
-                                </div>
-                            )}
-
+                            <div className="otherDetails">
+                                <h4 className="website">
+                                    <a className="link" target="_blank" rel="noreferrer" href={document.website}>
+                                        <IconLink className="websiteIcon" />
+                                        Website
+                                    </a>
+                                </h4>
+                                {document.inPerson ? (
+                                    <div className="location">
+                                        <IconMapPinFilled className="mapIcon" />
+                                        <p>{document.location}</p>
+                                    </div>
+                                ) : (
+                                    <div className="online">
+                                        <IconDeviceLaptop className="laptopIcon" />
+                                        <p>Online</p>
+                                    </div>
+                                )}
+                            </div>
                             {document && !document.selective && (
                                 <>
                                     {!disabled && (

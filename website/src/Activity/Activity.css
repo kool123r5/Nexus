@@ -73,11 +73,22 @@ html {
     justify-content: center;
 }
 
+.online {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .websiteIcon {
     margin-right: 1px;
 }
 
 .mapIcon {
+    margin-right: 5px;
+}
+
+.laptopIcon {
     margin-right: 5px;
 }
 
@@ -93,4 +104,30 @@ html {
 
 .badge {
     margin: 3px;
+}
+
+@media (max-width: 950px) {
+    .details {
+        width: 75vw;
+    }
+
+    .otherDetails {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .website {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .online {
+        width: 50%;
+    }
+
+    .location {
+        width: 50%;
+    }
 }

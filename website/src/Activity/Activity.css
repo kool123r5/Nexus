@@ -37,11 +37,14 @@ html {
 .text {
     text-align: left;
     font-weight: 400;
+    width: 100%;
+    padding-right: 1.5vw;
 }
 
 .byUsername {
     text-align: left;
     width: 100%;
+    top: 3%;
 }
 
 .by {
@@ -59,33 +62,49 @@ html {
     font-weight: 500;
     display: flex;
     align-items: center;
+    padding-right: 1.5vw;
+}
+
+.otherDetails {
+    width: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .link {
     color: var(--orange);
     display: flex;
-}
-
-.location {
-    width: 100%;
-    display: flex;
-    align-items: center;
     justify-content: center;
 }
 
-.online {
-    width: 100%;
+.location {
+    width: 50%;
     display: flex;
     align-items: center;
+    justify-content: center;
+    font-weight: 400;
+}
+
+.online {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+}
+
+.website {
+    width: 50%;
+    display: flex;
     justify-content: center;
 }
 
 .websiteIcon {
-    margin-right: 1px;
+    margin-right: 3px;
 }
 
 .mapIcon {
-    margin-right: 5px;
+    margin-right: 3px;
 }
 
 .laptopIcon {
@@ -109,25 +128,5 @@ html {
 @media (max-width: 950px) {
     .details {
         width: 75vw;
-    }
-
-    .otherDetails {
-        width: 100%;
-        display: flex;
-        align-items: center;
-    }
-
-    .website {
-        width: 50%;
-        display: flex;
-        justify-content: center;
-    }
-
-    .online {
-        width: 50%;
-    }
-
-    .location {
-        width: 50%;
     }
 }

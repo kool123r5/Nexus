@@ -187,15 +187,15 @@ export default function Activity() {
                                     </a>
                                 </h4>
                                 {document.inPerson ? (
-                                    <div className="location">
+                                    <h4 className="location">
                                         <IconMapPinFilled className="mapIcon" />
                                         <p>{document.location}</p>
-                                    </div>
+                                    </h4>
                                 ) : (
-                                    <div className="online">
+                                    <h4 className="online">
                                         <IconDeviceLaptop className="laptopIcon" />
                                         <p>Online</p>
-                                    </div>
+                                    </h4>
                                 )}
                             </div>
                             {document && !document.selective && (

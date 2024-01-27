@@ -267,7 +267,7 @@ export default function Activity() {
                         />
                         
 
-                        <button type="submit">Complete Activity</button>
+                        <button  id="btn" type="submit">Complete Activity</button>
                       </form>
                     </div>
                   )}

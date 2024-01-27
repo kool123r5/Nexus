@@ -18,6 +18,10 @@ html {
 
 #btn {
     background-color:var(--orange);
+    margin-top: 1.5vw;
+    
+    
+
 }
 .imageDiv {
     height: 100%;

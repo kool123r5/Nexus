@@ -25,7 +25,7 @@
     flex-direction: row;
     align-items: center;
     max-width: 100vw;
-    width: 99.3vw;
+    width: 100vw;
 }
 
 .navbar button {
@@ -69,12 +69,12 @@
     margin-left: auto;
 }
 
-.profile{
-    color:white;
+.profile {
+    color: white;
 }
 
-.profile:hover{
-    color:white;
+.profile:hover {
+    color: white;
 }
 
 .signup {
@@ -193,9 +193,9 @@
     }
 }
 
-#sidebar_parent{
+#sidebar_parent {
     position: fixed;
-    top:0em;
-    min-height:100%;
+    top: 0em;
+    min-height: 100%;
     z-index: 11;
 }

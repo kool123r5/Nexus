@@ -27,13 +27,11 @@ export default function Profile() {
             });
         return () => {
             unsub_ref();
-
         };
     }, []);
     const [activities, setActivities] = useState(null);
     const [posts, setPosts] = useState(null);
     const [postsAdded, setPostsAdded] = useState(null);
-
 
     const [filter, setFilter] = useState("All");
 
@@ -66,7 +64,7 @@ export default function Profile() {
     };
 
     const fetchPostsAdded = async () => {
-        if (currentIdDocument && currentIdDocument.activities) {
+        if (currentIdDocument && currentIdDocument.activities && currentIdDocument.postsAdded) {
             // Extract activity references
 
             const postAddedDocsPromises = currentIdDocument.postsAdded.map(async (post) => {
@@ -93,9 +91,9 @@ export default function Profile() {
         if (currentIdDocument && currentIdDocument.posts) {
             const postDocsPromises = currentIdDocument.posts.map(async (post) => {
                 const postDocSnapShot = await post.get();
-                const postId=post.id;
+                const postId = post.id;
                 const postDocData = postDocSnapShot.data();
-                return { ...postDocData,postId };
+                return { ...postDocData, postId };
             });
 
             const postDocs = await Promise.all(postDocsPromises);
@@ -258,102 +256,102 @@ export default function Profile() {
     return (
         <>
             <Navbar />
-            {error && <p>{error}</p>}
-            <p>{id}</p>
+            <div className="profile">
+                {error && <p>{error}</p>}
+                <p>{id}</p>
 
-            {currentIdDocument && (
-                <div>
-                    Profile
-                    <ProjectFilter changeFilter={changeFilter} />
-                    <input type="text" value={searchQuery} onChange={changeSearchQuery} placeholder="Search by name" />
-                    <p>Welcome: {currentIdDocument.displayName}</p>
-                    <br></br>
-                    <p>Your activities</p>
-                    {currentActivities &&
-                        currentActivities.map((document) => {
-                            return (
-                                <>
-                                    <Link to={`/activity/${document.uid}`}>
-                                        <p key={Math.random()}>{document.title}</p>{" "}
-                                    </Link>
-                                </>
-                            );
-                        })}
-                                            {!currentActivities && <p>No activities yet</p>}
-
-                    <p>Your posts</p>
-                    {posts &&
-                        posts.map((document) => {
-                            return (
-                                <>
-                                   <Link to={`/forum/${document.postId}`}> Title: {document.title}</Link> 
-                                </>
-                            );
-                        })}
-                    <p>Student forum posts added: </p>
-                    {postsAdded &&
-                        postsAdded.map((document) => {
-                            return (
-                                <>
-                                   <p> Title: {document.title}</p> 
-                                </>
-                            );
-                        })}
-                    <br />
-                    <br />
-                    {yourProfile ? (
-                        <>
-                            <Link to={"/profile/settings"}>
-                                <button>Settings</button>
-                            </Link>
-                            <br />
-                            {anyRequestReceivedByCurrentUserOnTheirPage() ? (
-                                <>
-                                    {userDoc &&
-                                        userDoc.friendRequestsReceived.map((reqId) => {
-                                            return (
-                                                <>
-                                                    <br />
-                                                    <button onClick={() => acceptFriendRequest(reqId)}>
-                                                        Accept Request From {reqId}
-                                                    </button>
-                                                    <button onClick={() => rejectFriendRequest(reqId)}>
-                                                        Reject Request From {reqId}
-                                                    </button>
-                                                </>
-                                            );
-                                        })}
-                                </>
-                            ) : (
-                                <></>
-                            )}
-                        </>
-                    ) : (
-                        <>
-                            {areFriends() ? <button onClick={removeFriend}>Remove Friend</button> : <></>}
-                            {requstSentByCurrentUser() ? (
-                                <button onClick={unsendFriendRequest}>Unsend Friend Request</button>
-                            ) : (
-                                <></>
-                            )}
-                            {!areFriends() && !requestReceivedByCurrentUser() && !requstSentByCurrentUser() ? (
-                                <button onClick={sendFriendRequest}>Send Friend Request</button>
-                            ) : (
-                                <></>
-                            )}
-                        </>
-                    )}
-                    {yourProfile &&
-                        currentIdDocument.friendRequestsSent &&
-                        currentIdDocument.friendRequestsSent.map((friendReq) => {
-                            return <p key={Math.random()}>You have sent a friend request to {friendReq}</p>;
-                        })}
-                    {yourProfile &&
-                        currentIdDocument.friends &&
-                        currentIdDocument.friends.map((friend) => {
-                            return <p key={Math.random()}>You are friends with {friend}</p>;
-                        })}
-                    {/* 
+                {currentIdDocument && (
+                    <div>
+                        Profile
+                        <ProjectFilter changeFilter={changeFilter} />
+                        <input type="text" value={searchQuery} onChange={changeSearchQuery} placeholder="Search by name" />
+                        <p>Welcome: {currentIdDocument.displayName}</p>
+                        <br></br>
+                        <p>Your activities</p>
+                        {currentActivities &&
+                            currentActivities.map((document) => {
+                                return (
+                                    <>
+                                        <Link to={`/activity/${document.uid}`}>
+                                            <p key={Math.random()}>{document.title}</p>{" "}
+                                        </Link>
+                                    </>
+                                );
+                            })}
+                        {!currentActivities && <p>No activities yet</p>}
+                        <p>Your posts</p>
+                        {posts &&
+                            posts.map((document) => {
+                                return (
+                                    <>
+                                        <Link to={`/forum/${document.postId}`}> Title: {document.title}</Link>
+                                    </>
+                                );
+                            })}
+                        <p>Student forum posts added: </p>
+                        {postsAdded &&
+                            postsAdded.map((document) => {
+                                return (
+                                    <>
+                                        <p> Title: {document.title}</p>
+                                    </>
+                                );
+                            })}
+                        <br />
+                        <br />
+                        {yourProfile ? (
+                            <>
+                                <Link to={"/profile/settings"}>
+                                    <button>Settings</button>
+                                </Link>
+                                <br />
+                                {anyRequestReceivedByCurrentUserOnTheirPage() ? (
+                                    <>
+                                        {userDoc &&
+                                            userDoc.friendRequestsReceived.map((reqId) => {
+                                                return (
+                                                    <>
+                                                        <br />
+                                                        <button onClick={() => acceptFriendRequest(reqId)}>
+                                                            Accept Request From {reqId}
+                                                        </button>
+                                                        <button onClick={() => rejectFriendRequest(reqId)}>
+                                                            Reject Request From {reqId}
+                                                        </button>
+                                                    </>
+                                                );
+                                            })}
+                                    </>
+                                ) : (
+                                    <></>
+                                )}
+                            </>
+                        ) : (
+                            <>
+                                {areFriends() ? <button onClick={removeFriend}>Remove Friend</button> : <></>}
+                                {requstSentByCurrentUser() ? (
+                                    <button onClick={unsendFriendRequest}>Unsend Friend Request</button>
+                                ) : (
+                                    <></>
+                                )}
+                                {!areFriends() && !requestReceivedByCurrentUser() && !requstSentByCurrentUser() ? (
+                                    <button onClick={sendFriendRequest}>Send Friend Request</button>
+                                ) : (
+                                    <></>
+                                )}
+                            </>
+                        )}
+                        {yourProfile &&
+                            currentIdDocument.friendRequestsSent &&
+                            currentIdDocument.friendRequestsSent.map((friendReq) => {
+                                return <p key={Math.random()}>You have sent a friend request to {friendReq}</p>;
+                            })}
+                        {yourProfile &&
+                            currentIdDocument.friends &&
+                            currentIdDocument.friends.map((friend) => {
+                                return <p key={Math.random()}>You are friends with {friend}</p>;
+                            })}
+                        {/* 
                     <pagination className="mt-3">
             {Array.from({ length: totalPages }).map((_, index) => (
               <item
@@ -365,8 +363,9 @@ export default function Profile() {
               </item>
             ))}
           </pagination>  */}
-                </div>
-            )}
+                    </div>
+                )}
+            </div>
         </>
     );
 }

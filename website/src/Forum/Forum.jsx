@@ -13,7 +13,7 @@ export default function Forum() {
     return (
         <>
             <Navbar />
-            <div>
+            <div className="forum">
                 <>
                     {sortedDocuments &&
                         sortedDocuments.map((doc) => {
@@ -23,7 +23,7 @@ export default function Forum() {
                                     Created by: {doc.creatorName}
                                     <br /> Points: {doc.likes}
                                     <br /> Text: {doc.text}
-                                    <br /> <Link to={`/forum/${doc.id}`}> Title: {doc.title} </Link> 
+                                    <br /> <Link to={`/forum/${doc.id}`}> Title: {doc.title} </Link>
                                 </p>
                             );
                         })}

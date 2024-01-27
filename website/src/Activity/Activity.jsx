@@ -189,12 +189,12 @@ export default function Activity() {
                                 {document.inPerson ? (
                                     <h4 className="location">
                                         <IconMapPinFilled className="mapIcon" />
-                                        <p>{document.location}</p>
+                                        <p className="onlineOrLocInfo">{document.location}</p>
                                     </h4>
                                 ) : (
                                     <h4 className="online">
                                         <IconDeviceLaptop className="laptopIcon" />
-                                        <p>Online</p>
+                                        <p className="onlineOrLocInfo">Online</p>
                                     </h4>
                                 )}
                             </div>

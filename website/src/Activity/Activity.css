@@ -34,6 +34,10 @@ html {
     flex-direction: column;
 }
 
+.onlineOrLocInfo {
+    margin: 0;
+}
+
 .text {
     text-align: left;
     font-weight: 400;
@@ -44,7 +48,6 @@ html {
 .byUsername {
     text-align: left;
     width: 100%;
-    top: 3%;
 }
 
 .by {
@@ -127,6 +130,48 @@ html {
 
 @media (max-width: 950px) {
     .details {
-        width: 75vw;
+        width: 90vw;
+    }
+
+    .text {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .title {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .byUsername {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .website {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .online {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .location {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 700px) {
+    .byUsername {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .text {
+        font-size: 13px;
     }
 }

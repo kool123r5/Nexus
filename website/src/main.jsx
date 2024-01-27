@@ -10,7 +10,7 @@ import "@mantine/core/styles.css";
 ReactDOM.createRoot(document.getElementById("root")).render(
     <BrowserRouter>
         <AuthContextProvider>
-            <MantineProvider defaultColorScheme="auto">
+            <MantineProvider defaultColorScheme="dark">
                 <App />
             </MantineProvider>
         </AuthContextProvider>

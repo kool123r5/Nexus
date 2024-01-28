@@ -6,9 +6,12 @@ import "./ProfileSettings.css";
 import firebase from "firebase/app";
 import getDefaultPfp from "../functions/getDefaultPfp";
 import resizeImg from "../functions/resizeImg";
+import { useContext } from "react";
+import { useUserDocContext } from "../hooks/useUserDocContext";
 
 export default function ProfileSettings() {
-    const { document, error } = useDocument("users", projectAuth.currentUser.uid);
+    // const { document, error } = useDocument("users", projectAuth.currentUser.uid);
+    const { userDoc: document, error } = useUserDocContext();
 
     const [newEmail, setNewEmail] = useState(null);
     const [password, setPassword] = useState(null);

@@ -5,6 +5,7 @@ import Navbar from "../Navbar/Navbar";
 import { useNavigate } from "react-router-dom";
 import { useDocument } from "../hooks/useDocument";
 import firebase from "firebase/app";
+import { useUserDocContext } from "../hooks/useUserDocContext";
 
 const Create = () => {
     const { user } = useAuthContext();
@@ -13,8 +14,11 @@ const Create = () => {
     const [type, setType] = useState("");
     const [location, setLocation] = useState("");
     const navigateTo = useNavigate();
-    const { document, isPending, error } = useDocument("users", user.uid);
-
+    // const { document, isPending, error } = useDocument("users", user.uid);
+    const { userDoc: document, error } = useUserDocContext();
+    if (error) {
+        console.log(error);
+    }
     const handleCreatePost = async () => {
         try {
             const currentDate = firebase.firestore.FieldValue.serverTimestamp();
@@ -28,14 +32,14 @@ const Create = () => {
                 text,
                 type,
                 likes,
-                location,            
+                location,
                 creatorName: user.displayName,
                 creator: userId,
                 createdAt: currentDate,
                 updatedAt: currentDate,
             });
 
-            if (document.posts) {
+            if (document && document.posts) {
                 await projectFirestore
                     .collection("users")
                     .doc(user.uid)
@@ -62,7 +66,7 @@ const Create = () => {
 
     return (
         <>
-            <Navbar></Navbar>
+            <Navbar />
             <div>
                 <h1>Create Post</h1>
                 <form>

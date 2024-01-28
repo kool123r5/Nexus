@@ -7,28 +7,12 @@ import { useEffect } from "react";
 import ProjectFilter from "../Filter/ProjectFilter";
 import { projectAuth, projectFirestore } from "../firebase/config";
 import firebase from "firebase/app";
+import { useUserDocContext } from "../hooks/useUserDocContext";
 
 export default function Profile() {
     const { id } = useParams();
     const { document: currentIdDocument, error } = useDocument("users", id);
-    const [userDoc, setUserDoc] = useState(null);
-    useEffect(() => {
-        const unsub_ref = projectFirestore
-            .collection("users")
-            .doc(projectAuth.currentUser.uid)
-            .onSnapshot((snapshot) => {
-                if (snapshot.data()) {
-                    setUserDoc(
-                        snapshot.data({
-                            serverTimestamps: "estimate",
-                        })
-                    );
-                }
-            });
-        return () => {
-            unsub_ref();
-        };
-    }, []);
+    const { userDoc } = useUserDocContext();
     const [activities, setActivities] = useState(null);
     const [posts, setPosts] = useState(null);
     const [postsAdded, setPostsAdded] = useState(null);

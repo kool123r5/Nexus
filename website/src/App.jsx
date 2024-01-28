@@ -6,6 +6,7 @@ import School from "./School/School";
 import Profile from "./Profile/Profile";
 import Login from "./Login/Login";
 import { useAuthContext } from "./hooks/useAuthContext";
+import { useUserDocContext } from "./hooks/useUserDocContext";
 import Navbar from "./Navbar/Navbar";
 import Signup from "./Signup/Signup";
 import Activity from "./Activity/Activity";
@@ -17,6 +18,7 @@ import PostDetail from "./Forum/PostDetail";
 
 export default function App() {
     const { user, authIsReady } = useAuthContext();
+    // const { userDoc, error } = useUserDocContext();
 
     return (
         <>

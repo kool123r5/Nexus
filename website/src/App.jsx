@@ -18,8 +18,12 @@ import PostDetail from "./Forum/PostDetail";
 
 export default function App() {
     const { user, authIsReady } = useAuthContext();
-    // const { userDoc, error } = useUserDocContext();
 
+    const { userDoc, error } = useUserDocContext();
+    if(userDoc){
+        console.log(userDoc)
+    }
+  
     return (
         <>
             <Routes>

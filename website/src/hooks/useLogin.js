@@ -45,7 +45,8 @@ export const useLogin = () => {
             }
         } catch (error) {
             if (!isCancelled) {
-                setError(JSON.parse(error.message)["error"]["message"]);
+                console.log(error.message)
+                setError(error.message)
                 logout();
                 setIsPending(false);
             }
@@ -92,9 +93,9 @@ export const useLogin = () => {
         }
     };
 
-    // useEffect(() => {
-    //     return () => setIsCancelled(true);
-    // }, []);
+    useEffect(() => {
+        return () => setIsCancelled(true);
+    }, []);
 
     return { login, loginWithGoogle, isPending, error };
 };

@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function Login() {
     const [email, setEmail] = useState("");
-    const [password, setPassword] = useState(null);
+    const [password, setPassword] = useState("");
     const { login, error, isPending, loginWithGoogle } = useLogin();
     const navigate = useNavigate();
 

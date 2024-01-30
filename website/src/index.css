@@ -52,6 +52,10 @@ body {
   background-color: var(--gray_E);
 }
 
+div {
+  background-color: var(--gray_E);
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;

@@ -3,7 +3,8 @@ import { useAuthContext } from "../hooks/useAuthContext";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import { useViewportSize } from "@mantine/hooks";
+import { useViewportSize, useDisclosure } from "@mantine/hooks";
+import { Burger } from "@mantine/core";
 
 export default function Navbar() {
     let authContext = useAuthContext();
@@ -30,8 +31,7 @@ export default function Navbar() {
     };
 
     const { height, width } = useViewportSize();
-    console.log("width is" + width);
-    console.log("height is" + height);
+    const [opened, { toggle }] = useDisclosure();
 
     return (
         <>
@@ -67,38 +67,39 @@ export default function Navbar() {
                     )}
                 </div>
             )}
-            {width <= 600 && (
+            {width <= 600 && width != 0 && (
                 <div id="sidebar_parent">
-                    <label className="hamburger-menu">
-                        <input type="checkbox" />
-                    </label>
-                    <aside className="sidebar">
-                        <nav>
-                            <button className="home_burger" onClick={handleHomeClick}>
-                                Home
-                            </button>
-                            <button className="studentForum_burger" onClick={handleForumClick}>
-                                Student Forum
-                            </button>
-                            <button className="schoolHub_burger" onClick={handleSchoolClick}>
-                                School Hub
-                            </button>
-                            {user != null && authIsReady == true ? (
-                                <button className="profileButton" onClick={handleProfileClick}>
-                                    Profile
+                    <Burger id="burger" size="xl" opened={opened} onClick={toggle} aria-label="Toggle navigation" />
+                    {opened && (
+                        <aside className="sidebar">
+                            <nav>
+                                <button className="home_burger" onClick={handleHomeClick}>
+                                    Home
                                 </button>
-                            ) : (
-                                <>
-                                    <button className="signup_burger" onClick={handleSignUpClick}>
-                                        Sign Up
+                                <button className="studentForum_burger" onClick={handleForumClick}>
+                                    Student Forum
+                                </button>
+                                <button className="schoolHub_burger" onClick={handleSchoolClick}>
+                                    School Hub
+                                </button>
+                                {user != null && authIsReady && (
+                                    <button className="profileButton" onClick={handleProfileClick}>
+                                        Profile
                                     </button>
-                                    <button className="login_burger" onClick={handleLoginClick}>
-                                        Login
-                                    </button>
-                                </>
-                            )}
-                        </nav>
-                    </aside>
+                                )}
+                                {user == null && authIsReady && (
+                                    <>
+                                        <button className="signup_burger" onClick={handleSignUpClick}>
+                                            Sign Up
+                                        </button>
+                                        <button className="login_burger" onClick={handleLoginClick}>
+                                            Login
+                                        </button>
+                                    </>
+                                )}
+                            </nav>
+                        </aside>
+                    )}
                 </div>
             )}
         </>

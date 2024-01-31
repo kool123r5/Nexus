@@ -75,13 +75,11 @@ export default function Navbar() {
                             School Hub
                         </button>
                         {user != null && authIsReady == true ? (
-                            <div className="right-buttons">
+
                                 <button className="profileButton" onClick={handleProfileClick}>
-                                    <Link className="profile" exact="true" to={`profile/${user.uid}`}>
                                         Profile
-                                    </Link>
                                 </button>
-                            </div>
+
                         ) : (
                             <>
                                 <button className="signup_burger" onClick={handleSignUpClick}>

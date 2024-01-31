@@ -50,6 +50,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   background-color: var(--gray_E);
+  width: 100vw;
 }
 
 div {

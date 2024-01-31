@@ -56,7 +56,6 @@ export default function Login() {
                             <button className = "Submit_Login_Button" onClick={handleForgotPwClick}>Forgot password?</button>
                         </div>
 
-                        {isPending && <p>Loading...</p>}
 
                     </form>
                 </div>

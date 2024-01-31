@@ -1,14 +1,15 @@
 #Whole_Container{
-    width:100vw;
+    width:99vw;
     display: flex;
     flex-direction: column;
+    height:100vh;
 }
 
 #Signup_Text_Container{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 99vw;
+    width: 100vw;
 }
 
 #Signup_Text{
@@ -39,25 +40,23 @@
 
 
 .Individual_Step{
-    margin-right:5%;
-    border: 1px solid var(--gray_E);
-    border-right: 1px solid var(--gray_B);
+    border: 0px solid var(--gray_E);
     align-items: center;
     justify-content: center;
+    transition: all 1s;
 }
 
 
 #Individual_Step_1{
-    width:80%;
+    width:100%;
 
 }
 #Individual_Step_2{
-    width:5%;
-
+    width:100%;
 }
 
 #Individual_Step_3{
-    width: 5%;
+    width: 100%;
     margin-right:0%;
     border:1px solid var(--gray_E)
 }
@@ -100,6 +99,75 @@
 }
 
 
+
+
+.sign_up_next_button_container {
+    position: absolute;
+    right:3%;
+    top:50%;
+    border-radius: 50%;
+}
+
+.sign_up_prev_button_container {
+    position:absolute;
+    left: 3%;
+    top: 50%;
+    border-radius: 50%;
+}
+
+.sign_up_next_button {
+    background-color: var(--orange);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 6vw; 
+    width: 6vw; 
+    border-radius: 50%;
+    opacity: 1;
+    text-align: center;
+    transition: 0.5s all;
+    cursor: pointer; 
+}
+
+
+.sign_up_prev_button {
+    background-color: var(--orange);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 6vw; 
+    width: 6vw; 
+    border-radius: 50%;
+    opacity: 1;
+    text-align: center;
+    cursor: pointer; 
+    transition: 0.5s all;
+}
+
+
+.sign_up_next_button:hover{
+    background-color: var(--white);
+    color:var(--orange);
+    opacity: 1;
+}
+
+.sign_up_prev_button:hover{
+    background-color: var(--white);
+    color:var(--orange);
+    opacity: 1;
+}
+
+.sign_up_next_button:focus{
+    outline: none;
+}
+
+.sign_up_next_button:focus{
+    outline: none;
+}
+
 .mantine-Stepper-root :focus{
     outline:none;
 }
+

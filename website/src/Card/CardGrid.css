@@ -28,9 +28,14 @@
     position: relative;
     cursor: pointer;
     flex: 0 0 auto;
-  }
+    overflow: hidden;
+    box-sizing: content-box;
+    padding-right:2px;
+    padding-left: 2px;
+    border: 1px 1px 1px 1px solid var(--white);
+}
 
-.card:hover{
+/* .card:hover{
     transform: scaleX(1.2) scaleY(1.25);
     transition-delay: 1s;
     text-align: center;
@@ -42,7 +47,7 @@
 .card:hover .card_title_text{
     transform:scaleX(0.833) scaleY(0.8);
     transition-delay: 1s;
-}
+} */
 
 
 .card_body_text{

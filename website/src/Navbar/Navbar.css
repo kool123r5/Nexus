@@ -7,7 +7,6 @@
     --hamburger-margin: 8px;
     --animation-timing: 200ms ease-in-out;
     --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
-
     --orange: #ff6d00;
     --gray_A: #1c1c21;
     --gray_B: #343434;
@@ -149,11 +148,13 @@
     top: 0;
     padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1rem);
     color: var(--black);
-    max-width: 10rem;
+    max-width: 20rem;
+    width: 15rem;
     min-height: 100%;
     z-index: 11;
     justify-content: space-between;
 }
+
 .sidebar nav {
     display: flex;
     flex-direction: column;
@@ -164,7 +165,7 @@
     color: var(--white);
     position: relative;
     height: 4em;
-    width: 10rem;
+    width: 100%;
     border-radius: 0;
     border: 0px;
     background-color: var(--gray_E);
@@ -179,18 +180,13 @@
     translate: 0;
 }
 
-@media (max-width: 600px) {
-    .navbar button {
-        display: none;
-    }
-    .hamburger-menu {
-        display: flex;
-        z-index: 12;
-    }
-    .sidebar {
-        display: flex;
-        flex-direction: column;
-    }
+.hamburger-menu {
+    display: flex;
+    z-index: 12;
+}
+.sidebar {
+    display: flex;
+    flex-direction: column;
 }
 
 #sidebar_parent {

@@ -4,8 +4,29 @@ html {
     margin: 0;
 }
 
-.home {
+#root {
+    height: 100vh;
+    width: 100vw;
+}
+
+.homeDiv {
     height: calc(100vh - 4em);
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loadingDiv {
+    height: calc(100vh - 4em);
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .section {

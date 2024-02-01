@@ -8,7 +8,7 @@ export default function School() {
     return (
         <>
             <Navbar />
-            <div>
+            <div className="schoolDiv">
                 School
                 <button onClick={logout}>Logout</button>
             </div>

@@ -7,9 +7,8 @@ import { useViewportSize, useDisclosure } from "@mantine/hooks";
 import { Burger } from "@mantine/core";
 
 export default function Navbar() {
-    let authContext = useAuthContext();
-    let user = authContext.user;
-    let authIsReady = authContext.authIsReady;
+    let { user, authIsReady } = useAuthContext();
+
     const navigate = useNavigate();
     const handleSignUpClick = () => {
         navigate("/signup");

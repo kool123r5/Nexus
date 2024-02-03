@@ -1,18 +1,13 @@
-:root{
-    
-    --orange: #FF6D00;
-    --gray_A: #1C1C21;
+:root {
+    --orange: #ff6d00;
+    --gray_A: #1c1c21;
     --gray_B: #343434;
     --gray_C: #464646;
-    
 }
-
-
-
 
 .card {
     background-color: white;
-    width: 250px; 
+    width: 250px;
     height: 150px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -30,7 +25,7 @@
     flex: 0 0 auto;
     overflow: hidden;
     box-sizing: content-box;
-    padding-right:2px;
+    padding-right: 2px;
     padding-left: 2px;
     border: 1px 1px 1px 1px solid var(--white);
 }
@@ -49,8 +44,7 @@
     transition-delay: 1s;
 } */
 
-
-.card_body_text{
+.card_body_text {
     color: black;
     -webkit-transition: all 1s;
     -moz-transition: all 1s;
@@ -58,16 +52,10 @@
     transition: all 1s;
 }
 
-
-
-
-.card_title_text{
-    color:black;
+.card_title_text {
+    color: black;
     -webkit-transition: all 1s;
     -moz-transition: all 1s;
     -ms-transition: all 1s;
     transition: all 1s;
 }
-
-
-

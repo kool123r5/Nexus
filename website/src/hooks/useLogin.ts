@@ -45,8 +45,8 @@ export const useLogin = () => {
             }
         } catch (error) {
             if (!isCancelled) {
-                console.log(error.message)
-                setError(error.message)
+                console.log(error.message);
+                setError(error.message);
                 logout();
                 setIsPending(false);
             }

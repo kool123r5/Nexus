@@ -1,58 +1,53 @@
-.carousel_container{
+.carousel_container {
     width: 99.3vw;
-    overflow:hidden;
+    overflow: hidden;
     white-space: nowrap;
     position: relative;
 }
 
-
-.carousel{
-    display:flex;
+.carousel {
+    display: flex;
     overflow: hidden;
     width: 100vw;
 }
 
-
-
-
-.carousel_title{
+.carousel_title {
     margin-left: 13px;
-    margin-top:0.5em; 
+    margin-top: 0.5em;
 }
 
-
-.previous_button{
+.previous_button {
     position: absolute;
-    top:0%;
-    left:0%;
+    top: 0%;
+    left: 0%;
     z-index: 10;
-    height:100%;
+    height: 100%;
     opacity: 20%;
     border: 1px 1px 1px 1px black;
     transition: all 0.5s;
 }
-.previous_button:hover{
+.previous_button:hover {
     opacity: 70%;
 }
 
-.previous_button:focus{
+.previous_button:focus {
     outline: none;
 }
 
-.next_button{
+.next_button {
     position: absolute;
-    top:0%;
-    right:0%;
+    top: 0%;
+    right: 0%;
     z-index: 10;
-    height:100%;
+    height: 100%;
     opacity: 20%;
     border: 1px 1px 1px 1px black;
     transition: all 0.5s;
 }
-.next_button:hover{
+.next_button:hover {
     opacity: 70%;
 }
 
-.next_button:focus{
+.next_button:focus {
     outline: none;
 }

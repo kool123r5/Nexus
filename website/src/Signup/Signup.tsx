@@ -7,7 +7,6 @@ import useGoogleSignIn from "../hooks/useGoogleSignIn";
 import { Stepper, Button, Group } from "@mantine/core";
 import { useSignupInfo } from "../hooks/useSignupInfo";
 
-
 export default function Signup() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState(null);
@@ -27,21 +26,18 @@ export default function Signup() {
 
     const nextStep = () => {
         setActive((current) => {
-          return current < 3 ? current + 1 : current;
+            return current < 3 ? current + 1 : current;
         });
-      };
-      
+    };
 
-      const prevStep = () => {
-        setActive((current) => {    
-          return current < 3 ? current - 1 : current;
+    const prevStep = () => {
+        setActive((current) => {
+            return current < 3 ? current - 1 : current;
         });
-      };
+    };
 
     const { signup, isPending, error } = useSignup();
     const { signInWithGoogle, error2 } = useGoogleSignIn();
-
-    
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -75,10 +71,6 @@ export default function Signup() {
         setInterests(updatedInterests);
     };
 
-
-    
-    
-
     return (
         <>
             <>
@@ -103,7 +95,7 @@ export default function Signup() {
 
                     {active === 0 && (
                         <div id="Steps_Container">
-                            <div ref = {element1Ref} className="Individual_Step" id="Individual_Step_1">
+                            <div ref={element1Ref} className="Individual_Step" id="Individual_Step_1">
                                 <form onSubmit={handleSubmit}>
                                     <div className="Form_Container">
                                         <input
@@ -126,7 +118,11 @@ export default function Signup() {
                                             type="password"
                                             onChange={(e) => setPassword(e.target.value)}
                                         ></input>
-                                        {password && password.length < 6 ? <p>Password must be at least 6 characters</p> : <></>}
+                                        {password && password.length < 6 ? (
+                                            <p>Password must be at least 6 characters</p>
+                                        ) : (
+                                            <></>
+                                        )}
                                         {password && !hasNumber(password) ? <p>Password must have a digit</p> : <></>}
 
                                         <input
@@ -143,15 +139,14 @@ export default function Signup() {
                                     </div>
                                 </form>
 
-
                                 <br />
                             </div>
                         </div>
-                        )}
+                    )}
 
                     {active === 1 && (
-                        <div id = "Steps_Container">
-                            <div ref = {element2Ref} className="Individual_Step" id="Individual_Step_2">
+                        <div id="Steps_Container">
+                            <div ref={element2Ref} className="Individual_Step" id="Individual_Step_2">
                                 <form onSubmit={handleSubmit}>
                                     <label>
                                         Age: <input type="number" onChange={(e) => setAge(e.target.value)} />
@@ -182,7 +177,8 @@ export default function Signup() {
                                         </div>
                                     </label>
                                     <label>
-                                        Profile Picture: <input type="file" onChange={(e) => setProfilePicture(e.target.files[0])} />
+                                        Profile Picture:{" "}
+                                        <input type="file" onChange={(e) => setProfilePicture(e.target.files[0])} />
                                     </label>
                                     <button type="submit">Submit</button>
 
@@ -198,41 +194,55 @@ export default function Signup() {
                     )}
 
                     {active === 2 && (
-                        <div id = "Steps_Container">
-                            <div ref = {element3Ref} className="Individual_Step" id="Individual_Step_3">
+                        <div id="Steps_Container">
+                            <div ref={element3Ref} className="Individual_Step" id="Individual_Step_3">
                                 ABC
                             </div>
                         </div>
                     )}
 
-                        <div className = "sign_up_button_container">
-
-                            {(active === 0 || active === 1) && (
-                                <div className = "sign_up_next_button_container">
-                                    <button type="submit" onClick={nextStep} className = "sign_up_next_button">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width= "1.5em" height="1.5em" fill="currentColor" className="bi bi-arrow-right" viewBox="0 0 16 16">
-                                        <path fillRule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                    <div className="sign_up_button_container">
+                        {(active === 0 || active === 1) && (
+                            <div className="sign_up_next_button_container">
+                                <button type="submit" onClick={nextStep} className="sign_up_next_button">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="1.5em"
+                                        height="1.5em"
+                                        fill="currentColor"
+                                        className="bi bi-arrow-right"
+                                        viewBox="0 0 16 16"
+                                    >
+                                        <path
+                                            fillRule="evenodd"
+                                            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                                        />
                                     </svg>
-                                    </button>
-                                </div>
-                            )}
+                                </button>
+                            </div>
+                        )}
 
-                            {(active === 1 || active === 2) && (
-                                <div className = "sign_up_prev_button_container">
-                                    <button type="submit" onClick={prevStep} className = "sign_up_prev_button">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" fill="currentColor" className="bi bi-arrow-left" viewBox="0 0 16 16">
-                                        <path fillRule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+                        {(active === 1 || active === 2) && (
+                            <div className="sign_up_prev_button_container">
+                                <button type="submit" onClick={prevStep} className="sign_up_prev_button">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="1.5em"
+                                        height="1.5em"
+                                        fill="currentColor"
+                                        className="bi bi-arrow-left"
+                                        viewBox="0 0 16 16"
+                                    >
+                                        <path
+                                            fillRule="evenodd"
+                                            d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"
+                                        />
                                     </svg>
-                                    </button>
-                                </div>
-                            )}
-
-
-                        </div>
-
-    
-
+                                </button>
+                            </div>
+                        )}
                     </div>
+                </div>
             </>
         </>
     );

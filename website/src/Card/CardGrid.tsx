@@ -38,11 +38,11 @@ export default function Card({ title, text, author, id }) {
     }
 
     return (
-            <div className="card" onClick={showFullActivity}>
-                <h4  className = "card_title_text">{title}</h4>
-                <p className = "card_body_text">{wrapped_text}</p>
-                <p className = "card_body_text">By: {author}</p>
-            </div>
+        <div className="card" onClick={showFullActivity}>
+            <h4 className="card_title_text">{title}</h4>
+            <p className="card_body_text">{wrapped_text}</p>
+            <p className="card_body_text">By: {author}</p>
+        </div>
     );
 }
 

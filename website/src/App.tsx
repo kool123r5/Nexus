@@ -1,5 +1,4 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import Home from "./Home/Home";
 import Forum from "./Forum/Forum";
 import School from "./School/School";
@@ -7,7 +6,6 @@ import Profile from "./Profile/Profile";
 import Login from "./Login/Login";
 import { useAuthContext } from "./hooks/useAuthContext";
 import { useUserDocContext } from "./hooks/useUserDocContext";
-import Navbar from "./Navbar/Navbar";
 import Signup from "./Signup/Signup";
 import Activity from "./Activity/Activity";
 import PasswordReset from "./PasswordReset/PasswordReset";
@@ -20,10 +18,11 @@ export default function App() {
     const { user, authIsReady } = useAuthContext();
 
     const { userDoc, error } = useUserDocContext();
-    if(userDoc){
-        console.log(userDoc)
+
+    if (userDoc) {
+        console.log(userDoc);
     }
-  
+
     return (
         <>
             <Routes>

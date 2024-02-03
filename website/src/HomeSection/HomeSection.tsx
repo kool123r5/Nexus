@@ -72,7 +72,7 @@ export default function HomeSection({ uniqueTypeObj, sorted_documents }) {
                 </button>
 
                 <div className="carousel" ref={carouselRef}>
-                {postObjectArray.map((postObject) => {
+                    {postObjectArray.map((postObject) => {
                         return (
                             <Card
                                 className="card"
@@ -96,7 +96,7 @@ export default function HomeSection({ uniqueTypeObj, sorted_documents }) {
                             />
                         );
                     })}
-                {postObjectArray.map((postObject) => {
+                    {postObjectArray.map((postObject) => {
                         return (
                             <Card
                                 className="card"
@@ -108,7 +108,7 @@ export default function HomeSection({ uniqueTypeObj, sorted_documents }) {
                             />
                         );
                     })}
-                {postObjectArray.map((postObject) => {
+                    {postObjectArray.map((postObject) => {
                         return (
                             <Card
                                 className="card"
@@ -120,7 +120,7 @@ export default function HomeSection({ uniqueTypeObj, sorted_documents }) {
                             />
                         );
                     })}
-                {postObjectArray.map((postObject) => {
+                    {postObjectArray.map((postObject) => {
                         return (
                             <Card
                                 className="card"
@@ -132,7 +132,7 @@ export default function HomeSection({ uniqueTypeObj, sorted_documents }) {
                             />
                         );
                     })}
-                {postObjectArray.map((postObject) => {
+                    {postObjectArray.map((postObject) => {
                         return (
                             <Card
                                 className="card"
@@ -144,7 +144,7 @@ export default function HomeSection({ uniqueTypeObj, sorted_documents }) {
                             />
                         );
                     })}
-                {postObjectArray.map((postObject) => {
+                    {postObjectArray.map((postObject) => {
                         return (
                             <Card
                                 className="card"

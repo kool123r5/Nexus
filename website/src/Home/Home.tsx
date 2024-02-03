@@ -11,8 +11,8 @@ import { Loader } from "@mantine/core";
 export default function Home() {
     const [sorted_documents, setSortedDocuments] = useState(null);
     // when we make the model, change the query to reflect the type the user would actually want to see
-    const { documents, error } = useCollection("activities");
-
+    const { documents, error } = useCollection("activities", ["title", "==", "RSI Research"], ["title"]);
+    console.log(documents);
     useEffect(() => {
         if (error) {
             console.log("ERROR FETCHING DOCUMENTS");

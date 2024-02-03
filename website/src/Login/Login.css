@@ -18,7 +18,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 70vh;
-    height:80vh;
+    height: 80vh;
 }
 
 #Login_Container {
@@ -35,7 +35,7 @@
 
 .Login_Input {
     padding: 0.2vh;
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     border: 2px solid var(--gray_E);
     border-bottom: 2px solid white;
     margin: 0.5vh;
@@ -48,8 +48,8 @@
     margin-bottom: 3vh;
     font-weight: 540;
     width: 50vh;
-    height:5vh;
-    color:white;
+    height: 5vh;
+    color: white;
 }
 
 .Login_Input:hover {
@@ -66,24 +66,23 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin-top:10vh;
+    margin-top: 10vh;
 }
 
 .Submit_Login_Button {
     margin: 0.5vh;
     height: 8vh;
-    max-width: 100%; 
+    max-width: 100%;
     border: 1px solid var(--gray_B);
     background-color: var(--gray_E);
     transition: all 0.3s;
     display: flex;
     align-items: center;
     font-size: 90%;
-
 }
 
 .Submit_Login_Button svg {
-    margin-right: 0.7em; 
+    margin-right: 0.7em;
 }
 
 .Submit_Login_Button:hover {
@@ -94,5 +93,5 @@
 .Submit_Login_Button:focus {
     background-color: var(--orange);
     outline: none;
-    border:1px solid var(--orange)
+    border: 1px solid var(--orange);
 }

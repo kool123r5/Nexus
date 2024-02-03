@@ -11,6 +11,8 @@
   --gray_D: #1e1e1e;
   --gray_E: #161616;
 
+  --scrollbar_width: 0.7vw;
+
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: var(--gray_A);
@@ -19,6 +21,7 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 
 }
 
@@ -49,13 +52,10 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background-color: var(--gray_E);
+  background-color: var(--gray_E) !important;
   width: 100vw;
 }
 
-div {
-  background-color: var(--gray_E);
-}
 
 h1 {
   font-size: 3.2em;
@@ -94,7 +94,7 @@ button:focus-visible {
 
 
 ::-webkit-scrollbar {
-  width: 0.7vw;
+  width: var(--scrollbar_width);
 }
 
 ::-webkit-scrollbar-track {

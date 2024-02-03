@@ -4,8 +4,9 @@ import { useState } from "react";
 import { useRef } from "react";
 import { useSignup } from "../hooks/useSignup";
 import useGoogleSignIn from "../hooks/useGoogleSignIn";
-import { Stepper, Button, Group } from "@mantine/core";
+import { Stepper, Button, Group, PasswordInput, TextInput } from "@mantine/core";
 import { useSignupInfo } from "../hooks/useSignupInfo";
+
 
 
 export default function Signup() {
@@ -20,23 +21,47 @@ export default function Signup() {
     const [interests, setInterests] = useState([]);
     const [profilePicture, setProfilePicture] = useState(null);
     const [active, setActive] = useState(0);
+    const [value, setValue] = useState('');
+
 
     const element1Ref = useRef(null);
     const element2Ref = useRef(null);
     const element3Ref = useRef(null);
+    const stepsRef = useRef(null)
+
 
     const nextStep = () => {
         setActive((current) => {
-          return current < 3 ? current + 1 : current;
+            const newActive = Math.min(current + 1, 2);
+            const scrollAmount = newActive * window.innerWidth;
+    
+            if (stepsRef.current) {
+                stepsRef.current.scrollTo({
+                    left: scrollAmount,
+                    behavior: "smooth",
+                });
+            }
+    
+            return newActive;
         });
-      };
-      
+    };
+    
+    const prevStep = () => {
+        setActive((current) => {
+            const newActive = Math.max(current - 1, 0);
+            const scrollAmount = newActive * window.innerWidth;
+    
+            if (stepsRef.current) {
+                stepsRef.current.scrollTo({
+                    left: scrollAmount,
+                    behavior: "smooth",
+                });
+            }
+    
+            return newActive;
+        });
+    };
 
-      const prevStep = () => {
-        setActive((current) => {    
-          return current < 3 ? current - 1 : current;
-        });
-      };
 
     const { signup, isPending, error } = useSignup();
     const { signInWithGoogle, error2 } = useGoogleSignIn();
@@ -96,75 +121,93 @@ export default function Signup() {
                             allowNextStepsSelect={false}
                         >
                             <Stepper.Step label="First Step" description="Create an Account" />
-                            <Stepper.Step label="Second step" description="Verify email" />
-                            <Stepper.Step label="Final step" description="Get full access" />
+                            <Stepper.Step label="Second step" description="Basic Information" />
+                            <Stepper.Step label="Final step" description="Interests" />
                         </Stepper>
                     </div>
 
-                    {active === 0 && (
-                        <div id="Steps_Container">
+
+                        <div id="Steps_Container" ref={stepsRef}>
+                            
                             <div ref = {element1Ref} className="Individual_Step" id="Individual_Step_1">
                                 <form onSubmit={handleSubmit}>
                                     <div className="Form_Container">
-                                        <input
+                                        <TextInput
                                             className="Signup_Input"
                                             placeholder="Full Name"
                                             type="text"
                                             onChange={(e) => setName(e.target.value)}
-                                        ></input>
+                                        ></TextInput>
 
-                                        <input
+                                        <TextInput
                                             className="Signup_Input"
                                             placeholder="Email"
                                             type="email"
                                             onChange={(e) => setEmail(e.target.value)}
-                                        ></input>
+                                        ></TextInput>
 
-                                        <input
+                                        <PasswordInput
                                             className="Signup_Input"
                                             placeholder="Password"
-                                            type="password"
                                             onChange={(e) => setPassword(e.target.value)}
-                                        ></input>
-                                        {password && password.length < 6 ? <p>Password must be at least 6 characters</p> : <></>}
-                                        {password && !hasNumber(password) ? <p>Password must have a digit</p> : <></>}
+                                        ></PasswordInput>
 
-                                        <input
+
+                                        <PasswordInput
                                             className="Signup_Input"
                                             placeholder="Confirm Password"
-                                            type="password"
                                             onChange={(e) => setConfirmPassword(e.target.value)}
-                                        ></input>
-                                        {confirmPassword != password ? <p>Passwords do not match.</p> : <p></p>}
-                                        <br />
+                                        ></PasswordInput>
 
-                                        <br />
-                                        <br />
                                     </div>
                                 </form>
 
 
                                 <br />
                             </div>
-                        </div>
-                        )}
 
-                    {active === 1 && (
-                        <div id = "Steps_Container">
+
+
                             <div ref = {element2Ref} className="Individual_Step" id="Individual_Step_2">
                                 <form onSubmit={handleSubmit}>
-                                    <label>
-                                        Age: <input type="number" onChange={(e) => setAge(e.target.value)} />
-                                    </label>
+                                    <div className="Form_Container">
 
-                                    <label>
-                                        Grade (6-12): <input type="number" onChange={(e) => setGrade(e.target.value)} />
-                                    </label>
+                                        <TextInput 
+                                        placeholder="Age"
+                                        type="number" 
+                                        onChange={(e) => setAge(e.target.value)} 
+                                        />
 
-                                    <label>
-                                        Location: <input type="text" onChange={(e) => setLocation(e.target.value)} />
-                                    </label>
-                                    <br />
+
+                                        
+                                        <TextInput 
+                                        placeholder="Grade (6 - 12)"
+                                        type="number" 
+                                        onChange={(e) => setGrade(e.target.value)} 
+                                        />
+                                        
+
+                                        
+                                        <TextInput 
+                                        placeholder="Location"
+                                        type="text" 
+                                        onChange={(e) => setLocation(e.target.value)} 
+                                        />
+                                        
+                                        <br />
+
+                                        <label>
+                                            Profile Picture: <input type="file" onChange={(e) => setProfilePicture(e.target.files[0])} />
+                                        </label>
+ 
+                                    </div>
+                                </form>
+                            </div>
+
+
+
+                            <div ref = {element3Ref} className="Individual_Step" id="Individual_Step_3">
+                                <form onSubmit={handleSubmit}>
                                     <label>
                                         Interests:{" "}
                                         <div>
@@ -181,29 +224,13 @@ export default function Signup() {
                                             />
                                         </div>
                                     </label>
-                                    <label>
-                                        Profile Picture: <input type="file" onChange={(e) => setProfilePicture(e.target.files[0])} />
-                                    </label>
-                                    <button type="submit">Submit</button>
-
-                                    {isPending && (
-                                        <button className="btn" disabled>
-                                            Loading...Do Not Refresh The Page
-                                        </button>
-                                    )}
-                                    {error && <div className="error">{error}</div>}
                                 </form>
                             </div>
                         </div>
-                    )}
 
-                    {active === 2 && (
-                        <div id = "Steps_Container">
-                            <div ref = {element3Ref} className="Individual_Step" id="Individual_Step_3">
-                                ABC
-                            </div>
-                        </div>
-                    )}
+
+
+
 
                         <div className = "sign_up_button_container">
 
@@ -226,6 +253,17 @@ export default function Signup() {
                                     </button>
                                 </div>
                             )}
+
+                            {(active === 2) && (
+                                <div className = "sign_up_submit_button_container">
+                                    <button type="submit" className = "sign_up_submit_button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" fill="currentColor" className="bi bi-check-lg" viewBox="0 0 16 16">
+                                        <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z"/>
+                                    </svg>
+                                    </button>
+                                </div>
+                            )}
+
 
 
                         </div>
@@ -265,6 +303,15 @@ export default function Signup() {
                         <button type="submit" onClick={prevStep}>
                             Prev
                         </button>
+
+                                                               <button type="submit">Submit</button>
+
+                                        {isPending && (
+                                            <button className="btn" disabled>
+                                                Loading...Do Not Refresh The Page
+                                            </button>
+                                        )}
+                                        {error && <div className="error">{error}</div>}
                     )}
 
 */

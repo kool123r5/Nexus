@@ -12,9 +12,7 @@
     width: 100vw;
 }
 
-#Signup_Text{
 
-}
 
 #Stepper_Container{
     color:var(--white);
@@ -35,20 +33,24 @@
 #Steps_Container{
     display: flex;
     flex-direction: row;
-    width: 100%;
+    overflow: hidden;
 }
 
 
 .Individual_Step{
     border: 0px solid var(--gray_E);
+    display: flex;
     align-items: center;
     justify-content: center;
     transition: all 1s;
+    flex:1;
+    min-width: 100vw;
 }
 
 
 #Individual_Step_1{
     width:100%;
+    
 
 }
 #Individual_Step_2{
@@ -57,8 +59,6 @@
 
 #Individual_Step_3{
     width: 100%;
-    margin-right:0%;
-    border:1px solid var(--gray_E)
 }
 
 .Form_Container{
@@ -67,36 +67,14 @@
     width:100%;
     align-items: center;
     justify-content: center;
+    border: 0.2em solid var(--gray_A);
+    padding-right:3em;
+    padding-left:3em;
+    padding-top:0em;
+    padding-bottom: 2.5em;
+    border-radius: 10px;
 }
 
-.Signup_Input {
-    padding: 0.2vh;
-    font-family: 'Inter', sans-serif;
-    border: 2px solid var(--gray_E);
-    border-bottom: 2px solid white;
-    margin: 0.5vh;
-    border-radius: 3px;
-    padding: 0.8vh;
-    background-color: var(--gray_E);
-    transition: all 0.4s;
-    text-align: center;
-    font-size: 2.5vh;
-    margin-bottom: 3vh;
-    font-weight: 540;
-    width: 50vh;
-    height:5vh;
-    color:white;
-    margin-bottom: 1em;
-}
-
-.Signup_Input:hover {
-    border-bottom: 2px solid var(--orange);
-}
-
-.Signup_Input:focus {
-    outline: none;
-    border-bottom: 2px solid var(--orange);
-}
 
 
 
@@ -163,11 +141,81 @@
     outline: none;
 }
 
-.sign_up_next_button:focus{
+.sign_up_prev_button:focus{
+    outline: none;
+}
+
+.sign_up_submit_button_container {
+    position: absolute;
+    right:3%;
+    top:50%;
+    border-radius: 50%;
+}
+
+.sign_up_submit_button{
+    background-color: var(--orange);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 6vw; 
+    width: 6vw; 
+    border-radius: 50%;
+    opacity: 1;
+    text-align: center;
+    cursor: pointer; 
+    transition: 0.5s all;
+}
+
+.sign_up_submit_button:hover{
+    background-color: var(--white);
+    color:var(--orange);
+    opacity: 1;
+}
+
+.sign_up_submit_button:focus{
     outline: none;
 }
 
 .mantine-Stepper-root :focus{
     outline:none;
 }
+
+
+.mantine-PasswordInput-input{
+    background-color: var(--gray_E) !important;
+    font-family: 'Inter', sans-serif !important;
+    text-align: center !important;
+    border-bottom: 2px solid var(--gray_A) !important;
+    border-top: 1px solid var(--gray_E) !important;
+    border-left: 1px solid var(--gray_E) !important;
+    border-right: 1px solid var(--gray_E) !important;
+    border-radius: 0 !important;
+}
+
+.mantine-PasswordInput-root{
+    text-align: center !important;
+    width:100%;
+    margin-top: 1.5em;
+}
+
+.mantine-PasswordInput-innerInput{
+
+}
+
+.mantine-TextInput-input{
+    border-bottom: 2px solid var(--gray_A) !important;
+    border-top: 1px solid var(--gray_E) !important;
+    border-left: 1px solid var(--gray_E) !important;
+    border-right: 1px solid var(--gray_E) !important;
+    border-radius: 0 !important;
+    background-color: var(--gray_E) !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+.mantine-TextInput-root{
+    margin-top:1.5em;
+    width:40vw;
+}
+
 

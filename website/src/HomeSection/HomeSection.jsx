@@ -22,7 +22,7 @@ export default function HomeSection({ uniqueTypeObj, sorted_documents }) {
     const cardWidth = 270;
 
     const handlePreviousClick = () => {
-        scrollAmount = Math.max(scrollAmount - cardWidth * 3, 0);
+        scrollAmount = Math.max(scrollAmount - window.innerWidth, 0);
         if (carouselRef.current) {
             carouselRef.current.scrollTo({
                 left: scrollAmount,
@@ -33,7 +33,7 @@ export default function HomeSection({ uniqueTypeObj, sorted_documents }) {
 
     const handleNextClick = () => {
         const maxScroll = carouselRef.current.scrollWidth - carouselRef.current.clientWidth;
-        scrollAmount = Math.min(scrollAmount + cardWidth * 3, maxScroll);
+        scrollAmount = Math.min(scrollAmount + window.innerWidth, maxScroll);
         if (carouselRef.current) {
             carouselRef.current.scrollTo({
                 left: scrollAmount,

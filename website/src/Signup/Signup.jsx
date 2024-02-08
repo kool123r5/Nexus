@@ -17,7 +17,7 @@ export default function Signup() {
     const [grade, setGrade] = useState("");
     const [location, setLocation] = useState("");
     const [interests, setInterests] = useState([]);
-    const [profilePicture, setProfilePicture] = useState("");
+    const [profilePicture, setProfilePicture] = useState(null);
     const [active, setActive] = useState(0);
 
     const [visible, { toggle }] = useDisclosure(false);

@@ -9,15 +9,19 @@
     text-align: center;
     margin-top: 1.5vh;
     margin-bottom: 1.5vh;
-    transition: all 0.5s;
-    align-items: center;
-    justify-content: center;
     font-weight: 600;
     font-size: 1.1em;
 }
 
+.mantine-Chip-root{
+    margin-right: 0 !important;
+}
+
 .mantine-Chip-label {
     background-color: var(--gray_A) !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    transition: 0.3s background-color;
 }
 
 .mantine-Chip-label:hover {

@@ -10,7 +10,6 @@ import { useContext } from "react";
 import { useUserDocContext } from "../hooks/useUserDocContext";
 
 export default function ProfileSettings() {
-    // const { document, error } = useDocument("users", projectAuth.currentUser.uid);
     const { userDoc: document, error } = useUserDocContext();
 
     const [newEmail, setNewEmail] = useState(null);
@@ -32,13 +31,11 @@ export default function ProfileSettings() {
             // this works
             const credential = firebase.auth.EmailAuthProvider.credential(projectAuth.currentUser.email, password);
 
-            // this doesn't
-            // const credential = emailProvider.credential(projectAuth.currentUser.email, password);
-
             await projectAuth.currentUser.reauthenticateWithCredential(credential);
             await projectAuth.currentUser.verifyBeforeUpdateEmail(newEmail);
             setIsEmailChangeSent(true);
             setErrorWhileUpdatingEmail("");
+
             // we should wait till the user verifies the email change for this, just wanted to test
             await projectFirestore.collection("users").doc(projectAuth.currentUser.uid).update({
                 email: newEmail,
@@ -58,12 +55,16 @@ export default function ProfileSettings() {
 
             if (document.authProviders.length == 1 && document.authProviders[0] == "google") {
                 console.log(projectAuth.currentUser.email);
+                const idToken = await projectAuth.currentUser.getIdToken();
+                const googleCredential = firebase.auth.GoogleAuthProvider.credential(idToken);
+                await projectAuth.currentUser.reauthenticateWithCredential(googleCredential);
+
                 const credential = firebase.auth.EmailAuthProvider.credential(
                     projectAuth.currentUser.email,
                     changedPassword
                 );
-                // await projectAuth.currentUser.updatePassword(changedPassword);
                 await projectAuth.currentUser.linkWithCredential(credential);
+
                 await projectFirestore
                     .collection("users")
                     .doc(projectAuth.currentUser.uid)

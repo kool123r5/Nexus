@@ -45,8 +45,8 @@ export const useLogin = () => {
             }
         } catch (error) {
             if (!isCancelled) {
-                console.log(error.message)
-                setError(error.message)
+                console.log(error.message);
+                setError(error.message);
                 logout();
                 setIsPending(false);
             }
@@ -76,7 +76,7 @@ export const useLogin = () => {
                 throw new Error("User not registered");
             }
 
-            navigateTo("/");
+            // navigateTo("/");
 
             if (!isCancelled && !userFailure) {
                 setIsPending(false);

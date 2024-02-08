@@ -10,17 +10,19 @@ export const UserDocContextProvider = ({ children }) => {
     useEffect(() => {
         try {
             const unsub = projectAuth.onAuthStateChanged((user) => {
-                const unsub_ref = projectFirestore
-                    .collection("users")
-                    .doc(user.uid)
-                    .onSnapshot((snapshot) => {
-                        if (snapshot.data()) {
-                            setState({
-                                userDoc: snapshot.data(),
-                                error: null,
-                            });
-                        }
-                    });
+                const unsub_ref =
+                    user &&
+                    projectFirestore
+                        .collection("users")
+                        .doc(user.uid)
+                        .onSnapshot((snapshot) => {
+                            if (snapshot.data()) {
+                                setState({
+                                    userDoc: snapshot.data(),
+                                    error: null,
+                                });
+                            }
+                        });
                 return () => {
                     unsub_ref();
                 };

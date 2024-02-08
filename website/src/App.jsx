@@ -15,15 +15,16 @@ import ProfileSettings from "./Profile/ProfileSettings";
 import Signup2 from "./Signup/Signup2";
 import Create from "./Forum/Create";
 import PostDetail from "./Forum/PostDetail";
+import EmailTemplate from "./EmailTemplate/EmailTemplate";
 
 export default function App() {
     const { user, authIsReady } = useAuthContext();
 
     const { userDoc, error } = useUserDocContext();
-    if(userDoc){
-        console.log(userDoc)
+    if (userDoc) {
+        console.log(userDoc);
     }
-  
+
     return (
         <>
             <Routes>
@@ -41,6 +42,9 @@ export default function App() {
                 {authIsReady && <Route path="/forum/:id" element={user ? <PostDetail /> : <Navigate to={"/login"} />} />}
                 {authIsReady && <Route path="/login" element={user ? <Navigate to="/" /> : <Login />} />}
                 {authIsReady && <Route path="/signup" element={user ? <Navigate to="/" /> : <Signup />} />}
+
+                {authIsReady && <Route path="/auth/action" element={<EmailTemplate />} />}
+
                 <Route path="/signup2" element={<Signup2 />} />
 
                 <Route path="/forgot-password" element={<PasswordReset />} />

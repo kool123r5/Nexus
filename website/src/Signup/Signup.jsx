@@ -35,12 +35,12 @@ export default function Signup() {
             const newActive = Math.min(current + 1, 2);
             const scrollAmount = newActive * window.innerWidth;
     
-            if (stepsRef.current) {
-                stepsRef.current.scrollTo({
-                    left: scrollAmount,
-                    behavior: "smooth",
-                });
-            }
+            // if (stepsRef.current) {
+            //     stepsRef.current.scrollTo({
+            //         left: scrollAmount,
+            //         behavior: "smooth",
+            //     });
+            // }
     
             return newActive;
         });
@@ -51,12 +51,12 @@ export default function Signup() {
             const newActive = Math.max(current - 1, 0);
             const scrollAmount = newActive * window.innerWidth;
     
-            if (stepsRef.current) {
-                stepsRef.current.scrollTo({
-                    left: scrollAmount,
-                    behavior: "smooth",
-                });
-            }
+            // if (stepsRef.current) {
+            //     stepsRef.current.scrollTo({
+            //         left: scrollAmount,
+            //         behavior: "smooth",
+            //     });
+            // }
     
             return newActive;
         });
@@ -129,8 +129,9 @@ export default function Signup() {
 
                         <div id="Steps_Container" ref={stepsRef}>
                             
+                        {(active === 0) && (
                             <div ref = {element1Ref} className="Individual_Step" id="Individual_Step_1">
-                                <form onSubmit={handleSubmit}>
+                                <form className = "Center_Signup_Items" onSubmit={handleSubmit}>
                                     <div className="Form_Container">
                                         <TextInput
                                             className="Signup_Input"
@@ -165,11 +166,13 @@ export default function Signup() {
 
                                 <br />
                             </div>
+                        )}
 
 
 
+                        {(active === 1) && (
                             <div ref = {element2Ref} className="Individual_Step" id="Individual_Step_2">
-                                <form onSubmit={handleSubmit}>
+                                <form className = "Center_Signup_Items" onSubmit={handleSubmit}>
                                     <div className="Form_Container">
 
                                         <TextInput 
@@ -203,30 +206,44 @@ export default function Signup() {
                                     </div>
                                 </form>
                             </div>
+                        )}
 
 
 
+                        {(active === 2) && (
+                
                             <div ref = {element3Ref} className="Individual_Step" id="Individual_Step_3">
-                                <form onSubmit={handleSubmit}>
-                                    <label>
-                                        Interests:{" "}
-                                        <div>
-                                            {interests.map((interest, index) => (
-                                                <span key={index} className="tag" onClick={() => removeInterest(index)}>
-                                                    {interest} &times;
-                                                </span>
-                                            ))}
-                                            <input
-                                                type="text"
-                                                value={interest}
-                                                onChange={handleInterestChange}
-                                                onKeyPress={handleInterestKeyPress}
-                                            />
+                                <h2 id = "Interests_Box_Title">Interests</h2>
+                                <div className="Form_Container" id = "Interests_Container">
+                                    <form className = "Center_Signup_Items" onSubmit={handleSubmit}>
+                                        <div className="All_Interest_Items">
+
+                                                <label className="Interest_Click_Box">
+                                                    <p className="Interest_Label_Test">Tennis</p>
+                                                    <input
+                                                        className = "Interests_Signup_Checkbox"
+                                                        type="checkbox"
+                                                    />
+                                                </label>
+
+                                                <label className="Interest_Click_Box">
+                                                    <p className="Interest_Label_Test">Chess</p>
+                                                    <input
+                                                        className = "Interests_Signup_Checkbox"
+                                                        type="checkbox"
+                                                    />
+                                                </label>
                                         </div>
-                                    </label>
-                                </form>
+                                        
+                                    </form>
+                                </div>
                             </div>
+                        )}
+
+                            
                         </div>
+                        
+
 
 
 
@@ -314,4 +331,9 @@ export default function Signup() {
                                         {error && <div className="error">{error}</div>}
                     )}
 
+                                                                    {interests.map((interest, index) => (
+                                                    <span key={index} className="tag" onClick={() => removeInterest(index)}>
+                                                        {interest} &times;
+                                                    </span>
+                                                ))}
 */

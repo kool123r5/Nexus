@@ -39,9 +39,15 @@ export default function Card({ title, text, author, id }) {
 
     return (
             <div className="card" onClick={showFullActivity}>
-                <h4  className = "card_title_text">{title}</h4>
-                <p className = "card_body_text">{wrapped_text}</p>
-                <p className = "card_body_text">By: {author}</p>
+                <div className="card_title_container">
+                    <h4  className = "card_title_text">{title}</h4>
+                </div>
+                <div className="card_body_container">
+                    <p className = "card_body_text">{wrapped_text}</p>
+                </div>
+                <div className="card_author_container">
+                    <p className = "card_author_text">By: {author}</p>
+                </div>
             </div>
     );
 }

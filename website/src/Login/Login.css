@@ -37,7 +37,7 @@
     padding: 0.2vh;
     font-family: 'Inter', sans-serif;
     border: 2px solid var(--gray_E);
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid var(--gray_D);
     margin: 0.5vh;
     border-radius: 3px;
     padding: 0.8vh;
@@ -50,6 +50,7 @@
     width: 50vh;
     height:5vh;
     color:white;
+    padding-bottom: 1em;
 }
 
 .Login_Input:hover {

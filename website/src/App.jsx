@@ -12,7 +12,6 @@ import Signup from "./Signup/Signup";
 import Activity from "./Activity/Activity";
 import PasswordReset from "./PasswordReset/PasswordReset";
 import ProfileSettings from "./Profile/ProfileSettings";
-import Signup2 from "./Signup/Signup2";
 import Create from "./Forum/Create";
 import PostDetail from "./Forum/PostDetail";
 import EmailTemplate from "./EmailTemplate/EmailTemplate";
@@ -44,8 +43,6 @@ export default function App() {
                 {authIsReady && <Route path="/signup" element={user ? <Navigate to="/" /> : <Signup />} />}
 
                 {authIsReady && <Route path="/auth/action" element={<EmailTemplate />} />}
-
-                <Route path="/signup2" element={<Signup2 />} />
 
                 <Route path="/forgot-password" element={<PasswordReset />} />
             </Routes>

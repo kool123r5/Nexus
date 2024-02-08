@@ -1,21 +1,20 @@
 import { useState, useEffect } from "react";
-import { projectAuth, projectFirestore } from "../firebase/config";
-import { useNavigate } from "react-router-dom";
+import { projectAuth, projectFirestore, projectStorage } from "../firebase/config";
+import resizeImg from "../functions/resizeImg";
 
 export const useSignup = () => {
     const [isCancelled, setIsCancelled] = useState(false);
     const [error, setError] = useState(null);
     const [isPending, setIsPending] = useState(false);
-    const navigateTo = useNavigate();
 
-    const signup = async (email, password, confirmPassword, displayName) => {
+    const signup = async (email, password, confirmPassword, displayName, age, grade, loc, pfp, interests) => {
         setError(null);
-        // const activities = null;
         setIsPending(true);
         try {
             // signup
             const res = await projectAuth.createUserWithEmailAndPassword(email, password).catch((err) => {
                 setError(err.message);
+                console.log(err);
             });
 
             if (!res) {
@@ -29,8 +28,18 @@ export const useSignup = () => {
             // sends the user a verification email
             await res.user.sendEmailVerification();
 
-            await res.user.updateProfile({ displayName });
+            let url = null;
+            if (pfp != null) {
+                const pfpResized = await resizeImg(pfp);
+                const uploadPath = `pfp/${res.user.uid}`;
+                const blob = await fetch(pfpResized).then((res) => res.blob());
+                const profilePicResized = await projectStorage.ref(uploadPath).put(blob);
 
+                url = await profilePicResized.ref.getDownloadURL();
+            }
+
+            await res.user.updateProfile({ displayName: displayName, photoURL: url });
+            console.log(res.user);
             // create a user document
             await projectFirestore
                 .collection("users")
@@ -42,6 +51,11 @@ export const useSignup = () => {
                     friends: [],
                     friendRequestsSent: [],
                     friendRequestsReceived: [],
+                    age,
+                    grade,
+                    location: loc,
+                    pfp: url,
+                    interests,
                 });
 
             if (!isCancelled) {
@@ -49,7 +63,6 @@ export const useSignup = () => {
                 setError(null);
             }
 
-            navigateTo("/signup2");
             location.reload();
         } catch (err) {
             if (!isCancelled) {

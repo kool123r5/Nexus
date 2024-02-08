@@ -1,161 +1,107 @@
-#Whole_Container{
-    width:99vw;
+#Whole_Container {
+    width: 99vw;
     display: flex;
     flex-direction: column;
-    height:100vh;
+    height: 100vh;
 }
 
-#Signup_Text_Container{
+#Signup_Text_Container {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100vw;
 }
 
-
-
-
-
-#Stepper_Container{
-    color:var(--white);
+#Stepper_Container {
+    color: var(--white);
     max-width: 100%;
-    height:15vh;
+    height: 15vh;
     align-items: center;
     justify-content: center;
-    padding-right:2vw;
-    padding-left:2vw;
+    padding-right: 2vw;
+    padding-left: 2vw;
     margin-top: 0.5em;
 }
 
-#Signup_Stepper{
+#Signup_Stepper {
     width: 100%;
 }
 
-
-#Steps_Container{
+#Steps_Container {
     display: flex;
     flex-direction: row;
     overflow: hidden;
     white-space: nowrap;
 }
 
-
-.Individual_Step{
+.Individual_Step {
     border: 0px solid var(--gray_E);
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 1s;
     min-width: 100vw;
-    min-height:50vh;
+    min-height: 50vh;
 }
 
-
-#Individual_Step_1{
-    width:100%;
-    
-
-}
-#Individual_Step_2{
-    width:100%;
+#Individual_Step_1 {
+    width: 100%;
 }
 
-#Individual_Step_3{
+#Individual_Step_2 {
+    width: 100%;
+}
+
+#Individual_Step_3 {
     width: 100%;
     flex-direction: column;
 }
 
-#Interests_Box_Title{
-    margin:0;
+#Interests_Box_Title {
+    margin: 0;
 }
 
-.Form_Container{
-    width:100%;
+.Form_Container {
+    width: 100%;
     border: 0.2em solid var(--gray_A);
-    padding-right:3em;
-    padding-left:3em;
-    padding-top:0em;
-    padding-bottom: 2.5em;
     border-radius: 10px;
-    margin:0 !important;
-    margin-top:1em !important;
-    height:100% !important;
+    margin: 0 !important;
+    margin-top: 1em !important;
+    height: 100% !important;
 }
 
-
-.All_Interest_Items{
+.All_Interest_Items {
     display: flex;
-    flex-wrap:wrap;
-    
-}
-
-
-#Interests_Container{
-    width: 75%;
-    height: 75%;
-    overflow-y:scroll;
-    padding-bottom:0.5em;
-    margin-bottom:20vh;
-    margin-top:10vh;
-}
-
-.Interests_Signup_Box{
-    margin-top:1vh;
-    min-width:33.3%;
-    height:7vh;
-    background-color: var(--gray_A);
-    border-radius: 20px;
-}
-
-.Interests_Signup_Checkbox{
-    display: none;
-}
-
-
-.Interest_Click_Box{
-    display: flex;
-    width:max-content;
-    padding-left:2vw;
-    padding-right:2vw;
-    height:40px;
-    border-radius: 20px;
-    margin-right:20px;
-    background-color: var(--gray_A);
-    cursor:pointer;
-    text-align:center;
-    margin-top: 3vh;
-    transition: all 0.5s;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    font-weight:600;
-    font-size:1.1em;
 }
 
-.Interest_Label_Text{
-    font-weight: 700 !important;
-    font: Helvetica;
+#Interests_Container {
+    width: 75%;
+    height: 75%;
+    overflow-y: scroll;
+    padding-bottom: 0.5em;
+    margin-bottom: 20vh;
+    margin-top: 10vh;
 }
 
-.Interest_Click_Box:hover{
-    background-color: var(--gray_D);
+.Interests_Signup_Box {
+    margin-top: 1vh;
+    min-width: 33.3%;
+    height: 7vh;
+    background-color: var(--gray_A);
+    border-radius: 20px;
 }
-
-
-.Interest_Click_Box input:checked ~ .Interest_Click_Box {
-    background-color: var(--orange) !important;
-}
-
-
 
 .sign_up_next_button_container {
     position: absolute;
-    right:3%;
-    top:50%;
+    right: 3%;
+    top: 50%;
     border-radius: 50%;
 }
 
 .sign_up_prev_button_container {
-    position:absolute;
+    position: absolute;
     left: 3%;
     top: 50%;
     border-radius: 50%;
@@ -167,15 +113,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 6vw; 
-    width: 6vw; 
+    height: 6vw;
+    width: 6vw;
     border-radius: 50%;
     opacity: 1;
     text-align: center;
-    transition: 0.5s all;
-    cursor: pointer; 
+    cursor: pointer;
 }
-
 
 .sign_up_prev_button {
     background-color: var(--orange);
@@ -183,76 +127,72 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 6vw; 
-    width: 6vw; 
+    height: 6vw;
+    width: 6vw;
     border-radius: 50%;
     opacity: 1;
     text-align: center;
-    cursor: pointer; 
-    transition: 0.5s all;
+    cursor: pointer;
 }
 
-
-.sign_up_next_button:hover{
+.sign_up_next_button:hover {
     background-color: var(--white);
-    color:var(--orange);
+    color: var(--orange);
     opacity: 1;
 }
 
-.sign_up_prev_button:hover{
+.sign_up_prev_button:hover {
     background-color: var(--white);
-    color:var(--orange);
+    color: var(--orange);
     opacity: 1;
 }
 
-.sign_up_next_button:focus{
+.sign_up_next_button:focus {
     outline: none;
 }
 
-.sign_up_prev_button:focus{
+.sign_up_prev_button:focus {
     outline: none;
 }
 
 .sign_up_submit_button_container {
     position: absolute;
-    right:3%;
-    top:50%;
+    right: 3%;
+    top: 50%;
     border-radius: 50%;
 }
 
-.sign_up_submit_button{
+.sign_up_submit_button {
     background-color: var(--orange);
     color: var(--white);
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 6vw; 
-    width: 6vw; 
+    height: 6vw;
+    width: 6vw;
     border-radius: 50%;
     opacity: 1;
     text-align: center;
-    cursor: pointer; 
-    transition: 0.5s all;
+    cursor: pointer;
 }
 
-.sign_up_submit_button:hover{
+.sign_up_submit_button:hover {
     background-color: var(--white);
-    color:var(--orange);
+    color: var(--orange);
     opacity: 1;
 }
 
-.sign_up_submit_button:focus{
+.sign_up_submit_button:focus {
     outline: none;
 }
 
-.mantine-Stepper-root :focus{
-    outline:none;
+.mantine-Stepper-root :focus {
+    outline: none;
 }
 
-
-.mantine-PasswordInput-input{
+.mantine-PasswordInput-input {
     background-color: var(--gray_E) !important;
-    font-family: 'Inter', sans-serif !important;
+    font-family: "Inter", sans-serif !important;
     text-align: center !important;
     border-bottom: 2px solid var(--gray_A) !important;
     border-top: 1px solid var(--gray_E) !important;
@@ -261,29 +201,23 @@
     border-radius: 0 !important;
 }
 
-.mantine-PasswordInput-root{
+.mantine-PasswordInput-root {
     text-align: center !important;
-    width:100%;
+    width: 100%;
     margin-top: 1.5em;
 }
 
-.mantine-PasswordInput-innerInput{
-
-}
-
-.mantine-TextInput-input{
+.mantine-TextInput-input {
     border-bottom: 2px solid var(--gray_A) !important;
     border-top: 1px solid var(--gray_E) !important;
     border-left: 1px solid var(--gray_E) !important;
     border-right: 1px solid var(--gray_E) !important;
     border-radius: 0 !important;
     background-color: var(--gray_E) !important;
-    font-family: 'Inter', sans-serif !important;
+    font-family: "Inter", sans-serif !important;
 }
 
-.mantine-TextInput-root{
-    margin-top:1.5em;
-    width:40vw;
+.mantine-TextInput-root {
+    margin-top: 1.5em;
+    width: 40vw;
 }
-
-

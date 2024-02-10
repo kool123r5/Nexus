@@ -1,52 +1,43 @@
 import { useState, useEffect } from "react";
-import { projectAuth, projectFirestore } from "../firebase/config";
+import { projectAuth, projectFirestore, googleProvider } from "../firebase/config";
 import { useAuthContext } from "./useAuthContext";
-import { googleProvider } from "../firebase/config";
-import { useNavigate } from "react-router-dom";
-
 import "firebase/firestore";
 import firebase from "firebase/app";
 import { useLogout } from "./useLogout";
 
 export const useLogin = () => {
     const [isCancelled, setIsCancelled] = useState(false);
-    const [error, setError] = useState(false);
+    const [error, setError] = useState(null);
+    const [googleError, setGoogleError] = useState(null);
     const { logout } = useLogout();
     const [isPending, setIsPending] = useState(false);
     const { dispatch } = useAuthContext();
-    const [type, setType] = useState(null);
-    const [userFailure, setUserFailure] = useState(false);
-    const navigateTo = useNavigate();
 
     const login = async (email, password) => {
-        setError(false);
+        setError(null);
+        setGoogleError(null);
         setIsPending(true);
-        setType(null);
 
         try {
             // login
-            const userDoc = await projectFirestore.collection("users").where("email", "==", email).limit(1).get();
-            if (userDoc.docs[0].data().authProviders.length == 1 && userDoc.docs[0].data().authProviders[0] == "google") {
-                setError(
-                    "You previously signed up with Google. Login with Google and then set a password in your account settings to be able to sign up with email & password in the future."
-                );
-                setIsPending(false);
-            } else {
-                const res = await projectAuth.signInWithEmailAndPassword(email, password);
+            const res = await projectAuth.signInWithEmailAndPassword(email, password);
 
-                // dispatch login action
+            // dispatch login action
+            dispatch({ type: "LOGIN", payload: res.user });
 
-                dispatch({ type: "LOGIN", payload: res.user });
-
-                if (!isCancelled && !userFailure) {
-                    setIsPending(false);
-                    setError(false);
-                }
-            }
-        } catch (error) {
             if (!isCancelled) {
-                console.log(error.message);
-                setError(error.message);
+                setIsPending(false);
+                setError(null);
+                setGoogleError(null);
+            }
+        } catch (err) {
+            if (!isCancelled) {
+                console.log(err);
+                if (JSON.stringify(err.message).includes("INVALID_LOGIN_CREDENTIALS")) {
+                    setError("Invalid Login Credentials");
+                } else {
+                    setError(err.message);
+                }
                 logout();
                 setIsPending(false);
             }
@@ -55,11 +46,18 @@ export const useLogin = () => {
 
     const loginWithGoogle = async () => {
         setError(null);
+        setGoogleError(null);
         setIsPending(true);
 
         try {
             const res = await projectAuth.signInWithPopup(googleProvider);
             const userDoc = await projectFirestore.collection("users").doc(res.user.uid).get();
+
+            if (!isCancelled) {
+                setIsPending(false);
+                setError(null);
+                setGoogleError(null);
+            }
 
             if (userDoc.exists) {
                 await projectFirestore
@@ -73,21 +71,14 @@ export const useLogin = () => {
             } else {
                 // Delete the user authentication object if not registered
                 await projectAuth.currentUser.delete();
-                throw new Error("User not registered");
-            }
-
-            // navigateTo("/");
-
-            if (!isCancelled && !userFailure) {
-                setIsPending(false);
-                setError(null);
+                console.log("here");
+                setGoogleError("User not registered");
             }
         } catch (err) {
-            console.log(err.message);
-            if (isCancelled) {
-                setError(err.message);
-
-                console.log(error);
+            if (!isCancelled) {
+                console.log(err);
+                setGoogleError(err.message);
+                await logout();
                 setIsPending(false);
             }
         }
@@ -97,5 +88,5 @@ export const useLogin = () => {
         return () => setIsCancelled(true);
     }, []);
 
-    return { login, loginWithGoogle, isPending, error };
+    return { login, loginWithGoogle, isPending, error, googleError };
 };

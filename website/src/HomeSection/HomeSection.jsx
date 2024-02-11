@@ -72,7 +72,7 @@ export default function HomeSection({ uniqueTypeObj, sorted_documents }) {
                 </button>
 
                 <div className="carousel" ref={carouselRef}>
-                {postObjectArray.map((postObject) => {
+                    {postObjectArray.map((postObject) => {
                         return (
                             <Card
                                 className="card"
@@ -81,6 +81,7 @@ export default function HomeSection({ uniqueTypeObj, sorted_documents }) {
                                 text={postObject.text}
                                 author={postObject.author}
                                 id={postObject.id}
+                                activity={true}
                             />
                         );
                     })}
@@ -93,10 +94,11 @@ export default function HomeSection({ uniqueTypeObj, sorted_documents }) {
                                 text={postObject.text}
                                 author={postObject.author}
                                 id={postObject.id}
+                                activity={true}
                             />
                         );
                     })}
-                {postObjectArray.map((postObject) => {
+                    {postObjectArray.map((postObject) => {
                         return (
                             <Card
                                 className="card"
@@ -105,10 +107,11 @@ export default function HomeSection({ uniqueTypeObj, sorted_documents }) {
                                 text={postObject.text}
                                 author={postObject.author}
                                 id={postObject.id}
+                                activity={true}
                             />
                         );
                     })}
-                {postObjectArray.map((postObject) => {
+                    {postObjectArray.map((postObject) => {
                         return (
                             <Card
                                 className="card"
@@ -117,10 +120,11 @@ export default function HomeSection({ uniqueTypeObj, sorted_documents }) {
                                 text={postObject.text}
                                 author={postObject.author}
                                 id={postObject.id}
+                                activity={true}
                             />
                         );
                     })}
-                {postObjectArray.map((postObject) => {
+                    {postObjectArray.map((postObject) => {
                         return (
                             <Card
                                 className="card"
@@ -129,10 +133,11 @@ export default function HomeSection({ uniqueTypeObj, sorted_documents }) {
                                 text={postObject.text}
                                 author={postObject.author}
                                 id={postObject.id}
+                                activity={true}
                             />
                         );
                     })}
-                {postObjectArray.map((postObject) => {
+                    {postObjectArray.map((postObject) => {
                         return (
                             <Card
                                 className="card"
@@ -141,10 +146,11 @@ export default function HomeSection({ uniqueTypeObj, sorted_documents }) {
                                 text={postObject.text}
                                 author={postObject.author}
                                 id={postObject.id}
+                                activity={true}
                             />
                         );
                     })}
-                {postObjectArray.map((postObject) => {
+                    {postObjectArray.map((postObject) => {
                         return (
                             <Card
                                 className="card"
@@ -153,6 +159,7 @@ export default function HomeSection({ uniqueTypeObj, sorted_documents }) {
                                 text={postObject.text}
                                 author={postObject.author}
                                 id={postObject.id}
+                                activity={true}
                             />
                         );
                     })}

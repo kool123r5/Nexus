@@ -56,6 +56,10 @@ export const useSignup = () => {
                     location: loc,
                     pfp: url,
                     interests,
+                })
+                .catch((err) => {
+                    setError(err.message);
+                    console.log(err);
                 });
 
             if (!isCancelled) {

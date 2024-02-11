@@ -11,7 +11,7 @@ import { Loader } from "@mantine/core";
 export default function Home() {
     const [sorted_documents, setSortedDocuments] = useState(null);
     // when we make the model, change the query to reflect the type the user would actually want to see
-    const { documents, error } = useCollection("activities");
+    const { documents, error } = useCollection("activities", null, null, 5);
 
     useEffect(() => {
         if (error) {
@@ -31,7 +31,7 @@ export default function Home() {
         <>
             <Navbar />
             {documents ? (
-                <div className="home">
+                <div className="homeDiv">
                     <div id="title_container">
                         <img src={nexusLogo} alt="Nexus Logo" id="Home_Logo_Img" />
                         <h1 id="title">Nexus</h1>

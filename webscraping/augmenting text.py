@@ -9,10 +9,15 @@ with open('ecListiLLuminate.json', 'r') as f:
 gpt = GPT()
 
 # Set your OpenAI API key
-gpt.api_key = 'your_openai_api_key'
+gpt.api_key = 'sk-...2kv1'
 
 # Custom prompt to guide the text generation process
-prompt = "Please generate additional text based on the following information:\n"
+prompt = """I am building a database of extracurricular oppurtunities for highschoolers. 
+I have some exisiting text and data about each activity. I would like you to use this information
+to produce more text. I want you to write some more information about the activity. 
+additionally write a little on why a student should do the activty. Persuade the user to do the activity.
+Write about pros and cons as you see fit, and what type of student would benefit from the ec oppurtunity.
+  Please generate additional text based on the following information:\n"""
 
 # Loop through each JSON object
 for obj in data:

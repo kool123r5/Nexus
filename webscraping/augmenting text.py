@@ -9,7 +9,7 @@ with open('ecListiLLuminate.json', 'r') as f:
 gpt = GPT()
 
 # Set your OpenAI API key
-gpt.api_key = 'sk-...2kv1'
+gpt.api_key = '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'
 
 # Custom prompt to guide the text generation process
 prompt = """I am building a database of extracurricular oppurtunities for highschoolers. 

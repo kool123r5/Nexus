@@ -48,6 +48,7 @@ merger(FindECs,Illuminate)
 print(len(mergedList) )
 deleted = len(hugelist)- len(mergedList)
 print(deleted)
+print(len)
 #with open("ecListMerged.json", "w") as f:
     #json.dump(mergedList, f, indent=4)
 

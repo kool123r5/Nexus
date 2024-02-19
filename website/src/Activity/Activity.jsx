@@ -1,14 +1,14 @@
-import "./Activity.css";
-import { useParams } from "react-router-dom";
-import { useDocument } from "../hooks/useDocument";
-import { useAuthContext } from "../hooks/useAuthContext";
-import { useState, useEffect } from "react";
-import { projectFirestore, timestamp } from "../firebase/config";
-import Navbar from "../Navbar/Navbar";
-import { IconMapPinFilled, IconLink, IconDeviceLaptop } from "@tabler/icons-react";
-import { Badge } from "@mantine/core";
+import { Badge, NumberInput, TextInput } from "@mantine/core";
 import { useViewportSize } from "@mantine/hooks";
-import { TextInput, NumberInput } from "@mantine/core";
+import { IconDeviceLaptop, IconLink, IconMapPinFilled } from "@tabler/icons-react";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import Navbar from "../Navbar/Navbar";
+import { projectFirestore, timestamp } from "../firebase/config";
+import { useAuthContext } from "../hooks/useAuthContext";
+import { useDocument } from "../hooks/useDocument";
+import { useUserDocContext } from "../hooks/useUserDocContext";
+import "./Activity.css";
 
 export default function Activity() {
     const { id } = useParams();
@@ -33,11 +33,13 @@ export default function Activity() {
         rating: null,
         completed: "Pending",
     };
-    const userDoc = useDocument("users", user.uid);
+
+    // const userDoc = useDocument("users", user.uid);
+    const { userDoc } = useUserDocContext();
 
     useEffect(() => {
         const fetchUpdatedData = async () => {
-            const updatedActivities = userDoc.document.activities || [];
+            const updatedActivities = userDoc.activities || [];
             console.log("Updated activities", updatedActivities);
             // Find the updated activity in the array
             const updatedActivity = updatedActivities.find(
@@ -57,8 +59,8 @@ export default function Activity() {
     }, [formSubmitted, id, user.uid, userDoc]);
 
     useEffect(() => {
-        if (userDoc.document != null) {
-            const activities = userDoc.document.activities || [];
+        if (userDoc != null) {
+            const activities = userDoc.activities || [];
             activities.forEach((activityDoc) => {
                 if (
                     activityDoc["activity"]["_delegate"]["_key"]["path"]["segments"].at(-1) ==
@@ -72,8 +74,8 @@ export default function Activity() {
     }, [userDoc]);
 
     useEffect(() => {
-        if (userDoc.document != null) {
-            const activities = userDoc.document.activities || [];
+        if (userDoc != null) {
+            const activities = userDoc.activities || [];
             activities.forEach((activityDoc) => {
                 if (
                     activityDoc["activity"]["_delegate"]["_key"]["path"]["segments"].at(-1) ==
@@ -88,7 +90,7 @@ export default function Activity() {
 
     const handleComplete = (e) => {
         e.preventDefault();
-        const activities = userDoc.document.activities;
+        const activities = userDoc.activities;
         const updatedActivities = activities.map((activityDoc) => {
             if (
                 activityDoc["activity"]["_delegate"]["_key"]["path"]["segments"].at(-1) ===
@@ -113,7 +115,7 @@ export default function Activity() {
     };
 
     const handleRemove = async () => {
-        const activities = userDoc.document.activities || [];
+        const activities = userDoc.activities || [];
 
         try {
             // Remove the activity from the user's document
@@ -138,7 +140,7 @@ export default function Activity() {
     };
 
     const handleClick = () => {
-        const activities = userDoc.document.activities || [];
+        const activities = userDoc.activities || [];
 
         // Update the activities array in the user's document
         const updatedActivities = [...activities, newActivity];
@@ -166,18 +168,20 @@ export default function Activity() {
                         )}
                         <div className="details">
                             <h3 className="byUsername">
-                                <span className="by">By </span> <span className="username">{document.username}</span>
+                                <span className="by">By </span> <span className="username">{document.host}</span>
                             </h3>
                             <h2 className="title">
                                 {document.title}
-                                {document.category &&
-                                    document.category.map((c, index) => {
-                                        return (
-                                            <Badge className="badge" key={index} color="#ff6d00">
-                                                {c}
-                                            </Badge>
-                                        );
-                                    })}
+                                <div className="badgeWrapper">
+                                    {document.tags &&
+                                        document.tags.map((c, index) => {
+                                            return (
+                                                <Badge className="badge" key={index} color="#ff6d00">
+                                                    {c}
+                                                </Badge>
+                                            );
+                                        })}
+                                </div>
                             </h2>
                             <div className="otherDetails">
                                 <h4 className="website">
@@ -186,21 +190,30 @@ export default function Activity() {
                                         Website
                                     </a>
                                 </h4>
-                                {document.inPerson ? (
-                                    <div className="location">
-                                        <IconMapPinFilled className="mapIcon" />
-                                        <p className="onlineOrLocInfo">{document.location}</p>
-                                    </div>
+                                {/* document in person is null then don't show */}
+                                {/* document in person is false then show online */}
+                                {/* document in person is true then show location if loc exists, otherwise don't show */}
+                                {document.inPerson == null || (document.inPerson == true && document.location == "") ? (
+                                    <></>
                                 ) : (
-                                    <div className="online">
-                                        <IconDeviceLaptop className="laptopIcon" />
-                                        <p className="onlineOrLocInfo">Online</p>
-                                    </div>
+                                    <>
+                                        {document.inPerson ? (
+                                            <div className="location">
+                                                <IconMapPinFilled className="mapIcon" />
+                                                <p className="onlineOrLocInfo">{document.location}</p>
+                                            </div>
+                                        ) : (
+                                            <div className="online">
+                                                <IconDeviceLaptop className="laptopIcon" />
+                                                <p className="onlineOrLocInfo">Online</p>
+                                            </div>
+                                        )}
+                                    </>
                                 )}
                             </div>
                             <h4 className="text">{document.text}</h4>
 
-                            {!document.selective && (
+                            {document.anyoneCanJoin && (
                                 <div className="form-div">
                                     {!disabled && (
                                         <button id="btn" onClick={handleClick} disabled={disabled}>

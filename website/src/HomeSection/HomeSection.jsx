@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 
 export default function HomeSection({ uniqueTypeObj, sorted_documents }) {
     let type = Object.keys(uniqueTypeObj);
+    console.log(type);
     let index_array = uniqueTypeObj[type];
     let postObjectArray = [];
     for (let i = 0; i < index_array.length; i++) {
@@ -13,7 +14,7 @@ export default function HomeSection({ uniqueTypeObj, sorted_documents }) {
         postObjectArray.push({
             title: documentObject.title,
             text: documentObject.text,
-            author: documentObject.username,
+            author: documentObject.host,
             id: documentObject.id,
         });
     }
@@ -72,84 +73,6 @@ export default function HomeSection({ uniqueTypeObj, sorted_documents }) {
                 </button>
 
                 <div className="carousel" ref={carouselRef}>
-                    {postObjectArray.map((postObject) => {
-                        return (
-                            <Card
-                                className="card"
-                                key={postObject + Math.random()}
-                                title={postObject.title}
-                                text={postObject.text}
-                                author={postObject.author}
-                                id={postObject.id}
-                                activity={true}
-                            />
-                        );
-                    })}
-                    {postObjectArray.map((postObject) => {
-                        return (
-                            <Card
-                                className="card"
-                                key={postObject + Math.random()}
-                                title={postObject.title}
-                                text={postObject.text}
-                                author={postObject.author}
-                                id={postObject.id}
-                                activity={true}
-                            />
-                        );
-                    })}
-                    {postObjectArray.map((postObject) => {
-                        return (
-                            <Card
-                                className="card"
-                                key={postObject + Math.random()}
-                                title={postObject.title}
-                                text={postObject.text}
-                                author={postObject.author}
-                                id={postObject.id}
-                                activity={true}
-                            />
-                        );
-                    })}
-                    {postObjectArray.map((postObject) => {
-                        return (
-                            <Card
-                                className="card"
-                                key={postObject + Math.random()}
-                                title={postObject.title}
-                                text={postObject.text}
-                                author={postObject.author}
-                                id={postObject.id}
-                                activity={true}
-                            />
-                        );
-                    })}
-                    {postObjectArray.map((postObject) => {
-                        return (
-                            <Card
-                                className="card"
-                                key={postObject + Math.random()}
-                                title={postObject.title}
-                                text={postObject.text}
-                                author={postObject.author}
-                                id={postObject.id}
-                                activity={true}
-                            />
-                        );
-                    })}
-                    {postObjectArray.map((postObject) => {
-                        return (
-                            <Card
-                                className="card"
-                                key={postObject + Math.random()}
-                                title={postObject.title}
-                                text={postObject.text}
-                                author={postObject.author}
-                                id={postObject.id}
-                                activity={true}
-                            />
-                        );
-                    })}
                     {postObjectArray.map((postObject) => {
                         return (
                             <Card

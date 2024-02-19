@@ -49,6 +49,7 @@ fs.readFile(
                 endDate: new Date(),
                 // and this (whether or not it's paid)
                 paid: Math.random() > 0.5 ? true : false,
+                // we should also think about whether or not the deadline is passed??
             };
             console.log(i);
             await ref.add(activityFormatted);

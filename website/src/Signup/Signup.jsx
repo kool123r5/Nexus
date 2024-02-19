@@ -7,6 +7,8 @@ import { Stepper, PasswordInput, TextInput } from "@mantine/core";
 import { IconArrowNarrowLeft, IconArrowNarrowRight, IconCheck } from "@tabler/icons-react";
 import { useDisclosure, useViewportSize } from "@mantine/hooks";
 import { Interest } from "./Interest";
+import React from "react";
+import tags from "./tagArray";
 
 export default function Signup() {
     const [email, setEmail] = useState("");
@@ -195,18 +197,17 @@ export default function Signup() {
                             <div className="Form_Container" id="Interests_Container">
                                 <form className="Center_Signup_Items">
                                     <div className="All_Interest_Items">
+                                    {tags.map((tag, index) => (
                                         <Interest
-                                            text={"Chess"}
+                                            key={index}
+                                            text={tag}
                                             interests={interests}
                                             setInterests={setInterests}
-                                            isInInterestsPreviously={interests.includes("Chess")}
+                                            isInInterestsPreviously={interests.includes(tag)}
                                         />
-                                        <Interest
-                                            text={"Tennis"}
-                                            interests={interests}
-                                            setInterests={setInterests}
-                                            isInInterestsPreviously={interests.includes("Tennis")}
-                                        />
+                                        ))}
+
+                                        {/*someone please prettier this i can not*/}
                                     </div>
                                 </form>
                             </div>

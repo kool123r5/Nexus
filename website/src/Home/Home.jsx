@@ -12,7 +12,7 @@ export default function Home() {
     const [sorted_documents, setSortedDocuments] = useState(null);
 
     // when we make the model, change the query to reflect the type the user would actually want to see
-    const limit = 10; // the limit of how many documents to get (we don't wanna get hundreds extra when we don't need it)
+    const limit = 30; // the limit of how many documents to get (we don't wanna get hundreds extra when we don't need it)
     const { documents, error } = useCollection("activities", null, null, limit);
 
     useEffect(() => {

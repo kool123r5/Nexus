@@ -1,13 +1,12 @@
-import Navbar from "../Navbar/Navbar";
-import "./Profile.css";
-import { useDocument } from "../hooks/useDocument";
-import { Link, useParams } from "react-router-dom";
-import { useState } from "react";
-import { useEffect } from "react";
-import ProjectFilter from "../Filter/ProjectFilter";
-import { projectAuth, projectFirestore } from "../firebase/config";
 import firebase from "firebase/app";
+import { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
+import ProjectFilter from "../Filter/ProjectFilter";
+import Navbar from "../Navbar/Navbar";
+import { projectAuth, projectFirestore } from "../firebase/config";
+import { useDocument } from "../hooks/useDocument";
 import { useUserDocContext } from "../hooks/useUserDocContext";
+import "./Profile.css";
 
 export default function Profile() {
     const { id } = useParams();

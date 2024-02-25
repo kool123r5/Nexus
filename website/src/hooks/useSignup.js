@@ -7,23 +7,42 @@ export const useSignup = () => {
     const [error, setError] = useState(null);
     const [isPending, setIsPending] = useState(false);
 
+    const hasNumber = (str) => {
+        return /\d/.test(str);
+    };
+
     const signup = async (email, password, confirmPassword, displayName, age, grade, loc, pfp, interests) => {
         setError(null);
         setIsPending(true);
-        try {
-            // signup
-            const res = await projectAuth.createUserWithEmailAndPassword(email, password).catch((err) => {
-                setError(err.message);
-                console.log(err);
-            });
 
-            if (!res) {
-                throw new Error("Could not complete signup");
+        try {
+            if (password.length < 6) {
+                setError("Your password must be at least 6 characters long!");
+                return;
+            }
+
+            if (!hasNumber(password)) {
+                setError("Your password must have at least 1 number!");
+                return;
             }
 
             if (password != confirmPassword) {
-                throw new Error("Passwords don't match");
+                // throw new Error("Passwords don't match");
+                setError("Passwords don't match!");
+                return;
             }
+
+            if (displayName == "") {
+                setError("Please enter a display name!");
+                return;
+            }
+
+            if (interests.length == 0) {
+                setError("Please choose some interests!");
+                return;
+            }
+
+            const res = await projectAuth.createUserWithEmailAndPassword(email, password);
 
             // sends the user a verification email
             await res.user.sendEmailVerification();
@@ -39,7 +58,7 @@ export const useSignup = () => {
             }
 
             await res.user.updateProfile({ displayName: displayName, photoURL: url });
-            console.log(res.user);
+
             // create a user document
             await projectFirestore
                 .collection("users")
@@ -56,10 +75,6 @@ export const useSignup = () => {
                     location: loc,
                     pfp: url,
                     interests,
-                })
-                .catch((err) => {
-                    setError(err.message);
-                    console.log(err);
                 });
 
             if (!isCancelled) {
@@ -67,9 +82,10 @@ export const useSignup = () => {
                 setError(null);
             }
 
-            location.reload();
+            // location.reload();
         } catch (err) {
             if (!isCancelled) {
+                console.log(err);
                 setError(err.message);
                 setIsPending(false);
             }

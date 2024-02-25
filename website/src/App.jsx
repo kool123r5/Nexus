@@ -1,28 +1,20 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
-import Home from "./Home/Home";
-import Forum from "./Forum/Forum";
-import School from "./School/School";
-import Profile from "./Profile/Profile";
-import Login from "./Login/Login";
-import { useAuthContext } from "./hooks/useAuthContext";
-import { useUserDocContext } from "./hooks/useUserDocContext";
-import Navbar from "./Navbar/Navbar";
-import Signup from "./Signup/Signup";
+import { Navigate, Route, Routes } from "react-router-dom";
 import Activity from "./Activity/Activity";
-import PasswordReset from "./PasswordReset/PasswordReset";
-import ProfileSettings from "./Profile/ProfileSettings";
-import Create from "./Forum/Create";
-import PostDetail from "./Forum/PostDetail";
 import EmailTemplate from "./EmailTemplate/EmailTemplate";
+import Create from "./Forum/Create";
+import Forum from "./Forum/Forum";
+import PostDetail from "./Forum/PostDetail";
+import Home from "./Home/Home";
+import Login from "./Login/Login";
+import PasswordReset from "./PasswordReset/PasswordReset";
+import Profile from "./Profile/Profile";
+import ProfileSettings from "./Profile/ProfileSettings";
+import School from "./School/School";
+import Signup from "./Signup/Signup";
+import { useAuthContext } from "./hooks/useAuthContext";
 
 export default function App() {
     const { user, authIsReady } = useAuthContext();
-
-    const { userDoc, error } = useUserDocContext();
-    if (userDoc) {
-        console.log(userDoc);
-    }
 
     return (
         <>

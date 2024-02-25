@@ -1,13 +1,11 @@
-import { useState } from "react";
-import { projectAuth, projectFirestore, projectStorage } from "../firebase/config";
-import { useDocument } from "../hooks/useDocument";
-import Navbar from "../Navbar/Navbar";
-import "./ProfileSettings.css";
 import firebase from "firebase/app";
+import { useState } from "react";
+import Navbar from "../Navbar/Navbar";
+import { projectAuth, projectFirestore, projectStorage } from "../firebase/config";
 import getDefaultPfp from "../functions/getDefaultPfp";
 import resizeImg from "../functions/resizeImg";
-import { useContext } from "react";
 import { useUserDocContext } from "../hooks/useUserDocContext";
+import "./ProfileSettings.css";
 
 export default function ProfileSettings() {
     const { userDoc: document, error } = useUserDocContext();

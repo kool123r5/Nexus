@@ -1,13 +1,10 @@
-import "./Signup.css";
-import { useState } from "react";
-import { useRef } from "react";
-import { useSignup } from "../hooks/useSignup";
-import useGoogleSignIn from "../hooks/useGoogleSignIn";
-import { Stepper, PasswordInput, TextInput } from "@mantine/core";
-import { IconArrowNarrowLeft, IconArrowNarrowRight, IconCheck } from "@tabler/icons-react";
+import { PasswordInput, Stepper, TextInput } from "@mantine/core";
 import { useDisclosure, useViewportSize } from "@mantine/hooks";
+import { IconArrowNarrowLeft, IconArrowNarrowRight, IconCheck } from "@tabler/icons-react";
+import { useRef, useState } from "react";
+import { useSignup } from "../hooks/useSignup";
 import { Interest } from "./Interest";
-import React from "react";
+import "./Signup.css";
 import tags from "./tagArray";
 
 export default function Signup() {
@@ -63,28 +60,11 @@ export default function Signup() {
     };
 
     const { signup, isPending, error } = useSignup();
-    const { signInWithGoogle, error2 } = useGoogleSignIn();
+    // const { signInWithGoogle, error2 } = useGoogleSignIn();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        if (
-            password == confirmPassword &&
-            password.length >= 6 &&
-            hasNumber(password) &&
-            email != "" &&
-            displayName != "" &&
-            interests != []
-        ) {
-            signup(email, password, confirmPassword, displayName, age, grade, location, profilePicture, interests);
-        }
-    };
-
-    const handleGoogleSignIn = async () => {
-        signInWithGoogle();
-    };
-
-    const hasNumber = (str) => {
-        return /\d/.test(str);
+        signup(email, password, confirmPassword, displayName, age, grade, location, profilePicture, interests);
     };
 
     return (
@@ -92,6 +72,7 @@ export default function Signup() {
             <div id="Whole_Container">
                 <div id="Signup_Text_Container">
                     <h1 id="Signup_Text">Sign Up</h1>
+                    {error && <div className="errorDiv">{error}</div>}
                 </div>
                 {width > 750 && (
                     <div id="Stepper_Container">
@@ -197,17 +178,15 @@ export default function Signup() {
                             <div className="Form_Container" id="Interests_Container">
                                 <form className="Center_Signup_Items">
                                     <div className="All_Interest_Items">
-                                    {tags.map((tag, index) => (
-                                        <Interest
-                                            key={index}
-                                            text={tag}
-                                            interests={interests}
-                                            setInterests={setInterests}
-                                            isInInterestsPreviously={interests.includes(tag)}
-                                        />
+                                        {tags.map((tag, index) => (
+                                            <Interest
+                                                key={index}
+                                                text={tag}
+                                                interests={interests}
+                                                setInterests={setInterests}
+                                                isInInterestsPreviously={interests.includes(tag)}
+                                            />
                                         ))}
-
-                                        {/*someone please prettier this i can not*/}
                                     </div>
                                 </form>
                             </div>

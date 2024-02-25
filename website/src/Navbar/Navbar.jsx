@@ -1,10 +1,8 @@
-import {} from "react";
+import { Burger } from "@mantine/core";
+import { useDisclosure, useViewportSize } from "@mantine/hooks";
+import { useNavigate } from "react-router-dom";
 import { useAuthContext } from "../hooks/useAuthContext";
 import "./Navbar.css";
-import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
-import { useViewportSize, useDisclosure } from "@mantine/hooks";
-import { Burger } from "@mantine/core";
 
 export default function Navbar() {
     let { user, authIsReady } = useAuthContext();
@@ -29,7 +27,7 @@ export default function Navbar() {
         navigate(`/profile/${user.uid}`);
     };
 
-    const { height, width } = useViewportSize();
+    const { width } = useViewportSize();
     const [opened, { toggle }] = useDisclosure();
 
     return (

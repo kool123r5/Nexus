@@ -3,7 +3,7 @@ import { projectAuth, googleProvider, projectFirestore } from "../firebase/confi
 import { useNavigate } from "react-router-dom";
 
 const useGoogleSignIn = () => {
-    const [error2, setError] = useState(null);
+    const [error, setError] = useState(null);
     const navigateTo = useNavigate();
 
     const signInWithGoogle = async () => {
@@ -30,14 +30,14 @@ const useGoogleSignIn = () => {
                     });
             }
 
-            navigateTo("/signup2");
+            navigateTo("/");
             location.reload();
         } catch (err) {
             setError(err.message);
         }
     };
 
-    return { signInWithGoogle, error2 };
+    return { signInWithGoogle, error };
 };
 
 export default useGoogleSignIn;

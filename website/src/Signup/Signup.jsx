@@ -172,17 +172,17 @@ export default function Signup() {
                         <PrevButton prevStep={prevStep} />
                         <h3 id="Interests_Box_Title">What opportunities are you interested in finding?</h3>
                         <div className="Form_Container" id="Interests_Container">
-                            <div className="All_Interest_Items">
-                                {tags.map((tag, index) => (
-                                    <Interest
-                                        key={index}
-                                        text={tag}
-                                        interests={interests}
-                                        setInterests={setInterests}
-                                        isInInterestsPreviously={interests.includes(tag)}
-                                    />
-                                ))}
-                            </div>
+                            {/* <div className="All_Interest_Items"> */}
+                            {tags.map((tag, index) => (
+                                <Interest
+                                    key={index}
+                                    text={tag}
+                                    interests={interests}
+                                    setInterests={setInterests}
+                                    isInInterestsPreviously={interests.includes(tag)}
+                                />
+                            ))}
+                            {/* </div> */}
                         </div>
                         <SubmitButton handleSubmit={handleSubmit} />
                     </div>

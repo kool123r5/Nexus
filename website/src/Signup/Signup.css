@@ -67,13 +67,13 @@
 #Individual_Step_3 {
     width: 100%;
     flex-direction: column;
-    height:55%;
+    height: 55%;
 }
 
 #Interests_Box_Title {
     margin: 0;
-    margin-top:0vh;
-    color: var(--white)
+    margin-top: 0vh;
+    color: var(--white);
 }
 
 .Form_Container {
@@ -82,20 +82,17 @@
     border-radius: 10px;
     margin: 0 !important;
     margin-top: 1em !important;
-    margin-bottom:1em !important;
+    margin-bottom: 1em !important;
     height: 100% !important;
     padding-right: 3em;
     padding-left: 3em;
     padding-top: 0em;
-    padding-bottom: 1em;
+    padding-bottom: 0em;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-
-#Interests_Container {
-    padding-left: 1vw;
-    padding-right: 1vw;
-}
-
 
 .All_Interest_Items {
     display: flex;
@@ -104,11 +101,14 @@
 
 #Interests_Container {
     width: 75%;
-    height: 75%;
+    max-width: 75%;
     overflow-y: scroll;
+    padding-left: 1vw;
+    padding-right: 1vw;
     padding-bottom: 0.5em;
-    margin-bottom: 20vh;
-    margin-top: 10vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .Interests_Signup_Box {
@@ -145,7 +145,6 @@
     opacity: 1;
     text-align: center;
     cursor: pointer;
-    transition: 0.3s all;
 }
 
 .sign_up_prev_button {
@@ -160,7 +159,6 @@
     opacity: 1;
     text-align: center;
     cursor: pointer;
-    transition: 0.3s all;
 }
 
 .sign_up_next_button:hover {
@@ -202,7 +200,6 @@
     opacity: 1;
     text-align: center;
     cursor: pointer;
-    transition: 0.3s all;
 }
 
 .sign_up_submit_button:hover {
@@ -219,7 +216,6 @@
     outline: none;
 }
 
-
 .mantine-PasswordInput-input {
     background-color: var(--gray_E) !important;
     font-family: "Inter", sans-serif !important;
@@ -229,13 +225,13 @@
     border-left: 1px solid var(--gray_E) !important;
     border-right: 1px solid var(--gray_E) !important;
     border-radius: 0 !important;
-    transition: 0.3s all;
 }
 
 .mantine-PasswordInput-root {
     text-align: center !important;
     width: 100%;
-    margin-top: 1.5em;
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
 }
 
 .mantine-TextInput-input {
@@ -246,7 +242,6 @@
     border-radius: 0 !important;
     background-color: var(--gray_E) !important;
     font-family: "Inter", sans-serif !important;
-    transition: 0.3s all;
 }
 
 .mantine-TextInput-input:focus {
@@ -258,7 +253,8 @@
 }
 
 .mantine-TextInput-root {
-    margin-top: 1.5em;
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
     width: 100%;
 }
 

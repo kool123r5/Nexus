@@ -145,6 +145,7 @@
     opacity: 1;
     text-align: center;
     cursor: pointer;
+    transition: 0.3s all; 
 }
 
 .sign_up_prev_button {
@@ -159,6 +160,7 @@
     opacity: 1;
     text-align: center;
     cursor: pointer;
+    transition: 0.3s all; 
 }
 
 .sign_up_next_button:hover {
@@ -200,6 +202,7 @@
     opacity: 1;
     text-align: center;
     cursor: pointer;
+    transition: 0.3s all; 
 }
 
 .sign_up_submit_button:hover {

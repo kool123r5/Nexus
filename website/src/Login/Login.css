@@ -99,6 +99,7 @@
     justify-content: center;
     text-align: center;
     font-size: 90%;
+    font-weight: 600;
 }
 
 .Submit_Login_Button svg {
@@ -118,7 +119,17 @@
 
 .forgotPassword {
     color: var(--orange);
+    transition: 0.3s all;
 }
+
+.forgotPassword:hover {
+    color: var(--white);
+}
+
+.forgotPassword:focus {
+    color: var(--white);
+}
+
 
 .divider {
     width: 81%;

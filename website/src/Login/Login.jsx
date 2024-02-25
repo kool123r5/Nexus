@@ -6,6 +6,7 @@ import { IconBrandGoogleFilled } from "@tabler/icons-react";
 import { Divider, PasswordInput, TextInput } from "@mantine/core";
 import { useViewportSize } from "@mantine/hooks";
 
+
 export default function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");

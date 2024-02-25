@@ -3,7 +3,6 @@
     display: flex;
     flex-direction: column;
     height: 100vh;
-    justify-content: space-around;
 }
 
 #Signup_Text_Container {
@@ -32,7 +31,7 @@
     justify-content: center;
     padding-right: 2vw;
     padding-left: 2vw;
-    margin-top: 0.5em;
+    margin-top: 3em;
 }
 
 #Signup_Stepper {
@@ -52,10 +51,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 100vw;
+    min-width: 100vw;
     min-height: 50vh;
-    height: 75vh;
-    margin-bottom: 10px;
+    margin-bottom: 7vh;
 }
 
 #Individual_Step_1 {
@@ -69,10 +67,13 @@
 #Individual_Step_3 {
     width: 100%;
     flex-direction: column;
+    height:55%;
 }
 
 #Interests_Box_Title {
     margin: 0;
+    margin-top:0vh;
+    color: var(--white)
 }
 
 .Form_Container {
@@ -80,20 +81,21 @@
     border: 0.2em solid var(--gray_A);
     border-radius: 10px;
     margin: 0 !important;
+    margin-top: 1em !important;
+    margin-bottom:1em !important;
     height: 100% !important;
     padding-right: 3em;
     padding-left: 3em;
     padding-top: 0em;
-    padding-bottom: 2.5em;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    padding-bottom: 1em;
+    text-align: center;
 }
 
 #Interests_Container {
     padding-left: 1vw;
     padding-right: 1vw;
 }
+
 
 .All_Interest_Items {
     display: flex;
@@ -119,14 +121,14 @@
 
 .sign_up_next_button_container {
     position: absolute;
-    right: 1%;
+    right: 1.5%;
     top: 50%;
     border-radius: 50%;
 }
 
 .sign_up_prev_button_container {
     position: absolute;
-    left: 1%;
+    left: 1.5%;
     top: 50%;
     border-radius: 50%;
 }
@@ -137,12 +139,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100px;
-    width: 100px;
+    height: 90px;
+    width: 90px;
     border-radius: 50%;
     opacity: 1;
     text-align: center;
     cursor: pointer;
+    transition: 0.3s all;
 }
 
 .sign_up_prev_button {
@@ -151,12 +154,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100px;
-    width: 100px;
+    height: 90px;
+    width: 90px;
     border-radius: 50%;
     opacity: 1;
     text-align: center;
     cursor: pointer;
+    transition: 0.3s all;
 }
 
 .sign_up_next_button:hover {
@@ -181,7 +185,7 @@
 
 .sign_up_submit_button_container {
     position: absolute;
-    right: 1%;
+    right: 1.5%;
     top: 50%;
     border-radius: 50%;
 }
@@ -192,12 +196,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100px;
-    width: 100px;
+    height: 90px;
+    width: 90px;
     border-radius: 50%;
     opacity: 1;
     text-align: center;
     cursor: pointer;
+    transition: 0.3s all;
 }
 
 .sign_up_submit_button:hover {
@@ -213,6 +218,7 @@
 .mantine-Stepper-root :focus {
     outline: none;
 }
+
 
 .mantine-PasswordInput-input {
     background-color: var(--gray_E) !important;

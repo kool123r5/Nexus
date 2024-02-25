@@ -170,7 +170,7 @@ export default function Signup() {
                 {active === 2 && (
                     <div ref={element3Ref} className="Individual_Step" id="Individual_Step_3">
                         <PrevButton prevStep={prevStep} />
-                        <h2 id="Interests_Box_Title">Interests</h2>
+                        <h3 id="Interests_Box_Title">What opportunities are you interested in finding?</h3>
                         <div className="Form_Container" id="Interests_Container">
                             <div className="All_Interest_Items">
                                 {tags.map((tag, index) => (

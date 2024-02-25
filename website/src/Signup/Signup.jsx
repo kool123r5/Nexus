@@ -1,11 +1,11 @@
 import { PasswordInput, Stepper, TextInput } from "@mantine/core";
 import { useDisclosure, useViewportSize } from "@mantine/hooks";
-import { IconArrowNarrowLeft, IconArrowNarrowRight, IconCheck } from "@tabler/icons-react";
 import { useRef, useState } from "react";
 import { useSignup } from "../hooks/useSignup";
 import { Interest } from "./Interest";
 import "./Signup.css";
 import tags from "./tagArray";
+import { NextButton, PrevButton, SubmitButton } from "./Buttons";
 
 export default function Signup() {
     const [email, setEmail] = useState("");
@@ -91,152 +91,102 @@ export default function Signup() {
                     </div>
                 )}
 
-                <div id="Steps_Container" ref={stepsRef}>
-                    {active === 0 && (
-                        <div ref={element1Ref} className="Individual_Step" id="Individual_Step_1">
-                            <form className="Center_Signup_Items" onSubmit={handleSubmit}>
-                                <div className="Form_Container">
-                                    <TextInput
-                                        className="Signup_Input"
-                                        placeholder="Full Name"
-                                        type="text"
-                                        value={displayName}
-                                        onChange={(e) => setName(e.target.value)}
-                                    ></TextInput>
+                {active === 0 && (
+                    <div ref={element1Ref} className="Individual_Step" id="Individual_Step_1">
+                        <div className="Form_Container">
+                            <TextInput
+                                className="Signup_Input"
+                                placeholder="Full Name"
+                                type="text"
+                                value={displayName}
+                                onChange={(e) => setName(e.target.value)}
+                            ></TextInput>
 
-                                    <TextInput
-                                        className="Signup_Input"
-                                        placeholder="Email"
-                                        type="email"
-                                        value={email}
-                                        onChange={(e) => setEmail(e.target.value)}
-                                    ></TextInput>
+                            <TextInput
+                                className="Signup_Input"
+                                placeholder="Email"
+                                type="email"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                            ></TextInput>
 
-                                    <PasswordInput
-                                        className="Signup_Input"
-                                        placeholder="Password"
-                                        onChange={(e) => setPassword(e.target.value)}
-                                        value={password}
-                                        visible={visible}
-                                        onVisibilityChange={toggle}
-                                    ></PasswordInput>
+                            <PasswordInput
+                                className="Signup_Input"
+                                placeholder="Password"
+                                onChange={(e) => setPassword(e.target.value)}
+                                value={password}
+                                visible={visible}
+                                onVisibilityChange={toggle}
+                            ></PasswordInput>
 
-                                    <PasswordInput
-                                        className="Signup_Input"
-                                        placeholder="Confirm Password"
-                                        value={confirmPassword}
-                                        onChange={(e) => setConfirmPassword(e.target.value)}
-                                        visible={visible}
-                                        onVisibilityChange={toggle}
-                                    ></PasswordInput>
-                                </div>
-                            </form>
+                            <PasswordInput
+                                className="Signup_Input"
+                                placeholder="Confirm Password"
+                                value={confirmPassword}
+                                onChange={(e) => setConfirmPassword(e.target.value)}
+                                visible={visible}
+                                onVisibilityChange={toggle}
+                            ></PasswordInput>
+                        </div>
+                        <NextButton nextStep={nextStep} />
+                    </div>
+                )}
+
+                {active === 1 && (
+                    <div ref={element2Ref} className="Individual_Step" id="Individual_Step_2">
+                        <PrevButton prevStep={prevStep} />
+                        <div className="Form_Container">
+                            <TextInput
+                                placeholder="Age"
+                                type="number"
+                                value={age}
+                                onChange={(e) => setAge(e.target.value)}
+                            />
+
+                            <TextInput
+                                placeholder="Grade (6 - 12)"
+                                type="number"
+                                value={grade}
+                                onChange={(e) => setGrade(e.target.value)}
+                            />
+
+                            <TextInput
+                                placeholder="Location"
+                                type="text"
+                                value={location}
+                                onChange={(e) => setLocation(e.target.value)}
+                            />
 
                             <br />
+
+                            <label>
+                                Profile Picture: <input type="file" onChange={(e) => setProfilePicture(e.target.files[0])} />
+                            </label>
                         </div>
-                    )}
+                        <NextButton nextStep={nextStep} />
+                    </div>
+                )}
 
-                    {active === 1 && (
-                        <div ref={element2Ref} className="Individual_Step" id="Individual_Step_2">
-                            <form className="Center_Signup_Items" onSubmit={handleSubmit}>
-                                <div className="Form_Container">
-                                    <TextInput
-                                        placeholder="Age"
-                                        type="number"
-                                        value={age}
-                                        onChange={(e) => setAge(e.target.value)}
+                {active === 2 && (
+                    <div ref={element3Ref} className="Individual_Step" id="Individual_Step_3">
+                        <PrevButton prevStep={prevStep} />
+                        <h2 id="Interests_Box_Title">Interests</h2>
+                        <div className="Form_Container" id="Interests_Container">
+                            <div className="All_Interest_Items">
+                                {tags.map((tag, index) => (
+                                    <Interest
+                                        key={index}
+                                        text={tag}
+                                        interests={interests}
+                                        setInterests={setInterests}
+                                        isInInterestsPreviously={interests.includes(tag)}
                                     />
-
-                                    <TextInput
-                                        placeholder="Grade (6 - 12)"
-                                        type="number"
-                                        value={grade}
-                                        onChange={(e) => setGrade(e.target.value)}
-                                    />
-
-                                    <TextInput
-                                        placeholder="Location"
-                                        type="text"
-                                        value={location}
-                                        onChange={(e) => setLocation(e.target.value)}
-                                    />
-
-                                    <br />
-
-                                    <label>
-                                        Profile Picture:{" "}
-                                        <input type="file" onChange={(e) => setProfilePicture(e.target.files[0])} />
-                                    </label>
-                                </div>
-                            </form>
-                        </div>
-                    )}
-
-                    {active === 2 && (
-                        <div ref={element3Ref} className="Individual_Step" id="Individual_Step_3">
-                            <h2 id="Interests_Box_Title">Interests</h2>
-                            <div className="Form_Container" id="Interests_Container">
-                                <form className="Center_Signup_Items">
-                                    <div className="All_Interest_Items">
-                                        {tags.map((tag, index) => (
-                                            <Interest
-                                                key={index}
-                                                text={tag}
-                                                interests={interests}
-                                                setInterests={setInterests}
-                                                isInInterestsPreviously={interests.includes(tag)}
-                                            />
-                                        ))}
-                                    </div>
-                                </form>
+                                ))}
                             </div>
                         </div>
-                    )}
-                </div>
-
-                <div className="sign_up_button_container">
-                    {(active === 0 || active === 1) && (
-                        <div className="sign_up_next_button_container">
-                            <button type="submit" onClick={nextStep} className="sign_up_next_button">
-                                <div
-                                    style={{
-                                        display: "flex",
-                                    }}
-                                >
-                                    <IconArrowNarrowRight size={35} />
-                                </div>
-                            </button>
-                        </div>
-                    )}
-
-                    {(active === 1 || active === 2) && (
-                        <div className="sign_up_prev_button_container">
-                            <button type="submit" onClick={prevStep} className="sign_up_prev_button">
-                                <div
-                                    style={{
-                                        display: "flex",
-                                    }}
-                                >
-                                    <IconArrowNarrowLeft size={35} />
-                                </div>
-                            </button>
-                        </div>
-                    )}
-
-                    {active === 2 && (
-                        <div className="sign_up_submit_button_container">
-                            <button type="submit" className="sign_up_submit_button" onClick={handleSubmit}>
-                                <div
-                                    style={{
-                                        display: "flex",
-                                    }}
-                                >
-                                    <IconCheck size={35} />
-                                </div>
-                            </button>
-                        </div>
-                    )}
-                </div>
+                        <SubmitButton handleSubmit={handleSubmit} />
+                    </div>
+                )}
             </div>
         </>
     );

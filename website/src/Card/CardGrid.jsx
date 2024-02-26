@@ -52,7 +52,7 @@ export default function Card({ title, text, author, id, activity }) {
                 <p className="card_body_text">{wrapped_text}</p>
             </div>
             <div className="card_author_container">
-                <p className="card_author_text">By: {author}</p>
+                <p className="card_author_text">{author}</p>
             </div>
         </div>
     );

@@ -27,7 +27,7 @@
     left:0%;
     z-index: 10;
     height:100%;
-    opacity: 20%;
+    opacity: 40%;
     border: 1px 1px 1px 1px black;
     transition: all 0.5s;
 }
@@ -45,7 +45,7 @@
     right:0%;
     z-index: 10;
     height:100%;
-    opacity: 20%;
+    opacity: 40%;
     border: 1px 1px 1px 1px black;
     transition: all 0.5s;
 }

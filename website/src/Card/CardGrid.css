@@ -3,20 +3,23 @@
     --gray_A: #1c1c21;
     --gray_B: #343434;
     --gray_C: #464646;
+    --aquablue: #1a1919;
+    --lighteraquablue: #30343e;
+    --lightblue: #35343c;
 }
 
 .card {
-    background-color: white;
+    background-color: var(--gray_E);
     width: 250px;
-    height: 150px;
+    height: 200px;
     padding-top: 10px;
     padding-bottom: 10px;
-    margin: 10px;
-    border-radius: 7px;
+    margin: 0px;
+    border-radius: 0px;
     -webkit-transition: all 1s;
     -moz-transition: all 1s;
     -ms-transition: all 1s;
-    transition: all 1s;
+    transition: all 0.5s;
     text-align: center;
     border-style: solid;
     box-shadow: 0px 0px 0px 0px;
@@ -25,45 +28,60 @@
     flex: 0 0 auto;
     overflow: hidden;
     box-sizing: content-box;
-    padding-right: 2px;
-    padding-left: 2px;
-    border: 1px 1px 1px 1px solid var(--white);
+    padding-right: 30px;
+    padding-left: 30px;
+    border: 1px solid var(--lightblue);
+    border-top: none;
+    border-bottom: none;
 }
 
-/* .card:hover{
-    transform: scaleX(1.2) scaleY(1.25);
-    transition-delay: 1s;
-    text-align: center;
-    border-style: solid;
-    box-shadow: 0px 0px 3px 3px var(--orange);
-    z-index: 1;
+.card:hover{
+    background-color: var(--lighteraquablue);
 }
-.card:hover .card_body_text,
-.card:hover .card_title_text{
-    transform:scaleX(0.833) scaleY(0.8);
-    transition-delay: 1s;
-} */
+
+.card_body_container{
+    height:70px;
+}
+
 
 .card_body_text {
-    color: black;
+    color: var(--white);
     -webkit-transition: all 1s;
     -moz-transition: all 1s;
     -ms-transition: all 1s;
     transition: all 1s;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card_title_container{
+    height:30px;
 }
 
 .card_title_text {
-    color: black;
+    color: var(--white);
     -webkit-transition: all 1s;
     -moz-transition: all 1s;
     -ms-transition: all 1s;
     transition: all 1s;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 900;
+    font-size:18px;
+}
+
+.card_author_container{
+    text-align:right;
+    height:30px;
 }
 
 .card_author_text {
-    color: black;
+    color: var(--white);
     -webkit-transition: all 1s;
     -moz-transition: all 1s;
     -ms-transition: all 1s;
     transition: all 1s;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 700;
 }

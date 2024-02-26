@@ -13,13 +13,14 @@ export default function Home() {
 
     // when we make the model, change the query to reflect the type the user would actually want to see
     const limit = 30; // the limit of how many documents to get (we don't wanna get hundreds extra when we don't need it)
-    const { documents, error } = useCollection("activities", null, null, limit);
+    const { documents, error } = useCollection("activities", null, null, limit, localStorage.getItem("ActivityDocuments"));
 
     useEffect(() => {
         if (error) {
             console.log("ERROR FETCHING DOCUMENTS");
         } else if (documents) {
             const sortedDocs = sortDocuments(documents);
+            localStorage.setItem("ActivityDocuments", JSON.stringify(sortedDocs));
             setSortedDocuments(sortedDocs);
         }
     }, [documents, error]);
@@ -27,7 +28,6 @@ export default function Home() {
     let uniqueTypeArr = null;
     if (sorted_documents) {
         uniqueTypeArr = getUniqueTypes(sorted_documents);
-        console.log(uniqueTypeArr);
     }
 
     return (

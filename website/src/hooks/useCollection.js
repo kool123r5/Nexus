@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import { projectFirestore } from "../firebase/config";
-import unixTimestampStringPastTimeLimit from "../functions/unixTimestampStringTTL";
+import unixTimestampStringPastTimeLimit from "../functions/unixTimestampStringPastTimeLimit";
 
 export const useCollection = (collection, _query, _orderBy, _limit, localStorageKey) => {
     const [documents, setDocuments] = useState(null);
@@ -19,6 +19,7 @@ export const useCollection = (collection, _query, _orderBy, _limit, localStorage
             localStorageKey == null ||
             timeLastFetched == null ||
             localStorageData == null ||
+            isNaN(timeLastFetched) ||
             unixTimestampStringPastTimeLimit(timeLastFetched)
         ) {
             let ref = projectFirestore.collection(collection);

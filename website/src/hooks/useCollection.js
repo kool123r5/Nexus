@@ -1,7 +1,8 @@
 import { useEffect, useState, useRef } from "react";
 import { projectFirestore } from "../firebase/config";
+import unixTimestampStringPastTimeLimit from "../functions/unixTimestampStringTTL";
 
-export const useCollection = (collection, _query, _orderBy, _limit, localStorageData) => {
+export const useCollection = (collection, _query, _orderBy, _limit, localStorageKey) => {
     const [documents, setDocuments] = useState(null);
     const [error, setError] = useState(null);
 
@@ -12,9 +13,16 @@ export const useCollection = (collection, _query, _orderBy, _limit, localStorage
     const limit = useRef(_limit).current;
 
     useEffect(() => {
-        if (localStorageData == null || localStorageData.length == 0) {
+        const localStorageData = JSON.parse(localStorage.getItem(localStorageKey));
+        const timeLastFetched = parseInt(localStorage.getItem(`Time${localStorageKey}`));
+        if (
+            localStorageKey == null ||
+            timeLastFetched == null ||
+            localStorageData == null ||
+            unixTimestampStringPastTimeLimit(timeLastFetched)
+        ) {
             let ref = projectFirestore.collection(collection);
-
+            console.log("RUNNING THE DB CALL...");
             if (query) {
                 ref = ref.where(...query);
             }
@@ -37,6 +45,8 @@ export const useCollection = (collection, _query, _orderBy, _limit, localStorage
                     // update state
                     setDocuments(results);
                     setError(null);
+                    localStorage.setItem(localStorageKey, JSON.stringify(results));
+                    localStorage.setItem(`Time${localStorageKey}`, Date.now().toString());
                 },
                 (error) => {
                     console.log(error);
@@ -47,10 +57,10 @@ export const useCollection = (collection, _query, _orderBy, _limit, localStorage
             // unsubscribe on unmount
             return () => unsubscribe();
         } else {
-            setDocuments(JSON.parse(localStorageData));
+            setDocuments(localStorageData);
             setError(null);
         }
-    }, [collection, query, orderBy, limit, localStorageData]);
+    }, [collection, query, orderBy, limit, localStorageKey]);
 
     return { documents, error };
 };

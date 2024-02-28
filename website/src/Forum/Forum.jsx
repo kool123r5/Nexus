@@ -6,7 +6,7 @@ import { Loader } from "@mantine/core";
 import Card from "../Card/CardGrid";
 
 export default function Forum() {
-    const { documents, error } = useCollection("posts", null, null, 5);
+    const { documents, error } = useCollection("posts", null, null, 5, "ForumDocuments");
     if (error) console.log(error);
 
     const sortedDocuments = sortPosts(documents);

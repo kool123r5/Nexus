@@ -1,35 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import "./CardGridForum.css";
 import PropTypes from "prop-types";
-
-function wrapText(text, chunkSize) {
-    const words = text.split(" ");
-    let wrappedText = "";
-    let currentLine = "";
-    let newLineCount = 0;
-
-    for (const word of words) {
-        if ((currentLine + word).length <= chunkSize) {
-            currentLine += (currentLine === "" ? "" : " ") + word;
-        } else {
-            wrappedText += (wrappedText === "" ? "" : "\n") + currentLine;
-            currentLine = word;
-            newLineCount++;
-
-            if (newLineCount === 7) {
-                break;
-            }
-        }
-    }
-
-    wrappedText += (wrappedText === "" ? "" : "\n") + currentLine;
-
-    if (newLineCount >= 7) {
-        wrappedText += "...";
-    }
-
-    return wrappedText;
-}
+import wrapText from "../functions/wrapText";
 
 export default function Card_Forum({ title, text, author, id, activity }) {
     let wrapped_text = wrapText(text, 20);

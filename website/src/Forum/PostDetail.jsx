@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { projectFirestore, timestamp } from "../firebase/config";
 import { useDocument } from "../hooks/useDocument";
@@ -40,14 +40,14 @@ const PostDetail = () => {
         completed: "Pending",
     };
     // const userDoc = useDocument("users", user.uid);
-    const userDoc = useUserDocContext();
-    if (userDoc.error) {
-        console.log(userDoc.error);
+    const { userDoc, error: userDocError } = useUserDocContext();
+    if (userDocError) {
+        console.log(userDocError);
     }
 
     const handleComplete = (e) => {
         e.preventDefault();
-        const postsAdded = userDoc.userDoc.postsAdded ;
+        const postsAdded = userDoc.postsAdded;
         const updatedPosts = postsAdded.map((post) => {
             if (
                 post["postDoc"]["_delegate"]["_key"]["path"]["segments"].at(-1) ===
@@ -70,7 +70,7 @@ const PostDetail = () => {
     };
 
     const handleRemove = async () => {
-        const posts = userDoc.userDoc.postsAdded || [];
+        const posts = userDoc.postsAdded || [];
 
         try {
             // Remove the activity from the user's document
@@ -94,9 +94,8 @@ const PostDetail = () => {
     };
 
     const handleAdd = () => {
-        const posts =userDoc.userDoc.postsAdded || [];
-        
-       
+        const posts = userDoc.postsAdded || [];
+
         // Update the activities array in the user's document
         const updatedPosts = [...posts, newPost];
 
@@ -111,8 +110,8 @@ const PostDetail = () => {
     };
 
     useEffect(() => {
-        if (userDoc.userDoc != null) {
-            const postsAdded = userDoc.userDoc.postsAdded || [];
+        if (userDoc != null) {
+            const postsAdded = userDoc.postsAdded || [];
             postsAdded.forEach((post) => {
                 if (
                     post["postDoc"]["_delegate"]["_key"]["path"]["segments"].at(-1) ==
@@ -126,8 +125,8 @@ const PostDetail = () => {
     }, [userDoc]);
 
     useEffect(() => {
-        if (userDoc.userDoc != null) {
-            const posts = userDoc.userDoc.postsAdded || [];
+        if (userDoc != null) {
+            const posts = userDoc.postsAdded || [];
             posts.forEach((post) => {
                 if (
                     post["postDoc"]["_delegate"]["_key"]["path"]["segments"].at(-1) ==

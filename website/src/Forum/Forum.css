@@ -9,12 +9,43 @@ html {
     width: 100vw;
 }
 
+
 .forumDiv {
     height: calc(100vh - 4em);
-    position: absolute;
-    bottom: 0;
+    margin-top: 4em;
     width: 100vw;
     overflow-x: hidden;
+}
+
+
+.carouselHeaderContainers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.forumFilterButton{
+    background-color: var(--gray_A);
+    height:6vh;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-left: 40px;
+    transition:0.5s all;
+}
+
+.forumFilterButton:hover{
+    background-color: var(--gray_B);
+}
+
+.forumFilterButton:focus{
+    outline:none;
+}
+
+
+.forumCarouselHeader {
+    text-align: center;
 }
 
 .loadingDiv {
@@ -34,6 +65,7 @@ html {
 
 .miscDiv {
     height: 50%;
+    margin-top:10vh;
 }
 
 h3 {
@@ -41,14 +73,75 @@ h3 {
     padding-left: 1vw;
 }
 
+.forYouCarouselContainer{
+    width: 100vw;
+    overflow:hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+.miscCarouselContainer{
+    width: 100vw;
+    overflow:hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
 .forYouCards {
     display: flex;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
+    overflow: hidden;
+    width:100vw;
+    padding-bottom:10px;
 }
 
 .miscCards {
     display: flex;
     align-items: center;
     flex-direction: row;
+}
+
+.forumSideBar{
+    position:absolute;
+    right:2%;
+    top:40%;
+    z-index: 10;
+    background-color: var(--gray_E);
+    display: flex;
+    align-items:center;
+    justify-content:flex-start;
+    flex-direction: column;
+
+    border: 2px solid var(--gray_A);
+    border-radius:10px;
+}
+
+.forumSideBarButton{
+    height:5vh;
+    font-size: 2vh;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width:20vh;
+    background-color: var(--gray_E);
+    transition:0.5s all;
+    padding:1.5em;
+}
+
+.forumSideBarButton:hover{
+    background-color: var(--gray_A);
+}
+
+
+.forumSideBarButton:focus{
+outline: none;}
+
+#miscForumButton{
+    margin-bottom:3vh;
+}
+
+#savedForumButton{
+    margin-top:8vh;
 }

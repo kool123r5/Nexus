@@ -165,7 +165,7 @@ export default function Profile() {
                 });
         }
     };
-
+                                                                                                                                                      
     const removeFriend = async () => {
         if (areFriends() && !requstSentByCurrentUser() && !requestReceivedByCurrentUser()) {
             await projectFirestore

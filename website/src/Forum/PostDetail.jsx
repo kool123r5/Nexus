@@ -47,7 +47,7 @@ const PostDetail = () => {
 
     const handleComplete = (e) => {
         e.preventDefault();
-        const postsAdded = userDoc.document.postsAdded;
+        const postsAdded = userDoc.userDoc.postsAdded ;
         const updatedPosts = postsAdded.map((post) => {
             if (
                 post["postDoc"]["_delegate"]["_key"]["path"]["segments"].at(-1) ===
@@ -70,7 +70,7 @@ const PostDetail = () => {
     };
 
     const handleRemove = async () => {
-        const posts = userDoc.document.postsAdded || [];
+        const posts = userDoc.userDoc.postsAdded || [];
 
         try {
             // Remove the activity from the user's document
@@ -94,8 +94,9 @@ const PostDetail = () => {
     };
 
     const handleAdd = () => {
-        const posts = userDoc.document.postsAdded || [];
-
+        const posts =userDoc.userDoc.postsAdded || [];
+        
+       
         // Update the activities array in the user's document
         const updatedPosts = [...posts, newPost];
 
@@ -111,7 +112,7 @@ const PostDetail = () => {
 
     useEffect(() => {
         if (userDoc.document != null) {
-            const postsAdded = userDoc.document.postsAdded || [];
+            const postsAdded = userDoc.userDoc.postsAdded || [];
             postsAdded.forEach((post) => {
                 console.log(post);
                 if (
@@ -127,7 +128,7 @@ const PostDetail = () => {
 
     useEffect(() => {
         if (userDoc.document != null) {
-            const posts = userDoc.document.postsAdded || [];
+            const posts = userDoc.userDoc.postsAdded || [];
             posts.forEach((post) => {
                 if (
                     post["postDoc"]["_delegate"]["_key"]["path"]["segments"].at(-1) ==
@@ -244,7 +245,7 @@ const PostDetail = () => {
                     <p>Updated At: {document.updatedAt && document.updatedAt.toDate().toString()}</p>
                 </>
             )}
-            {document && !editable && !disabled && (
+            {document && userDoc && !editable && !disabled && (
                 <button id="btn" onClick={handleAdd} disabled={disabled}>
                     Add Activity
                 </button>

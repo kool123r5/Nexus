@@ -111,10 +111,9 @@ const PostDetail = () => {
     };
 
     useEffect(() => {
-        if (userDoc.document != null) {
+        if (userDoc.userDoc != null) {
             const postsAdded = userDoc.userDoc.postsAdded || [];
             postsAdded.forEach((post) => {
-                console.log(post);
                 if (
                     post["postDoc"]["_delegate"]["_key"]["path"]["segments"].at(-1) ==
                         newPost["postDoc"]["_delegate"]["_key"]["path"]["segments"].at(-1) &&
@@ -127,7 +126,7 @@ const PostDetail = () => {
     }, [userDoc]);
 
     useEffect(() => {
-        if (userDoc.document != null) {
+        if (userDoc.userDoc != null) {
             const posts = userDoc.userDoc.postsAdded || [];
             posts.forEach((post) => {
                 if (

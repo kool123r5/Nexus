@@ -12,6 +12,7 @@ import ProfileSettings from "./Profile/ProfileSettings";
 import School from "./School/School";
 import Signup from "./Signup/Signup";
 import { useAuthContext } from "./hooks/useAuthContext";
+import Counsellor from "./Counsellor/Counsellor";
 
 export default function App() {
     const { user, authIsReady } = useAuthContext();
@@ -21,6 +22,7 @@ export default function App() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/forum" element={<Forum />} />
+                <Route path="/counsellor" element={<Counsellor />} />
                 <Route path="/school" element={<School />} />
                 {authIsReady && (
                     <Route path="/profile/settings" element={user ? <ProfileSettings /> : <Navigate to="/" />} />

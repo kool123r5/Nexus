@@ -14,6 +14,9 @@ export default function Navbar() {
     const handleHomeClick = () => {
         navigate("/");
     };
+    const handleCounsellorClick = () => {
+        navigate("/counsellor");
+    };
     const handleForumClick = () => {
         navigate("/forum");
     };
@@ -36,6 +39,9 @@ export default function Navbar() {
                 <div className="navbar">
                     <button className="home" onClick={handleHomeClick}>
                         Home
+                    </button>
+                    <button className="counsellor" onClick={handleCounsellorClick}>
+                        Counsellor
                     </button>
                     <button className="studentForum" onClick={handleForumClick}>
                         Student Forum
@@ -72,6 +78,9 @@ export default function Navbar() {
                             <nav>
                                 <button className="home_burger" onClick={handleHomeClick}>
                                     Home
+                                </button>
+                                <button className="counsellor_burger" onClick={handleHomeClick}>
+                                    Counsellor
                                 </button>
                                 <button className="studentForum_burger" onClick={handleForumClick}>
                                     Student Forum

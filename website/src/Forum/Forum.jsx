@@ -8,7 +8,7 @@ import React, { useRef } from "react";
 
 
 export default function Forum() {
-    const { documents, error } = useCollection("posts", null, null, 5);
+    const { documents, error } = useCollection("posts", null, null, 5, "ForumDocuments");
     if (error) console.log(error);
 
     const sortedDocuments = sortPosts(documents);

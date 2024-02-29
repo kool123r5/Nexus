@@ -114,7 +114,7 @@ export default function Profile() {
         : null;
 
     const searchedActivities = filteredActivities
-        ? filteredActivities.filter((document) => document.title.toLowerCase().includes(searchQuery.toLowerCase()))
+        ? filteredActivities.filter((document) => document.title.includes(searchQuery))
         : null;
 
     const lastRowIndex = currentPage * rowsPerPage;
@@ -165,7 +165,7 @@ export default function Profile() {
                 });
         }
     };
-
+                                                                                                                                                      
     const removeFriend = async () => {
         if (areFriends() && !requstSentByCurrentUser() && !requestReceivedByCurrentUser()) {
             await projectFirestore

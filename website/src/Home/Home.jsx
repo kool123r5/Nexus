@@ -13,7 +13,7 @@ export default function Home() {
 
     // when we make the model, change the query to reflect the type the user would actually want to see
     const limit = 30; // the limit of how many documents to get (we don't wanna get hundreds extra when we don't need it)
-    const { documents, error } = useCollection("activities", null, null, limit);
+    const { documents, error } = useCollection("activities", null, null, limit, "ActivityDocuments");
 
     useEffect(() => {
         if (error) {
@@ -27,7 +27,6 @@ export default function Home() {
     let uniqueTypeArr = null;
     if (sorted_documents) {
         uniqueTypeArr = getUniqueTypes(sorted_documents);
-        console.log(uniqueTypeArr);
     }
 
     return (

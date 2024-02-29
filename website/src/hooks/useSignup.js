@@ -72,6 +72,7 @@ export const useSignup = () => {
                     friendRequestsReceived: [],
                     age,
                     grade,
+                    postsAdded:[],
                     location: loc,
                     pfp: url,
                     interests,

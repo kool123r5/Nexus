@@ -5,7 +5,6 @@ import PropTypes from "prop-types";
 
 export default function HomeSection({ uniqueTypeObj, sorted_documents }) {
     let type = Object.keys(uniqueTypeObj);
-    console.log(type);
     let index_array = uniqueTypeObj[type];
     let postObjectArray = [];
     for (let i = 0; i < index_array.length; i++) {

@@ -79,7 +79,7 @@ export default function Navbar() {
                                 <button className="home_burger" onClick={handleHomeClick}>
                                     Home
                                 </button>
-                                <button className="counsellor_burger" onClick={handleHomeClick}>
+                                <button className="counsellor_burger" onClick={handleCounsellorClick}>
                                     Counsellor
                                 </button>
                                 <button className="studentForum_burger" onClick={handleForumClick}>

@@ -19,7 +19,7 @@ and the link to the website for each of them. Give me this list in a JSON parsea
 preferably an array of objects, each with the keys title, text, tags, and website for the name, description, 
 an array of tags, and website link respectively.
 """
-for x in range (10):
+for x in range(10):
     try:
         response = model.generate_content(prompt)
         text = response.text
@@ -34,8 +34,10 @@ for x in range (10):
         json_obj = json.loads(sub_str)
         print(json_obj)
         for obj in json_obj:
-            if not (any(bigObj["website"] == obj["website"] for bigObj in curr_json_obj) 
-            or (any(bigObj["title"] == obj["title"] for bigObj in curr_json_obj))):
+            if not (
+                any(bigObj["website"] == obj["website"] for bigObj in curr_json_obj)
+                or (any(bigObj["title"] == obj["title"] for bigObj in curr_json_obj))
+            ):
                 curr_json_obj.append(obj)
     except:
         print("An error occured, continuing")
@@ -47,4 +49,3 @@ for x in range (10):
 file = open("ecListGPT.json", "w")
 json.dump(curr_json_obj, file)
 file.close()
-

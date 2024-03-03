@@ -24,8 +24,7 @@ async function processLinks(links) {
                     if (
                         innerText != "" &&
                         innerText != null &&
-                        (innerText.split(" ").length > 10 ||
-                            innerText.toLowerCase().includes("entry fee") ||
+                        (innerText.toLowerCase().includes("entry fee") ||
                             innerText.toLowerCase().includes("online") ||
                             innerText.toLowerCase().includes("virtual") ||
                             innerText.toLowerCase().includes("fee") ||
@@ -34,7 +33,16 @@ async function processLinks(links) {
                             innerText.toLowerCase().includes("ages") ||
                             innerText.toLowerCase().includes("grades") ||
                             innerText.toLowerCase().includes("start") ||
-                            innerText.toLowerCase().includes("end"))
+                            innerText.toLowerCase().includes("end") ||
+                            innerText.toLowerCase().includes("date") ||
+                            innerText.toLowerCase().includes("in person") ||
+                            innerText.toLowerCase().includes("cost") ||
+                            innerText.toLowerCase().includes("$") ||
+                            innerText.toLowerCase().includes("dollar") ||
+                            innerText.toLowerCase().includes("euro") ||
+                            innerText.toLowerCase().includes("high school") ||
+                            innerText.toLowerCase().includes("location") ||
+                            innerText.toLowerCase().includes("selective"))
                     ) {
                         return innerText;
                     } else {
@@ -83,8 +91,7 @@ const extraData = async () => {
                         if (
                             innerText != "" &&
                             innerText != null &&
-                            (innerText.split(" ").length > 10 ||
-                                innerText.toLowerCase().includes("entry fee") ||
+                            (innerText.toLowerCase().includes("entry fee") ||
                                 innerText.toLowerCase().includes("online") ||
                                 innerText.toLowerCase().includes("virtual") ||
                                 innerText.toLowerCase().includes("fee") ||
@@ -93,7 +100,16 @@ const extraData = async () => {
                                 innerText.toLowerCase().includes("ages") ||
                                 innerText.toLowerCase().includes("grades") ||
                                 innerText.toLowerCase().includes("start") ||
-                                innerText.toLowerCase().includes("end"))
+                                innerText.toLowerCase().includes("end") ||
+                                innerText.toLowerCase().includes("date") ||
+                                innerText.toLowerCase().includes("in person") ||
+                                innerText.toLowerCase().includes("cost") ||
+                                innerText.toLowerCase().includes("$") ||
+                                innerText.toLowerCase().includes("dollar") ||
+                                innerText.toLowerCase().includes("euro") ||
+                                innerText.toLowerCase().includes("high school") ||
+                                innerText.toLowerCase().includes("location") ||
+                                innerText.toLowerCase().includes("selective"))
                         ) {
                             return innerText;
                         } else {

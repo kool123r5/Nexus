@@ -1,0 +1,38 @@
+[
+    {
+        "title": "Cooper Hewitt Design",
+        "text": "The Cooper Hewitt Smithsonian Design Competition,  is an annual competition for high school students that offers scholarships for the best designs. It challenges students to  to explore critical issues facing society through design thinking. Students will gain valuable experience in design research, prototyping, and communication. The competition is open to high school students of all ages and skill levels, and offers a variety of scholarships, including full-tuition scholarships to leading design schools.",
+        "tags": [
+            "Business"
+        ],
+        "website": "https://www.cooperhewitt.org/design-competition/",
+        "ID": 0,
+        "inPerson": false,
+        "location": "unknown",
+        "anyoneCanJoin": true,
+        "host": "Cooper Hewitt, Smithsonian Design Museum",
+        "startDate": "03-01-2023",
+        "endDate": "11-06-2023",
+        "deadlineDate": "06-04-2023",
+        "gradeRange": "9-12",
+        "cost": 0
+    },
+    {
+        "title": "Math Kangaroo",
+        "text": "The Math Kangaroo competition is an opportunity for high school students to showcase their math problem-solving and critical thinking skills. By participating, students gain valuable experience in applying mathematical concepts to real-world situations. The competition challenges students to think creatively and develop higher-order thinking skills essential for success in future endeavors.",
+        "tags": [
+            "Math"
+        ],
+        "website": "https://mathkangaroo.org/mks/",
+        "ID": 1,
+        "inPerson": false,
+        "location": "unknown",
+        "anyoneCanJoin": true,
+        "host": "Math Kangaroo",
+        "startDate": "unknown",
+        "endDate": "unknown",
+        "deadlineDate": "01-12-2023",
+        "gradeRange": "1-12",
+        "cost": 21
+    }
+]

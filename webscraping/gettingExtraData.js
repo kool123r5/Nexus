@@ -2,7 +2,7 @@ const puppeteer = require("puppeteer");
 const { readFile, writeFile } = require("fs").promises;
 
 const readJSON = async () => {
-    const data = await readFile("activitiesAugmented.json", { encoding: "utf-8" });
+    const data = await readFile("activities_augmented_withID.json", { encoding: "utf-8" });
     return JSON.parse(data);
 };
 
@@ -41,23 +41,21 @@ async function processLinks(links) {
                             innerText.toLowerCase().includes("dollar") ||
                             innerText.toLowerCase().includes("euro") ||
                             innerText.toLowerCase().includes("high school") ||
-                            innerText.toLowerCase().includes("January") ||
-                            innerText.toLowerCase().includes("February") ||
-                            innerText.toLowerCase().includes("March") ||
-                            innerText.toLowerCase().includes("April") ||
-                            innerText.toLowerCase().includes("May") ||
-                            innerText.toLowerCase().includes("June") ||
-                            innerText.toLowerCase().includes("July") ||
-                            innerText.toLowerCase().includes("August") ||
-                            innerText.toLowerCase().includes("October") ||
-                            innerText.toLowerCase().includes("November") ||
-                            innerText.toLowerCase().includes("December") ||
+                            innerText.toLowerCase().includes("january") ||
+                            innerText.toLowerCase().includes("february") ||
+                            innerText.toLowerCase().includes("march") ||
+                            innerText.toLowerCase().includes("april") ||
+                            innerText.toLowerCase().includes("may") ||
+                            innerText.toLowerCase().includes("june") ||
+                            innerText.toLowerCase().includes("july") ||
+                            innerText.toLowerCase().includes("august") ||
+                            innerText.toLowerCase().includes("october") ||
+                            innerText.toLowerCase().includes("november") ||
+                            innerText.toLowerCase().includes("december") ||
                             innerText.toLowerCase().includes("free") ||
-                            innerText.toLowerCase().includes("Middle school") ||
-                            innerText.toLowerCase().includes("High school") ||
+                            innerText.toLowerCase().includes("middle school") ||
                             innerText.toLowerCase().includes("location") ||
                             innerText.toLowerCase().includes("selective"))
-                            
                     ) {
                         return innerText;
                     } else {
@@ -93,12 +91,14 @@ const extraData = async () => {
 
     for (let i = 0; i < 495; i++) {
         try {
-            if (i% 10) {console.log(i);}
+            if (i % 10) {
+                console.log(i);
+            }
             const element = data[i];
             const page = await browser.newPage();
             page.setDefaultTimeout(30000);
             await page.goto(element["website"]);
-            await page.waitForTimeout(2000);
+            await page.waitForSelector("h1, h2, h3, h4, h5, h6, p");
 
             const resultsArr = await page
                 .$$eval("h1, h2, h3, h4, h5, h6, p", (elements) => {
@@ -108,38 +108,37 @@ const extraData = async () => {
                             innerText != "" &&
                             innerText != null &&
                             (innerText.toLowerCase().includes("entry fee") ||
-                            innerText.toLowerCase().includes("online") ||
-                            innerText.toLowerCase().includes("virtual") ||
-                            innerText.toLowerCase().includes("fee") ||
-                            innerText.toLowerCase().includes("deadline") ||
-                            innerText.toLowerCase().includes("entry") ||
-                            innerText.toLowerCase().includes("ages") ||
-                            innerText.toLowerCase().includes("grades") ||
-                            innerText.toLowerCase().includes("start") ||
-                            innerText.toLowerCase().includes("end") ||
-                            innerText.toLowerCase().includes("date") ||
-                            innerText.toLowerCase().includes("in person") ||
-                            innerText.toLowerCase().includes("cost") ||
-                            innerText.toLowerCase().includes("$") ||
-                            innerText.toLowerCase().includes("dollar") ||
-                            innerText.toLowerCase().includes("euro") ||
-                            innerText.toLowerCase().includes("high school") ||
-                            innerText.toLowerCase().includes("January") ||
-                            innerText.toLowerCase().includes("February") ||
-                            innerText.toLowerCase().includes("March") ||
-                            innerText.toLowerCase().includes("April") ||
-                            innerText.toLowerCase().includes("May") ||
-                            innerText.toLowerCase().includes("June") ||
-                            innerText.toLowerCase().includes("July") ||
-                            innerText.toLowerCase().includes("August") ||
-                            innerText.toLowerCase().includes("October") ||
-                            innerText.toLowerCase().includes("November") ||
-                            innerText.toLowerCase().includes("December") ||
-                            innerText.toLowerCase().includes("free") ||
-                            innerText.toLowerCase().includes("Middle school") ||
-                            innerText.toLowerCase().includes("High school") ||
-                            innerText.toLowerCase().includes("location") ||
-                            innerText.toLowerCase().includes("selective"))
+                                innerText.toLowerCase().includes("online") ||
+                                innerText.toLowerCase().includes("virtual") ||
+                                innerText.toLowerCase().includes("fee") ||
+                                innerText.toLowerCase().includes("deadline") ||
+                                innerText.toLowerCase().includes("entry") ||
+                                innerText.toLowerCase().includes("ages") ||
+                                innerText.toLowerCase().includes("grades") ||
+                                innerText.toLowerCase().includes("start") ||
+                                innerText.toLowerCase().includes("end") ||
+                                innerText.toLowerCase().includes("date") ||
+                                innerText.toLowerCase().includes("in person") ||
+                                innerText.toLowerCase().includes("cost") ||
+                                innerText.toLowerCase().includes("$") ||
+                                innerText.toLowerCase().includes("dollar") ||
+                                innerText.toLowerCase().includes("euro") ||
+                                innerText.toLowerCase().includes("high school") ||
+                                innerText.toLowerCase().includes("january") ||
+                                innerText.toLowerCase().includes("february") ||
+                                innerText.toLowerCase().includes("march") ||
+                                innerText.toLowerCase().includes("april") ||
+                                innerText.toLowerCase().includes("may") ||
+                                innerText.toLowerCase().includes("june") ||
+                                innerText.toLowerCase().includes("july") ||
+                                innerText.toLowerCase().includes("august") ||
+                                innerText.toLowerCase().includes("october") ||
+                                innerText.toLowerCase().includes("november") ||
+                                innerText.toLowerCase().includes("december") ||
+                                innerText.toLowerCase().includes("free") ||
+                                innerText.toLowerCase().includes("middle school") ||
+                                innerText.toLowerCase().includes("location") ||
+                                innerText.toLowerCase().includes("selective"))
                         ) {
                             return innerText;
                         } else {

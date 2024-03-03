@@ -41,8 +41,23 @@ async function processLinks(links) {
                             innerText.toLowerCase().includes("dollar") ||
                             innerText.toLowerCase().includes("euro") ||
                             innerText.toLowerCase().includes("high school") ||
+                            innerText.toLowerCase().includes("January") ||
+                            innerText.toLowerCase().includes("February") ||
+                            innerText.toLowerCase().includes("March") ||
+                            innerText.toLowerCase().includes("April") ||
+                            innerText.toLowerCase().includes("May") ||
+                            innerText.toLowerCase().includes("June") ||
+                            innerText.toLowerCase().includes("July") ||
+                            innerText.toLowerCase().includes("August") ||
+                            innerText.toLowerCase().includes("October") ||
+                            innerText.toLowerCase().includes("November") ||
+                            innerText.toLowerCase().includes("December") ||
+                            innerText.toLowerCase().includes("free") ||
+                            innerText.toLowerCase().includes("Middle school") ||
+                            innerText.toLowerCase().includes("High school") ||
                             innerText.toLowerCase().includes("location") ||
                             innerText.toLowerCase().includes("selective"))
+                            
                     ) {
                         return innerText;
                     } else {
@@ -76,8 +91,9 @@ const extraData = async () => {
         headless: "new",
     });
 
-    for (let i = 0; i < 2; i++) {
+    for (let i = 0; i < 495; i++) {
         try {
+            if (i% 10) {console.log(i);}
             const element = data[i];
             const page = await browser.newPage();
             page.setDefaultTimeout(30000);
@@ -92,24 +108,38 @@ const extraData = async () => {
                             innerText != "" &&
                             innerText != null &&
                             (innerText.toLowerCase().includes("entry fee") ||
-                                innerText.toLowerCase().includes("online") ||
-                                innerText.toLowerCase().includes("virtual") ||
-                                innerText.toLowerCase().includes("fee") ||
-                                innerText.toLowerCase().includes("deadline") ||
-                                innerText.toLowerCase().includes("entry") ||
-                                innerText.toLowerCase().includes("ages") ||
-                                innerText.toLowerCase().includes("grades") ||
-                                innerText.toLowerCase().includes("start") ||
-                                innerText.toLowerCase().includes("end") ||
-                                innerText.toLowerCase().includes("date") ||
-                                innerText.toLowerCase().includes("in person") ||
-                                innerText.toLowerCase().includes("cost") ||
-                                innerText.toLowerCase().includes("$") ||
-                                innerText.toLowerCase().includes("dollar") ||
-                                innerText.toLowerCase().includes("euro") ||
-                                innerText.toLowerCase().includes("high school") ||
-                                innerText.toLowerCase().includes("location") ||
-                                innerText.toLowerCase().includes("selective"))
+                            innerText.toLowerCase().includes("online") ||
+                            innerText.toLowerCase().includes("virtual") ||
+                            innerText.toLowerCase().includes("fee") ||
+                            innerText.toLowerCase().includes("deadline") ||
+                            innerText.toLowerCase().includes("entry") ||
+                            innerText.toLowerCase().includes("ages") ||
+                            innerText.toLowerCase().includes("grades") ||
+                            innerText.toLowerCase().includes("start") ||
+                            innerText.toLowerCase().includes("end") ||
+                            innerText.toLowerCase().includes("date") ||
+                            innerText.toLowerCase().includes("in person") ||
+                            innerText.toLowerCase().includes("cost") ||
+                            innerText.toLowerCase().includes("$") ||
+                            innerText.toLowerCase().includes("dollar") ||
+                            innerText.toLowerCase().includes("euro") ||
+                            innerText.toLowerCase().includes("high school") ||
+                            innerText.toLowerCase().includes("January") ||
+                            innerText.toLowerCase().includes("February") ||
+                            innerText.toLowerCase().includes("March") ||
+                            innerText.toLowerCase().includes("April") ||
+                            innerText.toLowerCase().includes("May") ||
+                            innerText.toLowerCase().includes("June") ||
+                            innerText.toLowerCase().includes("July") ||
+                            innerText.toLowerCase().includes("August") ||
+                            innerText.toLowerCase().includes("October") ||
+                            innerText.toLowerCase().includes("November") ||
+                            innerText.toLowerCase().includes("December") ||
+                            innerText.toLowerCase().includes("free") ||
+                            innerText.toLowerCase().includes("Middle school") ||
+                            innerText.toLowerCase().includes("High school") ||
+                            innerText.toLowerCase().includes("location") ||
+                            innerText.toLowerCase().includes("selective"))
                         ) {
                             return innerText;
                         } else {

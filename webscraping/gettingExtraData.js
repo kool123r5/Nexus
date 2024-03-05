@@ -7,7 +7,6 @@ const readJSON = async () => {
 };
 
 async function processLinks(links) {
-    console.log(links)
     const linksData = [];
     const browser = await puppeteer.launch({
         headless: "new",
@@ -89,9 +88,11 @@ const extraData = async () => {
         headless: "new",
     });
 
-    for (let i = 0; i < 23; i++) {
+    const badNumbers = [];
+
+    for (let i = 0; i < data.length; i++) {
         try {
-            console.log(i)
+            console.log(i);
             const element = data[i];
             const page = await browser.newPage();
             page.setDefaultTimeout(60000);
@@ -174,7 +175,6 @@ const extraData = async () => {
                 })
                 .then((arr) => arr.filter(Boolean));
 
-
             const linksData = await processLinks(links);
             let oneDLinksData = [];
             for (let j = 0; j < linksData.length; j++) {
@@ -184,15 +184,17 @@ const extraData = async () => {
             returnData.push([...resultsArr, ...oneDLinksData]);
 
             await page.close();
+            await writeFile("websiteDataPromptGemini.json", JSON.stringify(returnData));
+            console.log("Done with: ", i);
         } catch (error) {
-            // re-try?
             console.log(error);
-            i -= 1;
+            badNumbers.push(i);
         }
     }
 
     await browser.close();
     await writeFile("websiteDataPromptGemini.json", JSON.stringify(returnData));
+    console.log("BUGGY NUMBERS ARE: ", badNumbers);
 };
 
 extraData();

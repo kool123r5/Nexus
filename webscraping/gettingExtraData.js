@@ -7,15 +7,15 @@ const readJSON = async () => {
 };
 
 async function processLinks(links) {
+    console.log(links)
     const linksData = [];
     const browser = await puppeteer.launch({
         headless: "new",
     });
     const page = await browser.newPage();
-    page.setDefaultTimeout(30000);
+    page.setDefaultTimeout(60000);
     for (const link of links) {
         await page.goto(link);
-        await page.waitForNetworkIdle();
         await page.waitForSelector("h1, h2, h3, h4, h5, h6, p");
         const linkResult = await page
             .$$eval("h1, h2, h3, h4, h5, h6, p", (elements) => {
@@ -89,14 +89,12 @@ const extraData = async () => {
         headless: "new",
     });
 
-    for (let i = 0; i < 495; i++) {
+    for (let i = 0; i < 23; i++) {
         try {
-            if (i % 10) {
-                console.log(i);
-            }
+            console.log(i)
             const element = data[i];
             const page = await browser.newPage();
-            page.setDefaultTimeout(30000);
+            page.setDefaultTimeout(60000);
             await page.goto(element["website"]);
             await page.waitForSelector("h1, h2, h3, h4, h5, h6, p");
 
@@ -176,7 +174,6 @@ const extraData = async () => {
                 })
                 .then((arr) => arr.filter(Boolean));
 
-            await page.waitForTimeout(1000);
 
             const linksData = await processLinks(links);
             let oneDLinksData = [];

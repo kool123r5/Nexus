@@ -600,5 +600,11 @@
       "Get Started"
     ],
     "id": 2
+  },
+  {
+    "datas": [
+      "Please check your promotional tab or spam folder. You can resend the message if you did not receive it."
+    ],
+    "id": 3
   }
 ]

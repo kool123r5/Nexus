@@ -97,14 +97,14 @@ async function processLinks(links) {
 
 const extraData = async () => {
   const data = await readJSON();
-  const returnData = await readAnotherJSON(filename); //uncomment this when filename has things in it
+  const returnData = await readAnotherJSON(filename); // if filename is empty replace with []
   const browser = await puppeteer.launch({
     headless: "new",
   });
 
   const badNumbers = [];
 
-  for (let i = 2; i < 3; i++) {
+  for (let i = 3; i < 4; i++) {
     try {
       console.log(i);
       const element = data[i];
@@ -210,7 +210,7 @@ const extraData = async () => {
       });
 
       await page.close();
-      await writeFile("trial.json", JSON.stringify(returnData));
+      await writeFile(filename, JSON.stringify(returnData));
       console.log("Done with: ", i);
     } catch (error) {
       console.log(error);
@@ -219,7 +219,7 @@ const extraData = async () => {
   }
 
   await browser.close();
-  await writeFile("trial.json", JSON.stringify(returnData));
+  await writeFile(filename, JSON.stringify(returnData));
   console.log("BUGGY NUMBERS ARE: ", badNumbers);
 };
 

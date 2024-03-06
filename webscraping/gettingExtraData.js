@@ -1,10 +1,17 @@
+const { read } = require("fs");
 const puppeteer = require("puppeteer");
 const { readFile, writeFile } = require("fs").promises;
+
+const filename = "trial.json"; // enter the file name of the json file we are going to be creating using scraping
 
 const readJSON = async () => {
   const data = await readFile("activities_augmented_withID.json", {
     encoding: "utf-8",
   });
+  return JSON.parse(data);
+};
+const readAnotherJSON = async (filename) => {
+  const data = await readFile(filename, { encoding: "utf-8" });
   return JSON.parse(data);
 };
 
@@ -90,14 +97,14 @@ async function processLinks(links) {
 
 const extraData = async () => {
   const data = await readJSON();
-  const returnData = [];
+  const returnData = await readAnotherJSON(filename); //uncomment this when filename has things in it
   const browser = await puppeteer.launch({
     headless: "new",
   });
 
   const badNumbers = [];
 
-  for (let i = 0; i < 2; i++) {
+  for (let i = 2; i < 3; i++) {
     try {
       console.log(i);
       const element = data[i];
@@ -112,7 +119,7 @@ const extraData = async () => {
       const resultsArr = await page
         .$$eval(
           "h1, h2, h3, h4, h5, h6, p, span, strong, em, b, i, small, ins, mark, del,ul,li,ol,dt,dd,dl",
-          (elements, uniqueID) => {
+          (elements) => {
             return elements.map((element) => {
               let innerText = element.innerText.trim();
 
@@ -152,8 +159,7 @@ const extraData = async () => {
                   innerText.toLowerCase().includes("location") ||
                   innerText.toLowerCase().includes("selective"))
               ) {
-                console.log(uniqueID);
-                return { uniqueID, data: innerText };
+                return innerText;
               } else {
                 return null;
               }
@@ -198,7 +204,10 @@ const extraData = async () => {
         const linkData = linksData[j];
         oneDLinksData = [...oneDLinksData, ...linkData];
       }
-      returnData.push([...resultsArr, ...oneDLinksData]);
+      returnData.push({
+        datas: [...resultsArr, ...oneDLinksData],
+        id: uniqueID,
+      });
 
       await page.close();
       await writeFile("trial.json", JSON.stringify(returnData));

@@ -8,7 +8,8 @@ gemini_key = os.getenv("GEMINI_API_KEY")
 genai.configure(api_key=gemini_key)
 model = genai.GenerativeModel(model_name="gemini-pro")
 
-with open("websiteDataPromptGemini.json", "r", encoding="utf-8") as f:
+webscrapedDataFile = "trial.json" # "websiteDataPromptGemini.json"
+with open(webscrapedDataFile, "r", encoding="utf-8") as f:
     websiteDatas = json.load(f)
 
 with open("activities_augmented_withID.json", "r", encoding="utf-8") as f:
@@ -16,17 +17,29 @@ with open("activities_augmented_withID.json", "r", encoding="utf-8") as f:
 
 json_objects = []
 
-for i in range(2):
+def get_object_by_id(json_list, id_number):
+    for obj in json_list:
+        if obj['id'] == id_number:
+            return obj
+    return None  
+
+for i in range(1):
     activity = activities[i]
-    websiteData = websiteDatas[i]
     tags = activity["tags"]
     title = activity["title"]
     text = activity["text"]
     website = activity["website"]   
     uniqueID = activity["ID"]
+    websiteDataObject = get_object_by_id(websiteDatas, uniqueID)
+    if not websiteDataObject:
+        print("No match for: ", uniqueID)
+        continue
+    websiteData = websiteDataObject["datas"]
+
     prompt = f"""
-    This is some text data extracted from the website {website}. The title of the activity is {title}. The Id of the activity is {uniqueID}
+    This is some text data extracted from the website {website}. The title of the activity is {title}. 
     This is a brief description of the activity - {text}. 
+    Tags: {", ".join(tags)}
 
     Now here is the website data we took from their website:
 
@@ -45,8 +58,8 @@ for i in range(2):
     deadlineDate: String -> the last date by which applicants can apply (in format DD-MM-YYYY)
     gradeRange: String -> the range of grades which are allowed (eg: 9-12 or 6-12)
     cost: Number -> the entry fee for the event (give 0 for this if the event is free of cost)
-    ID: Number -> The ID is mentioned in the prompt simply copy that down 
 
+    If you can get any of this information from the tags then choose that information over the website data.
     Make sure your final object is JSON Parseable. If you are unsure about any of the fields (if insufficient data has been provided), then replace that field with the String of unknown, no matter what the type of the field is supposed to be.
     Before you give me the object, for each of these fields, write out your reasoning before you put them in the final data object, just so you can be sure you're getting it right. After you've written all your reasoning out, then state the final data object.
     
@@ -61,7 +74,17 @@ for i in range(2):
     print(response.text)
     start_index = response.text.index("{")
     end_index = response.text.index("}") + 1
-    json_objects.append(json.loads(response.text[start_index:end_index]))
+    appendableJsonObject = response.text[start_index:end_index]
+    bitToAddOn = f"\"title\": \"{title}\", \n \"text\": \"{text}\",\n\"tags\": \"{", ".join(tags)}\", \n\"website\":\"{website}\",\n \"ID\": {uniqueID},"
+    appendableJsonObject = '{' + bitToAddOn + appendableJsonObject[1:]
+    print(appendableJsonObject, type(appendableJsonObject))
+
+    json_objects.append(appendableJsonObject)
 
 with open("extraData.json", "w") as f:
-   f.write(json.dumps(json_objects))
+    # Iterate over each JSON object in the list
+    for obj in json_objects:
+        # Parse the JSON object string into a Python dictionary
+        obj_dict = json.loads(obj)
+        # Write the JSON object to the file with proper indentation
+        f.write(json.dumps(obj_dict, indent=4) + "\n")

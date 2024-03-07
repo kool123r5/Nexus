@@ -1,4 +1,5 @@
 import google.generativeai as genai
+from google.generativeai.types import HarmCategory, HarmBlockThreshold
 import os
 from dotenv import load_dotenv
 import json
@@ -8,7 +9,7 @@ gemini_key = os.getenv("GEMINI_API_KEY")
 genai.configure(api_key=gemini_key)
 model = genai.GenerativeModel(model_name="gemini-pro")
 
-webscrapedDataFile = "trial.json" # "websiteDataPromptGemini.json"
+webscrapedDataFile = "websiteScrapedData.json" # "websiteDataPromptGemini.json"
 with open(webscrapedDataFile, "r", encoding="utf-8") as f:
     websiteDatas = json.load(f)
 
@@ -23,7 +24,7 @@ def get_object_by_id(json_list, id_number):
             return obj
     return None  
 
-for i in range(1):
+for i in range(3):
     activity = activities[i]
     tags = activity["tags"]
     title = activity["title"]
@@ -34,7 +35,7 @@ for i in range(1):
     if not websiteDataObject:
         print("No match for: ", uniqueID)
         continue
-    websiteData = websiteDataObject["datas"]
+    websiteData = websiteDataObject["data"]
 
     prompt = f"""
     This is some text data extracted from the website {website}. The title of the activity is {title}. 
@@ -68,23 +69,29 @@ for i in range(1):
     """
 
     response = model.generate_content(
-        prompt, generation_config=genai.types.GenerationConfig(temperature=0.2)
+        prompt, 
+        safety_settings= {
+            HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_ONLY_HIGH
+        },
+        generation_config=genai.types.GenerationConfig(temperature=0.2)
     )
-
-    print(response.text)
     start_index = response.text.index("{")
     end_index = response.text.index("}") + 1
     appendableJsonObject = response.text[start_index:end_index]
     bitToAddOn = f"\"title\": \"{title}\", \n \"text\": \"{text}\",\n\"tags\": \"{", ".join(tags)}\", \n\"website\":\"{website}\",\n \"ID\": {uniqueID},"
     appendableJsonObject = '{' + bitToAddOn + appendableJsonObject[1:]
-    print(appendableJsonObject, type(appendableJsonObject))
 
     json_objects.append(appendableJsonObject)
+    print("done with: ", uniqueID)
 
-with open("extraData.json", "w") as f:
+
+with open("database.json", "w") as f:
     # Iterate over each JSON object in the list
     for obj in json_objects:
-        # Parse the JSON object string into a Python dictionary
-        obj_dict = json.loads(obj)
-        # Write the JSON object to the file with proper indentation
-        f.write(json.dumps(obj_dict, indent=4) + "\n")
+        try:
+            # Parse the JSON object string into a Python dictionary
+            obj_dict = json.loads(obj)
+            # Write the JSON object to the file with proper indentation
+            f.write(json.dumps(obj_dict, indent=4) + "\n")
+        except json.JSONDecodeError as e:
+            print("Error decoding JSON:", e)

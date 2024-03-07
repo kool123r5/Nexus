@@ -325,10 +325,17 @@
     },
     {
         "title": "Write Your Own Historical Fiction",
+        "host": "Historical Association",
+        "gradeRange": "6-9",
         "text": "Calling all high school history enthusiasts! Participate in our exclusive Historical Fiction Writing Competition to showcase your creativity and passion for history. Not only will this competition allow you to explore historical events and characters, but it also offers the chance to win exciting prizes and recognition for your literary talents. Unleash your writing potential and embark on a journey through time while developing your writing, critical thinking, and research skills. Let your imagination soar and become part of history!",
-        "tags": [
-            "History"
+        "tags": [ 
+            "History", "Writing"
         ],
+        "anyoneCanJoin": true,
+        
+        "inPerson": false,
+        "startDate": "unknown",
+        "endDate": "07-06-24",
         "website": "https://www.history.org.uk/secondary/categories/531/news/3451/write-your-own-historical-fiction-competition-2024",
         "ID": 36
     },
@@ -381,9 +388,16 @@
         "title": "National History Bowl",
         "text": "National History Bowl is an exhilarating academic competition that challenges high school students to demonstrate their mastery of history through buzzer-based and written questions. Participation in this competition offers numerous benefits for students, including enhancing their critical thinking and analytical skills, fostering a deeper understanding of historical events, and developing their teamwork and communication abilities. Furthermore, it provides a platform for students to connect with like-minded peers, explore their passion for history, and potentially earn recognition for their exceptional knowledge.",
         "tags": [
-            "History"
+            "History", "Quiz"
         ],
-        "website": "https://International Academic Competitions",
+        "website": "https://www.iacompetitions.com/vjvhistorybowl/",
+        "inPerson": true,
+        "location": "Varied",
+        "anyoneCanJoin": true,
+        "host": "International Academic Competitions",
+        "startDate": "26-04-2024",
+        "endDate": "unknown",
+        "gradeRange": "9-12", 
         "ID": 42
     },
     {
@@ -464,7 +478,15 @@
         "tags": [
             "Business"
         ],
-        "website": "https:// https://www.deca.org/challenges",
+        "website": "https://www.deca.org/challenges",
+        "inPerson": true,
+        "location": "unknown",
+        "anyoneCanJoin": true,
+        "host": "DECA",
+        "startDate": "09-12-2022",
+        "endDate": "unknown",
+        "deadlineDate": "unknown",
+        "gradeRange": "unknown", 
         "ID": 51
     },
     {
@@ -510,6 +532,14 @@
             "Physics"
         ],
         "website": "https://www.aapt.org/physicsteam/2023/registration.cfm",
+        "inPerson": true,
+        "location": "unknown",
+        "anyoneCanJoin": true,
+        "host": "AAPT",
+        "startDate": "1-23-23",
+        "endDate": "unknown",
+        "deadlineDate": "unknown",
+        "gradeRange": "unknown", 
         "ID": 56
     },
     {
@@ -528,6 +558,14 @@
             "Physics"
         ],
         "website": "http://www.usaypt.org/",
+        "inPerson": false,
+        "location": "unknown",
+        "anyoneCanJoin": true,
+        "host": "North Carolina State University",
+        "startDate": "03-02-2024",
+        "endDate": "04-02-2024",
+        "deadlineDate": "unknown",
+        "gradeRange": "unknown", 
         "ID": 58
     },
     {

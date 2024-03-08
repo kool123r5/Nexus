@@ -1,15 +1,16 @@
-import google.generativeai as genai
-from google.generativeai.types import HarmCategory, HarmBlockThreshold
+import anthropic
 import os
 from dotenv import load_dotenv
 import json
 
 load_dotenv()
-gemini_key = os.getenv("GEMINI_API_KEY")
-genai.configure(api_key=gemini_key)
-model = genai.GenerativeModel(model_name="gemini-pro")
+anthropic_key = os.getenv("ANTHROPIC_API_KEY")
 
-webscrapedDataFile = "websiteScrapedData.json" # "websiteDataPromptGemini.json"
+client = anthropic.Anthropic(
+    api_key=anthropic_key,
+)
+
+webscrapedDataFile = "websiteScrapedData.json"  # "websiteDataPromptGemini.json"
 with open(webscrapedDataFile, "r", encoding="utf-8") as f:
     websiteDatas = json.load(f)
 
@@ -18,18 +19,20 @@ with open("activities_augmented_withID.json", "r", encoding="utf-8") as f:
 
 json_objects = []
 
+
 def get_object_by_id(json_list, id_number):
     for obj in json_list:
-        if obj['id'] == id_number:
+        if obj["id"] == id_number:
             return obj
-    return None  
+    return None
 
-for i in range(3):
+
+for i in range(1):
     activity = activities[i]
     tags = activity["tags"]
     title = activity["title"]
     text = activity["text"]
-    website = activity["website"]   
+    website = activity["website"]
     uniqueID = activity["ID"]
     websiteDataObject = get_object_by_id(websiteDatas, uniqueID)
     if not websiteDataObject:
@@ -68,24 +71,24 @@ for i in range(3):
     
     """
 
-    response = model.generate_content(
-        prompt, 
-        safety_settings= {
-            HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_ONLY_HIGH
-        },
-        generation_config=genai.types.GenerationConfig(temperature=0.2)
+    message = client.messages.create(
+        model="claude-3-sonnet-20240229",  # claude-3-sonnet-20240229 (cheaper) && claude-3-opus-20240229 (smarter)
+        max_tokens=1024,
+        temperature=0.2,  # feel free to change temp, i haven't empirically tested this
+        messages=[{"role": "user", "content": prompt}],
     )
-    start_index = response.text.index("{")
-    end_index = response.text.index("}") + 1
-    appendableJsonObject = response.text[start_index:end_index]
-    bitToAddOn = f"\"title\": \"{title}\", \n \"text\": \"{text}\",\n\"tags\": \"{", ".join(tags)}\", \n\"website\":\"{website}\",\n \"ID\": {uniqueID},"
-    appendableJsonObject = '{' + bitToAddOn + appendableJsonObject[1:]
+
+    start_index = message.content.index("{")
+    end_index = message.content.index("}") + 1
+    appendableJsonObject = message.content[start_index:end_index]
+    # bitToAddOn = f"\"title\": \"{title}\", \n \"text\": \"{text}\",\n\"tags\": \"{", ".join(tags)}\", \n\"website\":\"{website}\",\n \"ID\": {uniqueID},"
+    appendableJsonObject = "{" + bitToAddOn + appendableJsonObject[1:]
 
     json_objects.append(appendableJsonObject)
     print("done with: ", uniqueID)
 
 
-with open("database.json", "w") as f:
+with open("extraData.json", "w") as f:
     # Iterate over each JSON object in the list
     for obj in json_objects:
         try:

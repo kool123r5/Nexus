@@ -1,110 +1,24 @@
-[{
-    "title": "Cooper Hewitt Design",
-    "text": "The Cooper Hewitt Smithsonian Design Competition,  is an annual competition for high school students that offers scholarships for the best designs. It challenges students to  to explore critical issues facing society through design thinking. Students will gain valuable experience in design research, prototyping, and communication. The competition is open to high school students of all ages and skill levels, and offers a variety of scholarships, including full-tuition scholarships to leading design schools.",
-    "tags": "Business",
-    "website": "https://www.cooperhewitt.org/design-competition/",
-    "ID": 0,
-    "inPerson": false,
-    "location": "unknown",
-    "anyoneCanJoin": true,
-    "host": "Cooper Hewitt, Smithsonian Design Museum",
-    "startDate": "09-12-2022",
-    "endDate": "unknown",
-    "deadlineDate": "13-02-2023",
-    "gradeRange": "9-12", 
-    "cost": 0
-},
-
-{
-    "title": "Write Your Own Historical Fiction",
-    "host": "Historical Association",
-    "gradeRange": "6-9",
-    "text": "Calling all high school history enthusiasts! Participate in our exclusive Historical Fiction Writing Competition to showcase your creativity and passion for history. Not only will this competition allow you to explore historical events and characters, but it also offers the chance to win exciting prizes and recognition for your literary talents. Unleash your writing potential and embark on a journey through time while developing your writing, critical thinking, and research skills. Let your imagination soar and become part of history!",
-    "tags": [ 
-        "History", "Writing"
-    ],
-    "anyoneCanJoin": true,
-    
-    "inPerson": false,
-    "startDate": "unknown",
-    "endDate": "07-06-24",
-    "website": "https://www.history.org.uk/secondary/categories/531/news/3451/write-your-own-historical-fiction-competition-2024",
-    "ID": 36
-},
-
-
-
-{
-    "title": "National History Bowl",
-    "text": "National History Bowl is an exhilarating academic competition that challenges high school students to demonstrate their mastery of history through buzzer-based and written questions. Participation in this competition offers numerous benefits for students, including enhancing their critical thinking and analytical skills, fostering a deeper understanding of historical events, and developing their teamwork and communication abilities. Furthermore, it provides a platform for students to connect with like-minded peers, explore their passion for history, and potentially earn recognition for their exceptional knowledge.",
-    "tags": [
-        "History", "Quiz"
-    ],
-    "website": "https://www.iacompetitions.com/vjvhistorybowl/",
-    "inPerson": true,
-    "location": "Varied",
-    "anyoneCanJoin": true,
-    "host": "International Academic Competitions",
-    "startDate": "26-04-2024",
-    "endDate": "unknown",
-    "gradeRange": "9-12", 
-    "ID": 42
-},
-
-{
-    "title": "DECA",
-    "text": "DECA is a competitive business-oriented program designed for high school students, providing them with the opportunity to showcase their skills and knowledge in various business-related competitions. These competitions include case studies, marketing simulations, role-playing scenarios, and more. Participation in DECA fosters teamwork, critical thinking, public speaking, and leadership abilities, preparing students for future success in business and academia. Competitions and challenges are held throughout the year at local, regional, and national levels, with the potential for students to earn recognition, awards, and scholarships for their achievements.",
-    "tags": [
-        "Business"
-    ],
-    "website": "https://www.deca.org/challenges",
-    "inPerson": true,
-    "location": "unknown",
-    "anyoneCanJoin": true,
-    "host": "DECA",
-    "startDate": "09-12-2022",
-    "endDate": "unknown",
-    "deadlineDate": "unknown",
-    "gradeRange": "unknown", 
-    "ID": 51
-},
-
-{
-    "title": "USA Physics Olympiad",
-    "text": "Participating in the USA Physics Olympiad offers high school students an exceptional platform to demonstrate their mastery of physics concepts. Through engaging challenges and problem-solving tasks, students can hone their analytical and critical thinking skills, deepening their understanding of the subject. The competition encourages scientific inquiry, fostering a spirit of innovation and creativity. By showcasing their abilities, participants have the potential to earn recognition, scholarships, and opportunities for advanced study in physics and related fields.",
-    "tags": [
-        "Physics"
-    ],
-    "website": "https://www.aapt.org/physicsteam/2023/registration.cfm",
-    "inPerson": true,
-    "location": "unknown",
-    "anyoneCanJoin": true,
-    "host": "AAPT",
-    "startDate": "1-23-23",
-    "endDate": "unknown",
-    "deadlineDate": "unknown",
-    "gradeRange": "unknown", 
-    "ID": 56
-},
-
-
-{
-    "title": "US Association for Young Physicists",
-    "text": "The US Association for Young Physicists (USAYPT) competition challenges high school students to showcase their physics knowledge and problem-solving skills. Participation in USAYPT provides students with an opportunity to engage in real-world physics, foster their creativity, and connect with a community of peers who share their interests. Additionally, students who perform well in USAYPT may receive recognition and awards, which can enhance their college applications and future career prospects in STEM fields.",
-    "tags": [
-        "Physics"
-    ],
-    "website": "http://www.usaypt.org/",
-    "inPerson": false,
-    "location": "unknown",
-    "anyoneCanJoin": true,
-    "host": "North Carolina State University",
-    "startDate": "03-02-2024",
-    "endDate": "04-02-2024",
-    "deadlineDate": "unknown",
-    "gradeRange": "unknown", 
-    "ID": 58
-}
-
+[
+    {
+        "inPerson": false,
+        "location": "unknown",
+        "anyoneCanJoin": true,
+        "host": "Cooper Hewitt, Smithsonian Design Museum",
+        "startDate": "09-12-2022",
+        "endDate": "11-06-2023",
+        "deadlineDate": "13-02-2023",
+        "gradeRange": "9-12",
+        "cost": 0
+    },
+    {
+        "inPerson": "unknown",
+        "location": "unknown",
+        "anyoneCanJoin": true,
+        "host": "Math Kangaroo",
+        "startDate": "16-03-2023",
+        "endDate": "16-03-2023",
+        "deadlineDate": "15-12-2023",
+        "gradeRange": "1-12",
+        "cost": 21
+    }
 ]
-

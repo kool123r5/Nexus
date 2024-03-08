@@ -27,7 +27,7 @@ def get_object_by_id(json_list, id_number):
     return None
 
 
-for i in range(2):
+for i in range(1):
     activity = activities[i]
     tags = activity["tags"]
     title = activity["title"]
@@ -74,11 +74,11 @@ for i in range(2):
         temperature=0.2,  # feel free to change temp, i haven't empirically tested this
         messages=[{"role": "user", "content": prompt}],
     )
-
-    start_index = message.content.index("{")
-    end_index = message.content.index("}") + 1
-    print(message.content[start_index:end_index])
-    json_objects.append(json.loads(message.content[start_index:end_index]))
+    response = message.content[0].text
+    start_index = response.index("{")
+    end_index = response.index("}") + 1
+    print(response)
+    json_objects.append(json.loads(response[start_index:end_index]))
     print("Done with: ", i)
 
 with open("extraData.json", "w") as f:

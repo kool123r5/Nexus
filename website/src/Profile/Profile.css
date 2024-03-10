@@ -10,3 +10,113 @@ html {
     position: absolute;
     bottom: 0;
 }
+
+.titleAndEdit {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.editButtonDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.editButtonDiv:hover {
+    color: var(--orange);
+    transition: 0.3s color;
+}
+
+.editIcon {
+    margin-left: 10px;
+}
+
+.basicInfo {
+    padding-left: 2vw;
+    padding-right: 2vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.name {
+    font-weight: 500;
+    font-size: xx-large;
+    text-align: left;
+    float: left;
+}
+
+.settingsLink {
+    background-color: #d9d9d9;
+    color: black;
+    text-align: center;
+    font-size: large;
+    border-radius: 4px;
+    min-width: 200px;
+    width: 20vw;
+}
+
+.settingsLink:hover {
+    color: var(--orange);
+    transition: 0.3s color;
+}
+
+.bio {
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+.profileSubTitles {
+    padding-left: 0;
+    font-weight: 400;
+    font-size: x-large;
+}
+
+.bioText {
+    margin: 0;
+}
+
+.dividerDiv {
+    padding-top: 2vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+.yourActivities {
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+#yourActivitiesTitle {
+    padding-top: 2vh;
+}
+
+.activityLink:hover p {
+    color: var(--orange);
+    transition: 0.3s color;
+}
+
+.yourPosts {
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+#yourPostsTitle {
+    padding-top: 2vh;
+}
+
+.postLink:hover p {
+    color: var(--orange);
+    transition: 0.3s color;
+}
+
+.errorDiv {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

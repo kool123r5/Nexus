@@ -7,6 +7,8 @@ import { projectAuth, projectFirestore } from "../firebase/config";
 import { useDocument } from "../hooks/useDocument";
 import { useUserDocContext } from "../hooks/useUserDocContext";
 import "./Profile.css";
+import { Divider } from "@mantine/core";
+import { IconPencil } from "@tabler/icons-react";
 
 export default function Profile() {
     const { id } = useParams();
@@ -165,7 +167,7 @@ export default function Profile() {
                 });
         }
     };
-                                                                                                                                                      
+
     const removeFriend = async () => {
         if (areFriends() && !requstSentByCurrentUser() && !requestReceivedByCurrentUser()) {
             await projectFirestore
@@ -236,13 +238,90 @@ export default function Profile() {
         }
     };
 
+    if (error) {
+        return <div className="errorDiv">Sorry, we couldn&apos;t fetch that user</div>;
+    }
+
     return (
         <>
             <Navbar />
-            <div className="profile">
-                {error && <p>{error}</p>}
-                <p>{id}</p>
-
+            {currentIdDocument && (
+                <div className="profile">
+                    <div className="basicInfo">
+                        <h2 className="name">{currentIdDocument.displayName}</h2>
+                        {yourProfile ? (
+                            <Link className="settingsLink" to={"/profile/settings"}>
+                                Settings
+                            </Link>
+                        ) : null}
+                    </div>
+                    <div className="bio">
+                        <div className="titleAndEdit">
+                            <h3 className="profileSubTitles">Bio</h3>
+                            <div className="editButtonDiv">
+                                <IconPencil className="editIcon" />
+                            </div>
+                        </div>
+                        {/* <p>{currentIdDocument.bio}</p> */}
+                        <p className="bioText">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore itaque suscipit eveniet adipisci
+                            earum soluta accusantium quisquam, ad excepturi nam reiciendis tenetur veritatis, et voluptatibus
+                            accusamus, quia maiores. Dolorum, omnis. Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit. Rerum facilis aut saepe veritatis, voluptate, sed pariatur illo dignissimos magnam iste
+                            doloribus maxime nulla adipisci odio. Vitae culpa debitis modi facere.
+                        </p>
+                    </div>
+                    <div className="dividerDiv">
+                        <Divider />
+                    </div>
+                    <div className="yourActivities">
+                        <div id="yourActivitiesTitle" className="titleAndEdit">
+                            <h3 className="profileSubTitles">Your Activities</h3>
+                            <div className="editButtonDiv">
+                                <IconPencil className="editIcon" />
+                            </div>
+                        </div>
+                        {currentActivities ? (
+                            currentActivities.map((document) => {
+                                return (
+                                    // currently the link wont lead anywhere
+                                    // cuz we haven't set any uid lol
+                                    <Link to={`/activity/${document.uid}`} key={document.uid} className="activityLink">
+                                        <p>{document.title}</p>
+                                    </Link>
+                                );
+                            })
+                        ) : (
+                            <p>It&apos;s real quiet in here...</p>
+                        )}
+                    </div>
+                    <div className="dividerDiv">
+                        <Divider />
+                    </div>
+                    <div className="yourPosts">
+                        <div id="yourPostsTitle" className="titleAndEdit">
+                            <h3 className="profileSubTitles">Your Posts</h3>
+                            <div className="editButtonDiv">
+                                <IconPencil className="editIcon" />
+                            </div>
+                        </div>
+                        {posts ? (
+                            posts.map((document) => {
+                                return (
+                                    <Link to={`/forum/${document.postId}`} key={document.postId} className="postLink">
+                                        <p>{document.title}</p>
+                                    </Link>
+                                );
+                            })
+                        ) : (
+                            <Link to={"/create"} className="postLink">
+                                <p>Create your first post!</p>
+                            </Link>
+                        )}
+                    </div>
+                </div>
+            )}
+            {/* <div className="profile">
                 {currentIdDocument && (
                     <div>
                         Profile
@@ -254,11 +333,9 @@ export default function Profile() {
                         {currentActivities &&
                             currentActivities.map((document) => {
                                 return (
-                                    <>
-                                        <Link to={`/activity/${document.uid}`}>
-                                            <p key={Math.random()}>{document.title}</p>{" "}
-                                        </Link>
-                                    </>
+                                    <Link to={`/activity/${document.uid}`} key={document.uid}>
+                                        <p key={Math.random()}>{document.title}</p>{" "}
+                                    </Link>
                                 );
                             })}
                         {!currentActivities && <p>No activities yet</p>}
@@ -266,19 +343,16 @@ export default function Profile() {
                         {posts &&
                             posts.map((document) => {
                                 return (
-                                    <>
-                                        <Link to={`/forum/${document.postId}`}> Title: {document.title}</Link>
-                                    </>
+                                    <Link to={`/forum/${document.postId}`} key={document.postId}>
+                                        {" "}
+                                        Title: {document.title}
+                                    </Link>
                                 );
                             })}
                         <p>Student forum posts added: </p>
                         {postsAdded &&
                             postsAdded.map((document) => {
-                                return (
-                                    <>
-                                        <p> Title: {document.title}</p>
-                                    </>
-                                );
+                                return <p key={document.title}> Title: {document.title}</p>;
                             })}
                         <br />
                         <br />
@@ -334,21 +408,9 @@ export default function Profile() {
                             currentIdDocument.friends.map((friend) => {
                                 return <p key={Math.random()}>You are friends with {friend}</p>;
                             })}
-                        {/* 
-                    <pagination className="mt-3">
-            {Array.from({ length: totalPages }).map((_, index) => (
-              <item
-                key={index}
-                active={currentPage === index + 1}
-                onClick={() => handlePageChange(index + 1)}
-              >
-                {index + 1}
-              </item>
-            ))}
-          </pagination>  */}
                     </div>
                 )}
-            </div>
+            </div> */}
         </>
     );
 }

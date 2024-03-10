@@ -22,10 +22,12 @@ html {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    color: var(--orange);
+    transition: 0.3s color;
 }
 
 .editButtonDiv:hover {
-    color: var(--orange);
+    color: white;
     transition: 0.3s color;
 }
 
@@ -50,18 +52,22 @@ html {
 }
 
 .settingsLink {
-    background-color: #d9d9d9;
-    color: black;
+    background-color: var(--orange);
+    color: white;
     text-align: center;
     font-size: large;
     border-radius: 4px;
     min-width: 200px;
     width: 20vw;
+    transition: all 0.3s;
+    transition-property: color, background-color;
 }
 
 .settingsLink:hover {
+    background-color: white;
     color: var(--orange);
-    transition: 0.3s color;
+    transition: all 0.3s;
+    transition-property: color, background-color;
 }
 
 .bio {
@@ -111,6 +117,26 @@ html {
 .postLink:hover p {
     color: var(--orange);
     transition: 0.3s color;
+}
+
+.friendBtn {
+    border-radius: 8px;
+}
+
+.constructiveFriendBtn {
+    background-color: green;
+}
+
+.destructiveFriendBtn {
+    background-color: red;
+}
+
+.friendButtonDiv {
+    width: 100vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    display: flex;
+    justify-content: center;
 }
 
 .errorDiv {

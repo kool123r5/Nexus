@@ -1,6 +1,6 @@
 import firebase from "firebase/app";
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import ProjectFilter from "../Filter/ProjectFilter";
 import Navbar from "../Navbar/Navbar";
 import { projectAuth, projectFirestore } from "../firebase/config";
@@ -17,6 +17,7 @@ export default function Profile() {
     const [activities, setActivities] = useState(null);
     const [posts, setPosts] = useState(null);
     const [postsAdded, setPostsAdded] = useState(null);
+    const navigate = useNavigate();
 
     const [filter, setFilter] = useState("All");
 
@@ -238,6 +239,10 @@ export default function Profile() {
         }
     };
 
+    const handleEdit = () => {
+        navigate("/edit-profile");
+    };
+
     if (error) {
         return <div className="errorDiv">Sorry, we couldn&apos;t fetch that user</div>;
     }
@@ -248,39 +253,53 @@ export default function Profile() {
             {currentIdDocument && (
                 <div className="profile">
                     <div className="basicInfo">
-                        <h2 className="name">{currentIdDocument.displayName}</h2>
+                        <div className="titleAndEdit">
+                            <h2 className="name">{currentIdDocument.displayName}</h2>
+                            {yourProfile ? (
+                                <div className="editButtonDiv" onClick={handleEdit}>
+                                    <IconPencil className="editIcon" />
+                                </div>
+                            ) : null}
+                        </div>
                         {yourProfile ? (
                             <Link className="settingsLink" to={"/profile/settings"}>
                                 Settings
                             </Link>
-                        ) : null}
+                        ) : (
+                            <>
+                                {areFriends() ? (
+                                    <button className="friendBtn destructiveFriendBtn" onClick={removeFriend}>
+                                        Remove Friend
+                                    </button>
+                                ) : null}
+                                {requstSentByCurrentUser() ? (
+                                    <button className="friendBtn destructiveFriendBtn" onClick={unsendFriendRequest}>
+                                        Unsend Friend Request
+                                    </button>
+                                ) : null}
+                                {!areFriends() && !requestReceivedByCurrentUser() && !requstSentByCurrentUser() ? (
+                                    <button className="friendBtn constructiveFriendBtn" onClick={sendFriendRequest}>
+                                        Send Friend Request
+                                    </button>
+                                ) : null}
+                            </>
+                        )}
                     </div>
                     <div className="bio">
-                        <div className="titleAndEdit">
-                            <h3 className="profileSubTitles">Bio</h3>
-                            <div className="editButtonDiv">
-                                <IconPencil className="editIcon" />
-                            </div>
-                        </div>
-                        {/* <p>{currentIdDocument.bio}</p> */}
+                        <h3 className="profileSubTitles">Bio</h3>
                         <p className="bioText">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore itaque suscipit eveniet adipisci
-                            earum soluta accusantium quisquam, ad excepturi nam reiciendis tenetur veritatis, et voluptatibus
-                            accusamus, quia maiores. Dolorum, omnis. Lorem ipsum, dolor sit amet consectetur adipisicing
-                            elit. Rerum facilis aut saepe veritatis, voluptate, sed pariatur illo dignissimos magnam iste
-                            doloribus maxime nulla adipisci odio. Vitae culpa debitis modi facere.
+                            {currentIdDocument.bio
+                                ? currentIdDocument.bio
+                                : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore itaque suscipit eveniet adipisciearum soluta accusantium quisquam, ad excepturi nam reiciendis tenetur veritatis, et voluptatibus accusamus, quia maiores. Dolorum, omnis. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum facilis aut saepe veritatis, voluptate, sed pariatur illo dignissimos magnam iste doloribus maxime nulla adipisci odio. Vitae culpa debitis modi facere."}
                         </p>
                     </div>
                     <div className="dividerDiv">
                         <Divider />
                     </div>
                     <div className="yourActivities">
-                        <div id="yourActivitiesTitle" className="titleAndEdit">
-                            <h3 className="profileSubTitles">Your Activities</h3>
-                            <div className="editButtonDiv">
-                                <IconPencil className="editIcon" />
-                            </div>
-                        </div>
+                        <h3 className="profileSubTitles" id="yourActivitiesTitle">
+                            {yourProfile ? "Your" : "Their"} Activities
+                        </h3>
                         {currentActivities ? (
                             currentActivities.map((document) => {
                                 return (
@@ -299,118 +318,53 @@ export default function Profile() {
                         <Divider />
                     </div>
                     <div className="yourPosts">
-                        <div id="yourPostsTitle" className="titleAndEdit">
-                            <h3 className="profileSubTitles">Your Posts</h3>
-                            <div className="editButtonDiv">
-                                <IconPencil className="editIcon" />
-                            </div>
-                        </div>
-                        {posts ? (
+                        <h3 className="profileSubTitles" id="yourPostsTitle">
+                            {yourProfile ? "Your" : "Their"} Posts
+                        </h3>
+                        {posts &&
                             posts.map((document) => {
                                 return (
                                     <Link to={`/forum/${document.postId}`} key={document.postId} className="postLink">
                                         <p>{document.title}</p>
                                     </Link>
                                 );
-                            })
-                        ) : (
+                            })}
+                        {!posts && yourProfile && (
                             <Link to={"/create"} className="postLink">
                                 <p>Create your first post!</p>
                             </Link>
                         )}
+                        {!posts && !yourProfile && <p>Crickets...</p>}
                     </div>
+                    {yourProfile && (
+                        <>
+                            {anyRequestReceivedByCurrentUserOnTheirPage() ? (
+                                <div className="friendButtonDiv">
+                                    {userDoc &&
+                                        userDoc.friendRequestsReceived.map((reqId) => {
+                                            return (
+                                                <>
+                                                    <button
+                                                        className="friendBtn constructiveFriendBtn"
+                                                        onClick={() => acceptFriendRequest(reqId)}
+                                                    >
+                                                        Accept Request From {reqId}
+                                                    </button>
+                                                    <button
+                                                        className="friendBtn destructiveFriendBtn"
+                                                        onClick={() => rejectFriendRequest(reqId)}
+                                                    >
+                                                        Reject Request From {reqId}
+                                                    </button>
+                                                </>
+                                            );
+                                        })}
+                                </div>
+                            ) : null}
+                        </>
+                    )}
                 </div>
             )}
-            {/* <div className="profile">
-                {currentIdDocument && (
-                    <div>
-                        Profile
-                        <ProjectFilter changeFilter={changeFilter} />
-                        <input type="text" value={searchQuery} onChange={changeSearchQuery} placeholder="Search by name" />
-                        <p>Welcome: {currentIdDocument.displayName}</p>
-                        <br></br>
-                        <p>Your activities</p>
-                        {currentActivities &&
-                            currentActivities.map((document) => {
-                                return (
-                                    <Link to={`/activity/${document.uid}`} key={document.uid}>
-                                        <p key={Math.random()}>{document.title}</p>{" "}
-                                    </Link>
-                                );
-                            })}
-                        {!currentActivities && <p>No activities yet</p>}
-                        <p>Your posts</p>
-                        {posts &&
-                            posts.map((document) => {
-                                return (
-                                    <Link to={`/forum/${document.postId}`} key={document.postId}>
-                                        {" "}
-                                        Title: {document.title}
-                                    </Link>
-                                );
-                            })}
-                        <p>Student forum posts added: </p>
-                        {postsAdded &&
-                            postsAdded.map((document) => {
-                                return <p key={document.title}> Title: {document.title}</p>;
-                            })}
-                        <br />
-                        <br />
-                        {yourProfile ? (
-                            <>
-                                <Link to={"/profile/settings"}>
-                                    <button>Settings</button>
-                                </Link>
-                                <br />
-                                {anyRequestReceivedByCurrentUserOnTheirPage() ? (
-                                    <>
-                                        {userDoc &&
-                                            userDoc.friendRequestsReceived.map((reqId) => {
-                                                return (
-                                                    <>
-                                                        <br />
-                                                        <button onClick={() => acceptFriendRequest(reqId)}>
-                                                            Accept Request From {reqId}
-                                                        </button>
-                                                        <button onClick={() => rejectFriendRequest(reqId)}>
-                                                            Reject Request From {reqId}
-                                                        </button>
-                                                    </>
-                                                );
-                                            })}
-                                    </>
-                                ) : (
-                                    <></>
-                                )}
-                            </>
-                        ) : (
-                            <>
-                                {areFriends() ? <button onClick={removeFriend}>Remove Friend</button> : <></>}
-                                {requstSentByCurrentUser() ? (
-                                    <button onClick={unsendFriendRequest}>Unsend Friend Request</button>
-                                ) : (
-                                    <></>
-                                )}
-                                {!areFriends() && !requestReceivedByCurrentUser() && !requstSentByCurrentUser() ? (
-                                    <button onClick={sendFriendRequest}>Send Friend Request</button>
-                                ) : (
-                                    <></>
-                                )}
-                            </>
-                        )}
-                        {yourProfile &&
-                            currentIdDocument.friendRequestsSent &&
-                            currentIdDocument.friendRequestsSent.map((friendReq) => {
-                                return <p key={Math.random()}>You have sent a friend request to {friendReq}</p>;
-                            })}
-                        {yourProfile &&
-                            currentIdDocument.friends &&
-                            currentIdDocument.friends.map((friend) => {
-                                return <p key={Math.random()}>You are friends with {friend}</p>;
-                            })}
-                    </div>
-                )}
-            </div> */}
         </>
     );
 }

@@ -2,7 +2,7 @@ import { useEffect, useState, useRef } from "react";
 import { projectFirestore } from "../firebase/config";
 import unixTimestampStringPastTimeLimit from "../functions/unixTimestampStringPastTimeLimit";
 
-export const useCollection = (collection, _query, _orderBy, _limit, localStorageKey) => {
+export const useCollection = (collection, _query, _orderBy, _limit, localStorageKey, customTimeLimit) => {
     const [documents, setDocuments] = useState(null);
     const [error, setError] = useState(null);
 
@@ -20,7 +20,7 @@ export const useCollection = (collection, _query, _orderBy, _limit, localStorage
             timeLastFetched == null ||
             localStorageData == null ||
             isNaN(timeLastFetched) ||
-            unixTimestampStringPastTimeLimit(timeLastFetched)
+            unixTimestampStringPastTimeLimit(timeLastFetched, customTimeLimit)
         ) {
             let ref = projectFirestore.collection(collection);
             console.log("RUNNING THE DB CALL...");

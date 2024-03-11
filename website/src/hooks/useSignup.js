@@ -72,7 +72,7 @@ export const useSignup = () => {
                     friendRequestsReceived: [],
                     age,
                     grade,
-                    postsAdded:[],
+                    postsAdded: [],
                     location: loc,
                     pfp: url,
                     interests,
@@ -83,7 +83,7 @@ export const useSignup = () => {
                 setError(null);
             }
 
-            // location.reload();
+            location.reload();
         } catch (err) {
             if (!isCancelled) {
                 console.log(err);

@@ -8,7 +8,8 @@ import { useDocument } from "../hooks/useDocument";
 import { useUserDocContext } from "../hooks/useUserDocContext";
 import "./Profile.css";
 import { Divider } from "@mantine/core";
-import { IconPencil } from "@tabler/icons-react";
+import { IconFriends, IconPencil, IconX } from "@tabler/icons-react";
+import { Toaster, toast } from "sonner";
 
 export default function Profile() {
     const { id } = useParams();
@@ -24,6 +25,100 @@ export default function Profile() {
     const [searchQuery, setSearchQuery] = useState("");
     const [currentPage, setCurrentPage] = useState(1);
     const rowsPerPage = 10;
+
+    useEffect(() => {
+        if (userDoc && userDoc.friendRequestsReceived && userDoc.friendRequestsReceived.length != 0) {
+            userDoc.friendRequestsReceived.forEach((friendReqId) => {
+                toast.custom(
+                    (t) => (
+                        <>
+                            <div
+                                style={{
+                                    backgroundColor: "#1e1e1e",
+                                    borderRadius: "8px",
+                                    padding: "10px",
+                                    display: "flex",
+                                    flexDirection: "column",
+                                    position: "relative",
+                                }}
+                            >
+                                <div
+                                    style={{
+                                        position: "absolute",
+                                        top: "-15px",
+                                        right: "-15px",
+                                        width: "30px",
+                                        height: "30px",
+                                        borderRadius: "100px",
+                                        backgroundColor: "#ff6d00",
+                                        color: "white",
+                                        display: "flex",
+                                        justifyContent: "center",
+                                        alignItems: "center",
+                                        fontSize: "16px",
+                                        border: "none",
+                                        outline: "none",
+                                        cursor: "pointer",
+                                        zIndex: 2,
+                                    }}
+                                    onClick={() => toast.dismiss(t)}
+                                >
+                                    <IconX />
+                                </div>
+                                <p
+                                    style={{
+                                        color: "white",
+                                        margin: 0,
+                                    }}
+                                >
+                                    <Link
+                                        to={`/profile/${friendReqId}`}
+                                        style={{
+                                            color: "#ff6d00",
+                                        }}
+                                    >
+                                        This user
+                                    </Link>{" "}
+                                    has sent you a friend request!
+                                </p>
+                                <div
+                                    style={{
+                                        display: "flex",
+                                        flexDirection: "row",
+                                        width: "100%",
+                                        gap: "2px",
+                                    }}
+                                >
+                                    <button
+                                        className="friendBtn constructiveFriendBtn"
+                                        style={{
+                                            width: "50%",
+                                        }}
+                                        onClick={() => acceptFriendRequest(friendReqId)}
+                                    >
+                                        Accept
+                                    </button>
+                                    <button
+                                        className="friendBtn destructiveFriendBtn"
+                                        style={{
+                                            width: "50%",
+                                        }}
+                                        onClick={() => rejectFriendRequest(friendReqId)}
+                                    >
+                                        Reject
+                                    </button>
+                                </div>
+                            </div>
+                        </>
+                    ),
+                    {
+                        closeButton: true,
+                        duration: 1000000,
+                    }
+                );
+            });
+        }
+    }, [userDoc]);
 
     const fetchActivities = async () => {
         if (currentIdDocument && currentIdDocument.activities) {
@@ -341,21 +436,11 @@ export default function Profile() {
                             {anyRequestReceivedByCurrentUserOnTheirPage() ? (
                                 <div className="friendButtonDiv">
                                     {userDoc &&
-                                        userDoc.friendRequestsReceived.map((reqId) => {
+                                        userDoc.friendRequestsReceived &&
+                                        userDoc.friendRequestsReceived.map((friendReq) => {
                                             return (
                                                 <>
-                                                    <button
-                                                        className="friendBtn constructiveFriendBtn"
-                                                        onClick={() => acceptFriendRequest(reqId)}
-                                                    >
-                                                        Accept Request From {reqId}
-                                                    </button>
-                                                    <button
-                                                        className="friendBtn destructiveFriendBtn"
-                                                        onClick={() => rejectFriendRequest(reqId)}
-                                                    >
-                                                        Reject Request From {reqId}
-                                                    </button>
+                                                    <Toaster key={friendReq} />
                                                 </>
                                             );
                                         })}

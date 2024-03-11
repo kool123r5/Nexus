@@ -19,7 +19,7 @@
     justify-content: space-evenly;
     gap: 1.5vh;
     width: 100%;
-    margin-top:5vh;
+    margin-top: 5vh;
 }
 
 #LoginText {
@@ -131,9 +131,14 @@
     color: var(--white);
 }
 
-
 .divider {
     width: 81%;
+}
+
+.otherLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
 }
 
 .error {

@@ -6,7 +6,6 @@ import { IconBrandGoogleFilled } from "@tabler/icons-react";
 import { Divider, PasswordInput, TextInput } from "@mantine/core";
 import { useViewportSize } from "@mantine/hooks";
 
-
 export default function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -48,9 +47,14 @@ export default function Login() {
                                 {!isPending ? "Login" : "Loading..."}
                             </button>
                             {error && <div className="error">{error}</div>}
-                            <Link className="forgotPassword" to={"/forgot-password"}>
-                                Forgot password?
-                            </Link>
+                            <div className="otherLinks">
+                                <Link className="forgotPassword" to={"/forgot-password"}>
+                                    Forgot password?
+                                </Link>
+                                <Link className="forgotPassword" to={"/signup"}>
+                                    Don&apos;t have an account?
+                                </Link>
+                            </div>
                         </div>
                     </div>
                     <Divider my="md" className="divider" label="OR" labelPosition="center" />

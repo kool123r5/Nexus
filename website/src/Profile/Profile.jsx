@@ -29,91 +29,81 @@ export default function Profile() {
     useEffect(() => {
         if (userDoc && userDoc.friendRequestsReceived && userDoc.friendRequestsReceived.length != 0) {
             userDoc.friendRequestsReceived.forEach((friendReqId) => {
-                toast.custom(
-                    (t) => (
-                        <>
-                            <div
+                toast.success(
+                    <div
+                        style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            width: "100%",
+                            alignItems: "center",
+                        }}
+                    >
+                        <IconFriends color="white" />
+                        <p
+                            style={{
+                                color: "white",
+                                textAlign: "center",
+                                fontSize: "large",
+                                margin: "5px",
+                            }}
+                        >
+                            <Link
                                 style={{
-                                    backgroundColor: "#1e1e1e",
-                                    borderRadius: "8px",
-                                    padding: "10px",
-                                    display: "flex",
-                                    flexDirection: "column",
-                                    position: "relative",
+                                    color: "#ff6d00",
                                 }}
+                                to={`/profile/${friendReqId}`}
                             >
-                                <div
-                                    style={{
-                                        position: "absolute",
-                                        top: "-15px",
-                                        right: "-15px",
-                                        width: "30px",
-                                        height: "30px",
-                                        borderRadius: "100px",
-                                        backgroundColor: "#ff6d00",
-                                        color: "white",
-                                        display: "flex",
-                                        justifyContent: "center",
-                                        alignItems: "center",
-                                        fontSize: "16px",
-                                        border: "none",
-                                        outline: "none",
-                                        cursor: "pointer",
-                                        zIndex: 2,
-                                    }}
-                                    onClick={() => toast.dismiss(t)}
-                                >
-                                    <IconX />
-                                </div>
-                                <p
-                                    style={{
-                                        color: "white",
-                                        margin: 0,
-                                    }}
-                                >
-                                    <Link
-                                        to={`/profile/${friendReqId}`}
-                                        style={{
-                                            color: "#ff6d00",
-                                        }}
-                                    >
-                                        This user
-                                    </Link>{" "}
-                                    has sent you a friend request!
-                                </p>
-                                <div
-                                    style={{
-                                        display: "flex",
-                                        flexDirection: "row",
-                                        width: "100%",
-                                        gap: "2px",
-                                    }}
-                                >
-                                    <button
-                                        className="friendBtn constructiveFriendBtn"
-                                        style={{
-                                            width: "50%",
-                                        }}
-                                        onClick={() => acceptFriendRequest(friendReqId)}
-                                    >
-                                        Accept
-                                    </button>
-                                    <button
-                                        className="friendBtn destructiveFriendBtn"
-                                        style={{
-                                            width: "50%",
-                                        }}
-                                        onClick={() => rejectFriendRequest(friendReqId)}
-                                    >
-                                        Reject
-                                    </button>
-                                </div>
-                            </div>
-                        </>
-                    ),
+                                This user
+                            </Link>
+                            &nbsp;has sent you a friend request
+                        </p>
+                        <div
+                            style={{
+                                display: "flex",
+                                flexDirection: "row",
+                                gap: "2px",
+                                width: "100%",
+                            }}
+                        >
+                            <button
+                                className="constructiveFriendBtn friendBtn"
+                                style={{
+                                    width: "50%",
+                                }}
+                                onClick={() => acceptFriendRequest(friendReqId)}
+                            >
+                                Accept
+                            </button>
+                            <button
+                                className="destructiveFriendBtn friendBtn"
+                                style={{
+                                    width: "50%",
+                                }}
+                                onClick={() => rejectFriendRequest(friendReqId)}
+                            >
+                                Reject
+                            </button>
+                        </div>
+                        <div
+                            style={{
+                                width: "100%",
+                                paddingTop: "5px",
+                            }}
+                        >
+                            <button
+                                className="destructiveFriendBtn friendBtn"
+                                style={{
+                                    width: "100%",
+                                    backgroundColor: "black",
+                                }}
+                                onClick={() => toast.dismiss()}
+                            >
+                                Ignore
+                            </button>
+                        </div>
+                    </div>,
                     {
-                        closeButton: true,
-                        duration: 1000000,
+                        duration: 15000,
                     }
                 );
             });
@@ -440,7 +430,15 @@ export default function Profile() {
                                         userDoc.friendRequestsReceived.map((friendReq) => {
                                             return (
                                                 <>
-                                                    <Toaster key={friendReq} />
+                                                    <Toaster
+                                                        key={friendReq}
+                                                        toastOptions={{
+                                                            style: {
+                                                                backgroundColor: "#1e1e1e",
+                                                                border: "none",
+                                                            },
+                                                        }}
+                                                    />
                                                 </>
                                             );
                                         })}

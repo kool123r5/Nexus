@@ -5,6 +5,7 @@ import "./Profile.css";
 import { NumberInput, TextInput, Textarea } from "@mantine/core";
 import { useEffect, useState } from "react";
 import { projectAuth, projectFirestore } from "../firebase/config";
+import { Toaster, toast } from "sonner";
 
 export default function EditProfile() {
     const { userDoc, error } = useUserDocContext();
@@ -16,7 +17,7 @@ export default function EditProfile() {
     const [location, setLocation] = useState("");
 
     const handleSave = () => {
-        projectFirestore
+        const updateProfilePromise = projectFirestore
             .collection("users")
             .doc(projectAuth.currentUser.uid)
             .update({
@@ -26,6 +27,13 @@ export default function EditProfile() {
                 grade: grade == "" ? userDoc.grade : grade,
                 location: location == "" ? userDoc.location : location,
             });
+        toast.promise(updateProfilePromise, {
+            loading: "Updating profile...",
+            success: () => {
+                return "Profile updated";
+            },
+            error: "Something went wrong",
+        });
     };
 
     useEffect(() => {
@@ -107,6 +115,7 @@ export default function EditProfile() {
                             Save Changes
                         </button>
                     </div>
+                    <Toaster />
                 </div>
             )}
         </>

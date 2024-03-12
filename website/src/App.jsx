@@ -13,6 +13,7 @@ import School from "./School/School";
 import Signup from "./Signup/Signup";
 import { useAuthContext } from "./hooks/useAuthContext";
 import Counsellor from "./Counsellor/Counsellor";
+import EditProfile from "./Profile/EditProfile";
 
 export default function App() {
     const { user, authIsReady } = useAuthContext();
@@ -46,6 +47,9 @@ export default function App() {
                 {authIsReady && <Route path="/signup" element={user ? <Navigate replace to="/" /> : <Signup />} />}
 
                 {authIsReady && <Route path="/auth/action" element={<EmailTemplate />} />}
+                {authIsReady && (
+                    <Route path="/profile/edit" element={user ? <EditProfile /> : <Navigate replace to={"/login"} />} />
+                )}
 
                 <Route path="/forgot-password" element={<PasswordReset />} />
             </Routes>

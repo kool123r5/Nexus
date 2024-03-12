@@ -1,0 +1,74 @@
+body,
+html {
+    margin: 0;
+}
+
+.editProfile {
+    position: absolute;
+    bottom: 0;
+    height: calc(100vh - 4rem);
+    width: 100vw;
+}
+
+.editProfileForm {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2vh;
+    gap: 2vh;
+}
+
+.editProfileInput {
+    width: 75vw;
+}
+
+.mantine-Textarea-input {
+    font-family: "Inter", sans-serif !important;
+    border: 2px solid var(--gray_E) !important;
+    border-bottom: 2px solid var(--gray_D) !important;
+    border-radius: 3px !important;
+    background-color: var(--gray_E) !important;
+    font-size: 2.5vh !important;
+    font-weight: 540 !important;
+}
+
+.mantine-Textarea-input:focus {
+    outline: none;
+    border-bottom: 2px solid var(--orange) !important;
+}
+
+.mantine-Textarea-root {
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
+}
+
+.mantine-Textarea-input {
+    font-family: "Inter", sans-serif !important;
+    border: 2px solid var(--gray_E) !important;
+    border-bottom: 2px solid var(--gray_D) !important;
+    border-radius: 3px !important;
+    background-color: var(--gray_E) !important;
+    font-size: 2.5vh !important;
+    font-weight: 540 !important;
+}
+
+.mantine-NumberInput-input {
+    font-family: "Inter", sans-serif !important;
+    border: 2px solid var(--gray_E) !important;
+    border-bottom: 2px solid var(--gray_D) !important;
+    border-radius: 3px !important;
+    background-color: var(--gray_E) !important;
+    font-size: 2.5vh !important;
+    font-weight: 540 !important;
+}
+
+.mantine-NumberInput-input:focus {
+    outline: none;
+    border-bottom: 2px solid var(--orange) !important;
+}
+
+.mantine-NumberInput-root {
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
+}

@@ -325,7 +325,7 @@ export default function Profile() {
     };
 
     const handleEdit = () => {
-        navigate("/edit-profile");
+        navigate("/profile/edit");
     };
 
     if (error) {

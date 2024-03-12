@@ -16,13 +16,16 @@ export default function EditProfile() {
     const [location, setLocation] = useState("");
 
     const handleSave = () => {
-        projectFirestore.collection("users").doc(projectAuth.currentUser.uid).update({
-            displayName: name,
-            bio: bio,
-            age: age,
-            grade: grade,
-            location: location,
-        });
+        projectFirestore
+            .collection("users")
+            .doc(projectAuth.currentUser.uid)
+            .update({
+                displayName: name == "" ? userDoc.displayName : name,
+                bio: bio == "" ? userDoc.bio : bio,
+                age: age == "" ? userDoc.age : age,
+                grade: grade == "" ? userDoc.grade : grade,
+                location: location == "" ? userDoc.location : location,
+            });
     };
 
     useEffect(() => {
@@ -53,7 +56,7 @@ export default function EditProfile() {
                     <div className="editProfileForm">
                         <TextInput
                             className="editProfileInput"
-                            placeholder={userDoc.displayName}
+                            placeholder={userDoc.displayName || "New Name"}
                             size={"lg"}
                             description={"Name"}
                             onChange={(e) => setName(e.target.value)}
@@ -68,7 +71,7 @@ export default function EditProfile() {
                         />
                         <NumberInput
                             className="editProfileInput"
-                            placeholder={`${userDoc.age}`}
+                            placeholder={`${userDoc.age}` || "New Age"}
                             description={"Age"}
                             size={"lg"}
                             onChange={(e) => setAge(e)}
@@ -78,7 +81,7 @@ export default function EditProfile() {
                         />
                         <NumberInput
                             className="editProfileInput"
-                            placeholder={`${userDoc.grade}`}
+                            placeholder={`${userDoc.grade}` || "New Grade"}
                             description={"Grade"}
                             size={"lg"}
                             onChange={(e) => setGrade(e)}
@@ -88,7 +91,7 @@ export default function EditProfile() {
                         />
                         <TextInput
                             className="editProfileInput"
-                            placeholder={userDoc.location}
+                            placeholder={userDoc.location || "New Location"}
                             size={"lg"}
                             description={"Location"}
                             onChange={(e) => setLocation(e.target.value)}

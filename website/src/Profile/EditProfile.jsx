@@ -2,10 +2,14 @@ import "./EditProfile.css";
 import Navbar from "../Navbar/Navbar";
 import { useUserDocContext } from "../hooks/useUserDocContext";
 import "./Profile.css";
-import { NumberInput, TextInput, Textarea } from "@mantine/core";
+import { MultiSelect, NumberInput, TextInput, Textarea } from "@mantine/core";
 import { useEffect, useState } from "react";
 import { projectAuth, projectFirestore } from "../firebase/config";
 import { Toaster, toast } from "sonner";
+import { Interest } from "../Signup/Interest.jsx";
+import { IconSearch } from "@tabler/icons-react";
+import tags from "../Signup/tagArray.js";
+import arraysEqual from "../functions/arrayEqual.js";
 
 export default function EditProfile() {
     const { userDoc, error } = useUserDocContext();
@@ -15,6 +19,8 @@ export default function EditProfile() {
     const [age, setAge] = useState("");
     const [grade, setGrade] = useState("");
     const [location, setLocation] = useState("");
+    const [interests, setInterests] = useState([]);
+    const [multiSelectValues, setMultiSelectValues] = useState([]);
 
     const handleSave = () => {
         const updateProfilePromise = projectFirestore
@@ -26,6 +32,7 @@ export default function EditProfile() {
                 age: age == "" ? userDoc.age : age,
                 grade: grade == "" ? userDoc.grade : grade,
                 location: location == "" ? userDoc.location : location,
+                interests: interests,
             });
         toast.promise(updateProfilePromise, {
             loading: "Updating profile...",
@@ -43,14 +50,32 @@ export default function EditProfile() {
                 (bio != userDoc.bio && bio != "") ||
                 (age != userDoc.age && age != "") ||
                 (grade != userDoc.grade && grade != "") ||
-                (location != userDoc.location && location != "")
+                (location != userDoc.location && location != "") ||
+                !arraysEqual(userDoc.interests, interests)
             ) {
                 setDisabled(false);
             } else {
                 setDisabled(true);
             }
         }
-    }, [name, bio, age, grade, location, userDoc]);
+    }, [name, bio, age, grade, location, userDoc, interests]);
+
+    useEffect(() => {
+        if (userDoc && userDoc.interests) {
+            setInterests([...userDoc.interests]);
+        }
+    }, [userDoc]);
+
+    // useEffect(() => {
+    //     console.log("Interests are: ", interests);
+    //     setTagsWithoutUserInterest((n) =>
+    //         n.filter((tag) => {
+    //             return !interests.includes(tag);
+    //         })
+    //     );
+    // }, [interests]);
+
+    // console.log("Tags are: ", tagsWithoutUserInterest);
 
     if (error) {
         return <div className="errorDiv">Sorry, there was an error fetching this user!</div>;
@@ -104,6 +129,35 @@ export default function EditProfile() {
                             description={"Location"}
                             onChange={(e) => setLocation(e.target.value)}
                         />
+                        <MultiSelect
+                            className="editProfileInput"
+                            placeholder="Search for Interests"
+                            rightSection={<IconSearch />}
+                            // data={tagsWithoutUserInterest}
+                            data={tags.filter((tag) => !interests.includes(tag))}
+                            searchable
+                            nothingFoundMessage={"Not found"}
+                            onChange={(e) => {
+                                // setTagsWithoutUserInterest((curr) => splitOgArray(curr, e[e.length - 1]));
+                                setInterests((currentInterests) => [...currentInterests, ...e]);
+                                setMultiSelectValues([]);
+                            }}
+                            value={multiSelectValues}
+                            size={"lg"}
+                        />
+                        <div className="editProfileInput" id="interestsContainerEditProfile">
+                            {interests.map((interest, index) => {
+                                return (
+                                    <Interest
+                                        key={index}
+                                        text={interest}
+                                        interests={interests}
+                                        setInterests={setInterests}
+                                        isInInterestsPreviously={interests.includes(interest)}
+                                    />
+                                );
+                            })}
+                        </div>
                         <button
                             disabled={disabled}
                             style={{

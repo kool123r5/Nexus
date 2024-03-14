@@ -69,7 +69,8 @@ for i in range(1):
         """
 
     message = client.messages.create(
-        model="claude-3-sonnet-20240229",  # claude-3-sonnet-20240229 (cheaper) && claude-3-opus-20240229 (smarter)
+        # claude-3-haiku-20240307 (cheapest) && claude-3-sonnet-20240229 (cheaper) && claude-3-opus-20240229 (smartest)
+        model="claude-3-haiku-20240307",
         max_tokens=1024,
         temperature=0.2,  # feel free to change temp, i haven't empirically tested this
         messages=[{"role": "user", "content": prompt}],
@@ -81,5 +82,5 @@ for i in range(1):
     json_objects.append(json.loads(response[start_index:end_index]))
     print("Done with: ", i)
 
-with open("extraData.json", "w") as f:
+with open("extraDataClaudeHaiku.json", "w") as f:
     f.write(json.dumps(json_objects))

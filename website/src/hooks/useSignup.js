@@ -1,15 +1,12 @@
 import { useState, useEffect } from "react";
 import { projectAuth, projectFirestore, projectStorage } from "../firebase/config";
 import resizeImg from "../functions/resizeImg";
+import hasNumber from "../functions/hasNumber";
 
 export const useSignup = () => {
     const [isCancelled, setIsCancelled] = useState(false);
     const [error, setError] = useState(null);
     const [isPending, setIsPending] = useState(false);
-
-    const hasNumber = (str) => {
-        return /\d/.test(str);
-    };
 
     const signup = async (email, password, confirmPassword, displayName, age, grade, loc, pfp, interests) => {
         setError(null);

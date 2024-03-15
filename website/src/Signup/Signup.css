@@ -145,7 +145,7 @@
     opacity: 1;
     text-align: center;
     cursor: pointer;
-    transition: 0.3s all; 
+    transition: 0.3s all;
 }
 
 .sign_up_prev_button {
@@ -160,7 +160,7 @@
     opacity: 1;
     text-align: center;
     cursor: pointer;
-    transition: 0.3s all; 
+    transition: 0.3s all;
 }
 
 .sign_up_next_button:hover {
@@ -202,7 +202,7 @@
     opacity: 1;
     text-align: center;
     cursor: pointer;
-    transition: 0.3s all; 
+    transition: 0.3s all;
 }
 
 .sign_up_submit_button:hover {
@@ -231,7 +231,6 @@
 }
 
 .mantine-PasswordInput-root {
-    text-align: center !important;
     width: 100%;
     margin-top: 0.75em;
     margin-bottom: 0.75em;

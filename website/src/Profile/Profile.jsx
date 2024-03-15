@@ -346,11 +346,7 @@ export default function Profile() {
                                 </div>
                             ) : null}
                         </div>
-                        {yourProfile ? (
-                            <Link className="settingsLink" to={"/profile/settings"}>
-                                Settings
-                            </Link>
-                        ) : (
+                        {yourProfile ? null : (
                             <>
                                 {areFriends() ? (
                                     <button className="friendBtn destructiveFriendBtn" onClick={removeFriend}>

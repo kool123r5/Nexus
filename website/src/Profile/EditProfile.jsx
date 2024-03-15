@@ -2,7 +2,7 @@ import "./EditProfile.css";
 import Navbar from "../Navbar/Navbar";
 import { useUserDocContext } from "../hooks/useUserDocContext";
 import "./Profile.css";
-import { MultiSelect, NumberInput, TextInput, Textarea } from "@mantine/core";
+import { Divider, MultiSelect, NumberInput, PasswordInput, TextInput, Textarea } from "@mantine/core";
 import { useEffect, useState } from "react";
 import { projectAuth, projectFirestore } from "../firebase/config";
 import { Toaster, toast } from "sonner";
@@ -10,10 +10,13 @@ import { Interest } from "../Signup/Interest.jsx";
 import { IconSearch } from "@tabler/icons-react";
 import tags from "../Signup/tagArray.js";
 import arraysEqual from "../functions/arrayEqual.js";
+import firebase from "firebase/app";
+import hasNumber from "../functions/hasNumber.js";
+import { useDisclosure } from "@mantine/hooks";
 
 export default function EditProfile() {
     const { userDoc, error } = useUserDocContext();
-    const [disabled, setDisabled] = useState(true);
+    const [disabledProfileEdit, setDisabledProfileEdit] = useState(true);
     const [name, setName] = useState("");
     const [bio, setBio] = useState("");
     const [age, setAge] = useState("");
@@ -21,6 +24,19 @@ export default function EditProfile() {
     const [location, setLocation] = useState("");
     const [interests, setInterests] = useState([]);
     const [multiSelectValues, setMultiSelectValues] = useState([]);
+    const [newEmail, setNewEmail] = useState(null);
+    const [disabledEmailChange, setDisabledEmailChange] = useState(true);
+    const [errorWhileUpdatingEmail, setErrorWhileUpdatingEmail] = useState(null);
+    const [needsToLogin, setNeedsToLogin] = useState(false);
+    const [emailChangePassword, setEmailChangePassword] = useState("");
+    const [currentPassword, setCurrentPassword] = useState("");
+    const [newPassword, setNewPassword] = useState("");
+    const [confirmNewPassword, setConfirmNewPassword] = useState("");
+    const [disabledPasswordChange, setDisabledPasswordChange] = useState(true);
+    const [errorPasswordChange, setErrorPasswordChange] = useState(null);
+    const [errorPasswordChangeCurrPw, setErrorPasswordChangeCurrPw] = useState(null);
+
+    const [visible, { toggle }] = useDisclosure();
 
     const handleSave = () => {
         const updateProfilePromise = projectFirestore
@@ -53,9 +69,9 @@ export default function EditProfile() {
                 (location != userDoc.location && location != "") ||
                 !arraysEqual(userDoc.interests, interests)
             ) {
-                setDisabled(false);
+                setDisabledProfileEdit(false);
             } else {
-                setDisabled(true);
+                setDisabledProfileEdit(true);
             }
         }
     }, [name, bio, age, grade, location, userDoc, interests]);
@@ -66,19 +82,107 @@ export default function EditProfile() {
         }
     }, [userDoc]);
 
-    // useEffect(() => {
-    //     console.log("Interests are: ", interests);
-    //     setTagsWithoutUserInterest((n) =>
-    //         n.filter((tag) => {
-    //             return !interests.includes(tag);
-    //         })
-    //     );
-    // }, [interests]);
+    const changeEmail = async () => {
+        try {
+            setErrorWhileUpdatingEmail(null);
+            if (emailChangePassword != null && emailChangePassword != undefined && emailChangePassword != "") {
+                const credential = firebase.auth.EmailAuthProvider.credential(
+                    projectAuth.currentUser.email,
+                    emailChangePassword
+                );
+                await projectAuth.currentUser.reauthenticateWithCredential(credential);
+                await projectAuth.currentUser.verifyBeforeUpdateEmail(newEmail);
+            } else {
+                await projectAuth.currentUser.verifyBeforeUpdateEmail(newEmail);
+            }
+            toast("Sent your new email a verification link!");
+            setEmailChangePassword("");
+        } catch (err) {
+            if (err.code == "auth/requires-recent-login") {
+                setNeedsToLogin(true);
+                toast.error("You need to enter your password to do this!");
+            } else {
+                if (err.message.includes("INVALID_NEW_EMAIL")) {
+                    setErrorWhileUpdatingEmail("Please enter a valid email");
+                } else {
+                    setErrorWhileUpdatingEmail(err.message);
+                }
+            }
+        }
+    };
 
-    // console.log("Tags are: ", tagsWithoutUserInterest);
+    const changePassword = async () => {
+        try {
+            if (newPassword != confirmNewPassword) {
+                setErrorPasswordChange("Passwords do not match");
+                return;
+            }
+            if (
+                newPassword != "" &&
+                newPassword != undefined &&
+                newPassword != null &&
+                currentPassword != null &&
+                currentPassword != ""
+            ) {
+                const credential = firebase.auth.EmailAuthProvider.credential(
+                    projectAuth.currentUser.email,
+                    currentPassword
+                );
+                await projectAuth.currentUser.reauthenticateWithCredential(credential);
+                await projectAuth.currentUser.updatePassword(newPassword);
+                toast.success("Successfully changed your password!");
+                setNewPassword("");
+                setConfirmNewPassword("");
+                setErrorPasswordChange("");
+            }
+        } catch (err) {
+            if (err.message.includes("INVALID_LOGIN_CREDENTIALS")) {
+                setErrorPasswordChangeCurrPw("Wrong Password");
+            } else {
+                setErrorPasswordChange(err.message);
+            }
+        }
+    };
+
+    useEffect(() => {
+        if (newEmail != projectAuth.currentUser.email && newEmail != "" && newEmail != null && newEmail != undefined) {
+            setDisabledEmailChange(false);
+        } else {
+            setDisabledEmailChange(true);
+        }
+    }, [newEmail]);
+
+    useEffect(() => {
+        if (newPassword == "") {
+            return;
+        }
+
+        if (currentPassword == "") {
+            setErrorPasswordChangeCurrPw("Enter your current password");
+            return;
+        }
+
+        if (newPassword == confirmNewPassword && newPassword.length >= 6 && hasNumber(newPassword)) {
+            setErrorPasswordChange("");
+            setDisabledPasswordChange(false);
+            return;
+        }
+
+        if (newPassword.length < 6 || !hasNumber(newPassword)) {
+            setErrorPasswordChange("Your password must be atleast 6 characters and have a number.");
+            setDisabledPasswordChange(true);
+            return;
+        }
+        if (newPassword != confirmNewPassword) {
+            setErrorPasswordChange("Passwords don't match!");
+            setDisabledPasswordChange(true);
+            return;
+        }
+        setDisabledPasswordChange(true);
+    }, [newPassword, confirmNewPassword, currentPassword]);
 
     if (error) {
-        return <div className="errorDiv">Sorry, there was an error fetching this user!</div>;
+        return <div className="errorDiv">Sorry, there was an error fetching your profile!</div>;
     }
 
     return (
@@ -87,6 +191,7 @@ export default function EditProfile() {
             {userDoc && (
                 <div className="editProfile">
                     <div className="editProfileForm">
+                        <h2 className="profileSettingsSubHeadings">Edit Profile</h2>
                         <TextInput
                             className="editProfileInput"
                             placeholder={userDoc.displayName || "New Name"}
@@ -133,12 +238,10 @@ export default function EditProfile() {
                             className="editProfileInput"
                             placeholder="Search for Interests"
                             rightSection={<IconSearch />}
-                            // data={tagsWithoutUserInterest}
                             data={tags.filter((tag) => !interests.includes(tag))}
                             searchable
                             nothingFoundMessage={"Not found"}
                             onChange={(e) => {
-                                // setTagsWithoutUserInterest((curr) => splitOgArray(curr, e[e.length - 1]));
                                 setInterests((currentInterests) => [...currentInterests, ...e]);
                                 setMultiSelectValues([]);
                             }}
@@ -159,14 +262,98 @@ export default function EditProfile() {
                             })}
                         </div>
                         <button
-                            disabled={disabled}
+                            disabled={disabledProfileEdit}
                             style={{
-                                cursor: disabled ? "not-allowed" : "pointer",
-                                backgroundColor: disabled ? "#1a1a1a" : "#ff6d00",
+                                cursor: disabledProfileEdit ? "not-allowed" : "pointer",
+                                backgroundColor: disabledProfileEdit ? "#1a1a1a" : "#ff6d00",
                             }}
                             onClick={handleSave}
                         >
                             Save Changes
+                        </button>
+
+                        <div className="editProfileInput">
+                            <Divider color="red" />
+                        </div>
+
+                        <h2 className="editProfileDangerZoneHeading">Danger Zone</h2>
+                        <h2 className="profileSettingsSubHeadings">Change Email</h2>
+                        <TextInput
+                            className="editProfileInput"
+                            size={"xl"}
+                            label="Change Email"
+                            placeholder={projectAuth.currentUser && projectAuth.currentUser.email}
+                            onChange={(e) => {
+                                setErrorWhileUpdatingEmail(null);
+                                setNewEmail(e.target.value);
+                            }}
+                            error={errorWhileUpdatingEmail}
+                        />
+                        {needsToLogin ? (
+                            <PasswordInput
+                                className="editProfileInput"
+                                label="You need to enter your password to do this sensitive action"
+                                size={"xl"}
+                                onChange={(e) => setEmailChangePassword(e.target.value)}
+                            />
+                        ) : null}
+                        <button
+                            disabled={disabledEmailChange}
+                            style={{
+                                cursor: disabledPasswordChange ? "not-allowed" : "pointer",
+                                backgroundColor: disabledPasswordChange ? "#1a1a1a" : "#ff6d00",
+                            }}
+                            onClick={changeEmail}
+                        >
+                            Send me a verification email
+                        </button>
+                        <h2 className="profileSettingsSubHeadings">Change Password</h2>
+                        <PasswordInput
+                            className="editProfileInput"
+                            label="Current Password"
+                            placeholder="******"
+                            size={"xl"}
+                            onChange={(e) => {
+                                setErrorPasswordChangeCurrPw(null);
+                                setCurrentPassword(e.target.value);
+                            }}
+                            error={errorPasswordChangeCurrPw}
+                            required
+                        />
+                        <PasswordInput
+                            className="editProfileInput"
+                            label="New Password"
+                            placeholder="******"
+                            size={"xl"}
+                            onChange={(e) => {
+                                setNewPassword(e.target.value);
+                            }}
+                            error={errorPasswordChange}
+                            visible={visible}
+                            onVisibilityChange={toggle}
+                            required
+                        />
+                        <PasswordInput
+                            className="editProfileInput"
+                            label="Confirm New Password"
+                            placeholder="******"
+                            size={"xl"}
+                            onChange={(e) => {
+                                setConfirmNewPassword(e.target.value);
+                            }}
+                            visible={visible}
+                            onVisibilityChange={toggle}
+                            required
+                        />
+                        <button
+                            disabled={disabledPasswordChange}
+                            style={{
+                                cursor: disabledPasswordChange ? "not-allowed" : "pointer",
+                                backgroundColor: disabledPasswordChange ? "#1a1a1a" : "#ff6d00",
+                            }}
+                            onClick={changePassword}
+                        >
+                            Change Password
                         </button>
                     </div>
                     <Toaster />

@@ -16,7 +16,6 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 2vh;
     gap: 2vh;
 }
 
@@ -80,7 +79,6 @@ html {
     border-bottom: 2px solid var(--gray_D) !important;
     border-radius: 3px !important;
     background-color: var(--gray_E) !important;
-    font-size: 2.5vh !important;
     font-weight: 540 !important;
 }
 
@@ -93,4 +91,16 @@ html {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
+}
+
+.editProfileDangerZoneHeading {
+    color: rgb(221, 15, 15);
+    font-weight: 800;
+    font-size: xx-large;
+    margin: 0;
+}
+
+.profileSettingsSubHeadings {
+    margin: 0;
 }

@@ -80,6 +80,10 @@ export default function EditProfile() {
         if (userDoc && userDoc.interests) {
             setInterests([...userDoc.interests]);
         }
+
+        if (userDoc && userDoc.bio) {
+            setBio(userDoc.bio);
+        }
     }, [userDoc]);
 
     const changeEmail = async () => {
@@ -202,6 +206,7 @@ export default function EditProfile() {
                         <Textarea
                             className="editProfileInput"
                             placeholder={userDoc.bio || "New Bio"}
+                            value={bio}
                             size={"lg"}
                             description={"Bio"}
                             autosize

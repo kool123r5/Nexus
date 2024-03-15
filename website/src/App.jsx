@@ -8,7 +8,6 @@ import Home from "./Home/Home";
 import Login from "./Login/Login";
 import PasswordReset from "./PasswordReset/PasswordReset";
 import Profile from "./Profile/Profile";
-import ProfileSettings from "./Profile/ProfileSettings";
 import School from "./School/School";
 import Signup from "./Signup/Signup";
 import { useAuthContext } from "./hooks/useAuthContext";
@@ -25,12 +24,6 @@ export default function App() {
                 <Route path="/forum" element={<Forum />} />
                 <Route path="/counsellor" element={<Counsellor />} />
                 <Route path="/school" element={<School />} />
-                {authIsReady && (
-                    <Route
-                        path="/profile/settings"
-                        element={user ? <ProfileSettings /> : <Navigate replace to="/login" />}
-                    />
-                )}
                 {authIsReady && (
                     <Route path="/profile/:id" element={user ? <Profile /> : <Navigate replace to="/login" />} />
                 )}

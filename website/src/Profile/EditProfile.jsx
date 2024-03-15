@@ -300,8 +300,8 @@ export default function EditProfile() {
                         <button
                             disabled={disabledEmailChange}
                             style={{
-                                cursor: disabledPasswordChange ? "not-allowed" : "pointer",
-                                backgroundColor: disabledPasswordChange ? "#1a1a1a" : "#ff6d00",
+                                cursor: disabledEmailChange ? "not-allowed" : "pointer",
+                                backgroundColor: disabledEmailChange ? "#1a1a1a" : "#ff6d00",
                             }}
                             onClick={changeEmail}
                         >

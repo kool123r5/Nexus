@@ -35,6 +35,12 @@ html {
     margin-left: 10px;
 }
 
+.friendAndPfpDiv {
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+}
+
 .basicInfo {
     padding-left: 2vw;
     padding-right: 2vw;

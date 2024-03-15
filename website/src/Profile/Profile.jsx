@@ -7,9 +7,10 @@ import { projectAuth, projectFirestore } from "../firebase/config";
 import { useDocument } from "../hooks/useDocument";
 import { useUserDocContext } from "../hooks/useUserDocContext";
 import "./Profile.css";
-import { Divider } from "@mantine/core";
+import { AspectRatio, Divider } from "@mantine/core";
 import { IconFriends, IconPencil, IconX } from "@tabler/icons-react";
 import { Toaster, toast } from "sonner";
+import getDefaultPfp from "../functions/getDefaultPfp.js";
 
 export default function Profile() {
     const { id } = useParams();
@@ -346,25 +347,34 @@ export default function Profile() {
                                 </div>
                             ) : null}
                         </div>
-                        {yourProfile ? null : (
-                            <>
-                                {areFriends() ? (
-                                    <button className="friendBtn destructiveFriendBtn" onClick={removeFriend}>
-                                        Remove Friend
-                                    </button>
-                                ) : null}
-                                {requstSentByCurrentUser() ? (
-                                    <button className="friendBtn destructiveFriendBtn" onClick={unsendFriendRequest}>
-                                        Unsend Friend Request
-                                    </button>
-                                ) : null}
-                                {!areFriends() && !requestReceivedByCurrentUser() && !requstSentByCurrentUser() ? (
-                                    <button className="friendBtn constructiveFriendBtn" onClick={sendFriendRequest}>
-                                        Send Friend Request
-                                    </button>
-                                ) : null}
-                            </>
-                        )}
+                        <div className="friendAndPfpDiv">
+                            {yourProfile ? null : (
+                                <>
+                                    {areFriends() ? (
+                                        <button className="friendBtn destructiveFriendBtn" onClick={removeFriend}>
+                                            Remove Friend
+                                        </button>
+                                    ) : null}
+                                    {requstSentByCurrentUser() ? (
+                                        <button className="friendBtn destructiveFriendBtn" onClick={unsendFriendRequest}>
+                                            Unsend Friend Request
+                                        </button>
+                                    ) : null}
+                                    {!areFriends() && !requestReceivedByCurrentUser() && !requstSentByCurrentUser() ? (
+                                        <button className="friendBtn constructiveFriendBtn" onClick={sendFriendRequest}>
+                                            Send Friend Request
+                                        </button>
+                                    ) : null}
+                                </>
+                            )}
+                            <img
+                                className="profilePfp"
+                                src={getDefaultPfp(currentIdDocument.displayName)}
+                                alt="Profile Picture"
+                                height={100}
+                                width={100}
+                            />
+                        </div>
                     </div>
                     <div className="bio">
                         <h3 className="profileSubTitles">Bio</h3>

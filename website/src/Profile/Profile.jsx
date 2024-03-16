@@ -10,6 +10,7 @@ import { Divider } from "@mantine/core";
 import { IconFriends, IconPencil } from "@tabler/icons-react";
 import { Toaster, toast } from "sonner";
 import getDefaultPfp from "../functions/getDefaultPfp.js";
+import { useLogout } from "../hooks/useLogout.js";
 
 export default function Profile() {
     const { id } = useParams();
@@ -18,6 +19,7 @@ export default function Profile() {
     const [activities, setActivities] = useState(null);
     const [posts, setPosts] = useState(null);
     const navigate = useNavigate();
+    const { logout } = useLogout();
 
     const [filter, setFilter] = useState("All");
 
@@ -367,12 +369,12 @@ export default function Profile() {
                                         // currently the link wont lead anywhere
                                         // cuz we haven't set any uid lol
                                         <Link to={`/activity/${document.uid}`} key={document.uid} className="activityLink">
-                                            <p>{document.title}</p>
+                                            <p className="randomTxt">{document.title}</p>
                                         </Link>
                                     );
                                 })
                             ) : (
-                                <p>It&apos;s real quiet in here...</p>
+                                <p className="randomTxt">It&apos;s real quiet in here...</p>
                             )}
                         </div>
                     </div>
@@ -389,16 +391,16 @@ export default function Profile() {
                                 posts.map((document) => {
                                     return (
                                         <Link to={`/forum/${document.postId}`} key={document.postId} className="postLink">
-                                            <p>{document.title}</p>
+                                            <p className="randomTxt">{document.title}</p>
                                         </Link>
                                     );
                                 })}
                             {posts != null && posts.length == 0 && yourProfile && (
                                 <Link to={"/create"} className="postLink">
-                                    <p>Create your first post!</p>
+                                    <p className="randomTxt">Create your first post!</p>
                                 </Link>
                             )}
-                            {posts != null && posts.length == 0 && !yourProfile && <p>Crickets...</p>}
+                            {posts != null && posts.length == 0 && !yourProfile && <p className="randomTxt">Crickets...</p>}
                         </div>
                     </div>
                     {yourProfile && userDoc.friends ? (
@@ -414,14 +416,21 @@ export default function Profile() {
                                     {userDoc.friends.map((friendId) => {
                                         return (
                                             <Link to={`/profile/${friendId}`} className="friendsLink" key={friendId}>
-                                                <p>{friendId}</p>
+                                                <p className="randomTxt">{friendId}</p>
                                             </Link>
                                         );
                                     })}
-                                    {userDoc.friends.length == 0 ? <p>:(</p> : null}
+                                    {userDoc.friends.length == 0 ? <p className="randomTxt">:(</p> : null}
                                 </div>
                             </div>
                         </>
+                    ) : null}
+                    {yourProfile ? (
+                        <div className="logoutDiv">
+                            <button onClick={logout} className="logoutBtn">
+                                Logout
+                            </button>
+                        </div>
                     ) : null}
                     {yourProfile && (
                         <>

@@ -178,3 +178,26 @@ html {
     flex-wrap: wrap;
     padding-top: 0.5vh;
 }
+
+.randomTxt {
+    margin: 0;
+}
+
+.logoutDiv {
+    padding-left: 2vw;
+    padding-top: 3vh;
+    display: flex;
+    align-items: center;
+}
+
+.logoutBtn {
+    color: white;
+    background-color: red;
+}
+
+.logoutBtn:hover {
+    color: red;
+    background-color: white;
+    transition: 0.3s all;
+    transition-property: color, background-color;
+}

@@ -137,8 +137,10 @@
 
 .otherLinks {
     display: flex;
-    flex-direction: column;
-    gap: 1vh;
+    flex-direction: row;
+    gap: 15vw;
+    font-size:1em;
+    margin-top:1vh;
 }
 
 .error {

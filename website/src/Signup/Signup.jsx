@@ -159,9 +159,6 @@ export default function Signup() {
 
                             <br />
 
-                            <label>
-                                Profile Picture: <input type="file" onChange={(e) => setProfilePicture(e.target.files[0])} />
-                            </label>
                         </div>
                         <NextButton nextStep={nextStep} />
                     </div>

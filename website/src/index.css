@@ -79,6 +79,25 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.coming_soon_filler_block {
+  height: 80%;
+  width: 90%;
+  display: flex;
+  background-color: var(--gray_B);
+  border-radius: 10px;
+  align-items: center; 
+  justify-content: center; 
+  text-align: center; 
+}
+
+.coming_soon_filler_text {
+  font-family: 'Verdana';
+  font-size: 3em;
+  font-weight: 700;
+  margin: 0; 
+  padding: 0; 
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

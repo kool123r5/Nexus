@@ -1,4 +1,4 @@
-.carousel_container{
+.home_section_carousel_container{
     width: 100vw;
     overflow:hidden;
     white-space: nowrap;
@@ -6,7 +6,7 @@
 }
 
 
-.carousel{
+.home_section_carousel{
     display:flex;
     overflow: hidden;
     width: 100vw;
@@ -15,13 +15,13 @@
 
 
 
-.carousel_title{
+.home_section_carousel_title{
     margin-left: 13px;
     margin-top:0.5em; 
 }
 
 
-.previous_button{
+.home_section_previous_button{
     position: absolute;
     top:0%;
     left:0%;
@@ -31,15 +31,15 @@
     border: 1px 1px 1px 1px black;
     transition: all 0.5s;
 }
-.previous_button:hover{
+.home_section_previous_button:hover{
     opacity: 70%;
 }
 
-.previous_button:focus{
+.home_section_previous_button:focus{
     outline: none;
 }
 
-.next_button{
+.home_section_next_button{
     position: absolute;
     top:0%;
     right:0%;
@@ -49,10 +49,10 @@
     border: 1px 1px 1px 1px black;
     transition: all 0.5s;
 }
-.next_button:hover{
+.home_section_next_button:hover{
     opacity: 70%;
 }
 
-.next_button:focus{
+.home_section_next_button:focus{
     outline: none;
 }

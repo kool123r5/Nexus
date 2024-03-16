@@ -44,9 +44,9 @@ export default function HomeSection({ uniqueTypeObj, sorted_documents }) {
 
     return (
         <>
-            <h2 className="carousel_title">{type}</h2>
-            <div className="carousel_container">
-                <button className="previous_button" onClick={handlePreviousClick}>
+            <h2 className="home_section_carousel_title">{type}</h2>
+            <div className="home_section_carousel_container">
+                <button className="home_section_previous_button" onClick={handlePreviousClick}>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="16"
@@ -58,7 +58,7 @@ export default function HomeSection({ uniqueTypeObj, sorted_documents }) {
                         <path d="M10 12.796V3.204L4.519 8zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z" />
                     </svg>
                 </button>
-                <button className="next_button" onClick={handleNextClick}>
+                <button className="home_section_next_button" onClick={handleNextClick}>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="16"
@@ -71,7 +71,7 @@ export default function HomeSection({ uniqueTypeObj, sorted_documents }) {
                     </svg>
                 </button>
 
-                <div className="carousel" ref={carouselRef}>
+                <div className="home_section_carousel" ref={carouselRef}>
                     {postObjectArray.map((postObject) => {
                         return (
                             <Card

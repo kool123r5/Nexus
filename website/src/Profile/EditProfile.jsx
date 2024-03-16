@@ -77,12 +77,13 @@ export default function EditProfile() {
     }, [name, bio, age, grade, location, userDoc, interests]);
 
     useEffect(() => {
-        if (userDoc && userDoc.interests) {
-            setInterests([...userDoc.interests]);
-        }
-
-        if (userDoc && userDoc.bio) {
-            setBio(userDoc.bio);
+        if (userDoc) {
+            setInterests(userDoc.interests ? [...userDoc.interests] : []);
+            setBio(userDoc.bio ? userDoc.bio : "");
+            setName(userDoc.displayName ? userDoc.displayName : "");
+            setAge(userDoc.age ? userDoc.age : "");
+            setGrade(userDoc.grade ? userDoc.grade : "");
+            setLocation(userDoc.location ? userDoc.location : "");
         }
     }, [userDoc]);
 
@@ -199,6 +200,7 @@ export default function EditProfile() {
                         <TextInput
                             className="editProfileInput"
                             placeholder={userDoc.displayName || "New Name"}
+                            value={name}
                             size={"lg"}
                             description={"Name"}
                             onChange={(e) => setName(e.target.value)}
@@ -216,9 +218,10 @@ export default function EditProfile() {
                             className="editProfileInput"
                             placeholder={`${userDoc.age}` || "New Age"}
                             description={"Age"}
+                            value={age}
                             size={"lg"}
                             onChange={(e) => setAge(e)}
-                            min={10}
+                            min={13}
                             max={80}
                             allowDecimal={false}
                         />
@@ -226,9 +229,10 @@ export default function EditProfile() {
                             className="editProfileInput"
                             placeholder={`${userDoc.grade}` || "New Grade"}
                             description={"Grade"}
+                            value={grade}
                             size={"lg"}
                             onChange={(e) => setGrade(e)}
-                            min={3}
+                            min={6}
                             max={12}
                             allowDecimal={false}
                         />
@@ -236,6 +240,7 @@ export default function EditProfile() {
                             className="editProfileInput"
                             placeholder={userDoc.location || "New Location"}
                             size={"lg"}
+                            value={location}
                             description={"Location"}
                             onChange={(e) => setLocation(e.target.value)}
                         />

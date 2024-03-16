@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-import { projectAuth, projectFirestore, projectStorage } from "../firebase/config";
-import resizeImg from "../functions/resizeImg";
+import { projectAuth, projectFirestore } from "../firebase/config";
 import hasNumber from "../functions/hasNumber";
 
 export const useSignup = () => {
@@ -8,7 +7,7 @@ export const useSignup = () => {
     const [error, setError] = useState(null);
     const [isPending, setIsPending] = useState(false);
 
-    const signup = async (email, password, confirmPassword, displayName, age, grade, loc, pfp, interests) => {
+    const signup = async (email, password, confirmPassword, displayName, age, grade, loc, interests) => {
         setError(null);
         setIsPending(true);
 
@@ -44,36 +43,21 @@ export const useSignup = () => {
             // sends the user a verification email
             await res.user.sendEmailVerification();
 
-            let url = null;
-            if (pfp != null) {
-                const pfpResized = await resizeImg(pfp);
-                const uploadPath = `pfp/${res.user.uid}`;
-                const blob = await fetch(pfpResized).then((res) => res.blob());
-                const profilePicResized = await projectStorage.ref(uploadPath).put(blob);
-
-                url = await profilePicResized.ref.getDownloadURL();
-            }
-
-            await res.user.updateProfile({ displayName: displayName, photoURL: url });
+            await res.user.updateProfile({ displayName: displayName });
 
             // create a user document
-            await projectFirestore
-                .collection("users")
-                .doc(res.user.uid)
-                .set({
-                    displayName,
-                    email,
-                    authProviders: ["email"],
-                    friends: [],
-                    friendRequestsSent: [],
-                    friendRequestsReceived: [],
-                    age,
-                    grade,
-                    postsAdded: [],
-                    location: loc,
-                    pfp: url,
-                    interests,
-                });
+            await projectFirestore.collection("users").doc(res.user.uid).set({
+                displayName,
+                friends: [],
+                friendRequestsSent: [],
+                friendRequestsReceived: [],
+                age,
+                grade,
+                location: loc,
+                interests,
+                posts: [],
+                activities: [],
+            });
 
             if (!isCancelled) {
                 setIsPending(false);

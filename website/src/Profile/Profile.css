@@ -5,10 +5,11 @@ html {
 }
 
 .profile {
-    height: calc(100vh - 4em);
     width: 100vw;
     position: absolute;
-    bottom: 0;
+    top: 4rem;
+    padding-bottom: 2vh;
+    background-color: #161616;
 }
 
 .titleAndEdit {
@@ -106,6 +107,10 @@ html {
     padding-top: 2vh;
 }
 
+.activityLink p {
+    margin: 0;
+}
+
 .activityLink:hover p {
     color: var(--orange);
     transition: 0.3s color;
@@ -118,6 +123,20 @@ html {
 
 #yourPostsTitle {
     padding-top: 2vh;
+}
+
+.yourFriends {
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+#yourFriendsTitle {
+    padding-top: 2vh;
+}
+
+.friendsLink:hover p {
+    color: var(--orange);
+    transition: 0.3s color;
 }
 
 .postLink:hover p {
@@ -151,4 +170,34 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.activityOrPostOrFriendContainerDivProfile {
+    display: flex;
+    column-gap: 2.75vw;
+    flex-wrap: wrap;
+    padding-top: 0.5vh;
+}
+
+.randomTxt {
+    margin: 0;
+}
+
+.logoutDiv {
+    padding-left: 2vw;
+    padding-top: 3vh;
+    display: flex;
+    align-items: center;
+}
+
+.logoutBtn {
+    color: white;
+    background-color: red;
+}
+
+.logoutBtn:hover {
+    color: red;
+    background-color: white;
+    transition: 0.3s all;
+    transition-property: color, background-color;
 }

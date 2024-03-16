@@ -1,16 +1,16 @@
 import firebase from "firebase/app";
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import ProjectFilter from "../Filter/ProjectFilter";
 import Navbar from "../Navbar/Navbar";
 import { projectAuth, projectFirestore } from "../firebase/config";
 import { useDocument } from "../hooks/useDocument";
 import { useUserDocContext } from "../hooks/useUserDocContext";
 import "./Profile.css";
-import { AspectRatio, Divider } from "@mantine/core";
-import { IconFriends, IconPencil, IconX } from "@tabler/icons-react";
+import { Divider } from "@mantine/core";
+import { IconFriends, IconPencil } from "@tabler/icons-react";
 import { Toaster, toast } from "sonner";
 import getDefaultPfp from "../functions/getDefaultPfp.js";
+import { useLogout } from "../hooks/useLogout.js";
 
 export default function Profile() {
     const { id } = useParams();
@@ -18,8 +18,8 @@ export default function Profile() {
     const { userDoc } = useUserDocContext();
     const [activities, setActivities] = useState(null);
     const [posts, setPosts] = useState(null);
-    const [postsAdded, setPostsAdded] = useState(null);
     const navigate = useNavigate();
+    const { logout } = useLogout();
 
     const [filter, setFilter] = useState("All");
 
@@ -135,30 +135,6 @@ export default function Profile() {
         }
     };
 
-    const fetchPostsAdded = async () => {
-        if (currentIdDocument && currentIdDocument.activities && currentIdDocument.postsAdded) {
-            // Extract activity references
-
-            const postAddedDocsPromises = currentIdDocument.postsAdded.map(async (post) => {
-                const postRef = post.postDoc;
-                const postDocSnapshot = await postRef.get();
-                const postDocData = postDocSnapshot.data();
-                return {
-                    ...postDocData,
-                    completed: post.completed,
-                    startDate: post.startDate,
-                    rating: post.rating,
-                    comment: post.comment,
-                    endDate: post.endDate,
-                };
-            });
-
-            const postAddedDocs = await Promise.all(postAddedDocsPromises);
-            // console.log(activityDocs);
-            setPostsAdded(postAddedDocs);
-        }
-    };
-
     const fetchPosts = async () => {
         if (currentIdDocument && currentIdDocument.posts) {
             const postDocsPromises = currentIdDocument.posts.map(async (post) => {
@@ -177,7 +153,6 @@ export default function Profile() {
     useEffect(() => {
         fetchActivities();
         fetchPosts();
-        fetchPostsAdded();
     }, [currentIdDocument]);
 
     const changeFilter = (newFilter) => {
@@ -371,18 +346,14 @@ export default function Profile() {
                                 className="profilePfp"
                                 src={getDefaultPfp(currentIdDocument.displayName)}
                                 alt="Profile Picture"
-                                height={100}
-                                width={100}
+                                height={80}
+                                width={80}
                             />
                         </div>
                     </div>
                     <div className="bio">
                         <h3 className="profileSubTitles">Bio</h3>
-                        <p className="bioText">
-                            {currentIdDocument.bio
-                                ? currentIdDocument.bio
-                                : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore itaque suscipit eveniet adipisciearum soluta accusantium quisquam, ad excepturi nam reiciendis tenetur veritatis, et voluptatibus accusamus, quia maiores. Dolorum, omnis. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum facilis aut saepe veritatis, voluptate, sed pariatur illo dignissimos magnam iste doloribus maxime nulla adipisci odio. Vitae culpa debitis modi facere."}
-                        </p>
+                        <p className="bioText">{currentIdDocument.bio ? currentIdDocument.bio : "..."}</p>
                     </div>
                     <div className="dividerDiv">
                         <Divider />
@@ -391,19 +362,21 @@ export default function Profile() {
                         <h3 className="profileSubTitles" id="yourActivitiesTitle">
                             {yourProfile ? "Your" : "Their"} Activities
                         </h3>
-                        {currentActivities ? (
-                            currentActivities.map((document) => {
-                                return (
-                                    // currently the link wont lead anywhere
-                                    // cuz we haven't set any uid lol
-                                    <Link to={`/activity/${document.uid}`} key={document.uid} className="activityLink">
-                                        <p>{document.title}</p>
-                                    </Link>
-                                );
-                            })
-                        ) : (
-                            <p>It&apos;s real quiet in here...</p>
-                        )}
+                        <div className="activityOrPostOrFriendContainerDivProfile">
+                            {activities && activities.length != 0 ? (
+                                activities.map((document) => {
+                                    return (
+                                        // currently the link wont lead anywhere
+                                        // cuz we haven't set any uid lol
+                                        <Link to={`/activity/${document.uid}`} key={document.uid} className="activityLink">
+                                            <p className="randomTxt">{document.title}</p>
+                                        </Link>
+                                    );
+                                })
+                            ) : (
+                                <p className="randomTxt">It&apos;s real quiet in here...</p>
+                            )}
+                        </div>
                     </div>
                     <div className="dividerDiv">
                         <Divider />
@@ -412,21 +385,53 @@ export default function Profile() {
                         <h3 className="profileSubTitles" id="yourPostsTitle">
                             {yourProfile ? "Your" : "Their"} Posts
                         </h3>
-                        {posts &&
-                            posts.map((document) => {
-                                return (
-                                    <Link to={`/forum/${document.postId}`} key={document.postId} className="postLink">
-                                        <p>{document.title}</p>
-                                    </Link>
-                                );
-                            })}
-                        {!posts && yourProfile && (
-                            <Link to={"/create"} className="postLink">
-                                <p>Create your first post!</p>
-                            </Link>
-                        )}
-                        {!posts && !yourProfile && <p>Crickets...</p>}
+                        <div className="activityOrPostOrFriendContainerDivProfile">
+                            {posts != null &&
+                                posts &&
+                                posts.map((document) => {
+                                    return (
+                                        <Link to={`/forum/${document.postId}`} key={document.postId} className="postLink">
+                                            <p className="randomTxt">{document.title}</p>
+                                        </Link>
+                                    );
+                                })}
+                            {posts != null && posts.length == 0 && yourProfile && (
+                                <Link to={"/create"} className="postLink">
+                                    <p className="randomTxt">Create your first post!</p>
+                                </Link>
+                            )}
+                            {posts != null && posts.length == 0 && !yourProfile && <p className="randomTxt">Crickets...</p>}
+                        </div>
                     </div>
+                    {yourProfile && userDoc.friends ? (
+                        <>
+                            <div className="dividerDiv">
+                                <Divider />
+                            </div>
+                            <div className="yourFriends">
+                                <h3 className="profileSubTitles" id="yourFriendsTitle">
+                                    Your Friends
+                                </h3>
+                                <div className="activityOrPostOrFriendContainerDivProfile">
+                                    {userDoc.friends.map((friendId) => {
+                                        return (
+                                            <Link to={`/profile/${friendId}`} className="friendsLink" key={friendId}>
+                                                <p className="randomTxt">{friendId}</p>
+                                            </Link>
+                                        );
+                                    })}
+                                    {userDoc.friends.length == 0 ? <p className="randomTxt">:(</p> : null}
+                                </div>
+                            </div>
+                        </>
+                    ) : null}
+                    {yourProfile ? (
+                        <div className="logoutDiv">
+                            <button onClick={logout} className="logoutBtn">
+                                Logout
+                            </button>
+                        </div>
+                    ) : null}
                     {yourProfile && (
                         <>
                             {anyRequestReceivedByCurrentUserOnTheirPage() ? (

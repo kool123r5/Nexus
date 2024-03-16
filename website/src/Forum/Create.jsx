@@ -1,11 +1,12 @@
-import React, { useState } from "react";
-import { useAuthContext } from "../hooks/useAuthContext";
-import { projectFirestore } from "../firebase/config";
-import Navbar from "../Navbar/Navbar";
-import { useNavigate } from "react-router-dom";
-import { useDocument } from "../hooks/useDocument";
+import { TextInput, Textarea } from "@mantine/core";
 import firebase from "firebase/app";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import Navbar from "../Navbar/Navbar";
+import { projectFirestore } from "../firebase/config";
+import { useAuthContext } from "../hooks/useAuthContext";
 import { useUserDocContext } from "../hooks/useUserDocContext";
+import "./Create.css";
 
 const Create = () => {
     const { user } = useAuthContext();
@@ -13,12 +14,22 @@ const Create = () => {
     const [text, setText] = useState("");
     const [type, setType] = useState("");
     const [location, setLocation] = useState("");
+    const [disabled, setDisabled] = useState(true);
     const navigateTo = useNavigate();
-    // const { document, isPending, error } = useDocument("users", user.uid);
+
     const { userDoc: document, error } = useUserDocContext();
     if (error) {
         console.log(error);
     }
+
+    useEffect(() => {
+        if (title != "" && text != "" && type != "" && location != "") {
+            setDisabled(false);
+        } else {
+            setDisabled(true);
+        }
+    }, [title, text, type, location]);
+
     const handleCreatePost = async () => {
         try {
             const currentDate = firebase.firestore.FieldValue.serverTimestamp();
@@ -67,28 +78,54 @@ const Create = () => {
     return (
         <>
             <Navbar />
-            <div>
-                <h1>Create Post</h1>
-                <form>
-                    <label>Title:</label>
-                    <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
+            <div className="createPostContainer">
+                <h2>Create Post</h2>
+                <div className="createPostFormDiv">
+                    <TextInput
+                        label="Title"
+                        placeholder="What's happening?"
+                        size="lg"
+                        onChange={(e) => setTitle(e.target.value)}
+                        className="createPostInput"
+                    />
 
-                    <label>Text:</label>
-                    <textarea value={text} onChange={(e) => setText(e.target.value)} />
+                    <Textarea
+                        label="Text"
+                        placeholder="I need some help with..."
+                        size="lg"
+                        autosize
+                        onChange={(e) => setText(e.target.value)}
+                        className="createPostInput"
+                    />
 
-                    <label>Type:</label>
-                    <input type="text" value={type} onChange={(e) => setType(e.target.value)} />
+                    <TextInput
+                        label="What type of activity is this?"
+                        placeholder="Debate"
+                        size="lg"
+                        className="createPostInput"
+                        onChange={(e) => setType(e.target.value)}
+                    />
 
-                    <label>Location:</label>
-                    <input type="text" value={location} onChange={(e) => setLocation(e.target.value)} />
+                    <TextInput
+                        label="Where is it happening?"
+                        placeholder="Online / Boston, MA"
+                        size="lg"
+                        className="createPostInput"
+                        onChange={(e) => setLocation(e.target.value)}
+                    />
 
-                    {/* You may also display the current user's information if needed */}
-                    <p>Created by: {user.displayName || user.email}</p>
-
-                    <button type="button" onClick={handleCreatePost}>
+                    <button
+                        disabled={disabled}
+                        style={{
+                            cursor: disabled ? "not-allowed" : "pointer",
+                            backgroundColor: disabled ? "#1a1a1a" : "#ff6d00",
+                        }}
+                        type="button"
+                        onClick={handleCreatePost}
+                    >
                         Create Post
                     </button>
-                </form>
+                </div>
             </div>
         </>
     );

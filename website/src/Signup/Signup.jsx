@@ -1,11 +1,14 @@
 import { PasswordInput, Stepper, TextInput } from "@mantine/core";
 import { useDisclosure, useViewportSize } from "@mantine/hooks";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useSignup } from "../hooks/useSignup";
 import { Interest } from "./Interest";
 import "./Signup.css";
 import tags from "./tagArray";
 import { NextButton, PrevButton, SubmitButton } from "./Buttons";
+import hasNumber from "../functions/hasNumber";
+import validator from "email-validator";
+import { Toaster, toast } from "sonner";
 
 export default function Signup() {
     const [email, setEmail] = useState("");
@@ -16,8 +19,10 @@ export default function Signup() {
     const [grade, setGrade] = useState("");
     const [location, setLocation] = useState("");
     const [interests, setInterests] = useState([]);
-    const [profilePicture, setProfilePicture] = useState(null);
     const [active, setActive] = useState(0);
+    const [errorFirstSection, setErrorFirstSection] = useState("");
+    const [errorSecondSection, setErrorSecondSection] = useState("");
+    const [errorThirdSection, setErrorThirdSection] = useState("");
 
     const [visible, { toggle }] = useDisclosure(false);
     const { width } = useViewportSize();
@@ -25,35 +30,59 @@ export default function Signup() {
     const element1Ref = useRef(null);
     const element2Ref = useRef(null);
     const element3Ref = useRef(null);
-    const stepsRef = useRef(null);
 
     const nextStep = () => {
         setActive((current) => {
             const newActive = Math.min(current + 1, 2);
-            const scrollAmount = newActive * window.innerWidth;
 
-            // if (stepsRef.current) {
-            //     stepsRef.current.scrollTo({
-            //         left: scrollAmount,
-            //         behavior: "smooth",
-            //     });
-            // }
+            if (
+                active == 0 &&
+                (errorFirstSection != "" || displayName == "" || password == "" || email == "" || confirmPassword == "")
+            ) {
+                return active;
+            }
+
+            if (active == 1 && (errorSecondSection != "" || age == "" || grade == "" || location == "")) {
+                return active;
+            }
 
             return newActive;
         });
     };
 
+    useEffect(() => {
+        if (active == 0) {
+            if (displayName.split(" ").length < 2 && displayName != "") {
+                setErrorFirstSection("Please enter your full name");
+            } else if (email != "" && !validator.validate(email)) {
+                setErrorFirstSection("Please enter a valid email");
+            } else if (password != "" && (password.length < 6 || !hasNumber(password))) {
+                setErrorFirstSection("Your password must have atleast 6 characters, including a number");
+            } else if (password != confirmPassword) {
+                setErrorFirstSection("Passwords don't match!");
+            } else {
+                setErrorFirstSection("");
+            }
+        }
+    }, [displayName, password, confirmPassword, email, active]);
+
+    useEffect(() => {
+        if (active == 1) {
+            if (age == "") {
+                setErrorSecondSection("Please enter");
+            } else if (grade == "") {
+                setErrorSecondSection("Please enter");
+            } else if (location == "") {
+                setErrorSecondSection("Please enter");
+            } else {
+                setErrorSecondSection("");
+            }
+        }
+    }, [age, grade, location, active]);
+
     const prevStep = () => {
         setActive((current) => {
             const newActive = Math.max(current - 1, 0);
-            const scrollAmount = newActive * window.innerWidth;
-
-            // if (stepsRef.current) {
-            //     stepsRef.current.scrollTo({
-            //         left: scrollAmount,
-            //         behavior: "smooth",
-            //     });
-            // }
 
             return newActive;
         });
@@ -64,7 +93,18 @@ export default function Signup() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        signup(email, password, confirmPassword, displayName, age, grade, location, profilePicture, interests);
+        if (interests.length == 0) {
+            setErrorThirdSection("Please select at least 1 interest");
+            return;
+        }
+        const signUpPromise = signup(email, password, confirmPassword, displayName, age, grade, location, interests);
+        toast.promise(signUpPromise, {
+            loading: "Signing you up. We'll reroute you when it's done",
+            success: () => {
+                return "Successfully made an account";
+            },
+            error: "Something went wrong",
+        });
     };
 
     return (
@@ -100,6 +140,8 @@ export default function Signup() {
                                 type="text"
                                 value={displayName}
                                 onChange={(e) => setName(e.target.value)}
+                                error={errorFirstSection.includes("name") ? errorFirstSection : null}
+                                required
                             ></TextInput>
 
                             <TextInput
@@ -108,15 +150,19 @@ export default function Signup() {
                                 type="email"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
+                                error={errorFirstSection.includes("email") ? errorFirstSection : null}
+                                required
                             ></TextInput>
 
                             <PasswordInput
                                 className="Signup_Input"
                                 placeholder="Password"
                                 onChange={(e) => setPassword(e.target.value)}
+                                error={errorFirstSection.includes("password") ? errorFirstSection : null}
                                 value={password}
                                 visible={visible}
                                 onVisibilityChange={toggle}
+                                required
                             ></PasswordInput>
 
                             <PasswordInput
@@ -124,8 +170,10 @@ export default function Signup() {
                                 placeholder="Confirm Password"
                                 value={confirmPassword}
                                 onChange={(e) => setConfirmPassword(e.target.value)}
+                                error={errorFirstSection.includes("match") ? errorFirstSection : null}
                                 visible={visible}
                                 onVisibilityChange={toggle}
+                                required
                             ></PasswordInput>
                         </div>
                         <NextButton nextStep={nextStep} />
@@ -140,14 +188,14 @@ export default function Signup() {
                                 placeholder="Age"
                                 type="number"
                                 value={age}
-                                onChange={(e) => setAge(e.target.value)}
+                                onChange={(e) => setAge(parseInt(e.target.value))}
                             />
 
                             <TextInput
                                 placeholder="Grade (6 - 12)"
                                 type="number"
                                 value={grade}
-                                onChange={(e) => setGrade(e.target.value)}
+                                onChange={(e) => setGrade(parseInt(e.target.value))}
                             />
 
                             <TextInput
@@ -158,7 +206,6 @@ export default function Signup() {
                             />
 
                             <br />
-
                         </div>
                         <NextButton nextStep={nextStep} />
                     </div>
@@ -169,7 +216,6 @@ export default function Signup() {
                         <PrevButton prevStep={prevStep} />
                         <h3 id="Interests_Box_Title">What opportunities are you interested in finding?</h3>
                         <div className="Form_Container" id="Interests_Container">
-                            {/* <div className="All_Interest_Items"> */}
                             {tags.map((tag, index) => (
                                 <Interest
                                     key={index}
@@ -179,11 +225,12 @@ export default function Signup() {
                                     isInInterestsPreviously={interests.includes(tag)}
                                 />
                             ))}
-                            {/* </div> */}
                         </div>
+                        <h3 className="errorTextInterest">{errorThirdSection}</h3>
                         <SubmitButton handleSubmit={handleSubmit} />
                     </div>
                 )}
+                <Toaster />
             </div>
         </>
     );

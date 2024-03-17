@@ -28,21 +28,21 @@
     flex: 0 0 auto;
     overflow: hidden;
     box-sizing: border-box;
-    padding-right: 30px;
-    padding-left: 30px;
+    padding-right: 4vw;
+    padding-left: 4vw;
     border: 1px solid var(--lightblue);
     border-top: none;
     border-bottom: none;
 }
 
-.card_home_main:hover{
+.card_home_main:hover {
     background-color: var(--lighteraquablue);
 }
 
-.card_home_main_body_container{
-    height:80%;
+.card_home_main_body_container {
+    /* height: 80%; */
+    margin-top: 1vh;
 }
-
 
 .card_home_main_body_text {
     color: var(--white);
@@ -52,10 +52,8 @@
     transition: all 1s;
     overflow: hidden;
     text-overflow: ellipsis;
-}
-
-.card_home_main_title_container{
-    height:10%;
+    margin: 0;
+    text-wrap: wrap;
 }
 
 .card_home_main_title_text {
@@ -67,12 +65,15 @@
     overflow: hidden;
     text-overflow: ellipsis;
     font-weight: 900;
-    font-size:18px;
+    font-size: 30px;
+    margin: 0;
 }
 
-.card_home_main_author_container{
-    text-align:right;
-    height:30px;
+.card_home_main_author_container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-right: 4vw;
 }
 
 .card_home_main_author_text {
@@ -84,4 +85,8 @@
     overflow: hidden;
     text-overflow: ellipsis;
     font-weight: 700;
+}
+
+.authorNameSpan {
+    color: var(--orange);
 }

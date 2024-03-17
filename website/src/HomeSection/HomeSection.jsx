@@ -1,7 +1,7 @@
-import React, { useRef } from "react";
-import "./HomeSection.css";
-import Card from "../Card/CardGrid";
 import PropTypes from "prop-types";
+import { useRef } from "react";
+import Card from "../Card/CardGrid";
+import "./HomeSection.css";
 
 export default function HomeSection({ uniqueTypeObj, sorted_documents }) {
     let type = Object.keys(uniqueTypeObj);

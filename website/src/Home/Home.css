@@ -9,7 +9,6 @@ html {
     width: 100vw;
 }
 
-
 .homeDiv {
     height: calc(100vh - 4em);
     position: absolute;
@@ -18,8 +17,8 @@ html {
     overflow-x: hidden;
 }
 
-.title_carousel_container{
-    height:55vh;
+.title_carousel_container {
+    height: 55vh;
     display: block;
     position: relative;
     white-space: nowrap;
@@ -27,45 +26,47 @@ html {
     width: 100vw;
 }
 
-.home_main_carousel{
-    display:flex;
+.home_main_carousel {
+    display: flex;
     overflow: hidden;
     width: 100vw;
 }
 
-.home_previous_button{
+.home_previous_button {
     position: absolute;
-    top:0%;
-    left:0%;
+    top: 0%;
+    left: 0%;
     z-index: 10;
-    height:100%;
+    height: 100%;
     opacity: 40%;
     border: 1px 1px 1px 1px black;
     transition: all 0.5s;
+    width: 4vw;
 }
-.home_previous_button:hover{
+.home_previous_button:hover {
     opacity: 70%;
 }
 
-.home_previous_button:focus{
+.home_previous_button:focus {
     outline: none;
 }
 
-.home_next_button{
+.home_next_button {
     position: absolute;
-    top:0%;
-    right:0%;
+    top: 0%;
+    right: 0%;
     z-index: 10;
-    height:100%;
+    height: 100%;
     opacity: 40%;
-    border: 1px 1px 1px 1px black;
     transition: all 0.5s;
+    width: 4vw;
 }
-.home_next_button:hover{
+
+.home_next_button:hover {
     opacity: 70%;
 }
 
-.home_next_button:focus{
+.home_next_button:focus {
     outline: none;
 }
 

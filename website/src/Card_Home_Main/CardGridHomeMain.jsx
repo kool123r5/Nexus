@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import wrapText from "../functions/wrapText";
 
 export default function Card_Home_Main({ title, text, author, id, activity }) {
-    let wrapped_text = wrapText(text, 200);
+    let wrapped_text = wrapText(text, 1800);
     const navigate = useNavigate();
 
     function showFullActivity() {
@@ -18,13 +18,15 @@ export default function Card_Home_Main({ title, text, author, id, activity }) {
     return (
         <div className="card_home_main" onClick={showFullActivity}>
             <div className="card_home_main_title_container">
-                <h4 className="card_home_main_title_text">{title}</h4>
+                <h2 className="card_home_main_title_text">{title}</h2>
             </div>
             <div className="card_home_main_body_container">
                 <p className="card_home_main_body_text">{wrapped_text}</p>
             </div>
             <div className="card_home_main_author_container">
-                <p className="card_home_main_author_text">{author}</p>
+                <p className="card_home_main_author_text">
+                    By <span className="authorNameSpan">{author}</span>
+                </p>
             </div>
         </div>
     );

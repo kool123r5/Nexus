@@ -61,7 +61,7 @@ export const useCollection = (collection, _query, _orderBy, _limit, localStorage
             setDocuments(localStorageData);
             setError(null);
         }
-    }, [collection, query, orderBy, limit, localStorageKey]);
+    }, [collection, query, orderBy, limit, localStorageKey, customTimeLimit]);
 
     return { documents, error };
 };

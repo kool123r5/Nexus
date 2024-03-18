@@ -17,7 +17,7 @@ def scrape_data(url):
         for record in records:
             program = {
                 "title": record["fields"]["Name of Program"],
-                "text": record["fields"].get("Description", ""),
+                "text": record["fields"].get("Description:",""),
                 "tags": record["fields"].get("Interest Area:", []),
                 "website": record["fields"].get("Link to Application Page/Website ", ""),
                 "inPerson": record["fields"].get("Mode:",[]),

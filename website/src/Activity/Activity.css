@@ -8,9 +8,9 @@ html {
     flex: 1;
     overflow-y: auto;
     background-color: var(--gray_E);
-    height: calc(100vh - 4em);
     position: absolute;
-    bottom: 0;
+    padding-bottom: 2vh;
+    top: 4rem;
     width: 100vw;
     display: flex;
     justify-content: center;

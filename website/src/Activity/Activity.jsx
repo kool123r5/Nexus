@@ -12,7 +12,7 @@ import "./Activity.css";
 
 export default function Activity() {
     const { id } = useParams();
-    const { user, authIsReady } = useAuthContext();
+    const { user } = useAuthContext();
     const [text, setText] = useState("Add Activity");
     const [disabled, setDisabled] = useState(false);
     const [formSubmitted, setFormSubmitted] = useState(false);
@@ -20,10 +20,10 @@ export default function Activity() {
     const [rating, setRating] = useState(null);
     const [comment, setComment] = useState(null);
 
-    const { document, error } = useDocument("activities", id);
+    const { document: activityDocument, error } = useDocument("activities", id);
     if (error) console.log(error);
 
-    const { width, height } = useViewportSize();
+    const { width } = useViewportSize();
 
     const newActivity = {
         activity: projectFirestore.doc(`activities/${id}`),
@@ -36,6 +36,17 @@ export default function Activity() {
 
     // const userDoc = useDocument("users", user.uid);
     const { userDoc } = useUserDocContext();
+
+    useEffect(() => {
+        const prevTitle = document.title;
+        if (activityDocument) {
+            document.title = activityDocument.title;
+        }
+
+        return () => {
+            document.title = prevTitle;
+        };
+    }, [activityDocument]);
 
     useEffect(() => {
         const fetchUpdatedData = async () => {
@@ -159,22 +170,22 @@ export default function Activity() {
         <>
             <Navbar />
             <>
-                {document && userDoc && user && (
+                {activityDocument && userDoc && user && (
                     <div className="fullActivity">
-                        {document.image && width > 950 && (
+                        {activityDocument.image && width > 950 && (
                             <div className="imageDiv">
-                                <img className="img" src={document.image} alt={document.title + "Image"} />
+                                <img className="img" src={activityDocument.image} alt={activityDocument.title + "Image"} />
                             </div>
                         )}
                         <div className="details">
                             <h3 className="byUsername">
-                                <span className="by">By </span> <span className="username">{document.host}</span>
+                                <span className="by">By </span> <span className="username">{activityDocument.host}</span>
                             </h3>
                             <h2 className="title">
-                                {document.title}
+                                {activityDocument.title}
                                 <div className="badgeWrapper">
-                                    {document.tags &&
-                                        document.tags.map((c, index) => {
+                                    {activityDocument.tags &&
+                                        activityDocument.tags.map((c, index) => {
                                             return (
                                                 <Badge className="badge" key={index} color="#ff6d00">
                                                     {c}
@@ -185,7 +196,7 @@ export default function Activity() {
                             </h2>
                             <div className="otherDetails">
                                 <h4 className="website">
-                                    <a className="link" target="_blank" rel="noreferrer" href={document.website}>
+                                    <a className="link" target="_blank" rel="noreferrer" href={activityDocument.website}>
                                         <IconLink className="websiteIcon" />
                                         Website
                                     </a>
@@ -193,14 +204,15 @@ export default function Activity() {
                                 {/* document in person is null then don't show */}
                                 {/* document in person is false then show online */}
                                 {/* document in person is true then show location if loc exists, otherwise don't show */}
-                                {document.inPerson == null || (document.inPerson == true && document.location == "") ? (
+                                {activityDocument.inPerson == null ||
+                                (activityDocument.inPerson == true && activityDocument.location == "") ? (
                                     <></>
                                 ) : (
                                     <>
-                                        {document.inPerson ? (
+                                        {activityDocument.inPerson ? (
                                             <div className="location">
                                                 <IconMapPinFilled className="mapIcon" />
-                                                <p className="onlineOrLocInfo">{document.location}</p>
+                                                <p className="onlineOrLocInfo">{activityDocument.location}</p>
                                             </div>
                                         ) : (
                                             <div className="online">
@@ -211,9 +223,9 @@ export default function Activity() {
                                     </>
                                 )}
                             </div>
-                            <h4 className="text">{document.text}</h4>
+                            <h4 className="text">{activityDocument.text}</h4>
 
-                            {document.anyoneCanJoin && (
+                            {activityDocument.anyoneCanJoin && (
                                 <div className="form-div">
                                     {!disabled && (
                                         <button id="btn" onClick={handleClick} disabled={disabled}>

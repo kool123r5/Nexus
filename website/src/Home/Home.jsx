@@ -104,6 +104,7 @@ export default function Home() {
                                             text={topActivityDoc.text}
                                             author={topActivityDoc.host}
                                             activity={true}
+                                            id={topActivityDoc.id}
                                         />
                                     );
                                 })}

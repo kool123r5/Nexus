@@ -9,8 +9,7 @@ with open("activitiesListOG.json", "r", encoding="utf-8") as f:
 
 def isDuplicate(activity1, activity2):
     if (
-        activity1["title"].lower() == activity2["title"].lower()
-        or activity1["website"] == activity2["website"]
+        activity1["website"] == activity2["website"]
         or activity1["website"] in activity2["website"]
         or activity2["website"] in activity1["website"]
     ):

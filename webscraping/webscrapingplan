@@ -1,8 +1,8 @@
 Ideal JSON OBJECT:
 
 [
-'ID": "integer id",
-"host': "Which company/organization/college is hosting this oppurtunity",
+"ID": "integer id",
+"host": "Which company/organization/college is hosting this oppurtunity",
 "title": "What is the title of the event",
 "age": "a list of integers containing all the ages that can do this activity",
 "selective": "boolean value for if this oppurtunity has an application process where you can be rejected ( resolve True if yes)",
@@ -10,14 +10,15 @@ Ideal JSON OBJECT:
 "website": "link to their website",
 "mode": "one of three: inPerson, remote, Hybrid",
 "text" : "string description of the oppurtunity",
-"fees" : "list containing integer fees on first index and currency in second index, and a boolean on 0th index",
+"cost" : "list containing integer fees on first index and currency in second index, and a boolean on 0th index",
 "paid" : "same structure as fees",
 "startDate" : "startDate of activity",
-"endDate: "endDate of activity",
+"endDate": "endDate of activity",
 "deadline": "deadline",
 "address": "if inPerson, where is it taking place?",
 "requirements" : "another text with requirements",
 "tags" : "tags",
+"gradeRange" : "the range of grades which are allowed in a list"
 
 ]
 
@@ -27,8 +28,8 @@ is this activity, how many comments it gets. Not sure right now how we will go a
 
 SAMPLE IDEAL JSON OBJECT:
 [
-'ID": 0,
-"host': "Nexus,
+"ID": 0,
+"host": "Nexus,
 "title": "Intern at small tech",
 "age": [15,16],
 "selective": True,
@@ -36,7 +37,7 @@ SAMPLE IDEAL JSON OBJECT:
 "website": "https://nexus-dev-site.netlify.app",
 "mode": "remote",
 "text" : "Work with us to develop our UI and bring better oppurtunities to people around the world.",
-"fees" : "[false,0,null]"
+"cost" : "[false,0,null]"
 "paid" : "[true,2000,"INR"]",
 "startDate" : "1/5/2024",
 "endDate: "1/6/2024",
@@ -44,6 +45,8 @@ SAMPLE IDEAL JSON OBJECT:
 "address": "",
 "requirements" : "Application form",
 "tags" : ["CS","coding"],
+"gradeRange" : [9,10,11]
+
 ]
 
 STEPS TO GET IDEAL DATA:

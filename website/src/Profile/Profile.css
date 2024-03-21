@@ -185,14 +185,18 @@ html {
 
 .logoutDiv {
     padding-left: 2vw;
+    padding-right: 2vw;
     padding-top: 3vh;
     display: flex;
     align-items: center;
+    flex-direction: row-reverse;
 }
 
 .logoutBtn {
     color: white;
     background-color: red;
+    transition: 0.3s all;
+    transition-property: color, background-color;
 }
 
 .logoutBtn:hover {

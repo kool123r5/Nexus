@@ -6,10 +6,14 @@ import Navbar from "../Navbar/Navbar";
 import { useAuthContext } from "../hooks/useAuthContext";
 import firebase from "firebase/app";
 import { useUserDocContext } from "../hooks/useUserDocContext";
+import { Loader } from "@mantine/core";
+import "./PostDetail.css";
+import getReadableDate from "../functions/getReadableDate";
+import { IconPencil } from "@tabler/icons-react";
 
 const PostDetail = () => {
     const { id } = useParams();
-    const { user, authIsReady } = useAuthContext();
+    const { user } = useAuthContext();
     const [text, setText] = useState("Add Activity");
 
     const [post, setPost] = useState(null);
@@ -39,8 +43,9 @@ const PostDetail = () => {
         rating: null,
         completed: "Pending",
     };
-    // const userDoc = useDocument("users", user.uid);
+
     const { userDoc, error: userDocError } = useUserDocContext();
+
     if (userDocError) {
         console.log(userDocError);
     }
@@ -218,101 +223,113 @@ const PostDetail = () => {
     };
 
     if (isPending) {
-        return <div>Loading...</div>;
-    }
-    if (!document) {
         return (
-            <>
-                <Navbar />
-                Document not found
-            </>
+            <div className="loadingDiv">
+                <Loader className="loading" color="#ff6d00" size="xl" />
+            </div>
         );
     }
+
+    if (error) {
+        return <div className="errorDiv">Document not found</div>;
+    }
+
     return (
         <>
             <Navbar />
-            {document && (
-                <>
-                    <h2>Post {document.title}</h2>
-                    <p>Title: {document.title}</p>
-                    <p>Text: {document.text}</p>
-                    <p>Type: {document.type}</p>
-                    <p>Location: {document.location}</p>
-                    <Link to={`/profile/${document.creator}`}>Creator: {document.creatorName}</Link>
-                    <p>Created At: {document.createdAt && document.createdAt.toDate().toString()}</p>
-                    <p>Updated At: {document.updatedAt && document.updatedAt.toDate().toString()}</p>
-                </>
-            )}
-            {document && userDoc && !editable && !disabled && (
-                <button id="btn" onClick={handleAdd} disabled={disabled}>
-                    Add Activity
-                </button>
-            )}
+            <div className="postDetailContainerDiv">
+                {document && (
+                    <div className="postInformationDiv">
+                        <div className="postInformationInfo">
+                            <h2 className="postDetailInfo">{document.title}</h2>
+                            <h3 className="postDetailInfo">{document.text}</h3>
+                            <p className="postDetailInfo">Type: {document.type}</p>
+                            <p className="postDetailInfo">Location: {document.location}</p>
+                            <Link to={`/profile/${document.creator}`}>
+                                <p className="postDetailInfo">Creator: {document.creatorName}</p>
+                            </Link>
+                            <p className="postDetailInfo">
+                                Created On: {document.createdAt && getReadableDate(document.createdAt.toDate())}
+                            </p>
+                        </div>
+                        {editable && <IconPencil className="postDetailEditIcon" />}
+                    </div>
+                )}
+                {document && userDoc && !editable && !disabled && (
+                    <button id="btn" onClick={handleAdd} disabled={disabled}>
+                        Add Activity
+                    </button>
+                )}
 
-            {document && disabled && !formSubmitted && (
-                <div>
-                    <form onSubmit={handleComplete}>
-                        <label>
-                            Rating:
+                {document && disabled && !formSubmitted && (
+                    <div>
+                        <form onSubmit={handleComplete}>
+                            <label>
+                                Rating:
+                                <input
+                                    type="number"
+                                    min="1"
+                                    max="5"
+                                    value={rating}
+                                    onChange={(e) => setRating(e.target.value)}
+                                    required
+                                />
+                            </label>
+                            <br />
+
+                            <label>
+                                Comment:
+                                <textarea value={comment} onChange={(e) => setComment(e.target.value)} required />
+                            </label>
+                            <br />
+
+                            <button type="submit">Complete Activity</button>
+                        </form>
+                    </div>
+                )}
+                {document && disabled && !activityRemoved && (
+                    <button id="btn" onClick={handleRemove}>
+                        Remove Activity
+                    </button>
+                )}
+
+                {document && formSubmitted && disabled && (
+                    <div>
+                        <h6>Your Ratings and comment:</h6>
+                        <p>Rating: {rating}</p>
+                        <p>Comment: {comment}</p>
+                    </div>
+                )}
+                {document && editable && (
+                    <div>
+                        <h2>Edit Post</h2>
+                        <form>
+                            <label>Title:</label>
+                            <input type="text" value={updatedTitle} onChange={(e) => setUpdatedTitle(e.target.value)} />
+
+                            <label>Text:</label>
+                            <textarea value={updatedText} onChange={(e) => setUpdatedText(e.target.value)} />
+
+                            <label>Type:</label>
+                            <input type="text" value={updatedType} onChange={(e) => setUpdatedType(e.target.value)} />
+
+                            <label>Location:</label>
                             <input
-                                type="number"
-                                min="1"
-                                max="5"
-                                value={rating}
-                                onChange={(e) => setRating(e.target.value)}
-                                required
+                                type="text"
+                                value={updatedLocation}
+                                onChange={(e) => setUpdatedLocation(e.target.value)}
                             />
-                        </label>
-                        <br />
 
-                        <label>
-                            Comment:
-                            <textarea value={comment} onChange={(e) => setComment(e.target.value)} required />
-                        </label>
-                        <br />
-
-                        <button type="submit">Complete Activity</button>
-                    </form>
-                </div>
-            )}
-            {document && disabled && !activityRemoved && (
-                <button id="btn" onClick={handleRemove}>
-                    Remove Activity
-                </button>
-            )}
-
-            {document && formSubmitted && disabled && (
-                <div>
-                    <h6>Your Ratings and comment:</h6>
-                    <p>Rating: {rating}</p>
-                    <p>Comment: {comment}</p>
-                </div>
-            )}
-            {document && editable && (
-                <div>
-                    <h2>Edit Post</h2>
-                    <form>
-                        <label>Title:</label>
-                        <input type="text" value={updatedTitle} onChange={(e) => setUpdatedTitle(e.target.value)} />
-
-                        <label>Text:</label>
-                        <textarea value={updatedText} onChange={(e) => setUpdatedText(e.target.value)} />
-
-                        <label>Type:</label>
-                        <input type="text" value={updatedType} onChange={(e) => setUpdatedType(e.target.value)} />
-
-                        <label>Location:</label>
-                        <input type="text" value={updatedLocation} onChange={(e) => setUpdatedLocation(e.target.value)} />
-
-                        <button type="button" onClick={handleUpdatePost}>
-                            Update Post
-                        </button>
-                        <button type="button" onClick={handleDeletePost}>
-                            Delete Post
-                        </button>
-                    </form>
-                </div>
-            )}
+                            <button type="button" onClick={handleUpdatePost}>
+                                Update Post
+                            </button>
+                            <button type="button" onClick={handleDeletePost}>
+                                Delete Post
+                            </button>
+                        </form>
+                    </div>
+                )}
+            </div>
         </>
     );
 };

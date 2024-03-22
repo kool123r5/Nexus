@@ -3,9 +3,11 @@ import { useDisclosure, useViewportSize } from "@mantine/hooks";
 import { useNavigate } from "react-router-dom";
 import { useAuthContext } from "../hooks/useAuthContext";
 import "./Navbar.css";
+import { useUserDocContext } from "../hooks/useUserDocContext";
 
 export default function Navbar() {
     let { user, authIsReady } = useAuthContext();
+    const { userDoc } = useUserDocContext();
 
     const navigate = useNavigate();
     const handleSignUpClick = () => {
@@ -27,7 +29,7 @@ export default function Navbar() {
         navigate("/login");
     };
     const handleProfileClick = () => {
-        navigate(`/profile/${user.uid}`);
+        navigate(`/profile/${userDoc.username}`);
     };
 
     const { width } = useViewportSize();

@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import { projectAuth, projectFirestore } from "../firebase/config";
-import { useDocument } from "../hooks/useDocument";
+import { useCollection } from "../hooks/useCollection.js";
 import { useUserDocContext } from "../hooks/useUserDocContext";
 import "./Profile.css";
 import { Divider } from "@mantine/core";
@@ -14,18 +14,12 @@ import { useLogout } from "../hooks/useLogout.js";
 
 export default function Profile() {
     const { id } = useParams();
-    const { document: currentIdDocument, error } = useDocument("users", id);
+    const { documents: currentIdDocument, error } = useCollection("users", ["username", "==", id], null, 1);
     const { userDoc } = useUserDocContext();
     const [activities, setActivities] = useState(null);
     const [posts, setPosts] = useState(null);
     const navigate = useNavigate();
     const { logout } = useLogout();
-
-    const [filter, setFilter] = useState("All");
-
-    const [searchQuery, setSearchQuery] = useState("");
-    const [currentPage, setCurrentPage] = useState(1);
-    const rowsPerPage = 10;
 
     useEffect(() => {
         if (userDoc && userDoc.friendRequestsReceived && userDoc.friendRequestsReceived.length != 0) {
@@ -112,10 +106,10 @@ export default function Profile() {
     }, [userDoc]);
 
     const fetchActivities = async () => {
-        if (currentIdDocument && currentIdDocument.activities) {
+        if (currentIdDocument && currentIdDocument[0].activities) {
             // Extract activity references
 
-            const activityDocsPromises = currentIdDocument.activities.map(async (activity) => {
+            const activityDocsPromises = currentIdDocument[0].activities.map(async (activity) => {
                 const activityRef = activity.activity;
                 const activityDocSnapshot = await activityRef.get();
                 const activityDocData = activityDocSnapshot.data();
@@ -155,54 +149,17 @@ export default function Profile() {
         fetchPosts();
     }, [currentIdDocument]);
 
-    const changeFilter = (newFilter) => {
-        setFilter(newFilter);
-    };
-
-    const changeSearchQuery = (event) => {
-        setSearchQuery(event.target.value);
-    };
-
-    const filteredActivities = activities
-        ? activities.filter((document) => {
-              switch (filter) {
-                  case "All":
-                      return true;
-                  case "Completed":
-                  case "Pending":
-                      return document.completed === filter;
-                  default:
-                      return true;
-              }
-          })
-        : null;
-
-    const searchedActivities = filteredActivities
-        ? filteredActivities.filter((document) => document.title.includes(searchQuery))
-        : null;
-
-    const lastRowIndex = currentPage * rowsPerPage;
-    const firstRowIndex = lastRowIndex - rowsPerPage;
-    const currentActivities = searchedActivities ? searchedActivities.slice(firstRowIndex, lastRowIndex) : null;
-
-    const handlePageChange = (pageNumber) => {
-        setCurrentPage(pageNumber);
-    };
-
-    const totalPages = Math.ceil((searchedActivities?.length || 0) / rowsPerPage);
-
-    const yourProfile = id == projectAuth.currentUser.uid;
-
+    const yourProfile = userDoc && id == userDoc.username;
     const areFriends = () => {
-        return currentIdDocument.friends.includes(projectAuth.currentUser.uid);
+        return currentIdDocument && currentIdDocument[0].friends.includes(projectAuth.currentUser.uid);
     };
 
     const requstSentByCurrentUser = () => {
-        return currentIdDocument.friendRequestsReceived.includes(projectAuth.currentUser.uid);
+        return currentIdDocument && currentIdDocument[0].friendRequestsReceived.includes(projectAuth.currentUser.uid);
     };
 
     const requestReceivedByCurrentUser = () => {
-        return currentIdDocument.friendRequestsSent.includes(projectAuth.currentUser.uid);
+        return currentIdDocument && currentIdDocument[0].friendRequestsSent.includes(projectAuth.currentUser.uid);
     };
 
     const requestReceivedByCurrentUserOnTheirPageFromCertainId = (id) => {
@@ -305,7 +262,21 @@ export default function Profile() {
     };
 
     if (error) {
-        return <div className="errorDiv">Sorry, we couldn&apos;t fetch that user</div>;
+        return (
+            <>
+                <Navbar />
+                <div className="errorDiv">Sorry, we couldn&apos;t fetch that user</div>
+            </>
+        );
+    }
+
+    if (currentIdDocument && (currentIdDocument[0] == null || currentIdDocument[0] == undefined)) {
+        return (
+            <>
+                <Navbar />
+                <div className="errorDiv">Sorry, we couldn&apos;t fetch that user</div>
+            </>
+        );
     }
 
     return (
@@ -315,7 +286,7 @@ export default function Profile() {
                 <div className="profile">
                     <div className="basicInfo">
                         <div className="titleAndEdit">
-                            <h2 className="name">{currentIdDocument.displayName}</h2>
+                            <h2 className="name">{currentIdDocument[0].displayName}</h2>
                             {yourProfile ? (
                                 <div className="editButtonDiv" onClick={handleEdit}>
                                     <IconPencil className="editIcon" />
@@ -344,7 +315,7 @@ export default function Profile() {
                             )}
                             <img
                                 className="profilePfp"
-                                src={getDefaultPfp(currentIdDocument.displayName)}
+                                src={getDefaultPfp(currentIdDocument[0].displayName)}
                                 alt="Profile Picture"
                                 height={80}
                                 width={80}
@@ -353,7 +324,7 @@ export default function Profile() {
                     </div>
                     <div className="bio">
                         <h3 className="profileSubTitles">Bio</h3>
-                        <p className="bioText">{currentIdDocument.bio ? currentIdDocument.bio : "..."}</p>
+                        <p className="bioText">{currentIdDocument[0].bio ? currentIdDocument[0].bio : "..."}</p>
                     </div>
                     <div className="dividerDiv">
                         <Divider />
@@ -395,12 +366,14 @@ export default function Profile() {
                                         </Link>
                                     );
                                 })}
-                            {posts != null && posts.length == 0 && yourProfile && (
+                            {(posts == null || posts.length == 0) && yourProfile && (
                                 <Link to={"/create"} className="postLink">
                                     <p className="randomTxt">Create your first post!</p>
                                 </Link>
                             )}
-                            {posts != null && posts.length == 0 && !yourProfile && <p className="randomTxt">Crickets...</p>}
+                            {(posts == null || posts.length == 0) && !yourProfile && (
+                                <p className="randomTxt">Crickets...</p>
+                            )}
                         </div>
                     </div>
                     {yourProfile && userDoc.friends ? (

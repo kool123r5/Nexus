@@ -9,12 +9,14 @@ import { NextButton, PrevButton, SubmitButton } from "./Buttons";
 import hasNumber from "../functions/hasNumber";
 import validator from "email-validator";
 import { Toaster, toast } from "sonner";
+import { projectFirestore } from "../firebase/config";
 
 export default function Signup() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
     const [displayName, setName] = useState("");
+    const [username, setUsername] = useState("");
     const [age, setAge] = useState("");
     const [grade, setGrade] = useState("");
     const [location, setLocation] = useState("");
@@ -32,22 +34,41 @@ export default function Signup() {
     const element3Ref = useRef(null);
 
     const nextStep = () => {
-        setActive((current) => {
-            const newActive = Math.min(current + 1, 2);
-
-            if (
-                active == 0 &&
-                (errorFirstSection != "" || displayName == "" || password == "" || email == "" || confirmPassword == "")
-            ) {
-                return active;
+        const newActive = Math.min(active + 1, 2);
+        if (active == 0) {
+            if (errorFirstSection != "" || displayName == "" || password == "" || email == "" || confirmPassword == "") {
+                setActive(active);
+                return;
+            } else if (username == "") {
+                setErrorFirstSection("Please enter a Username");
+                setActive(active);
+                return;
             }
+            projectFirestore
+                .collection("users")
+                .where("username", "==", username)
+                .get()
+                .then((doc) => {
+                    if (!doc.empty) {
+                        setErrorFirstSection("Username taken");
+                        setActive(active);
+                        return;
+                    } else {
+                        setActive(newActive);
+                        return;
+                    }
+                });
+        }
 
-            if (active == 1 && (errorSecondSection != "" || age == "" || grade == "" || location == "")) {
-                return active;
+        if (active == 1) {
+            if (errorSecondSection != "" || age == "" || grade == "" || location == "") {
+                setActive(active);
+                return;
+            } else {
+                setActive(newActive);
+                return;
             }
-
-            return newActive;
-        });
+        }
     };
 
     useEffect(() => {
@@ -64,7 +85,7 @@ export default function Signup() {
                 setErrorFirstSection("");
             }
         }
-    }, [displayName, password, confirmPassword, email, active]);
+    }, [displayName, password, confirmPassword, email, active, username]);
 
     useEffect(() => {
         if (active == 1) {
@@ -88,7 +109,7 @@ export default function Signup() {
         });
     };
 
-    const { signup, isPending, error } = useSignup();
+    const { signup, error } = useSignup();
     // const { signInWithGoogle, error2 } = useGoogleSignIn();
 
     const handleSubmit = async (e) => {
@@ -97,7 +118,17 @@ export default function Signup() {
             setErrorThirdSection("Please select at least 1 interest");
             return;
         }
-        const signUpPromise = signup(email, password, confirmPassword, displayName, age, grade, location, interests);
+        const signUpPromise = signup(
+            email,
+            password,
+            confirmPassword,
+            displayName,
+            age,
+            grade,
+            location,
+            interests,
+            username
+        );
         toast.promise(signUpPromise, {
             loading: "Signing you up. We'll reroute you when it's done",
             success: () => {
@@ -140,7 +171,21 @@ export default function Signup() {
                                 type="text"
                                 value={displayName}
                                 onChange={(e) => setName(e.target.value)}
-                                error={errorFirstSection.includes("name") ? errorFirstSection : null}
+                                error={
+                                    errorFirstSection.includes("name") && !errorFirstSection.includes("Username")
+                                        ? errorFirstSection
+                                        : null
+                                }
+                                required
+                            ></TextInput>
+
+                            <TextInput
+                                className="Signup_Input"
+                                placeholder="Username"
+                                type="text"
+                                value={username}
+                                onChange={(e) => setUsername(e.target.value)}
+                                error={errorFirstSection.includes("Username") ? errorFirstSection : null}
                                 required
                             ></TextInput>
 

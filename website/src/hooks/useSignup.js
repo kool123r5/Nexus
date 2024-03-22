@@ -7,7 +7,7 @@ export const useSignup = () => {
     const [error, setError] = useState(null);
     const [isPending, setIsPending] = useState(false);
 
-    const signup = async (email, password, confirmPassword, displayName, age, grade, loc, interests) => {
+    const signup = async (email, password, confirmPassword, displayName, age, grade, loc, interests, username) => {
         setError(null);
         setIsPending(true);
 
@@ -57,6 +57,7 @@ export const useSignup = () => {
                 interests,
                 posts: [],
                 activities: [],
+                username,
             });
 
             if (!isCancelled) {

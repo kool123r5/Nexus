@@ -33,15 +33,15 @@ async function processLinks(links) {
     headless: "new",
   });
   const page = await browser.newPage();
-  page.setDefaultTimeout(120_000 * links.length);
+  page.setDefaultTimeout(120_000 * links.length * 2);
   for (const link of links) {
     await page.goto(link);
     await page.waitForSelector(
-      "h1, h2, h3, h4, h5, h6, p, span, strong, em, b, i, small, ins, mark, del, ul, li, ol, dt, dd, dl"
+      "h1, h2, h3, h4, h5, h6, p, span, strong, em, b, i, small, ins, mark, del, ul, li, ol, dt, dd, dl,div"
     );
     const linkResult = await page
       .$$eval(
-        "h1, h2, h3, h4, h5, h6, p, span, strong, em, b, i, small, ins, mark, del, ul, li, ol, dt, dd, dl",
+        "h1, h2, h3, h4, h5, h6, p, span, strong, em, b, i, small, ins, mark, del, ul, li, ol, dt, dd, dl,div",
         (elements) => {
           return elements.map((element) => {
             let innerText = element.innerText.trim();
@@ -137,21 +137,21 @@ const extraData = async () => {
 
   const badNumbers = [];
 
-  for (let i = 0; i < 2; i++) {
+  for (let i = 0; i < data.length; i++) {
     try {
       console.log(i);
       const element = data[i];
       const page = await browser.newPage();
       const uniqueID = element["ID"];
-      page.setDefaultTimeout(120_000);
+      page.setDefaultTimeout(120_000 * 2);
       await page.goto(element["website"]);
       await page.waitForSelector(
-        "h1, h2, h3, h4, h5, h6, p, span, strong, em, b, i, small, ins, mark, del, ul, li, ol, dt, dd, dl"
+        "h1, h2, h3, h4, h5, h6, p, span, strong, em, b, i, small, ins, mark, del, ul, li, ol, dt, dd, dl,div"
       );
 
       const resultsArr = await page
         .$$eval(
-          "h1, h2, h3, h4, h5, h6, p, span, strong, em, b, i, small, ins, mark, del, ul, li, ol, dt, dd, dl",
+          "h1, h2, h3, h4, h5, h6, p, span, strong, em, b, i, small, ins, mark, del, ul, li, ol, dt, dd, dl,div",
           (elements) => {
             return elements.map((element) => {
               let innerText = element.innerText.trim();

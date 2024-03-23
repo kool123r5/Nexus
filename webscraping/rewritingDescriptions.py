@@ -46,7 +46,7 @@ for index, standoutSearchActivity in enumerate(standoutSearchActivityData):
             print("Error occured in index: ", index)
             indexes_with_errors.append(standoutSearchActivity["id"])
 
-with open("standOutSearchActivitiesWithRewrittenDescriptions.json", "w") as f:
+with open("standOutSearchActivities.json", "w") as f:
     json.dump(rewritten_data, f)
 
 print("Indexes with errors: ", indexes_with_errors)

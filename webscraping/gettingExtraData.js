@@ -12,8 +12,12 @@ const { readFile, writeFile } = require("fs").promises;
 // enter the file name of the json file we are going to be creating using scraping
 const filename = "websiteScrapedData.json";
 
+function removeDuplicates(arr) {
+  return arr.filter((item, index) => arr.indexOf(item) === index);
+}
+
 const readJSON = async () => {
-  const data = await readFile("activities_augmented_withID.json", {
+  const data = await readFile("activitiesListOG.json", {
     encoding: "utf-8",
   });
   return JSON.parse(data);
@@ -33,11 +37,11 @@ async function processLinks(links) {
   for (const link of links) {
     await page.goto(link);
     await page.waitForSelector(
-      "h1, h2, h3, h4, h5, h6, p, span, strong, em, b, i, small, ins, mark, del, ul, li, ol, dt, dd, dl,div"
+      "h1, h2, h3, h4, h5, h6, p, span, strong, em, b, i, small, ins, mark, del, ul, li, ol, dt, dd, dl"
     );
     const linkResult = await page
       .$$eval(
-        "h1, h2, h3, h4, h5, h6, p, span, strong, em, b, i, small, ins, mark, del, ul, li, ol, dt, dd, dl, div",
+        "h1, h2, h3, h4, h5, h6, p, span, strong, em, b, i, small, ins, mark, del, ul, li, ol, dt, dd, dl",
         (elements) => {
           return elements.map((element) => {
             let innerText = element.innerText.trim();
@@ -133,7 +137,7 @@ const extraData = async () => {
 
   const badNumbers = [];
 
-  for (let i = 0; i < data.length; i++) {
+  for (let i = 0; i < 2; i++) {
     try {
       console.log(i);
       const element = data[i];
@@ -142,12 +146,12 @@ const extraData = async () => {
       page.setDefaultTimeout(120_000);
       await page.goto(element["website"]);
       await page.waitForSelector(
-        "h1, h2, h3, h4, h5, h6, p, span, strong, em, b, i, small, ins, mark, del, ul, li, ol, dt, dd, dl,div"
+        "h1, h2, h3, h4, h5, h6, p, span, strong, em, b, i, small, ins, mark, del, ul, li, ol, dt, dd, dl"
       );
 
       const resultsArr = await page
         .$$eval(
-          "h1, h2, h3, h4, h5, h6, p, span, strong, em, b, i, small, ins, mark, del, ul, li, ol, dt, dd, dl,div",
+          "h1, h2, h3, h4, h5, h6, p, span, strong, em, b, i, small, ins, mark, del, ul, li, ol, dt, dd, dl",
           (elements) => {
             return elements.map((element) => {
               let innerText = element.innerText.trim();
@@ -266,7 +270,7 @@ const extraData = async () => {
         oneDLinksData = [...oneDLinksData, ...linkData];
       }
       returnData.push({
-        data: [...resultsArr, ...oneDLinksData],
+        data: removeDuplicates([...resultsArr, ...oneDLinksData]),
         id: uniqueID,
       });
 

@@ -1,0 +1,57 @@
+Ideal JSON OBJECT:
+
+[
+"ID": "integer id",
+"host": "Which company/organization/college is hosting this oppurtunity",
+"title": "What is the title of the event",
+"age": "a list of integers containing all the ages that can do this activity",
+"selective": "boolean value for if this oppurtunity has an application process where you can be rejected ( resolve True if yes)",
+"demographic" : "A list containing the demogrpahics that can apply",
+"website": "link to their website",
+"mode": "one of three: inPerson, remote, Hybrid",
+"text" : "string description of the oppurtunity",
+"cost" : "list containing integer fees on first index and currency in second index, and a boolean on 0th index",
+"paid" : "same structure as fees",
+"startDate" : "startDate of activity",
+"endDate": "endDate of activity",
+"deadline": "deadline",
+"address": "if inPerson, where is it taking place?",
+"requirements" : "another text with requirements",
+"tags" : "tags",
+"gradeRange" : "the range of grades which are allowed in a list"
+
+]
+
+So this json object has all the determinied parts of our data, as in the amount of data we can know before launching.
+There are other things that will be far more important like what type of users this activity attracts, how popular
+is this activity, how many comments it gets. Not sure right now how we will go about storing and utilising that data
+
+SAMPLE IDEAL JSON OBJECT:
+[
+"ID": 0,
+"host": "Nexus,
+"title": "Intern at small tech",
+"age": [15,16],
+"selective": True,
+"demographic" : ["All students"],
+"website": "https://nexus-dev-site.netlify.app",
+"mode": "remote",
+"text" : "Work with us to develop our UI and bring better oppurtunities to people around the world.",
+"cost" : "[false,0,null]"
+"paid" : "[true,2000,"INR"]",
+"startDate" : "1/5/2024",
+"endDate: "1/6/2024",
+"deadline": "20/4/2024",
+"address": "",
+"requirements" : "Application form",
+"tags" : ["CS","coding"],
+"gradeRange" : [9,10,11]
+
+]
+
+STEPS TO GET IDEAL DATA:
+
+1. Remove duplicate strings from website scrapeDATa - easy, should not remove any neccessary information, lesser tokens may give better results from AI
+2. Rescrape from standOUTsearch to gather more data- should require some simple modifications, slight name changes, get a lot more data
+3. change the prompts for ai augmentation, try claude- should get OG up to speed
+4. Merge- using kushals code

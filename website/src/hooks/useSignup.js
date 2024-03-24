@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
 import { projectAuth, projectFirestore } from "../firebase/config";
 import hasNumber from "../functions/hasNumber";
+import { useNavigate } from "react-router-dom";
 
 export const useSignup = () => {
     const [isCancelled, setIsCancelled] = useState(false);
     const [error, setError] = useState(null);
     const [isPending, setIsPending] = useState(false);
+    const navigate = useNavigate();
 
     const signup = async (email, password, confirmPassword, displayName, age, grade, loc, interests, username) => {
         setError(null);
@@ -64,7 +66,7 @@ export const useSignup = () => {
                 setIsPending(false);
                 setError(null);
             }
-
+            navigate(`/auth/action?signup=true&email=${email}`);
             location.reload();
         } catch (err) {
             if (!isCancelled) {

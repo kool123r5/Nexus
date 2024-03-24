@@ -1,0 +1,28 @@
+.authActionContainer {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.verifyEmailAfterSignupDiv {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.verifyYourEmailTitle {
+    font-weight: 600;
+}
+
+.emailSpanAuthAction {
+    color: var(--orange);
+}

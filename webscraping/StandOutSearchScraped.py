@@ -95,6 +95,7 @@ def scrape_data(url):
                 "deadline": deadline,
                 "requirements": requirements,
                 "manual": False,
+                "duration": "unknown",
                 "id": id,
             }
             scraped_data.append(program)

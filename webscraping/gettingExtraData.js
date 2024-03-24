@@ -150,7 +150,7 @@ const extraData = async () => {
   const badNumbers = [];
   const startNumber = 0; //Arjun -> 0, Anish -> 164, Kushal -> 329
   const endNumber = 164; // Arjun -> 164, Anish -> 329, Kushal -> data.length
-  for (let i = 299; i < data.length; i++) {
+  for (let i = startNumber; i < endNumber; i++) {
     try {
       console.log(i);
       const element = data[i];

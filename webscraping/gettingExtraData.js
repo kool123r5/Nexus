@@ -3,7 +3,7 @@ const puppeteer = require("puppeteer");
 const { readFile, writeFile } = require("fs").promises;
 
 // enter the file name of the json file we are going to be creating using scraping
-const filename = "websiteScrapedDataPartKushal.json"; //change to Anish or Kushal depending on who you are
+const filename = "websiteScrapedDataPartAnish.json"; //change to Anish or Kushal depending on who you are
 
 function removeDuplicates(arr) {
     return arr.filter((item, index) => arr.indexOf(item) === index);
@@ -140,8 +140,8 @@ const extraData = async () => {
     });
 
     const badNumbers = [];
-    const startNumber = 329; //Arjun -> 0, Anish -> 164, Kushal -> 329
-    const endNumber = data.length; // Arjun -> 164, Anish -> 329, Kushal -> data.length
+    const startNumber = 164; //Arjun -> 0, Anish -> 164, Kushal -> 329
+    const endNumber = 329; // Arjun -> 164, Anish -> 329, Kushal -> data.length
     for (let i = startNumber; i < endNumber; i++) {
         try {
             console.log(i);

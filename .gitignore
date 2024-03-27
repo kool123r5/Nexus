@@ -1,6 +1,7 @@
 .ipynb_checkpoints
 .env
 firebaseAdminCredentials.json
+sheetsCredentials.json
 
 logs
 *.log

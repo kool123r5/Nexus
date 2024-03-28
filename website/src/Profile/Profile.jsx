@@ -108,13 +108,13 @@ export default function Profile() {
     const fetchActivities = async () => {
         if (currentIdDocument && currentIdDocument[0].activities) {
             // Extract activity references
-
             const activityDocsPromises = currentIdDocument[0].activities.map(async (activity) => {
                 const activityRef = activity.activity;
                 const activityDocSnapshot = await activityRef.get();
                 const activityDocData = activityDocSnapshot.data();
                 return {
                     ...activityDocData,
+                    id: activity.activity.id,
                     completed: activity.completed,
                     startDate: activity.startDate,
                     rating: activity.rating,
@@ -337,9 +337,7 @@ export default function Profile() {
                             {activities && activities.length != 0 ? (
                                 activities.map((document) => {
                                     return (
-                                        // currently the link wont lead anywhere
-                                        // cuz we haven't set any uid lol
-                                        <Link to={`/activity/${document.uid}`} key={document.uid} className="activityLink">
+                                        <Link to={`/activity/${document.id}`} key={document.id} className="activityLink">
                                             <p className="randomTxt">{document.title}</p>
                                         </Link>
                                     );

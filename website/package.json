@@ -11,9 +11,11 @@
   },
   "dependencies": {
     "@mantine/core": "^7.4.2",
+    "@mantine/dates": "^7.7.1",
     "@mantine/hooks": "^7.4.2",
     "@tabler/icons-react": "^2.46.0",
     "bootstrap": "^5.3.2",
+    "dayjs": "^1.11.10",
     "email-validator": "^2.0.4",
     "firebase": "^8.10.0",
     "install": "^0.13.0",

@@ -116,3 +116,56 @@ html {
 .cardWrapper {
     display: flex;
 }
+
+.filterDiv {
+    padding-left: 13px;
+    padding-right: 13px;
+    display: flex;
+    gap: 1vw;
+    flex-direction: row;
+    width: 100vw;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.filterInput {
+    width: 19% !important;
+}
+
+.mantine-Autocomplete-input {
+    background-color: var(--gray_D) !important;
+    transition: 0.3s background-color !important;
+}
+
+.mantine-Autocomplete-input:hover {
+    background-color: var(--lighteraquablue) !important;
+    transition: 0.3s all !important;
+    transition-property: background-color border;
+    border: 1px solid var(--orange) !important;
+}
+
+.mantine-Input-input {
+    background-color: var(--gray_D) !important;
+    transition: 0.3s background-color !important;
+}
+
+.mantine-Input-input:hover {
+    background-color: var(--lighteraquablue) !important;
+    transition: 0.3s all !important;
+    transition-property: background-color border;
+    border: 1px solid var(--orange) !important;
+}
+
+.mantine-Pill-root {
+    background-color: inherit !important;
+    padding: 0 !important;
+}
+
+.mantine-Pill-remove {
+    display: none !important;
+}
+
+.mantine-Pill-label {
+    font-size: 14px !important;
+}

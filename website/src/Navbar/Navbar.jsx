@@ -1,35 +1,13 @@
 import { Burger } from "@mantine/core";
 import { useDisclosure, useViewportSize } from "@mantine/hooks";
 import { useNavigate } from "react-router-dom";
-import { useAuthContext } from "../hooks/useAuthContext";
 import "./Navbar.css";
-import { useUserDocContext } from "../hooks/useUserDocContext";
 
 export default function Navbar() {
-    let { user, authIsReady } = useAuthContext();
-    const { userDoc } = useUserDocContext();
-
     const navigate = useNavigate();
-    const handleSignUpClick = () => {
-        navigate("/signup");
-    };
+
     const handleHomeClick = () => {
         navigate("/");
-    };
-    const handleCounsellorClick = () => {
-        navigate("/counsellor");
-    };
-    const handleForumClick = () => {
-        navigate("/forum");
-    };
-    const handleSchoolClick = () => {
-        navigate("/school");
-    };
-    const handleLoginClick = () => {
-        navigate("/login");
-    };
-    const handleProfileClick = () => {
-        navigate(`/profile/${userDoc.username}`);
     };
 
     const { width } = useViewportSize();
@@ -42,34 +20,6 @@ export default function Navbar() {
                     <button className="home" onClick={handleHomeClick}>
                         Home
                     </button>
-                    <button className="counsellor" onClick={handleCounsellorClick}>
-                        Counsellor
-                    </button>
-                    <button className="studentForum" onClick={handleForumClick}>
-                        Student Forum
-                    </button>
-                    <button className="schoolHub" onClick={handleSchoolClick}>
-                        School Hub
-                    </button>
-                    {user != null && authIsReady && (
-                        <div className="right-buttons">
-                            <button className="profileButton" onClick={handleProfileClick}>
-                                Profile
-                            </button>
-                        </div>
-                    )}
-                    {user == null && authIsReady && (
-                        <>
-                            <div className="right-buttons">
-                                <button className="signup" onClick={handleSignUpClick}>
-                                    Sign Up
-                                </button>
-                                <button className="login" onClick={handleLoginClick}>
-                                    Login
-                                </button>
-                            </div>
-                        </>
-                    )}
                 </div>
             )}
             {width <= 600 && width != 0 && (
@@ -81,30 +31,6 @@ export default function Navbar() {
                                 <button className="home_burger" onClick={handleHomeClick}>
                                     Home
                                 </button>
-                                <button className="counsellor_burger" onClick={handleCounsellorClick}>
-                                    Counsellor
-                                </button>
-                                <button className="studentForum_burger" onClick={handleForumClick}>
-                                    Student Forum
-                                </button>
-                                <button className="schoolHub_burger" onClick={handleSchoolClick}>
-                                    School Hub
-                                </button>
-                                {user != null && authIsReady && (
-                                    <button className="profileButton" onClick={handleProfileClick}>
-                                        Profile
-                                    </button>
-                                )}
-                                {user == null && authIsReady && (
-                                    <>
-                                        <button className="signup_burger" onClick={handleSignUpClick}>
-                                            Sign Up
-                                        </button>
-                                        <button className="login_burger" onClick={handleLoginClick}>
-                                            Login
-                                        </button>
-                                    </>
-                                )}
                             </nav>
                         </aside>
                     )}

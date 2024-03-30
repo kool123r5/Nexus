@@ -131,6 +131,7 @@ html {
 
 .filterInput {
     width: 19% !important;
+    height: 5vh !important;
 }
 
 .mantine-Autocomplete-input {

@@ -7,14 +7,17 @@ import getUniqueTypes from "../functions/getUniqueTypes";
 import sortDocuments from "../functions/sortDocuments";
 import { useCollection } from "../hooks/useCollection";
 import "./Home.css";
+import tagArray from "../Signup/tagArray";
 
 export default function Home() {
     const [sorted_documents, setSortedDocuments] = useState(null);
     const [mode, setMode] = useState([]);
-    const [age, setAge] = useState("");
+    const [age, setAge] = useState([]);
     const [cost, setCost] = useState([]);
     const [date, setDate] = useState([]);
+    const [tags, setTags] = useState([]);
     const [errorGettingLocation, setErrorGettingLocation] = useState(null);
+    const [errorAge, setErrorAge] = useState(null);
     const [locationValue, setLocationValue] = useState("");
 
     // when we make the model, change the query to reflect the type the user would actually want to see
@@ -29,6 +32,10 @@ export default function Home() {
             setSortedDocuments(sortedDocs);
         }
     }, [documents, error]);
+
+    useEffect(() => {
+        console.log(age);
+    }, [mode, age, cost, date, tags, locationValue]);
 
     const handleLocationClick = () => {
         navigator.geolocation.getCurrentPosition(
@@ -60,26 +67,44 @@ export default function Home() {
                             placeholder={mode.length == 0 ? "Mode" : undefined}
                             data={["In Person", "Remote / Online", "Hybrid"]}
                             value={mode}
-                            onChange={(e) => setMode(e)}
+                            onChange={(e) => {
+                                setMode(e);
+                            }}
                             searchable
                             clearable
                             hidePickedOptions
                         />
                         <Input
                             className="filterInput"
-                            placeholder="Age"
-                            type="number"
+                            placeholder="Ages. Eg: 9, 10, 13"
+                            type="text"
                             min={13}
                             max={22}
-                            value={age}
-                            onChange={(e) => setAge(e)}
+                            error={errorAge}
+                            onChange={(e) => {
+                                setErrorAge(null);
+                                const numberArray = e.target.value.split(",").map(Number);
+                                if (numberArray.includes(NaN)) {
+                                    setErrorAge("Enter valid ages");
+                                } else if (numberArray.includes(0) && numberArray[numberArray.length - 1] != 0) {
+                                    setErrorAge("Enter valid ages");
+                                } else {
+                                    if (numberArray[numberArray.length - 1] == 0) {
+                                        setAge([...numberArray].slice(0, -1));
+                                    } else {
+                                        setAge(numberArray);
+                                    }
+                                }
+                            }}
                         />
                         <MultiSelect
                             className="filterInput"
                             placeholder={cost.length == 0 ? "Cost" : undefined}
                             data={["Free", "Has fee"]}
                             value={cost}
-                            onChange={(e) => setCost(e)}
+                            onChange={(e) => {
+                                setCost(e);
+                            }}
                             maxLength={1}
                             searchable
                             clearable
@@ -105,6 +130,18 @@ export default function Home() {
                                 setErrorGettingLocation(null);
                                 setLocationValue(e.target.value);
                             }}
+                        />
+                        <MultiSelect
+                            className="filterInput"
+                            placeholder={tags.length == 0 ? "Tags" : undefined}
+                            data={tagArray}
+                            value={tags}
+                            onChange={(e) => {
+                                setTags(e);
+                            }}
+                            searchable
+                            clearable
+                            hidePickedOptions
                         />
                     </div>
                     {uniqueTypeArr != null

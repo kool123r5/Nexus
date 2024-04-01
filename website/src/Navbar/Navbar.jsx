@@ -2,12 +2,18 @@ import { Burger } from "@mantine/core";
 import { useDisclosure, useViewportSize } from "@mantine/hooks";
 import { useNavigate } from "react-router-dom";
 import "./Navbar.css";
+import { useUserDocContext } from "../hooks/useUserDocContext";
 
 export default function Navbar() {
     const navigate = useNavigate();
+    const userDoc = useUserDocContext();
 
     const handleHomeClick = () => {
         navigate("/");
+    };
+
+    const handleProfileClick = () => {
+        navigate(`/profile/${userDoc.username}`);
     };
 
     const { width } = useViewportSize();
@@ -17,8 +23,11 @@ export default function Navbar() {
         <>
             {width > 600 && (
                 <div className="navbar">
-                    <button className="home" onClick={handleHomeClick}>
+                    <button className="homeNav" onClick={handleHomeClick}>
                         Home
+                    </button>
+                    <button className="profileNav" onClick={handleProfileClick}>
+                        Profile
                     </button>
                 </div>
             )}
@@ -30,6 +39,9 @@ export default function Navbar() {
                             <nav>
                                 <button className="home_burger" onClick={handleHomeClick}>
                                     Home
+                                </button>
+                                <button className="home_burger" onClick={handleProfileClick}>
+                                    Profile
                                 </button>
                             </nav>
                         </aside>

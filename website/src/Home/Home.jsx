@@ -1,4 +1,4 @@
-import { Input, Loader, MultiSelect, TextInput } from "@mantine/core";
+import { Loader, MultiSelect, TextInput } from "@mantine/core";
 import { DatePickerInput } from "@mantine/dates";
 import { useEffect, useState } from "react";
 import HomeSection from "../HomeSection/HomeSection";
@@ -84,7 +84,7 @@ export default function Home() {
                             clearable
                             hidePickedOptions
                         />
-                        <Input
+                        <TextInput
                             className="filterInput"
                             placeholder="Ages. Eg: 9, 10, 13"
                             type="text"

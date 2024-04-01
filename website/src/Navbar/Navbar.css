@@ -16,7 +16,7 @@
 }
 
 .navbar {
-    position: fixed;
+    position: absolute;
     top: 0;
     height: 4em;
     background-color: var(--gray_E);
@@ -26,10 +26,10 @@
     max-width: 100vw;
     width: 100vw;
     z-index: 10;
+    justify-content: space-between;
 }
 
 .navbar button {
-    position: relative;
     color: white;
     height: 4em;
     border-radius: 0;
@@ -44,59 +44,6 @@
 
 .navbar button:focus {
     outline: none;
-}
-
-.home {
-    left: 0em;
-}
-
-.counsellor {
-    left: 0em;
-}
-
-.studentForum {
-    left: 0em;
-}
-
-.schoolHub {
-    left: 0em;
-}
-
-.right-buttons {
-    display: flex;
-    margin-left: auto;
-    justify-content: flex-end;
-}
-
-.profile,
-.login {
-    margin-left: auto;
-}
-
-.profile {
-    color: white;
-}
-
-.profile:hover {
-    color: white;
-}
-
-.signup {
-    margin-left: auto;
-}
-
-@media (prefers-color-scheme: light) {
-    :root {
-        --foreground: white;
-        --background: black;
-    }
-    .navbar {
-        background-color: white;
-    }
-
-    .navbar a {
-        color: black;
-    }
 }
 
 #burger {

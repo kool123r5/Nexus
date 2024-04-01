@@ -118,8 +118,8 @@ html {
 }
 
 .filterDiv {
-    padding-left: 13px;
-    padding-right: 13px;
+    padding-left: 1vw;
+    padding-right: 1vw;
     display: flex;
     gap: 1vw;
     flex-direction: row;
@@ -130,8 +130,12 @@ html {
 }
 
 .filterInput {
-    width: 19% !important;
+    width: calc((100% - 5vw) / 4) !important;
     height: 5vh !important;
+}
+
+.searchBar {
+    width: calc(100% - 2vw) !important;
 }
 
 .mantine-Autocomplete-input {

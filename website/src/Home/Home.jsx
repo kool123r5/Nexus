@@ -8,6 +8,7 @@ import sortDocuments from "../functions/sortDocuments";
 import { useCollection } from "../hooks/useCollection";
 import "./Home.css";
 import tagArray from "../Signup/tagArray";
+import { IconSearch } from "@tabler/icons-react";
 
 export default function Home() {
     const [sorted_documents, setSortedDocuments] = useState(null);
@@ -19,6 +20,7 @@ export default function Home() {
     const [errorGettingLocation, setErrorGettingLocation] = useState(null);
     const [errorAge, setErrorAge] = useState(null);
     const [locationValue, setLocationValue] = useState("");
+    const [searchValue, setSearchValue] = useState("");
 
     // when we make the model, change the query to reflect the type the user would actually want to see
     const limit = 30; // the limit of how many documents to get (we don't wanna get hundreds extra when we don't need it)
@@ -34,8 +36,8 @@ export default function Home() {
     }, [documents, error]);
 
     useEffect(() => {
-        console.log(age);
-    }, [mode, age, cost, date, tags, locationValue]);
+        // runs every time some state changes
+    }, [mode, age, cost, date, tags, locationValue, searchValue]);
 
     const handleLocationClick = () => {
         navigator.geolocation.getCurrentPosition(
@@ -62,6 +64,14 @@ export default function Home() {
             {documents ? (
                 <div className="homeDiv">
                     <div className="filterDiv">
+                        <TextInput
+                            className="filterInput searchBar"
+                            placeholder="Search"
+                            leftSection={<IconSearch />}
+                            leftSectionWidth={40}
+                            value={searchValue}
+                            onChange={(e) => setSearchValue(e.target.value)}
+                        />
                         <MultiSelect
                             className="filterInput"
                             placeholder={mode.length == 0 ? "Mode" : undefined}

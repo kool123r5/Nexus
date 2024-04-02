@@ -116,3 +116,52 @@ html {
 .cardWrapper {
     display: flex;
 }
+
+.filterDiv {
+    padding-left: 1vw;
+    padding-right: 1vw;
+    display: flex;
+    gap: 1vw;
+    flex-direction: row;
+    width: 100vw;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.filterInput {
+    width: calc((100% - 5vw) / 4) !important;
+    height: 5vh !important;
+}
+
+.searchBar {
+    width: calc(100% - 2vw) !important;
+}
+
+.mantine-Pill-root {
+    background-color: inherit !important;
+    padding: 0 !important;
+}
+
+.mantine-Pill-remove {
+    display: none !important;
+}
+
+.mantine-Pill-label {
+    font-size: 14px !important;
+}
+
+.mantine-DatePickerInput-input {
+    background-color: var(--gray_E) !important;
+    font-family: "Inter", sans-serif !important;
+    text-align: center !important;
+    border-bottom: 2px solid var(--gray_A) !important;
+    border-top: 1px solid var(--gray_E) !important;
+    border-left: 1px solid var(--gray_E) !important;
+    border-right: 1px solid var(--gray_E) !important;
+    border-radius: 0 !important;
+}
+
+.mantine-DatePickerInput-input:focus {
+    border-bottom: 2px solid var(--orange) !important;
+}

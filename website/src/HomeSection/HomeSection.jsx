@@ -19,7 +19,6 @@ export default function HomeSection({ uniqueTypeObj, sorted_documents }) {
     }
     const carouselRef = useRef(null);
     let scrollAmount = 0;
-    const cardWidth = 270;
 
     const handlePreviousClick = () => {
         scrollAmount = Math.max(scrollAmount - window.innerWidth, 0);
@@ -80,7 +79,7 @@ export default function HomeSection({ uniqueTypeObj, sorted_documents }) {
                                 title={postObject.title}
                                 text={postObject.text}
                                 author={postObject.author}
-                                id={postObject.id}
+                                id={postObject.id.toString()}
                                 activity={true}
                             />
                         );

@@ -9,9 +9,10 @@ import { useCollection } from "../hooks/useCollection";
 import "./Home.css";
 import tagArray from "../Signup/tagArray";
 import { IconSearch } from "@tabler/icons-react";
+import activityList from "../List/activities";
 
 export default function Home() {
-    const [sorted_documents, setSortedDocuments] = useState(null);
+    // const [sorted_documents, setSortedDocuments] = useState(null);
     const [mode, setMode] = useState([]);
     const [age, setAge] = useState([]);
     const [cost, setCost] = useState([]);
@@ -23,17 +24,18 @@ export default function Home() {
     const [searchValue, setSearchValue] = useState("");
 
     // when we make the model, change the query to reflect the type the user would actually want to see
-    const limit = 30; // the limit of how many documents to get (we don't wanna get hundreds extra when we don't need it)
-    const { documents, error } = useCollection("activities", null, null, limit, "ActivityDocuments");
+    // const limit = 30; // the limit of how many documents to get (we don't wanna get hundreds extra when we don't need it)
+    // const { documents, error } = useCollection("activities", null, null, limit, "ActivityDocuments");
+    const documents = activityList;
 
-    useEffect(() => {
-        if (error) {
-            console.log("ERROR FETCHING DOCUMENTS");
-        } else if (documents) {
-            const sortedDocs = sortDocuments(documents);
-            setSortedDocuments(sortedDocs);
-        }
-    }, [documents, error]);
+    // useEffect(() => {
+    //     if (error) {
+    //         console.log("ERROR FETCHING DOCUMENTS");
+    //     } else if (documents) {
+    //         const sortedDocs = sortDocuments(documents);
+    //         setSortedDocuments(sortedDocs);
+    //     }
+    // }, [documents, error]);
 
     useEffect(() => {
         // runs every time some state changes
@@ -54,8 +56,8 @@ export default function Home() {
     };
 
     let uniqueTypeArr = null;
-    if (sorted_documents) {
-        uniqueTypeArr = getUniqueTypes(sorted_documents);
+    if (documents) {
+        uniqueTypeArr = getUniqueTypes(documents);
     }
 
     return (
@@ -160,7 +162,7 @@ export default function Home() {
                                   <HomeSection
                                       key={uniqueTypeObj + Math.random()}
                                       uniqueTypeObj={uniqueTypeObj}
-                                      sorted_documents={sorted_documents}
+                                      sorted_documents={documents}
                                   />
                               );
                           })

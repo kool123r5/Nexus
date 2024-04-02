@@ -4,8 +4,8 @@ import { IconDeviceLaptop, IconLink, IconMapPinFilled } from "@tabler/icons-reac
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
-import { useDocument } from "../hooks/useDocument";
 import "./Activity.css";
+import activityList from "../List/activities";
 
 export default function Activity() {
     const isItemInLocalStorage = (id) => {
@@ -21,8 +21,10 @@ export default function Activity() {
     const { id } = useParams();
     const [isActivityAdded, setIsActivityAdded] = useState(isItemInLocalStorage(id));
 
-    const { document: activityDocument, error } = useDocument("activities", id);
-    if (error) console.log(error);
+    // const { document: activityDocument, error } = useDocument("activities", id);
+    const activityDocument = activityList.filter((data) => data.id == id)[0];
+
+    // if (error) console.log(error);
 
     const { width } = useViewportSize();
 
@@ -54,6 +56,10 @@ export default function Activity() {
             setIsActivityAdded(true);
         }
     };
+
+    if (activityDocument == undefined) {
+        return <div className="errorDiv">We couldn&apos;t find that activity</div>;
+    }
 
     return (
         <>

@@ -8,6 +8,7 @@ import "./Home.css";
 import tagArray from "../Signup/tagArray";
 import { IconSearch } from "@tabler/icons-react";
 import activityList from "../List/activities";
+import Fuse from "fuse.js";
 
 export default function Home() {
     const [mode, setMode] = useState([]);
@@ -59,6 +60,28 @@ export default function Home() {
             }
         });
         setDocuments(filteredDocs);
+    };
+
+    const handleSearch = () => {
+        const fuseOptions = {
+            isCaseSensitive: false,
+            // includeScore: false,
+            shouldSort: true,
+            // includeMatches: false,
+            // findAllMatches: false,
+            // minMatchCharLength: 1,
+            // location: 0,
+            threshold: 0.3,
+            // distance: 100,
+            // useExtendedSearch: false,
+            ignoreLocation: true,
+            // ignoreFieldNorm: false,
+            // fieldNormWeight: 1,
+            keys: ["title", "text", "host"],
+        };
+        const fuse = new Fuse(activityList, fuseOptions);
+
+        console.log(fuse.search(searchValue));
     };
 
     const handleLocationClick = () => {
@@ -178,6 +201,7 @@ export default function Home() {
                             hidePickedOptions
                         />
                         <button onClick={handleFilter}>Apply Filters</button>
+                        <button onClick={handleSearch}>Search</button>
                     </div>
                     {uniqueTypeArr != null
                         ? uniqueTypeArr.map((uniqueTypeObj) => {

@@ -16,7 +16,7 @@ import EditProfile from "./Profile/EditProfile";
 
 export default function App() {
     const { user, authIsReady } = useAuthContext();
-    console.log(authIsReady, user);
+
     return (
         <>
             <Routes>

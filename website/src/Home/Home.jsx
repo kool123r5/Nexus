@@ -1,20 +1,17 @@
 import { Loader, MultiSelect, TextInput } from "@mantine/core";
 import { DatePickerInput } from "@mantine/dates";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import HomeSection from "../HomeSection/HomeSection";
 import Navbar from "../Navbar/Navbar";
 import getUniqueTypes from "../functions/getUniqueTypes";
-import sortDocuments from "../functions/sortDocuments";
-import { useCollection } from "../hooks/useCollection";
 import "./Home.css";
 import tagArray from "../Signup/tagArray";
 import { IconSearch } from "@tabler/icons-react";
 import activityList from "../List/activities";
 
 export default function Home() {
-    // const [sorted_documents, setSortedDocuments] = useState(null);
     const [mode, setMode] = useState([]);
-    const [age, setAge] = useState([]);
+    const [ageList, setAgeList] = useState([]);
     const [cost, setCost] = useState([]);
     const [date, setDate] = useState([]);
     const [tags, setTags] = useState([]);
@@ -22,24 +19,47 @@ export default function Home() {
     const [errorAge, setErrorAge] = useState(null);
     const [locationValue, setLocationValue] = useState("");
     const [searchValue, setSearchValue] = useState("");
+    const [documents, setDocuments] = useState([...activityList]);
 
-    // when we make the model, change the query to reflect the type the user would actually want to see
-    // const limit = 30; // the limit of how many documents to get (we don't wanna get hundreds extra when we don't need it)
-    // const { documents, error } = useCollection("activities", null, null, limit, "ActivityDocuments");
-    const documents = activityList;
+    const handleFilter = () => {
+        const filteredDocs = [];
+        activityList.forEach((activityDoc) => {
+            let passedAllChecks = true;
+            if (ageList.length != 0 && passedAllChecks == true) {
+                for (let index = 0; index < ageList.length; index++) {
+                    const age = ageList[index];
+                    if (!activityDoc.age.includes(age.toString())) {
+                        passedAllChecks = false;
+                    } else {
+                        passedAllChecks = true;
+                        break;
+                    }
+                }
+            }
 
-    // useEffect(() => {
-    //     if (error) {
-    //         console.log("ERROR FETCHING DOCUMENTS");
-    //     } else if (documents) {
-    //         const sortedDocs = sortDocuments(documents);
-    //         setSortedDocuments(sortedDocs);
-    //     }
-    // }, [documents, error]);
+            if (mode.length != 0 && passedAllChecks == true) {
+                for (let index = 0; index < mode.length; index++) {
+                    const modeSelection = mode[index];
+                    const modeMapping = {
+                        Hybrid: "hybrid",
+                        "Remote / Online": "remote",
+                        "In Person": "inPerson",
+                    };
+                    if (!activityDoc.mode.includes(modeMapping[modeSelection])) {
+                        passedAllChecks = false;
+                    } else {
+                        passedAllChecks = true;
+                        break;
+                    }
+                }
+            }
 
-    useEffect(() => {
-        // runs every time some state changes
-    }, [mode, age, cost, date, tags, locationValue, searchValue]);
+            if (passedAllChecks) {
+                filteredDocs.push(activityDoc);
+            }
+        });
+        setDocuments(filteredDocs);
+    };
 
     const handleLocationClick = () => {
         navigator.geolocation.getCurrentPosition(
@@ -100,11 +120,13 @@ export default function Home() {
                                     setErrorAge("Enter valid ages");
                                 } else if (numberArray.includes(0) && numberArray[numberArray.length - 1] != 0) {
                                     setErrorAge("Enter valid ages");
+                                } else if (numberArray.some((num) => num < 13)) {
+                                    setErrorAge("Ages must be at least 13!");
                                 } else {
                                     if (numberArray[numberArray.length - 1] == 0) {
-                                        setAge([...numberArray].slice(0, -1));
+                                        setAgeList([...numberArray].slice(0, -1));
                                     } else {
-                                        setAge(numberArray);
+                                        setAgeList(numberArray);
                                     }
                                 }
                             }}
@@ -155,6 +177,7 @@ export default function Home() {
                             clearable
                             hidePickedOptions
                         />
+                        <button onClick={handleFilter}>Apply Filters</button>
                     </div>
                     {uniqueTypeArr != null
                         ? uniqueTypeArr.map((uniqueTypeObj) => {

@@ -16,7 +16,6 @@ export default function Home() {
     const [cost, setCost] = useState([]);
     const [date, setDate] = useState([]);
     const [tags, setTags] = useState([]);
-    const [errorGettingLocation, setErrorGettingLocation] = useState(null);
     const [errorAge, setErrorAge] = useState(null);
     const [locationValue, setLocationValue] = useState("");
     const [searchValue, setSearchValue] = useState("");
@@ -55,8 +54,56 @@ export default function Home() {
                 }
             }
 
+
+            if (tags!= 0 && passedAllChecks == true) {
+                for (let index = 0; index < tags.length; index++) {
+                    const tagSelection = tags[index];
+                    console.log(tagSelection)
+                    if (activityDoc.tags.includes(tagSelection)) {
+                        passedAllChecks = true;
+                        console.log('hi')
+                    } else {
+                        passedAllChecks = false;
+                        break;
+                    }
+                }
+            }
+
+            if (cost.length != 0 && passedAllChecks == true) {
+                if(cost[0]=="Free" && activityDoc.paid[0]==true){
+               
+                        passedAllChecks = false;
+                } else {
+                        passedAllChecks = true;
+   
+                }    
+            }
+
+            if (locationValue.length != 0 && passedAllChecks == true) {
+                if(activityDoc.location.includes(locationValue)){
+                    passedAllChecks=true;
+                }else{
+                    passedAllChecks=false;
+                }
+            }
+
+            if (date.length!=0 && passedAllChecks==true) {
+                const userDate= new Date(date[1])
+                const docDate= new Date(activityDoc.deadline.replace(/(\d+)(st|nd|rd|th)/, '$1'));
+                console.log(userDate)
+                console.log(docDate)
+                if(userDate<docDate){
+                    passedAllChecks=true;
+                    console.log("works")
+                }else{
+                    passedAllChecks=false;
+                }
+            }
+
             if (passedAllChecks) {
+
                 filteredDocs.push(activityDoc);
+
             }
         });
         setDocuments(filteredDocs);
@@ -84,19 +131,7 @@ export default function Home() {
         console.log(fuse.search(searchValue));
     };
 
-    const handleLocationClick = () => {
-        navigator.geolocation.getCurrentPosition(
-            (position) => {
-                setErrorGettingLocation(null);
-                setLocationValue(`${position.coords.latitude.toPrecision(3)}, ${position.coords.longitude.toPrecision(3)}`);
-            },
-            () => {
-                setErrorGettingLocation(
-                    "Error getting your location. Please try entering a general location manually or leaving it blank"
-                );
-            }
-        );
-    };
+    
 
     let uniqueTypeArr = null;
     if (documents) {
@@ -167,6 +202,7 @@ export default function Home() {
                             clearable
                             hidePickedOptions
                         />
+                        
                         <DatePickerInput
                             className="filterInput"
                             type="range"
@@ -177,14 +213,12 @@ export default function Home() {
                                 setDate(e);
                             }}
                         />
+                        
                         <TextInput
                             className="filterInput"
-                            placeholder="Location"
-                            onFocus={handleLocationClick}
+                            placeholder="Enter A State for your Location"
                             value={locationValue}
-                            error={errorGettingLocation}
                             onChange={(e) => {
-                                setErrorGettingLocation(null);
                                 setLocationValue(e.target.value);
                             }}
                         />

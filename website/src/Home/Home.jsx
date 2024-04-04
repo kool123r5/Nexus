@@ -54,56 +54,56 @@ export default function Home() {
                 }
             }
 
-
-            if (tags!= 0 && passedAllChecks == true) {
+            if (tags.length != 0 && passedAllChecks == true) {
                 for (let index = 0; index < tags.length; index++) {
                     const tagSelection = tags[index];
-                    console.log(tagSelection)
+                    console.log(tagSelection);
                     if (activityDoc.tags.includes(tagSelection)) {
                         passedAllChecks = true;
-                        console.log('hi')
+                        break;
                     } else {
                         passedAllChecks = false;
-                        break;
                     }
                 }
             }
 
             if (cost.length != 0 && passedAllChecks == true) {
-                if(cost[0]=="Free" && activityDoc.paid[0]==true){
-               
-                        passedAllChecks = false;
+                if (
+                    cost.length == 1 &&
+                    ((cost[0] == "Free" && activityDoc.paid[0] == true) ||
+                        (cost[0] == "Has fee" && activityDoc.paid[0] == false))
+                ) {
+                    passedAllChecks = false;
+                } else if (cost.length == 2) {
+                    passedAllChecks = true;
                 } else {
-                        passedAllChecks = true;
-   
-                }    
-            }
-
-            if (locationValue.length != 0 && passedAllChecks == true) {
-                if(activityDoc.location.includes(locationValue)){
-                    passedAllChecks=true;
-                }else{
-                    passedAllChecks=false;
+                    passedAllChecks = true;
                 }
             }
 
-            if (date.length!=0 && passedAllChecks==true) {
-                const userDate= new Date(date[1])
-                const docDate= new Date(activityDoc.deadline.replace(/(\d+)(st|nd|rd|th)/, '$1'));
-                console.log(userDate)
-                console.log(docDate)
-                if(userDate<docDate){
-                    passedAllChecks=true;
-                    console.log("works")
-                }else{
-                    passedAllChecks=false;
+            if (locationValue != "" && passedAllChecks == true) {
+                if (activityDoc.location.includes(locationValue)) {
+                    passedAllChecks = true;
+                } else {
+                    passedAllChecks = false;
+                }
+            }
+
+            if (date.length != 0 && passedAllChecks == true) {
+                const userDate = new Date(date[1]);
+                const docDate = new Date(activityDoc.deadline.replace(/(\d+)(st|nd|rd|th)/, "$1"));
+                console.log(userDate);
+                console.log(docDate);
+                if (userDate < docDate) {
+                    passedAllChecks = true;
+                    console.log("works");
+                } else {
+                    passedAllChecks = false;
                 }
             }
 
             if (passedAllChecks) {
-
                 filteredDocs.push(activityDoc);
-
             }
         });
         setDocuments(filteredDocs);
@@ -130,8 +130,6 @@ export default function Home() {
 
         console.log(fuse.search(searchValue));
     };
-
-    
 
     let uniqueTypeArr = null;
     if (documents) {
@@ -166,7 +164,7 @@ export default function Home() {
                         />
                         <TextInput
                             className="filterInput"
-                            placeholder="Ages. Eg: 9, 10, 13"
+                            placeholder="Ages. Eg: 13, 18, 19"
                             type="text"
                             min={13}
                             max={22}
@@ -202,7 +200,7 @@ export default function Home() {
                             clearable
                             hidePickedOptions
                         />
-                        
+
                         <DatePickerInput
                             className="filterInput"
                             type="range"
@@ -213,10 +211,10 @@ export default function Home() {
                                 setDate(e);
                             }}
                         />
-                        
+
                         <TextInput
                             className="filterInput"
-                            placeholder="Enter A State for your Location"
+                            placeholder="Location"
                             value={locationValue}
                             onChange={(e) => {
                                 setLocationValue(e.target.value);

@@ -13,7 +13,7 @@
         "gradeRange": ["Junior", "Senior ", "Gap Year"],
         "age": ["16", "17", "18"],
         "cost": [false, 0, "unknown"],
-        "paid": [true, "unknown", "unkn own"],
+        "paid": [true, "unknown", "unknown"],
         "type": ["Internship"],
         "startDate": "unknown",
         "endDate": "unknown",

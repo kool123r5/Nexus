@@ -3,10 +3,14 @@ import { useDisclosure, useViewportSize } from "@mantine/hooks";
 import { useNavigate } from "react-router-dom";
 import "./Navbar.css";
 import { useUserDocContext } from "../hooks/useUserDocContext";
+import { useAuthContext } from "../hooks/useAuthContext";
+
 
 export default function Navbar() {
     const navigate = useNavigate();
     const userDoc = useUserDocContext();
+    let { user, authIsReady } = useAuthContext();
+
 
     const handleHomeClick = () => {
         navigate("/");
@@ -14,6 +18,14 @@ export default function Navbar() {
     
     const handleSearchClick = () => {
         navigate("/search");
+    };
+
+    const handleSignUpClick = () => {
+        navigate("/signup");
+    };
+
+    const handleLoginClick = () => {
+        navigate("/login");
     };
 
     const handleProfileClick = () => {
@@ -35,9 +47,25 @@ export default function Navbar() {
                             Search
                         </button>
                     </div>
-                    <button className="profileNav" onClick={handleProfileClick}>
-                        Profile
-                    </button>
+                    {user != null && authIsReady && (
+                        <div className="right-buttons">
+                            <button className="profileButton" onClick={handleProfileClick}>
+                                Profile
+                            </button>
+                        </div>
+                    )}
+                    {user == null && authIsReady && (
+                        <>
+                            <div className="right-buttons">
+                                <button className="signup" onClick={handleSignUpClick}>
+                                    Sign Up
+                                </button>
+                                <button className="login" onClick={handleLoginClick}>
+                                    Login
+                                </button>
+                            </div>
+                        </>
+                    )}
                 </div>
             )}
             {width <= 600 && width != 0 && (

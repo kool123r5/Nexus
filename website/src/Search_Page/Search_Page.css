@@ -151,6 +151,15 @@ html {
     border-radius: 3px !important;
     background-color: var(--gray_E) !important;
     height:30px;
+    transform: 0.5s border;
+}
+
+.filterDiv .mantine-TextInput-input:hover{
+    border: 1px solid var(--orange) !important;
+}
+
+.filterDiv .mantine-TextInput-input:focus{
+    border: 1px solid var(--orange) !important;
 }
 
 .filterDiv .mantine-MultiSelect-input{
@@ -161,6 +170,14 @@ html {
     border-radius: 3px !important;
 }
 
+.filterDiv .mantine-MultiSelect-input:hover{
+    border: 1px solid var(--orange) !important;
+}
+
+.filterDiv .mantine-MultiSelect-input:focus{
+    border: 1px solid var(--orange) !important;
+}
+
 .filterDiv .mantine-DatePickerInput-input {
     border-bottom: 1px solid var(--gray_C) !important;
     border-top: 1px solid var(--gray_C) !important;
@@ -169,4 +186,8 @@ html {
     border-radius: 3px !important;
     background-color: var(--gray_E) !important;
     height:30px;
+}
+
+.filterDiv .mantine-DatePickerInput-input:hover{
+    border: 1px solid var(--orange) !important;
 }

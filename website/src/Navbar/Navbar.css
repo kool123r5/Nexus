@@ -46,6 +46,12 @@
     outline: none;
 }
 
+.right-buttons {
+    display: flex;
+    margin-left:auto;
+    justify-content: flex-end;
+}
+
 #burger {
     margin: 0.4rem 0.5rem;
     z-index: 15;

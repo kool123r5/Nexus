@@ -146,3 +146,46 @@
 .error {
     color: rgb(201, 20, 20);
 }
+
+
+.loginDiv .mantine-TextInput-input {
+    border-bottom: 2px solid var(--gray_A) !important;
+    border-top: 1px solid var(--gray_E) !important;
+    border-left: 1px solid var(--gray_E) !important;
+    border-right: 1px solid var(--gray_E) !important;
+    border-radius: 0 !important;
+    background-color: var(--gray_E) !important;
+    font-family: "Inter", sans-serif !important;
+}
+
+.loginDiv .mantine-TextInput-input:focus {
+    border-bottom: 2px solid var(--orange) !important;
+}
+
+.loginDiv .mantine-PasswordInput-input:focus-within {
+    border-bottom: 2px solid var(--orange) !important;
+}
+
+.loginDiv .mantine-TextInput-root {
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
+    width: 100%;
+}
+
+
+.loginDiv .mantine-PasswordInput-input {
+    background-color: var(--gray_E) !important;
+    font-family: "Inter", sans-serif !important;
+    text-align: center !important;
+    border-bottom: 2px solid var(--gray_A) !important;
+    border-top: 1px solid var(--gray_E) !important;
+    border-left: 1px solid var(--gray_E) !important;
+    border-right: 1px solid var(--gray_E) !important;
+    border-radius: 0 !important;
+}
+
+.loginDiv .mantine-PasswordInput-root {
+    width: 100%;
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
+}

@@ -36,6 +36,7 @@ html {
     border-right: 1px var(--gray_C) solid;
     display:flex;
     flex-direction: column;
+    overflow: scroll;
 }
 
 
@@ -109,6 +110,7 @@ html {
     margin-top:5vh;
     display: flex;
     flex-direction: row;
+    margin-bottom: 5vh;
 }
 
 .submit_search_individual_button {
@@ -125,6 +127,7 @@ html {
     font-size: 90%;
     font-weight: 600;
     display: border-box;
+    
 }
 
 
@@ -156,7 +159,6 @@ html {
     border-left: 1px solid var(--gray_C) !important;
     border-right: 1px solid var(--gray_C) !important;
     border-radius: 3px !important;
-    height:30px;
 }
 
 .filterDiv .mantine-DatePickerInput-input {

@@ -1,0 +1,170 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+}
+
+#root {
+    height: 100vh;
+    width: 100vw;
+}
+
+
+.searchDiv {
+    height: calc(100vh - 4em);
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.searchSubDiv {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.filterDiv{
+    height: 100vh;
+    width: 30vw;
+    position: fixed;
+    left:0;
+    top:0;
+    padding-left:2vw;
+    padding-right:2vw;
+    top:4em;
+    border-right: 1px var(--gray_C) solid;
+    display:flex;
+    flex-direction: column;
+}
+
+
+.resultsDiv{
+    width: 70vw;
+    display: flex;
+    position:absolute;
+    right:0;
+    top:0;
+    flex-wrap: wrap;
+    padding-left: 2vw;
+}
+
+.filterInput{
+    width:100%;
+    margin:0;
+}
+
+.search_input_div{
+    width:100%;
+    margin-top:4vh;
+}
+
+#search_search_bar{
+    width:100%;
+}
+
+.row_two_filter{
+    display: flex;
+    flex-direction: row;
+    margin-top:5vh;
+}
+
+.age_filter_div{
+    width:5vw;
+    margin-right:1vw;
+}
+
+.cost_filter_div{
+    width:20vw;
+}
+
+
+.row_three_div{
+    margin-top:5vh
+}
+
+.mode_filter_div{
+    width:100%;
+}
+
+.row_four_div{
+    margin-top:5vh;
+}
+
+.row_five_div{
+    margin-top:5vh;
+}
+
+.row_six_div{
+    margin-top:5vh;
+}
+
+.tags_filter_div{
+    max-height:10vh;
+    height:10vh;
+}
+
+
+.submit_search_buttons{
+    margin-top:5vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.submit_search_individual_button {
+    margin: 0.5vh;
+    height: 8vh;
+    width: 50%;
+    border: 1px solid var(--gray_B);
+    background-color: var(--gray_E);
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 90%;
+    font-weight: 600;
+    display: border-box;
+}
+
+
+.submit_search_individual_button:hover {
+    background-color: var(--orange);
+    border: 1px solid var(--orange);
+}
+
+.submit_search_individual_button:focus {
+    background-color: var(--orange);
+    outline: none;
+    border: 1px solid var(--orange);
+}
+
+
+.filterDiv .mantine-TextInput-input{
+    border-bottom: 1px solid var(--gray_C) !important;
+    border-top: 1px solid var(--gray_C) !important;
+    border-left: 1px solid var(--gray_C) !important;
+    border-right: 1px solid var(--gray_C) !important;
+    border-radius: 3px !important;
+    background-color: var(--gray_E) !important;
+    height:30px;
+}
+
+.filterDiv .mantine-MultiSelect-input{
+    border-bottom: 1px solid var(--gray_C) !important;
+    border-top: 1px solid var(--gray_C) !important;
+    border-left: 1px solid var(--gray_C) !important;
+    border-right: 1px solid var(--gray_C) !important;
+    border-radius: 3px !important;
+    height:30px;
+}
+
+.filterDiv .mantine-DatePickerInput-input {
+    border-bottom: 1px solid var(--gray_C) !important;
+    border-top: 1px solid var(--gray_C) !important;
+    border-left: 1px solid var(--gray_C) !important;
+    border-right: 1px solid var(--gray_C) !important;
+    border-radius: 3px !important;
+    background-color: var(--gray_E) !important;
+    height:30px;
+}

@@ -13,6 +13,7 @@ import Signup from "./Signup/Signup";
 import { useAuthContext } from "./hooks/useAuthContext";
 // import Counsellor from "./Counsellor/Counsellor";
 import EditProfile from "./Profile/EditProfile";
+import Search from "./Search_Page/Search_Page";
 
 export default function App() {
     const { user, authIsReady } = useAuthContext();
@@ -24,6 +25,7 @@ export default function App() {
                 {/* <Route path="/forum" element={<Forum />} />
                 <Route path="/counsellor" element={<Counsellor />} />
                 <Route path="/school" element={<School />} /> */}
+                <Route path = "/search" element = {<Search />}/>
                 {authIsReady && (
                     <Route path="/profile/:id" element={user ? <Profile /> : <Navigate replace to="/login" />} />
                 )}

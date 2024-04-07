@@ -10,6 +10,10 @@ export default function Navbar() {
 
     const handleHomeClick = () => {
         navigate("/");
+    };    
+    
+    const handleSearchClick = () => {
+        navigate("/search");
     };
 
     const handleProfileClick = () => {
@@ -23,9 +27,14 @@ export default function Navbar() {
         <>
             {width > 600 && (
                 <div className="navbar">
-                    <button className="homeNav" onClick={handleHomeClick}>
-                        Home
-                    </button>
+                    <div className="left_hand_navbar_buttons">
+                        <button className="homeNav" onClick={handleHomeClick}>
+                            Home
+                        </button>
+                        <button className="searchNav" onClick={handleSearchClick}>
+                            Search
+                        </button>
+                    </div>
                     <button className="profileNav" onClick={handleProfileClick}>
                         Profile
                     </button>

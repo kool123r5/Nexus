@@ -9,6 +9,7 @@ html {
     width: 100vw;
 }
 
+
 .homeDiv {
     height: calc(100vh - 4em);
     position: absolute;
@@ -17,8 +18,8 @@ html {
     overflow-x: hidden;
 }
 
-.title_carousel_container {
-    height: 55vh;
+.title_carousel_container{
+    height:55vh;
     display: block;
     position: relative;
     white-space: nowrap;
@@ -26,47 +27,45 @@ html {
     width: 100vw;
 }
 
-.home_main_carousel {
-    display: flex;
+.home_main_carousel{
+    display:flex;
     overflow: hidden;
     width: 100vw;
 }
 
-.home_previous_button {
+.home_previous_button{
     position: absolute;
-    top: 0%;
-    left: 0%;
+    top:0%;
+    left:0%;
     z-index: 10;
-    height: 100%;
+    height:100%;
     opacity: 40%;
     border: 1px 1px 1px 1px black;
     transition: all 0.5s;
-    width: 4vw;
 }
-.home_previous_button:hover {
+.home_previous_button:hover{
     opacity: 70%;
 }
 
-.home_previous_button:focus {
+.home_previous_button:focus{
     outline: none;
 }
 
-.home_next_button {
+.home_next_button{
     position: absolute;
-    top: 0%;
-    right: 0%;
+    top:0%;
+    right:0%;
     z-index: 10;
-    height: 100%;
+    height:100%;
     opacity: 40%;
+    border: 1px 1px 1px 1px black;
     transition: all 0.5s;
-    width: 4vw;
 }
-
-.home_next_button:hover {
+.home_next_button:hover{
     opacity: 70%;
 }
 
-.home_next_button:focus {
+.home_next_button:focus{
     outline: none;
 }
 
@@ -115,53 +114,4 @@ html {
 
 .cardWrapper {
     display: flex;
-}
-
-.filterDiv {
-    padding-left: 1vw;
-    padding-right: 1vw;
-    display: flex;
-    gap: 1vw;
-    flex-direction: row;
-    width: 100vw;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.filterInput {
-    width: calc((100% - 5vw) / 4) !important;
-    height: 5vh !important;
-}
-
-.searchBar {
-    width: calc(100% - 2vw) !important;
-}
-
-.mantine-Pill-root {
-    background-color: inherit !important;
-    padding: 0 !important;
-}
-
-.mantine-Pill-remove {
-    display: none !important;
-}
-
-.mantine-Pill-label {
-    font-size: 14px !important;
-}
-
-.mantine-DatePickerInput-input {
-    background-color: var(--gray_E) !important;
-    font-family: "Inter", sans-serif !important;
-    text-align: center !important;
-    border-bottom: 2px solid var(--gray_A) !important;
-    border-top: 1px solid var(--gray_E) !important;
-    border-left: 1px solid var(--gray_E) !important;
-    border-right: 1px solid var(--gray_E) !important;
-    border-radius: 0 !important;
-}
-
-.mantine-DatePickerInput-input:focus {
-    border-bottom: 2px solid var(--orange) !important;
 }

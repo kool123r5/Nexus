@@ -1,14 +1,13 @@
-import { Loader, MultiSelect, TextInput } from "@mantine/core";
-import { DatePickerInput } from "@mantine/dates";
-import { useState } from "react";
-import HomeSection from "../HomeSection/HomeSection";
+import { useState, useEffect, useRef } from "react";
 import Navbar from "../Navbar/Navbar";
-import getUniqueTypes from "../functions/getUniqueTypes";
 import "./Home.css";
-import tagArray from "../Signup/tagArray";
-import { IconSearch } from "@tabler/icons-react";
+import HomeSection from "../HomeSection/HomeSection";
+import getUniqueTypes from "../functions/getUniqueTypes";
+import { Loader } from "@mantine/core";
+import Card_Home_Main from "../Card_Home_Main/CardGridHomeMain";
 import activityList from "../List/activities";
 import Fuse from "fuse.js";
+
 
 export default function Home() {
     const [mode, setMode] = useState([]);
@@ -136,104 +135,95 @@ export default function Home() {
         uniqueTypeArr = getUniqueTypes(documents);
     }
 
+    let scrollAmount = 0;
+
+    const mainCarouselRef = useRef(null);
+
+
+    const handlePreviousClick = () => {
+        scrollAmount = Math.max(scrollAmount - window.innerWidth, 0);
+        if (mainCarouselRef.current) {
+            mainCarouselRef.current.scrollTo({
+                left: scrollAmount,
+                behavior: "smooth",
+            });
+        }
+    };
+    
+    const handleNextClick = () => {
+        const maxScroll = mainCarouselRef.current.scrollWidth - mainCarouselRef.current.clientWidth;
+        scrollAmount = Math.min(scrollAmount + window.innerWidth, maxScroll);
+        if (mainCarouselRef.current) {
+            mainCarouselRef.current.scrollTo({
+                left: scrollAmount,
+                behavior: "smooth",
+            });
+        }
+    };
+    
+
+
     return (
         <>
             <Navbar />
             {documents ? (
                 <div className="homeDiv">
-                    <div className="filterDiv">
-                        <TextInput
-                            className="filterInput searchBar"
-                            placeholder="Search"
-                            leftSection={<IconSearch />}
-                            leftSectionWidth={40}
-                            value={searchValue}
-                            onChange={(e) => setSearchValue(e.target.value)}
-                        />
-                        <MultiSelect
-                            className="filterInput"
-                            placeholder={mode.length == 0 ? "Mode" : undefined}
-                            data={["In Person", "Remote / Online", "Hybrid"]}
-                            value={mode}
-                            onChange={(e) => {
-                                setMode(e);
-                            }}
-                            searchable
-                            clearable
-                            hidePickedOptions
-                        />
-                        <TextInput
-                            className="filterInput"
-                            placeholder="Ages. Eg: 13, 18, 19"
-                            type="text"
-                            min={13}
-                            max={22}
-                            error={errorAge}
-                            onChange={(e) => {
-                                setErrorAge(null);
-                                const numberArray = e.target.value.split(",").map(Number);
-                                if (numberArray.includes(NaN)) {
-                                    setErrorAge("Enter valid ages");
-                                } else if (numberArray.includes(0) && numberArray[numberArray.length - 1] != 0) {
-                                    setErrorAge("Enter valid ages");
-                                } else if (numberArray.some((num) => num < 13)) {
-                                    setErrorAge("Ages must be at least 13!");
-                                } else {
-                                    if (numberArray[numberArray.length - 1] == 0) {
-                                        setAgeList([...numberArray].slice(0, -1));
-                                    } else {
-                                        setAgeList(numberArray);
-                                    }
-                                }
-                            }}
-                        />
-                        <MultiSelect
-                            className="filterInput"
-                            placeholder={cost.length == 0 ? "Cost" : undefined}
-                            data={["Free", "Has fee"]}
-                            value={cost}
-                            onChange={(e) => {
-                                setCost(e);
-                            }}
-                            maxLength={1}
-                            searchable
-                            clearable
-                            hidePickedOptions
-                        />
-
-                        <DatePickerInput
-                            className="filterInput"
-                            type="range"
-                            placeholder="Date Range"
-                            allowSingleDateInRange
-                            value={date}
-                            onChange={(e) => {
-                                setDate(e);
-                            }}
-                        />
-
-                        <TextInput
-                            className="filterInput"
-                            placeholder="Location"
-                            value={locationValue}
-                            onChange={(e) => {
-                                setLocationValue(e.target.value);
-                            }}
-                        />
-                        <MultiSelect
-                            className="filterInput"
-                            placeholder={tags.length == 0 ? "Tags" : undefined}
-                            data={tagArray}
-                            value={tags}
-                            onChange={(e) => {
-                                setTags(e);
-                            }}
-                            searchable
-                            clearable
-                            hidePickedOptions
-                        />
-                        <button onClick={handleFilter}>Apply Filters</button>
-                        <button onClick={handleSearch}>Search</button>
+                    <div className="title_carousel_container">
+                        {/* <img src={nexusLogo} alt="Nexus Logo" id="Home_Logo_Img" />
+                        <h1 id="title">Nexus</h1> */}
+                        <button className="home_previous_button" onClick={handlePreviousClick}>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                fill="currentColor"
+                                className="bi bi-caret-left"
+                                viewBox="0 0 16 16"
+                            >
+                                <path d="M10 12.796V3.204L4.519 8zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z" />
+                            </svg>
+                        </button>
+                        <button className="home_next_button" onClick={handleNextClick}>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                fill="currentColor"
+                                className="bi bi-caret-right"
+                                viewBox="0 0 16 16"
+                            >
+                                <path d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z" />
+                            </svg>
+                        </button>
+                        <div className="home_main_carousel" ref = {mainCarouselRef}>
+                                <Card_Home_Main
+                                    className="card_home_main"
+                                    key= "1"
+                                    title= "1"
+                                    text= "1"
+                                    author= "1"
+                                    id= "1"
+                                    activity= "True"
+                                />
+                                <Card_Home_Main
+                                    className="card_home_main"
+                                    key= "2"
+                                    title= "2"
+                                    text= "2"
+                                    author= "2"
+                                    id= "2"
+                                    activity= "True"
+                                />                                
+                                <Card_Home_Main
+                                    className="card_home_main"
+                                    key= "3"
+                                    title= "3"
+                                    text= "3"
+                                    author= "3"
+                                    id= "3"
+                                    activity= "True"
+                                />
+                        </div>
                     </div>
                     {uniqueTypeArr != null
                         ? uniqueTypeArr.map((uniqueTypeObj) => {

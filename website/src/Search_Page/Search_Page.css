@@ -9,7 +9,6 @@ html {
     width: 100vw;
 }
 
-
 .searchDiv {
     height: calc(100vh - 4em);
     position: absolute;
@@ -21,93 +20,46 @@ html {
 .searchSubDiv {
     display: flex;
     flex-direction: row;
-
 }
 
-.filterDiv{
+.filterDiv {
     height: 100vh;
     width: 30vw;
     position: fixed;
-    left:0;
-    top:0;
-    padding-left:2vw;
-    padding-right:2vw;
-    top:4em;
+    left: 0;
+    top: 0;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    top: 4em;
     border-right: 1px var(--gray_C) solid;
-    display:flex;
+    display: flex;
     flex-direction: column;
+    gap: 4.5vh;
     overflow: scroll;
+    align-items: center;
 }
 
-
-.resultsDiv{
+.resultsDiv {
     width: 70vw;
     display: flex;
-    position:absolute;
-    right:0;
-    top:0;
+    position: absolute;
+    right: 0;
+    top: 0;
     flex-wrap: wrap;
     padding-left: 2vw;
 }
 
-.filterInput{
-    width:100%;
-    margin:0;
+.filterInput {
+    width: 100%;
+    margin: 0;
 }
 
-.search_input_div{
-    width:100%;
-    margin-top:4vh;
+#search_search_bar {
+    width: 100%;
+    margin-top: 3vh;
 }
 
-#search_search_bar{
-    width:100%;
-}
-
-.row_two_filter{
-    display: flex;
-    flex-direction: row;
-    margin-top:5vh;
-}
-
-.age_filter_div{
-    width:5vw;
-    margin-right:1vw;
-}
-
-.cost_filter_div{
-    width:20vw;
-}
-
-
-.row_three_div{
-    margin-top:5vh
-}
-
-.mode_filter_div{
-    width:100%;
-}
-
-.row_four_div{
-    margin-top:5vh;
-}
-
-.row_five_div{
-    margin-top:5vh;
-}
-
-.row_six_div{
-    margin-top:5vh;
-}
-
-.tags_filter_div{
-    max-height:10vh;
-    height:10vh;
-}
-
-
-.submit_search_buttons{
-    margin-top:5vh;
+.submit_search_buttons {
     display: flex;
     flex-direction: row;
     margin-bottom: 5vh;
@@ -127,9 +79,7 @@ html {
     font-size: 90%;
     font-weight: 600;
     display: border-box;
-    
 }
-
 
 .submit_search_individual_button:hover {
     background-color: var(--orange);
@@ -142,39 +92,37 @@ html {
     border: 1px solid var(--orange);
 }
 
-
-.filterDiv .mantine-TextInput-input{
+.filterDiv .mantine-TextInput-input {
     border-bottom: 1px solid var(--gray_C) !important;
     border-top: 1px solid var(--gray_C) !important;
     border-left: 1px solid var(--gray_C) !important;
     border-right: 1px solid var(--gray_C) !important;
     border-radius: 3px !important;
-    background-color: var(--gray_E) !important;
-    height:30px;
-    transform: 0.5s border;
+    font-size: medium !important;
 }
 
-.filterDiv .mantine-TextInput-input:hover{
+.filterDiv .mantine-TextInput-input:hover {
     border: 1px solid var(--orange) !important;
 }
 
-.filterDiv .mantine-TextInput-input:focus{
+.filterDiv .mantine-TextInput-input:focus {
     border: 1px solid var(--orange) !important;
 }
 
-.filterDiv .mantine-MultiSelect-input{
+.filterDiv .mantine-MultiSelect-input {
     border-bottom: 1px solid var(--gray_C) !important;
     border-top: 1px solid var(--gray_C) !important;
     border-left: 1px solid var(--gray_C) !important;
     border-right: 1px solid var(--gray_C) !important;
     border-radius: 3px !important;
+    font-size: 16px;
 }
 
-.filterDiv .mantine-MultiSelect-input:hover{
+.filterDiv .mantine-MultiSelect-input:hover {
     border: 1px solid var(--orange) !important;
 }
 
-.filterDiv .mantine-MultiSelect-input:focus{
+.filterDiv .mantine-MultiSelect-input:focus {
     border: 1px solid var(--orange) !important;
 }
 
@@ -185,9 +133,14 @@ html {
     border-right: 1px solid var(--gray_C) !important;
     border-radius: 3px !important;
     background-color: var(--gray_E) !important;
-    height:30px;
+    font-size: medium !important;
+    font-family: "Inter", sans-serif !important;
 }
 
-.filterDiv .mantine-DatePickerInput-input:hover{
+.filterDiv .mantine-DatePickerInput-input:hover {
     border: 1px solid var(--orange) !important;
+}
+
+.resultsP {
+    margin: 0;
 }

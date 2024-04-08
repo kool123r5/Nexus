@@ -35,14 +35,13 @@
     border-bottom: none;
 }
 
-.card:hover{
+.card:hover {
     background-color: var(--lighteraquablue);
 }
 
-.card_body_container{
-    height:70px;
+.card_body_container {
+    height: 70px;
 }
-
 
 .card_body_text {
     color: var(--white);
@@ -52,10 +51,13 @@
     transition: all 1s;
     overflow: hidden;
     text-overflow: ellipsis;
+    width: 100%;
+    text-wrap: wrap;
+    margin: 1vh 0;
 }
 
-.card_title_container{
-    height:30px;
+.card_title_container {
+    height: 30px;
 }
 
 .card_title_text {
@@ -67,12 +69,12 @@
     overflow: hidden;
     text-overflow: ellipsis;
     font-weight: 900;
-    font-size:18px;
+    font-size: 18px;
 }
 
-.card_author_container{
-    text-align:right;
-    height:30px;
+.card_author_container {
+    text-align: right;
+    height: 30px;
 }
 
 .card_author_text {

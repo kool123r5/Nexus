@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import wrapText from "../functions/wrapText";
 
 export default function Card({ title, text, author, id, activity }) {
-    let wrapped_text = wrapText(text, 30);
+    let wrapped_text = wrapText(text, 70);
     const navigate = useNavigate();
 
     function showFullActivity() {

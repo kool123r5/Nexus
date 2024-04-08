@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import wrapText from "../functions/wrapText";
 
 export default function Card_Search({ title, text, author, id, activity }) {
-    let wrapped_text = wrapText(text, 30);
+    let wrapped_text = wrapText(text, 200);
     const navigate = useNavigate();
 
     function showFullActivity() {
@@ -17,15 +17,9 @@ export default function Card_Search({ title, text, author, id, activity }) {
 
     return (
         <div className="card_search" onClick={showFullActivity}>
-            <div className="card_search_title_container">
-                <h4 className="card_search_title_text">{title}</h4>
-            </div>
-            <div className="card_search_body_container">
-                <p className="card_search_body_text">{wrapped_text}</p>
-            </div>
-            <div className="card_search_author_container">
-                <p className="card_search_author_text">{author}</p>
-            </div>
+            <div className="card_search_title_container">{title}</div>
+            <div className="card_search_body_container">{wrapped_text}</div>
+            <div className="card_search_author_container">{author}</div>
         </div>
     );
 }

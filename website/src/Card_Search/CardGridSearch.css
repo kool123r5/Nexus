@@ -10,10 +10,9 @@
 
 .card_search {
     background-color: var(--gray_E);
-    width: 210px;
+    width: 250px;
     height: 200px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px 25px;
     margin: 0px;
     border-radius: 10px;
     -webkit-transition: all 1s;
@@ -25,70 +24,49 @@
     box-shadow: 0px 0px 0px 0px;
     position: relative;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     flex: 0 0 auto;
     overflow: hidden;
     box-sizing: content-box;
-    padding-right: 30px;
-    padding-left: 30px;
-    padding-bottom:30px;
     border: 1px solid var(--lightblue);
-    margin-right:10px;
-    margin-bottom:10px;
+    margin: 6px;
 }
 
-.card_search:hover{
+.card_search:hover {
     background-color: var(--lighteraquablue);
 }
 
-.card_search_body_container{
-    height:70px;
-}
-
-
-.card_search_body_text {
+.card_search_body_container {
     color: var(--white);
-    -webkit-transition: all 1s;
-    -moz-transition: all 1s;
-    -ms-transition: all 1s;
-    transition: all 1s;
+    max-height: 120px;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+    text-wrap: wrap;
 }
 
 .card_search_title_container {
-    max-width: 200px; 
-    white-space: nowrap; 
+    width: 100%;
+    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-  }
-
-.card_search_title_text {
     color: var(--white);
-    -webkit-transition: all 1s;
-    -moz-transition: all 1s;
-    -ms-transition: all 1s;
-    transition: all 1s;
-    overflow: hidden;
-    text-overflow: ellipsis;
     font-weight: 900;
-    font-size:18px;
+    font-size: 16px;
 }
 
-.card_search_author_container{
-    text-align:right;
-    white-space: nowrap; 
+.card_search_author_container {
+    text-align: right;
+    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-}
-
-.card_search_author_text {
-    color: var(--white);
-    -webkit-transition: all 1s;
-    -moz-transition: all 1s;
-    -ms-transition: all 1s;
-    transition: all 1s;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    color: var(--orange);
+    width: 100%;
     font-weight: 700;
-    color:var(--orange)
+    text-overflow: ellipsis;
 }

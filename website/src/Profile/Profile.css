@@ -83,6 +83,8 @@ html {
 }
 
 .profileSubTitles {
+    margin-top: 0;
+    margin-bottom: 0.5vh;
     padding-left: 0;
     font-weight: 400;
     font-size: x-large;

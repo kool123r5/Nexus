@@ -1,10 +1,8 @@
 import { Loader, MultiSelect, TextInput } from "@mantine/core";
 import { DatePickerInput } from "@mantine/dates";
 import { useState } from "react";
-import Card_Search from "../Card_Search/CardGridSearch"
-import Card from "../Card/CardGrid";
+import Card_Search from "../Card_Search/CardGridSearch";
 import Navbar from "../Navbar/Navbar";
-import getUniqueTypes from "../functions/getUniqueTypes";
 import "./Search_Page.css";
 import tagArray from "../Signup/tagArray";
 import { IconSearch } from "@tabler/icons-react";
@@ -21,8 +19,6 @@ export default function Search() {
     const [locationValue, setLocationValue] = useState("");
     const [searchValue, setSearchValue] = useState("");
     const [documents, setDocuments] = useState([...activityList]);
-
-    
 
     const handleFilter = () => {
         const filteredDocs = [];
@@ -134,161 +130,120 @@ export default function Search() {
         console.log(fuse.search(searchValue));
     };
 
-    let uniqueTypeArr = null;
-    if (documents) {
-        uniqueTypeArr = getUniqueTypes(documents);
-    }
-    
-
     return (
         <>
             <Navbar />
             {documents ? (
                 <div className="searchDiv">
-
-
-
-
-
                     <div className="searchSubDiv">
                         <div className="filterDiv">
+                            <TextInput
+                                className="filterInput searchBar"
+                                id="search_search_bar"
+                                placeholder="Search"
+                                leftSection={<IconSearch />}
+                                leftSectionWidth={40}
+                                value={searchValue}
+                                onChange={(e) => setSearchValue(e.target.value)}
+                            />
 
-                            
-                            <div className="search_input_div">
-                                <TextInput
-                                    className="filterInput searchBar"
-                                    id = "search_search_bar"
-                                    placeholder="Search"
-                                    leftSection={<IconSearch />}
-                                    leftSectionWidth={40}
-                                    value={searchValue}
-                                    onChange={(e) => setSearchValue(e.target.value)}
-                                />
-                            </div>
+                            <TextInput
+                                className="filterInput"
+                                placeholder="Age"
+                                type="text"
+                                min={13}
+                                max={22}
+                                error={errorAge}
+                                onChange={(e) => {
+                                    setErrorAge(null);
+                                    const numberArray = e.target.value.split(",").map(Number);
+                                    if (numberArray.includes(NaN)) {
+                                        setErrorAge("Enter valid ages");
+                                    } else if (numberArray.includes(0) && numberArray[numberArray.length - 1] != 0) {
+                                        setErrorAge("Enter valid ages");
+                                    } else if (numberArray.some((num) => num < 13)) {
+                                        setErrorAge("Ages must be at least 13!");
+                                    } else {
+                                        if (numberArray[numberArray.length - 1] == 0) {
+                                            setAgeList([...numberArray].slice(0, -1));
+                                        } else {
+                                            setAgeList(numberArray);
+                                        }
+                                    }
+                                }}
+                            />
+                            <MultiSelect
+                                className="filterInput"
+                                placeholder={cost.length == 0 ? "Cost" : undefined}
+                                data={["Free", "Has fee"]}
+                                value={cost}
+                                onChange={(e) => {
+                                    setCost(e);
+                                }}
+                                maxLength={1}
+                                searchable
+                                clearable
+                                hidePickedOptions
+                            />
 
+                            <MultiSelect
+                                className="filterInput"
+                                placeholder={mode.length == 0 ? "Mode" : undefined}
+                                data={["In Person", "Remote / Online", "Hybrid"]}
+                                value={mode}
+                                onChange={(e) => {
+                                    setMode(e);
+                                }}
+                                searchable
+                                clearable
+                                hidePickedOptions
+                            />
 
-                            <div className="row_two_filter">
-                                <div className="age_filter_div">
-                                    <TextInput
-                                        className="filterInput"
-                                        placeholder="Age"
-                                        type="text"
-                                        min={13}
-                                        max={22}
-                                        error={errorAge}
-                                        onChange={(e) => {
-                                            setErrorAge(null);
-                                            const numberArray = e.target.value.split(",").map(Number);
-                                            if (numberArray.includes(NaN)) {
-                                                setErrorAge("Enter valid ages");
-                                            } else if (numberArray.includes(0) && numberArray[numberArray.length - 1] != 0) {
-                                                setErrorAge("Enter valid ages");
-                                            } else if (numberArray.some((num) => num < 13)) {
-                                                setErrorAge("Ages must be at least 13!");
-                                            } else {
-                                                if (numberArray[numberArray.length - 1] == 0) {
-                                                    setAgeList([...numberArray].slice(0, -1));
-                                                } else {
-                                                    setAgeList(numberArray);
-                                                }
-                                            }
-                                        }}
-                                    />
-                                </div>
-                                <div className="cost_filter_div">
-                                    <MultiSelect
-                                        className="filterInput"
-                                        placeholder={cost.length == 0 ? "Cost" : undefined}
-                                        data={["Free", "Has fee"]}
-                                        value={cost}
-                                        onChange={(e) => {
-                                            setCost(e);
-                                        }}
-                                        maxLength={1}
-                                        searchable
-                                        clearable
-                                        hidePickedOptions
-                                    />
-                                </div>
-                            </div>
+                            <DatePickerInput
+                                clearable
+                                className="filterInput"
+                                type="range"
+                                placeholder="Date Range"
+                                allowSingleDateInRange
+                                value={date}
+                                onChange={(e) => {
+                                    setDate(e);
+                                }}
+                            />
 
+                            <TextInput
+                                className="filterInput"
+                                placeholder="Location"
+                                value={locationValue}
+                                onChange={(e) => {
+                                    setLocationValue(e.target.value);
+                                }}
+                            />
 
-                            <div className="row_three_div">
-                                <div className="mode_filter_div">
-                                    <MultiSelect
-                                        className="filterInput"
-                                        placeholder={mode.length == 0 ? "Mode" : undefined}
-                                        data={["In Person", "Remote / Online", "Hybrid"]}
-                                        value={mode}
-                                        onChange={(e) => {
-                                            setMode(e);
-                                        }}
-                                        searchable
-                                        clearable
-                                        hidePickedOptions
-                                    />
-                                </div>
-                            </div>
+                            <MultiSelect
+                                className="filterInput"
+                                placeholder={tags.length == 0 ? "Tags" : undefined}
+                                data={tagArray}
+                                value={tags}
+                                onChange={(e) => {
+                                    setTags(e);
+                                }}
+                                searchable
+                                clearable
+                                hidePickedOptions
+                            />
 
-
-                            <div className="row_four_div">
-                                <div className="date_filter_div">
-                                    <DatePickerInput
-                                        clearable
-                                        className="filterInput"
-                                        type="range"
-                                        placeholder="Date Range"
-                                        allowSingleDateInRange
-                                        value={date}
-                                        onChange={(e) => {
-                                            setDate(e);
-                                        }}
-                                    />
-                                </div>
-                            </div>
-
-                            <div className="row_five_div">
-                                <div className="location_filter_div">
-                                    <TextInput
-                                        className="filterInput"
-                                        placeholder="Location"
-                                        value={locationValue}
-                                        onChange={(e) => {
-                                            setLocationValue(e.target.value);
-                                        }}
-                                    />
-                                </div>
-                            </div>
-
-
-                            <div className="row_six_div">
-                                <div className="tags_filter_div">
-                                    <MultiSelect
-                                        className="filterInput"
-                                        placeholder={tags.length == 0 ? "Tags" : undefined}
-                                        data={tagArray}
-                                        value={tags}
-                                        onChange={(e) => {
-                                            setTags(e);
-                                        }}
-                                        searchable
-                                        clearable
-                                        hidePickedOptions
-                                    />
-                                </div>
-                            </div>
-
-
-                            <div className="submit_search_buttons">
-                                <button className = "submit_search_individual_button" onClick={handleFilter}>Apply Filters</button>
-                                <button className = "submit_search_individual_button" onClick={handleSearch}>Search</button>
-                            </div>
+                            <button
+                                className="submit_search_individual_button"
+                                onClick={() => {
+                                    handleFilter();
+                                    handleSearch();
+                                }}
+                            >
+                                Search
+                            </button>
+                            <p className="resultsP">Showing {documents.length} results</p>
                         </div>
-
-
-
-
-
 
                         <div className="resultsDiv">
                             {documents.map((document) => (
@@ -297,19 +252,17 @@ export default function Search() {
                                     title={document.title}
                                     text={document.text}
                                     author={document.host}
-                                    id={document.id}
+                                    id={document.id.toString()}
                                     activity={true}
                                 />
                             ))}
                         </div>
                     </div>
                 </div>
-
-
             ) : (
                 <div className="loadingDiv">
-          <Loader className="loading" color="#ff6d00" size="xl" />
-        </div>
+                    <Loader className="loading" color="#ff6d00" size="xl" />
+                </div>
             )}
         </>
     );

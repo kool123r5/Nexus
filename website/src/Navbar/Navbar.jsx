@@ -77,9 +77,28 @@ export default function Navbar() {
                                 <button className="home_burger" onClick={handleHomeClick}>
                                     Home
                                 </button>
-                                <button className="home_burger" onClick={handleProfileClick}>
-                                    Profile
+                                <button className="searchNav" onClick={handleSearchClick}>
+                                    Search
                                 </button>
+                                {user != null && authIsReady && (
+                                <div className="right-buttons">
+                                    <button className="profileButton" onClick={handleProfileClick}>
+                                        Profile
+                                    </button>
+                                </div>
+                                )}
+                                {user == null && authIsReady && (
+                                    <>
+                                        <div className="right-buttons">
+                                            <button className="signup" onClick={handleSignUpClick}>
+                                                Sign Up
+                                            </button>
+                                            <button className="login" onClick={handleLoginClick}>
+                                                Login
+                                            </button>
+                                        </div>
+                                    </>
+                                )}
                             </nav>
                         </aside>
                     )}

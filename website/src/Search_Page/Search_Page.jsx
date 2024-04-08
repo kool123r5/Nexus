@@ -89,13 +89,23 @@ export default function Search() {
             }
 
             if (date.length != 0 && passedAllChecks == true) {
-                const userDate = new Date(date[1]);
-                const docDate = new Date(activityDoc.deadline.replace(/(\d+)(st|nd|rd|th)/, "$1"));
-                console.log(userDate);
-                console.log(docDate);
-                if (userDate < docDate) {
+                const firstDateEntered = new Date(date[0]);
+                const lastDateEntered = new Date(date[1]);
+                const regex = /^(\w+)\s(\d+)(th|st|nd|rd)\s(\d{4})$/;
+                let match = activityDoc.deadline.match(regex);
+                if (match != null) {
+                    match.splice(3, 1);
+                    match.splice(0, 1);
+                    match = match.join(" ");
+                }
+                const activityDate = new Date(match);
+
+                if (activityDoc.deadline.trim() == "Rolling") {
                     passedAllChecks = true;
-                    console.log("works");
+                } else if (activityDoc.deadline.includes("Various") || activityDoc.deadline.includes("Contact")) {
+                    passedAllChecks = false;
+                } else if (activityDate > firstDateEntered && activityDate < lastDateEntered) {
+                    passedAllChecks = true;
                 } else {
                     passedAllChecks = false;
                 }

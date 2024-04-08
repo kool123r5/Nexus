@@ -5,17 +5,15 @@ import "./Navbar.css";
 import { useUserDocContext } from "../hooks/useUserDocContext";
 import { useAuthContext } from "../hooks/useAuthContext";
 
-
 export default function Navbar() {
     const navigate = useNavigate();
-    const userDoc = useUserDocContext();
+    const { userDoc } = useUserDocContext();
     let { user, authIsReady } = useAuthContext();
-
 
     const handleHomeClick = () => {
         navigate("/");
-    };    
-    
+    };
+
     const handleSearchClick = () => {
         navigate("/search");
     };
@@ -81,11 +79,11 @@ export default function Navbar() {
                                     Search
                                 </button>
                                 {user != null && authIsReady && (
-                                <div className="right-buttons">
-                                    <button className="profileButton" onClick={handleProfileClick}>
-                                        Profile
-                                    </button>
-                                </div>
+                                    <div className="right-buttons">
+                                        <button className="profileButton" onClick={handleProfileClick}>
+                                            Profile
+                                        </button>
+                                    </div>
                                 )}
                                 {user == null && authIsReady && (
                                     <>

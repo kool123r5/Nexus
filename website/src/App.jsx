@@ -22,22 +22,13 @@ export default function App() {
         <>
             <Routes>
                 <Route path="/" element={<Home />} />
-                {/* <Route path="/forum" element={<Forum />} />
-                <Route path="/counsellor" element={<Counsellor />} />
-                <Route path="/school" element={<School />} /> */}
-                <Route path = "/search" element = {<Search />}/>
+                <Route path="/search" element={<Search />} />
                 {authIsReady && (
                     <Route path="/profile/:id" element={user ? <Profile /> : <Navigate replace to="/login" />} />
                 )}
 
                 <Route path="/activity/:id" element={<Activity />} />
 
-                <Route path="/*" element={<Navigate replace to={"/"} />} />
-
-                {/* {authIsReady && <Route path="/create" element={user ? <Create /> : <Navigate replace to={"/login"} />} />}
-                {authIsReady && (
-                    <Route path="/forum/:id" element={user ? <PostDetail /> : <Navigate replace to={"/login"} />} />
-                )} */}
                 {authIsReady && <Route path="/login" element={user ? <Navigate replace to="/" /> : <Login />} />}
                 {authIsReady && <Route path="/signup" element={user ? <Navigate replace to="/" /> : <Signup />} />}
 

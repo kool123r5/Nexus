@@ -1,30 +1,45 @@
 import { Badge } from "@mantine/core";
 import { useViewportSize } from "@mantine/hooks";
 import { IconDeviceLaptop, IconLink, IconMapPinFilled } from "@tabler/icons-react";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import "./Activity.css";
 import activityList from "../List/activities";
+import { useUserDocContext } from "../hooks/useUserDocContext";
+import { projectFirestore } from "../firebase/config";
+import firebase from "firebase/app";
+import { useAuthContext } from "../hooks/useAuthContext";
 
 export default function Activity() {
-    const isItemInLocalStorage = (id) => {
-        if (localStorage.getItem("activitiesAdded") == null) {
-            return false;
-        }
-        if (JSON.parse(localStorage.getItem("activitiesAdded").length == 0)) {
-            return false;
-        }
-        return JSON.parse(localStorage.getItem("activitiesAdded")).includes(id);
-    };
+    const { userDoc } = useUserDocContext();
+    const { authIsReady, user } = useAuthContext();
+
+    const isItemInStorage = useCallback(
+        (id) => {
+            if (userDoc) {
+                if (userDoc.activities.includes(id.toString())) {
+                    return true;
+                } else {
+                    return false;
+                }
+            } else if (authIsReady && !userDoc) {
+                return "No user";
+            } else if (!authIsReady) {
+                return false;
+            }
+        },
+        [authIsReady, userDoc]
+    );
 
     const { id } = useParams();
-    const [isActivityAdded, setIsActivityAdded] = useState(isItemInLocalStorage(id));
+    const [isActivityAdded, setIsActivityAdded] = useState(isItemInStorage(id));
 
-    // const { document: activityDocument, error } = useDocument("activities", id);
+    useEffect(() => {
+        setIsActivityAdded(isItemInStorage(id));
+    }, [isItemInStorage, id, authIsReady]);
+
     const activityDocument = activityList.filter((data) => data.id == id)[0];
-
-    // if (error) console.log(error);
 
     const { width } = useViewportSize();
 
@@ -43,16 +58,25 @@ export default function Activity() {
         const activities = JSON.parse(localStorage.getItem("activitiesAdded")) || [];
         const indexOfId = activities.indexOf(id);
         activities.splice(indexOfId, 1);
-        if (isItemInLocalStorage(id)) {
-            localStorage.setItem("activitiesAdded", JSON.stringify(activities));
+        if (isItemInStorage(id)) {
+            projectFirestore
+                .collection("users")
+                .doc(user.uid)
+                .update({
+                    activities: firebase.firestore.FieldValue.arrayRemove(id),
+                });
             setIsActivityAdded(false);
         }
     };
 
     const handleAdd = () => {
-        const activities = JSON.parse(localStorage.getItem("activitiesAdded")) || [];
-        if (!isItemInLocalStorage(id)) {
-            localStorage.setItem("activitiesAdded", JSON.stringify([...activities, id]));
+        if (!isItemInStorage(id)) {
+            projectFirestore
+                .collection("users")
+                .doc(user.uid)
+                .update({
+                    activities: firebase.firestore.FieldValue.arrayUnion(id),
+                });
             setIsActivityAdded(true);
         }
     };
@@ -120,11 +144,12 @@ export default function Activity() {
 
                             {activityDocument && (
                                 <div className="form-div">
-                                    {!isActivityAdded ? (
+                                    {userDoc && authIsReady && !isActivityAdded && (
                                         <button id="btn" onClick={handleAdd}>
-                                            Add Activity to List
+                                            Add Activity to Profile
                                         </button>
-                                    ) : (
+                                    )}
+                                    {authIsReady && userDoc && isActivityAdded && (
                                         <button id="btn" onClick={handleRemove}>
                                             Remove Activity
                                         </button>

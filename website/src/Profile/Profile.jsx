@@ -11,13 +11,13 @@ import { IconFriends, IconPencil } from "@tabler/icons-react";
 import { Toaster, toast } from "sonner";
 import getDefaultPfp from "../functions/getDefaultPfp.js";
 import { useLogout } from "../hooks/useLogout.js";
+import activityList from "../List/activities.js";
 
 export default function Profile() {
     const { id } = useParams();
     const { documents: currentIdDocument, error } = useCollection("users", ["username", "==", id], null, 1);
     const { userDoc } = useUserDocContext();
     const [activities, setActivities] = useState(null);
-    const [posts, setPosts] = useState(null);
     const navigate = useNavigate();
     const { logout } = useLogout();
 
@@ -106,47 +106,13 @@ export default function Profile() {
     }, [userDoc]);
 
     const fetchActivities = async () => {
-        if (currentIdDocument && currentIdDocument[0].activities) {
-            // Extract activity references
-            const activityDocsPromises = currentIdDocument[0].activities.map(async (activity) => {
-                const activityRef = activity.activity;
-                const activityDocSnapshot = await activityRef.get();
-                const activityDocData = activityDocSnapshot.data();
-                return {
-                    ...activityDocData,
-                    id: activity.activity.id,
-                    completed: activity.completed,
-                    startDate: activity.startDate,
-                    rating: activity.rating,
-                    comment: activity.comment,
-                    endDate: activity.endDate,
-                };
-            });
-
-            const activityDocs = await Promise.all(activityDocsPromises);
-            // console.log(activityDocs);
-            setActivities(activityDocs);
-        }
-    };
-
-    const fetchPosts = async () => {
-        if (currentIdDocument && currentIdDocument.posts) {
-            const postDocsPromises = currentIdDocument.posts.map(async (post) => {
-                const postDocSnapShot = await post.get();
-                const postId = post.id;
-                const postDocData = postDocSnapShot.data();
-                return { ...postDocData, postId };
-            });
-
-            const postDocs = await Promise.all(postDocsPromises);
-            // console.log(postDocs);
-            setPosts(postDocs);
+        if (currentIdDocument[0]) {
+            setActivities(currentIdDocument[0].activities);
         }
     };
 
     useEffect(() => {
         fetchActivities();
-        fetchPosts();
     }, [currentIdDocument]);
 
     const yourProfile = userDoc && id == userDoc.username;
@@ -335,42 +301,17 @@ export default function Profile() {
                         </h3>
                         <div className="activityOrPostOrFriendContainerDivProfile">
                             {activities && activities.length != 0 ? (
-                                activities.map((document) => {
+                                activities.map((id) => {
                                     return (
-                                        <Link to={`/activity/${document.id}`} key={document.id} className="activityLink">
-                                            <p className="randomTxt">{document.title}</p>
+                                        <Link to={`/activity/${id}`} key={id} className="activityLink">
+                                            <p className="randomTxt">
+                                                {activityList.filter((activity) => activity.id.toString() == id)[0].title}
+                                            </p>
                                         </Link>
                                     );
                                 })
                             ) : (
                                 <p className="randomTxt">It&apos;s real quiet in here...</p>
-                            )}
-                        </div>
-                    </div>
-                    <div className="dividerDiv">
-                        <Divider />
-                    </div>
-                    <div className="yourPosts">
-                        <h3 className="profileSubTitles" id="yourPostsTitle">
-                            {yourProfile ? "Your" : "Their"} Posts
-                        </h3>
-                        <div className="activityOrPostOrFriendContainerDivProfile">
-                            {posts != null &&
-                                posts &&
-                                posts.map((document) => {
-                                    return (
-                                        <Link to={`/forum/${document.postId}`} key={document.postId} className="postLink">
-                                            <p className="randomTxt">{document.title}</p>
-                                        </Link>
-                                    );
-                                })}
-                            {(posts == null || posts.length == 0) && yourProfile && (
-                                <Link to={"/create"} className="postLink">
-                                    <p className="randomTxt">Create your first post!</p>
-                                </Link>
-                            )}
-                            {(posts == null || posts.length == 0) && !yourProfile && (
-                                <p className="randomTxt">Crickets...</p>
                             )}
                         </div>
                     </div>

@@ -23,7 +23,7 @@ html {
     width: 75vw;
 }
 
-.mantine-TextInput-input {
+.editProfile .mantine-TextInput-input {
     font-family: "Inter", sans-serif !important;
     border: 2px solid var(--gray_E) !important;
     border-bottom: 2px solid var(--gray_D) !important;
@@ -33,12 +33,12 @@ html {
     font-weight: 540 !important;
 }
 
-.mantine-TextInput-input:focus {
+.editProfile .mantine-TextInput-input:focus {
     outline: none;
     border-bottom: 2px solid var(--orange) !important;
 }
 
-.mantine-Textarea-input {
+.editProfile .mantine-Textarea-input {
     font-family: "Inter", sans-serif !important;
     border: 2px solid var(--gray_E) !important;
     border-bottom: 2px solid var(--gray_D) !important;
@@ -48,17 +48,17 @@ html {
     font-weight: 540 !important;
 }
 
-.mantine-Textarea-input:focus {
+.editProfile .mantine-Textarea-input:focus {
     outline: none;
     border-bottom: 2px solid var(--orange) !important;
 }
 
-.mantine-Textarea-root {
+.editProfile .mantine-Textarea-root {
     margin-top: 0.75em;
     margin-bottom: 0.75em;
 }
 
-.mantine-Textarea-input {
+.editProfile .mantine-Textarea-input {
     font-family: "Inter", sans-serif !important;
     border: 2px solid var(--gray_E) !important;
     border-bottom: 2px solid var(--gray_D) !important;
@@ -68,7 +68,7 @@ html {
     font-weight: 540 !important;
 }
 
-.mantine-NumberInput-input {
+.editProfile .mantine-NumberInput-input {
     font-family: "Inter", sans-serif !important;
     border: 2px solid var(--gray_E) !important;
     border-bottom: 2px solid var(--gray_D) !important;
@@ -78,17 +78,17 @@ html {
     font-weight: 540 !important;
 }
 
-.mantine-NumberInput-input:focus {
+.editProfile .mantine-NumberInput-input:focus {
     outline: none;
     border-bottom: 2px solid var(--orange) !important;
 }
 
-.mantine-NumberInput-root {
+.editProfile .mantine-NumberInput-root {
     margin-top: 0.75em;
     margin-bottom: 0.75em;
 }
 
-.mantine-MultiSelect-input {
+.editProfile .mantine-MultiSelect-input {
     font-family: "Inter", sans-serif !important;
     border: 2px solid var(--gray_E) !important;
     border-bottom: 2px solid var(--gray_D) !important;
@@ -97,12 +97,12 @@ html {
     font-weight: 540 !important;
 }
 
-.mantine-MultiSelect-input:focus-within {
+.editProfile .mantine-MultiSelect-input:focus-within {
     outline: none;
     border-bottom: 2px solid var(--orange) !important;
 }
 
-.mantine-PasswordInput-input {
+.editProfile .mantine-PasswordInput-input {
     font-family: "Inter", sans-serif !important;
     border: 2px solid var(--gray_E) !important;
     border-bottom: 2px solid var(--gray_D) !important;
@@ -111,7 +111,7 @@ html {
     font-weight: 540 !important;
 }
 
-.mantine-PasswordInput-innerInput:focus {
+.editProfile .mantine-PasswordInput-innerInput:focus {
     outline: none;
     border-bottom: 2px solid var(--orange) !important;
 }

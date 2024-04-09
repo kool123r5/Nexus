@@ -156,7 +156,9 @@ html {
     border-left: 1px solid var(--gray_C) !important;
     border-right: 1px solid var(--gray_C) !important;
     border-radius: 3px !important;
+    background-color: var(--gray_E) !important;
 }
+
 
 .filterDiv .mantine-DatePickerInput-input {
     border-bottom: 1px solid var(--gray_C) !important;

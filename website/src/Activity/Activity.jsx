@@ -245,8 +245,8 @@ export default function Activity() {
                                             return (
                                                 <span className="username" key={index}>
                                                     {index != activityDocument.gradeRange.length - 1
-                                                        ? `${grade}s, `
-                                                        : `${grade}s`}
+                                                        ? `${grade.trim()}s, `
+                                                        : `${grade.trim()}s`}
                                                 </span>
                                             );
                                         })}

@@ -10,9 +10,12 @@
 
 .card_search {
     background-color: var(--gray_E);
-    width: 250px;
-    height: 200px;
-    padding: 10px 25px;
+    width: 275px;
+    height: 250px;
+    padding-top:25px;
+    padding-left:25px;
+    padding-right:25px;
+    padding-bottom: 25px;
     margin: 0px;
     border-radius: 10px;
     -webkit-transition: all 1s;
@@ -30,7 +33,7 @@
     justify-content: space-between;
     flex: 0 0 auto;
     overflow: hidden;
-    box-sizing: content-box;
+    box-sizing: border-box;
     border: 1px solid var(--lightblue);
     margin: 6px;
 }
@@ -43,7 +46,7 @@
     color: var(--white);
     max-height: 120px;
     display: -webkit-box;
-    -webkit-line-clamp: 4;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;

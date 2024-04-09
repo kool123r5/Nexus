@@ -28,6 +28,12 @@ html {
     align-items: center;
 }
 
+.activityHeader{
+    border-bottom: 1px solid var(--white);
+    margin-bottom:1vw;
+    width:70vw;
+}
+
 .details {
     height: 100%;
     width: 70vw;
@@ -49,6 +55,7 @@ html {
     padding-right: 1.5vw;
     margin-top: 10px;
     margin-bottom: 10px;
+    color: var(--white)
 }
 
 .byUsername {
@@ -158,6 +165,11 @@ html {
 
 .requirementsDiv {
     text-align: left;
+    color: var(--white);
+}
+
+.deadlineDiv{
+    color:var(--white)
 }
 
 .reportErrorBtn {

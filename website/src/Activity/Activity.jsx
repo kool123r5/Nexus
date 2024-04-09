@@ -107,19 +107,21 @@ export default function Activity() {
                                     )}
                                 </div>
                             </div>
-                            <h2 className="title">
-                                {activityDocument.title}
-                                <div className="badgeWrapper">
-                                    {activityDocument.tags != "unknown" &&
-                                        activityDocument.tags.map((c, index) => {
-                                            return (
-                                                <Badge className="badge" key={index} color="#ff6d00">
-                                                    {c}
-                                                </Badge>
-                                            );
-                                        })}
-                                </div>
-                            </h2>
+                            <div className="activityHeader">
+                                <h2 className="title">
+                                    {activityDocument.title}
+                                    <div className="badgeWrapper">
+                                        {activityDocument.tags != "unknown" &&
+                                            activityDocument.tags.map((c, index) => {
+                                                return (
+                                                    <Badge className="badge" key={index} color="#ff6d00">
+                                                        {c}
+                                                    </Badge>
+                                                );
+                                            })}
+                                    </div>
+                                </h2>
+                            </div>
                             <div className="otherDetails">
                                 <h4 className="website">
                                     <a className="link" target="_blank" rel="noreferrer" href={activityDocument.website}>
@@ -149,13 +151,19 @@ export default function Activity() {
                                 {activityDocument.cost[0] ? (
                                     <>
                                         {activityDocument.cost[1] == "unknown" || activityDocument.cost[2] == "unknown" ? (
-                                            <p className="cost">
-                                                <IconMoneybag color="#02aa0a" />
+                                            <p className="cost"
+                                            style={{
+                                                fontWeight:500
+                                            }}>
+                                                <IconMoneybag/>
                                                 Costs Money
                                             </p>
                                         ) : (
-                                            <p className="cost">
-                                                <IconMoneybag color="#02aa0a" />
+                                            <p className="cost"
+                                            style={{
+                                                fontWeight: 500
+                                            }}>
+                                                <IconMoneybag/>
                                                 Costs {activityDocument.cost[1]} {activityDocument.cost[2]}
                                             </p>
                                         )}
@@ -164,7 +172,7 @@ export default function Activity() {
                                     <p
                                         className="cost"
                                         style={{
-                                            color: "#02aa0a",
+                                            color: "#ff6d00",
                                             fontWeight: 500,
                                         }}
                                     >
@@ -177,7 +185,7 @@ export default function Activity() {
                                             <p
                                                 className="cost"
                                                 style={{
-                                                    color: "#02aa0a",
+                                                    color: "#ff6d00",
                                                     fontWeight: 500,
                                                 }}
                                             >
@@ -187,7 +195,7 @@ export default function Activity() {
                                             <p
                                                 className="cost"
                                                 style={{
-                                                    color: "#02aa0a",
+                                                    color: "#ff6d00",
                                                     fontWeight: 500,
                                                 }}
                                             >
@@ -255,7 +263,7 @@ export default function Activity() {
                             </div>
                             <br />
                             {activityDocument.deadline != "unknown" && (
-                                <div>
+                                <div className="deadlineDiv">
                                     Deadline: <span className="username">{activityDocument.deadline.trim()}</span>
                                 </div>
                             )}

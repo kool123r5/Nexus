@@ -1,6 +1,6 @@
 import { Badge } from "@mantine/core";
 import { useViewportSize } from "@mantine/hooks";
-import { IconDeviceLaptop, IconLink, IconMapPinFilled } from "@tabler/icons-react";
+import { IconDeviceLaptop, IconLink, IconMapPinFilled, IconMoneybag } from "@tabler/icons-react";
 import { useCallback, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
@@ -97,13 +97,20 @@ export default function Activity() {
                             </div>
                         )}
                         <div className="details">
-                            <h3 className="byUsername">
-                                <span className="by">By </span> <span className="username">{activityDocument.host}</span>
-                            </h3>
+                            <div className="byUsername">
+                                <div>
+                                    <span className="by">By </span> <span className="username">{activityDocument.host}</span>
+                                </div>
+                                <div>
+                                    {activityDocument.type != "unknown" && (
+                                        <span className="username">{activityDocument.type[0]}</span>
+                                    )}
+                                </div>
+                            </div>
                             <h2 className="title">
                                 {activityDocument.title}
                                 <div className="badgeWrapper">
-                                    {activityDocument.tags &&
+                                    {activityDocument.tags != "unknown" &&
                                         activityDocument.tags.map((c, index) => {
                                             return (
                                                 <Badge className="badge" key={index} color="#ff6d00">
@@ -120,28 +127,152 @@ export default function Activity() {
                                         Website
                                     </a>
                                 </h4>
-
-                                {activityDocument.inPerson == null ||
-                                (activityDocument.inPerson == true && activityDocument.location == "") ? (
-                                    <></>
-                                ) : (
+                                {activityDocument.mode.trim() == "inPerson" && (
+                                    <div className="location">
+                                        <IconMapPinFilled className="mapIcon" />
+                                        <p className="onlineOrLocInfo">{activityDocument.location.trim()}</p>
+                                    </div>
+                                )}
+                                {activityDocument.mode.trim() == "remote" && (
+                                    <div className="online">
+                                        <IconDeviceLaptop className="laptopIcon" />
+                                        <p className="onlineOrLocInfo">Online</p>
+                                    </div>
+                                )}
+                                {activityDocument.mode.trim() == "hybrid" && (
+                                    <div className="online">
+                                        <p className="onlineOrLocInfo">
+                                            Both Online and In {activityDocument.location.trim()}
+                                        </p>
+                                    </div>
+                                )}
+                                {activityDocument.cost[0] ? (
                                     <>
-                                        {activityDocument.inPerson ? (
-                                            <div className="location">
-                                                <IconMapPinFilled className="mapIcon" />
-                                                <p className="onlineOrLocInfo">{activityDocument.location}</p>
-                                            </div>
+                                        {activityDocument.cost[1] == "unknown" || activityDocument.cost[2] == "unknown" ? (
+                                            <p className="cost">
+                                                <IconMoneybag color="#02aa0a" />
+                                                Costs Money
+                                            </p>
                                         ) : (
-                                            <div className="online">
-                                                <IconDeviceLaptop className="laptopIcon" />
-                                                <p className="onlineOrLocInfo">Online</p>
-                                            </div>
+                                            <p className="cost">
+                                                <IconMoneybag color="#02aa0a" />
+                                                Costs {activityDocument.cost[1]} {activityDocument.cost[2]}
+                                            </p>
                                         )}
                                     </>
+                                ) : (
+                                    <p
+                                        className="cost"
+                                        style={{
+                                            color: "#02aa0a",
+                                            fontWeight: 500,
+                                        }}
+                                    >
+                                        Free Activity
+                                    </p>
+                                )}
+                                {activityDocument.paid[0] ? (
+                                    <>
+                                        {activityDocument.paid[1] == "unknown" || activityDocument.paid[2] == "unknown" ? (
+                                            <p
+                                                className="cost"
+                                                style={{
+                                                    color: "#02aa0a",
+                                                    fontWeight: 500,
+                                                }}
+                                            >
+                                                Pays Entrant
+                                            </p>
+                                        ) : (
+                                            <p
+                                                className="cost"
+                                                style={{
+                                                    color: "#02aa0a",
+                                                    fontWeight: 500,
+                                                }}
+                                            >
+                                                Pays {activityDocument.paid[1]} {activityDocument.paid[2]}
+                                            </p>
+                                        )}
+                                    </>
+                                ) : (
+                                    <p
+                                        className="cost"
+                                        style={{
+                                            fontWeight: 500,
+                                        }}
+                                    >
+                                        Does not pay
+                                    </p>
+                                )}
+                                {activityDocument.selective ? (
+                                    <div className="cost username">Selective opportunity</div>
+                                ) : (
+                                    <div className="cost username">Not Selective</div>
                                 )}
                             </div>
                             <h4 className="text">{activityDocument.text}</h4>
-
+                            <br />
+                            {activityDocument.requirements != "unknown" && (
+                                <div className="requirementsDiv">
+                                    Requirements:{" "}
+                                    {activityDocument.demographics != "unknown" &&
+                                        activityDocument.demographics[0] != "All Students" &&
+                                        activityDocument.demographics.map((demographic) => {
+                                            return `${demographic}. `;
+                                        })}
+                                    {activityDocument.requirements}
+                                </div>
+                            )}
+                            <br />
+                            <div className="ageAndGradeDiv">
+                                {activityDocument.age.length != 0 && activityDocument.age != "unknown" && (
+                                    <p
+                                        style={{
+                                            margin: 0,
+                                        }}
+                                    >
+                                        Available for ages <span className="username">{activityDocument.age[0]}</span> to{" "}
+                                        <span className="username">
+                                            {activityDocument.age[activityDocument.age.length - 1]}
+                                        </span>
+                                    </p>
+                                )}
+                                {activityDocument.gradeRange != "unknown" && activityDocument.gradeRange.length != 0 && (
+                                    <p style={{ margin: 0 }}>
+                                        For{" "}
+                                        {activityDocument.gradeRange.map((grade, index) => {
+                                            return (
+                                                <span className="username" key={index}>
+                                                    {index != activityDocument.gradeRange.length - 1
+                                                        ? `${grade}s, `
+                                                        : `${grade}s`}
+                                                </span>
+                                            );
+                                        })}
+                                    </p>
+                                )}
+                            </div>
+                            <br />
+                            {activityDocument.deadline != "unknown" && (
+                                <div>
+                                    Deadline: <span className="username">{activityDocument.deadline.trim()}</span>
+                                </div>
+                            )}
+                            {activityDocument.startDate != "unknown" && activityDocument.endDate != "unknown" && (
+                                <div>
+                                    This activity goes on from <span className="username">{activityDocument.startDate}</span>{" "}
+                                    to <span className="username">{activityDocument.endDate}</span>
+                                </div>
+                            )}
+                            {activityDocument.duration != "unknown" &&
+                                activityDocument.startDate == "unknown" &&
+                                activityDocument.endDate == "unknown" && (
+                                    <div>
+                                        This activity goes on for
+                                        <span className="username"> {activityDocument.duration}</span>
+                                    </div>
+                                )}
                             {activityDocument && (
                                 <div className="form-div">
                                     {userDoc && authIsReady && !isActivityAdded && (
@@ -155,6 +286,13 @@ export default function Activity() {
                                         </button>
                                     )}
                                 </div>
+                            )}
+                            <br />
+                            <br />
+                            {activityDocument && (
+                                <a href="mailto:TODOADDEMAILHERE@gmail.com">
+                                    <button className="reportErrorBtn">Out of date? Errors? Anything we should add?</button>
+                                </a>
                             )}
                         </div>
                     </div>

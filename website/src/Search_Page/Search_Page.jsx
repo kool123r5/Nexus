@@ -69,8 +69,8 @@ export default function Search() {
             if (cost.length != 0 && passedAllChecks == true) {
                 if (
                     cost.length == 1 &&
-                    ((cost[0] == "Free" && activityDoc.paid[0] == true) ||
-                        (cost[0] == "Has fee" && activityDoc.paid[0] == false))
+                    ((cost[0] == "Free" && activityDoc.cost[0] == true) ||
+                        (cost[0] == "Has fee" && activityDoc.cost[0] == false))
                 ) {
                     passedAllChecks = false;
                 } else if (cost.length == 2) {

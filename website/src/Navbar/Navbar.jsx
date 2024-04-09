@@ -30,6 +30,15 @@ export default function Navbar() {
         navigate(`/profile/${userDoc.username}`);
     };
 
+    const handleSuggestClick = () => {
+        window
+            .open(
+                "https://docs.google.com/forms/d/e/1FAIpQLSfkbG-QB3jxbKI4s1AcXrCGncPiISmrQAwyCYAbrpayC0GYHQ/viewform",
+                "_blank"
+            )
+            .focus();
+    };
+
     const { width } = useViewportSize();
     const [opened, { toggle }] = useDisclosure();
 
@@ -43,6 +52,9 @@ export default function Navbar() {
                         </button>
                         <button className="searchNav" onClick={handleSearchClick}>
                             Search
+                        </button>
+                        <button className="searchNav" onClick={handleSuggestClick}>
+                            Suggest
                         </button>
                     </div>
                     {user != null && authIsReady && (

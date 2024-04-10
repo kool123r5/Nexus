@@ -151,19 +151,23 @@ export default function Activity() {
                                 {activityDocument.cost[0] ? (
                                     <>
                                         {activityDocument.cost[1] == "unknown" || activityDocument.cost[2] == "unknown" ? (
-                                            <p className="cost"
-                                            style={{
-                                                fontWeight:500
-                                            }}>
-                                                <IconMoneybag/>
+                                            <p
+                                                className="cost"
+                                                style={{
+                                                    fontWeight: 500,
+                                                }}
+                                            >
+                                                <IconMoneybag />
                                                 Costs Money
                                             </p>
                                         ) : (
-                                            <p className="cost"
-                                            style={{
-                                                fontWeight: 500
-                                            }}>
-                                                <IconMoneybag/>
+                                            <p
+                                                className="cost"
+                                                style={{
+                                                    fontWeight: 500,
+                                                }}
+                                            >
+                                                <IconMoneybag />
                                                 Costs {activityDocument.cost[1]} {activityDocument.cost[2]}
                                             </p>
                                         )}
@@ -283,12 +287,12 @@ export default function Activity() {
                                 )}
                             {activityDocument && (
                                 <div className="form-div">
-                                    {userDoc && authIsReady && !isActivityAdded && (
+                                    {user && userDoc && authIsReady && !isActivityAdded && (
                                         <button id="btn" onClick={handleAdd}>
                                             Add Activity to Profile
                                         </button>
                                     )}
-                                    {authIsReady && userDoc && isActivityAdded && (
+                                    {user && authIsReady && userDoc && isActivityAdded && (
                                         <button id="btn" onClick={handleRemove}>
                                             Remove Activity
                                         </button>

@@ -9,10 +9,10 @@ export const useSignup = () => {
     const [isPending, setIsPending] = useState(false);
     const navigate = useNavigate();
 
-    const signup = async (email, password, confirmPassword, displayName, age, grade, loc, interests, username) => {
+    const signup = async (email, password, confirmPassword, displayName, age, grade, loc,bio, interests, username) => {
         setError(null);
         setIsPending(true);
-
+        
         try {
             if (password.length < 6) {
                 setError("Your password must be at least 6 characters long!");
@@ -57,6 +57,7 @@ export const useSignup = () => {
                 grade,
                 location: loc,
                 interests,
+                bio,
                 posts: [],
                 activities: [],
                 username,

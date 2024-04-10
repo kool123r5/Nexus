@@ -17,6 +17,7 @@ export default function Signup() {
     const [confirmPassword, setConfirmPassword] = useState("");
     const [displayName, setName] = useState("");
     const [username, setUsername] = useState("");
+    const [bio,setBio]=useState("")
     const [age, setAge] = useState("");
     const [grade, setGrade] = useState("");
     const [location, setLocation] = useState("");
@@ -34,6 +35,7 @@ export default function Signup() {
     const element3Ref = useRef(null);
 
     const nextStep = () => {
+
         const newActive = Math.min(active + 1, 2);
         if (active == 0) {
             if (errorFirstSection != "" || displayName == "" || password == "" || email == "" || confirmPassword == "") {
@@ -43,21 +45,10 @@ export default function Signup() {
                 setErrorFirstSection("Please enter a Username");
                 setActive(active);
                 return;
+            }else{
+                setActive(newActive)
+                return
             }
-            projectFirestore
-                .collection("users")
-                .where("username", "==", username)
-                .get()
-                .then((doc) => {
-                    if (!doc.empty) {
-                        setErrorFirstSection("Username taken");
-                        setActive(active);
-                        return;
-                    } else {
-                        setActive(newActive);
-                        return;
-                    }
-                });
         }
 
         if (active == 1) {
@@ -114,6 +105,7 @@ export default function Signup() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        console.log(interests)
         if (interests.length == 0) {
             setErrorThirdSection("Please select at least 1 interest");
             return;
@@ -126,6 +118,7 @@ export default function Signup() {
             age,
             grade,
             location,
+            bio,
             interests,
             username
         );

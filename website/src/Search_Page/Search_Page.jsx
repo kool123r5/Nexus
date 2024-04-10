@@ -11,11 +11,11 @@ import Fuse from "fuse.js";
 
 export default function Search() {
     const [mode, setMode] = useState([]);
-    const [ageList, setAgeList] = useState([]);
+    const [gradeList, setGradeList] = useState([]);
     const [cost, setCost] = useState([]);
     const [date, setDate] = useState([]);
     const [tags, setTags] = useState([]);
-    const [errorAge, setErrorAge] = useState(null);
+    const [errorGrade, setErrorGrade] = useState(null);
     const [locationValue, setLocationValue] = useState("");
     const [searchValue, setSearchValue] = useState("");
     const [documents, setDocuments] = useState([...activityList]);
@@ -24,10 +24,20 @@ export default function Search() {
         const filteredDocs = [];
         activityList.forEach((activityDoc) => {
             let passedAllChecks = true;
-            if (ageList.length != 0 && passedAllChecks == true) {
-                for (let index = 0; index < ageList.length; index++) {
-                    const age = ageList[index];
-                    if (!activityDoc.age.includes(age.toString())) {
+            if (gradeList.length != 0 && passedAllChecks == true) {
+                for (let index = 0; index < gradeList.length; index++) {
+                    const grade = gradeList[index];
+                    const gradeMapping = {
+                        9: "Freshman",
+                        10: "Sophomore",
+                        11: "Junior",
+                        12: "Senior",
+                    };
+                    if (activityDoc.gradeRange == "unknown") {
+                        passedAllChecks = false;
+                        break;
+                    }
+                    if (!activityDoc.gradeRange.map((val) => val.trim()).includes(gradeMapping[grade.toString()])) {
                         passedAllChecks = false;
                     } else {
                         passedAllChecks = true;
@@ -140,25 +150,17 @@ export default function Search() {
         console.log(fuse.search(searchValue));
     };
 
-
     return (
         <>
             <Navbar />
             {documents ? (
                 <div className="searchDiv">
-
-
-
-
-
                     <div className="searchSubDiv">
                         <div className="filterDiv">
-
-
                             <div className="search_input_div">
                                 <TextInput
                                     className="filterInput searchBar"
-                                    id = "search_search_bar"
+                                    id="search_search_bar"
                                     placeholder="Search"
                                     leftSection={<IconSearch />}
                                     leftSectionWidth={40}
@@ -167,30 +169,29 @@ export default function Search() {
                                 />
                             </div>
 
-
                             <div className="row_two_filter">
                                 <div className="age_filter_div">
                                     <TextInput
                                         className="filterInput"
-                                        placeholder="Age"
+                                        placeholder="Grade"
                                         type="text"
-                                        min={13}
-                                        max={22}
-                                        error={errorAge}
+                                        min={6}
+                                        max={12}
+                                        error={errorGrade}
                                         onChange={(e) => {
-                                            setErrorAge(null);
+                                            setErrorGrade(null);
                                             const numberArray = e.target.value.split(",").map(Number);
                                             if (numberArray.includes(NaN)) {
-                                                setErrorAge("Enter valid ages");
+                                                setErrorGrade("Enter valid grades");
                                             } else if (numberArray.includes(0) && numberArray[numberArray.length - 1] != 0) {
-                                                setErrorAge("Enter valid ages");
-                                            } else if (numberArray.some((num) => num < 13)) {
-                                                setErrorAge("Ages must be at least 13!");
+                                                setErrorGrade("Enter valid grades");
+                                            } else if (numberArray.some((num) => num < 6)) {
+                                                setErrorGrade("Grades must be at least 6!");
                                             } else {
                                                 if (numberArray[numberArray.length - 1] == 0) {
-                                                    setAgeList([...numberArray].slice(0, -1));
+                                                    setGradeList([...numberArray].slice(0, -1));
                                                 } else {
-                                                    setAgeList(numberArray);
+                                                    setGradeList(numberArray);
                                                 }
                                             }
                                         }}
@@ -213,7 +214,6 @@ export default function Search() {
                                 </div>
                             </div>
 
-
                             <div className="row_three_div">
                                 <div className="mode_filter_div">
                                     <MultiSelect
@@ -230,7 +230,6 @@ export default function Search() {
                                     />
                                 </div>
                             </div>
-
 
                             <div className="row_four_div">
                                 <div className="date_filter_div">
@@ -261,7 +260,6 @@ export default function Search() {
                                 </div>
                             </div>
 
-
                             <div className="row_six_div">
                                 <div className="tags_filter_div">
                                     <MultiSelect
@@ -278,7 +276,6 @@ export default function Search() {
                                     />
                                 </div>
                             </div>
-
 
                             <div className="submit_search_div">
                                 <button
@@ -308,8 +305,6 @@ export default function Search() {
                         </div>
                     </div>
                 </div>
-
-
             ) : (
                 <div className="loadingDiv">
                     <Loader className="loading" color="#ff6d00" size="xl" />

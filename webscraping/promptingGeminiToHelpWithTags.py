@@ -91,7 +91,7 @@ def remove_keys(obj):
 
     return new_obj
 start = 0
-stop = 3
+stop = len(activities)
 
 
 
@@ -189,21 +189,27 @@ for i in range(start,stop):
     Return a JSON object, along with careful reasoning about why you made certain decisions.
 
     MAKE SURE YOU ARE NOT REMOVING INFORMATION FROM gradeRange or from age. Make sure you ARE INSTEAD REMOVING INFORMATION REGARDING THIS FROM THE REQUIREMENTS FIELD!
+    Note that requirements may be "unknown" in cases like this where you have very little information about requirements it is okay to leave it as unknown.
 
     </instructions> \n 
     """
-    prompt += """
+    promptOther += """
     <examples> 
-        Reasoning: The original requirements mentioned 'Open to grades 9-12', so I updated the gradeRange field to include the corresponding grade levels. There was no specific age information, so the age field was left as an empty list. The demographics field stated 'For U.S. citizens only', so I included that in the requirements. I reformatted the requirements to be more formal and focus on the applicant, using phrases like 'Applications must' and 'Applicants must'.
+        Reasoning: The original requirements mentioned 'Open to grades 9-12', so I updated the gradeRange field to include the corresponding grade levels.
+         Age information was already formatted correctly so I did not make any changes there. 
+         The demographics field stated 'For U.S. citizens only', so I included that in the requirements.
+          I reformatted the requirements to be more formal and focus on the applicant, using phrases like 'Applications must' and 'Applicants must'.
         JSON object:
         {
         "requirements": "Applications must be submitted by high school students. A minimum GPA of 3.0 is required. The application process involves submitting a resume, a personal essay, and two letters of recommendation by the deadline of May 1st. Applicants must be able to commit to attending weekly meetings for the duration of the academic year. Prior experience in public speaking is preferred but not mandatory. This activity is open to U.S. citizens only.",
         "gradeRange": ["Freshman", "Sophomore", "Junior", "Senior"],
-        "age": [15,16,17,18]
+        "age": ["15","16","17","18"]
         }
         </examples>
 
-    <examples> Reasoning: The original requirements mentioned 'Ages 14-18', so I updated the age field to include the corresponding ages as strings. There was no specific grade range information, so the gradeRange field was left as an empty list. I reformatted the requirements to be more formal and applicant-focused. Since there was no information in the demographics field, I did not add anything new to the requirements.
+    <examples> Reasoning: The original requirements mentioned 'Ages 14-18', so I updated the age field to include the corresponding ages as strings. 
+        There was no specific grade range information, so the gradeRange field was left as an empty list.
+        I reformatted the requirements to be more formal and applicant-focused. Since there was no information in the demographics field, I did not add anything new to the requirements.
         JSON object:
         
         "requirements": "Applicants have a minimum cumulative GPA of 3.5 is mandatory. The application process requires submitting a coding project portfolio, a statement of purpose, and two teacher recommendations by the deadline of March 15th. Participants are expected to attend a two-week coding bootcamp during the summer break. Prior experience in Python programming is highly recommended.",
@@ -212,10 +218,13 @@ for i in range(start,stop):
         }
         </examples>
 
-    <examples> Reasoning: The original requirements mentioned 'For grades 10-11', so I updated the gradeRange field to include the corresponding grade levels. There was no specific age information, so the age field was left as an empty list. The demographics field stated 'For female students only', so I included that in the requirements. I reformatted the requirements to be more formal and applicant-focused.
+    <examples> Reasoning: The original requirements mentioned 'For grades 10-11', so I updated the gradeRange field to include the corresponding grade levels. 
+        There was no specific age information, so the age field was left as an empty list. The demographics field stated 'For female students only',
+        so I included that in the requirements. I reformatted the requirements to be more formal and applicant-focused. The requirements mentioned information about grades, but this was redundant and already 
+        mentioned in gradeRange so I removed it.
         JSON object:
         {
-        "requirements": "This activity is open to female students only. Applicants must currently be enrolled in grades 10 or 11. A minimum GPA of 2.8 is required. The application process involves submitting a short essay describing your interest in STEM fields and one letter of recommendation from a math or science teacher. Selected participants are expected to attend weekly meetings and participate in at least one community outreach event per semester.",
+        "requirements": "This activity is open to female students only. A minimum GPA of 2.8 is required. The application process involves submitting a short essay describing your interest in STEM fields and one letter of recommendation from a math or science teacher. Selected participants are expected to attend weekly meetings and participate in at least one community outreach event per semester.",
         "gradeRange": ["Sophomore", "Junior"],
         "age": [14,15,16,17]
         }
@@ -231,6 +240,7 @@ for i in range(start,stop):
     )
     start_index = response.text.index("{")
     end_index = response.text.index("}") + 1
+    print(response.text[start_index:end_index])
     updatedObject =  json.loads(response.text[start_index:end_index])
     activity = remove_keys(activity)
     activity  = merge_json_objects(activity,updatedObject)

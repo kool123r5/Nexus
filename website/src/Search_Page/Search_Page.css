@@ -9,7 +9,6 @@ html {
     width: 100vw;
 }
 
-
 .searchDiv {
     height: calc(100vh - 4em);
     position: absolute;
@@ -21,93 +20,89 @@ html {
 .searchSubDiv {
     display: flex;
     flex-direction: row;
-
 }
 
-.filterDiv{
+.filterDiv {
     height: 100vh;
     width: 30vw;
     position: fixed;
-    left:0;
-    top:0;
-    padding-left:2vw;
-    padding-right:2vw;
-    top:4em;
+    left: 0;
+    top: 0;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    top: 4em;
     border-right: 1px var(--gray_C) solid;
-    display:flex;
+    display: flex;
     flex-direction: column;
     overflow: scroll;
 }
 
-
-.resultsDiv{
+.resultsDiv {
     width: 70vw;
     display: flex;
-    position:absolute;
-    right:0;
-    top:0;
+    position: absolute;
+    right: 0;
+    top: 0;
     flex-wrap: wrap;
     padding-left: 2vw;
 }
 
-.filterInput{
-    width:100%;
-    margin:0;
+.filterInput {
+    width: 100%;
+    margin: 0;
 }
 
-.search_input_div{
-    width:100%;
-    margin-top:4vh;
+.search_input_div {
+    width: 100%;
+    margin-top: 4vh;
 }
 
-#search_search_bar{
-    width:100%;
+#search_search_bar {
+    width: 100%;
 }
 
-.row_two_filter{
+.row_two_filter {
     display: flex;
     flex-direction: row;
-    margin-top:5vh;
+    margin-top: 5vh;
 }
 
-.age_filter_div{
-    width:5vw;
-    margin-right:1vw;
+.age_filter_div {
+    width: 5vw;
+    margin-right: 1vw;
 }
 
-.cost_filter_div{
-    width:20vw;
+.cost_filter_div {
+    width: 20vw;
 }
 
-
-.row_three_div{
-    margin-top:5vh
+.row_three_div {
+    margin-top: 5vh;
 }
 
-.mode_filter_div{
-    width:100%;
+.mode_filter_div {
+    width: 100%;
 }
 
-.row_four_div{
-    margin-top:5vh;
+.row_four_div {
+    margin-top: 5vh;
 }
 
-.row_five_div{
-    margin-top:5vh;
+.row_five_div {
+    margin-top: 5vh;
 }
 
-.row_six_div{
-    margin-top:5vh;
+.row_six_div {
+    margin-top: 5vh;
 }
 
-.tags_filter_div{
-    max-height:10vh;
-    height:10vh;
+.tags_filter_div {
+    max-height: 10vh;
+    height: 10vh;
 }
 
-
-.submit_search_buttons{
-    margin-top:5vh;
+.submit_search_buttons {
+    margin-top: 5vh;
     display: flex;
     flex-direction: row;
 }
@@ -128,7 +123,6 @@ html {
     display: border-box;
 }
 
-
 .submit_search_individual_button:hover {
     background-color: var(--orange);
     border: 1px solid var(--orange);
@@ -140,8 +134,7 @@ html {
     border: 1px solid var(--orange);
 }
 
-
-.filterDiv .mantine-TextInput-input{
+.filterDiv .mantine-TextInput-input {
     border-bottom: 1px solid var(--gray_C) !important;
     border-top: 1px solid var(--gray_C) !important;
     border-left: 1px solid var(--gray_C) !important;
@@ -150,7 +143,7 @@ html {
     background-color: var(--gray_E) !important;
 }
 
-.filterDiv .mantine-MultiSelect-input{
+.filterDiv .mantine-MultiSelect-input {
     border-bottom: 1px solid var(--gray_C) !important;
     border-top: 1px solid var(--gray_C) !important;
     border-left: 1px solid var(--gray_C) !important;
@@ -158,7 +151,6 @@ html {
     border-radius: 3px !important;
     background-color: var(--gray_E) !important;
 }
-
 
 .filterDiv .mantine-DatePickerInput-input {
     border-bottom: 1px solid var(--gray_C) !important;
@@ -169,7 +161,7 @@ html {
     background-color: var(--gray_E) !important;
 }
 
-.submit_search_div{
+.submit_search_div {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -181,6 +173,4 @@ html {
     margin-top: 20px;
     font-weight: 500;
     color: var(--orange);
-    border-bottom: 1px solid var(--orange);
 }
-

@@ -226,46 +226,54 @@ export default function Activity() {
                             <h4 className="text">{activityDocument.text}</h4>
                             <br />
                             {activityDocument.requirements != "unknown" && (
-                                <div className="requirementsDiv">
-                                    Requirements:{" "}
-                                    {activityDocument.demographics != "unknown" &&
-                                        activityDocument.demographics[0] != "All Students" &&
-                                        activityDocument.demographics.map((demographic) => {
-                                            return `${demographic}. `;
-                                        })}
-                                    {activityDocument.requirements}
-                                </div>
+                                <>
+                                    <div className="requirementsDiv">
+                                        Requirements:{" "}
+                                        {activityDocument.demographics != "unknown" &&
+                                            activityDocument.demographics[0] != "All Students" &&
+                                            activityDocument.demographics.map((demographic) => {
+                                                return `${demographic}. `;
+                                            })}
+                                        {activityDocument.requirements}
+                                    </div>
+                                    <br />
+                                </>
                             )}
-                            <br />
                             <div className="ageAndGradeDiv">
                                 {activityDocument.age.length != 0 && activityDocument.age != "unknown" && (
-                                    <p
-                                        style={{
-                                            margin: 0,
-                                        }}
-                                    >
-                                        Available for ages <span className="username">{activityDocument.age[0]}</span> to{" "}
-                                        <span className="username">
-                                            {activityDocument.age[activityDocument.age.length - 1]}
-                                        </span>
-                                    </p>
+                                    <>
+                                        <p
+                                            style={{
+                                                margin: 0,
+                                            }}
+                                        >
+                                            Available for ages <span className="username">{activityDocument.age[0]}</span> to{" "}
+                                            <span className="username">
+                                                {activityDocument.age[activityDocument.age.length - 1]}
+                                            </span>
+                                        </p>
+                                        <br />
+                                    </>
                                 )}
                                 {activityDocument.gradeRange != "unknown" && activityDocument.gradeRange.length != 0 && (
-                                    <p style={{ margin: 0 }}>
-                                        For{" "}
-                                        {activityDocument.gradeRange.map((grade, index) => {
-                                            return (
-                                                <span className="username" key={index}>
-                                                    {index != activityDocument.gradeRange.length - 1
-                                                        ? `${grade.trim()}s, `
-                                                        : `${grade.trim()}s`}
-                                                </span>
-                                            );
-                                        })}
-                                    </p>
+                                    <>
+                                        <p style={{ margin: 0 }}>
+                                            For{" "}
+                                            {activityDocument.gradeRange.map((grade, index) => {
+                                                return (
+                                                    <span className="username" key={index}>
+                                                        {index != activityDocument.gradeRange.length - 1
+                                                            ? `${grade.trim()}s, `
+                                                            : `${grade.trim()}s`}
+                                                    </span>
+                                                );
+                                            })}
+                                        </p>
+                                        <br />
+                                    </>
                                 )}
                             </div>
-                            <br />
+
                             {activityDocument.deadline != "unknown" && (
                                 <div className="deadlineDiv">
                                     Deadline: <span className="username">{activityDocument.deadline.trim()}</span>
@@ -305,6 +313,13 @@ export default function Activity() {
                                 <a href="mailto:TODOADDEMAILHERE@gmail.com">
                                     <button className="reportErrorBtn">Out of date? Errors? Anything we should add?</button>
                                 </a>
+                            )}
+
+                            {activityDocument.contributor && (
+                                <p>
+                                    This activity was contributed by:{" "}
+                                    <span className="username">{activityDocument.contributor}</span>
+                                </p>
                             )}
                         </div>
                     </div>

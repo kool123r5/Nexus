@@ -4,10 +4,10 @@ import { useState } from "react";
 import Card_Search from "../Card_Search/CardGridSearch";
 import Navbar from "../Navbar/Navbar";
 import "./Search_Page.css";
-import tagArray from "../Signup/tagArray";
 import { IconSearch } from "@tabler/icons-react";
 import activityList from "../List/activities";
 import Fuse from "fuse.js";
+import flattenAndUnique from "../functions/flattenAndUnique";
 
 export default function Search() {
     const [mode, setMode] = useState([]);
@@ -16,9 +16,29 @@ export default function Search() {
     const [date, setDate] = useState([]);
     const [tags, setTags] = useState([]);
     const [errorGrade, setErrorGrade] = useState(null);
-    const [locationValue, setLocationValue] = useState("");
+    const [locationValue, setLocationValue] = useState([]);
     const [searchValue, setSearchValue] = useState("");
     const [documents, setDocuments] = useState([...activityList]);
+
+    const tagArray = flattenAndUnique(
+        activityList.map((val) => {
+            if (val.tags != "unknown") {
+                return val.tags;
+            } else {
+                return [];
+            }
+        })
+    );
+
+    const locationArray = flattenAndUnique(
+        activityList.map((val) => {
+            if (val.location != "unknown") {
+                return [val.location.trim()];
+            } else {
+                return [];
+            }
+        })
+    );
 
     const handleFilter = () => {
         const filteredDocs = [];
@@ -154,7 +174,15 @@ export default function Search() {
         <>
             <Navbar />
             {documents ? (
-                <div className="searchDiv">
+                <div
+                    className="searchDiv"
+                    onKeyDown={(e) => {
+                        if (e.key == "Enter") {
+                            handleFilter();
+                            handleSearch();
+                        }
+                    }}
+                >
                     <div className="searchSubDiv">
                         <div className="filterDiv">
                             <div className="search_input_div">
@@ -249,13 +277,17 @@ export default function Search() {
 
                             <div className="row_five_div">
                                 <div className="location_filter_div">
-                                    <TextInput
+                                    <MultiSelect
                                         className="filterInput"
                                         placeholder="Location"
                                         value={locationValue}
                                         onChange={(e) => {
                                             setLocationValue(e.target.value);
                                         }}
+                                        data={[...locationArray]}
+                                        searchable
+                                        clearable
+                                        hidePickedOptions
                                     />
                                 </div>
                             </div>

@@ -22,10 +22,13 @@ async function getData(spreadsheetId, range) {
             range,
         });
         const currentData = [];
-        result.data.values.forEach(async (row) => {
+        for (let i = 0; i < result.data.values.length; i++) {
+            const row = result.data.values[i];
+            console.log("On row: ", i);
+
             const model = genAI.getGenerativeModel({ model: "gemini-pro" });
 
-            await new Promise((r) => setTimeout(r, 3000));
+            await new Promise((r) => setTimeout(r, 2000));
 
             const prompt = `
             I want data about the cost of an activity. This is some data that a stranger has given us.
@@ -44,12 +47,12 @@ async function getData(spreadsheetId, range) {
 
             The final value in each array is the currency the number is given in. This should be a 3 letter code. For example, the dollar symbol or simply the string of "dollar" should be put as "USD" here. If you are not sure about this, then write the string of "unknown".
 
-            I do not want any response from you except this object with the 2 fields.
+            I do not want any response from you except this object with the 2 fields. The object MUST BE JSON PARSEABLE, so put the double quotes around the field names and everything.
             `;
 
-            const result = await model.generateContent(prompt);
-            const response = await result.response;
+            const response = (await model.generateContent(prompt)).response;
             const text = response.text();
+            console.log("Text response from gemini for the fields is: ", text);
             const geminiObj = text.slice(text.indexOf("{"), text.indexOf("}") + 1);
             const json = JSON.parse(geminiObj);
             const costArr = json["cost"];
@@ -75,7 +78,7 @@ async function getData(spreadsheetId, range) {
                 paid: paidArr,
             });
             await writeFile("responseData.json", JSON.stringify(currentData));
-        });
+        }
     } catch (err) {
         console.log(err);
     }

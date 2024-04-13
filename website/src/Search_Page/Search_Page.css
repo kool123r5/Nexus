@@ -28,8 +28,8 @@ html {
     position: fixed;
     left: 0;
     top: 0;
-    padding-left: 2vw;
-    padding-right: 2vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
     top: 4em;
     border-right: 1px var(--gray_C) solid;
     display: flex;
@@ -39,12 +39,14 @@ html {
 
 .resultsDiv {
     width: 70vw;
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto auto;
     position: absolute;
     right: 0;
     top: 0;
     flex-wrap: wrap;
     padding-left: 2vw;
+    gap: 5px 5px;
 }
 
 .filterInput {

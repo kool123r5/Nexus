@@ -10,13 +10,12 @@
 
 .card_search {
     background-color: var(--gray_E);
-    width: 275px;
+    width: auto;
     height: 250px;
-    padding-top:25px;
-    padding-left:25px;
-    padding-right:25px;
+    padding-top: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
     padding-bottom: 25px;
-    margin: 0px;
     border-radius: 10px;
     -webkit-transition: all 1s;
     -moz-transition: all 1s;
@@ -35,7 +34,6 @@
     overflow: hidden;
     box-sizing: border-box;
     border: 1px solid var(--lightblue);
-    margin: 6px;
 }
 
 .card_search:hover {

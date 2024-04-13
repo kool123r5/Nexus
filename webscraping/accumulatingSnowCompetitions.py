@@ -36,8 +36,7 @@ for i in range(start,stop):
         <instructions>
         This is a task regarding competitions for highschoolers
         In your own words, write a concise description (around 100 words) of an high school extra-curricular activity.
-        Keep your description accurate and objective.
-        USE information about the number of competitiors in your description.
+        MAKE SURE TO USE information about the number of competitiors in your description.
         Only output the description of this activity, do not give any fluff or irrelevant text. 
         </instructions>
 
@@ -45,7 +44,7 @@ for i in range(start,stop):
         Here is some information
         The title of the activity is: {title} 
         Here is some text about the activity: {text} 
-        Here is the number of competitors {website} 
+        Here is the number of competitors {numberOfCompetitors} 
         </information>
 
         """

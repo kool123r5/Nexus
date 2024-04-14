@@ -106,9 +106,21 @@ def loadFile(nameOfFile):
 def generateResponse(prompt):
     response = model.generate_content(
     prompt,
-    safety_settings={
-        HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_ONLY_HIGH
-    },
+    safety_settings=[
+                    {"category": "HARM_CATEGORY_HARASSMENT", "threshold": "BLOCK_NONE"},
+                    {
+                        "category": "HARM_CATEGORY_HATE_SPEECH",
+                        "threshold": "BLOCK_NONE",
+                    },
+                    {
+                        "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+                        "threshold": "BLOCK_NONE",
+                    },
+                    {
+                        "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+                        "threshold": "BLOCK_NONE",
+                    },
+                ],
     generation_config=genai.types.GenerationConfig(temperature=0.15),
     )
     return response
@@ -149,7 +161,12 @@ def updateDescription(activityList, updatedList):
         print(f"{counter} -Done with {title}")
         time.sleep(1)
     return updatedList
+#ALL DESCRIPTIONS RE-WRITTEN
+def dumpData(filename, data):
+    with open(filename, "w") as f:
+        f.write(json.dumps(data))
 
+        
 snowDayProcessed = updateDescription(snowDayOG, [])
 dumpData("snowDayProcessed.json", snowDayProcessed)
 
@@ -159,7 +176,4 @@ dumpData("SOSProcessed.json", standOutSearchProcessed)
 responseDataProcessed = updateDescription(responseDataOG, [])
 dumpData("responseProcessed.json", responseDataProcessed)
 
-#ALL DESCRIPTIONS RE-WRITTEN
-def dumpData(filename, data):
-    with open(filename, "w") as f:
-        f.write(json.dumps(data))
+

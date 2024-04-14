@@ -148,8 +148,11 @@ def updateDescription(activityList, updatedList):
             Original Description: {text}
 
             Your task is to rewrite the original description of this extracurricular activity in your OWN WORDS,
-            while preserving the essential information and capturing the spirit of the activity. Your rewritten description should be concise, engaging,
-            and easy to understand for high school students. Your description  should be short, not more than a paragraph.
+            while preserving the essential information and capturing the spirit of the activity. Your rewritten description should be concise
+            and easy to understand for high school students. Your description  should be short, around 1- 2 paragraphs.
+
+            Write with an objective, accurate tone. This means you shouldnt use catch phrases such as "Calling all stem students!" Your response
+            shouldnt read like an advertisement.
 
             Please ONLY provide your re-written description in your response. This means no additional fluff such as "Sure I can do this task ..."
         """
@@ -166,7 +169,7 @@ def dumpData(filename, data):
     with open(filename, "w") as f:
         f.write(json.dumps(data))
 
-        
+
 snowDayProcessed = updateDescription(snowDayOG, [])
 dumpData("snowDayProcessed.json", snowDayProcessed)
 

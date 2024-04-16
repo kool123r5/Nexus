@@ -286,7 +286,7 @@ def generateResponse(prompt):
 
 
 # loading all files as variables
-snowDayOG = loadFile("snowDayProcessed.json")
+snowDayOG = loadFile("snowDayP.json")
 standOutSearchOG = loadFile("SOSProcessed.json")
 responseDataOG = loadFile("responseProcessed.json")
 snowDayCompetitionOG = loadFile("snowDayCompetitions.json")
@@ -398,9 +398,10 @@ def updateTags(activityList, updatedList, placeToDump, index=0):
     return "done"
 
 
-def updateGrades(activityList, updatedList, placeToDump):
+def updateGrades(activityList, updatedList, placeToDump, index=0):
     counter = 0
-    for activity in activityList:
+    for i in range(index,len(activityList)):
+        activity = activityList[i]
         counter += 1
         requirements = activity["requirements"]
         id = activity["id"]
@@ -457,23 +458,23 @@ def updateGrades(activityList, updatedList, placeToDump):
         start_index = response.text.index("[")
         end_index = response.text.index("]") + 1
         updatedTags = response.text[start_index:end_index]
-        activity["Updated Tags"] = updatedTags
+        activity["Updated Grades"] = updatedTags
         updatedList.append(activity)
-        print(f"{counter} -Done with {title}")
-        time.sleep(1)
+        print(f"{counter} -Done ")
+        time.sleep(5)
 
         dumpData(placeToDump, updatedList)
     return "done"
 
 
-f = loadFile("compsP.json")
+f = loadFile("snowDayPro.json")
 
 # if you want to use an incomplete file the secodn parameter should be that incomplete file and
 # you should add a 4th parameter which is the number of objects in that file (1 + the value of the last json object when u click on it in the vscode file)
 # updateTags(snowDayOG, f, "snowDayP.json", 921)
 # updateTags(standOutSearchOG, f, "sosP.json", 11)
 # updateTags(responseDataOG, [], "resP.json")
-updateTags(snowDayCompetitionOG, f, "compsP.json", 10)
+# updateTags(snowDayCompetitionOG, f, "compsP.json", 10)
 
 
-# updateGrades(snowDayOG, [], "gradein.json")
+updateGrades(snowDayOG, f, "snowDayPro.json",218+107)

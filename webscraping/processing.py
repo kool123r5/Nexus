@@ -102,7 +102,9 @@ def loadFile(nameOfFile):
     with open(nameOfFile, "r", encoding="utf-8") as f:
         a = json.load(f)
     return a
-
+def dumpData(filename, data):
+    with open(filename, "w") as f:
+        f.write(json.dumps(data))
 def generateResponse(prompt):
     response = model.generate_content(
     prompt,
@@ -126,7 +128,7 @@ def generateResponse(prompt):
     return response
 
 
-
+# loading all files as variables
 snowDayOG = loadFile('snowDayProcessed.json')
 standOutSearchOG = loadFile('SOSProcessed.json')
 responseDataOG = loadFile('responseProcessed.json')
@@ -165,13 +167,11 @@ def updateDescription(activityList, updatedList):
         time.sleep(1)
     return updatedList
 #ALL DESCRIPTIONS RE-WRITTEN
-def dumpData(filename, data):
-    with open(filename, "w") as f:
-        f.write(json.dumps(data))
 
-def updateTags(activityList, updatedList, placeToDump,jengle=0):
+
+def updateTags(activityList, updatedList, placeToDump,index=0):
     counter = 0
-    for i in range(jengle, len(activityList)):
+    for i in range(index, len(activityList)):
         try:
             activity = activityList[i]
             counter += 1
@@ -212,7 +212,7 @@ def updateTags(activityList, updatedList, placeToDump,jengle=0):
 
             """
             response = generateResponse(prompt)
-            try:
+            try: #i dont think this try except clause works as intended
                 response_text = response.text
                 start_index = response_text.index("[")
                 end_index = response_text.index("]") + 1
@@ -305,6 +305,8 @@ def updateGrades(activityList, updatedList, placeToDump):
     return "done"
 f = loadFile("snowDayP.json")
 
+#if you want to use an incomplete file the secodn parameter should be that incomplete file and 
+# you should add a 4th parameter which is the number of objects in that file (1 + the value of the last json object when u click on it in the vscode file)
 updateTags(snowDayOG, f, 'snowDayP.json',507)
 updateTags(standOutSearchOG, [], 'sosP.json')
 updateTags(responseDataOG, [], 'resP.json')

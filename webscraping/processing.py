@@ -51,6 +51,7 @@ Manipulations
 - updating description is also sensitive
 - 
 """
+
 import google.generativeai as genai
 from google.generativeai.types import HarmCategory, HarmBlockThreshold
 import os
@@ -64,78 +65,235 @@ genai.configure(api_key=gemini_key)
 model = genai.GenerativeModel(model_name="gemini-pro")
 
 betterTags = [
-    "Physics", "Chemistry", "Biology", "Law", "Art/Design", "Engineering",
-    "Business", "Economics", "Computer Science", "Environmental Science",
-    "History", "Government/Politics", "Mathematics", "STEM", "Astronomy",
-    "Social Science", "Music", "Medicine", "Robotics", "Debate", "Literature",
-    "Graphic Design", "Journalism", "Game Development", "Health Sciences",
-    "Fashion", "Architecture", "Photography/Videography", "Marketing/Advertising",
-    "Finance", "Agriculture", "Aviation/Aerospace", "Foreign Languages",
-    "Entrepreneurship", "Leadership/Management", "International Studies/Global Affairs",
-    "Performing Arts", "Sports", "Creative Writing", "Public Speaking",
-    "Model United Nations (MUN)", "Coding/Programming", "Web Development",
-    "App Development", "Cybersecurity", "Data Science", "Artificial Intelligence (AI)",
-    "Culinary Arts", "Theatre/Drama", "Film/Cinema", "Animation", "Dance",
-     "Tutoring", "Mentoring", "Environmental Activism",
-    "Mental Health Awareness", "LGBTQ+ Advocacy", "Diversity and Inclusion",
-    "Cultural Clubs", "Board Games/Chess",
-    "E-Sports/Gaming", "Media/Broadcasting", "Podcasting", "Student Government",
-     "Visual Arts", "Performing Arts", "Business and Entrepreneurship", "Social Sciences and Humanities"
+    "Physics",
+    "Chemistry",
+    "Biology",
+    "Law",
+    "Art/Design",
+    "Engineering",
+    "Business",
+    "Economics",
+    "Computer Science",
+    "Environmental Science",
+    "History",
+    "Government/Politics",
+    "Mathematics",
+    "STEM",
+    "Astronomy",
+    "Social Science",
+    "Music",
+    "Medicine",
+    "Robotics",
+    "Debate",
+    "Literature",
+    "Graphic Design",
+    "Journalism",
+    "Game Development",
+    "Health Sciences",
+    "Fashion",
+    "Architecture",
+    "Photography/Videography",
+    "Marketing/Advertising",
+    "Finance",
+    "Agriculture",
+    "Aviation/Aerospace",
+    "Foreign Languages",
+    "Entrepreneurship",
+    "Leadership/Management",
+    "International Studies/Global Affairs",
+    "Performing Arts",
+    "Sports",
+    "Creative Writing",
+    "Public Speaking",
+    "Model United Nations (MUN)",
+    "Coding/Programming",
+    "Web Development",
+    "App Development",
+    "Cybersecurity",
+    "Data Science",
+    "Artificial Intelligence (AI)",
+    "Culinary Arts",
+    "Theatre/Drama",
+    "Film/Cinema",
+    "Animation",
+    "Dance",
+    "Tutoring",
+    "Mentoring",
+    "Environmental Activism",
+    "Mental Health Awareness",
+    "LGBTQ+ Advocacy",
+    "Diversity and Inclusion",
+    "Cultural Clubs",
+    "Board Games/Chess",
+    "E-Sports/Gaming",
+    "Media/Broadcasting",
+    "Podcasting",
+    "Student Government",
+    "Visual Arts",
+    "Performing Arts",
+    "Business and Entrepreneurship",
+    "Social Sciences and Humanities",
 ]
 umbrella_tags = [
-    ["Visual Arts", "Art/Design", "Graphic Design", "Photography/Videography", "Animation"],
+    [
+        "Visual Arts",
+        "Art/Design",
+        "Graphic Design",
+        "Photography/Videography",
+        "Animation",
+    ],
     ["Performing Arts", "Music", "Theatre/Drama", "Dance"],
-    ["STEM", "Physics", "Chemistry", "Biology", "Engineering", "Computer Science", "Environmental Science", "Mathematics", "Astronomy", "Robotics", "Game Development", "Coding/Programming", "Web Development", "App Development", "Cybersecurity", "Data Science", "Artificial Intelligence (AI)"],
-    ["Business and Entrepreneurship", "Business", "Economics", "Marketing/Advertising", "Finance", "Entrepreneurship", "Leadership/Management"],
-    ["Social Sciences and Humanities", "Law", "History", "Government/Politics", "Social Science", "Literature", "International Studies/Global Affairs", "Public Speaking", "Model United Nations (MUN)", "Debate", "Journalism"],
-    ["Health and Life Sciences", "Medicine", "Health Sciences", "Culinary Arts", "Agriculture"],
-    ["Technology", "Computer Science", "Robotics", "Game Development", "Coding/Programming", "Web Development", "App Development", "Cybersecurity", "Data Science", "Artificial Intelligence (AI)"],
-    ["Creative Arts", "Art/Design", "Graphic Design", "Photography/Videography", "Animation", "Creative Writing", "Film/Cinema", "Theatre/Drama", "Dance", "Music"],
-    ["Advocacy and Service", "Community Service", "Volunteering", "Tutoring", "Mentoring", "Environmental Activism", "Mental Health Awareness", "LGBTQ+ Advocacy", "Diversity and Inclusion"],
-    ["Sports and Recreation", "Sports", "Outdoor Activities/Adventure Sports", "Board Games/Chess", "E-Sports/Gaming"],
-    ["Media and Communications", "Journalism", "Media/Broadcasting", "Podcasting", "Yearbook/School Publications"],
+    [
+        "STEM",
+        "Physics",
+        "Chemistry",
+        "Biology",
+        "Engineering",
+        "Computer Science",
+        "Environmental Science",
+        "Mathematics",
+        "Astronomy",
+        "Robotics",
+        "Game Development",
+        "Coding/Programming",
+        "Web Development",
+        "App Development",
+        "Cybersecurity",
+        "Data Science",
+        "Artificial Intelligence (AI)",
+    ],
+    [
+        "Business and Entrepreneurship",
+        "Business",
+        "Economics",
+        "Marketing/Advertising",
+        "Finance",
+        "Entrepreneurship",
+        "Leadership/Management",
+    ],
+    [
+        "Social Sciences and Humanities",
+        "Law",
+        "History",
+        "Government/Politics",
+        "Social Science",
+        "Literature",
+        "International Studies/Global Affairs",
+        "Public Speaking",
+        "Model United Nations (MUN)",
+        "Debate",
+        "Journalism",
+    ],
+    [
+        "Health and Life Sciences",
+        "Medicine",
+        "Health Sciences",
+        "Culinary Arts",
+        "Agriculture",
+    ],
+    [
+        "Technology",
+        "Computer Science",
+        "Robotics",
+        "Game Development",
+        "Coding/Programming",
+        "Web Development",
+        "App Development",
+        "Cybersecurity",
+        "Data Science",
+        "Artificial Intelligence (AI)",
+    ],
+    [
+        "Creative Arts",
+        "Art/Design",
+        "Graphic Design",
+        "Photography/Videography",
+        "Animation",
+        "Creative Writing",
+        "Film/Cinema",
+        "Theatre/Drama",
+        "Dance",
+        "Music",
+    ],
+    [
+        "Advocacy and Service",
+        "Community Service",
+        "Volunteering",
+        "Tutoring",
+        "Mentoring",
+        "Environmental Activism",
+        "Mental Health Awareness",
+        "LGBTQ+ Advocacy",
+        "Diversity and Inclusion",
+    ],
+    [
+        "Sports and Recreation",
+        "Sports",
+        "Outdoor Activities/Adventure Sports",
+        "Board Games/Chess",
+        "E-Sports/Gaming",
+    ],
+    [
+        "Media and Communications",
+        "Journalism",
+        "Media/Broadcasting",
+        "Podcasting",
+        "Yearbook/School Publications",
+    ],
     ["Student Leadership", "Student Government", "Leadership/Management"],
-    ["Multidisciplinary", "Fashion", "Architecture", "Aviation/Aerospace", "Foreign Languages"]
+    [
+        "Multidisciplinary",
+        "Fashion",
+        "Architecture",
+        "Aviation/Aerospace",
+        "Foreign Languages",
+    ],
 ]
+
 
 def loadFile(nameOfFile):
     with open(nameOfFile, "r", encoding="utf-8") as f:
         a = json.load(f)
     return a
+
+
 def dumpData(filename, data):
     with open(filename, "w") as f:
         f.write(json.dumps(data))
+
+
 def generateResponse(prompt):
     response = model.generate_content(
-    prompt,
-    safety_settings=[
-                    {"category": "HARM_CATEGORY_HARASSMENT", "threshold": "BLOCK_NONE"},
-                    {
-                        "category": "HARM_CATEGORY_HATE_SPEECH",
-                        "threshold": "BLOCK_NONE",
-                    },
-                    {
-                        "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
-                        "threshold": "BLOCK_NONE",
-                    },
-                    {
-                        "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
-                        "threshold": "BLOCK_NONE",
-                    },
-                ],
-    generation_config=genai.types.GenerationConfig(temperature=0.15),
+        prompt,
+        safety_settings=[
+            {"category": "HARM_CATEGORY_HARASSMENT", "threshold": "BLOCK_NONE"},
+            {
+                "category": "HARM_CATEGORY_HATE_SPEECH",
+                "threshold": "BLOCK_NONE",
+            },
+            {
+                "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+                "threshold": "BLOCK_NONE",
+            },
+            {
+                "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+                "threshold": "BLOCK_NONE",
+            },
+        ],
+        generation_config=genai.types.GenerationConfig(temperature=0.15),
     )
     return response
 
 
 # loading all files as variables
-snowDayOG = loadFile('snowDayProcessed.json')
-standOutSearchOG = loadFile('SOSProcessed.json')
-responseDataOG = loadFile('responseProcessed.json')
-snowDayCompetitionOG = loadFile('snowDayCompetitions.json')
+snowDayOG = loadFile("snowDayProcessed.json")
+standOutSearchOG = loadFile("SOSProcessed.json")
+responseDataOG = loadFile("responseProcessed.json")
+snowDayCompetitionOG = loadFile("snowDayCompetitions.json")
 
 
 snowDayCompetitionProcessed = []
+
 
 def updateDescription(activityList, updatedList):
     counter = 0
@@ -166,10 +324,12 @@ def updateDescription(activityList, updatedList):
         print(f"{counter} -Done with {title}")
         time.sleep(1)
     return updatedList
-#ALL DESCRIPTIONS RE-WRITTEN
 
 
-def updateTags(activityList, updatedList, placeToDump,index=0):
+# ALL DESCRIPTIONS RE-WRITTEN
+
+
+def updateTags(activityList, updatedList, placeToDump, index=0):
     counter = 0
     for i in range(index, len(activityList)):
         try:
@@ -177,7 +337,7 @@ def updateTags(activityList, updatedList, placeToDump,index=0):
             counter += 1
             title = activity["title"]
             text = activity["text"]
-            tags = activity["tags"]
+            # tags = activity["tags"]
 
             prompt = f"""
                 
@@ -187,7 +347,7 @@ def updateTags(activityList, updatedList, placeToDump,index=0):
                 I will provide you with four pieces of information:
                 1) The title of the activity
                 2) The description of the activity
-                3) The tags that are currently associated with the  activity if any
+                3) The tags that are currently associated with the activity if any
                 4) A list of tags from which you are allowed to choose new tags to assign to the activity
 
                 MAKE SURE TO ONLY CHOOSE TAGS FROM THE LIST I PROVIDE YOU. Provide reasoning for why you have chosen your tag
@@ -197,7 +357,7 @@ def updateTags(activityList, updatedList, placeToDump,index=0):
                 <information>
                 Title: {title}
                 Description: {text}
-                Current tags: {tags}
+                There are no tags currently associated with this activity
                 List of tags you can choose from: {betterTags}
                 </information>
 
@@ -212,7 +372,7 @@ def updateTags(activityList, updatedList, placeToDump,index=0):
 
             """
             response = generateResponse(prompt)
-            try: #i dont think this try except clause works as intended
+            try:  # i dont think this try except clause works as intended
                 response_text = response.text
                 start_index = response_text.index("[")
                 end_index = response_text.index("]") + 1
@@ -236,6 +396,7 @@ def updateTags(activityList, updatedList, placeToDump,index=0):
 
         dumpData(placeToDump, updatedList)
     return "done"
+
 
 def updateGrades(activityList, updatedList, placeToDump):
     counter = 0
@@ -295,7 +456,7 @@ def updateGrades(activityList, updatedList, placeToDump):
         response = generateResponse(prompt)
         start_index = response.text.index("[")
         end_index = response.text.index("]") + 1
-        updatedTags =  response.text[start_index:end_index]
+        updatedTags = response.text[start_index:end_index]
         activity["Updated Tags"] = updatedTags
         updatedList.append(activity)
         print(f"{counter} -Done with {title}")
@@ -303,16 +464,16 @@ def updateGrades(activityList, updatedList, placeToDump):
 
         dumpData(placeToDump, updatedList)
     return "done"
-f = loadFile("snowDayP.json")
 
-#if you want to use an incomplete file the secodn parameter should be that incomplete file and 
+
+f = loadFile("compsP.json")
+
+# if you want to use an incomplete file the secodn parameter should be that incomplete file and
 # you should add a 4th parameter which is the number of objects in that file (1 + the value of the last json object when u click on it in the vscode file)
-updateTags(snowDayOG, f, 'snowDayP.json',627)
-updateTags(standOutSearchOG, [], 'sosP.json')
-updateTags(responseDataOG, [], 'resP.json')
-updateTags(snowDayCompetitionOG, [], 'compsP.json')
-
-
+# updateTags(snowDayOG, f, "snowDayP.json", 921)
+# updateTags(standOutSearchOG, f, "sosP.json", 11)
+# updateTags(responseDataOG, [], "resP.json")
+updateTags(snowDayCompetitionOG, f, "compsP.json", 10)
 
 
 # updateGrades(snowDayOG, [], "gradein.json")

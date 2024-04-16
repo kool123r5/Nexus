@@ -21,7 +21,8 @@
         "localToIndia": false,
         "cost": [true, 25, "GBP"],
         "paid": [false, 0, "unknown"],
-        "Updated text": "COMPOS (Comprehensive Oxford Maths and Physics Online School) is a program offered by Oxford University for high school students in grades 10-12. It provides an opportunity for students to engage in university-level mathematics and physics through weekly 90-minute tutorials led by current Oxford students. Additionally, students receive online lectures that delve into the assigned topics. The program aims to foster a passion for STEM subjects, particularly among students from underrepresented groups."
+        "Updated text": "COMPOS (Comprehensive Oxford Maths and Physics Online School) is a program offered by Oxford University for high school students in grades 10-12. It provides an opportunity for students to engage in university-level mathematics and physics through weekly 90-minute tutorials led by current Oxford students. Additionally, students receive online lectures that delve into the assigned topics. The program aims to foster a passion for STEM subjects, particularly among students from underrepresented groups.",
+        "Updated Tags": "[\"STEM\", \"Mathematics\", \"Physics\", \"Diversity and Inclusion\"]"
     },
     {
         "host": "Harvard Crimson",
@@ -41,7 +42,8 @@
         "localToIndia": false,
         "cost": [true, 12, "USD"],
         "paid": [true, 1000, "USD"],
-        "Updated text": "The HCGEC Essay Competition invites high school students worldwide to showcase their writing abilities. With three categories\u2014creative, argumentative, and journalistic\u2014students can explore their writing styles and engage in friendly competition. Prompts are released shortly after the competition's commencement, providing ample time for preparation. Registrations open in November, giving students the opportunity to participate and demonstrate their writing prowess."
+        "Updated text": "The HCGEC Essay Competition invites high school students worldwide to showcase their writing abilities. With three categories\u2014creative, argumentative, and journalistic\u2014students can explore their writing styles and engage in friendly competition. Prompts are released shortly after the competition's commencement, providing ample time for preparation. Registrations open in November, giving students the opportunity to participate and demonstrate their writing prowess.",
+        "Updated Tags": "[\"Creative Writing\", \"Journalism\", \"Literature\"]"
     },
     {
         "host": "SARC",
@@ -61,7 +63,8 @@
         "localToIndia": false,
         "cost": [true, 15, "USD"],
         "paid": [true, 1000, "USD"],
-        "Updated text": "The High School Academic Research Competition (SARC) is a global platform for students to showcase their research prowess. Participants delve into a topic of their choice, conducting rigorous investigations and crafting high-caliber research papers. Through this process, students develop critical thinking, research methodology, and writing skills that are essential for academic and professional success.\n\nSARC fosters a spirit of intellectual curiosity and encourages students to explore their passions. By presenting their findings to a panel of experts, participants gain valuable feedback and recognition for their hard work. The competition provides a unique opportunity for students to connect with like-minded peers, share their knowledge, and contribute to the advancement of research in various fields."
+        "Updated text": "The High School Academic Research Competition (SARC) is a global platform for students to showcase their research prowess. Participants delve into a topic of their choice, conducting rigorous investigations and crafting high-caliber research papers. Through this process, students develop critical thinking, research methodology, and writing skills that are essential for academic and professional success.\n\nSARC fosters a spirit of intellectual curiosity and encourages students to explore their passions. By presenting their findings to a panel of experts, participants gain valuable feedback and recognition for their hard work. The competition provides a unique opportunity for students to connect with like-minded peers, share their knowledge, and contribute to the advancement of research in various fields.",
+        "Updated Tags": "[\"STEM\", \"Research\", \"Writing\"]"
     },
     {
         "host": "ISRO",
@@ -81,7 +84,8 @@
         "localToIndia": true,
         "cost": [false, 0, "unknown"],
         "paid": [false, 0, "unknown"],
-        "Updated text": "The ISRO Young Scientist Programme is designed to ignite a passion for space exploration in young minds. This program provides a comprehensive introduction to space technology, science, and applications. It aims to foster an understanding of the latest advancements in space exploration and inspire future scientists and engineers. By engaging with experts in the field, participants gain valuable insights into the challenges and opportunities of space exploration."
+        "Updated text": "The ISRO Young Scientist Programme is designed to ignite a passion for space exploration in young minds. This program provides a comprehensive introduction to space technology, science, and applications. It aims to foster an understanding of the latest advancements in space exploration and inspire future scientists and engineers. By engaging with experts in the field, participants gain valuable insights into the challenges and opportunities of space exploration.",
+        "Updated Tags": "[\"STEM\", \"Astronomy\", \"Engineering\"]"
     },
     {
         "host": "Ashoka University",
@@ -101,7 +105,8 @@
         "localToIndia": true,
         "cost": [true, 49000, "INR"],
         "paid": [false, 0, "unknown"],
-        "Updated text": "Ashoka University's Young Scholars Programme (YSP) offers high school students (grades 9-12) a unique opportunity to experience university-level education during the summer. Through five interdisciplinary streams, students engage in hands-on learning and explore topics from a liberal arts and sciences perspective.\n\nYSP 2024 features five streams: Science, Technology, and Society; Humanities and Social Sciences; Design and Innovation; Business and Economics; and Law and Public Policy. Students can choose from two sessions: May 20-31 or June 3-14, 2024. The programme provides a residential experience, allowing students to immerse themselves in the university environment and connect with peers and faculty."
+        "Updated text": "Ashoka University's Young Scholars Programme (YSP) offers high school students (grades 9-12) a unique opportunity to experience university-level education during the summer. Through five interdisciplinary streams, students engage in hands-on learning and explore topics from a liberal arts and sciences perspective.\n\nYSP 2024 features five streams: Science, Technology, and Society; Humanities and Social Sciences; Design and Innovation; Business and Economics; and Law and Public Policy. Students can choose from two sessions: May 20-31 or June 3-14, 2024. The programme provides a residential experience, allowing students to immerse themselves in the university environment and connect with peers and faculty.",
+        "Updated Tags": "[\"Liberal Arts\", \"Education\"]"
     },
     {
         "host": "Stiftung Entrepreneurship",
@@ -121,7 +126,8 @@
         "localToIndia": false,
         "cost": [true, 800, "EUR"],
         "paid": [true, 0, "unknown"],
-        "Updated text": "The Youth Citizen Entrepreneurship Competition empowers young entrepreneurs to create positive change in the world. Participants can submit ideas or projects that align with the United Nations' Sustainable Development Goals, which address pressing social, economic, and environmental issues. The competition encourages entrepreneurs to make a tangible commitment to implementing their ideas and projects, fostering a spirit of innovation and social responsibility among youth."
+        "Updated text": "The Youth Citizen Entrepreneurship Competition empowers young entrepreneurs to create positive change in the world. Participants can submit ideas or projects that align with the United Nations' Sustainable Development Goals, which address pressing social, economic, and environmental issues. The competition encourages entrepreneurs to make a tangible commitment to implementing their ideas and projects, fostering a spirit of innovation and social responsibility among youth.",
+        "Updated Tags": "[\"Entrepreneurship\", \"Social Impact\", \"Business\"]"
     },
     {
         "host": "Global Genius Music Competition",
@@ -141,7 +147,8 @@
         "localToIndia": false,
         "cost": [true, 65, "GBP"],
         "paid": [false, 0, "unknown"],
-        "Updated text": "The Global Genius Music Competition is an online platform that hosts classical music competitions for musicians worldwide. It welcomes all classical instruments, vocalists, and traditional instruments from various cultures. The competition aims to provide a fair and accessible platform for musicians to showcase their talents and connect with a global audience.\n\nBy participating in the Global Genius Music Competition, musicians can compete in their respective categories and receive feedback from experienced judges. The competition's rating system ensures that participants are evaluated fairly, allowing them to strive for excellence and recognition. The platform fosters a supportive environment where musicians can learn, grow, and share their passion for classical music with others."
+        "Updated text": "The Global Genius Music Competition is an online platform that hosts classical music competitions for musicians worldwide. It welcomes all classical instruments, vocalists, and traditional instruments from various cultures. The competition aims to provide a fair and accessible platform for musicians to showcase their talents and connect with a global audience.\n\nBy participating in the Global Genius Music Competition, musicians can compete in their respective categories and receive feedback from experienced judges. The competition's rating system ensures that participants are evaluated fairly, allowing them to strive for excellence and recognition. The platform fosters a supportive environment where musicians can learn, grow, and share their passion for classical music with others.",
+        "Updated Tags": "[\"Music\"]"
     },
     {
         "host": "Foyle Foundation",
@@ -161,7 +168,8 @@
         "localToIndia": false,
         "cost": [false, 0, "unknown"],
         "paid": [false, 0, "unknown"],
-        "Updated text": "The Foyle Young Poets Award is a prestigious competition for young writers aged 11-17. Established in 1998, it has launched the careers of renowned poets like Sarah Howe and Jay Bernard. With over 6,800 entries annually from around the world, it is the largest competition of its kind.\n\nThe award provides a platform for young poets to showcase their talent and receive recognition for their work. It offers opportunities for mentorship, workshops, and publication, fostering the development of young voices in poetry. By participating in the Foyle Young Poets Award, aspiring poets can connect with a global community of writers and gain valuable experience that can shape their future careers."
+        "Updated text": "The Foyle Young Poets Award is a prestigious competition for young writers aged 11-17. Established in 1998, it has launched the careers of renowned poets like Sarah Howe and Jay Bernard. With over 6,800 entries annually from around the world, it is the largest competition of its kind.\n\nThe award provides a platform for young poets to showcase their talent and receive recognition for their work. It offers opportunities for mentorship, workshops, and publication, fostering the development of young voices in poetry. By participating in the Foyle Young Poets Award, aspiring poets can connect with a global community of writers and gain valuable experience that can shape their future careers.",
+        "Updated Tags": "[\"Literature\", \"Creative Writing\"]"
     },
     {
         "host": "BETA Camp",
@@ -181,7 +189,8 @@
         "localToIndia": false,
         "cost": [true, 3500, "USD"],
         "paid": [false, 0, "unknown"],
-        "Updated text": "BETA Camp is a six-week program designed for high school students aged 13-18. The program provides participants with the opportunity to learn from experts at leading companies such as Google, IKEA, and Airbnb. Students will gain hands-on experience in creating a real-world company, reaching out to influencers, and partnering with them to promote a solution. They will also have the chance to practice their skills on real companies with feedback from top executives. The program culminates in the development of a startup, with weekly guidance from industry professionals.\n\nThrough BETA Camp, students will develop valuable skills in entrepreneurship, business development, and communication. They will also gain insights into the world of technology and innovation. The program is a unique opportunity for students to learn from the best and gain the skills and experience needed to succeed in the 21st-century workforce."
+        "Updated text": "BETA Camp is a six-week program designed for high school students aged 13-18. The program provides participants with the opportunity to learn from experts at leading companies such as Google, IKEA, and Airbnb. Students will gain hands-on experience in creating a real-world company, reaching out to influencers, and partnering with them to promote a solution. They will also have the chance to practice their skills on real companies with feedback from top executives. The program culminates in the development of a startup, with weekly guidance from industry professionals.\n\nThrough BETA Camp, students will develop valuable skills in entrepreneurship, business development, and communication. They will also gain insights into the world of technology and innovation. The program is a unique opportunity for students to learn from the best and gain the skills and experience needed to succeed in the 21st-century workforce.",
+        "Updated Tags": "[\"Business and Entrepreneurship\", \"Entrepreneurship\"]"
     },
     {
         "host": "University of Pennsylvania",
@@ -201,7 +210,8 @@
         "localToIndia": false,
         "cost": [false, 0, "unknown"],
         "paid": [false, 0, "unknown"],
-        "Updated text": "The Provost's Summer Mentorship Program (SMP) is a prestigious four-week summer program for high school students in Philadelphia, Pennsylvania. This highly competitive program offers an immersive experience where students are paired with one of the five professional schools at the University of Pennsylvania.\n\nSMP provides students with the opportunity to engage in cutting-edge research, attend lectures, and participate in hands-on activities. The program's rigorous academic environment, state-of-the-art facilities, and no-cost status make it an exceptional opportunity for students interested in pursuing careers in science, medicine, or other professional fields."
+        "Updated text": "The Provost's Summer Mentorship Program (SMP) is a prestigious four-week summer program for high school students in Philadelphia, Pennsylvania. This highly competitive program offers an immersive experience where students are paired with one of the five professional schools at the University of Pennsylvania.\n\nSMP provides students with the opportunity to engage in cutting-edge research, attend lectures, and participate in hands-on activities. The program's rigorous academic environment, state-of-the-art facilities, and no-cost status make it an exceptional opportunity for students interested in pursuing careers in science, medicine, or other professional fields.",
+        "Updated Tags": "[\"STEM\", \"Biology\", \"Mentoring\"]"
     },
     {
         "host": "Oxford University",
@@ -221,7 +231,8 @@
         "localToIndia": false,
         "cost": [true, 6995, "GBP"],
         "paid": [false, 0, "unknown"],
-        "Updated text": "The Engineering Academy offers high school students an immersive experience in engineering principles and practical applications. Through small class sizes, students delve into the concepts of hydraulics, pneumatics, and the mathematical foundations of engineering. The program fosters critical thinking, public speaking, and teamwork skills.\n\nStudents engage in hands-on challenges and debates, exploring the practical aspects of engineering. They learn to apply their knowledge to real-world problems, developing a deep understanding of the field. The academy provides a unique opportunity for students to immerse themselves in the academic environment of Oxford University, fostering their passion for engineering and preparing them for future success in the field."
+        "Updated text": "The Engineering Academy offers high school students an immersive experience in engineering principles and practical applications. Through small class sizes, students delve into the concepts of hydraulics, pneumatics, and the mathematical foundations of engineering. The program fosters critical thinking, public speaking, and teamwork skills.\n\nStudents engage in hands-on challenges and debates, exploring the practical aspects of engineering. They learn to apply their knowledge to real-world problems, developing a deep understanding of the field. The academy provides a unique opportunity for students to immerse themselves in the academic environment of Oxford University, fostering their passion for engineering and preparing them for future success in the field.",
+        "Updated Tags": "[\"Engineering,\" \"STEM,\" \"Mathematics,\" \"Debate,\" \"Public Speaking\"]"
     },
     {
         "host": "Parsons New School",
@@ -241,7 +252,8 @@
         "localToIndia": false,
         "cost": [true, 5145, "USD"],
         "paid": [false, 0, "USD"],
-        "Updated text": "Immerse yourself in the vibrant world of art and design at Parsons School of Design's Summer Intensive Studies. This three-week program offers high school students an unparalleled opportunity to explore their artistic passions in the heart of New York City or Paris.\n\nStudents will delve into their own creative projects, showcasing their work in a final presentation. They'll embark on art and design field trips, gaining inspiration from the city's renowned museums and galleries. Guest speakers will share their insights and expertise, fostering connections within the art community. Additionally, students can earn up to 3 college credits, giving them a head start on their future artistic endeavors."
+        "Updated text": "Immerse yourself in the vibrant world of art and design at Parsons School of Design's Summer Intensive Studies. This three-week program offers high school students an unparalleled opportunity to explore their artistic passions in the heart of New York City or Paris.\n\nStudents will delve into their own creative projects, showcasing their work in a final presentation. They'll embark on art and design field trips, gaining inspiration from the city's renowned museums and galleries. Guest speakers will share their insights and expertise, fostering connections within the art community. Additionally, students can earn up to 3 college credits, giving them a head start on their future artistic endeavors.",
+        "Updated Tags": "[\"Art/Design\"]"
     },
     {
         "host": "Kode with Klossy",
@@ -261,7 +273,8 @@
         "localToIndia": false,
         "cost": [false, 0, "unknown"],
         "paid": [false, 0, "unknown"],
-        "Updated text": "Kode With Klossy offers free two-week coding camps for students who identify as underrepresented genders in STEM fields. The program aims to foster a passion for STEM by teaching the fundamentals of coding. Participants will develop a strong foundation in coding and join a supportive community of alumni for ongoing learning and growth."
+        "Updated text": "Kode With Klossy offers free two-week coding camps for students who identify as underrepresented genders in STEM fields. The program aims to foster a passion for STEM by teaching the fundamentals of coding. Participants will develop a strong foundation in coding and join a supportive community of alumni for ongoing learning and growth.",
+        "Updated Tags": "[\"Computer Science\", \"STEM\"]"
     },
     {
         "host": "Ghetto Film School",
@@ -281,7 +294,8 @@
         "localToIndia": false,
         "cost": [false, 0, "unknown"],
         "paid": [false, 0, "unknown"],
-        "Updated text": "This filmmaking course immerses students in the vibrant world of cinematic storytelling and production. Through hands-on training and mentorship, students learn the art of filmmaking, from scriptwriting to directing and editing. The course also covers the business side of the industry, preparing students for careers in film and media.\n\nUpon completion, students are equipped with the skills and knowledge to pursue higher education in film and related fields. The course provides guidance and support to help students navigate the college application process and secure admission to top universities."
+        "Updated text": "This filmmaking course immerses students in the vibrant world of cinematic storytelling and production. Through hands-on training and mentorship, students learn the art of filmmaking, from scriptwriting to directing and editing. The course also covers the business side of the industry, preparing students for careers in film and media.\n\nUpon completion, students are equipped with the skills and knowledge to pursue higher education in film and related fields. The course provides guidance and support to help students navigate the college application process and secure admission to top universities.",
+        "Updated Tags": "[\"Art/Design\", \"Film/Cinema\", \"Business and Entrepreneurship\"]"
     },
     {
         "host": "EnergyMag",
@@ -301,7 +315,8 @@
         "localToIndia": false,
         "cost": [true, 0, "unknown"],
         "paid": [false, 0, "unknown"],
-        "Updated text": "EnergyMag, a non-profit organization, offers internships for students interested in renewable energy research. Under the guidance of mentors, interns explore specific companies, technologies, or markets. Through research and networking, they gather data and analyze it to create reports that are published on the EnergyMag website. Internships are available part-time for 2-8 weeks or quarter-time for 1-9 months."
+        "Updated text": "EnergyMag, a non-profit organization, offers internships for students interested in renewable energy research. Under the guidance of mentors, interns explore specific companies, technologies, or markets. Through research and networking, they gather data and analyze it to create reports that are published on the EnergyMag website. Internships are available part-time for 2-8 weeks or quarter-time for 1-9 months.",
+        "Updated Tags": "[\"Environmental Science\", \"STEM\", \"Business\"]"
     },
     {
         "host": "Cornell University",
@@ -321,7 +336,8 @@
         "localToIndia": false,
         "cost": [true, 5040, "USD"],
         "paid": [false, 0, "USD"],
-        "Updated text": "Art as Experience is an introductory course that will expand your understanding of art and its practices in the modern world. You'll engage in studio projects using various mediums like drawing, collage, digital photography, and video installation. The course will also involve exploring and responding to resources at Cornell University, supplemented by readings, critiques, and field trips.\n\nThe course culminates in an exhibition where you'll take responsibility for organizing and installing your own self-directed artwork. This hands-on experience will provide you with a comprehensive understanding of the art-making process, from concept to execution."
+        "Updated text": "Art as Experience is an introductory course that will expand your understanding of art and its practices in the modern world. You'll engage in studio projects using various mediums like drawing, collage, digital photography, and video installation. The course will also involve exploring and responding to resources at Cornell University, supplemented by readings, critiques, and field trips.\n\nThe course culminates in an exhibition where you'll take responsibility for organizing and installing your own self-directed artwork. This hands-on experience will provide you with a comprehensive understanding of the art-making process, from concept to execution.",
+        "Updated Tags": "[\"Art/Design\", \"Visual Arts\"]"
     },
     {
         "host": "UCLA",
@@ -341,7 +357,8 @@
         "localToIndia": false,
         "cost": [true, 4225, "USD"],
         "paid": [false, 0, "unknown"],
-        "Updated text": "Immerse yourself in the world of filmmaking at UCLA's Film and Television Summer Institute! This three-week program is designed for aspiring high school juniors, seniors, and recent graduates. You'll learn the art of cinematic storytelling and create your own narrative projects.\n\nAs part of this intensive workshop, you'll explore the techniques and creativity behind filmmaking. You'll be guided by experienced instructors and have access to state-of-the-art facilities. Whether you're interested in directing, writing, or producing, this program will provide you with a solid foundation in the field."
+        "Updated text": "Immerse yourself in the world of filmmaking at UCLA's Film and Television Summer Institute! This three-week program is designed for aspiring high school juniors, seniors, and recent graduates. You'll learn the art of cinematic storytelling and create your own narrative projects.\n\nAs part of this intensive workshop, you'll explore the techniques and creativity behind filmmaking. You'll be guided by experienced instructors and have access to state-of-the-art facilities. Whether you're interested in directing, writing, or producing, this program will provide you with a solid foundation in the field.",
+        "Updated Tags": "[\"Film/Cinema\", \"Art/Design\"]"
     },
     {
         "host": "Harvard University",
@@ -361,7 +378,8 @@
         "localToIndia": false,
         "cost": [true, 1750, "USD"],
         "paid": [false, 0, "USD"],
-        "Updated text": "This Entrepreneur Bootcamp empowers you to develop your entrepreneurial skills and build a successful business from scratch. Through interactive sessions, you'll explore ideas and opportunities, learn the fundamentals of business building, and master the art of managing and financing your venture. This comprehensive program will guide you towards a clear path of success, equipping you with the knowledge and mindset to thrive in the world of entrepreneurship.\n\nBy participating in this bootcamp, you'll gain confidence in your abilities, develop a strong entrepreneurial mindset, and acquire the practical skills necessary to launch and grow your own business. Whether you're just starting out or looking to enhance your existing entrepreneurial skills, this program will provide you with the tools and support you need to succeed."
+        "Updated text": "This Entrepreneur Bootcamp empowers you to develop your entrepreneurial skills and build a successful business from scratch. Through interactive sessions, you'll explore ideas and opportunities, learn the fundamentals of business building, and master the art of managing and financing your venture. This comprehensive program will guide you towards a clear path of success, equipping you with the knowledge and mindset to thrive in the world of entrepreneurship.\n\nBy participating in this bootcamp, you'll gain confidence in your abilities, develop a strong entrepreneurial mindset, and acquire the practical skills necessary to launch and grow your own business. Whether you're just starting out or looking to enhance your existing entrepreneurial skills, this program will provide you with the tools and support you need to succeed.",
+        "Updated Tags": "[\"Entrepreneurship\", \"Business\"]"
     },
     {
         "host": "Aalto University Finland",
@@ -381,7 +399,8 @@
         "localToIndia": false,
         "cost": [true, 590, "GBP"],
         "paid": [false, 0, "GBP"],
-        "Updated text": "Immerse yourself in the world of circular economy, a sustainable approach that aims to minimize waste and maximize resource utilization. This program will equip you with the knowledge and skills to design innovative solutions that promote environmental, social, and economic well-being. Through hands-on experiences, company visits, and multidisciplinary perspectives, you'll gain a comprehensive understanding of how circular economy principles can be applied in practice, empowering you to contribute to a more sustainable future."
+        "Updated text": "Immerse yourself in the world of circular economy, a sustainable approach that aims to minimize waste and maximize resource utilization. This program will equip you with the knowledge and skills to design innovative solutions that promote environmental, social, and economic well-being. Through hands-on experiences, company visits, and multidisciplinary perspectives, you'll gain a comprehensive understanding of how circular economy principles can be applied in practice, empowering you to contribute to a more sustainable future.",
+        "Updated Tags": "[\"Environmental Science\", \"Economics\", \"Engineering\"]"
     },
     {
         "host": "Massachusetts Institute of Technology",
@@ -401,7 +420,8 @@
         "localToIndia": false,
         "cost": [false, 0, "unknown"],
         "paid": [false, 0, "unknown"],
-        "Updated text": "MIT's Mechanical Engineering Program offers free online courses that allow students to explore the field of mechanical engineering at their own pace. With no deadlines or time constraints, students can start, stop, and continue their studies as they wish. This flexibility makes it an excellent opportunity for those interested in gaining a deeper understanding of mechanical engineering without the pressure of a traditional classroom setting.\n\nThe program covers a wide range of topics, including thermodynamics, fluid mechanics, and solid mechanics. Students can choose to focus on specific areas or explore the entire curriculum. The courses are taught by MIT professors and feature interactive simulations, videos, and assignments to enhance the learning experience. By participating in this program, students can gain valuable knowledge and skills in mechanical engineering, preparing them for further study or a career in the field."
+        "Updated text": "MIT's Mechanical Engineering Program offers free online courses that allow students to explore the field of mechanical engineering at their own pace. With no deadlines or time constraints, students can start, stop, and continue their studies as they wish. This flexibility makes it an excellent opportunity for those interested in gaining a deeper understanding of mechanical engineering without the pressure of a traditional classroom setting.\n\nThe program covers a wide range of topics, including thermodynamics, fluid mechanics, and solid mechanics. Students can choose to focus on specific areas or explore the entire curriculum. The courses are taught by MIT professors and feature interactive simulations, videos, and assignments to enhance the learning experience. By participating in this program, students can gain valuable knowledge and skills in mechanical engineering, preparing them for further study or a career in the field.",
+        "Updated Tags": "[\"Engineering\"]"
     },
     {
         "host": "Harvard University",
@@ -421,7 +441,8 @@
         "localToIndia": false,
         "cost": [false, 0, "unknown"],
         "paid": [false, 0, "unknown"],
-        "Updated text": "Embark on a thrilling journey into the world of game development! This course will guide you through the fundamentals of creating interactive 2D and 3D games. You'll delve into the principles of graphics, animation, sound, and collision detection, unlocking the secrets behind beloved games like Super Mario Bros., Pok\u00e9mon, and Angry Birds.\n\nUsing industry-standard tools like Unity and L\u00d6VE 2D, you'll learn the programming languages Lua and C#. You'll explore the basics of game design and development, gaining a comprehensive understanding of the process from concept to completion. Whether you're a budding game designer or simply curious about the inner workings of your favorite games, this course will ignite your passion and equip you with the skills to bring your own gaming visions to life."
+        "Updated text": "Embark on a thrilling journey into the world of game development! This course will guide you through the fundamentals of creating interactive 2D and 3D games. You'll delve into the principles of graphics, animation, sound, and collision detection, unlocking the secrets behind beloved games like Super Mario Bros., Pok\u00e9mon, and Angry Birds.\n\nUsing industry-standard tools like Unity and L\u00d6VE 2D, you'll learn the programming languages Lua and C#. You'll explore the basics of game design and development, gaining a comprehensive understanding of the process from concept to completion. Whether you're a budding game designer or simply curious about the inner workings of your favorite games, this course will ignite your passion and equip you with the skills to bring your own gaming visions to life.",
+        "Updated Tags": "[\"Game Development\", \"Computer Science\"]"
     },
     {
         "host": "Lumiere Education",
@@ -441,7 +462,8 @@
         "localToIndia": false,
         "cost": [true, 39, "USD"],
         "paid": [true, 90, "USD"],
-        "Updated text": "Join the Bretton Woods International Economics Competition and showcase your economic prowess! Team up with 2-4 peers to tackle challenging economic scenarios. In the online round, demonstrate your mastery of microeconomics, macroeconomics, and general economic concepts through a quiz. If you qualify, advance to the in-person round, where you'll present innovative solutions to real-world economic issues. This competition not only tests your knowledge but also fosters critical thinking, problem-solving, and teamwork skills."
+        "Updated text": "Join the Bretton Woods International Economics Competition and showcase your economic prowess! Team up with 2-4 peers to tackle challenging economic scenarios. In the online round, demonstrate your mastery of microeconomics, macroeconomics, and general economic concepts through a quiz. If you qualify, advance to the in-person round, where you'll present innovative solutions to real-world economic issues. This competition not only tests your knowledge but also fosters critical thinking, problem-solving, and teamwork skills.",
+        "Updated Tags": "[\"Economics\"]"
     },
     {
         "host": "Stanford University",
@@ -461,7 +483,8 @@
         "localToIndia": false,
         "cost": [false, 0, "unknown"],
         "paid": [false, 0, "unknown"],
-        "Updated text": "This course will introduce you to the fundamentals of probability management, a crucial skill for understanding uncertainty and making informed decisions. We'll explore the limitations of relying solely on averages and delve into the principles of probability theory. You'll learn how to create interactive simulations using Microsoft Excel, allowing you to visualize and analyze probability distributions. By the end of the course, you'll be equipped with the tools and knowledge to navigate the world of uncertainty with confidence.\n\nThis course is designed for students with no prior background in statistics. It assumes familiarity with Microsoft Excel, but no advanced mathematical skills are required. Whether you're interested in pursuing a career in STEM or simply want to enhance your critical thinking abilities, this course will provide you with a solid foundation in probability management."
+        "Updated text": "This course will introduce you to the fundamentals of probability management, a crucial skill for understanding uncertainty and making informed decisions. We'll explore the limitations of relying solely on averages and delve into the principles of probability theory. You'll learn how to create interactive simulations using Microsoft Excel, allowing you to visualize and analyze probability distributions. By the end of the course, you'll be equipped with the tools and knowledge to navigate the world of uncertainty with confidence.\n\nThis course is designed for students with no prior background in statistics. It assumes familiarity with Microsoft Excel, but no advanced mathematical skills are required. Whether you're interested in pursuing a career in STEM or simply want to enhance your critical thinking abilities, this course will provide you with a solid foundation in probability management.",
+        "Updated Tags": "[\"Mathematics\", \"Statistics\"]"
     },
     {
         "host": "The California Institute of Technology ",
@@ -481,7 +504,8 @@
         "localToIndia": false,
         "cost": [false, 0, "unknown"],
         "paid": [false, 0, "unknown"],
-        "Updated text": "This introductory course in machine learning (ML) delves into the fundamentals of ML, including its theory, algorithms, and practical applications. ML plays a crucial role in Big Data analysis and has wide-ranging applications in finance, healthcare, business, and scientific research.\n\nThrough this course, students will gain a comprehensive understanding of ML concepts, including supervised and unsupervised learning, model evaluation, and feature engineering. They will also explore real-world applications of ML, such as image recognition, natural language processing, and predictive analytics. By the end of the course, students will have a solid foundation in ML and be equipped to apply it to solve complex problems in various fields."
+        "Updated text": "This introductory course in machine learning (ML) delves into the fundamentals of ML, including its theory, algorithms, and practical applications. ML plays a crucial role in Big Data analysis and has wide-ranging applications in finance, healthcare, business, and scientific research.\n\nThrough this course, students will gain a comprehensive understanding of ML concepts, including supervised and unsupervised learning, model evaluation, and feature engineering. They will also explore real-world applications of ML, such as image recognition, natural language processing, and predictive analytics. By the end of the course, students will have a solid foundation in ML and be equipped to apply it to solve complex problems in various fields.",
+        "Updated Tags": "[\"Physics\"]"
     },
     {
         "host": "Brown University",
@@ -501,7 +525,8 @@
         "localToIndia": false,
         "cost": [false, 0, "unknown"],
         "paid": [false, 0, "unknown"],
-        "Updated text": "Discover the fascinating world of engineering and design with BrownX! Explore the diverse fields of engineering, from mechanical and electrical to chemical and biomedical. Learn the fundamentals of the engineering design process, from brainstorming ideas to creating prototypes and building projects. Engage in hands-on activities and collaborate with peers to solve real-world problems. BrownX empowers you to develop your creativity, problem-solving skills, and passion for innovation."
+        "Updated text": "Discover the fascinating world of engineering and design with BrownX! Explore the diverse fields of engineering, from mechanical and electrical to chemical and biomedical. Learn the fundamentals of the engineering design process, from brainstorming ideas to creating prototypes and building projects. Engage in hands-on activities and collaborate with peers to solve real-world problems. BrownX empowers you to develop your creativity, problem-solving skills, and passion for innovation.",
+        "Updated Tags": "[\"Engineering\", \"Art/Design\", \"STEM\"]"
     },
     {
         "host": "Indian Institute Of Management\u2013Bangalore",
@@ -521,7 +546,8 @@
         "localToIndia": true,
         "cost": [false, 0, "unknown"],
         "paid": [false, 0, "unknown"],
-        "Updated text": "Explore the world of marketing management with IIMBx! Learn how to develop and implement effective marketing strategies by understanding the marketing mix and its components. Through real-world business scenarios, you'll gain practical insights into how companies use marketing to achieve their goals. Whether you're interested in pursuing a career in marketing or simply want to enhance your business acumen, this activity will provide you with a solid foundation in the principles and practices of marketing management."
+        "Updated text": "Explore the world of marketing management with IIMBx! Learn how to develop and implement effective marketing strategies by understanding the marketing mix and its components. Through real-world business scenarios, you'll gain practical insights into how companies use marketing to achieve their goals. Whether you're interested in pursuing a career in marketing or simply want to enhance your business acumen, this activity will provide you with a solid foundation in the principles and practices of marketing management.",
+        "Updated Tags": "[\"Marketing/Advertising\", \"Business\"]"
     },
     {
         "host": "University Of California , Berkeley",
@@ -541,7 +567,8 @@
         "localToIndia": false,
         "cost": [false, 0, "unknown"],
         "paid": [false, 0, "unknown"],
-        "Updated text": "Discover the science behind happiness in this online course. Learn evidence-based principles and practical techniques to cultivate a more fulfilling and joyful life. Explore the latest research on positive psychology, including the role of gratitude, mindfulness, and social connections in promoting well-being. This course empowers you with the knowledge and tools to create a happier and more meaningful existence."
+        "Updated text": "Discover the science behind happiness in this online course. Learn evidence-based principles and practical techniques to cultivate a more fulfilling and joyful life. Explore the latest research on positive psychology, including the role of gratitude, mindfulness, and social connections in promoting well-being. This course empowers you with the knowledge and tools to create a happier and more meaningful existence.",
+        "Updated Tags": "[\"Social Science\", \"Psychology\"]"
     },
     {
         "host": "International Business Machines Corporation",
@@ -561,7 +588,8 @@
         "localToIndia": true,
         "cost": [false, 0, "USD"],
         "paid": [false, 0, "USD"],
-        "Updated text": "Learn the basics of data analysis using Microsoft Excel. This course will introduce you to the essential features and functions of Excel, enabling you to effectively organize, analyze, and interpret data. You'll gain hands-on experience using Excel's tools to perform calculations, create charts and graphs, and draw meaningful insights from your data. Whether you're a beginner or looking to enhance your Excel skills, this course will provide you with a solid foundation for data analysis."
+        "Updated text": "Learn the basics of data analysis using Microsoft Excel. This course will introduce you to the essential features and functions of Excel, enabling you to effectively organize, analyze, and interpret data. You'll gain hands-on experience using Excel's tools to perform calculations, create charts and graphs, and draw meaningful insights from your data. Whether you're a beginner or looking to enhance your Excel skills, this course will provide you with a solid foundation for data analysis.",
+        "Updated Tags": "[\"Business\", \"Data Science\"]"
     },
     {
         "host": "Australian National University",
@@ -581,7 +609,8 @@
         "localToIndia": false,
         "cost": [false, 0, "unknown"],
         "paid": [false, 0, "unknown"],
-        "Updated text": "Embark on an enigmatic journey into the uncharted realms of astrophysics with ANUx: Greatest Unsolved Mysteries of the Universe. Delve into the most perplexing questions that challenge our understanding of the cosmos.\n\nExplore the enigmatic nature of dark matter and dark energy, which constitute over 95% of the universe but remain elusive. Grapple with the mysteries of black holes, where gravity reigns supreme and time and space warp. Ponder the origins of the universe and the nature of cosmic inflation, which shaped the fabric of our existence. Through this exploration, you'll gain an appreciation for the complexities of astrophysics and the relentless pursuit of knowledge that drives scientists to unravel the secrets of the cosmos."
+        "Updated text": "Embark on an enigmatic journey into the uncharted realms of astrophysics with ANUx: Greatest Unsolved Mysteries of the Universe. Delve into the most perplexing questions that challenge our understanding of the cosmos.\n\nExplore the enigmatic nature of dark matter and dark energy, which constitute over 95% of the universe but remain elusive. Grapple with the mysteries of black holes, where gravity reigns supreme and time and space warp. Ponder the origins of the universe and the nature of cosmic inflation, which shaped the fabric of our existence. Through this exploration, you'll gain an appreciation for the complexities of astrophysics and the relentless pursuit of knowledge that drives scientists to unravel the secrets of the cosmos.",
+        "Updated Tags": "[\"Astronomy\", \"Physics\"]"
     },
     {
         "host": "The University Of Maryland College",
@@ -601,7 +630,8 @@
         "localToIndia": false,
         "cost": [false, 0, "unknown"],
         "paid": [false, 0, "unknown"],
-        "Updated text": "Learn how to use cutting-edge techniques in Agile, DevOps, and Data Science to create better products faster and more efficiently. You'll discover how to design systems that allow for quick feedback and idea sharing, optimize systems using open architectures, and validate and verify performance. You'll also learn how to leverage system designs, platforms, and ecosystems, and apply Lean Startup and Product Innovation Analytics to your projects."
+        "Updated text": "Learn how to use cutting-edge techniques in Agile, DevOps, and Data Science to create better products faster and more efficiently. You'll discover how to design systems that allow for quick feedback and idea sharing, optimize systems using open architectures, and validate and verify performance. You'll also learn how to leverage system designs, platforms, and ecosystems, and apply Lean Startup and Product Innovation Analytics to your projects.",
+        "Updated Tags": "[\"Computer Science\", \"Business\", \"Data Science\"]"
     },
     {
         "host": "Rochester Institute Of Technology",
@@ -621,7 +651,8 @@
         "localToIndia": false,
         "cost": [false, 0, "unknown"],
         "paid": [false, 0, "unknown"],
-        "Updated text": "Learn the art of storytelling in the workplace! Discover how to craft compelling narratives that connect with your audience and drive desired outcomes. You'll explore the elements of effective storytelling, learn to tailor your messages to specific audiences, and master the structure of written communication for maximum impact. By understanding the power of storytelling, you'll gain the skills to effectively convey your ideas, inspire action, and build strong relationships in the workplace."
+        "Updated text": "Learn the art of storytelling in the workplace! Discover how to craft compelling narratives that connect with your audience and drive desired outcomes. You'll explore the elements of effective storytelling, learn to tailor your messages to specific audiences, and master the structure of written communication for maximum impact. By understanding the power of storytelling, you'll gain the skills to effectively convey your ideas, inspire action, and build strong relationships in the workplace.",
+        "Updated Tags": "[\"Communication\", \"Public Speaking\"]"
     },
     {
         "host": "Harvard University",
@@ -641,7 +672,8 @@
         "localToIndia": false,
         "cost": [false, 0, "unknown"],
         "paid": [false, 0, "unknown"],
-        "Updated text": "**Rewritten Description:**\n\nThis course empowers you to lead effectively by providing a framework for understanding and addressing complex challenges. You'll learn how to break down problems, navigate authority structures, consider diverse perspectives, and build trust. You'll also explore strategies for resolving conflicts and developing personal resilience to thrive in the face of change. By mastering these foundational principles, you'll gain the skills to mobilize people and create positive outcomes in the face of adversity."
+        "Updated text": "**Rewritten Description:**\n\nThis course empowers you to lead effectively by providing a framework for understanding and addressing complex challenges. You'll learn how to break down problems, navigate authority structures, consider diverse perspectives, and build trust. You'll also explore strategies for resolving conflicts and developing personal resilience to thrive in the face of change. By mastering these foundational principles, you'll gain the skills to mobilize people and create positive outcomes in the face of adversity.",
+        "Updated Tags": "[\"Leadership/Management\"]"
     },
     {
         "host": "Massachusetts Institute of Technology",
@@ -661,6 +693,7 @@
         "localToIndia": false,
         "cost": [false, 0, "unknown"],
         "paid": [false, 0, "unknown"],
-        "Updated text": "Embark on an entrepreneurial journey with MIT Launch's \"Becoming an Entrepreneur\" program. Learn the fundamentals of business and develop the mindset of a successful entrepreneur. Discover how to identify opportunities, conduct market research, and design and test your products or services. Master the art of pitching and selling to customers, and gain the logistical knowledge necessary to launch and sustain your startup. This program empowers aspiring entrepreneurs with the skills and knowledge to turn their ideas into thriving businesses."
+        "Updated text": "Embark on an entrepreneurial journey with MIT Launch's \"Becoming an Entrepreneur\" program. Learn the fundamentals of business and develop the mindset of a successful entrepreneur. Discover how to identify opportunities, conduct market research, and design and test your products or services. Master the art of pitching and selling to customers, and gain the logistical knowledge necessary to launch and sustain your startup. This program empowers aspiring entrepreneurs with the skills and knowledge to turn their ideas into thriving businesses.",
+        "Updated Tags": "[\"Entrepreneurship\"]"
     }
 ]

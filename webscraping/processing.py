@@ -127,10 +127,10 @@ def generateResponse(prompt):
 
 
 
-snowDayOG = loadFile('snowData.json')
-standOutSearchOG = loadFile('standOutSearchActivities.json')
-responseDataOG = loadFile('responseData.json')
-snowDayCompetitionOG = loadFile('accumulatedsnowdayCompetitions.json')
+snowDayOG = loadFile('snowDayProcessed.json')
+standOutSearchOG = loadFile('SOSProcessed.json')
+responseDataOG = loadFile('responseProcessed.json')
+snowDayCompetitionOG = loadFile('snowDayCompetitions.json')
 
 
 snowDayCompetitionProcessed = []
@@ -169,14 +169,148 @@ def dumpData(filename, data):
     with open(filename, "w") as f:
         f.write(json.dumps(data))
 
+def updateTags(activityList, updatedList, placeToDump,jengle=0):
+    counter = 0
+    for i in range(jengle, len(activityList)):
+        try:
+            activity = activityList[i]
+            counter += 1
+            title = activity["title"]
+            text = activity["text"]
+            tags = activity["tags"]
 
-snowDayProcessed = updateDescription(snowDayOG, [])
-dumpData("snowDayProcessed.json", snowDayProcessed)
+            prompt = f"""
+                
+                <instructions>
+                Based on certain data about an activity, choose tags from a pre-written list of tags that apply to that activity and return it to me.
 
-standOutSearchProcessed = updateDescription(standOutSearchOG, [])
-dumpData("SOSProcessed.json", standOutSearchProcessed)
+                I will provide you with four pieces of information:
+                1) The title of the activity
+                2) The description of the activity
+                3) The tags that are currently associated with the  activity if any
+                4) A list of tags from which you are allowed to choose new tags to assign to the activity
 
-responseDataProcessed = updateDescription(responseDataOG, [])
-dumpData("responseProcessed.json", responseDataProcessed)
+                MAKE SURE TO ONLY CHOOSE TAGS FROM THE LIST I PROVIDE YOU. Provide reasoning for why you have chosen your tag
+                and then include the new set of tags as a python list of strings.
+                </instructions>
+
+                <information>
+                Title: {title}
+                Description: {text}
+                Current tags: {tags}
+                List of tags you can choose from: {betterTags}
+                </information>
 
 
+                <example response>
+                Here is an example response:
+
+                Reasoning: The description indicates that this is a youth volunteer program with the American Red Cross, which is a major humanitarian organization. The volunteers develop leadership skills, work with diverse communities, and drive positive change through service. While the Red Cross is involved in medical services during emergencies, this program seems to be more focused on general community service, volunteering, and developing skills like leadership. Therefore, the "Leadership/Management" and "Volunteer Work/Community Service" tags would be appropriate. The "Medicine" tag is not as relevant based on the description.
+
+                New set of tags: ["Leadership/Management", "Volunteer Work/Community Service"]
+                </example responses>
+
+            """
+            response = generateResponse(prompt)
+            try:
+                response_text = response.text
+                start_index = response_text.index("[")
+                end_index = response_text.index("]") + 1
+                updatedTags = response_text[start_index:end_index]
+            except ValueError:
+                response_text = "".join([part.text for part in response._result.parts])
+                start_index = response_text.index("[")
+                end_index = response_text.index("]") + 1
+                updatedTags = response_text[start_index:end_index]
+            activity["Updated Tags"] = updatedTags
+            updatedList.append(activity)
+            print(f"{counter} -Done with {title}")
+            time.sleep(1)
+        except ValueError as e:
+            if "substring not found" in str(e):
+                print(f"Error: {e}")
+                print(f"LLM Response: {response.text}")
+                i -= 1  # Repeat the same index
+            else:
+                raise e
+
+        dumpData(placeToDump, updatedList)
+    return "done"
+
+def updateGrades(activityList, updatedList, placeToDump):
+    counter = 0
+    for activity in activityList:
+        counter += 1
+        requirements = activity["requirements"]
+        id = activity["id"]
+        prompt = f"""
+            
+            <instructions>
+            Based on the requirements of an activity, output a json object.
+
+            I will provide you 2 pieces of information:
+            1) The requirements of a certain highschool activity
+            2) An ID which is in decimal form. DO NOT ROUND THE ID.
+
+            Return a JSON object that has three fields: grades - a python list of strings, age - a python list of strings, and ID an integer.
+
+            It may well be the case you do not have enough information to accurately say what age or grades there are, in this case simply return
+            "unknown" for the appropriate value. Please do include your reasoning. DO NOT ROUND THE ID
+            </instructions>
+
+            <information>
+            Requirements: {requirements}
+            ID: {id}
+            </information>
+
+
+            
+        """
+        prompt += """ 
+        <example response>
+            <example>
+            Response:
+                {
+                "grades": ["Sophomore", "Junior", "Senior", "Graduate"],
+                "age": ["15", "16", "17", "18", "19"],
+                "ID": 0.12124739847238
+                }
+
+            Reasoning: Based on the provided requirements, the activity is open to rising high school sophomores, juniors, seniors, and high school graduates. The age requirement is 15 or over by the move-in date. Since high school students are typically aged 15-19, the relevant ages are included in the list.
+            
+            </example>
+            <example>
+            Response:
+            {
+            "grades": ["Sophomore", "Junior"],
+            "age": "unknown",
+            "ID": 0.3503453457384591
+            }
+
+            Reasoning: The requirements state that the activity is for current 10th and 11th-grade students, which correspond to the Sophomore and Junior grade levels. However, there is no information provided about the age range, so the "age" field is set to "unknown".
+            </example>
+            </example responses>
+
+        """
+        response = generateResponse(prompt)
+        start_index = response.text.index("[")
+        end_index = response.text.index("]") + 1
+        updatedTags =  response.text[start_index:end_index]
+        activity["Updated Tags"] = updatedTags
+        updatedList.append(activity)
+        print(f"{counter} -Done with {title}")
+        time.sleep(1)
+
+        dumpData(placeToDump, updatedList)
+    return "done"
+f = loadFile("snowDayP.json")
+
+updateTags(snowDayOG, f, 'snowDayP.json',507)
+updateTags(standOutSearchOG, [], 'sosP.json')
+updateTags(responseDataOG, [], 'resP.json')
+updateTags(snowDayCompetitionOG, [], 'compsP.json')
+
+
+
+
+# updateGrades(snowDayOG, [], "gradein.json")

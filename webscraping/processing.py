@@ -477,4 +477,4 @@ f = loadFile("snowDayPro.json")
 # updateTags(snowDayCompetitionOG, f, "compsP.json", 10)
 
 
-updateGrades(snowDayOG, f, "snowDayPro.json",218+107)
+#updateGrades(snowDayOG, f, "snowDayPro.json",218+107)

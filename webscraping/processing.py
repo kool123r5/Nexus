@@ -286,10 +286,10 @@ def generateResponse(prompt):
 
 
 # loading all files as variables
-snowDayOG = loadFile("snowDayP.json")
-standOutSearchOG = loadFile("SOSProcessed.json")
-responseDataOG = loadFile("responseProcessed.json")
-snowDayCompetitionOG = loadFile("snowDayCompetitions.json")
+snowDayOG = loadFile("snowDayPro.json")
+standOutSearchOG = loadFile("sosP.json")
+responseDataOG = loadFile("resP.json")
+snowDayCompetitionOG = loadFile("compsP.json")
 
 
 snowDayCompetitionProcessed = []
@@ -400,7 +400,7 @@ def updateTags(activityList, updatedList, placeToDump, index=0):
 
 def updateGrades(activityList, updatedList, placeToDump, index=0):
     counter = 0
-    for i in range(index,len(activityList)):
+    for i in range(index, len(activityList)):
         activity = activityList[i]
         counter += 1
         requirements = activity["requirements"]
@@ -467,14 +467,67 @@ def updateGrades(activityList, updatedList, placeToDump, index=0):
     return "done"
 
 
-f = loadFile("snowDayPro.json")
+def updateCosts(
+    activityList: list[dict], updatedList: list, placeToDump: str, index: int = 0
+):
+    for i in range(index, len(activityList)):
+        activity = activityList[i]
+        title: str = activity["title"]
+        text: str = activity["text"]
+        requirements: str = activity["requirements"]
+        cost: list = activity["cost"]
+
+        prompt = f"""
+            This is an activity I have data about.
+
+            The title of the activity is - {title.strip()}
+            A text description of the activity is - {text}
+        """
+        if requirements != "unknown" and requirements != None:
+            prompt += f"The requirements of the activity are - {requirements}"
+        prompt += f"""
+            A description of the cost of the activity is - {cost[1]}
+
+            Your job is to turn this description of the cost into a format which I will tell you now.
+
+            The format you should give me is an array with 4 values in it:
+
+            The first value in this array should be a string, with a small snippet of information to show the user. This should be something like "{title.strip()} costs 25 USD to enter" or "{title.strip()} costs money to enter" or "{title.strip()} is a free activity".
+            Try to include the numerical amount and currency of the cost in this string.
+            Create this first value based on the description of the cost given above{", but you can use the requirements if information is present there" if requirements != "unknown" and requirements != None else None}
+
+            The second value in this array should be a boolean, either true or false, depending on whether the activity actually costs money to enter. If it costs money, then this field should be true, otherwise this field should be false. 
+            If you are unsure about whether or not the activity costs money, then have this second field be a string of "unknown".
+
+            The third value in this array should be an integer, with the numerical amount of the cost (this should be 0 if free).
+            To calculate this, avoid any deposits or application fees, and just give me the regular cost of this program.
+            DO NOT TRY ANY CURRENCY CONVERSIONS HERE. Keep it the same numerical value as the currency the program it is, no matter what it is.
+            If you are unsure about the numerical value of the cost, have this third field be a string of "unknown".
+
+            The fourth value in this array should be a string, with the currency code of the currency which you gave the numerical value in (eg: USD, GBP, INR, AUD, etc)
+            For example: if the third field is 18000, but you meant that to be assumed as Indian Rupees, then this should be INR.
+            If you are unsure about the currency code of the cost, have this fourth field be a string of "unknown".
+
+            Please reason through your response for each field before, at the end, giving me the final array.
+            Make sure this array is JSON parseable, so in other words, make it an actual array, with the square brackets and commas in between the values.
+        """
+        response = generateResponse(prompt)
+        response_text = response.text
+        start_index = response_text.index("[")
+        end_index = response_text.index("]") + 1
+        updatedCost = response_text[start_index:end_index]
+        activity["Updated Cost"] = updatedCost
+        updatedList.append(activity)
+
+        print(f"{i} - Done with {title}")
+        time.sleep(1)
+
+        dumpData(placeToDump, updatedList)
+
+    return True
+
+
+f = loadFile("snowDayProcessed.json")
 
 # if you want to use an incomplete file the secodn parameter should be that incomplete file and
 # you should add a 4th parameter which is the number of objects in that file (1 + the value of the last json object when u click on it in the vscode file)
-# updateTags(snowDayOG, f, "snowDayP.json", 921)
-# updateTags(standOutSearchOG, f, "sosP.json", 11)
-# updateTags(responseDataOG, [], "resP.json")
-# updateTags(snowDayCompetitionOG, f, "compsP.json", 10)
-
-
-#updateGrades(snowDayOG, f, "snowDayPro.json",218+107)

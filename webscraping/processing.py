@@ -286,10 +286,8 @@ def generateResponse(prompt):
 
 
 # loading all files as variables
-snowDayOG = loadFile("snowDayPro.json")
-standOutSearchOG = loadFile("sosP.json")
-responseDataOG = loadFile("resP.json")
-snowDayCompetitionOG = loadFile("compsP.json")
+data = loadFile("merged_file.json")
+f = loadFile("data.json")
 
 
 snowDayCompetitionProcessed = []
@@ -469,7 +467,7 @@ def updateGrades(activityList, updatedList, placeToDump, index=0):
 
 def updateCosts(
     activityList: list[dict], updatedList: list, placeToDump: str, index: int = 0
-):
+    ):
     for i in range(index, len(activityList)):
         activity = activityList[i]
         title: str = activity["title"]
@@ -526,8 +524,53 @@ def updateCosts(
 
     return True
 
+def updateReq(activityList, updatedList, placeToDump, index=0):
+    counter = 0
+    for i in range(index, len(activityList)):
+        activity = activityList[i]
+        counter += 1
+        title = activity["title"]
 
-f = loadFile("snowDayProcessed.json")
+        if 'requirements' in activity.keys():
+            requirements = activity["requirements"]
+            if requirements != "unknown":
+                prompt = f"""
+                    
+                    <instructions>
+                    Update the requirements of an high school extra ]-curricular activity.
 
-# if you want to use an incomplete file the secodn parameter should be that incomplete file and
-# you should add a 4th parameter which is the number of objects in that file (1 + the value of the last json object when u click on it in the vscode file)
+                    I will provide you 2 pieces of information:
+                    1) The current requirements of an activity
+                    2) The title of the same activity
+
+                    I want you to change the requirement as such:
+                    Make the requirement start with something like "To participate in the [title of the activity] N exus users must.."
+                    I want you to refer to the applicants with the word Nexus users only and no other words.
+                    I also want you to make the language of the requirements field more concisce and formal.
+
+                    </instructions>
+
+                    <information>
+                    Requirements: {requirements}
+                    title of the activity: {title}
+                    </information>
+
+
+                    
+                """
+                
+                response = generateResponse(prompt)
+                new_req = response.text
+            else:
+                new_req = "Unknown"
+        else:
+            new_req = "Unknown"
+        activity["Updated Requirement"] = new_req
+        updatedList.append(activity)
+        print(f"{counter} -Done with {title} ")
+        time.sleep(5)
+
+        dumpData(placeToDump, updatedList)
+    return "done"
+
+updateReq(data, f, 'data.json',1523)

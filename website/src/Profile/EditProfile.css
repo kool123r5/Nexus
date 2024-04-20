@@ -5,10 +5,11 @@ html {
 }
 
 .editProfile {
+    height: calc(100vh - 4em);
     position: absolute;
-    top: 4rem;
-    background-color: #161616;
-    padding-bottom: 5vh;
+    bottom: 0;
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 .editProfileForm {

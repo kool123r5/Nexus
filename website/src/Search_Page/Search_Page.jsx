@@ -329,6 +329,9 @@ export default function Search() {
                                     key={document.id}
                                     title={document.title}
                                     text={document.text}
+                                    card_tag = {document.tags}
+                                    activity_cost = {document.cost}
+                                    selective_bool = {document.selective}
                                     author={document.host}
                                     id={document.id.toString()}
                                     activity={true}

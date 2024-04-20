@@ -51,6 +51,43 @@
     text-wrap: wrap;
 }
 
+.card_search_activity_details_container {
+    margin-top: 10px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between; 
+  }
+  
+  .card_search_each_detail_container {
+    width: auto; 
+    border-bottom: 1px solid var(--orange);
+    display: flex;
+    flex-direction: row;
+  }
+  
+  #search_cost_detail_container {
+    margin-left: 10px;
+  }
+  
+  #search_selective_detail_container {
+    margin-right:10px
+  }
+
+.cost_details_search{
+    font-weight: 500;
+    color:var(--white);
+    margin:0 !important;
+    padding: 0 !important;
+
+}
+
+.card_search_tags_container{
+    height: 100px;
+    overflow:auto;
+}
+
 .card_search_title_container {
     width: 100%;
     white-space: nowrap;

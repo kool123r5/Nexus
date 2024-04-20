@@ -40,7 +40,7 @@ export default function Search() {
         })
     );
 
-    const handleFilter = () => {
+    const handleFilterAndSearch = () => {
         const filteredDocs = [];
         activityList.forEach((activityDoc) => {
             let passedAllChecks = true;
@@ -145,29 +145,33 @@ export default function Search() {
                 filteredDocs.push(activityDoc);
             }
         });
-        setDocuments(filteredDocs);
-    };
 
-    const handleSearch = () => {
-        const fuseOptions = {
-            isCaseSensitive: false,
-            // includeScore: false,
-            shouldSort: true,
-            // includeMatches: false,
-            // findAllMatches: false,
-            // minMatchCharLength: 1,
-            // location: 0,
-            threshold: 0.3,
-            // distance: 100,
-            // useExtendedSearch: false,
-            ignoreLocation: true,
-            // ignoreFieldNorm: false,
-            // fieldNormWeight: 1,
-            keys: ["title", "text", "host"],
-        };
-        const fuse = new Fuse(activityList, fuseOptions);
-
-        console.log(fuse.search(searchValue));
+        if (searchValue != "" && searchValue != null && searchValue != undefined) {
+            const fuseOptions = {
+                isCaseSensitive: false,
+                // includeScore: false,
+                shouldSort: true,
+                // includeMatches: false,
+                // findAllMatches: false,
+                // minMatchCharLength: 1,
+                // location: 0,
+                threshold: 0.3,
+                // distance: 100,
+                // useExtendedSearch: false,
+                ignoreLocation: true,
+                // ignoreFieldNorm: false,
+                // fieldNormWeight: 1,
+                keys: ["title", "text", "host"],
+            };
+            const fuse = new Fuse(filteredDocs, fuseOptions);
+            const searchedDocs = fuse.search(searchValue).map((val) => {
+                return val.item;
+            });
+            console.log(searchedDocs);
+            setDocuments(searchedDocs);
+        } else {
+            setDocuments(filteredDocs);
+        }
     };
 
     return (
@@ -178,8 +182,7 @@ export default function Search() {
                     className="searchDiv"
                     onKeyDown={(e) => {
                         if (e.key == "Enter") {
-                            handleFilter();
-                            handleSearch();
+                            handleFilterAndSearch();
                         }
                     }}
                 >
@@ -313,8 +316,7 @@ export default function Search() {
                                 <button
                                     className="submit_search_individual_button"
                                     onClick={() => {
-                                        handleFilter();
-                                        handleSearch();
+                                        handleFilterAndSearch();
                                     }}
                                 >
                                     Search
@@ -329,9 +331,9 @@ export default function Search() {
                                     key={document.id}
                                     title={document.title}
                                     text={document.text}
-                                    card_tag = {document.tags}
-                                    activity_cost = {document.cost}
-                                    selective_bool = {document.selective}
+                                    card_tag={document.tags}
+                                    activity_cost={document.cost}
+                                    selective_bool={document.selective}
                                     author={document.host}
                                     id={document.id.toString()}
                                     activity={true}

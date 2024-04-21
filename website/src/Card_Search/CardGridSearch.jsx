@@ -49,6 +49,7 @@ export default function Card_Search({ title, text, card_tag, activity_cost, sele
             </div> */}
             <div className="card_search_tags_container">
                 {card_tag != "unknown" &&
+                    card_tag.length != 0 &&
                     card_tag.map((c, index) => {
                         return (
                             <Badge className="badge" key={index} color="#ff6d00">

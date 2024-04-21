@@ -1,6 +1,6 @@
 import { Loader, MultiSelect, TextInput } from "@mantine/core";
 import { DatePickerInput } from "@mantine/dates";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Card_Search from "../Card_Search/CardGridSearch";
 import Navbar from "../Navbar/Navbar";
 import "./Search_Page.css";
@@ -8,16 +8,22 @@ import { IconSearch } from "@tabler/icons-react";
 import activityList from "../List/activities";
 import Fuse from "fuse.js";
 import flattenAndUnique from "../functions/flattenAndUnique";
+import { useNavigate, useSearchParams } from "react-router-dom";
 
 export default function Search() {
-    const [mode, setMode] = useState([]);
-    const [gradeList, setGradeList] = useState([]);
-    const [cost, setCost] = useState([]);
-    const [date, setDate] = useState([]);
-    const [tags, setTags] = useState([]);
-    const [errorGrade, setErrorGrade] = useState(null);
-    const [locationValue, setLocationValue] = useState([]);
-    const [searchValue, setSearchValue] = useState("");
+    const navigator = useNavigate();
+    const [searchParams, setSearchParams] = useSearchParams();
+    const [mode, setMode] = useState(searchParams.get("mode") != null ? searchParams.get("mode").split("-") : []);
+    const [gradeList, setGradeList] = useState(
+        searchParams.get("grade") != null ? searchParams.get("grade").split("-") : []
+    );
+    const [cost, setCost] = useState(searchParams.get("cost") != null ? searchParams.get("cost").split("-") : []);
+    const [date, setDate] = useState(searchParams.get("date") != null ? searchParams.get("date") : []);
+    const [tags, setTags] = useState(searchParams.get("tags") != null ? searchParams.get("tags").split("-") : []);
+    const [locationValue, setLocationValue] = useState(
+        searchParams.get("location") != null ? searchParams.get("location").split("-") : []
+    );
+    const [searchValue, setSearchValue] = useState(searchParams.get("search") != null ? searchParams.get("search") : "");
     const [documents, setDocuments] = useState([...activityList]);
 
     const tagArray = flattenAndUnique(
@@ -41,23 +47,83 @@ export default function Search() {
     );
 
     const handleFilterAndSearch = () => {
+        console.log("called");
         const filteredDocs = [];
+
+        if (gradeList.length != 0) {
+            setSearchParams((params) => {
+                params.set("grade", gradeList.join("-"));
+            });
+        } else {
+            setSearchParams((params) => {
+                params.delete("grade");
+            });
+        }
+
+        if (searchValue != null && searchValue != "" && searchValue != undefined) {
+            setSearchParams((params) => {
+                params.set("search", searchValue);
+            });
+        } else {
+            setSearchParams((params) => {
+                params.delete("search");
+            });
+        }
+
+        if (mode.length != 0) {
+            setSearchParams((params) => {
+                params.set("mode", mode.join("-"));
+            });
+        } else {
+            setSearchParams((params) => {
+                params.delete("mode");
+            });
+        }
+
+        if (cost.length != 0) {
+            setSearchParams((params) => {
+                params.set("cost", cost.join("-"));
+            });
+        } else {
+            setSearchParams((params) => {
+                params.delete("cost");
+            });
+        }
+
+        if (tags.length != 0) {
+            setSearchParams((params) => {
+                params.set("tags", tags.join("-"));
+            });
+        } else {
+            setSearchParams((params) => {
+                params.delete("tags");
+            });
+        }
+
+        if (locationValue.length != 0) {
+            setSearchParams((params) => {
+                params.set("location", locationValue.join("-"));
+            });
+        } else {
+            setSearchParams((params) => {
+                params.delete("location");
+            });
+        }
+
+        navigator(`../search?${searchParams.toString()}`, { replace: true });
+
         activityList.forEach((activityDoc) => {
             let passedAllChecks = true;
+
             if (gradeList.length != 0 && passedAllChecks == true) {
                 for (let index = 0; index < gradeList.length; index++) {
                     const grade = gradeList[index];
-                    const gradeMapping = {
-                        9: "Freshman",
-                        10: "Sophomore",
-                        11: "Junior",
-                        12: "Senior",
-                    };
+
                     if (activityDoc.gradeRange == "unknown") {
                         passedAllChecks = false;
                         break;
                     }
-                    if (!activityDoc.gradeRange.map((val) => val.trim()).includes(gradeMapping[grade.toString()])) {
+                    if (!activityDoc.gradeRange.includes(grade)) {
                         passedAllChecks = false;
                     } else {
                         passedAllChecks = true;
@@ -110,11 +176,15 @@ export default function Search() {
                 }
             }
 
-            if (locationValue != "" && passedAllChecks == true) {
-                if (activityDoc.location.includes(locationValue)) {
-                    passedAllChecks = true;
-                } else {
-                    passedAllChecks = false;
+            if (locationValue.length != 0 && passedAllChecks == true) {
+                for (let index = 0; index < locationValue.length; index++) {
+                    const locationSelection = locationValue[index];
+                    if (activityDoc.location.trim() == locationSelection.trim()) {
+                        passedAllChecks = true;
+                        break;
+                    } else {
+                        passedAllChecks = false;
+                    }
                 }
             }
 
@@ -174,6 +244,10 @@ export default function Search() {
         }
     };
 
+    useEffect(() => {
+        handleFilterAndSearch();
+    }, []);
+
     return (
         <>
             <Navbar />
@@ -196,36 +270,25 @@ export default function Search() {
                                     leftSection={<IconSearch />}
                                     leftSectionWidth={40}
                                     value={searchValue}
-                                    onChange={(e) => setSearchValue(e.target.value)}
+                                    onChange={(e) => {
+                                        setSearchValue(e.target.value);
+                                    }}
                                 />
                             </div>
 
                             <div className="row_two_filter">
                                 <div className="age_filter_div">
-                                    <TextInput
+                                    <MultiSelect
                                         className="filterInput"
-                                        placeholder="Grade"
-                                        type="text"
-                                        min={6}
-                                        max={12}
-                                        error={errorGrade}
+                                        placeholder={gradeList.length == 0 ? "Grade" : undefined}
+                                        searchable
+                                        clearable
+                                        hidePickedOptions
+                                        data={["Freshman", "Sophomore", "Junior", "Senior"]}
                                         onChange={(e) => {
-                                            setErrorGrade(null);
-                                            const numberArray = e.target.value.split(",").map(Number);
-                                            if (numberArray.includes(NaN)) {
-                                                setErrorGrade("Enter valid grades");
-                                            } else if (numberArray.includes(0) && numberArray[numberArray.length - 1] != 0) {
-                                                setErrorGrade("Enter valid grades");
-                                            } else if (numberArray.some((num) => num < 6)) {
-                                                setErrorGrade("Grades must be at least 6!");
-                                            } else {
-                                                if (numberArray[numberArray.length - 1] == 0) {
-                                                    setGradeList([...numberArray].slice(0, -1));
-                                                } else {
-                                                    setGradeList(numberArray);
-                                                }
-                                            }
+                                            setGradeList(e);
                                         }}
+                                        value={gradeList}
                                     />
                                 </div>
                                 <div className="cost_filter_div">
@@ -282,12 +345,12 @@ export default function Search() {
                                 <div className="location_filter_div">
                                     <MultiSelect
                                         className="filterInput"
-                                        placeholder="Location"
+                                        placeholder={locationValue.length == 0 ? "Location" : undefined}
                                         value={locationValue}
                                         onChange={(e) => {
-                                            setLocationValue(e.target.value);
+                                            setLocationValue(e);
                                         }}
-                                        data={[...locationArray]}
+                                        data={locationArray}
                                         searchable
                                         clearable
                                         hidePickedOptions
@@ -331,7 +394,7 @@ export default function Search() {
                                     key={document.id}
                                     title={document.title}
                                     text={document.text}
-                                    card_tag={document.tags}
+                                    card_tag={document.tags != "unknown" ? document.tags : []}
                                     activity_cost={document.cost}
                                     selective_bool={document.selective}
                                     author={document.host}

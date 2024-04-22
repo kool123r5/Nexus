@@ -48,7 +48,6 @@ export default function Search() {
     );
 
     const handleFilterAndSearch = () => {
-        console.log("called");
         const filteredDocs = [];
 
         if (gradeList.length != 0) {
@@ -112,6 +111,7 @@ export default function Search() {
         }
 
         navigator(`../search?${searchParams.toString()}`, { replace: true });
+        setCurrentSlice(100);
 
         activityList.forEach((activityDoc) => {
             let passedAllChecks = true;

@@ -25,6 +25,7 @@ export default function Search() {
     );
     const [searchValue, setSearchValue] = useState(searchParams.get("search") != null ? searchParams.get("search") : "");
     const [documents, setDocuments] = useState([...activityList]);
+    const [currentSlice, setCurrentSlice] = useState(100);
 
     const tagArray = flattenAndUnique(
         activityList.map((val) => {
@@ -165,8 +166,8 @@ export default function Search() {
             if (cost.length != 0 && passedAllChecks == true) {
                 if (
                     cost.length == 1 &&
-                    ((cost[0] == "Free" && activityDoc.cost[0] == true) ||
-                        (cost[0] == "Has fee" && activityDoc.cost[0] == false))
+                    ((cost[0] == "Free" && activityDoc.cost[1] == true) ||
+                        (cost[0] == "Has fee" && activityDoc.cost[1] == false))
                 ) {
                     passedAllChecks = false;
                 } else if (cost.length == 2) {
@@ -384,12 +385,21 @@ export default function Search() {
                                 >
                                     Search
                                 </button>
-                                <p className="resultsP">Showing {documents.length} results</p>
+                                <p className="resultsP">
+                                    Showing {currentSlice} of {documents.length} results
+                                </p>
+                                <button
+                                    className="loadMoreBtn"
+                                    onClick={() => {
+                                        setCurrentSlice((currSlice) => currSlice + 100);
+                                    }}
+                                >
+                                    Load More
+                                </button>
                             </div>
                         </div>
-
                         <div className="resultsDiv">
-                            {documents.map((document) => (
+                            {documents.slice(0, currentSlice).map((document) => (
                                 <Card_Search
                                     key={document.id}
                                     title={document.title}

@@ -23,6 +23,7 @@ export default function Search() {
     const [locationValue, setLocationValue] = useState(
         searchParams.get("location") != null ? searchParams.get("location").split("-") : []
     );
+    const [types, setTypes] = useState(searchParams.get("type") != null ? searchParams.get("type").split("-") : []);
     const [searchValue, setSearchValue] = useState(searchParams.get("search") != null ? searchParams.get("search") : "");
     const [documents, setDocuments] = useState([...activityList]);
     const [currentSlice, setCurrentSlice] = useState(100);
@@ -41,6 +42,16 @@ export default function Search() {
         activityList.map((val) => {
             if (val.location != "unknown") {
                 return [val.location.trim()];
+            } else {
+                return [];
+            }
+        })
+    );
+
+    const typesArray = flattenAndUnique(
+        activityList.map((val) => {
+            if (val.type != "unknown" && val.type != undefined && val.type != null) {
+                return val.type;
             } else {
                 return [];
             }
@@ -110,6 +121,16 @@ export default function Search() {
             });
         }
 
+        if (types.length != 0) {
+            setSearchParams((params) => {
+                params.set("type", types.join("-"));
+            });
+        } else {
+            setSearchParams((params) => {
+                params.delete("type");
+            });
+        }
+
         navigator(`../search?${searchParams.toString()}`, { replace: true });
         setCurrentSlice(100);
 
@@ -153,7 +174,6 @@ export default function Search() {
             if (tags.length != 0 && passedAllChecks == true) {
                 for (let index = 0; index < tags.length; index++) {
                     const tagSelection = tags[index];
-                    console.log(tagSelection);
                     if (activityDoc.tags.includes(tagSelection)) {
                         passedAllChecks = true;
                         break;
@@ -181,6 +201,22 @@ export default function Search() {
                 for (let index = 0; index < locationValue.length; index++) {
                     const locationSelection = locationValue[index];
                     if (activityDoc.location.trim() == locationSelection.trim()) {
+                        passedAllChecks = true;
+                        break;
+                    } else {
+                        passedAllChecks = false;
+                    }
+                }
+            }
+
+            if (types.length != 0 && passedAllChecks == true) {
+                for (let index = 0; index < types.length; index++) {
+                    const type = types[index];
+                    if (activityDoc.type == "unknown" || activityDoc.type == undefined || activityDoc.type == null) {
+                        passedAllChecks = false;
+                        break;
+                    }
+                    if (activityDoc.type.includes(type.trim())) {
                         passedAllChecks = true;
                         break;
                     } else {
@@ -247,6 +283,7 @@ export default function Search() {
 
     useEffect(() => {
         handleFilterAndSearch();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return (
@@ -368,6 +405,23 @@ export default function Search() {
                                         value={tags}
                                         onChange={(e) => {
                                             setTags(e);
+                                        }}
+                                        searchable
+                                        clearable
+                                        hidePickedOptions
+                                    />
+                                </div>
+                            </div>
+
+                            <div className="row_seven_div">
+                                <div className="tags_filter_div">
+                                    <MultiSelect
+                                        className="filterInput"
+                                        placeholder={types.length == 0 ? "Types" : undefined}
+                                        data={typesArray}
+                                        value={types}
+                                        onChange={(e) => {
+                                            setTypes(e);
                                         }}
                                         searchable
                                         clearable

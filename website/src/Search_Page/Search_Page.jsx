@@ -141,7 +141,7 @@ export default function Search() {
                 for (let index = 0; index < gradeList.length; index++) {
                     const grade = gradeList[index];
 
-                    if (activityDoc.gradeRange == "unknown") {
+                    if (activityDoc.gradeRange == "unknown" || activityDoc.gradeRange == null || activityDoc.gradeRange == undefined) {
                         passedAllChecks = false;
                         break;
                     }

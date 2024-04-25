@@ -1,6 +1,6 @@
 import { Loader, MultiSelect, TextInput } from "@mantine/core";
 import { DatePickerInput } from "@mantine/dates";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Card_Search from "../Card_Search/CardGridSearch";
 import Navbar from "../Navbar/Navbar";
 import "./Search_Page.css";
@@ -8,17 +8,25 @@ import { IconSearch } from "@tabler/icons-react";
 import activityList from "../List/activities";
 import Fuse from "fuse.js";
 import flattenAndUnique from "../functions/flattenAndUnique";
+import { useNavigate, useSearchParams } from "react-router-dom";
 
 export default function Search() {
-    const [mode, setMode] = useState([]);
-    const [gradeList, setGradeList] = useState([]);
-    const [cost, setCost] = useState([]);
-    const [date, setDate] = useState([]);
-    const [tags, setTags] = useState([]);
-    const [errorGrade, setErrorGrade] = useState(null);
-    const [locationValue, setLocationValue] = useState([]);
-    const [searchValue, setSearchValue] = useState("");
+    const navigator = useNavigate();
+    const [searchParams, setSearchParams] = useSearchParams();
+    const [mode, setMode] = useState(searchParams.get("mode") != null ? searchParams.get("mode").split("-") : []);
+    const [gradeList, setGradeList] = useState(
+        searchParams.get("grade") != null ? searchParams.get("grade").split("-") : []
+    );
+    const [cost, setCost] = useState(searchParams.get("cost") != null ? searchParams.get("cost").split("-") : []);
+    const [date, setDate] = useState(searchParams.get("date") != null ? searchParams.get("date") : []);
+    const [tags, setTags] = useState(searchParams.get("tags") != null ? searchParams.get("tags").split("-") : []);
+    const [locationValue, setLocationValue] = useState(
+        searchParams.get("location") != null ? searchParams.get("location").split("-") : []
+    );
+    const [types, setTypes] = useState(searchParams.get("type") != null ? searchParams.get("type").split("-") : []);
+    const [searchValue, setSearchValue] = useState(searchParams.get("search") != null ? searchParams.get("search") : "");
     const [documents, setDocuments] = useState([...activityList]);
+    const [currentSlice, setCurrentSlice] = useState(100);
 
     const tagArray = flattenAndUnique(
         activityList.map((val) => {
@@ -40,24 +48,104 @@ export default function Search() {
         })
     );
 
-    const handleFilter = () => {
+    const typesArray = flattenAndUnique(
+        activityList.map((val) => {
+            if (val.type != "unknown" && val.type != undefined && val.type != null) {
+                return val.type;
+            } else {
+                return [];
+            }
+        })
+    );
+
+    const handleFilterAndSearch = () => {
         const filteredDocs = [];
+
+        if (gradeList.length != 0) {
+            setSearchParams((params) => {
+                params.set("grade", gradeList.join("-"));
+            });
+        } else {
+            setSearchParams((params) => {
+                params.delete("grade");
+            });
+        }
+
+        if (searchValue != null && searchValue != "" && searchValue != undefined) {
+            setSearchParams((params) => {
+                params.set("search", searchValue);
+            });
+        } else {
+            setSearchParams((params) => {
+                params.delete("search");
+            });
+        }
+
+        if (mode.length != 0) {
+            setSearchParams((params) => {
+                params.set("mode", mode.join("-"));
+            });
+        } else {
+            setSearchParams((params) => {
+                params.delete("mode");
+            });
+        }
+
+        if (cost.length != 0) {
+            setSearchParams((params) => {
+                params.set("cost", cost.join("-"));
+            });
+        } else {
+            setSearchParams((params) => {
+                params.delete("cost");
+            });
+        }
+
+        if (tags.length != 0) {
+            setSearchParams((params) => {
+                params.set("tags", tags.join("-"));
+            });
+        } else {
+            setSearchParams((params) => {
+                params.delete("tags");
+            });
+        }
+
+        if (locationValue.length != 0) {
+            setSearchParams((params) => {
+                params.set("location", locationValue.join("-"));
+            });
+        } else {
+            setSearchParams((params) => {
+                params.delete("location");
+            });
+        }
+
+        if (types.length != 0) {
+            setSearchParams((params) => {
+                params.set("type", types.join("-"));
+            });
+        } else {
+            setSearchParams((params) => {
+                params.delete("type");
+            });
+        }
+
+        navigator(`../search?${searchParams.toString()}`, { replace: true });
+        setCurrentSlice(100);
+
         activityList.forEach((activityDoc) => {
             let passedAllChecks = true;
+
             if (gradeList.length != 0 && passedAllChecks == true) {
                 for (let index = 0; index < gradeList.length; index++) {
                     const grade = gradeList[index];
-                    const gradeMapping = {
-                        9: "Freshman",
-                        10: "Sophomore",
-                        11: "Junior",
-                        12: "Senior",
-                    };
+
                     if (activityDoc.gradeRange == "unknown") {
                         passedAllChecks = false;
                         break;
                     }
-                    if (!activityDoc.gradeRange.map((val) => val.trim()).includes(gradeMapping[grade.toString()])) {
+                    if (!activityDoc.gradeRange.includes(grade)) {
                         passedAllChecks = false;
                     } else {
                         passedAllChecks = true;
@@ -86,7 +174,6 @@ export default function Search() {
             if (tags.length != 0 && passedAllChecks == true) {
                 for (let index = 0; index < tags.length; index++) {
                     const tagSelection = tags[index];
-                    console.log(tagSelection);
                     if (activityDoc.tags.includes(tagSelection)) {
                         passedAllChecks = true;
                         break;
@@ -99,8 +186,8 @@ export default function Search() {
             if (cost.length != 0 && passedAllChecks == true) {
                 if (
                     cost.length == 1 &&
-                    ((cost[0] == "Free" && activityDoc.cost[0] == true) ||
-                        (cost[0] == "Has fee" && activityDoc.cost[0] == false))
+                    ((cost[0] == "Free" && activityDoc.cost[1] == true) ||
+                        (cost[0] == "Has fee" && activityDoc.cost[1] == false))
                 ) {
                     passedAllChecks = false;
                 } else if (cost.length == 2) {
@@ -110,11 +197,31 @@ export default function Search() {
                 }
             }
 
-            if (locationValue != "" && passedAllChecks == true) {
-                if (activityDoc.location.includes(locationValue)) {
-                    passedAllChecks = true;
-                } else {
-                    passedAllChecks = false;
+            if (locationValue.length != 0 && passedAllChecks == true) {
+                for (let index = 0; index < locationValue.length; index++) {
+                    const locationSelection = locationValue[index];
+                    if (activityDoc.location.trim() == locationSelection.trim()) {
+                        passedAllChecks = true;
+                        break;
+                    } else {
+                        passedAllChecks = false;
+                    }
+                }
+            }
+
+            if (types.length != 0 && passedAllChecks == true) {
+                for (let index = 0; index < types.length; index++) {
+                    const type = types[index];
+                    if (activityDoc.type == "unknown" || activityDoc.type == undefined || activityDoc.type == null) {
+                        passedAllChecks = false;
+                        break;
+                    }
+                    if (activityDoc.type.includes(type.trim())) {
+                        passedAllChecks = true;
+                        break;
+                    } else {
+                        passedAllChecks = false;
+                    }
                 }
             }
 
@@ -145,30 +252,39 @@ export default function Search() {
                 filteredDocs.push(activityDoc);
             }
         });
-        setDocuments(filteredDocs);
+
+        if (searchValue != "" && searchValue != null && searchValue != undefined) {
+            const fuseOptions = {
+                isCaseSensitive: false,
+                // includeScore: false,
+                shouldSort: true,
+                // includeMatches: false,
+                // findAllMatches: false,
+                // minMatchCharLength: 1,
+                // location: 0,
+                threshold: 0.3,
+                // distance: 100,
+                // useExtendedSearch: false,
+                ignoreLocation: true,
+                // ignoreFieldNorm: false,
+                // fieldNormWeight: 1,
+                keys: ["title", "text", "host"],
+            };
+            const fuse = new Fuse(filteredDocs, fuseOptions);
+            const searchedDocs = fuse.search(searchValue).map((val) => {
+                return val.item;
+            });
+            console.log(searchedDocs);
+            setDocuments(searchedDocs);
+        } else {
+            setDocuments(filteredDocs);
+        }
     };
 
-    const handleSearch = () => {
-        const fuseOptions = {
-            isCaseSensitive: false,
-            // includeScore: false,
-            shouldSort: true,
-            // includeMatches: false,
-            // findAllMatches: false,
-            // minMatchCharLength: 1,
-            // location: 0,
-            threshold: 0.3,
-            // distance: 100,
-            // useExtendedSearch: false,
-            ignoreLocation: true,
-            // ignoreFieldNorm: false,
-            // fieldNormWeight: 1,
-            keys: ["title", "text", "host"],
-        };
-        const fuse = new Fuse(activityList, fuseOptions);
-
-        console.log(fuse.search(searchValue));
-    };
+    useEffect(() => {
+        handleFilterAndSearch();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     return (
         <>
@@ -178,8 +294,7 @@ export default function Search() {
                     className="searchDiv"
                     onKeyDown={(e) => {
                         if (e.key == "Enter") {
-                            handleFilter();
-                            handleSearch();
+                            handleFilterAndSearch();
                         }
                     }}
                 >
@@ -194,7 +309,9 @@ export default function Search() {
                                     leftSection={<IconSearch />}
                                     leftSectionWidth={40}
                                     value={searchValue}
-                                    onChange={(e) => setSearchValue(e.target.value)}
+                                    onChange={(e) => {
+                                        setSearchValue(e.target.value);
+                                    }}
                                 />
                             </div>
 
@@ -240,6 +357,36 @@ export default function Search() {
                                     clearable
                                     hidePickedOptions
                                 />
+                            <div className="row_two_filter">
+                                <div className="age_filter_div">
+                                    <MultiSelect
+                                        className="filterInput"
+                                        placeholder={gradeList.length == 0 ? "Grade" : undefined}
+                                        searchable
+                                        clearable
+                                        hidePickedOptions
+                                        data={["Freshman", "Sophomore", "Junior", "Senior"]}
+                                        onChange={(e) => {
+                                            setGradeList(e);
+                                        }}
+                                        value={gradeList}
+                                    />
+                                </div>
+                                <div className="cost_filter_div">
+                                    <MultiSelect
+                                        className="filterInput"
+                                        placeholder={cost.length == 0 ? "Cost" : undefined}
+                                        data={["Free", "Has fee"]}
+                                        value={cost}
+                                        onChange={(e) => {
+                                            setCost(e);
+                                        }}
+                                        maxLength={1}
+                                        searchable
+                                        clearable
+                                        hidePickedOptions
+                                    />
+                                </div>
                             </div>
 
                             <div className = "search_filter_input_main_div" id="mode_filter_div">
@@ -284,6 +431,21 @@ export default function Search() {
                                     clearable
                                     hidePickedOptions
                                 />
+                            <div className="row_five_div">
+                                <div className="location_filter_div">
+                                    <MultiSelect
+                                        className="filterInput"
+                                        placeholder={locationValue.length == 0 ? "Location" : undefined}
+                                        value={locationValue}
+                                        onChange={(e) => {
+                                            setLocationValue(e);
+                                        }}
+                                        data={locationArray}
+                                        searchable
+                                        clearable
+                                        hidePickedOptions
+                                    />
+                                </div>
                             </div>
 
                             <div className = "search_filter_input_main_div" id="tags_filter_div">
@@ -301,29 +463,54 @@ export default function Search() {
                                 />
                             </div>
 
+                            <div className="row_seven_div">
+                                <div className="tags_filter_div">
+                                    <MultiSelect
+                                        className="filterInput"
+                                        placeholder={types.length == 0 ? "Types" : undefined}
+                                        data={typesArray}
+                                        value={types}
+                                        onChange={(e) => {
+                                            setTypes(e);
+                                        }}
+                                        searchable
+                                        clearable
+                                        hidePickedOptions
+                                    />
+                                </div>
+                            </div>
+
                             <div className="submit_search_div">
                                 <button
                                     className="submit_search_individual_button"
                                     onClick={() => {
-                                        handleFilter();
-                                        handleSearch();
+                                        handleFilterAndSearch();
                                     }}
                                 >
                                     Search
                                 </button>
-                                <p className="resultsP">Showing {documents.length} results</p>
+                                <p className="resultsP">
+                                    Showing {currentSlice} of {documents.length} results
+                                </p>
+                                <button
+                                    className="loadMoreBtn"
+                                    onClick={() => {
+                                        setCurrentSlice((currSlice) => currSlice + 100);
+                                    }}
+                                >
+                                    Load More
+                                </button>
                             </div>
                         </div>
-
                         <div className="resultsDiv">
-                            {documents.map((document) => (
+                            {documents.slice(0, currentSlice).map((document) => (
                                 <Card_Search
                                     key={document.id}
                                     title={document.title}
                                     text={document.text}
-                                    card_tag = {document.tags}
-                                    activity_cost = {document.cost}
-                                    selective_bool = {document.selective}
+                                    card_tag={document.tags != "unknown" ? document.tags : []}
+                                    activity_cost={document.cost}
+                                    selective_bool={document.selective}
                                     author={document.host}
                                     id={document.id.toString()}
                                     activity={true}

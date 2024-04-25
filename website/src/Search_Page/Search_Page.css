@@ -162,3 +162,11 @@ html {
     font-weight: 500;
     color: var(--orange);
 }
+
+.loadMoreBtn {
+    background-color: var(--orange);
+    margin-top: 5px;
+    width: fit-content;
+    height: fit-content;
+    font-size: smaller;
+}

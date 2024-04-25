@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 import wrapText from "../functions/wrapText";
 import { Badge } from "@mantine/core";
 
-
 export default function Card_Search({ title, text, card_tag, activity_cost, selective_bool, author, id, activity }) {
     let wrapped_text = wrapText(text, 200);
     const navigate = useNavigate();
@@ -50,6 +49,7 @@ export default function Card_Search({ title, text, card_tag, activity_cost, sele
             </div> */}
             <div className="card_search_tags_container">
                 {card_tag != "unknown" &&
+                    card_tag.length != 0 &&
                     card_tag.map((c, index) => {
                         return (
                             <Badge className="badge" key={index} color="#ff6d00">

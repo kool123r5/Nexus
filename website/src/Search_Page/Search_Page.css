@@ -166,8 +166,18 @@ html {
 
 .loadMoreBtn {
     background-color: var(--orange);
-    margin-top: 5px;
+    margin-top: 10px;
     width: fit-content;
     height: fit-content;
     font-size: smaller;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.loadMoreBtn:hover{
+    background-color: var(--white);
+    color:var(--orange)
+}
+
+.loadMoreBtn:focus{
+    outline: none;
 }

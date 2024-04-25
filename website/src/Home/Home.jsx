@@ -7,7 +7,7 @@ import { Loader } from "@mantine/core";
 import Card_Home_Main from "../Card_Home_Main/CardGridHomeMain";
 import activityList from "../List/activities";
 import Fuse from "fuse.js";
-
+import nexusLogo from "../assets/NEXUS_LOGO-nobackground.png";
 
 export default function Home() {
     const [mode, setMode] = useState([]);
@@ -169,9 +169,11 @@ export default function Home() {
             {documents ? (
                 <div className="homeDiv">
                     <div className="title_carousel_container">
-                        {/* <img src={nexusLogo} alt="Nexus Logo" id="Home_Logo_Img" />
-                        <h1 id="title">Nexus</h1> */}
-                        <button className="home_previous_button" onClick={handlePreviousClick}>
+                        <div className="home_main_header_container">
+                            <img src={nexusLogo} alt="Nexus Logo" id="Home_Logo_Img" />
+                            <h1 id="title">Nexus</h1>
+                        </div>
+                        {/* <button className="home_previous_button" onClick={handlePreviousClick}>
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="16"
@@ -223,7 +225,7 @@ export default function Home() {
                                     id= "3"
                                     activity= "True"
                                 />
-                        </div>
+                        </div> */}
                     </div>
                     {uniqueTypeArr != null
                         ? uniqueTypeArr.map((uniqueTypeObj) => {

@@ -23,18 +23,17 @@ html {
 }
 
 .filterDiv {
-    height: 100vh;
+    height: calc(100vh - 4em);
     width: 30vw;
     position: fixed;
     left: 0;
-    top: 0;
+    top:4em;
     padding-left: 1vw;
     padding-right: 1vw;
-    top: 4em;
     border-right: 1px var(--gray_C) solid;
     display: flex;
     flex-direction: column;
-    overflow: scroll;
+    overflow: auto;
 }
 
 .resultsDiv {
@@ -54,6 +53,7 @@ html {
     margin: 0;
 }
 
+
 .search_input_div {
     width: 100%;
     margin-top: 4vh;
@@ -63,42 +63,27 @@ html {
     width: 100%;
 }
 
-.row_two_filter {
-    display: flex;
-    flex-direction: row;
-    margin-top: 5vh;
+
+.search_filter_input_main_div{
+    margin-top:5vh;
 }
 
-.age_filter_div {
-    width: 5vw;
-    margin-right: 1vw;
-}
 
-.cost_filter_div {
-    width: 20vw;
-}
-
-.row_three_div {
-    margin-top: 5vh;
-}
-
-.mode_filter_div {
+#grade_filter_div {
     width: 100%;
 }
 
-.row_four_div {
-    margin-top: 5vh;
+#cost_filter_div {
+    width: 100%;
 }
 
-.row_five_div {
-    margin-top: 5vh;
+
+#mode_filter_div {
+    width: 100%;
 }
 
-.row_six_div {
-    margin-top: 5vh;
-}
 
-.tags_filter_div {
+#tags_filter_div {
     max-height: 10vh;
     height: 10vh;
 }
@@ -168,6 +153,7 @@ html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top:5vh;
 }
 
 .resultsP {

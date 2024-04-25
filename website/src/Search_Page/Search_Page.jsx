@@ -314,120 +314,109 @@ export default function Search() {
                                 />
                             </div>
 
-                            <div className="row_two_filter">
-                                <div className="age_filter_div">
-                                    <MultiSelect
-                                        className="filterInput"
-                                        placeholder={gradeList.length == 0 ? "Grade" : undefined}
-                                        searchable
-                                        clearable
-                                        hidePickedOptions
-                                        data={["Freshman", "Sophomore", "Junior", "Senior"]}
-                                        onChange={(e) => {
-                                            setGradeList(e);
-                                        }}
-                                        value={gradeList}
-                                    />
-                                </div>
-                                <div className="cost_filter_div">
-                                    <MultiSelect
-                                        className="filterInput"
-                                        placeholder={cost.length == 0 ? "Cost" : undefined}
-                                        data={["Free", "Has fee"]}
-                                        value={cost}
-                                        onChange={(e) => {
-                                            setCost(e);
-                                        }}
-                                        maxLength={1}
-                                        searchable
-                                        clearable
-                                        hidePickedOptions
-                                    />
-                                </div>
+                            <div className = "search_filter_input_main_div" id="age_filter_div">
+                                <MultiSelect
+                                    className="filterInput"
+                                    placeholder={gradeList.length == 0 ? "Grade" : undefined}
+                                    searchable
+                                    clearable
+                                    hidePickedOptions
+                                    data={["Freshman", "Sophomore", "Junior", "Senior"]}
+                                    onChange={(e) => {
+                                        setGradeList(e);
+                                    }}
+                                    value={gradeList}
+                                />
+                            </div>
+                            
+                            <div className = "search_filter_input_main_div" id="cost_filter_div">
+                                <MultiSelect
+                                    className="filterInput"
+                                    placeholder={cost.length == 0 ? "Cost" : undefined}
+                                    data={["Free", "Has fee"]}
+                                    value={cost}
+                                    onChange={(e) => {
+                                        setCost(e);
+                                    }}
+                                    maxLength={1}
+                                    searchable
+                                    clearable
+                                    hidePickedOptions
+                                />
                             </div>
 
-                            <div className="row_three_div">
-                                <div className="mode_filter_div">
-                                    <MultiSelect
-                                        className="filterInput"
-                                        placeholder={mode.length == 0 ? "Mode" : undefined}
-                                        data={["In Person", "Remote / Online", "Hybrid"]}
-                                        value={mode}
-                                        onChange={(e) => {
-                                            setMode(e);
-                                        }}
-                                        searchable
-                                        clearable
-                                        hidePickedOptions
-                                    />
-                                </div>
+                            <div className = "search_filter_input_main_div" id="mode_filter_div">
+                                <MultiSelect
+                                    className="filterInput"
+                                    placeholder={mode.length == 0 ? "Mode" : undefined}
+                                    data={["In Person", "Remote / Online", "Hybrid"]}
+                                    value={mode}
+                                    onChange={(e) => {
+                                        setMode(e);
+                                    }}
+                                    searchable
+                                    clearable
+                                    hidePickedOptions
+                                />
                             </div>
 
-                            <div className="row_four_div">
-                                <div className="date_filter_div">
-                                    <DatePickerInput
-                                        clearable
-                                        className="filterInput"
-                                        type="range"
-                                        placeholder="Date Range"
-                                        allowSingleDateInRange
-                                        value={date}
-                                        onChange={(e) => {
-                                            setDate(e);
-                                        }}
-                                    />
-                                </div>
+                            <div className = "search_filter_input_main_div" id="date_filter_div">
+                                <DatePickerInput
+                                    clearable
+                                    className="filterInput"
+                                    type="range"
+                                    placeholder="Date Range"
+                                    allowSingleDateInRange
+                                    value={date}
+                                    onChange={(e) => {
+                                        setDate(e);
+                                    }}
+                                />
                             </div>
 
-                            <div className="row_five_div">
-                                <div className="location_filter_div">
-                                    <MultiSelect
-                                        className="filterInput"
-                                        placeholder={locationValue.length == 0 ? "Location" : undefined}
-                                        value={locationValue}
-                                        onChange={(e) => {
-                                            setLocationValue(e);
-                                        }}
-                                        data={locationArray}
-                                        searchable
-                                        clearable
-                                        hidePickedOptions
-                                    />
-                                </div>
+                            <div className = "search_filter_input_main_div" id="location_filter_div">
+                                <MultiSelect
+                                    className="filterInput"
+                                    placeholder={locationValue.length == 0 ? "Location" : undefined}
+                                    value={locationValue}
+                                    onChange={(e) => {
+                                        setLocationValue(e);
+                                    }}
+                                    data={locationArray}
+                                    searchable
+                                    clearable
+                                    hidePickedOptions
+                                />
                             </div>
 
-                            <div className="row_six_div">
-                                <div className="tags_filter_div">
-                                    <MultiSelect
-                                        className="filterInput"
-                                        placeholder={tags.length == 0 ? "Tags" : undefined}
-                                        data={tagArray}
-                                        value={tags}
-                                        onChange={(e) => {
-                                            setTags(e);
-                                        }}
-                                        searchable
-                                        clearable
-                                        hidePickedOptions
-                                    />
-                                </div>
+                            <div className = "search_filter_input_main_div" id="tags_filter_div">
+                                <MultiSelect
+                                    className="filterInput"
+                                    placeholder={tags.length == 0 ? "Tags" : undefined}
+                                    data={tagArray}
+                                    value={tags}
+                                    onChange={(e) => {
+                                        setTags(e);
+                                    }}
+                                    searchable
+                                    clearable
+                                    hidePickedOptions
+                                />
                             </div>
 
-                            <div className="row_seven_div">
-                                <div className="tags_filter_div">
-                                    <MultiSelect
-                                        className="filterInput"
-                                        placeholder={types.length == 0 ? "Types" : undefined}
-                                        data={typesArray}
-                                        value={types}
-                                        onChange={(e) => {
-                                            setTypes(e);
-                                        }}
-                                        searchable
-                                        clearable
-                                        hidePickedOptions
-                                    />
-                                </div>
+                            <div className = "search_filter_input_main_div" id="types_filter_div">
+                                <MultiSelect
+                                    className="filterInput"
+                                    placeholder={types.length == 0 ? "Types" : undefined}
+                                    data={typesArray}
+                                    value={types}
+                                    onChange={(e) => {
+                                        setTypes(e);
+                                    }}
+                                    searchable
+                                    clearable
+                                    hidePickedOptions
+                                />
                             </div>
 
                             <div className="submit_search_div">
@@ -452,6 +441,7 @@ export default function Search() {
                                 </button>
                             </div>
                         </div>
+
                         <div className="resultsDiv">
                             {documents.slice(0, currentSlice).map((document) => (
                                 <Card_Search

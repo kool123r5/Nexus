@@ -65,7 +65,7 @@ html {
 
 
 .search_filter_input_main_div{
-    margin-top:5vh;
+    margin-top:3vh;
 }
 
 
@@ -84,9 +84,10 @@ html {
 
 
 #tags_filter_div {
-    max-height: 10vh;
-    height: 10vh;
+    width: 100%;
 }
+
+
 
 .submit_search_buttons {
     margin-top: 5vh;
@@ -105,7 +106,7 @@ html {
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-size: 90%;
+    font-size: 100%;
     font-weight: 600;
     display: border-box;
 }

@@ -459,7 +459,13 @@ export default function Search() {
                                         text={document.text}
                                         card_tag={document.tags != "unknown" ? document.tags : []}
                                         activity_cost={document.cost}
-                                        selective_bool={document.selective}
+                                        selective_bool={
+                                            document.selective == "unknown" ||
+                                            document.selective == false ||
+                                            document.selective == undefined
+                                                ? false
+                                                : true
+                                        }
                                         author={document.host}
                                         id={document.id.toString()}
                                         activity={true}

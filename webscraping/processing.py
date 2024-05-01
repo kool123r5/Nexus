@@ -286,11 +286,9 @@ def generateResponse(prompt):
 
 
 # loading all files as variables
-data = loadFile("merged_file.json")
-f = loadFile("data.json")
+data = loadFile("cleanedActivityData.json")
 
 
-snowDayCompetitionProcessed = []
 
 
 def updateDescription(activityList, updatedList):
@@ -533,26 +531,27 @@ def updateReq(activityList, updatedList, placeToDump, index=0):
 
         if 'requirements' in activity.keys():
             requirements = activity["requirements"]
+            demographics = activity["demographics"]
             if requirements != "unknown":
                 prompt = f"""
                     
                     <instructions>
-                    Update the requirements of an high school extra ]-curricular activity.
+                    Update the requirements of an high school extra -curricular activity.
 
                     I will provide you 2 pieces of information:
                     1) The current requirements of an activity
-                    2) The title of the same activity
+                    2) The demographics ie, the types of people allowed to do the activity
 
                     I want you to change the requirement as such:
-                    Make the requirement start with something like "To participate in the [title of the activity] N exus users must.."
-                    I want you to refer to the applicants with the word Nexus users only and no other words.
-                    I also want you to make the language of the requirements field more concisce and formal.
+                    If demographics has any useful information that is not currently present in Requirements such as if demographics contains "US citizens only"
+                    and requirements does not already mention this then edit requirement so that it has this information.
+
 
                     </instructions>
 
                     <information>
                     Requirements: {requirements}
-                    title of the activity: {title}
+                    demographics: {demographics}
                     </information>
 
 
@@ -566,6 +565,7 @@ def updateReq(activityList, updatedList, placeToDump, index=0):
         else:
             new_req = "Unknown"
         activity["Updated Requirement"] = new_req
+        del activity["demographics"]
         updatedList.append(activity)
         print(f"{counter} -Done with {title} ")
         time.sleep(5)
@@ -573,4 +573,4 @@ def updateReq(activityList, updatedList, placeToDump, index=0):
         dumpData(placeToDump, updatedList)
     return "done"
 
-updateReq(data, f, 'data.json',1523)
+updateReq(data, [], 'data.json',0)

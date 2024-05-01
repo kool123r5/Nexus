@@ -27,6 +27,7 @@ export default function Search() {
     const [searchValue, setSearchValue] = useState(searchParams.get("search") != null ? searchParams.get("search") : "");
     const [documents, setDocuments] = useState([...activityList]);
     const [currentSlice, setCurrentSlice] = useState(100);
+    const [loading, setLoading] = useState(false);
 
     const tagArray = flattenAndUnique(
         activityList.map((val) => {
@@ -59,6 +60,7 @@ export default function Search() {
     );
 
     const handleFilterAndSearch = () => {
+        setLoading(true);
         const filteredDocs = [];
 
         if (gradeList.length != 0) {
@@ -141,7 +143,11 @@ export default function Search() {
                 for (let index = 0; index < gradeList.length; index++) {
                     const grade = gradeList[index];
 
-                    if (activityDoc.gradeRange == "unknown" || activityDoc.gradeRange == null || activityDoc.gradeRange == undefined) {
+                    if (
+                        activityDoc.gradeRange == "unknown" ||
+                        activityDoc.gradeRange == null ||
+                        activityDoc.gradeRange == undefined
+                    ) {
                         passedAllChecks = false;
                         break;
                     }
@@ -274,11 +280,13 @@ export default function Search() {
             const searchedDocs = fuse.search(searchValue).map((val) => {
                 return val.item;
             });
-            console.log(searchedDocs);
             setDocuments(searchedDocs);
         } else {
             setDocuments(filteredDocs);
         }
+        setTimeout(() => {
+            setLoading(false);
+        }, 100);
     };
 
     useEffect(() => {
@@ -314,7 +322,7 @@ export default function Search() {
                                 />
                             </div>
 
-                            <div className = "search_filter_input_main_div" id="age_filter_div">
+                            <div className="search_filter_input_main_div" id="age_filter_div">
                                 <MultiSelect
                                     className="filterInput"
                                     placeholder={gradeList.length == 0 ? "Grade" : undefined}
@@ -328,8 +336,8 @@ export default function Search() {
                                     value={gradeList}
                                 />
                             </div>
-                            
-                            <div className = "search_filter_input_main_div" id="cost_filter_div">
+
+                            <div className="search_filter_input_main_div" id="cost_filter_div">
                                 <MultiSelect
                                     className="filterInput"
                                     placeholder={cost.length == 0 ? "Cost" : undefined}
@@ -345,7 +353,7 @@ export default function Search() {
                                 />
                             </div>
 
-                            <div className = "search_filter_input_main_div" id="mode_filter_div">
+                            <div className="search_filter_input_main_div" id="mode_filter_div">
                                 <MultiSelect
                                     className="filterInput"
                                     placeholder={mode.length == 0 ? "Mode" : undefined}
@@ -360,7 +368,7 @@ export default function Search() {
                                 />
                             </div>
 
-                            <div className = "search_filter_input_main_div" id="date_filter_div">
+                            <div className="search_filter_input_main_div" id="date_filter_div">
                                 <DatePickerInput
                                     clearable
                                     className="filterInput"
@@ -374,7 +382,7 @@ export default function Search() {
                                 />
                             </div>
 
-                            <div className = "search_filter_input_main_div" id="location_filter_div">
+                            <div className="search_filter_input_main_div" id="location_filter_div">
                                 <MultiSelect
                                     className="filterInput"
                                     placeholder={locationValue.length == 0 ? "Location" : undefined}
@@ -389,7 +397,7 @@ export default function Search() {
                                 />
                             </div>
 
-                            <div className = "search_filter_input_main_div" id="tags_filter_div">
+                            <div className="search_filter_input_main_div" id="tags_filter_div">
                                 <MultiSelect
                                     className="filterInput"
                                     placeholder={tags.length == 0 ? "Tags" : undefined}
@@ -404,7 +412,7 @@ export default function Search() {
                                 />
                             </div>
 
-                            <div className = "search_filter_input_main_div" id="types_filter_div">
+                            <div className="search_filter_input_main_div" id="types_filter_div">
                                 <MultiSelect
                                     className="filterInput"
                                     placeholder={types.length == 0 ? "Types" : undefined}
@@ -442,21 +450,33 @@ export default function Search() {
                             </div>
                         </div>
 
-                        <div className="resultsDiv">
-                            {documents.slice(0, currentSlice).map((document) => (
-                                <Card_Search
-                                    key={document.id}
-                                    title={document.title}
-                                    text={document.text}
-                                    card_tag={document.tags != "unknown" ? document.tags : []}
-                                    activity_cost={document.cost}
-                                    selective_bool={document.selective}
-                                    author={document.host}
-                                    id={document.id.toString()}
-                                    activity={true}
-                                />
-                            ))}
-                        </div>
+                        {!loading ? (
+                            <div className="resultsDiv">
+                                {documents.slice(0, currentSlice).map((document) => (
+                                    <Card_Search
+                                        key={document.id}
+                                        title={document.title}
+                                        text={document.text}
+                                        card_tag={document.tags != "unknown" ? document.tags : []}
+                                        activity_cost={document.cost}
+                                        selective_bool={
+                                            document.selective == "unknown" ||
+                                            document.selective == false ||
+                                            document.selective == undefined
+                                                ? false
+                                                : true
+                                        }
+                                        author={document.host}
+                                        id={document.id.toString()}
+                                        activity={true}
+                                    />
+                                ))}
+                            </div>
+                        ) : (
+                            <div className="loadingDivSearch">
+                                <Loader className="loading" color="#ff6d00" />
+                            </div>
+                        )}
                     </div>
                 </div>
             ) : (

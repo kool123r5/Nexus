@@ -39,12 +39,17 @@ export default function EditProfile() {
     const [visible, { toggle }] = useDisclosure();
 
     const handleSave = () => {
+        if(bio=="" && userDoc.bio==""){
+            setBio("")
+        }else{
+            setBio(userDoc.bio)
+        }
         const updateProfilePromise = projectFirestore
             .collection("users")
             .doc(projectAuth.currentUser.uid)
             .update({
                 displayName: name == "" ? userDoc.displayName : name,
-                bio: bio == "" ? userDoc.bio : bio,
+                bio: bio,
                 age: age == "" ? userDoc.age : age,
                 grade: grade == "" ? userDoc.grade : grade,
                 location: location == "" ? userDoc.location : location,

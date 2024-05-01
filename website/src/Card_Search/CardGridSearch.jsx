@@ -59,7 +59,7 @@ export default function Card_Search({ title, text, card_tag, activity_cost, sele
                     })}
             </div>
             {/* <div className="card_search_body_container">{wrapped_text}</div> */}
-            <div className="card_search_author_container">{author}</div>
+            {author != "unknown" && author != undefined && <div className="card_search_author_container">{author}</div>}
         </div>
     );
 }

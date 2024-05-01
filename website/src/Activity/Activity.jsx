@@ -98,15 +98,19 @@ export default function Activity() {
                         )}
                         <div className="details">
                             <div className="byUsername">
+                                {activityDocument.host && (
+                                    <div>
+                                        <span className="by">By </span>{" "}
+                                        <span className="username">{activityDocument.host}</span>
+                                    </div>
+                                )}
                                 <div>
-                                    <span className="by">By </span> <span className="username">{activityDocument.host}</span>
-                                </div>
-                                <div>
-                                    {activityDocument.type != "unknown" && (
+                                    {activityDocument.type != "unknown" && activityDocument.type != undefined && (
                                         <span className="username">{activityDocument.type[0]}</span>
                                     )}
                                 </div>
                             </div>
+
                             <div className="activityHeader">
                                 <h2 className="title">
                                     {activityDocument.title}
@@ -183,7 +187,7 @@ export default function Activity() {
                                         Free Activity
                                     </p>
                                 )}
-                                {activityDocument.paid[0] ? (
+                                {activityDocument.paid[0] && activityDocument.paid != "unknown" && (
                                     <>
                                         {activityDocument.paid[1] == "unknown" || activityDocument.paid[2] == "unknown" ? (
                                             <p
@@ -207,7 +211,8 @@ export default function Activity() {
                                             </p>
                                         )}
                                     </>
-                                ) : (
+                                )}
+                                {activityDocument.paid[0] == false && (
                                     <p
                                         className="cost"
                                         style={{
@@ -255,23 +260,26 @@ export default function Activity() {
                                         <br />
                                     </>
                                 )}
-                                {activityDocument.gradeRange != "unknown" && activityDocument.gradeRange.length != 0 && (
-                                    <>
-                                        <p style={{ margin: 0 }}>
-                                            For{" "}
-                                            {activityDocument.gradeRange.map((grade, index) => {
-                                                return (
-                                                    <span className="username" key={index}>
-                                                        {index != activityDocument.gradeRange.length - 1
-                                                            ? `${grade.trim()}s, `
-                                                            : `${grade.trim()}s`}
-                                                    </span>
-                                                );
-                                            })}
-                                        </p>
-                                        <br />
-                                    </>
-                                )}
+                                {activityDocument.gradeRange != "unknown" &&
+                                    activityDocument.gradeRange != null &&
+                                    activityDocument.gradeRange != undefined &&
+                                    activityDocument.gradeRange.length != 0 && (
+                                        <>
+                                            <p style={{ margin: 0 }}>
+                                                For{" "}
+                                                {activityDocument.gradeRange.map((grade, index) => {
+                                                    return (
+                                                        <span className="username" key={index}>
+                                                            {index != activityDocument.gradeRange.length - 1
+                                                                ? `${grade.trim()}s, `
+                                                                : `${grade.trim()}s`}
+                                                        </span>
+                                                    );
+                                                })}
+                                            </p>
+                                            <br />
+                                        </>
+                                    )}
                             </div>
 
                             {activityDocument.deadline != "unknown" && (

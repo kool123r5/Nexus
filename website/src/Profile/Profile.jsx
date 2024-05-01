@@ -12,6 +12,8 @@ import { Toaster, toast } from "sonner";
 import getDefaultPfp from "../functions/getDefaultPfp.js";
 import { useLogout } from "../hooks/useLogout.js";
 import activityList from "../List/activities.js";
+import Card_Profile from "../Card_Profile/CardGridProfile";
+
 
 export default function Profile() {
     const { id } = useParams();
@@ -106,7 +108,7 @@ export default function Profile() {
     }, [userDoc]);
 
     const fetchActivities = async () => {
-        if (currentIdDocument[0]) {
+        if (currentIdDocument && currentIdDocument[0]) {
             setActivities(currentIdDocument[0].activities);
         }
     };
@@ -279,13 +281,13 @@ export default function Profile() {
                                     ) : null}
                                 </>
                             )}
-                            <img
-                                className="profilePfp"
-                                src={getDefaultPfp(currentIdDocument[0].displayName)}
-                                alt="Profile Picture"
-                                height={80}
-                                width={80}
-                            />
+                            {yourProfile ? (
+                                <div className="logoutDiv">
+                                    <button onClick={logout} className="logoutBtn">
+                                        Logout
+                                    </button>
+                                </div>
+                            ) : null}
                         </div>
                     </div>
                     <div className="bio">
@@ -301,13 +303,19 @@ export default function Profile() {
                         </h3>
                         <div className="activityOrPostOrFriendContainerDivProfile">
                             {activities && activities.length != 0 ? (
-                                activities.map((id) => {
+                                activities.map((id) => { let document = activityList.filter((doc) => doc.id == id)[0]
                                     return (
-                                        <Link to={`/activity/${id}`} key={id} className="activityLink">
-                                            <p className="randomTxt">
-                                                {activityList.filter((activity) => activity.id.toString() == id)[0].title}
-                                            </p>
-                                        </Link>
+                                        <Card_Profile
+                                            key={document.id}
+                                            title={document.title}
+                                            text={document.text}
+                                            card_tag={document.tags != "unknown" ? document.tags : []}
+                                            activity_cost={document.cost}
+                                            selective_bool={document.selective}
+                                            author={document.host}
+                                            id={document.id.toString()}
+                                            activity={true}
+                                        />
                                     );
                                 })
                             ) : (
@@ -315,7 +323,7 @@ export default function Profile() {
                             )}
                         </div>
                     </div>
-                    {yourProfile && userDoc.friends ? (
+                    {/* {yourProfile && userDoc.friends ? (
                         <>
                             <div className="dividerDiv">
                                 <Divider />
@@ -336,14 +344,8 @@ export default function Profile() {
                                 </div>
                             </div>
                         </>
-                    ) : null}
-                    {yourProfile ? (
-                        <div className="logoutDiv">
-                            <button onClick={logout} className="logoutBtn">
-                                Logout
-                            </button>
-                        </div>
-                    ) : null}
+                    ) : null} */}
+
                     {yourProfile && (
                         <>
                             {anyRequestReceivedByCurrentUserOnTheirPage() ? (

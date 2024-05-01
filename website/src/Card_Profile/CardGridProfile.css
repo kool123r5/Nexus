@@ -1,0 +1,112 @@
+:root {
+    --orange: #ff6d00;
+    --gray_A: #1c1c21;
+    --gray_B: #343434;
+    --gray_C: #464646;
+    --aquablue: #1a1919;
+    --lighteraquablue: #30343e;
+    --lightblue: #35343c;
+}
+
+.card_profile {
+    background-color: var(--gray_E);
+    width: 30vw;
+    max-width: 30vw;
+    height: 250px;
+    padding-top: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+    border-radius: 10px;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    transition: all 0.5s;
+    text-align: center;
+    border-style: solid;
+    box-shadow: 0px 0px 0px 0px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex: 0 0 auto;
+    overflow: hidden;
+    box-sizing: border-box;
+    border: 1px solid var(--lightblue);
+    margin-top:2vh;
+}
+
+.card_profile:hover {
+    background-color: var(--lighteraquablue);
+}
+
+.card_profile_body_container {
+    color: var(--white);
+    max-height: 120px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-wrap: wrap;
+}
+
+.card_profile_activity_details_container {
+    margin-top: 10px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between; 
+  }
+  
+  .card_profile_each_detail_container {
+    width: auto; 
+    border-bottom: 1px solid var(--orange);
+    display: flex;
+    flex-direction: row;
+  }
+  
+  #search_cost_detail_container {
+    margin-left: 10px;
+  }
+  
+  #search_selective_detail_container {
+    margin-right:10px
+  }
+
+.cost_details_profile{
+    font-weight: 500;
+    color:var(--white);
+    margin:0 !important;
+    padding: 0 !important;
+
+}
+
+.card_profile_tags_container{
+    height: 100px;
+    overflow:auto;
+}
+
+.card_profile_title_container {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--white);
+    font-weight: 900;
+    font-size: 16px;
+}
+
+.card_profile_author_container {
+    text-align: right;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--orange);
+    width: 100%;
+    font-weight: 700;
+    text-overflow: ellipsis;
+}

@@ -168,7 +168,7 @@ export default function Activity() {
                                                 }}
                                             >
                                                 <IconMoneybag />
-                                                Costs {activityDocument.cost[1]} {activityDocument.cost[2]}
+                                                {activityDocument.cost[0].replace(activityDocument.title, "").replace("costs", "Costs").replace("to enter", "")}
                                             </p>
                                         )}
                                     </>
@@ -280,7 +280,7 @@ export default function Activity() {
                                 </div>
                             )}
                             {activityDocument.startDate != "unknown" && activityDocument.endDate != "unknown" && (
-                                <div>
+                                <div className="durationDiv">
                                     This activity goes on from <span className="username">{activityDocument.startDate}</span>{" "}
                                     to <span className="username">{activityDocument.endDate}</span>
                                 </div>
@@ -288,7 +288,7 @@ export default function Activity() {
                             {activityDocument.duration != "unknown" &&
                                 activityDocument.startDate == "unknown" &&
                                 activityDocument.endDate == "unknown" && (
-                                    <div>
+                                    <div className="durationDiv">
                                         This activity goes on for
                                         <span className="username"> {activityDocument.duration}</span>
                                     </div>
@@ -296,12 +296,12 @@ export default function Activity() {
                             {activityDocument && (
                                 <div className="form-div">
                                     {user && userDoc && authIsReady && !isActivityAdded && (
-                                        <button id="btn" onClick={handleAdd}>
-                                            Add Activity to Profile
+                                        <button className = "save_activity_to_profile_button" id="btn" onClick={handleAdd}>
+                                            Save Activity to Profile
                                         </button>
                                     )}
                                     {user && authIsReady && userDoc && isActivityAdded && (
-                                        <button id="btn" onClick={handleRemove}>
+                                        <button className = "save_activity_to_profile_button" id="btn" onClick={handleRemove}>
                                             Remove Activity
                                         </button>
                                     )}

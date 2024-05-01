@@ -186,9 +186,6 @@ html {
 }
 
 .logoutDiv {
-    padding-left: 2vw;
-    padding-right: 2vw;
-    padding-top: 3vh;
     display: flex;
     align-items: center;
     flex-direction: row-reverse;

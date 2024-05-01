@@ -172,6 +172,10 @@ html {
     color:var(--white)
 }
 
+.durationDiv{
+    color:var(--white);
+}
+
 .reportErrorBtn {
     background-color: rgb(204, 23, 23);
     color: rgba(255, 255, 255, 0.85);
@@ -184,6 +188,31 @@ html {
     color: rgb(204, 23, 23);
     transition: 0.3s;
     transition-property: color background-color;
+}
+
+.save_activity_to_profile_button{
+    border: 1px solid var(--orange);
+    background-color: var(--orange);
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 100%;
+    font-weight: 600;
+    display: border-box;
+}
+
+.save_activity_to_profile_button:hover {
+    background-color: var(--white) !important;
+    border: 1px solid var(--orange);
+    color: var(--orange);
+}
+
+.save_activity_to_profile_button:focus {
+    background-color: var(--white);
+    outline: none;
+    border: 1px solid var(--orange);
 }
 
 @media (max-width: 950px) {

@@ -23,7 +23,7 @@ const list = [
         cost: ["Animation Intensive costs $1,957.00 to enter", true, 1957, "USD"],
         tags: ["Art/Design", "Animation"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 0,
+        id: 1,
     },
     {
         title: "AwesomeMath Summer Program",
@@ -47,7 +47,7 @@ const list = [
         cost: ["AwesomeMath Summer Program costs between $1,175 and $1,475 to enter", true, 1275, "USD"],
         tags: ["Mathematics", "STEM", "Education", "Youth Development"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 1,
+        id: 2,
     },
     {
         title: "Design Immersions Residential Program",
@@ -72,7 +72,7 @@ const list = [
         cost: ["Design Immersions Residential Program costs 1500 USD to enter", true, 1500, "USD"],
         tags: ["Art/Design", "Architecture"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 2,
+        id: 3,
     },
     {
         title: "Economics for Leaders (EFL)",
@@ -97,7 +97,7 @@ const list = [
         cost: ["Economics for Leaders (EFL) costs $2,100 to enter (in-person) or $800 (virtual).", true, 2100, "USD"],
         tags: ["Economics", "Leadership/Management"],
         gradeRange: ["Sophomore", "Junior"],
-        id: 3,
+        id: 4,
     },
     {
         title: "High School Explorations Residential Camp",
@@ -122,7 +122,7 @@ const list = [
         cost: ["High School Explorations Residential Camp costs $1400 to enter", true, 1400, "USD"],
         tags: ["Art/Design", "Architecture", "Design", "Humanities", "Outdoor-adventure"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 4,
+        id: 5,
     },
     {
         title: "High-Touch Animation: Drawing, Design & Story",
@@ -148,7 +148,7 @@ const list = [
         cost: ["High-Touch Animation: Drawing, Design & Story costs $3,708.00 to enter", true, 3708, "USD"],
         tags: ["Art/Design", "Animation"],
         gradeRange: ["Graduate"],
-        id: 5,
+        id: 6,
     },
     {
         title: "Summer Institute Art, Media & Design",
@@ -172,7 +172,7 @@ const list = [
         cost: ["Summer Institute Art, Media & Design costs 5050 USD to enter", true, 5050, "USD"],
         tags: ["Art/Design", "Visual Arts"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 6,
+        id: 7,
     },
     {
         title: "Summer Institute Creative Writing",
@@ -196,7 +196,7 @@ const list = [
         cost: ["Summer Institute Creative Writing costs $3,400 to enter", true, 3400, "USD"],
         tags: ["Creative Writing", "Literature"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 7,
+        id: 8,
     },
     {
         title: "Summer Institute Dance",
@@ -220,7 +220,7 @@ const list = [
         cost: ["Summer Institute Dance costs 4450 USD to enter", true, 4450, "USD"],
         tags: ["Dance", "Performing Arts"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 8,
+        id: 9,
     },
     {
         title: "Summer Institute Filmmaking",
@@ -244,7 +244,7 @@ const list = [
         cost: ["Summer Institute Filmmaking costs $3,400 to enter", true, 3400, "USD"],
         tags: ["Film/Cinema", "Photography/Videography"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 9,
+        id: 10,
     },
     {
         title: "Summer Institute Music",
@@ -268,7 +268,7 @@ const list = [
         cost: ["Summer Institute Music costs $3,400 to enter", true, 3400, "USD"],
         tags: ["Music"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 10,
+        id: 11,
     },
     {
         title: "Summer Institute Music Composition & Songwriting",
@@ -293,7 +293,7 @@ const list = [
         cost: ["Summer Institute Music Composition & Songwriting costs $3,550 to enter", true, 3550, "USD"],
         tags: ["Music"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 11,
+        id: 12,
     },
     {
         title: "Summer Institute Music Industry",
@@ -317,7 +317,7 @@ const list = [
         cost: ["Summer Institute Music Industry costs $5,050 to enter", true, 5050, "USD"],
         tags: ["Music", "Business"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 12,
+        id: 13,
     },
     {
         title: "Summer Institute Screenwriting",
@@ -341,7 +341,7 @@ const list = [
         cost: ["Summer Institute Screenwriting costs $5,050 to enter", true, 5050, "USD"],
         tags: ["Creative Writing", "Film/Cinema"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 13,
+        id: 14,
     },
     {
         title: "Summer Institute Theater",
@@ -365,7 +365,7 @@ const list = [
         cost: ["Summer Institute Theater costs $3,400 to enter", true, 3400, "USD"],
         tags: ["Performing Arts", "Theatre/Drama", "Music"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 14,
+        id: 15,
     },
     {
         title: "Boston University High School Honors Program",
@@ -391,7 +391,7 @@ const list = [
         cost: ["Boston University High School Honors Program costs $6,510 to enter", true, 6510, "USD"],
         tags: ["STEM", "Science", "Math", "Biology", "Chemistry", "Economics", "Social Science"],
         gradeRange: ["Junior", "Senior"],
-        id: 15,
+        id: 16,
     },
     {
         title: "Business Is Global: Summer Language Program",
@@ -417,7 +417,7 @@ const list = [
         cost: ["Business Is Global: Summer Language Program costs $1,900 to enter", true, 1900, "USD"],
         tags: ["Business", "Languages", "Leadership", "Entrepreneurship", "International Studies/Global Affairs"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 16,
+        id: 17,
     },
     {
         title: "Computer Science for Cyber Security (CS4CS)",
@@ -442,7 +442,7 @@ const list = [
         cost: ["Computer Science for Cyber Security (CS4CS) is a free activity", false, 0, "unknown"],
         tags: ["Computer Science", "Cybersecurity"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 17,
+        id: 18,
     },
     {
         title: "Innovation, Entrepreneurship and the Science of Smart Cities (ieSoSC)",
@@ -472,7 +472,7 @@ const list = [
         ],
         tags: ["Engineering", "Computer Science", "Design", "STEM", "Robotics"],
         gradeRange: ["Sophomore", "Junior"],
-        id: 18,
+        id: 19,
     },
     {
         title: "Athena Summer Innovation Institute",
@@ -497,7 +497,7 @@ const list = [
         cost: ["Athena Summer Innovation Institute costs $7,772 to enter", true, 7772, "USD"],
         tags: ["Entrepreneurship", "Leadership/Management", "Business"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 19,
+        id: 20,
     },
     {
         title: "Barnard Young Women's Leadership Institute",
@@ -531,7 +531,7 @@ const list = [
             "Dance",
         ],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 20,
+        id: 21,
     },
     {
         title: "Health and Society Institute",
@@ -556,7 +556,7 @@ const list = [
         cost: ["Health and Society Institute costs 9,058 USD to enter", true, 9058, "USD"],
         tags: ["Social Science", "Health Sciences", "Medicine"],
         gradeRange: ["Junior", "Senior"],
-        id: 21,
+        id: 22,
     },
     {
         title: "High School Summer STEM Program",
@@ -581,7 +581,7 @@ const list = [
         cost: ["High School Summer STEM Program costs 20 USD to enter", true, 20, "USD"],
         tags: ["STEM", "Science", "Engineering", "Research", "Education"],
         gradeRange: ["Senior", "Graduate"],
-        id: 22,
+        id: 23,
     },
     {
         title: "Litchfield Jazz Camp at The Frederick Gunn School",
@@ -606,7 +606,7 @@ const list = [
         cost: ["Litchfield Jazz Camp at The Frederick Gunn School costs $1395 to enter for one week.", true, 1395, "USD"],
         tags: ["Music", "Performing Arts"],
         gradeRange: ["unknown"],
-        id: 23,
+        id: 24,
     },
     {
         title: "Maine College of Art and Design Pre-College Program",
@@ -631,7 +631,7 @@ const list = [
         cost: ["Maine College of Art and Design Pre-College Program costs $4,200 to enter", true, 4200, "USD"],
         tags: ["Design", "Creative Writing", "Humanities"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 24,
+        id: 25,
     },
     {
         title: "Marketing + Creative Enterprise Program",
@@ -656,7 +656,7 @@ const list = [
         cost: ["Marketing + Creative Enterprise Program costs 1895 USD to enter", true, 1895, "USD"],
         tags: ["Marketing/Advertising", "Business and Entrepreneurship"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 25,
+        id: 26,
     },
     {
         title: "NextGen Leadership Institute",
@@ -699,7 +699,7 @@ const list = [
             "Performing Arts",
         ],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 26,
+        id: 27,
     },
     {
         title: "PA Summer Success Program",
@@ -724,7 +724,7 @@ const list = [
         cost: ["PA Summer Success Program costs 20 USD to enter", true, 20, "USD"],
         tags: ["Medicine", "Health Sciences", "Pre-med"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 27,
+        id: 28,
     },
     {
         title: "Pre-Occupational Therapy Program",
@@ -749,7 +749,7 @@ const list = [
         cost: ["Pre-Occupational Therapy Program is a free activity", false, 0, "USD"],
         tags: ["Health Sciences", "Medicine"],
         gradeRange: ["Senior"],
-        id: 28,
+        id: 29,
     },
     {
         title: "REEX JumpStart Scholars in Commercial Real Estate",
@@ -774,7 +774,7 @@ const list = [
         cost: ["REEX JumpStart Scholars in Commercial Real Estate costs 3200 USD to enter", true, 3200, "USD"],
         tags: ["Entrepreneurship", "Business", "Economics", "Leadership/Management"],
         gradeRange: ["Sophomore", "Junior"],
-        id: 29,
+        id: 30,
     },
     {
         title: "SEA Expedition",
@@ -799,7 +799,7 @@ const list = [
         cost: ["SEA Expedition costs $5,950 to enter", true, 5950, "USD"],
         tags: ["Science", "Outdoor-adventure", "Engineering"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 30,
+        id: 31,
     },
     {
         title: "SEA Pre-College: Ocean Sciences in Woods Hole",
@@ -824,7 +824,7 @@ const list = [
         cost: ["SEA Pre-College: Ocean Sciences in Woods Hole costs $5,750 to enter", true, 5750, "USD"],
         tags: ["Biology", "Environmental Science", "STEM"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 31,
+        id: 32,
     },
     {
         title: "SEA Quest: Critters, Coral, and Conservation",
@@ -849,7 +849,7 @@ const list = [
         cost: ["SEA Quest: Critters, Coral, and Conservation costs $1,000 to enter", true, 1000, "USD"],
         tags: ["Environmental Science", "Biology", "STEM"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 32,
+        id: 33,
     },
     {
         title: "SEASCape: Ocean Studies On The Cape",
@@ -874,7 +874,7 @@ const list = [
         cost: ["SEASCape: Ocean Studies On The Cape costs $5,500 to enter", true, 5500, "USD"],
         tags: ["Environmental Science", "History", "Literature", "STEM"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 33,
+        id: 34,
     },
     {
         title: "Summer STEM Program",
@@ -899,7 +899,7 @@ const list = [
         cost: ["Summer STEM Program costs $700 to enter", true, 700, "USD"],
         tags: ["STEM", "Engineering", "Physics", "Chemistry", "Biology"],
         gradeRange: ["Freshman", "Sophomore", "Junior"],
-        id: 34,
+        id: 35,
     },
     {
         title: "Summer Sustainable Food Institute",
@@ -924,7 +924,7 @@ const list = [
         cost: ["Summer Sustainable Food Institute costs $6,040 to enter", true, 6040, "USD"],
         tags: ["Agriculture", "Environmental Science", "Health Sciences", "Government/Politics"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 35,
+        id: 36,
     },
     {
         title: "The Young Writers Workshop @ Kenyon Review",
@@ -949,7 +949,7 @@ const list = [
         cost: ["The Young Writers Workshop @ Kenyon Review costs $2,575 to enter", true, 2575, "USD"],
         tags: ["Creative Writing", "Literature"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 36,
+        id: 37,
     },
     {
         title: "US Naval Academy Summer Seminar",
@@ -974,7 +974,7 @@ const list = [
         cost: ["US Naval Academy Summer Seminar costs $550.00 to enter", true, 550.0, "USD"],
         tags: ["Leadership/Management", "Government/Politics", "Sports", "STEM", "History"],
         gradeRange: ["Junior"],
-        id: 37,
+        id: 38,
     },
     {
         title: "Young Women\u2019s Institute",
@@ -999,7 +999,7 @@ const list = [
         cost: ["Young Women\u2019s Institute is a free activity", false, 0, "unknown"],
         tags: ["Business", "Entrepreneurship", "Leadership", "Humanities"],
         gradeRange: ["Sophomore", "Junior"],
-        id: 38,
+        id: 39,
     },
     {
         title: "Summer Animation Residency",
@@ -1023,7 +1023,7 @@ const list = [
         cost: ["Summer Animation Residency costs 25 USD to enter", true, 5562, "USD"],
         tags: ["Animation", "Art/Design"],
         gradeRange: ["Graduate"],
-        id: 39,
+        id: 40,
     },
     {
         title: "Animation Program",
@@ -1048,7 +1048,7 @@ const list = [
         cost: ["Animation Program costs $5600 to enter", true, 5600, "USD"],
         tags: ["Animation", "Art/Design", "Graphic Design"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 40,
+        id: 41,
     },
     {
         title: "Animation Program (Online)",
@@ -1073,7 +1073,7 @@ const list = [
         cost: ["Animation Program (Online) costs $2,600 to enter", true, 2600, "USD"],
         tags: ["Animation", "Art/Design"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 41,
+        id: 42,
     },
     {
         title: "Cartooning Program",
@@ -1098,7 +1098,7 @@ const list = [
         cost: ["Cartooning Program costs $3125 to enter", true, 3125, "USD"],
         tags: ["Art/Design", "Graphic Design", "Creative Writing"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 42,
+        id: 43,
     },
     {
         title: "Cartooning Program (Online)",
@@ -1123,7 +1123,7 @@ const list = [
         cost: ["Cartooning Program (Online) costs $2,600 to enter", true, 2600, "USD"],
         tags: ["Art/Design", "Graphic Design", "Creative Writing"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 43,
+        id: 44,
     },
     {
         title: "Computer Animation Program",
@@ -1148,7 +1148,7 @@ const list = [
         cost: ["Computer Animation Program costs $3125 to enter", true, 3125, "USD"],
         tags: ["Art/Design", "Animation"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 44,
+        id: 45,
     },
     {
         title: "Computer Animation Program (Online)",
@@ -1173,7 +1173,7 @@ const list = [
         cost: ["Computer Animation Program (Online) costs $2,600 to enter", true, 2600, "USD"],
         tags: ["Art/Design", "Animation", "Computer Science"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 45,
+        id: 46,
     },
     {
         title: "Darkroom Photography Program",
@@ -1198,7 +1198,7 @@ const list = [
         cost: ["Darkroom Photography Program costs 3125 USD to enter", true, 3125, "USD"],
         tags: ["Design", "Humanities", "Photography/Videography"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 46,
+        id: 47,
     },
     {
         title: "Experimental Video Program",
@@ -1223,7 +1223,7 @@ const list = [
         cost: ["Experimental Video Program costs $3125 to enter", true, 3125, "USD"],
         tags: ["Art/Design", "Photography/Videography"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 47,
+        id: 48,
     },
     {
         title: "Exploring Drama Through Acting Program",
@@ -1248,7 +1248,7 @@ const list = [
         cost: ["Exploring Drama Through Acting Program costs 3125 USD to enter", true, 3125, "USD"],
         tags: ["Performing Arts", "Theatre/Drama"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 48,
+        id: 49,
     },
     {
         title: "Exploring Drama Through Acting Program (Online)",
@@ -1273,7 +1273,7 @@ const list = [
         cost: ["Exploring Drama Through Acting Program (Online) costs $2,600 to enter", true, 2600, "USD"],
         tags: ["Theatre/Drama", "Performing Arts"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 49,
+        id: 50,
     },
     {
         title: "Game Arts with Maya and Unity Program",
@@ -1298,7 +1298,7 @@ const list = [
         cost: ["Game Arts with Maya and Unity Program costs 5600 USD to enter", true, 5600, "USD"],
         tags: ["Game Development", "Computer Science", "Art/Design"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 50,
+        id: 51,
     },
     {
         title: "Graphic Design with 3D Workshop Program",
@@ -1323,7 +1323,7 @@ const list = [
         cost: ["Graphic Design with 3D Workshop Program costs $5600 to enter", true, 5600, "USD"],
         tags: ["Design", "Humanities", "Graphic Design"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 51,
+        id: 52,
     },
     {
         title: "Illustration Program",
@@ -1348,7 +1348,7 @@ const list = [
         cost: ["Illustration Program costs $3125 to enter", true, 3125, "USD"],
         tags: ["Art/Design", "Graphic Design"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 52,
+        id: 53,
     },
     {
         title: "Illustration Program (Online)",
@@ -1373,7 +1373,7 @@ const list = [
         cost: ["Illustration Program (Online) costs $2,600 to enter", true, 2600, "USD"],
         tags: ["Art/Design", "Animation", "Graphic Design"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 53,
+        id: 54,
     },
     {
         title: "Interior Design Program",
@@ -1398,7 +1398,7 @@ const list = [
         cost: ["Interior Design Program costs $3125 to enter", true, 3125, "USD"],
         tags: ["Art/Design", "Architecture", "Environmental Science", "Humanities"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 54,
+        id: 55,
     },
     {
         title: "Motion Graphics Animation Program (Online)",
@@ -1423,7 +1423,7 @@ const list = [
         cost: ["Motion Graphics Animation Program (Online) costs $2,600 to enter", true, 2600, "USD"],
         tags: ["Graphic Design", "Animation", "Art/Design"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 55,
+        id: 56,
     },
     {
         title: "Painting and Drawing Program",
@@ -1448,7 +1448,7 @@ const list = [
         cost: ["Painting and Drawing Program costs $3125 to enter", true, 3125, "USD"],
         tags: ["Art/Design", "Humanities"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 56,
+        id: 57,
     },
     {
         title: "Portfolio Workshop Program (Online)",
@@ -1473,7 +1473,7 @@ const list = [
         cost: ["Portfolio Workshop Program (Online) costs $2,600 to enter", true, 2600, "USD"],
         tags: ["Art/Design", "Portfolio Development"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 57,
+        id: 58,
     },
     {
         title: "Printmaking and Drawing Program",
@@ -1498,7 +1498,7 @@ const list = [
         cost: ["Printmaking and Drawing Program costs $3125 to enter", true, 3125, "USD"],
         tags: ["Art/Design", "Humanities"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 58,
+        id: 59,
     },
     {
         title: "Sculpture and Drawing Program",
@@ -1523,7 +1523,7 @@ const list = [
         cost: ["Sculpture and Drawing Program costs $3125 to enter", true, 3125, "USD"],
         tags: ["Art/Design", "Visual Arts"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 59,
+        id: 60,
     },
     {
         title: "Studio Photography Program",
@@ -1553,7 +1553,7 @@ const list = [
         ],
         tags: ["Photography/Videography", "Art/Design"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 60,
+        id: 61,
     },
     {
         title: "SVA Digital Photography Program",
@@ -1578,7 +1578,7 @@ const list = [
         cost: ["SVA Digital Photography Program costs $5600 to enter", true, 5600, "USD"],
         tags: ["Photography/Videography", "Art/Design"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 61,
+        id: 62,
     },
     {
         title: "Typography with 3D Workshop Program",
@@ -1603,7 +1603,7 @@ const list = [
         cost: ["Typography with 3D Workshop Program costs $5600 to enter", true, 5600, "USD"],
         tags: ["Design", "Humanities", "Graphic Design"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 62,
+        id: 63,
     },
     {
         title: "Visual & Critical Studies: Contemporary Art New York",
@@ -1628,7 +1628,7 @@ const list = [
         cost: ["Visual & Critical Studies: Contemporary Art New York costs $4500 to enter", true, 4500, "USD"],
         tags: ["Art/Design", "Visual Arts"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 63,
+        id: 64,
     },
     {
         title: "Wake Forest Bioscience Program",
@@ -1653,7 +1653,7 @@ const list = [
         cost: ["Wake Forest Bioscience Program costs $3,000 to enter", true, 3000, "USD"],
         tags: ["STEM", "Science", "Biology", "Environmental Science", "Health Sciences", "Research"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 64,
+        id: 65,
     },
     {
         title: "Wake Forest Business Program",
@@ -1677,7 +1677,7 @@ const list = [
         cost: ["Wake Forest Business Program costs $2,800 to enter", true, 2800, "USD"],
         tags: ["Business", "Entrepreneurship", "Finance", "Marketing/Advertising", "Leadership/Management"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 65,
+        id: 66,
     },
     {
         title: "Wake Forest Cancer Medicine Program",
@@ -1702,7 +1702,7 @@ const list = [
         cost: ["Wake Forest Cancer Medicine Program costs $1295 to enter", true, 1295, "USD"],
         tags: ["Medicine", "Health Sciences", "Biology"],
         gradeRange: ["unknown"],
-        id: 66,
+        id: 67,
     },
     {
         title: "Wake Forest Finance Program",
@@ -1727,7 +1727,7 @@ const list = [
         cost: ["Wake Forest Finance Program costs $2,800 to enter", true, 2800, "USD"],
         tags: ["Finance", "Business", "Economics"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 67,
+        id: 68,
     },
     {
         title: "Wake Forest Law Program",
@@ -1751,7 +1751,7 @@ const list = [
         cost: ["Wake Forest Law Program costs 2,000 USD to enter", true, 2000, "USD"],
         tags: ["Law", "Government/Politics", "Public Speaking", "Leadership/Management"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 68,
+        id: 69,
     },
     {
         title: "Wake Forest Medicine Program",
@@ -1776,7 +1776,7 @@ const list = [
         cost: ["Wake Forest Medicine Program costs $3,000 to enter", true, 3000, "USD"],
         tags: ["Medicine", "Health Sciences", "STEM"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 69,
+        id: 70,
     },
     {
         title: "Wake Forest Psychology Course",
@@ -1801,7 +1801,7 @@ const list = [
         cost: ["Wake Forest Psychology Course costs $3,000 to enter", true, 3000, "USD"],
         tags: ["Psychology", "Biology", "Neuroscience"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 70,
+        id: 71,
     },
     {
         title: "Wake Forest Sports Medicine Program",
@@ -1826,7 +1826,7 @@ const list = [
         cost: ["Wake Forest Sports Medicine Program costs $3,000 to enter", true, 3000, "USD"],
         tags: ["Medicine", "Sports", "Biology"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 71,
+        id: 72,
     },
     {
         title: "Wake Forest Women's Medicine Program",
@@ -1850,7 +1850,7 @@ const list = [
         cost: ["Wake Forest Women's Medicine Program costs $1295 to enter", true, 1295, "USD"],
         tags: ["Medicine", "Health Sciences"],
         gradeRange: ["unknown"],
-        id: 72,
+        id: 73,
     },
     {
         title: "Entrepreneurship Online Program",
@@ -1875,7 +1875,7 @@ const list = [
         cost: ["Entrepreneurship Online Program costs $5,980 to enter", true, 5980, "USD"],
         tags: ["Entrepreneurship", "Business", "Leadership/Management"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 73,
+        id: 74,
     },
     {
         title: "Innovation Program",
@@ -1900,7 +1900,7 @@ const list = [
         cost: ["Innovation Program costs $4,750 to enter", true, 4750, "USD"],
         tags: ["Business", "Entrepreneurship"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 74,
+        id: 75,
     },
     {
         title: "Introduction to Curating",
@@ -1925,7 +1925,7 @@ const list = [
         cost: ["Introduction to Curating costs $1950 to enter", true, 1950, "USD"],
         tags: ["Art/Design", "Humanities"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 75,
+        id: 76,
     },
     {
         title: "THINK Summer Institute",
@@ -1994,7 +1994,7 @@ const list = [
             "Social Sciences and Humanities",
         ],
         gradeRange: ["unknown"],
-        id: 76,
+        id: 77,
     },
     {
         title: "PZMC Number Theory Camp",
@@ -2019,7 +2019,7 @@ const list = [
         cost: ["PZMC Number Theory Camp costs $2,450 to enter", true, 2450, "USD"],
         tags: ["Mathematics", "STEM"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 77,
+        id: 78,
     },
     {
         title: "Summer of Art",
@@ -2043,7 +2043,7 @@ const list = [
         cost: ["Summer of Art costs $4,400 to enter", true, 4400, "USD"],
         tags: ["Art/Design", "Humanities"],
         gradeRange: ["unknown"],
-        id: 78,
+        id: 79,
     },
     {
         title: "Sports in Dollars & Sense: Strategies in Sports Management",
@@ -2068,7 +2068,7 @@ const list = [
         cost: ["Sports in Dollars & Sense: Strategies in Sports Management costs $6,799 to enter", true, 6799, "USD"],
         tags: ["Business", "Leadership/Management", "Sports"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 79,
+        id: 80,
     },
     {
         title: "Manhattan College Language Camp",
@@ -2094,7 +2094,7 @@ const list = [
         cost: ["Manhattan College Language Camp costs $960.00 to enter.", true, 960, "USD"],
         tags: ["Foreign Languages", "Education"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 80,
+        id: 81,
     },
     {
         title: "Maryland Institute College of Art Pre-College Program",
@@ -2120,7 +2120,7 @@ const list = [
         cost: ["Maryland Institute College of Art Pre-College Program costs $3,600 to enter", true, 3600, "USD"],
         tags: ["Art/Design", "Visual Arts"],
         gradeRange: ["Sophomore", "Junior"],
-        id: 81,
+        id: 82,
     },
     {
         title: "MathILy",
@@ -2144,7 +2144,7 @@ const list = [
         cost: ["MathILy costs $4950 to enter in person or $2150 online.", true, 4950, "USD"],
         tags: ["Mathematics", "STEM"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 82,
+        id: 83,
     },
     {
         title: "Academic Writing: The Daily Grind",
@@ -2168,7 +2168,7 @@ const list = [
         cost: ["Academic Writing: The Daily Grind costs 2,800 USD to enter", true, 2800, "USD"],
         tags: ["Writing", "History", "Social Science"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 83,
+        id: 84,
     },
     {
         title: "Academic Writing: The Daily Grind - Online Course",
@@ -2193,7 +2193,7 @@ const list = [
         cost: ["Academic Writing: The Daily Grind - Online Course costs $795 to enter", true, 795, "USD"],
         tags: ["Writing", "History", "Social Justice", "Labor Studies"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 84,
+        id: 85,
     },
     {
         title: "Adobe Creative Skills Program",
@@ -2219,7 +2219,7 @@ const list = [
         cost: ["Adobe Creative Skills Program costs $3,895 to enter", true, 3895, "USD"],
         tags: ["Art/Design", "Graphic Design", "Computer Science"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 85,
+        id: 86,
     },
     {
         title: "Tufts College Experience",
@@ -2249,7 +2249,7 @@ const list = [
         ],
         tags: ["Academics", "College Prep", "Higher Education", "STEM", "Social Sciences", "Humanities", "Boston"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 86,
+        id: 87,
     },
     {
         title: "Aerospace Engineering Program",
@@ -2275,7 +2275,7 @@ const list = [
         cost: ["Aerospace Engineering Program costs 3895 USD to enter", true, 3895, "USD"],
         tags: ["Aviation/Aerospace", "Physics"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 87,
+        id: 88,
     },
     {
         title: "World Film History to 1945",
@@ -2299,7 +2299,7 @@ const list = [
         cost: ["World Film History to 1945 costs 13,440 USD to enter", true, 13440, "USD"],
         tags: ["Film/Cinema", "History"],
         gradeRange: ["Sophomore", "Junior"],
-        id: 88,
+        id: 89,
     },
     {
         title: "Applied Econometrics",
@@ -2323,7 +2323,7 @@ const list = [
         cost: ["Applied Econometrics costs 2,800 USD to enter", true, 2800, "USD"],
         tags: ["Economics", "Math", "Research"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 89,
+        id: 90,
     },
     {
         title: "Architecture Program",
@@ -2353,7 +2353,7 @@ const list = [
         ],
         tags: ["Architecture", "STEM", "Art/Design", "Engineering"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 90,
+        id: 91,
     },
     {
         title: "Art and Activism Program",
@@ -2379,7 +2379,7 @@ const list = [
         cost: ["Art and Activism Program costs 3,860 USD to enter", true, 3860, "USD"],
         tags: ["Art/Design", "Social Justice", "Activism"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 91,
+        id: 92,
     },
     {
         title: "Art in the Digital Age Program",
@@ -2404,7 +2404,7 @@ const list = [
         cost: ["Art in the Digital Age Program costs $4,485 to enter", true, 4485, "USD"],
         tags: ["Art/Design", "Computer Science"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 92,
+        id: 93,
     },
     {
         title: "Astro-Bioengineering: Searching for the Limit of Life Program",
@@ -2430,7 +2430,7 @@ const list = [
         cost: ["Astro-Bioengineering: Searching for the Limit of Life Program costs 3895 USD to enter", true, 3895, "USD"],
         tags: ["Physics", "Astronomy", "Engineering", "STEM"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 93,
+        id: 94,
     },
     {
         title: "Basketball Analytics Academy",
@@ -2455,7 +2455,7 @@ const list = [
         cost: ["Basketball Analytics Academy costs 3895 USD to enter", true, 3895, "USD"],
         tags: ["Sports", "Math", "Leadership", "Data Science"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 94,
+        id: 95,
     },
     {
         title: "Becoming Your Assertive Self",
@@ -2481,7 +2481,7 @@ const list = [
         cost: ["Becoming Your Assertive Self costs 3,895 USD to enter", true, 3895, "USD"],
         tags: ["Leadership/Management", "Psychology", "Humanities", "Service"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 95,
+        id: 96,
     },
     {
         title: "Biomedical Engineering Program",
@@ -2516,7 +2516,7 @@ const list = [
             "App Development",
         ],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 96,
+        id: 97,
     },
     {
         title: "Biotechnology Program",
@@ -2542,7 +2542,7 @@ const list = [
         cost: ["Biotechnology Program costs money to enter", true, 3895, "USD"],
         tags: ["STEM", "Biology", "Chemistry", "Business", "Engineering", "Research"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 97,
+        id: 98,
     },
     {
         title: "Voice Technique 101",
@@ -2567,7 +2567,7 @@ const list = [
         cost: ["Voice Technique 101 costs $1,290 to enter", true, 1290, "USD"],
         tags: ["Performing Arts", "Music"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 98,
+        id: 99,
     },
     {
         title: "Broadcast and Digital Journalism Program",
@@ -2593,7 +2593,7 @@ const list = [
         cost: ["Broadcast and Digital Journalism Program costs $3,000 to enter", true, 3000, "USD"],
         tags: ["Journalism", "Creative Writing", "Media/Broadcasting", "Photography/Videography", "Public Speaking"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 99,
+        id: 100,
     },
     {
         title: "Brooklyn Debate League Summer Camp",
@@ -2617,7 +2617,7 @@ const list = [
         cost: ["Brooklyn Debate League Summer Camp costs an unknown amount to enter", "unknown", "unknown", "unknown"],
         tags: ["Debate", "Public Speaking"],
         gradeRange: ["Sophomore", "Junior"],
-        id: 100,
+        id: 101,
     },
     {
         title: "Business Innovation, Design and Startups Program",
@@ -2643,7 +2643,7 @@ const list = [
         cost: ["Business Innovation, Design and Startups Program costs $4,485 to enter", true, 4485, "USD"],
         tags: ["Business and Entrepreneurship", "Design"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 101,
+        id: 102,
     },
     {
         title: "Business Strategy and Entrepreneurship",
@@ -2668,7 +2668,7 @@ const list = [
         cost: ["Business Strategy and Entrepreneurship costs $1,400 to enter", true, 1400, "USD"],
         tags: ["Business and Entrepreneurship", "Leadership/Management"],
         gradeRange: ["Freshman", "Sophomore", "Junior"],
-        id: 102,
+        id: 103,
     },
     {
         title: "Business, Entrepreneurship and Innovation Program",
@@ -2694,7 +2694,7 @@ const list = [
         cost: ["Business, Entrepreneurship and Innovation Program costs $2,400 to enter", true, 2400, "USD"],
         tags: ["Business and Entrepreneurship", "Leadership/Management"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 103,
+        id: 104,
     },
     {
         title: "Ceramics Program",
@@ -2719,7 +2719,7 @@ const list = [
         cost: ["Ceramics Program costs $3,000 to enter", true, 3000, "USD"],
         tags: ["Art/Design", "STEM", "History"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 104,
+        id: 105,
     },
     {
         title: "Chemical Toxicology",
@@ -2743,7 +2743,7 @@ const list = [
         cost: ["Chemical Toxicology costs $2,800 to enter", true, 2800, "USD"],
         tags: ["Chemistry", "Laboratory Work"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 105,
+        id: 106,
     },
     {
         title: "Cinematography Program",
@@ -2769,7 +2769,7 @@ const list = [
         cost: ["Cinematography Program costs money to enter", true, 3895, "USD"],
         tags: ["Film/Cinema", "Photography/Videography", "Art/Design"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 106,
+        id: 107,
     },
     {
         title: "Civil and Environmental Engineering Program",
@@ -2795,7 +2795,7 @@ const list = [
         cost: ["Civil and Environmental Engineering Program costs $3,895 to enter", true, 3895, "USD"],
         tags: ["STEM", "Engineering", "Environmental Science", "Physics", "Chemistry", "Mathematics"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 107,
+        id: 108,
     },
     {
         title: "Computer Animation and Game Development Program",
@@ -2826,7 +2826,7 @@ const list = [
         ],
         tags: ["Computer Science", "Game Development", "Art/Design"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 108,
+        id: 109,
     },
     {
         title: "Computing and Data Sciences Program",
@@ -2852,7 +2852,7 @@ const list = [
         cost: ["Computing and Data Sciences Program costs 3360 USD to enter", true, 3360, "USD"],
         tags: ["Data Science", "STEM"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 109,
+        id: 110,
     },
     {
         title: "Contemporary Sculpture Program",
@@ -2877,7 +2877,7 @@ const list = [
         cost: ["Contemporary Sculpture Program costs 3,590 USD to enter", true, 3590, "USD"],
         tags: ["Art/Design", "Engineering", "STEM"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 110,
+        id: 111,
     },
     {
         title: "Creating the Next Gen TikTok & YouTube Star Program",
@@ -2902,7 +2902,7 @@ const list = [
         cost: ["Creating the Next Gen TikTok & YouTube Star Program costs $3,895 to enter.", true, 3895, "USD"],
         tags: ["Business", "Entrepreneurship", "Journalism", "Humanities", "Marketing/Advertising", "Social Media"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 111,
+        id: 112,
     },
     {
         title: "Criminal Justice and Corporate Law Program",
@@ -2933,7 +2933,7 @@ const list = [
         ],
         tags: ["Law", "Business", "Pre-law"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 112,
+        id: 113,
     },
     {
         title: "Criminal Law at the Intersection of Race, Class, and Power",
@@ -2958,7 +2958,7 @@ const list = [
         cost: ["Criminal Law at the Intersection of Race, Class, and Power costs 2,800 USD to enter", true, 2800, "USD"],
         tags: ["Law", "Social Justice", "Pre-law", "Humanities", "Debate", "Public Speaking", "Speech"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 113,
+        id: 114,
     },
     {
         title: "Music Production Analysis",
@@ -2983,7 +2983,7 @@ const list = [
         cost: ["Music Production Analysis costs 75 USD to enter", true, 75, "USD"],
         tags: ["Music", "Performing Arts"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 114,
+        id: 115,
     },
     {
         title: "Cyber Law Program",
@@ -3009,7 +3009,7 @@ const list = [
         cost: ["Cyber Law Program costs $3,000 to enter", true, 3000, "USD"],
         tags: ["Law", "Computer Science", "Debate", "Public Speaking", "Cybersecurity"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 115,
+        id: 116,
     },
     {
         title: "Cybersecurity: Hackathon Experience",
@@ -3035,7 +3035,7 @@ const list = [
         cost: ["Cybersecurity: Hackathon Experience costs $3,895 to enter", true, 3895, "USD"],
         tags: ["Cybersecurity", "Computer Science"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 116,
+        id: 117,
     },
     {
         title: "Data Visualization & Analysis Program",
@@ -3060,7 +3060,7 @@ const list = [
         cost: ["Data Visualization & Analysis Program costs 1995 USD to enter", true, 1995, "$"],
         tags: ["Computer Science", "Data Science", "Math"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 117,
+        id: 118,
     },
     {
         title: "Developing your Artistry",
@@ -3084,7 +3084,7 @@ const list = [
         cost: ["Developing your Artistry costs 1,290 USD to enter", true, 1290, "USD"],
         tags: ["Performing Arts", "Music"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 118,
+        id: 119,
     },
     {
         title: "Digital Music Production",
@@ -3108,7 +3108,7 @@ const list = [
         cost: ["Digital Music Production costs 4700 USD to enter", true, 4700, "USD"],
         tags: ["Music", "Computer Science"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 119,
+        id: 120,
     },
     {
         title: "Electrical Engineering: Build a Project from the Circuit to a Robot",
@@ -3139,7 +3139,7 @@ const list = [
         ],
         tags: ["STEM", "Science", "Engineering", "Coding", "Robotics", "Computer Science", "Electrical Engineering"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 120,
+        id: 121,
     },
     {
         title: "Engineering Solutions for Global Health: The Human-Centered Design Process",
@@ -3169,7 +3169,7 @@ const list = [
         ],
         tags: ["Engineering", "Health Sciences", "Design", "Collaboration", "Problem Solving"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 121,
+        id: 122,
     },
     {
         title: "Engineering with Artificial Intelligence",
@@ -3194,7 +3194,7 @@ const list = [
         cost: ["Engineering with Artificial Intelligence costs $4,000 to enter", true, 4000, "USD"],
         tags: ["Artificial Intelligence (AI)", "Engineering", "Science"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 122,
+        id: 123,
     },
     {
         title: "Environment and Society Program",
@@ -3231,7 +3231,7 @@ const list = [
             "Social Science",
         ],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 123,
+        id: 124,
     },
     {
         title: "Environmental and Interior Design Program",
@@ -3257,7 +3257,7 @@ const list = [
         cost: ["Environmental and Interior Design Program costs $3,895 to enter", true, 3895, "USD"],
         tags: ["Art/Design", "Architecture", "Environmental Science"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 124,
+        id: 125,
     },
     {
         title: "Environmental Art Program",
@@ -3283,7 +3283,7 @@ const list = [
         cost: ["Environmental Art Program costs 4485 USD to enter", true, 4485, "USD"],
         tags: ["Environmental Science", "Art/Design"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 125,
+        id: 126,
     },
     {
         title: "Exeter Summer (Upper School)",
@@ -3326,7 +3326,7 @@ const list = [
             "Leadership/Management",
         ],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 126,
+        id: 127,
     },
     {
         title: "Exploring Art, Museums, and Archives",
@@ -3350,7 +3350,7 @@ const list = [
         cost: ["Exploring Art, Museums, and Archives costs $1,400 to enter", true, 1400, "USD"],
         tags: ["Art/Design", "History"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 127,
+        id: 128,
     },
     {
         title: "Exploring Cryptography Through Gamified Programming",
@@ -3375,7 +3375,7 @@ const list = [
         cost: ["Exploring Cryptography Through Gamified Programming costs 2,800 USD to enter", true, 2800, "USD"],
         tags: ["Coding/Programming", "Game Development", "Computer Science", "Math"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 128,
+        id: 129,
     },
     {
         title: "Exploring Cryptography Through Gamified Programming - Online Course",
@@ -3405,7 +3405,7 @@ const list = [
         ],
         tags: ["Coding/Programming", "Computer Science"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 129,
+        id: 130,
     },
     {
         title: "Fashion & Accessory Design Program",
@@ -3431,7 +3431,7 @@ const list = [
         cost: ["Fashion & Accessory Design Program costs $3,895 to enter", true, 3895, "USD"],
         tags: ["Art/Design", "Fashion", "Business"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 130,
+        id: 131,
     },
     {
         title: "Film Scoring 101",
@@ -3456,7 +3456,7 @@ const list = [
         cost: ["Film Scoring 101 costs 75 USD to enter", true, 75, "USD"],
         tags: ["Music", "Film/Cinema"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 131,
+        id: 132,
     },
     {
         title: "Filmmaking Program",
@@ -3482,7 +3482,7 @@ const list = [
         cost: ["Filmmaking Program costs 3,895 USD to enter", true, 3895, "USD"],
         tags: ["Film/Cinema", "Art/Design", "Creative Writing"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 132,
+        id: 133,
     },
     {
         title: "Food Studies: Farm, Food, Futures",
@@ -3508,7 +3508,7 @@ const list = [
         cost: ["Food Studies: Farm, Food, Futures costs 3895 USD to enter", true, 3895, "USD"],
         tags: ["Agriculture", "Environmental Science", "Health Sciences", "Science"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 133,
+        id: 134,
     },
     {
         title: "From Gel to Sell: Research, Ethics, and Business of Biomaterials",
@@ -3538,7 +3538,7 @@ const list = [
         ],
         tags: ["Research", "Science", "Engineering", "Business", "Medicine"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 134,
+        id: 135,
     },
     {
         title: "Game Design and eSports Program",
@@ -3569,7 +3569,7 @@ const list = [
         ],
         tags: ["Game Development", "Computer Science", "Art/Design"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 135,
+        id: 136,
     },
     {
         title: "Graphic Design Program",
@@ -3595,7 +3595,7 @@ const list = [
         cost: ["Graphic Design Program costs $3,895 to enter", true, 3895, "USD"],
         tags: ["Design", "Humanities", "Art/Design", "Graphic Design", "Computer Science"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 136,
+        id: 137,
     },
     {
         title: "Healthcare Professions and Modern Medicine",
@@ -3625,7 +3625,7 @@ const list = [
         ],
         tags: ["Medicine", "Health Sciences", "STEM"],
         gradeRange: ["Freshman", "Sophomore", "Junior"],
-        id: 137,
+        id: 138,
     },
     {
         title: "Hot Glass Workshop",
@@ -3650,7 +3650,7 @@ const list = [
         cost: ["Hot Glass Workshop costs 3,895 USD to enter", true, 3895, "USD"],
         tags: ["Art/Design", "STEM", "Physics"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 138,
+        id: 139,
     },
     {
         title: "Industrial and Interaction Design Program",
@@ -3676,7 +3676,7 @@ const list = [
         cost: ["Industrial and Interaction Design Program costs $3,895 to enter", true, 3895, "USD"],
         tags: ["Art/Design", "Engineering", "STEM"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 139,
+        id: 140,
     },
     {
         title: "Information Reporting and Presentation: Business Communications",
@@ -3701,7 +3701,7 @@ const list = [
         cost: ["Information Reporting and Presentation: Business Communications costs 4485 USD to enter", true, 4485, "USD"],
         tags: ["Business", "Leadership/Management"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 140,
+        id: 141,
     },
     {
         title: "International Relations Program",
@@ -3727,7 +3727,7 @@ const list = [
         cost: ["International Relations Program costs 4485 USD to enter", true, 4485, "USD"],
         tags: ["International Studies/Global Affairs", "Political Science"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 141,
+        id: 142,
     },
     {
         title: "Introduction to American Government/Politics Program",
@@ -3752,7 +3752,7 @@ const list = [
         cost: ["Introduction to American Government/Politics Program costs 4485 USD to enter", true, 4485, "USD"],
         tags: ["Government/Politics", "Political Science", "History"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 142,
+        id: 143,
     },
     {
         title: "Introduction to Film and Media Arts Program",
@@ -3778,7 +3778,7 @@ const list = [
         cost: ["Introduction to Film and Media Arts Program costs $3,895 to enter", true, 3895, "USD"],
         tags: ["Film/Cinema", "Photography/Videography", "Visual Arts", "Performing Arts"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 143,
+        id: 144,
     },
     {
         title: "It Girls: Empowering Women in Technology",
@@ -3809,7 +3809,7 @@ const list = [
         ],
         tags: ["STEM", "Computer Science", "Women in STEM", "Leadership"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 144,
+        id: 145,
     },
     {
         title: "Journalism From InstA to Zines Program",
@@ -3835,7 +3835,7 @@ const list = [
         cost: ["Journalism From InstA to Zines Program costs money to enter", true, 3895, "USD"],
         tags: ["Journalism", "Writing", "Creative Writing", "Social Justice"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 145,
+        id: 146,
     },
     {
         title: "Juniper Institute for Young Writers",
@@ -3860,7 +3860,7 @@ const list = [
         cost: ["Juniper Institute for Young Writers costs $1,000 to enter", true, 1000, "USD"],
         tags: ["Creative Writing", "Writing", "Literature", "Social Science"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 146,
+        id: 147,
     },
     {
         title: "Lab Science Investigations: Antimicrobial Resistance",
@@ -3885,7 +3885,7 @@ const list = [
         cost: ["Lab Science Investigations: Antimicrobial Resistance costs $5,000 to enter", true, 5000, "USD"],
         tags: ["STEM", "Science", "Research", "Biology", "Chemistry", "Medicine", "Health Sciences"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 147,
+        id: 148,
     },
     {
         title: "Liberal Studies Program",
@@ -3920,7 +3920,7 @@ const list = [
             "Speech",
         ],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 148,
+        id: 149,
     },
     {
         title: "Songwriting: Writing Hit Songs",
@@ -3945,7 +3945,7 @@ const list = [
         cost: ["Songwriting: Writing Hit Songs costs $1,290 to enter", true, 1290, "USD"],
         tags: ["Music", "Creative Writing", "Humanities"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 149,
+        id: 150,
     },
     {
         title: "MakerSpace & 3D Printing Program",
@@ -3971,7 +3971,7 @@ const list = [
         cost: ["MakerSpace & 3D Printing Program costs $3,895 to enter", true, 3895, "USD"],
         tags: ["Art/Design", "Engineering", "Computer Science", "STEM"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 150,
+        id: 151,
     },
     {
         title: "Making Comics Program",
@@ -3997,7 +3997,7 @@ const list = [
         cost: ["Making Comics Program costs 3,000 USD to enter", true, 3000, "USD"],
         tags: ["Art/Design", "Graphic Design"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 151,
+        id: 152,
     },
     {
         title: "Media Literacy, Popular Culture, and Democracy Program",
@@ -4023,7 +4023,7 @@ const list = [
         cost: ["Media Literacy, Popular Culture, and Democracy Program costs 10280 USD to enter", true, 10280, "USD"],
         tags: ["Media/Broadcasting,Journalism,Writing,Public Speaking"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 152,
+        id: 153,
     },
     {
         title: "Medical Research Panels",
@@ -4047,7 +4047,7 @@ const list = [
         cost: ["Medical Research Panels costs $1,400 to enter", true, 1400, "USD"],
         tags: ["STEM", "Science", "Pre-med", "Biology", "Research", "Medicine", "Health"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 153,
+        id: 154,
     },
     {
         title: "Microeconomics Program",
@@ -4078,7 +4078,7 @@ const list = [
         ],
         tags: ["Economics", "STEM"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 154,
+        id: 155,
     },
     {
         title: "Movies and the Meaning of Life Program",
@@ -4104,7 +4104,7 @@ const list = [
         cost: ["Movies and the Meaning of Life Program costs $3,895 USD to enter", true, 3895, "USD"],
         tags: ["Philosophy", "Film/Cinema"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 155,
+        id: 156,
     },
     {
         title: "Music Business 101",
@@ -4129,7 +4129,7 @@ const list = [
         cost: ["Music Business 101 costs $1,290 to enter", true, 1290, "USD"],
         tags: ["Music", "Business", "Leadership/Management", "Entrepreneurship", "Performing Arts"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 156,
+        id: 157,
     },
     {
         title: "Music Theory 101",
@@ -4154,7 +4154,7 @@ const list = [
         cost: ["Music Theory 101 costs $1,290 to enter", true, 1290, "USD"],
         tags: ["Music", "Humanities"],
         gradeRange: ["unknown"],
-        id: 157,
+        id: 158,
     },
     {
         title: "Musical Theater Program",
@@ -4180,7 +4180,7 @@ const list = [
         cost: ["Musical Theater Program costs $3,895 USD to enter", true, 3895, "USD"],
         tags: ["Performing Arts", "Theatre/Drama"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 158,
+        id: 159,
     },
     {
         title: "Neural Integration and Sensory Pathways",
@@ -4205,7 +4205,7 @@ const list = [
         cost: ["Neural Integration and Sensory Pathways costs 2,800 USD to enter", true, 2800, "USD"],
         tags: ["STEM", "Neuroscience"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 159,
+        id: 160,
     },
     {
         title: "Neuroscience: Introduction to the Brain Program",
@@ -4235,7 +4235,7 @@ const list = [
         ],
         tags: ["Biology", "Science", "STEM", "Medicine"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 160,
+        id: 161,
     },
     {
         title: "Newhouse: First Year Communications Experience",
@@ -4260,7 +4260,7 @@ const list = [
         cost: ["Newhouse: First Year Communications Experience costs 10,280 USD to enter", true, 10280, "USD"],
         tags: ["Media/Broadcasting", "Journalism"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 161,
+        id: 162,
     },
     {
         title: "Observational Drawing Program",
@@ -4285,7 +4285,7 @@ const list = [
         cost: ["Observational Drawing Program costs 3,590 USD to enter", true, 3590, "USD"],
         tags: ["Art/Design", "Visual Arts"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 162,
+        id: 163,
     },
     {
         title: "Ocean Sustainability in the Anthropocene",
@@ -4310,7 +4310,7 @@ const list = [
         cost: ["Ocean Sustainability in the Anthropocene costs $2,100 to enter", true, 2100, "USD"],
         tags: ["Environmental Science", "Climate Change", "Biology", "Sustainability"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 163,
+        id: 164,
     },
     {
         title: "Painting Studio Program",
@@ -4352,7 +4352,7 @@ const list = [
             "College Credit",
         ],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 164,
+        id: 165,
     },
     {
         title: "Pharmacy Summer Institute",
@@ -4377,7 +4377,7 @@ const list = [
         cost: ["Pharmacy Summer Institute costs $279 to enter", true, 279, "USD"],
         tags: ["STEM", "Science", "Pre-med", "Research", "Medicine", "Health", "Pharmacy"],
         gradeRange: ["Sophomore", "Junior", "Senior", "College"],
-        id: 165,
+        id: 166,
     },
     {
         title: "Political Theory Program",
@@ -4403,7 +4403,7 @@ const list = [
         cost: ["Political Theory Program costs $4,485 to enter", true, 4485, "USD"],
         tags: ["Social Science", "Government/Politics"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 166,
+        id: 167,
     },
     {
         title: "Powerful Narration in Creative Writing",
@@ -4428,7 +4428,7 @@ const list = [
         cost: ["Powerful Narration in Creative Writing costs 2,800 USD to enter", true, 2800, "USD"],
         tags: ["Literature", "Creative Writing"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 167,
+        id: 168,
     },
     {
         title: "Pre-Med and Health Professions Program",
@@ -4454,7 +4454,7 @@ const list = [
         cost: ["Pre-Med and Health Professions Program costs 3895 USD to enter", true, 3895, "USD"],
         tags: ["Health Sciences", "Pre-med", "Biology", "Psychology", "Research", "Medicine"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 168,
+        id: 169,
     },
     {
         title: "Research Service-Learning Project: Self-Healing as a Health Right for All",
@@ -4484,7 +4484,7 @@ const list = [
         ],
         tags: ["Social Justice", "Community Service", "Research", "Health Sciences"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 169,
+        id: 170,
     },
     {
         title: "Rowan University STEAM Academy",
@@ -4519,7 +4519,7 @@ const list = [
             "Residential Program",
         ],
         gradeRange: ["7th", "8th", "9th"],
-        id: 170,
+        id: 171,
     },
     {
         title: "SAT and College Admissions Prep Program",
@@ -4544,7 +4544,7 @@ const list = [
         cost: ["SAT and College Admissions Prep Program costs 1995 USD to enter", true, 1995, "USD"],
         tags: ["Education", "College Admissions"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 171,
+        id: 172,
     },
     {
         title: "Screen Printing Program",
@@ -4569,7 +4569,7 @@ const list = [
         cost: ["Screen Printing Program costs 4485 USD to enter", true, 4485, "USD"],
         tags: ["Art/Design", "Graphic Design"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 172,
+        id: 173,
     },
     {
         title: "Setnor Music Production and Audio Engineering Program",
@@ -4595,7 +4595,7 @@ const list = [
         cost: ["Setnor Music Production and Audio Engineering Program costs 3895 USD to enter", true, 3895, "USD"],
         tags: ["Music", "Engineering", "Art/Design"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 173,
+        id: 174,
     },
     {
         title: "Social Problems Program",
@@ -4621,7 +4621,7 @@ const list = [
         cost: ["Social Problems Program costs 4485 USD to enter", true, 4485, "USD"],
         tags: ["Social Science", "Sociology"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 174,
+        id: 175,
     },
     {
         title: "Social Psychology and the Law",
@@ -4645,7 +4645,7 @@ const list = [
         cost: ["Social Psychology and the Law costs 2,800 USD to enter", true, 2800, "USD"],
         tags: ["Law", "Social Science"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 175,
+        id: 176,
     },
     {
         title: "Sociology of Sport Program",
@@ -4671,7 +4671,7 @@ const list = [
         cost: ["Sociology of Sport Program costs 4485 USD to enter", true, 4485, "USD"],
         tags: ["Social Science", "Sports"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 176,
+        id: 177,
     },
     {
         title: "Sociology Program",
@@ -4697,7 +4697,7 @@ const list = [
         cost: ["Sociology Program costs 4485 USD to enter", true, 4485, "USD"],
         tags: ["Social Science", "Humanities"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 177,
+        id: 178,
     },
     {
         title: "Sound Engineering and Audio Production Program",
@@ -4723,7 +4723,7 @@ const list = [
         cost: ["Sound Engineering and Audio Production Program costs $3,895 to enter", true, 3895, "USD"],
         tags: ["STEM", "Science", "Engineering", "Music", "Design"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 178,
+        id: 179,
     },
     {
         title: "Sport Broadcasting\tProgram",
@@ -4748,7 +4748,7 @@ const list = [
         cost: ["Sport Broadcasting Program costs 3,895 USD to enter", true, 3895, "USD"],
         tags: ["Sports", "Journalism", "Media/Broadcasting"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 179,
+        id: 180,
     },
     {
         title: "Sport Management Program",
@@ -4774,7 +4774,7 @@ const list = [
         cost: ["Sport Management Program costs 3,895 USD to enter", true, 3895, "USD"],
         tags: ["Sports", "Business", "Leadership/Management"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 180,
+        id: 181,
     },
     {
         title: "Sport Technology and Digital Media Program",
@@ -4800,7 +4800,7 @@ const list = [
         cost: ["Sport Technology and Digital Media Program costs $3,000 to enter", true, 3000, "USD"],
         tags: ["Sports", "Design", "STEM", "Graphic Design", "Photography/Videography", "Web Development"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 181,
+        id: 182,
     },
     {
         title: "Team and Leadership Academy",
@@ -4826,7 +4826,7 @@ const list = [
         cost: ["Team and Leadership Academy costs 3895 USD to enter", true, 3895, "USD"],
         tags: ["Leadership/Management", "Outdoor-adventure"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 182,
+        id: 183,
     },
     {
         title: "The Sustainable CEO \u2013 Transformative Business Leadership",
@@ -4851,7 +4851,7 @@ const list = [
         cost: ["The Sustainable CEO \u2013 Transformative Business Leadership costs 2,800 USD to enter", true, 2800, "USD"],
         tags: ["Business and Entrepreneurship", "Leadership/Management", "Sustainability"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 183,
+        id: 184,
     },
     {
         title: "The Woman Ruler: Powerful Female Leaders in Greece and Rome",
@@ -4876,7 +4876,7 @@ const list = [
         cost: ["The Woman Ruler: Powerful Female Leaders in Greece and Rome costs 2,800 USD to enter", true, 2800, "USD"],
         tags: ["History", "Social Justice", "Leadership", "Art/Design"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 184,
+        id: 185,
     },
     {
         title: "Truth, Justice, and Reconciliation in Post-Conflict Societies",
@@ -4901,7 +4901,7 @@ const list = [
         cost: ["Truth, Justice, and Reconciliation in Post-Conflict Societies costs 2,800 USD to enter", true, 2800, "USD"],
         tags: ["International Studies/Global Affairs", "Human Rights", "Conflict Resolution"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 185,
+        id: 186,
     },
     {
         title: "World Urban Geography\tProgram",
@@ -4927,7 +4927,7 @@ const list = [
         cost: ["World Urban Geography Program costs $4,485 to enter", true, 4485, "USD"],
         tags: ["Social Science", "Geography"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 186,
+        id: 187,
     },
     {
         title: "Writers Lab",
@@ -4951,7 +4951,7 @@ const list = [
         cost: ["Writers Lab costs $4,725 to enter", true, 4725, "USD"],
         tags: ["Writing", "Creative Writing", "Literature", "Public Speaking", "Debate", "Humanities"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 187,
+        id: 188,
     },
     {
         title: "High School Summer Conservatory",
@@ -4976,7 +4976,7 @@ const list = [
         cost: ["High School Summer Conservatory costs $7,160 to enter", true, 7160, "USD"],
         tags: ["Performing Arts", "Theatre/Drama", "Creative Writing", "Music", "Dance"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 188,
+        id: 189,
     },
     {
         title: "Hip Hop / Street Dance Summer Institute",
@@ -5001,7 +5001,7 @@ const list = [
         cost: ["Hip Hop / Street Dance Summer Institute costs 350 USD to enter", true, 350, "USD"],
         tags: ["Dance", "Performing Arts"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 189,
+        id: 190,
     },
     {
         title: "Yale Young Writers' Workshop",
@@ -5026,7 +5026,7 @@ const list = [
         cost: ["Yale Young Writers' Workshop costs $950 to enter", true, 950, "USD"],
         tags: ["Writing", "Creative Writing", "Literature", "Journalism", "Humanities"],
         gradeRange: ["Senior", "Freshman"],
-        id: 190,
+        id: 191,
     },
     {
         title: "Writing about Family",
@@ -5051,7 +5051,7 @@ const list = [
         cost: ["Writing about Family costs $4850 to enter", true, 4850, "USD"],
         tags: ["Social Science", "Humanities", "Writing", "Creative Writing"],
         gradeRange: ["Senior", "Freshman"],
-        id: 191,
+        id: 192,
     },
     {
         title: "Leadership Institute",
@@ -5081,7 +5081,7 @@ const list = [
         ],
         tags: ["Leadership/Management", "Social Justice"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 192,
+        id: 193,
     },
     {
         title: "Pre-Baccalaureate",
@@ -5106,7 +5106,7 @@ const list = [
         cost: ["Pre-Baccalaureate costs $5,113 to $10,074 to enter", true, 5113, "USD"],
         tags: ["STEM", "Science", "Math", "Humanities", "Visual Arts", "Performing Arts"],
         gradeRange: ["Senior", "Graduate"],
-        id: 193,
+        id: 194,
     },
     {
         title: "Ringling College of Art and Design PreCollege",
@@ -5142,7 +5142,7 @@ const list = [
             "Animation",
         ],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 194,
+        id: 195,
     },
     {
         title: "STEM for Rising 9th and 10th Graders",
@@ -5183,7 +5183,7 @@ const list = [
             "Computer Science",
         ],
         gradeRange: ["Freshman", "Sophomore"],
-        id: 195,
+        id: 196,
     },
     {
         title: "Areteem Summer Math Camps",
@@ -5208,7 +5208,7 @@ const list = [
         cost: ["Areteem Summer Math Camps costs $4,995 to enter", true, 4995, "USD"],
         tags: ["STEM", "Mathematics", "Engineering", "Computer Science"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 196,
+        id: 197,
     },
     {
         title: "Coriell Summer Experience for Students",
@@ -5233,7 +5233,7 @@ const list = [
         cost: ["Coriell Summer Experience for Students is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Science", "Research", "Biology", "Education", "Mentoring", "Career Exploration"],
         gradeRange: ["Senior"],
-        id: 197,
+        id: 198,
     },
     {
         title: "Creative Writing Workshop",
@@ -5258,7 +5258,7 @@ const list = [
         cost: ["Creative Writing Workshop costs 4745 USD to enter", true, 4745, "USD"],
         tags: ["Literature", "Creative Writing"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 198,
+        id: 199,
     },
     {
         title: "Middlebury Summer Language Academy",
@@ -5284,7 +5284,7 @@ const list = [
         cost: ["Middlebury Summer Language Academy costs $4,175 to enter", true, 4175, "USD"],
         tags: ["Foreign Languages", "Education"],
         gradeRange: ["Graduate"],
-        id: 199,
+        id: 200,
     },
     {
         title: "Pre-Baccalaureate Program",
@@ -5309,7 +5309,7 @@ const list = [
         cost: ["Pre-Baccalaureate Program costs $13,725 to enter", true, 13725, "USD"],
         tags: ["College Preparation", "Summer Program"],
         gradeRange: ["Junior", "Senior"],
-        id: 200,
+        id: 201,
     },
     {
         title: "Pre-Pharmacy Enrichment Program",
@@ -5334,7 +5334,7 @@ const list = [
         cost: ["Pre-Pharmacy Enrichment Program costs 20 USD to enter", true, 20, "USD"],
         tags: ["Pharmacy", "Health Sciences", "STEM", "Medicine", "Research"],
         gradeRange: ["Senior"],
-        id: 201,
+        id: 202,
     },
     {
         title: "Sea Camp Program",
@@ -5358,7 +5358,7 @@ const list = [
         cost: ["Sea Camp Program costs $525 to enter", true, 525, "USD"],
         tags: ["STEM", "Science", "Biology", "Outdoor-adventure", "Environmental Science"],
         gradeRange: ["unknown"],
-        id: 202,
+        id: 203,
     },
     {
         title: "Snow Farm Summer",
@@ -5382,7 +5382,7 @@ const list = [
         cost: ["Snow Farm Summer costs $3750/session to enter", true, 3750, "USD"],
         tags: ["Art/Design", "Creative Writing"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 203,
+        id: 204,
     },
     {
         title: "Summer Science & Engineering Program",
@@ -5407,7 +5407,7 @@ const list = [
         cost: ["Summer Science & Engineering Program costs 4,745 USD to enter", true, 4745, "USD"],
         tags: ["STEM", "Science", "Engineering", "Biology", "Chemistry", "Robotics", "Physics"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 204,
+        id: 205,
     },
     {
         title: "Women, Gender & Representation Program",
@@ -5432,7 +5432,7 @@ const list = [
         cost: ["Women, Gender & Representation Program costs 4745 USD to enter", true, 4745, "USD"],
         tags: ["Social Justice", "History", "Gender Studies", "Humanities"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 205,
+        id: 206,
     },
     {
         title: "Youth Volunteer Program",
@@ -5457,7 +5457,7 @@ const list = [
         cost: ["Youth Volunteer Program is a free activity", false, 0, "unknown"],
         tags: ["Service", "Leadership", "Humanities", "Community Service", "Youth Development", "Education"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 206,
+        id: 207,
     },
     {
         title: "Coaching Detroit Forward's Journalism Camp",
@@ -5482,7 +5482,7 @@ const list = [
         cost: ["Coaching Detroit Forward's Journalism Camp costs 599 USD to enter", true, 599, "USD"],
         tags: ["Journalism", "Writing", "Education", "Mentoring", "Leadership"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 207,
+        id: 208,
     },
     {
         title: "Anthropology Program",
@@ -5506,7 +5506,7 @@ const list = [
         cost: ["Anthropology Program costs 3100 USD to enter", true, 3100, "USD"],
         tags: ["Social Science", "Cultural Studies"],
         gradeRange: ["8th", "9th", "10th", "11th", "12th"],
-        id: 208,
+        id: 209,
     },
     {
         title: "Archaeology Program",
@@ -5530,7 +5530,7 @@ const list = [
         cost: ["Archaeology Program costs 3101 USD to enter", true, 3101, "USD"],
         tags: ["History", "Social Science"],
         gradeRange: ["8th", "9th", "10th", "11th", "12th"],
-        id: 209,
+        id: 210,
     },
     {
         title: "Art History Program",
@@ -5554,7 +5554,7 @@ const list = [
         cost: ["Art History Program costs $3102 to enter", true, 3102, "USD"],
         tags: ["Art/Design", "History"],
         gradeRange: ["8th", "9th", "10th", "11th", "12th"],
-        id: 210,
+        id: 211,
     },
     {
         title: "Astronomy Program",
@@ -5578,7 +5578,7 @@ const list = [
         cost: ["Astronomy Program costs 3103 USD to enter", true, 3103, "USD"],
         tags: ["STEM", "Science", "Astronomy"],
         gradeRange: ["8th", "9th", "10th", "11th", "12th"],
-        id: 211,
+        id: 212,
     },
     {
         title: "Biology Program",
@@ -5602,7 +5602,7 @@ const list = [
         cost: ["Biology Program costs $3300 to enter", true, 3300, "USD"],
         tags: ["Biology", "STEM", "Science", "Research", "Pre-med", "Medicine", "Health"],
         gradeRange: ["8th", "9th", "10th", "11th", "12th"],
-        id: 212,
+        id: 213,
     },
     {
         title: "BU International Relations Program",
@@ -5627,7 +5627,7 @@ const list = [
         cost: ["BU International Relations Program costs $3119 to enter", true, 3119, "USD"],
         tags: ["International Studies/Global Affairs", "Political Science"],
         gradeRange: ["8th", "9th", "10th", "11th", "12th"],
-        id: 213,
+        id: 214,
     },
     {
         title: "BU Sociology Program",
@@ -5651,7 +5651,7 @@ const list = [
         cost: ["BU Sociology Program costs 3135 USD to enter", true, 3135, "USD"],
         tags: ["Social Science", "Sociology"],
         gradeRange: ["8th", "9th", "10th", "11th", "12th"],
-        id: 214,
+        id: 215,
     },
     {
         title: "Business Program",
@@ -5675,7 +5675,7 @@ const list = [
         cost: ["Business Program costs 3105 USD to enter", true, 3105, "USD"],
         tags: ["Business", "Economics"],
         gradeRange: ["8th", "9th", "10th", "11th", "12th"],
-        id: 215,
+        id: 216,
     },
     {
         title: "Chemistry Program",
@@ -5699,7 +5699,7 @@ const list = [
         cost: ["Chemistry Program costs $3300 to enter", true, 3300, "$"],
         tags: ["Chemistry", "STEM"],
         gradeRange: ["8th", "9th", "10th", "11th", "12th"],
-        id: 216,
+        id: 217,
     },
     {
         title: "Chinese Program",
@@ -5723,7 +5723,7 @@ const list = [
         cost: ["Chinese Program costs 3107 USD to enter", true, 3107, "USD"],
         tags: ["Foreign Languages", "Culture/History"],
         gradeRange: ["8th", "9th", "10th", "11th", "12th"],
-        id: 217,
+        id: 218,
     },
     {
         title: "Cinema and Media Studies Program",
@@ -5748,7 +5748,7 @@ const list = [
         cost: ["Cinema and Media Studies Program costs 3108 USD to enter", true, 3108, "USD"],
         tags: ["Film/Cinema", "Media/Broadcasting"],
         gradeRange: ["8th", "9th", "10th", "11th", "12th"],
-        id: 218,
+        id: 219,
     },
     {
         title: "Classical Studies Program",
@@ -5773,7 +5773,7 @@ const list = [
         cost: ["Classical Studies Program costs 3109 USD to enter", true, 3109, "USD"],
         tags: ["Film/Cinema", "History", "Social Science", "Research"],
         gradeRange: ["8th", "9th", "10th", "11th", "12th"],
-        id: 219,
+        id: 220,
     },
     {
         title: "Creative Writing Program",
@@ -5798,7 +5798,7 @@ const list = [
         cost: ["Creative Writing Program costs 3111 USD to enter", true, 3111, "USD"],
         tags: ["Creative Writing", "Literature"],
         gradeRange: ["8th", "9th", "10th", "11th", "12th"],
-        id: 220,
+        id: 221,
     },
     {
         title: "Earth and Environment Program",
@@ -5823,7 +5823,7 @@ const list = [
         cost: ["Earth and Environment Program costs $3112 to enter", true, 3112, "USD"],
         tags: ["Environmental Science", "Sustainability"],
         gradeRange: ["8th", "9th", "10th", "11th", "12th"],
-        id: 221,
+        id: 222,
     },
     {
         title: "Economics Program",
@@ -5847,7 +5847,7 @@ const list = [
         cost: ["Economics Program costs 3113 USD to enter", true, 3113, "USD"],
         tags: ["Economics", "Social Science"],
         gradeRange: ["8th", "9th", "10th", "11th", "12th"],
-        id: 222,
+        id: 223,
     },
     {
         title: "English Literature Program",
@@ -5872,7 +5872,7 @@ const list = [
         cost: ["English Literature Program costs $3114 to enter", true, 3114, "USD"],
         tags: ["Literature", "Humanities"],
         gradeRange: ["8th", "9th", "10th", "11th", "12th"],
-        id: 223,
+        id: 224,
     },
     {
         title: "Film and Television Program",
@@ -5897,7 +5897,7 @@ const list = [
         cost: ["Film and Television Program costs 3115 USD to enter", true, 3115, "USD"],
         tags: ["Film/Cinema", "Media/Broadcasting", "Digital/Multimedia Expression", "Creativity/Innovation"],
         gradeRange: ["8th", "9th", "10th", "11th", "12th"],
-        id: 224,
+        id: 225,
     },
     {
         title: "French Program",
@@ -5922,7 +5922,7 @@ const list = [
         cost: ["French Program costs $3116 to enter", true, 3116, "USD"],
         tags: ["Foreign Languages", "Humanities"],
         gradeRange: ["8th", "9th", "10th", "11th", "12th"],
-        id: 225,
+        id: 226,
     },
     {
         title: "History Program",
@@ -5946,7 +5946,7 @@ const list = [
         cost: ["History Program costs 3117 USD to enter", true, 3117, "USD"],
         tags: ["History", "Social Science"],
         gradeRange: ["8th", "9th", "10th", "11th", "12th"],
-        id: 226,
+        id: 227,
     },
     {
         title: "Hospitality Administration Program",
@@ -5971,7 +5971,7 @@ const list = [
         cost: ["Hospitality Administration Program costs 3118 USD to enter", true, 3118, "USD"],
         tags: ["Business", "Entrepreneurship", "Leadership"],
         gradeRange: ["8th", "9th", "10th", "11th", "12th"],
-        id: 227,
+        id: 228,
     },
     {
         title: "Italian Program",
@@ -5996,7 +5996,7 @@ const list = [
         cost: ["Italian Program costs 3120 USD to enter", true, 3120, "USD"],
         tags: ["Foreign Languages", "Culture"],
         gradeRange: ["8th", "9th", "10th", "11th", "12th"],
-        id: 228,
+        id: 229,
     },
     {
         title: "Japanese Program",
@@ -6021,7 +6021,7 @@ const list = [
         cost: ["Japanese Program costs 3121 USD to enter", true, 3121, "USD"],
         tags: ["Foreign Languages", "Humanities"],
         gradeRange: ["8th", "9th", "10th", "11th", "12th"],
-        id: 229,
+        id: 230,
     },
     {
         title: "Languages Program",
@@ -6046,7 +6046,7 @@ const list = [
         cost: ["Languages Program costs 3122 USD to enter", true, 3122, "USD"],
         tags: ["Languages", "Foreign Languages", "Social Science", "Humanities"],
         gradeRange: ["8th", "9th", "10th", "11th", "12th"],
-        id: 230,
+        id: 231,
     },
     {
         title: "Latin Program",
@@ -6071,7 +6071,7 @@ const list = [
         cost: ["Latin Program costs $3100 to enter", true, 3100, "USD"],
         tags: ["Languages", "History", "Humanities"],
         gradeRange: ["8th", "9th", "10th", "11th", "12th"],
-        id: 231,
+        id: 232,
     },
     {
         title: "Management Program",
@@ -6095,7 +6095,7 @@ const list = [
         cost: ["Management Program costs 3820 USD to enter", true, 3820, "USD"],
         tags: ["Leadership/Management", "Project Management", "Business"],
         gradeRange: ["8th", "9th", "10th", "11th", "12th"],
-        id: 232,
+        id: 233,
     },
     {
         title: "Mass Communication Program",
@@ -6120,7 +6120,7 @@ const list = [
         cost: ["Mass Communication Program costs 3125 USD to enter", true, 3125, "USD"],
         tags: ["Media/Broadcasting", "Journalism", "Writing", "Humanities"],
         gradeRange: ["8th", "9th", "10th", "11th", "12th"],
-        id: 233,
+        id: 234,
     },
     {
         title: "Mathematics and Statistics Program",
@@ -6145,7 +6145,7 @@ const list = [
         cost: ["Mathematics and Statistics Program costs $3126 to enter", true, 3126, "USD"],
         tags: ["STEM", "Math", "Computer Science", "Engineering", "Physics", "Economics", "Business"],
         gradeRange: ["8th", "9th", "10th", "11th", "12th"],
-        id: 234,
+        id: 235,
     },
     {
         title: "Music Program",
@@ -6170,7 +6170,7 @@ const list = [
         cost: ["Music Program costs $3127 to enter", true, 3127, "USD"],
         tags: ["Music", "Performing Arts"],
         gradeRange: ["8th", "9th", "10th", "11th", "12th"],
-        id: 235,
+        id: 236,
     },
     {
         title: "Neuroscience Program",
@@ -6194,7 +6194,7 @@ const list = [
         cost: ["Neuroscience Program costs 3128 USD to enter", true, 3128, "USD"],
         tags: ["STEM", "Science", "Biology", "Medicine", "Health Sciences"],
         gradeRange: ["8th", "9th", "10th", "11th", "12th"],
-        id: 236,
+        id: 237,
     },
     {
         title: "Philosophy Program",
@@ -6218,7 +6218,7 @@ const list = [
         cost: ["Philosophy Program costs 3129 USD to enter", true, 3129, "USD"],
         tags: ["Humanities", "Debate", "Critical Thinking"],
         gradeRange: ["8th", "9th", "10th", "11th", "12th"],
-        id: 237,
+        id: 238,
     },
     {
         title: "Photography Program",
@@ -6242,7 +6242,7 @@ const list = [
         cost: ["Photography Program costs $3130 to enter", true, 3130, "USD"],
         tags: ["Photography/Videography", "Art/Design"],
         gradeRange: ["8th", "9th", "10th", "11th", "12th"],
-        id: 238,
+        id: 239,
     },
     {
         title: "Physics Program",
@@ -6266,7 +6266,7 @@ const list = [
         cost: ["Physics Program costs 3131 USD to enter", true, 3131, "USD"],
         tags: ["STEM", "Science", "Math", "Engineering", "Research", "Physics"],
         gradeRange: ["8th", "9th", "10th", "11th", "12th"],
-        id: 239,
+        id: 240,
     },
     {
         title: "Psychology Program",
@@ -6290,7 +6290,7 @@ const list = [
         cost: ["Psychology Program costs 3133 USD to enter", true, 3133, "USD"],
         tags: ["Psychology", "Education", "Research", "Summer Program", "International"],
         gradeRange: ["8th", "9th", "10th", "11th", "12th"],
-        id: 240,
+        id: 241,
     },
     {
         title: "Religion Program",
@@ -6314,7 +6314,7 @@ const list = [
         cost: ["Religion Program costs $3134 to enter", true, 3134, "USD"],
         tags: ["Humanities", "Philosophy", "Religion", "Ethics", "Social Science"],
         gradeRange: ["8th", "9th", "10th", "11th", "12th"],
-        id: 241,
+        id: 242,
     },
     {
         title: "Spanish Program",
@@ -6339,7 +6339,7 @@ const list = [
         cost: ["Spanish Program costs $3136 to enter", true, 3136, "USD"],
         tags: ["Foreign Languages", "Humanities"],
         gradeRange: ["8th", "9th", "10th", "11th", "12th"],
-        id: 242,
+        id: 243,
     },
     {
         title: "Statistics Program",
@@ -6363,7 +6363,7 @@ const list = [
         cost: ["Statistics Program costs $3137 to enter", true, 3137, "USD"],
         tags: ["Mathematics", "Social Science"],
         gradeRange: ["8th", "9th", "10th", "11th", "12th"],
-        id: 243,
+        id: 244,
     },
     {
         title: "Theatre Program",
@@ -6387,7 +6387,7 @@ const list = [
         cost: ["Theatre Program costs 3138 USD to enter", true, 3138, "USD"],
         tags: ["Performing Arts", "Theatre/Drama"],
         gradeRange: ["8th", "9th", "10th", "11th", "12th"],
-        id: 244,
+        id: 245,
     },
     {
         title: "Visual Arts Program",
@@ -6412,7 +6412,7 @@ const list = [
         cost: ["Visual Arts Program costs 3139 USD to enter", true, 3139, "USD"],
         tags: ["Art/Design", "Creativity/Innovation", "Visual Arts"],
         gradeRange: ["8th", "9th", "10th", "11th", "12th"],
-        id: 245,
+        id: 246,
     },
     {
         title: "Women's & Gender Studies Program",
@@ -6437,7 +6437,7 @@ const list = [
         cost: ["Women's & Gender Studies Program costs 3140 USD to enter", true, 3140, "USD"],
         tags: ["Social Science", "Humanities"],
         gradeRange: ["8th", "9th", "10th", "11th", "12th"],
-        id: 246,
+        id: 247,
     },
     {
         title: "Writing Program",
@@ -6462,7 +6462,7 @@ const list = [
         cost: ["Writing Program costs 3141 USD to enter", true, 3141, "USD"],
         tags: ["Creative Writing", "Literature"],
         gradeRange: ["8th", "9th", "10th", "11th", "12th"],
-        id: 247,
+        id: 248,
     },
     {
         title: "Academic Connections",
@@ -6508,7 +6508,7 @@ const list = [
             "Mathematics",
         ],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 248,
+        id: 249,
     },
     {
         title: "92Y Young Writers Workshop",
@@ -6537,7 +6537,7 @@ const list = [
         ],
         tags: ["Writing", "Creative Writing", "Literature"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 249,
+        id: 250,
     },
     {
         title: "Acting and Performance Summer Institute",
@@ -6562,7 +6562,7 @@ const list = [
         cost: ["Acting and Performance Summer Institute costs $461 to enter", true, 461, "USD"],
         tags: ["Performing Arts", "Theatre/Drama"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 250,
+        id: 251,
     },
     {
         title: "Art Summer Institute",
@@ -6586,7 +6586,7 @@ const list = [
         cost: ["Art Summer Institute costs an unknown amount to enter", "unknown", "unknown", "unknown"],
         tags: ["Art/Design", "Visual Arts"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 251,
+        id: 252,
     },
     {
         title: "Stem Cells, Gene Therapy, and Surgery: Retina Regeneration and Therapies to Restore Vision in People with Degenerate Eye Disease",
@@ -6616,7 +6616,7 @@ const list = [
         ],
         tags: ["Biology", "Medicine", "STEM"],
         gradeRange: ["Junior", "Senior"],
-        id: 252,
+        id: 253,
     },
     {
         title: "Broadway Bootcamp Workshop",
@@ -6640,7 +6640,7 @@ const list = [
         cost: ["Broadway Bootcamp Workshop costs money to enter", true, "unknown", "unknown"],
         tags: ["Dance", "Theater", "Music", "Humanities", "Drama"],
         gradeRange: ["Sophomore", "Junior"],
-        id: 253,
+        id: 254,
     },
     {
         title: "Camera Acting Summer Institute",
@@ -6669,7 +6669,7 @@ const list = [
         ],
         tags: ["Performing Arts", "Film/Cinema"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 254,
+        id: 255,
     },
     {
         title: "Computer Science Summer Institute \u2013 Intermediate Track",
@@ -6699,7 +6699,7 @@ const list = [
         ],
         tags: ["STEM", "Computer Science", "Data Science"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 255,
+        id: 256,
     },
     {
         title: "Computer Science Summer Institute \u2013 Introductory Track",
@@ -6724,7 +6724,7 @@ const list = [
         cost: ["Computer Science Summer Institute \u2013 Introductory Track costs money to enter", true, 461, "USD"],
         tags: ["Computer Science", "Coding/Programming"],
         gradeRange: ["8th", "9th", "10th", "11th", "12th"],
-        id: 256,
+        id: 257,
     },
     {
         title: "Content Creation & Scriptwriting Summer Institute",
@@ -6754,7 +6754,7 @@ const list = [
         ],
         tags: ["Creative Writing", "Film/Cinema", "Performing Arts", "Theatre/Drama"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 257,
+        id: 258,
     },
     {
         title: "Design Innovation Summer Institute \u2013 Costume Design",
@@ -6784,7 +6784,7 @@ const list = [
         ],
         tags: ["Art/Design", "Performing Arts", "Fashion"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 258,
+        id: 259,
     },
     {
         title: "Design Innovation Summer Institute \u2013 Lighting and Sound",
@@ -6814,7 +6814,7 @@ const list = [
         ],
         tags: ["Design", "Theater", "Humanities", "Performing Arts", "Theater/Drama"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 259,
+        id: 260,
     },
     {
         title: "Design Innovation Summer Institute \u2013 Scenic",
@@ -6839,7 +6839,7 @@ const list = [
         cost: ["Design Innovation Summer Institute \u2013 Scenic costs 350 USD to enter", true, 350, "USD"],
         tags: ["Art/Design", "Theater", "Film/Cinema", "Performing Arts"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 260,
+        id: 261,
     },
     {
         title: "Design Media Arts Summer Institute",
@@ -6864,7 +6864,7 @@ const list = [
         cost: ["Design Media Arts Summer Institute costs at least $350 to enter", true, "unknown", "unknown"],
         tags: ["Art/Design", "Computer Science", "Graphic Design"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 261,
+        id: 262,
     },
     {
         title: "DOROT\u2019s Brighton Bridge Summer Teen Internship Program",
@@ -6890,7 +6890,7 @@ const list = [
         cost: ["DOROT\u2019s Brighton Bridge Summer Teen Internship Program is a free activity", false, 0, "unknown"],
         tags: ["Leadership/Management", "Community Service", "Social Justice"],
         gradeRange: ["unknown"],
-        id: 262,
+        id: 263,
     },
     {
         title: "DOROT\u2019s Manhattan Summer Teen Internship Program",
@@ -6916,7 +6916,7 @@ const list = [
         cost: ["DOROT\u2019s Manhattan Summer Teen Internship Program is a free activity", false, 0, "unknown"],
         tags: ["Social Justice", "Leadership/Management", "Volunteer Work/Community Service", "Intergenerational"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 263,
+        id: 264,
     },
     {
         title: "Eastern Music Camp",
@@ -6941,7 +6941,7 @@ const list = [
         cost: ["Eastern Music Camp costs $525 to enter", true, 525, "USD"],
         tags: ["Performing Arts", "Music"],
         gradeRange: ["5th", "6th", "7th", "8th", "9th", "10th", "11th", "12th"],
-        id: 264,
+        id: 265,
     },
     {
         title: "Eastern U.S. Music Camp",
@@ -6966,7 +6966,7 @@ const list = [
         cost: ["Eastern U.S. Music Camp costs 1150 USD to enter", true, 1150, "USD"],
         tags: ["Music", "Performing Arts"],
         gradeRange: ["unknown"],
-        id: 265,
+        id: 266,
     },
     {
         title: "Economics Summer Institute",
@@ -6991,7 +6991,7 @@ const list = [
         cost: ["Economics Summer Institute costs $350 to enter", true, 350, "USD"],
         tags: ["Economics", "Business", "Education"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 266,
+        id: 267,
     },
     {
         title: "Engineering Design Summer Institute",
@@ -7016,7 +7016,7 @@ const list = [
         cost: ["Engineering Design Summer Institute costs 350 USD to enter", true, 350, "USD"],
         tags: ["STEM", "Engineering", "Design", "Robotics"],
         gradeRange: ["Sophomore", "Junior"],
-        id: 267,
+        id: 268,
     },
     {
         title: "Film and Television Summer Institute \u2013 Cinematography",
@@ -7046,7 +7046,7 @@ const list = [
         ],
         tags: ["Film/Cinema", "Photography/Videography"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 268,
+        id: 269,
     },
     {
         host: "UCLA",
@@ -7069,7 +7069,7 @@ const list = [
         cost: ["Film and Television Summer Institute costs 4225 USD to enter", true, 4225, "USD"],
         tags: ["Film/Cinema", "Art/Design"],
         type: ["Summer Program", "Internship", "Research", "Competition"],
-        id: 269,
+        id: 270,
     },
     {
         title: "Film and Television Summer Institute \u2013 Media Parks: The Cinematic and Televisual History of Theme Parks",
@@ -7099,7 +7099,7 @@ const list = [
         ],
         tags: ["Film/Cinema", "History", "Media/Broadcasting"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 270,
+        id: 271,
     },
     {
         title: "Immersive International Studies Summer Institute",
@@ -7132,7 +7132,7 @@ const list = [
             "Public Speaking",
         ],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 271,
+        id: 272,
     },
     {
         title: "International Development Summer Institute",
@@ -7157,7 +7157,7 @@ const list = [
         cost: ["The International Development Summer Institute costs 350 USD to enter", true, 350, "USD"],
         tags: ["Social Science", "International Studies/Global Affairs", "Debate"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 272,
+        id: 273,
     },
     {
         title: "Mock Trial Summer Institute",
@@ -7181,7 +7181,7 @@ const list = [
         cost: ["Mock Trial Summer Institute costs 350 USD to enter", true, 350, "USD"],
         tags: ["Law", "Public Speaking", "Leadership/Management"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 273,
+        id: 274,
     },
     {
         title: "Model United Nations Summer Academy",
@@ -7206,7 +7206,7 @@ const list = [
         cost: ["Model United Nations Summer Academy costs $2,000 to enter", true, 2000, "USD"],
         tags: ["Model United Nations (MUN)", "International Studies/Global Affairs", "Public Speaking"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 274,
+        id: 275,
     },
     {
         title: "Model United Nations Summer Institute",
@@ -7236,7 +7236,7 @@ const list = [
             "Model United Nations (MUN)",
         ],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 275,
+        id: 276,
     },
     {
         title: "Musical Theater Summer Institute",
@@ -7260,7 +7260,7 @@ const list = [
         cost: ["Musical Theater Summer Institute costs money to enter", true, "unknown", "unknown"],
         tags: ["Performing Arts", "Theatre/Drama"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 276,
+        id: 277,
     },
     {
         title: "Nanoscale Microscopy Lab Summer Institute",
@@ -7285,7 +7285,7 @@ const list = [
         cost: ["Nanoscale Microscopy Lab Summer Institute costs 350 USD to enter", true, 350, "USD"],
         tags: ["Physics", "Chemistry", "Biology", "STEM", "Science", "Research"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 277,
+        id: 278,
     },
     {
         title: "Nanoscience Lab Summer Institute",
@@ -7310,7 +7310,7 @@ const list = [
         cost: ["Nanoscience Lab Summer Institute costs 350 USD to enter", true, 350, "USD"],
         tags: ["Chemistry", "Engineering", "STEM"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 278,
+        id: 279,
     },
     {
         title: "Political Science Summer Institute",
@@ -7334,7 +7334,7 @@ const list = [
         cost: ["Political Science Summer Institute costs an unknown amount to enter", "unknown", "unknown", "unknown"],
         tags: ["Social Science", "Government/Politics"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 279,
+        id: 280,
     },
     {
         title: "Pre-Veterinary Medicine Program",
@@ -7359,7 +7359,7 @@ const list = [
         cost: ["Pre-Veterinary Medicine Program costs $3,509 to enter", true, 3509, "USD"],
         tags: ["Biology", "Health Sciences", "Medicine"],
         gradeRange: ["Junior", "Senior"],
-        id: 280,
+        id: 281,
     },
     {
         title: "Sci | Art Lab + Studio Summer Institute",
@@ -7384,7 +7384,7 @@ const list = [
         cost: ["Sci | Art Lab + Studio Summer Institute costs 350 USD to enter", true, 350, "USD"],
         tags: ["Art/Design", "STEM"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 281,
+        id: 282,
     },
     {
         title: "Social Software Summer Institute",
@@ -7408,7 +7408,7 @@ const list = [
         cost: ["Social Software Summer Institute costs 350 USD to enter", true, 350, "USD"],
         tags: ["Art/Design", "Computer Science", "STEM", "Coding/Programming", "Visual Arts"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 282,
+        id: 283,
     },
     {
         title: "Stage Management Summer Institute",
@@ -7432,7 +7432,7 @@ const list = [
         cost: ["Stage Management Summer Institute costs money to enter", true, "unknown", "unknown"],
         tags: ["Performing Arts", "Leadership/Management"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 283,
+        id: 284,
     },
     {
         title: "Startup UCLA: Social Entrepreneurship Summer Institute",
@@ -7464,7 +7464,7 @@ const list = [
             "Non-Profit Management",
         ],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 284,
+        id: 285,
     },
     {
         title: "Summer Academy: High School Design Exploration",
@@ -7489,7 +7489,7 @@ const list = [
         cost: ["Summer Academy: High School Design Exploration costs $1500 to enter", true, 1500, "USD"],
         tags: ["Design", "Humanities", "Writing", "Architecture", "Engineering"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 285,
+        id: 286,
     },
     {
         title: "Summer Music Academy",
@@ -7514,7 +7514,7 @@ const list = [
         cost: ["Summer Music Academy costs $2,300 to enter", true, 2300, "USD"],
         tags: ["Music", "Performing Arts"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 286,
+        id: 287,
     },
     {
         title: "TeenArch Studio Summer Institute",
@@ -7538,7 +7538,7 @@ const list = [
         cost: ["TeenArch Studio Summer Institute costs 350 USD to enter", true, 350, "USD"],
         tags: ["Architecture", "Design", "Engineering"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 287,
+        id: 288,
     },
     {
         title: "Molecular Biology of Aging Workshop",
@@ -7563,7 +7563,7 @@ const list = [
         cost: ["Molecular Biology of Aging Workshop costs money to enter", true, "unknown", "USD"],
         tags: ["Molecular Biology", "Medicine", "STEM"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 288,
+        id: 289,
     },
     {
         title: "Pacific Summer High School Institute",
@@ -7597,7 +7597,7 @@ const list = [
             "Leadership/Management",
         ],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 289,
+        id: 290,
     },
     {
         title: "Howard University Multicultural Media Academy",
@@ -7623,7 +7623,7 @@ const list = [
         cost: ["Howard University Multicultural Media Academy is a free activity", false, 0, "unknown"],
         tags: ["Journalism", "Writing", "Social Justice", "Humanities", "Art/Design"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 290,
+        id: 291,
     },
     {
         title: "Journalism Jumpstart",
@@ -7657,7 +7657,7 @@ const list = [
             "Education",
         ],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 291,
+        id: 292,
     },
     {
         title: "Summer Sportscasting Institute for Teens",
@@ -7682,7 +7682,7 @@ const list = [
         cost: ["Summer Sportscasting Institute for Teens costs $320 to enter", true, 320, "USD"],
         tags: ["Journalism", "Sports", "Media/Broadcasting", "Public Speaking"],
         gradeRange: ["unknown"],
-        id: 292,
+        id: 293,
     },
     {
         title: "Temple Summer Academy",
@@ -7744,7 +7744,7 @@ const list = [
             "Climate Change",
         ],
         gradeRange: ["Junior", "Senior"],
-        id: 293,
+        id: 294,
     },
     {
         title: "Critical Thinking Summer Institute",
@@ -7769,7 +7769,7 @@ const list = [
         cost: ["Critical Thinking Summer Institute costs $350 to enter", true, 350, "USD"],
         tags: ["Journalism", "Media/Broadcasting"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 294,
+        id: 295,
     },
     {
         title: "Environmental Studies Summer Youth Institute Summer Program",
@@ -7794,7 +7794,7 @@ const list = [
         cost: ["Environmental Studies Summer Youth Institute Summer Program costs 3,900 USD to enter", true, 3900, "USD"],
         tags: ["Environmental Science", "STEM", "Leadership", "Outdoor-adventure", "Collaboration"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 295,
+        id: 296,
     },
     {
         title: "Game Lab Summer Institute",
@@ -7818,7 +7818,7 @@ const list = [
         cost: ["Game Lab Summer Institute costs money to enter", true, "unknown", "unknown"],
         tags: ["Game Development", "Art/Design", "STEM"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 296,
+        id: 297,
     },
     {
         title: "The Applications of Nanoscience",
@@ -7842,7 +7842,7 @@ const list = [
         cost: ["The Applications of Nanoscience costs 350 USD to enter", true, 350, "USD"],
         tags: ["Physics", "Chemistry", "Engineering", "Business", "Entrepreneurship"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 297,
+        id: 298,
     },
     {
         title: "Oxbow Summer Art Institute",
@@ -7867,7 +7867,7 @@ const list = [
         cost: ["Oxbow Summer Art Institute costs $16,000 to enter", true, 16000, "USD"],
         tags: ["Art/Design", "Visual Arts"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 298,
+        id: 299,
     },
     {
         title: "Prehistoric Archaeology Program",
@@ -7891,7 +7891,7 @@ const list = [
         cost: ["Prehistoric Archaeology Program costs 10 USD to enter", true, 10, "USD"],
         tags: ["History", "Social Science"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 299,
+        id: 300,
     },
     {
         title: "3WK Core Music - Manhattan Campus Session 2",
@@ -7916,7 +7916,7 @@ const list = [
         cost: ["3WK Core Music - Manhattan Campus Session 2 costs $3395 to enter", true, 3395, "USD"],
         tags: ["Music", "Performing Arts", "Creative Writing"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 300,
+        id: 301,
     },
     {
         title: "Temple Summer Scholars",
@@ -8037,7 +8037,7 @@ const list = [
             "Social Sciences and Humanities",
         ],
         gradeRange: ["Junior", "Senior"],
-        id: 301,
+        id: 302,
     },
     {
         title: "Fashion Styling",
@@ -8062,7 +8062,7 @@ const list = [
         cost: ["Fashion Styling costs money to enter", true, 300, "USD"],
         tags: ["Fashion", "Business"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 302,
+        id: 303,
     },
     {
         title: "Marketing & Advertising, Digital Marketing & Social Media",
@@ -8087,7 +8087,7 @@ const list = [
         cost: ["Marketing & Advertising, Digital Marketing & Social Media costs 399 USD to enter", true, 399, "USD"],
         tags: ["Marketing/Advertising", "Writing", "Design", "Media/Broadcasting"],
         gradeRange: ["Junior", "Senior"],
-        id: 303,
+        id: 304,
     },
     {
         title: "Summer at The Academy",
@@ -8112,7 +8112,7 @@ const list = [
         cost: ["Summer at The Academy costs $895 to enter", true, 895, "USD"],
         tags: ["Performing Arts", "Visual Arts"],
         gradeRange: ["Sophomore", "Junior", "Freshman"],
-        id: 304,
+        id: 305,
     },
     {
         title: "Broadway Evolved NYC",
@@ -8137,7 +8137,7 @@ const list = [
         cost: ["Broadway Evolved NYC costs 2,995 USD to enter", true, 2995, "USD"],
         tags: ["Performing Arts", "Leadership", "Humanities"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 305,
+        id: 306,
     },
     {
         title: "Accounting Career Awareness Program",
@@ -8162,7 +8162,7 @@ const list = [
         cost: ["Accounting Career Awareness Program is a free activity", false, 0, "unknown"],
         tags: ["Business", "Economics", "Entrepreneurship", "Finance"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 306,
+        id: 307,
     },
     {
         title: "Summer Leadership Academy",
@@ -8187,7 +8187,7 @@ const list = [
         cost: ["Summer Leadership Academy costs 837 USD to enter", true, 837, "USD"],
         tags: ["Business", "Leadership/Management", "Entrepreneurship"],
         gradeRange: ["Junior"],
-        id: 307,
+        id: 308,
     },
     {
         title: "Pennsylvania Academy of Fine Arts Summer Academy",
@@ -8212,7 +8212,7 @@ const list = [
         cost: ["Pennsylvania Academy of Fine Arts Summer Academy costs 4680 USD to enter", true, 4680, "USD"],
         tags: ["Art/Design", "Creative Writing", "Humanities", "Graphic Design", "Photography/Videography"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 308,
+        id: 309,
     },
     {
         title: "3D Printing and Modeling with Take-Home Printer",
@@ -8237,7 +8237,7 @@ const list = [
         cost: ["3D Printing and Modeling with Take-Home Printer costs 250 USD to enter", true, 250, "USD"],
         tags: ["Art/Design", "Engineering", "Computer Science", "STEM"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 309,
+        id: 310,
     },
     {
         title: "ABLE (Arts Better the Lives of Everyone) Day Sessions for Musicians with Disabilities",
@@ -8268,7 +8268,7 @@ const list = [
         ],
         tags: ["Music", "Disability", "Education"],
         gradeRange: ["unknown"],
-        id: 310,
+        id: 311,
     },
     {
         title: "Advanced Minecraft Modding with Java",
@@ -8293,7 +8293,7 @@ const list = [
         cost: ["Advanced Minecraft Modding with Java costs $250 to enter", true, 250, "USD"],
         tags: ["STEM", "Game Development", "Coding/Programming"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 311,
+        id: 312,
     },
     {
         title: "AI and Machine Learning Academy with NVIDIA",
@@ -8327,7 +8327,7 @@ const list = [
             "Artificial Intelligence (AI)",
         ],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 312,
+        id: 313,
     },
     {
         title: "Artificial Intelligence and Machine Learning",
@@ -8352,7 +8352,7 @@ const list = [
         cost: ["Artificial Intelligence and Machine Learning costs $1,199 to enter", true, 1199, "USD"],
         tags: ["Artificial Intelligence (AI)", "Computer Science"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 313,
+        id: 314,
     },
     {
         title: "BattleBots Camp: Robotics Engineering with VEX",
@@ -8377,7 +8377,7 @@ const list = [
         cost: ["BattleBots Camp: Robotics Engineering with VEX costs $1,299 to enter", true, 1299, "USD"],
         tags: ["STEM", "Science", "Math", "Engineering", "Coding", "Robotics", "Design", "Computer Science"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 314,
+        id: 315,
     },
     {
         title: "DeSales Summer Dance Intensive",
@@ -8402,7 +8402,7 @@ const list = [
         cost: ["DeSales Summer Dance Intensive costs 650 USD to enter", true, 650, "USD"],
         tags: ["Performing Arts", "Dance"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 315,
+        id: 316,
     },
     {
         title: "Digital Video Production and Effects",
@@ -8428,7 +8428,7 @@ const list = [
         cost: ["Digital Video Production and Effects costs $1,199 to enter", true, 1199, "USD"],
         tags: ["Photography/Videography", "Graphic Design", "Art/Design", "Humanities"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 316,
+        id: 317,
     },
     {
         title: "Game Design and Development 101",
@@ -8452,7 +8452,7 @@ const list = [
         cost: ["Game Design and Development 101 costs $1,099 to enter", true, 1099, "USD"],
         tags: ["Game Development", "Computer Science", "Art/Design"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 317,
+        id: 318,
     },
     {
         title: "Intro to Python Coding for Machine Learning",
@@ -8476,7 +8476,7 @@ const list = [
         cost: ["Intro to Python Coding for Machine Learning costs $1,149 to enter", true, 1149, "USD"],
         tags: ["Coding/Programming", "Computer Science", "Artificial Intelligence (AI)", "Data Science"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 318,
+        id: 319,
     },
     {
         title: "Java Coding for Applications",
@@ -8500,7 +8500,7 @@ const list = [
         cost: ["Java Coding for Applications costs $1,099 to enter", true, 1099, "USD"],
         tags: ["Computer Science", "Coding/Programming"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 319,
+        id: 320,
     },
     {
         title: "Machine Learning Academy: Coding Deep Neural Networks",
@@ -8525,7 +8525,7 @@ const list = [
         cost: ["Machine Learning Academy: Coding Deep Neural Networks costs $4,599 to enter", true, 4599, "USD"],
         tags: ["Computer Science", "STEM"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 320,
+        id: 321,
     },
     {
         title: "Pre-College Art Experience (PCAE)",
@@ -8550,7 +8550,7 @@ const list = [
         cost: ["Pre-College Art Experience (PCAE) is a free activity", false, 0, "unknown"],
         tags: ["Art/Design", "Visual Arts", "Performing Arts", "Education"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 321,
+        id: 322,
     },
     {
         title: "VR Design with Unity and Meta Quest 2",
@@ -8575,7 +8575,7 @@ const list = [
         cost: ["VR Design with Unity and Meta Quest 2 costs $1,249 to enter", true, 1249, "USD"],
         tags: ["STEM", "Coding", "Design", "Computer Science", "Software Engineering", "Game Development"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 322,
+        id: 323,
     },
     {
         title: "Space Camps at PARI",
@@ -8599,7 +8599,7 @@ const list = [
         cost: ["Space Camps at PARI costs $1,650.00 to enter", true, 1650.0, "USD"],
         tags: ["STEM", "Science", "Engineering", "Computer Science"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 323,
+        id: 324,
     },
     {
         title: "Camp Business",
@@ -8624,7 +8624,7 @@ const list = [
         cost: ["Camp Business costs $950 to enter for commuters and $2,000 to enter for residents.", true, 950, "USD"],
         tags: ["Business and Entrepreneurship", "Leadership/Management"],
         gradeRange: ["Sophomore", "Junior"],
-        id: 324,
+        id: 325,
     },
     {
         title: "Python for Economics and Finance Summer Institute",
@@ -8649,7 +8649,7 @@ const list = [
         cost: ["Python for Economics and Finance Summer Institute costs money to enter", "unknown", "unknown", "unknown"],
         tags: ["Computer Science", "Data Science", "Economics", "Finance"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 325,
+        id: 326,
     },
     {
         title: "Bridgeview Summer Session I",
@@ -8673,7 +8673,7 @@ const list = [
         cost: ["Bridgeview Summer Session I costs $400 to enter", true, 400, "USD"],
         tags: ["Art/Design", "Portfolio Development"],
         gradeRange: ["unknown"],
-        id: 326,
+        id: 327,
     },
     {
         title: "Youth Entrepreneurship Camp",
@@ -8699,7 +8699,7 @@ const list = [
         cost: ["Youth Entrepreneurship Camp costs $1,200 to enter", true, 1200, "USD"],
         tags: ["Business and Entrepreneurship", "Entrepreneurship", "Leadership", "Humanities"],
         gradeRange: ["Graduate"],
-        id: 327,
+        id: 328,
     },
     {
         title: "The Engineering Summer Camp at Manhattan College",
@@ -8725,7 +8725,7 @@ const list = [
         cost: ["The Engineering Summer Camp at Manhattan College costs 465 USD to enter.", true, 465, "USD"],
         tags: ["Engineering", "STEM", "Science"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 328,
+        id: 329,
     },
     {
         title: "Deciphering Changing Probabilities of Extreme Climate Events in Climate Models and Measurements (GISS)",
@@ -8755,7 +8755,7 @@ const list = [
         ],
         tags: ["Environmental Science", "Data Science", "STEM", "Science", "Research", "Sustainability"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 329,
+        id: 330,
     },
     {
         title: "Virtual Wall Street 101, Investing & Trading",
@@ -8780,7 +8780,7 @@ const list = [
         cost: ["Virtual Wall Street 101, Investing & Trading costs 850 USD to enter", true, 850, "USD"],
         tags: ["Economics", "Business", "Humanities", "Finance"],
         gradeRange: ["unknown"],
-        id: 330,
+        id: 331,
     },
     {
         title: "Oxbridge in Barcelona",
@@ -8805,7 +8805,7 @@ const list = [
         cost: ["Oxbridge in Barcelona costs $8,995 to enter", true, 8995, "USD"],
         tags: ["International Studies/Global Affairs", "Performing Arts", "Cultural Clubs"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 331,
+        id: 332,
     },
     {
         title: "Oxbridge in New York",
@@ -8830,7 +8830,7 @@ const list = [
         cost: ["Oxbridge in New York costs $10,075 to enter", true, 10075, "USD"],
         tags: ["Cultural Enrichment", "Business"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 332,
+        id: 333,
     },
     {
         title: "Oxbridge in Paris",
@@ -8855,7 +8855,7 @@ const list = [
         cost: ["Oxbridge in Paris costs $8,995 to enter", true, 8995, "USD"],
         tags: ["Humanities", "Writing", "Creative Writing", "Journalism", "Languages", "History", "Cultural Clubs"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 333,
+        id: 334,
     },
     {
         title: "Oxford Summer Seminars",
@@ -8895,7 +8895,7 @@ const list = [
             "Politics",
         ],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 334,
+        id: 335,
     },
     {
         title: "The Cambridge Prep Experience",
@@ -8919,7 +8919,7 @@ const list = [
         cost: ["The Cambridge Prep Experience costs $6,785 to enter", true, 6785, "USD"],
         tags: ["Education", "Travel", "Culture", "Leadership", "Community Service"],
         gradeRange: ["Sophomore", "Junior"],
-        id: 335,
+        id: 336,
     },
     {
         title: "The Cambridge Tradition",
@@ -8955,7 +8955,7 @@ const list = [
             "International Studies/Global Affairs",
         ],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 336,
+        id: 337,
     },
     {
         title: "The Oxford Prep Experience",
@@ -8993,7 +8993,7 @@ const list = [
             "Cultural Clubs",
         ],
         gradeRange: ["Sophomore", "Junior"],
-        id: 337,
+        id: 338,
     },
     {
         title: "The Oxford Tradition",
@@ -9028,7 +9028,7 @@ const list = [
             "Politics",
         ],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 338,
+        id: 339,
     },
     {
         title: "Writing the Big City: Reporting in New York",
@@ -9053,7 +9053,7 @@ const list = [
         cost: ["Writing the Big City: Reporting in New York costs 6,845 USD to enter", true, 6845, "USD"],
         tags: ["Writing", "Journalism", "Humanities", "Research", "Social Science"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 339,
+        id: 340,
     },
     {
         title: "Art / Luxury / Fashion",
@@ -9078,7 +9078,7 @@ const list = [
         cost: ["Art / Luxury / Fashion costs $6,845 to enter", true, 6845, "USD"],
         tags: ["Art/Design", "Fashion"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 340,
+        id: 341,
     },
     {
         title: "Art Business",
@@ -9103,7 +9103,7 @@ const list = [
         cost: ["Art Business costs 6845 USD to enter", true, 6845, "USD"],
         tags: ["Art/Design", "Business", "Entrepreneurship"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 341,
+        id: 342,
     },
     {
         title: "Art Conservation / Art Appraisal",
@@ -9128,7 +9128,7 @@ const list = [
         cost: ["Art Conservation / Art Appraisal costs 6,845 USD to enter", true, 6845, "USD"],
         tags: ["Art/Design", "Ethics"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 342,
+        id: 343,
     },
     {
         title: "Conservatory Program",
@@ -9152,7 +9152,7 @@ const list = [
         cost: ["Conservatory Program costs $450 to enter", true, 450, "USD"],
         tags: ["Performing Arts", "Theatre/Drama"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 343,
+        id: 344,
     },
     {
         title: "Museums / Galleries /\nAuction Houses",
@@ -9177,7 +9177,7 @@ const list = [
         cost: ["Museums Galleries Auction Houses costs $6,845 to enter", true, 6845, "USD"],
         tags: ["Art/Design", "Business"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 344,
+        id: 345,
     },
     {
         title: "Painting and Drawing",
@@ -9202,7 +9202,7 @@ const list = [
         cost: ["Painting and Drawing costs $6,845 to enter", true, 6845, "USD"],
         tags: ["Art/Design", "Humanities", "Design"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 345,
+        id: 346,
     },
     {
         title: "Artslife",
@@ -9227,7 +9227,7 @@ const list = [
         cost: ["Artslife is a free activity", false, 0, "unknown"],
         tags: ["Art/Design", "Leadership", "Museum Studies", "Community Engagement", "Public Speaking"],
         gradeRange: ["Sophomore", "Junior"],
-        id: 346,
+        id: 347,
     },
     {
         title: "Summer Intensive Program",
@@ -9252,7 +9252,7 @@ const list = [
         cost: ["Summer Intensive Program is a free activity", false, 0, "unknown"],
         tags: ["Coding/Programming", "Web Development", "Career Development", "Networking"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 347,
+        id: 348,
     },
     {
         title: "Creative Writing",
@@ -9277,7 +9277,7 @@ const list = [
         cost: ["Creative Writing costs $8,350 to enter", true, 8350, "USD"],
         tags: ["Literature", "Creative Writing"],
         gradeRange: ["Freshman", "Sophomore", "Junior"],
-        id: 348,
+        id: 349,
     },
     {
         title: "Data Science Academy",
@@ -9302,7 +9302,7 @@ const list = [
         cost: ["Data Science Academy costs $9,399 to enter", true, 9399, "USD"],
         tags: ["Data Science", "Sports", "Computer Science"],
         gradeRange: ["Sophomore", "Junior"],
-        id: 349,
+        id: 350,
     },
     {
         title: "U.S. Department of Education Internships",
@@ -9327,7 +9327,7 @@ const list = [
         cost: ["U.S. Department of Education Internships is a free activity", false, 0, "unknown"],
         tags: ["Government/Politics", "Education", "Leadership/Management"],
         gradeRange: ["Senior", "Graduate"],
-        id: 350,
+        id: 351,
     },
     {
         title: "Essentials of Entrepreneurship",
@@ -9352,7 +9352,7 @@ const list = [
         cost: ["Essentials of Entrepreneurship costs $7,599 to enter", true, 7599, "USD"],
         tags: ["Entrepreneurship", "Business"],
         gradeRange: ["Sophomore", "Junior"],
-        id: 351,
+        id: 352,
     },
     {
         title: "Essentials of Finance",
@@ -9377,7 +9377,7 @@ const list = [
         cost: ["Essentials of Finance costs $7,599 to enter", true, 7599, "USD"],
         tags: ["Finance", "Economics", "Business"],
         gradeRange: ["Sophomore", "Junior"],
-        id: 352,
+        id: 353,
     },
     {
         title: "Leadership in the Business World",
@@ -9402,7 +9402,7 @@ const list = [
         cost: ["Leadership in the Business World costs $10,999 to enter", true, 10999, "USD"],
         tags: ["Leadership/Management", "Business"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 353,
+        id: 354,
     },
     {
         title: "Moneyball Academy",
@@ -9427,7 +9427,7 @@ const list = [
         cost: ["Moneyball Academy costs $9,399 to enter", true, 9399, "USD"],
         tags: ["Computer Science", "Data Science", "STEM"],
         gradeRange: ["Sophomore", "Junior"],
-        id: 354,
+        id: 355,
     },
     {
         title: "Summer Legal Institute",
@@ -9451,7 +9451,7 @@ const list = [
         cost: ["Summer Legal Institute is a free activity.", false, 0, "unknown"],
         tags: ["Law", "Leadership/Management"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 355,
+        id: 356,
     },
     {
         title: "Summer Law Institute",
@@ -9476,7 +9476,7 @@ const list = [
         cost: ["Summer Law Institute is a free activity", false, 0, "unknown"],
         tags: ["Law", "Pre-law", "Humanities"],
         gradeRange: ["8th"],
-        id: 356,
+        id: 357,
     },
     {
         title: "A Million Lives in the Law",
@@ -9501,7 +9501,7 @@ const list = [
         cost: ["A Million Lives in the Law costs $6,845 to enter", true, 6845, "USD"],
         tags: ["Law", "Social Science"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 357,
+        id: 358,
     },
     {
         title: "A Way With Words: The Art of Debate",
@@ -9526,7 +9526,7 @@ const list = [
         cost: ["A Way With Words: The Art of Debate costs 5560 USD to enter", true, 5560, "USD"],
         tags: ["Public Speaking", "Debate", "Writing"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 358,
+        id: 359,
     },
     {
         title: "Advanced Media Methods: Visual Storytelling",
@@ -9551,7 +9551,7 @@ const list = [
         cost: ["Advanced Media Methods: Visual Storytelling costs $6,845 to enter", true, 6845, "USD"],
         tags: ["Creative Writing", "Visual Arts", "Performing Arts"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 359,
+        id: 360,
     },
     {
         title: "American Extremism",
@@ -9577,7 +9577,7 @@ const list = [
         cost: ["American Extremism costs 2825 USD to enter", true, 2825, "USD"],
         tags: ["History", "Government/Politics", "Social Science"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 360,
+        id: 361,
     },
     {
         title: "Weird Science: The World of Quantum Mechanics",
@@ -9602,7 +9602,7 @@ const list = [
         cost: ["Weird Science: The World of Quantum Mechanics costs 12449 USD to enter", true, 12449, "USD"],
         tags: ["STEM", "Science", "Math", "Engineering", "Physics"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 361,
+        id: 362,
     },
     {
         title: "Bioethics in Global Surgery",
@@ -9626,7 +9626,7 @@ const list = [
         cost: ["Bioethics in Global Surgery costs $2,800 to enter", true, 2800, "USD"],
         tags: ["Medicine", "Health Sciences", "International Studies/Global Affairs", "Leadership/Management"],
         gradeRange: ["Sophomore", "Junior"],
-        id: 362,
+        id: 363,
     },
     {
         title: "Bioethics of Eating",
@@ -9650,7 +9650,7 @@ const list = [
         cost: ["Bioethics of Eating costs $1,400 to enter", true, 1400, "USD"],
         tags: ["Environmental Science", "Ethics"],
         gradeRange: ["Sophomore", "Junior"],
-        id: 363,
+        id: 364,
     },
     {
         title: "Biology of the Brain",
@@ -9675,7 +9675,7 @@ const list = [
         cost: ["Biology of the Brain costs $7,785 to enter", true, 7785, "USD"],
         tags: ["Biology", "Health Sciences", "Medicine"],
         gradeRange: ["Junior"],
-        id: 364,
+        id: 365,
     },
     {
         title: "Biomedical Ethics",
@@ -9700,7 +9700,7 @@ const list = [
         cost: ["Biomedical Ethics costs 7785 USD to enter", true, 7785, "USD"],
         tags: ["Medicine", "Debate", "Public Speaking"],
         gradeRange: ["Junior"],
-        id: 365,
+        id: 366,
     },
     {
         title: "Boys State & Boys Nation",
@@ -9725,7 +9725,7 @@ const list = [
         cost: ["Boys State & Boys Nation is a free activity", false, 0, "unknown"],
         tags: ["Government/Politics", "Leadership/Management"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 366,
+        id: 367,
     },
     {
         title: "Climate Change in the News: Reporting on the Environment",
@@ -9750,7 +9750,7 @@ const list = [
         cost: ["Climate Change in the News: Reporting on the Environment costs 6845 USD to enter", true, 6845, "USD"],
         tags: ["Climate Change", "Journalism"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 367,
+        id: 368,
     },
     {
         title: "Communicating with Consumers: The Basics of Marketing, Advertising, and Public Relations",
@@ -9781,7 +9781,7 @@ const list = [
         ],
         tags: ["Business", "Entrepreneurship", "Writing", "Humanities", "Marketing/Advertising"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 368,
+        id: 369,
     },
     {
         title: "Computer Programming for Beginners: Coding in Python",
@@ -9807,7 +9807,7 @@ const list = [
         cost: ["Computer Programming for Beginners: Coding in Python costs 12,449 USD to enter", true, 12449, "USD"],
         tags: ["Coding/Programming", "Computer Science", "Software Engineering"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 369,
+        id: 370,
     },
     {
         title: "Conflict Resolution: Negotiation, Persuasion, and Mediation",
@@ -9833,7 +9833,7 @@ const list = [
         cost: ["Conflict Resolution: Negotiation, Persuasion, and Mediation costs 3,960 USD to enter", true, 3960, "USD"],
         tags: ["Law", "Leadership", "Social Justice", "Debate", "Humanities", "Public Speaking", "Speech"],
         gradeRange: ["9", "10", "11", "12"],
-        id: 370,
+        id: 371,
     },
     {
         title: "Conservation Biology and Sustainability: Preserving the Planet",
@@ -9873,7 +9873,7 @@ const list = [
             "Conservation Biology",
         ],
         gradeRange: ["9", "10", "11", "12", "13"],
-        id: 371,
+        id: 372,
     },
     {
         title: "Constitutional Law",
@@ -9899,7 +9899,7 @@ const list = [
         cost: ["Constitutional Law is a free activity", false, 0, "unknown"],
         tags: ["Law", "Government/Politics"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 372,
+        id: 373,
     },
     {
         title: "Creating Original Theater: Playwriting, Directing, and Acting",
@@ -9925,7 +9925,7 @@ const list = [
         cost: ["Creating Original Theater: Playwriting, Directing, and Acting costs 80 USD to enter", true, 80, "USD"],
         tags: ["Humanities", "Creative Writing", "Theater", "Drama", "Performing Arts"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 373,
+        id: 374,
     },
     {
         title: "Cronkite Summer Journalism Institute (SJI)",
@@ -9950,7 +9950,7 @@ const list = [
         cost: ["Cronkite Summer Journalism Institute (SJI) costs $699 to enter", true, 699, "USD"],
         tags: ["Journalism", "Writing", "Media/Broadcasting"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 374,
+        id: 375,
     },
     {
         title: "Cyber-Threat Intelligence",
@@ -9976,7 +9976,7 @@ const list = [
         cost: ["Cyber-Threat Intelligence costs 2825 USD to enter", true, 2825, "USD"],
         tags: ["Cybersecurity", "STEM"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 375,
+        id: 376,
     },
     {
         title: "Differential Equations",
@@ -10001,7 +10001,7 @@ const list = [
         cost: ["Differential Equations costs 7785 USD to enter", true, 7785, "USD"],
         tags: ["STEM", "Math", "Engineering"],
         gradeRange: ["Junior"],
-        id: 376,
+        id: 377,
     },
     {
         title: "Digital Filmmaking: From Initial Concept to Final Edit",
@@ -10027,7 +10027,7 @@ const list = [
         cost: ["Digital Filmmaking: From Initial Concept to Final Edit costs 12449 USD to enter", true, 12449, "USD"],
         tags: ["Design", "Humanities", "Creative Writing", "Art/Design", "Film/Cinema"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 377,
+        id: 378,
     },
     {
         title: "Digital Media and Advertising",
@@ -10053,7 +10053,7 @@ const list = [
         cost: ["Digital Media and Advertising costs 12449 USD to enter", true, 12449, "USD"],
         tags: ["Marketing/Advertising", "Business"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 378,
+        id: 379,
     },
     {
         title: "Diverse Voices in Reporting",
@@ -10078,7 +10078,7 @@ const list = [
         cost: ["Diverse Voices in Reporting costs $6,845 to enter", true, 6845, "USD"],
         tags: ["Journalism", "Social Justice"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 379,
+        id: 380,
     },
     {
         title: "Drawing: Eye and Idea",
@@ -10104,7 +10104,7 @@ const list = [
         cost: ["Drawing: Eye and Idea costs $12,744 per session to enter", true, 12744, "USD"],
         tags: ["Design", "Humanities", "Art/Design"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 380,
+        id: 381,
     },
     {
         title: "Business, Economics, and Entrepreneurship",
@@ -10130,7 +10130,7 @@ const list = [
         cost: ["Business, Economics, and Entrepreneurship costs $12,449.00 to enter", true, 12449, "USD"],
         tags: ["Business", "Economics", "Entrepreneurship", "Social Justice"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 381,
+        id: 382,
     },
     {
         title: "Entrepreneurship and Innovation: Changing the World via Venture Creation",
@@ -10161,7 +10161,7 @@ const list = [
         ],
         tags: ["Business and Entrepreneurship", "Leadership/Management"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 382,
+        id: 383,
     },
     {
         title: "Entrepreneurship for Social Impact",
@@ -10195,7 +10195,7 @@ const list = [
             "Humanities",
         ],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 383,
+        id: 384,
     },
     {
         title: "Entrepreneurship: From Idea to Early Product Design",
@@ -10221,7 +10221,7 @@ const list = [
         cost: ["Entrepreneurship: From Idea to Early Product Design costs 80 USD to enter", true, 2825, "USD"],
         tags: ["Business", "Entrepreneurship", "Design", "STEM"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 384,
+        id: 385,
     },
     {
         title: "Explorations in Modern Literature",
@@ -10247,7 +10247,7 @@ const list = [
         cost: ["Explorations in Modern Literature costs money to enter", true, 12449, "USD"],
         tags: ["Literature"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 385,
+        id: 386,
     },
     {
         title: "Explorations in Physics: Special Relativity",
@@ -10273,7 +10273,7 @@ const list = [
         cost: ["Explorations in Physics: Special Relativity costs 12449 USD to enter", true, 12449, "USD"],
         tags: ["STEM", "Science", "Math", "Physics"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 386,
+        id: 387,
     },
     {
         title: "Exploring Careers in Law",
@@ -10299,7 +10299,7 @@ const list = [
         cost: ["Exploring Careers in Law costs 80 USD to enter", true, 80, "USD"],
         tags: ["Pre-law", "Humanities", "Law"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 387,
+        id: 388,
     },
     {
         title: "Exploring Entrepreneurship Program",
@@ -10325,7 +10325,7 @@ const list = [
         cost: ["Exploring Entrepreneurship Program costs $1100 to enter", true, 1100, "USD"],
         tags: ["Business and Entrepreneurship", "Leadership/Management"],
         gradeRange: ["Junior", "Senior"],
-        id: 388,
+        id: 389,
     },
     {
         title: "Exploring Topics in Linguistics",
@@ -10351,7 +10351,7 @@ const list = [
         cost: ["Exploring Topics in Linguistics costs 2825 USD to enter", true, 2825, "USD"],
         tags: ["Social Science", "Languages"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 389,
+        id: 390,
     },
     {
         title: "Expository Writing Intensive: How to Write Great Papers",
@@ -10377,7 +10377,7 @@ const list = [
         cost: ["Expository Writing Intensive: How to Write Great Papers costs 2825 USD to enter", true, 2825, "USD"],
         tags: ["Writing", "Composition", "Rhetoric", "Humanities"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 390,
+        id: 391,
     },
     {
         title: "Fashion Design: Focus on New York City Style and Culture",
@@ -10403,7 +10403,7 @@ const list = [
         cost: ["Fashion Design: Focus on New York City Style and Culture costs 2825 USD to enter", true, 2825, "USD"],
         tags: ["Fashion", "Art/Design"],
         gradeRange: ["9", "10", "11", "12"],
-        id: 391,
+        id: 392,
     },
     {
         title: "Topics in Banned Books",
@@ -10428,7 +10428,7 @@ const list = [
         cost: ["Topics in Banned Books costs $7,785 to enter", true, 7785, "USD"],
         tags: ["Literature", "Social Justice"],
         gradeRange: ["Junior"],
-        id: 392,
+        id: 393,
     },
     {
         title: "Food Culture in N.Y.C.",
@@ -10453,7 +10453,7 @@ const list = [
         cost: ["Food Culture in N.Y.C. costs $6,845 to enter", true, 6845, "USD"],
         tags: ["Culinary Arts", "Business and Entrepreneurship", "Social Sciences and Humanities"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 393,
+        id: 394,
     },
     {
         title: "Forsyth Student Scholars Summer Internship Program",
@@ -10477,7 +10477,7 @@ const list = [
             "To participate in the Forsyth Student Scholars Summer Internship Program, you must:\n\n- Be a current sophomore or junior high school student\n- Be enrolled in a Massachusetts school within the Boston metro area",
         cost: ["Forsyth Student Scholars Summer Internship Program is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Biology", "Medicine", "Mentoring"],
-        id: 394,
+        id: 395,
     },
     {
         title: "Global Climate Change and Public Policy",
@@ -10503,7 +10503,7 @@ const list = [
         cost: ["Global Climate Change and Public Policy costs 12,449 USD per session to enter", true, 12449, "USD"],
         tags: ["Environmental Science", "Climate Change", "Government/Politics", "Public Speaking"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 395,
+        id: 396,
     },
     {
         title: "Globalization: Challenges in International Economics and Politics",
@@ -10534,7 +10534,7 @@ const list = [
         ],
         tags: ["Economics", "Government/Politics", "International Studies/Global Affairs", "Public Speaking"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 396,
+        id: 397,
     },
     {
         title: "Graphic Design and Entrepreneurship",
@@ -10558,7 +10558,7 @@ const list = [
         cost: ["Graphic Design and Entrepreneurship costs 4700 USD to enter", true, 4700, "USD"],
         tags: ["Graphic Design", "Entrepreneurship", "Business"],
         gradeRange: ["Sophomore", "Junior"],
-        id: 397,
+        id: 398,
     },
     {
         title: "Immigration in New York: Law/Journalism/Culture",
@@ -10583,7 +10583,7 @@ const list = [
         cost: ["Immigration in New York: Law/Journalism/Culture costs $6,845 to enter", true, 6845, "USD"],
         tags: ["Journalism", "Law", "Culture", "Social Justice"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 398,
+        id: 399,
     },
     {
         title: "Innovation and Business Strategy",
@@ -10607,7 +10607,7 @@ const list = [
         cost: ["Innovation and Business Strategy costs 2,800 USD to enter", true, 2800, "USD"],
         tags: ["Business", "Entrepreneurship"],
         gradeRange: ["Sophomore", "Junior"],
-        id: 399,
+        id: 400,
     },
     {
         title: "Inside the Animal Mind: What Animals Think and Feel",
@@ -10633,7 +10633,7 @@ const list = [
         cost: ["Inside the Animal Mind: What Animals Think and Feel costs 12449 USD to enter", true, 12449, "USD"],
         tags: ["Biology", "Psychology", "STEM"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 400,
+        id: 401,
     },
     {
         title: "Inside the UN",
@@ -10658,7 +10658,7 @@ const list = [
         cost: ["Inside the UN costs $5,560 to enter", true, 5560, "USD"],
         tags: ["International Studies/Global Affairs", "Government/Politics"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 401,
+        id: 402,
     },
     {
         title: "Intensive Seminars in Modern Chemistry",
@@ -10684,7 +10684,7 @@ const list = [
         cost: ["Intensive Seminars in Modern Chemistry costs 9374.50 USD to enter", true, 9374.5, "USD"],
         tags: ["STEM", "Science", "Chemistry", "Research"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 402,
+        id: 403,
     },
     {
         title: "International Humanitarian Law: Regulating 21st-Century Warfare",
@@ -10710,7 +10710,7 @@ const list = [
         cost: ["International Humanitarian Law: Regulating 21st-Century Warfare costs 80 USD to enter", true, 80, "USD"],
         tags: ["Law", "Government/Politics"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 403,
+        id: 404,
     },
     {
         title: "Introduction to Business, Finance, and Economics",
@@ -10736,7 +10736,7 @@ const list = [
         cost: ["Introduction to Business, Finance, and Economics costs 3,960 USD to enter", true, 3960, "USD"],
         tags: ["Business", "Economics", "Finance"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 404,
+        id: 405,
     },
     {
         title: "Introduction to Corporate Finance",
@@ -10762,7 +10762,7 @@ const list = [
         cost: ["Introduction to Corporate Finance costs 2825 USD to enter", true, 2825, "USD"],
         tags: ["Finance", "Business", "Economics"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 405,
+        id: 406,
     },
     {
         title: "Introduction to Engineering (New!)",
@@ -10788,7 +10788,7 @@ const list = [
         cost: ["Introduction to Engineering (New!) costs 12,449 USD to enter", true, 12449, "USD"],
         tags: ["STEM", "Engineering", "Physics"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 406,
+        id: 407,
     },
     {
         title: "Introduction to Finance and Investment Management",
@@ -10814,7 +10814,7 @@ const list = [
         cost: ["Introduction to Finance and Investment Management costs $2825 to enter", true, 2825, "USD"],
         tags: ["Business", "Economics", "Finance"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 407,
+        id: 408,
     },
     {
         title: "Introduction to Human Right Students",
@@ -10839,7 +10839,7 @@ const list = [
         cost: ["Introduction to Human Right Students costs $6,845 to enter", true, 6845, "USD"],
         tags: ["Law", "Government/Politics", "History"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 408,
+        id: 409,
     },
     {
         title: "Introduction to International Relations and Great Power",
@@ -10865,7 +10865,7 @@ const list = [
         cost: ["Introduction to International Relations and Great Power costs 12449 USD to enter", true, 12449, "USD"],
         tags: ["Government/Politics", "Economics"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 409,
+        id: 410,
     },
     {
         title: "Introduction to Investigative Journalism",
@@ -10890,7 +10890,7 @@ const list = [
         cost: ["Introduction to Investigative Journalism costs $6,845 to enter", true, 6845, "USD"],
         tags: ["Journalism", "Law"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 410,
+        id: 411,
     },
     {
         title: "Introduction to Material Science and Nanotechnology",
@@ -10916,7 +10916,7 @@ const list = [
         cost: ["Introduction to Material Science and Nanotechnology costs 12449 USD to enter", true, 12449, "USD"],
         tags: ["Science", "Engineering"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 411,
+        id: 412,
     },
     {
         title: "Introduction to Philosophical Enquiry: Love, Human Excellence, and Existential Freedom",
@@ -10947,7 +10947,7 @@ const list = [
         ],
         tags: ["Humanities", "Debate", "Public Speaking", "Speech"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 412,
+        id: 413,
     },
     {
         title: "Introduction to Programming with Python",
@@ -10973,7 +10973,7 @@ const list = [
         cost: ["Introduction to Programming with Python costs 3960 USD to enter", true, 3960, "USD"],
         tags: ["Computer Science", "STEM"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 413,
+        id: 414,
     },
     {
         title: "Introduction to Socially Responsible Investing",
@@ -10999,7 +10999,7 @@ const list = [
         cost: ["Introduction to Socially Responsible Investing costs 2825 USD to enter", true, 2825, "USD"],
         tags: ["Finance", "Sustainability"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 414,
+        id: 415,
     },
     {
         title: "Investment Portfolio Management",
@@ -11030,7 +11030,7 @@ const list = [
         ],
         tags: ["Finance", "Economics"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 415,
+        id: 416,
     },
     {
         title: "Language and Identity: A Linguistic Exploration of Accents, Dialects, Slang, and Grammar",
@@ -11061,7 +11061,7 @@ const list = [
         ],
         tags: ["Humanities", "Languages", "Social Justice", "Social Science"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 416,
+        id: 417,
     },
     {
         title: "Law and Technology",
@@ -11085,7 +11085,7 @@ const list = [
         cost: ["Law and Technology costs 2,800 USD to enter", true, 2800, "USD"],
         tags: ["Law", "Technology", "Pre-law"],
         gradeRange: ["Sophomore", "Junior"],
-        id: 417,
+        id: 418,
     },
     {
         title: "Law as a Tool for Social Justice",
@@ -11111,7 +11111,7 @@ const list = [
         cost: ["Law as a Tool for Social Justice costs 12,449 USD to enter", true, 12449, "USD"],
         tags: ["Pre-law", "Social Justice", "Humanities", "Law", "Social Science", "Government/Politics"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 418,
+        id: 419,
     },
     {
         title: "LEADing for Life Global Summer Learning Institute",
@@ -11136,7 +11136,7 @@ const list = [
         cost: ["LEADing for Life Global Summer Learning Institute costs $3200.00 to enter", true, 3200.0, "USD"],
         tags: ["Leadership/Management", "Entrepreneurship", "STEM", "Business", "Economics"],
         gradeRange: ["Junior"],
-        id: 419,
+        id: 420,
     },
     {
         title: "Looking at Architecture: A Primer on Style",
@@ -11162,7 +11162,7 @@ const list = [
         cost: ["Looking at Architecture: A Primer on Style costs 2825 USD to enter", true, 2825, "unknown"],
         tags: ["Art/Design", "History", "Architecture"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 420,
+        id: 421,
     },
     {
         title: "Minds, Brains, and the Nature of Consciousness: An Introduction to Philosophy of Mind",
@@ -11193,7 +11193,7 @@ const list = [
         ],
         tags: ["Humanities", "Psychology", "Social Science"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 421,
+        id: 422,
     },
     {
         title: "Modern Biology and its Real World Applications",
@@ -11230,7 +11230,7 @@ const list = [
             "Interdisciplinary",
         ],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 422,
+        id: 423,
     },
     {
         title: "Moore College of Art & Design Summer Program",
@@ -11264,7 +11264,7 @@ const list = [
             "Painting",
         ],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 423,
+        id: 424,
     },
     {
         title: "Natural Resources, Global Markets, and Social Impact",
@@ -11290,7 +11290,7 @@ const list = [
         cost: ["Natural Resources, Global Markets, and Social Impact costs $2825 to enter", true, 2825, "USD"],
         tags: ["Economics", "Environmental Science", "Social Justice"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 424,
+        id: 425,
     },
     {
         title: "Neurobiology of Learning and Memory",
@@ -11316,7 +11316,7 @@ const list = [
         cost: ["Neurobiology of Learning and Memory costs 2825 USD to enter", true, 2825, "USD"],
         tags: ["Neuroscience", "Psychology", "STEM"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 425,
+        id: 426,
     },
     {
         title: "Neuroscience of Psychiatric Disorders",
@@ -11342,7 +11342,7 @@ const list = [
         cost: ["Neuroscience of Psychiatric Disorders costs 2825 USD to enter", true, 2825, "USD"],
         tags: ["STEM", "Science", "Biology", "Psychology", "Medicine"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 426,
+        id: 427,
     },
     {
         title: "Operation Catapult",
@@ -11367,7 +11367,7 @@ const list = [
         cost: ["Operation Catapult costs $2,600 to enter", true, 2600, "USD"],
         tags: ["Physics", "Chemistry", "Engineering", "Robotics", "STEM"],
         gradeRange: ["Junior", "Senior"],
-        id: 427,
+        id: 428,
     },
     {
         title: "Opinion Writing",
@@ -11392,7 +11392,7 @@ const list = [
         cost: ["Opinion Writing costs $6,845 to enter", true, 6845, "USD"],
         tags: ["Writing", "Research", "Journalism", "Social Science"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 428,
+        id: 429,
     },
     {
         title: "Photojournalism as Art",
@@ -11417,7 +11417,7 @@ const list = [
         cost: ["Photojournalism as Art costs $6,845 to enter", true, 6845, "USD"],
         tags: ["Photography/Videography", "Journalism", "Art/Design"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 429,
+        id: 430,
     },
     {
         title: "Political and Economic Ideologies of the Modern World",
@@ -11443,7 +11443,7 @@ const list = [
         cost: ["Political and Economic Ideologies of the Modern World costs 12449 USD to enter", true, 12449, "USD"],
         tags: ["Government/Politics", "Economics", "History", "Debate"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 430,
+        id: 431,
     },
     {
         title: "Political Commentary",
@@ -11468,7 +11468,7 @@ const list = [
         cost: ["Political Commentary costs 6,845 USD to enter", true, 6845, "USD"],
         tags: ["Journalism", "Political Science", "Politics", "Public Speaking"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 431,
+        id: 432,
     },
     {
         title: "Pop Music as Art & Business",
@@ -11493,7 +11493,7 @@ const list = [
         cost: ["Pop Music as Art & Business costs $6,845 to enter", true, 6845, "USD"],
         tags: ["Music", "Business", "Economics", "Humanities", "Art/Design"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 432,
+        id: 433,
     },
     {
         title: "Public Policy & Activism",
@@ -11518,7 +11518,7 @@ const list = [
         cost: ["Public Policy & Activism costs $6,845 to enter", true, 6845, "USD"],
         tags: ["Government/Politics", "Activism"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 433,
+        id: 434,
     },
     {
         title: "Reporting on Style and Fashion",
@@ -11542,7 +11542,7 @@ const list = [
         cost: ["Reporting on Style and Fashion costs 7220 USD to enter", true, 7220, "USD"],
         tags: ["Fashion", "Journalism", "Design"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 434,
+        id: 435,
     },
     {
         title: "Six Week Summer Intensive",
@@ -11567,7 +11567,7 @@ const list = [
         cost: ["Six Week Summer Intensive costs $3,850 to enter", true, 3850, "USD"],
         tags: ["Performing Arts", "Theatre/Drama"],
         gradeRange: ["unknown"],
-        id: 435,
+        id: 436,
     },
     {
         title: "Social Psychology: Understanding Human Behavior",
@@ -11593,7 +11593,7 @@ const list = [
         cost: ["Social Psychology: Understanding Human Behavior costs 2810 USD to enter", true, 2810, "USD"],
         tags: ["Psychology", "Social Science", "Humanities"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 436,
+        id: 437,
     },
     {
         title: "Sports Storytelling",
@@ -11618,7 +11618,7 @@ const list = [
         cost: ["Sports Storytelling costs $6,845 to enter", true, 6845, "USD"],
         tags: ["Journalism", "Sports"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 437,
+        id: 438,
     },
     {
         title: "Summer Experience",
@@ -11643,7 +11643,7 @@ const list = [
         cost: ["Summer Experience is a free activity", false, 0, "unknown"],
         tags: ["Mathematics", "Writing", "Test Preparation", "Education"],
         gradeRange: ["Junior"],
-        id: 438,
+        id: 439,
     },
     {
         title: "Summer For-Credit Courses",
@@ -11667,7 +11667,7 @@ const list = [
         cost: ["Summer For-Credit Courses costs 2960 USD to enter", true, 2960, "USD"],
         tags: ["STEM", "Education"],
         gradeRange: ["Sophomore", "Junior"],
-        id: 439,
+        id: 440,
     },
     {
         title: "Summer Research Academies",
@@ -11703,7 +11703,7 @@ const list = [
             "Leadership/Management",
         ],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 440,
+        id: 441,
     },
     {
         title: "Summer Residential Program",
@@ -11727,7 +11727,7 @@ const list = [
         cost: ["Summer Residential Program costs $1,400.00 to enter", true, 1400.0, "USD"],
         tags: ["Education", "Residential Life"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 441,
+        id: 442,
     },
     {
         title: "The City as Muse & Subject: An Introduction to Critical Thinking",
@@ -11757,7 +11757,7 @@ const list = [
         ],
         tags: ["Art/Design", "Writing", "Creative Writing", "History"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 442,
+        id: 443,
     },
     {
         title: "The Foreign Correspondent: Global Reporting",
@@ -11782,7 +11782,7 @@ const list = [
         cost: ["The Foreign Correspondent: Global Reporting costs $6,845 to enter", true, 6845, "USD"],
         tags: ["Journalism", "International Studies/Global Affairs", "Social Justice"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 443,
+        id: 444,
     },
     {
         title: "The Management & Technology Summer Institute (M&TSI)",
@@ -11807,7 +11807,7 @@ const list = [
         cost: ["The Management & Technology Summer Institute (M&TSI) costs $9,000 to enter", true, 9000, "USD"],
         tags: ["STEM", "Engineering", "Business", "Entrepreneurship", "Leadership/Management"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 444,
+        id: 445,
     },
     {
         title: "The New Narrative: Podcasting & Video Storytelling",
@@ -11832,7 +11832,7 @@ const list = [
         cost: ["The New Narrative: Podcasting & Video Storytelling costs 6845 USD to enter", true, 6845, "USD"],
         tags: ["Podcasting", "Video Storytelling", "Journalism"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 445,
+        id: 446,
     },
     {
         title: "The Politics of Empire",
@@ -11856,7 +11856,7 @@ const list = [
         cost: ["The Politics of Empire costs 2,800 USD to enter", true, 2800, "USD"],
         tags: ["History", "Government/Politics", "Social Justice"],
         gradeRange: ["Sophomore", "Junior"],
-        id: 446,
+        id: 447,
     },
     {
         title: "The Science of Psychology",
@@ -11882,7 +11882,7 @@ const list = [
         cost: ["The Science of Psychology costs 3,960 USD to enter", true, 3960, "USD"],
         tags: ["STEM", "Science", "Psychology", "Social Science"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 447,
+        id: 448,
     },
     {
         title: "The Supreme Court and Major Topics in U.S. Law",
@@ -11913,7 +11913,7 @@ const list = [
         ],
         tags: ["Law", "Government/Politics", "Social Science"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 448,
+        id: 449,
     },
     {
         title: "Thinking and Problem Solving: Math in the Real World",
@@ -11939,7 +11939,7 @@ const list = [
         cost: ["Thinking and Problem Solving: Math in the Real World costs money to enter", true, "unknown", "unknown"],
         tags: ["STEM", "Math", "Science", "Economics", "Computer Science", "Problem Solving"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 449,
+        id: 450,
     },
     {
         title: "Trial Advocacy",
@@ -11965,7 +11965,7 @@ const list = [
         cost: ["Trial Advocacy costs 12,449 USD to enter", true, 12449, "USD"],
         tags: ["Law", "Public Speaking", "Debate"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 450,
+        id: 451,
     },
     {
         title: "Truth, Justice & the American Way",
@@ -11989,7 +11989,7 @@ const list = [
         cost: ["Truth, Justice & the American Way costs 6,799 USD to enter", true, 6799, "USD"],
         tags: ["Law", "Government/Politics", "Social Justice"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 451,
+        id: 452,
     },
     {
         title: "Understanding Blockchain, AI, & Machine Learning",
@@ -12015,7 +12015,7 @@ const list = [
         cost: ["Understanding Blockchain, AI, & Machine Learning costs 2825 USD to enter", true, 2825, "USD"],
         tags: ["STEM", "Science", "Coding", "Computer Science", "Software Engineering", "Artificial Intelligence (AI)"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 452,
+        id: 453,
     },
     {
         title: "Wall Street in the Classroom Program",
@@ -12040,7 +12040,7 @@ const list = [
         cost: ["Wall Street in the Classroom Program costs $1100 to enter", true, 1100, "USD"],
         tags: ["Business", "Economics", "Finance"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 453,
+        id: 454,
     },
     {
         title: "Wealth and Democracy in the United States",
@@ -12066,7 +12066,7 @@ const list = [
         cost: ["Wealth and Democracy in the United States costs 2825 USD to enter", true, 2825, "USD"],
         tags: ["Economics", "Government/Politics", "History"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 454,
+        id: 455,
     },
     {
         title: "Writing About Youth Culture: Race, Identity & Social Behavior",
@@ -12091,7 +12091,7 @@ const list = [
         cost: ["Writing About Youth Culture: Race, Identity & Social Behavior costs $6,845 to enter", true, 6845, "USD"],
         tags: ["Social Science", "Writing"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 455,
+        id: 456,
     },
     {
         title: "Writing for Film",
@@ -12116,7 +12116,7 @@ const list = [
         cost: ["Writing for Film costs money to enter", true, "unknown", "unknown"],
         tags: ["Humanities", "Writing", "Creative Writing", "Theater", "Drama", "Film/Cinema"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 456,
+        id: 457,
     },
     {
         title: "Writing for Television: Inside the Writers' Room",
@@ -12141,7 +12141,7 @@ const list = [
         cost: ["Writing for Television: Inside the Writers' Room costs 6845 USD to enter", true, 6845, "USD"],
         tags: ["Writing", "Creative Writing", "Humanities", "Theater", "Drama", "Performing Arts"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 457,
+        id: 458,
     },
     {
         title: "Beaver Works Summer Institute",
@@ -12166,7 +12166,7 @@ const list = [
         cost: ["Beaver Works Summer Institute costs 5000 USD to enter", true, 5000, "USD"],
         tags: ["Engineering", "Computer Science", "Robotics"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 458,
+        id: 459,
     },
     {
         title: "Bossgirls Summer Program",
@@ -12190,7 +12190,7 @@ const list = [
         cost: ["Bossgirls Summer Program is a free activity", false, 0, "unknown"],
         tags: ["Business and Entrepreneurship", "Innovation", "Social Sciences and Humanities"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 459,
+        id: 460,
     },
     {
         title: "CDC Disease Detective Camp",
@@ -12226,7 +12226,7 @@ const list = [
             "Epidemiology",
         ],
         gradeRange: ["Junior", "Senior"],
-        id: 460,
+        id: 461,
     },
     {
         title: "Engineering Possibilities in College (EPIC)",
@@ -12251,7 +12251,7 @@ const list = [
         cost: ["Engineering Possibilities in College (EPIC) costs $1,975 to enter", true, 1975, "USD"],
         tags: ["Engineering", "STEM", "Leadership/Management"],
         gradeRange: ["6th", "7th", "8th", "9th", "10th", "11th", "12th"],
-        id: 461,
+        id: 462,
     },
     {
         title: "High School Program in Biomedical Research",
@@ -12276,7 +12276,7 @@ const list = [
         cost: ["High School Program in Biomedical Research is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Science", "Research", "Biology", "Pre-med", "Medicine", "Health"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 462,
+        id: 463,
     },
     {
         title: "LEDA Scholars Program",
@@ -12301,7 +12301,7 @@ const list = [
         cost: ["LEDA Scholars Program is a free activity", false, 0, "unknown"],
         tags: ["Leadership/Management", "Education", "College Preparation", "Community Service", "Social Justice"],
         gradeRange: ["Junior"],
-        id: 463,
+        id: 464,
     },
     {
         title: "Project SEED Program",
@@ -12326,7 +12326,7 @@ const list = [
         cost: ["Project SEED Program is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Science", "Research", "Chemistry", "Biology", "Education", "Mentoring", "Diversity and Inclusion"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 464,
+        id: 465,
     },
     {
         title: "Science Internship Program (SIP)",
@@ -12363,7 +12363,7 @@ const list = [
             "Mentoring",
         ],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 465,
+        id: 466,
     },
     {
         title: "The Ross Mathematics Program",
@@ -12388,7 +12388,7 @@ const list = [
         cost: ["The Ross Mathematics Program costs $6000 to enter", true, 6000, "USD"],
         tags: ["Mathematics", "STEM", "Research"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 466,
+        id: 467,
     },
     {
         title: "Women ExCEL In Engineering",
@@ -12412,7 +12412,7 @@ const list = [
         cost: ["Women ExCEL In Engineering is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Engineering", "Leadership", "Sustainability", "Environmental Science", "Robotics"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 467,
+        id: 468,
     },
     {
         title: "Boston University Summer Theatre Institute",
@@ -12437,7 +12437,7 @@ const list = [
         cost: ["Boston University Summer Theatre Institute costs 6370 USD to enter", true, 6370, "USD"],
         tags: ["Performing Arts", "Theatre/Drama", "Arts/Design"],
         gradeRange: ["10", "11", "12"],
-        id: 468,
+        id: 469,
     },
     {
         title: "Hofstra Summer Science Research Program",
@@ -12462,7 +12462,7 @@ const list = [
         cost: ["Hofstra Summer Science Research Program costs $2000 to enter", true, 2000, "USD"],
         tags: ["STEM", "Science", "Math", "Research"],
         gradeRange: ["Sophomore", "Junior"],
-        id: 469,
+        id: 470,
     },
     {
         title: "MEDscience Simulation Lab",
@@ -12487,7 +12487,7 @@ const list = [
         cost: ["MEDscience Simulation Lab costs $2,650 to enter", true, 2650, "USD"],
         tags: ["STEM", "Science", "Biology", "Research", "Pre-med", "Medicine", "Health", "Health Sciences"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 470,
+        id: 471,
     },
     {
         title: "Ron Burton Training Village - S.T.E.M. Journey",
@@ -12512,7 +12512,7 @@ const list = [
         cost: ["Ron Burton Training Village - S.T.E.M. Journey is a free activity", false, 0, "N/A"],
         tags: ["STEM", "Science", "Technology", "Engineering", "Math", "Leadership"],
         gradeRange: ["6th", "7th", "8th"],
-        id: 471,
+        id: 472,
     },
     {
         title: "Summer Immersion Program",
@@ -12548,7 +12548,7 @@ const list = [
             "Game Development",
         ],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 472,
+        id: 473,
     },
     {
         title: "Sustainable Summer @ Brooklyn",
@@ -12573,7 +12573,7 @@ const list = [
         cost: ["Sustainable Summer @ Brooklyn costs $3,995 to enter", true, 3995, "USD"],
         tags: ["Environmental Science", "Sustainability", "STEM", "Design"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 473,
+        id: 474,
     },
     {
         title: "Sustainable Summer @ Dartmouth",
@@ -12607,7 +12607,7 @@ const list = [
             "Social Science",
         ],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 474,
+        id: 475,
     },
     {
         title: "Research Mentorship Program",
@@ -12632,7 +12632,7 @@ const list = [
         cost: ["Research Mentorship Program costs 4900 USD to enter", true, 4900, "USD"],
         tags: ["Research", "Mentoring"],
         gradeRange: ["Sophomore", "Junior"],
-        id: 475,
+        id: 476,
     },
     {
         title: "Skidmore Jazz Institute",
@@ -12657,7 +12657,7 @@ const list = [
         cost: ["Skidmore Jazz Institute costs 2140 USD to enter", true, 2140, "USD"],
         tags: ["Music", "Performing Arts"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 476,
+        id: 477,
     },
     {
         title: "The Teen Summer Writing Fellowship (YAWP)",
@@ -12682,7 +12682,7 @@ const list = [
         cost: ["The Teen Summer Writing Fellowship (YAWP) is a free activity", false, 0, "unknown"],
         tags: ["Creative Writing", "Literature"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 477,
+        id: 478,
     },
     {
         title: "JCamp",
@@ -12707,7 +12707,7 @@ const list = [
         cost: ["JCamp is a free activity", false, 0, "unknown"],
         tags: ["Journalism", "Writing", "Diversity and Inclusion"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 478,
+        id: 479,
     },
     {
         title: "International Summer School for Young Physicists (ISSYP)",
@@ -12732,7 +12732,7 @@ const list = [
         cost: ["International Summer School for Young Physicists (ISSYP) costs 250 CAD to enter", true, 250, "CAD"],
         tags: ["STEM", "Science", "Research", "Math", "Physics", "Astronomy", "Mathematics"],
         gradeRange: ["Junior", "Senior"],
-        id: 479,
+        id: 480,
     },
     {
         title: "A.I. Scholars Live Online",
@@ -12757,7 +12757,7 @@ const list = [
         cost: ["A.I. Scholars Live Online costs $1,100 to enter", true, 1100, "USD"],
         tags: ["Computer Science", "Artificial Intelligence (AI)"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 480,
+        id: 481,
     },
     {
         title: "Acting Program",
@@ -12782,7 +12782,7 @@ const list = [
         cost: ["Acting Program costs 5591 USD to enter", true, 5591, "USD"],
         tags: ["Performing Arts", "Theatre/Drama"],
         gradeRange: ["Junior", "Senior"],
-        id: 481,
+        id: 482,
     },
     {
         title: "Adroit Journal Summer Mentorship Program",
@@ -12807,7 +12807,7 @@ const list = [
         cost: ["Adroit Journal Summer Mentorship Program costs $450 to enter", true, 450, "USD"],
         tags: ["Creative Writing", "Mentoring"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 482,
+        id: 483,
     },
     {
         title: "Beyond Words",
@@ -12832,7 +12832,7 @@ const list = [
         cost: ["Beyond Words costs 6,695 USD to enter", true, 6695, "USD"],
         tags: ["Social Science", "Humanities"],
         gradeRange: ["Junior", "Senior"],
-        id: 483,
+        id: 484,
     },
     {
         title: "Creative Writers Program",
@@ -12857,7 +12857,7 @@ const list = [
         cost: ["Creative Writers Program costs $4310 to enter", true, 4310, "USD"],
         tags: ["Creative Writing", "Writing", "Humanities", "Literature"],
         gradeRange: ["Junior", "Senior"],
-        id: 484,
+        id: 485,
     },
     {
         title: "Design/Technology for Stage & Screen Program",
@@ -12882,7 +12882,7 @@ const list = [
         cost: ["Design/Technology for Stage & Screen Program costs $4310 to enter", true, 4310, "USD"],
         tags: ["Art/Design", "Performing Arts", "Theatre/Drama", "Film/Cinema", "Graphic Design", "Photography/Videography"],
         gradeRange: ["Junior", "Senior"],
-        id: 485,
+        id: 486,
     },
     {
         title: "Digital Filmmakers Program",
@@ -12907,7 +12907,7 @@ const list = [
         cost: ["Digital Filmmakers Program costs 3744 USD to enter", true, 3744, "USD"],
         tags: ["Film/Cinema", "Photography/Videography", "Creative Writing", "Performing Arts"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 486,
+        id: 487,
     },
     {
         title: "Drug Discovery to Clinical Care",
@@ -12932,7 +12932,7 @@ const list = [
         cost: ["Drug Discovery to Clinical Care costs 6,695 USD to enter", true, 6695, "USD"],
         tags: ["Medicine", "STEM", "Science", "Research", "Biology", "Chemistry"],
         gradeRange: ["Junior", "Senior"],
-        id: 487,
+        id: 488,
     },
     {
         title: "Games in Extended Reality",
@@ -12958,7 +12958,7 @@ const list = [
         cost: ["Games in Extended Reality costs $6,695 to enter", true, 6695, "USD"],
         tags: ["Game Development", "Computer Science", "Engineering", "Design"],
         gradeRange: ["Junior", "Senior"],
-        id: 488,
+        id: 489,
     },
     {
         title: "Gator Vet Camp",
@@ -12982,7 +12982,7 @@ const list = [
         cost: ["The cost of Gator Vet Camp is not yet known", "unknown", "unknown", "unknown"],
         tags: ["STEM", "Science", "Pre-med", "Biology", "Medicine", "Health Sciences", "Service", "Community Service"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 489,
+        id: 490,
     },
     {
         title: "Journalism Program",
@@ -13007,7 +13007,7 @@ const list = [
         cost: ["Journalism Program costs $7,008 to enter", true, 7008, "USD"],
         tags: ["Journalism", "Media/Broadcasting", "Writing"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 490,
+        id: 491,
     },
     {
         title: "Laboratory Learning Program",
@@ -13039,7 +13039,7 @@ const list = [
             "Natural Sciences Research Opportunities",
         ],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 491,
+        id: 492,
     },
     {
         title: "Musical Theatre",
@@ -13064,7 +13064,7 @@ const list = [
         cost: ["Musical Theatre costs 5591 USD to enter", true, 5591, "USD"],
         tags: ["Performing Arts", "Theatre/Drama"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 492,
+        id: 493,
     },
     {
         title: "Politics, Activism, & Leadership Program",
@@ -13089,7 +13089,7 @@ const list = [
         cost: ["Politics, Activism, & Leadership Program costs $4133 to enter", true, 4133, "USD"],
         tags: ["Government/Politics", "Leadership/Management", "Public Speaking", "Social Science"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 493,
+        id: 494,
     },
     {
         title: "Sports Broadcasting Pre-College Program",
@@ -13115,7 +13115,7 @@ const list = [
         cost: ["Sports Broadcasting Pre-College Program costs $1,450.00 to $1,850.00 to enter", true, 1450, "USD"],
         tags: ["Sports", "Journalism", "Humanities", "Media/Broadcasting"],
         gradeRange: ["unknown"],
-        id: 494,
+        id: 495,
     },
     {
         title: "Summer High School Academic Program for Engineers (SHAPE)",
@@ -13140,7 +13140,7 @@ const list = [
         cost: ["Summer High School Academic Program for Engineers (SHAPE) costs $4,900 to enter", true, 4900, "USD"],
         tags: ["Engineering", "STEM", "Research"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 495,
+        id: 496,
     },
     {
         title: "Summer Science Learning Programs",
@@ -13165,7 +13165,7 @@ const list = [
         cost: ["Summer Science Learning Programs costs 6295 USD to enter", true, 6295, "USD"],
         tags: ["Entrepreneurship", "Business", "Economics", "STEM", "Science"],
         gradeRange: ["Junior", "Senior"],
-        id: 496,
+        id: 497,
     },
     {
         title: "Teen Summer Conservatory",
@@ -13190,7 +13190,7 @@ const list = [
         cost: ["Teen Summer Conservatory costs 3250 USD to enter", true, 3250, "USD"],
         tags: ["Performing Arts", "Theatre/Drama"],
         gradeRange: ["12th"],
-        id: 497,
+        id: 498,
     },
     {
         title: "Visual Arts Summer Institute (VASI)",
@@ -13215,7 +13215,7 @@ const list = [
         cost: ["Visual Arts Summer Institute (VASI) costs $5,842 to enter", true, 5842, "USD"],
         tags: ["Art/Design", "Visual Arts"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 498,
+        id: 499,
     },
     {
         title: "West Point Summer Leaders Experience",
@@ -13240,7 +13240,7 @@ const list = [
         cost: ["West Point Summer Leaders Experience costs 625 USD to enter", true, 625, "USD"],
         tags: ["Leadership/Management", "Military/Defense", "Sports"],
         gradeRange: ["Junior"],
-        id: 499,
+        id: 500,
     },
     {
         title: "Young Scholars Program (YSP)",
@@ -13274,7 +13274,7 @@ const list = [
             "Leadership/Management",
         ],
         gradeRange: ["Sophomore", "Junior"],
-        id: 500,
+        id: 501,
     },
     {
         title: "Student Science Training Program (SSTP)",
@@ -13310,7 +13310,7 @@ const list = [
             "Computer Science",
         ],
         gradeRange: ["Senior"],
-        id: 501,
+        id: 502,
     },
     {
         title: "Linking Individuals to their Natural Community (LINC)",
@@ -13335,7 +13335,7 @@ const list = [
         cost: ["Linking Individuals to their Natural Community (LINC) is a free activity", false, 0, "unknown"],
         tags: ["Environmental Science", "Service", "Leadership", "Community Service", "Outdoor-adventure"],
         gradeRange: ["unknown"],
-        id: 502,
+        id: 503,
     },
     {
         title: "Summer Neuroscience Program",
@@ -13359,7 +13359,7 @@ const list = [
             "To participate in the Summer Neuroscience Program you must:\n- Be enrolled in a New York City public school\n- Be at least 16 years of age by the start of the program",
         cost: ["Summer Neuroscience Program is a free activity", false, 0, "unknown"],
         tags: ["Biology", "STEM", "Medicine"],
-        id: 503,
+        id: 504,
     },
     {
         title: "Medill Cherubs",
@@ -13384,7 +13384,7 @@ const list = [
         cost: ["Medill Cherubs costs $5,000 to enter", true, 5000, "USD"],
         tags: ["Journalism", "Creative Writing", "Leadership"],
         gradeRange: ["Junior"],
-        id: 504,
+        id: 505,
     },
     {
         title: "Met High School Internship Program",
@@ -13409,7 +13409,7 @@ const list = [
         cost: ["Met High School Internship Program is a free activity with a $1,100 stipend", false, 0, "USD"],
         tags: ["Art/Design", "Museum Studies", "Diversity and Inclusion", "Mentoring"],
         gradeRange: ["Sophomore", "Junior"],
-        id: 505,
+        id: 506,
     },
     {
         title: "Program in Algorithmic and Combinational Thinking (PACT)",
@@ -13434,7 +13434,7 @@ const list = [
         cost: ["Program in Algorithmic and Combinational Thinking (PACT) costs 1700 USD to enter", true, 1700, "USD"],
         tags: ["STEM", "Science", "Math", "Coding", "Computer Science", "Software Engineering"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 506,
+        id: 507,
     },
     {
         title: "BOLD@Olin",
@@ -13459,7 +13459,7 @@ const list = [
         cost: ["BOLD@Olin costs $1,200 to enter", true, 1200, "USD"],
         tags: ["Business", "Leadership/Management", "Entrepreneurship"],
         gradeRange: ["Junior", "Senior"],
-        id: 507,
+        id: 508,
     },
     {
         title: "Film & Video Division",
@@ -13484,7 +13484,7 @@ const list = [
         cost: ["Film & Video Division costs $7,200 to enter", true, 7200, "USD"],
         tags: ["Art/Design", "Creative Writing", "Film/Cinema", "Photography/Videography", "Performing Arts"],
         gradeRange: ["Sophomore", "Junior"],
-        id: 508,
+        id: 509,
     },
     {
         title: "Film and Video Institute: Acting on Camera",
@@ -13509,7 +13509,7 @@ const list = [
         cost: ["Film and Video Institute: Acting on Camera costs $6,800 to enter", true, 6800, "USD"],
         tags: ["Performing Arts", "Film/Cinema"],
         gradeRange: ["Sophomore", "Junior"],
-        id: 509,
+        id: 510,
     },
     {
         title: "Film and Video Institute: Production",
@@ -13534,7 +13534,7 @@ const list = [
         cost: ["Film and Video Institute: Production costs $6,800 to enter", true, 6800, "USD"],
         tags: ["Film/Cinema", "Photography/Videography", "Design"],
         gradeRange: ["Sophomore", "Junior"],
-        id: 510,
+        id: 511,
     },
     {
         title: "Film and Video Institute: Screenwriting",
@@ -13559,7 +13559,7 @@ const list = [
         cost: ["Film and Video Institute: Screenwriting costs $6,800 to enter", true, 6800, "USD"],
         tags: ["Creative Writing", "Film/Cinema"],
         gradeRange: ["Sophomore", "Junior"],
-        id: 511,
+        id: 512,
     },
     {
         title: "Forest Project",
@@ -13584,7 +13584,7 @@ const list = [
         cost: ["Forest Project is a free activity", false, 0, "USD"],
         tags: ["Environmental Science", "Outdoor-adventure", "Leadership/Management"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 512,
+        id: 513,
     },
     {
         title: "High School Research Program (HSRP)",
@@ -13609,7 +13609,7 @@ const list = [
         cost: ["High School Research Program (HSRP) is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Science", "Research", "Biology", "Public Speaking"],
         gradeRange: ["Senior"],
-        id: 513,
+        id: 514,
     },
     {
         title: "Manhattan District Attorney\u2019s High School Internship Program",
@@ -13634,7 +13634,7 @@ const list = [
         cost: ["Manhattan District Attorney\u2019s High School Internship Program is a free activity", false, 0, "unknown"],
         tags: ["Law", "Government/Politics", "Social Justice", "Leadership/Management"],
         gradeRange: ["unknown"],
-        id: 514,
+        id: 515,
     },
     {
         title: "Yale Program in Astrophysics (YSPA)",
@@ -13659,7 +13659,7 @@ const list = [
         cost: ["Yale Program in Astrophysics (YSPA) costs 7500 USD to enter", true, 7500, "USD"],
         tags: ["Astronomy", "STEM", "Science", "Math", "Research", "Coding"],
         gradeRange: ["Junior"],
-        id: 515,
+        id: 516,
     },
     {
         title: "Clinical Science, Technology and Medicine Internship",
@@ -13684,7 +13684,7 @@ const list = [
         cost: ["Clinical Science, Technology and Medicine Internship costs $5500, $4000, $3500 to enter", true, 5500, "USD"],
         tags: ["Medicine", "Science", "Technology", "STEM"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 516,
+        id: 517,
     },
     {
         title: "Lincoln Laboratory Radar Introduction for Student Engineers (LLRISE)",
@@ -13714,7 +13714,7 @@ const list = [
         ],
         tags: ["Physics", "Engineering", "STEM", "Research"],
         gradeRange: ["Junior"],
-        id: 517,
+        id: 518,
     },
     {
         title: "Canada/USA Mathcamp",
@@ -13739,7 +13739,7 @@ const list = [
         cost: ["Canada/USA Mathcamp costs $5,500 USD to enter", true, 5500, "USD"],
         tags: ["Mathematics", "STEM", "Science"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 518,
+        id: 519,
     },
     {
         title: "AEOP DEVCOM-ARL Apprenticeship & Fellowship Program (Chicago and Boston)",
@@ -13769,7 +13769,7 @@ const list = [
         ],
         tags: ["STEM", "Science", "Research", "Engineering", "Computer Science", "Mentoring", "Leadership/Management"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 519,
+        id: 520,
     },
     {
         title: "Tech Scholars",
@@ -13794,7 +13794,7 @@ const list = [
         cost: ["Tech Scholars is a free activity.", false, 0, "unknown"],
         tags: ["History", "Social Justice", "Computer Science", "Web Development", "Mentoring"],
         gradeRange: ["9", "10", "11", "12"],
-        id: 520,
+        id: 521,
     },
     {
         title: "Great Jewish Books Summer Program",
@@ -13819,7 +13819,7 @@ const list = [
         cost: ["Great Jewish Books Summer Program is a free activity.", false, 0, "N/A"],
         tags: ["Literature", "Creative Writing"],
         gradeRange: ["Junior", "Senior"],
-        id: 521,
+        id: 522,
     },
     {
         title: "Theatre Arts Division: Performance",
@@ -13844,7 +13844,7 @@ const list = [
         cost: ["Theatre Arts Division: Performance costs $6,800 to enter", true, 6800, "USD"],
         tags: ["Performing Arts", "Theater", "Dance", "Drama", "Art/Design"],
         gradeRange: ["Junior"],
-        id: 522,
+        id: 523,
     },
     {
         title: "Theatre Arts Division: Musical Theatre Extension",
@@ -13869,7 +13869,7 @@ const list = [
         cost: ["Theatre Arts Division: Musical Theatre Extension costs $8,800 to enter", true, 8800, "USD"],
         tags: ["Performing Arts", "Theatre/Drama", "Music"],
         gradeRange: ["Junior"],
-        id: 523,
+        id: 524,
     },
     {
         title: "Theatre Arts Division: Stage Management/Design-Tech",
@@ -13894,7 +13894,7 @@ const list = [
         cost: ["Theatre Arts Division: Stage Management/Design-Tech costs 6800 USD to enter", true, 6800, "USD"],
         tags: ["Performing Arts", "Theatre/Drama"],
         gradeRange: ["Junior"],
-        id: 524,
+        id: 525,
     },
     {
         title: "Garcia Scholars Program",
@@ -13930,7 +13930,7 @@ const list = [
             "Leadership",
         ],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 525,
+        id: 526,
     },
     {
         title: "Internship Placement Program: Doctors Reaching Minority Men Exploring Neuroscience",
@@ -13960,7 +13960,7 @@ const list = [
         ],
         tags: ["Medicine", "STEM", "Science", "Pre-med", "Research", "Leadership"],
         gradeRange: ["Senior"],
-        id: 526,
+        id: 527,
     },
     {
         title: "Summer Workshop for Young Writers",
@@ -13985,7 +13985,7 @@ const list = [
         cost: ["Summer Workshop for Young Writers costs $2,750 to enter", true, 2750, "USD"],
         tags: ["Creative Writing", "Literature"],
         gradeRange: ["Junior", "Senior"],
-        id: 527,
+        id: 528,
     },
     {
         title: "The Summer Science Program",
@@ -14010,7 +14010,7 @@ const list = [
         cost: ["The Summer Science Program costs $8,400 to enter", true, 8400, "USD"],
         tags: ["STEM", "Science", "Research", "Biology", "Chemistry", "Environmental Science", "Writing"],
         gradeRange: ["Sophomore", "Junior"],
-        id: 528,
+        id: 529,
     },
     {
         title: "Visual Communication Design",
@@ -14035,7 +14035,7 @@ const list = [
         cost: ["Visual Communication Design costs $3,570 to enter", true, 3570, "USD"],
         tags: ["Graphic Design", "Art/Design"],
         gradeRange: ["Junior", "Senior", "Graduate"],
-        id: 529,
+        id: 530,
     },
     {
         title: "AI Scholars",
@@ -14060,7 +14060,7 @@ const list = [
         cost: ["AI Scholars is a free activity", false, 0, "unknown"],
         tags: ["Artificial Intelligence (AI)", "Computer Science", "Engineering"],
         gradeRange: ["Junior"],
-        id: 530,
+        id: 531,
     },
     {
         title: "Applied Research Innovations in Science and Engineering (ARISE)",
@@ -14086,7 +14086,7 @@ const list = [
         cost: ["Applied Research Innovations in Science and Engineering (ARISE) is a free activity", false, 0, "unknown"],
         tags: ["Computer Science", "Robotics", "Artificial Intelligence (AI)", "Engineering"],
         gradeRange: ["Sophomore", "Junior"],
-        id: 531,
+        id: 532,
     },
     {
         title: "Introduction to Programming: Your First Step into Software Development",
@@ -14116,7 +14116,7 @@ const list = [
         ],
         tags: ["STEM", "Coding", "Design", "Computer Science"],
         gradeRange: ["Junior", "Senior"],
-        id: 532,
+        id: 533,
     },
     {
         title: "Introduction to Coding Program",
@@ -14141,7 +14141,7 @@ const list = [
         cost: ["Introduction to Coding Program costs 2950 USD to enter", true, 2950, "USD"],
         tags: ["Coding/Programming", "Software Engineering"],
         gradeRange: ["Junior", "Senior"],
-        id: 533,
+        id: 534,
     },
     {
         title: "College Bound Research Program",
@@ -14166,7 +14166,7 @@ const list = [
         cost: ["College Bound Research Program is a free activity", false, 0, "USD"],
         tags: ["STEM", "Science", "Research", "Engineering", "Computer Science", "Team Building"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 534,
+        id: 535,
     },
     {
         title: "Computer Science Scholars",
@@ -14203,7 +14203,7 @@ const list = [
             "Artificial Intelligence (AI)",
         ],
         gradeRange: ["Sophomore"],
-        id: 535,
+        id: 536,
     },
     {
         title: "Forman Summer Program",
@@ -14227,7 +14227,7 @@ const list = [
         cost: ["Forman Summer Program costs $8,250 to enter", true, 8250, "USD"],
         tags: ["Special Education", "Learning Differences", "Self-Advocacy", "Outdoor-adventure"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 536,
+        id: 537,
     },
     {
         title: "Freedom and Citizenship Summer Program",
@@ -14252,7 +14252,7 @@ const list = [
         cost: ["Freedom and Citizenship Summer Program is a free activity", false, 0, "unknown"],
         tags: ["Government/Politics", "History", "Leadership/Management", "Social Sciences and Humanities"],
         gradeRange: ["Junior"],
-        id: 537,
+        id: 538,
     },
     {
         title: "High School Honors Science, Math, Engineering Program",
@@ -14277,7 +14277,7 @@ const list = [
         cost: ["High School Honors Science, Math, Engineering Program costs $4000 to enter", true, 4000, "USD"],
         tags: ["STEM", "Science", "Math", "Engineering", "Research", "Computer Science"],
         gradeRange: ["Junior"],
-        id: 538,
+        id: 539,
     },
     {
         title: "National High School Game Academy",
@@ -14312,7 +14312,7 @@ const list = [
             "Game Development",
         ],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 539,
+        id: 540,
     },
     {
         title: "Pre-College Design",
@@ -14342,7 +14342,7 @@ const list = [
         ],
         tags: ["Art/Design", "Studio Art"],
         gradeRange: ["Sophomore", "Junior"],
-        id: 540,
+        id: 541,
     },
     {
         title: "Pre-College Drama",
@@ -14372,7 +14372,7 @@ const list = [
         ],
         tags: ["Performing Arts", "Theatre/Drama"],
         gradeRange: ["Sophomore", "Junior"],
-        id: 541,
+        id: 542,
     },
     {
         title: "Pre-College Music",
@@ -14397,7 +14397,7 @@ const list = [
         cost: ["Pre-College Music costs $6,407 to $10,155 to enter", true, 6407, "USD"],
         tags: ["Music", "Performing Arts"],
         gradeRange: ["Sophomore", "Junior"],
-        id: 542,
+        id: 543,
     },
     {
         title: "Pre-College Writing & Culture",
@@ -14422,7 +14422,7 @@ const list = [
         cost: ["Pre-College Writing & Culture costs $7,417 to enter", true, 7417, "USD"],
         tags: ["Art/Design", "Literature", "Film/Cinema", "Social Science"],
         gradeRange: ["Sophomore", "Junior"],
-        id: 543,
+        id: 544,
     },
     {
         title: "Program in Mathematics for Young Scientists (PROMYS)",
@@ -14447,7 +14447,7 @@ const list = [
         cost: ["Program in Mathematics for Young Scientists (PROMYS) costs $6000 to enter", true, 6000, "USD"],
         tags: ["Mathematics", "STEM"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 544,
+        id: 545,
     },
     {
         title: "Starling-DeLay Symposium on Violin Studies",
@@ -14472,7 +14472,7 @@ const list = [
         cost: ["Starling-DeLay Symposium on Violin Studies costs 575 USD to enter", true, 575, "USD"],
         tags: ["Music", "Leadership", "Performing Arts", "Education", "Humanities"],
         gradeRange: ["Graduate", "Postgraduate"],
-        id: 545,
+        id: 546,
     },
     {
         title: "Summer Academy for Math and Science (SAMS)",
@@ -14497,7 +14497,7 @@ const list = [
         cost: ["Summer Academy for Math and Science (SAMS) is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Science", "Math", "Engineering", "Writing", "College Preparation"],
         gradeRange: ["Junior"],
-        id: 546,
+        id: 547,
     },
     {
         title: "Summer Workshop in Math (SWiM)",
@@ -14522,7 +14522,7 @@ const list = [
         cost: ["Summer Workshop in Math (SWiM) is a free activity", false, 0, "unknown"],
         tags: ["Mathematics", "STEM"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 547,
+        id: 548,
     },
     {
         title: "The Pre-College Architecture Program",
@@ -14547,7 +14547,7 @@ const list = [
         cost: ["The Pre-College Architecture Program costs $9,249 to enter", true, 9249, "USD"],
         tags: ["Architecture", "Art/Design", "STEM", "Engineering", "Computer Science", "Environmental Science"],
         gradeRange: ["Sophomore", "Junior"],
-        id: 548,
+        id: 549,
     },
     {
         title: "The Pre-College Art Program",
@@ -14572,7 +14572,7 @@ const list = [
         cost: ["The Pre-College Art Program costs between $5,395 and $10,647 to enter", true, "5395", "USD"],
         tags: ["Art/Design", "Visual Arts"],
         gradeRange: ["Sophomore", "Junior"],
-        id: 549,
+        id: 550,
     },
     {
         title: "The Pre-College Program in Computational Biology",
@@ -14597,7 +14597,7 @@ const list = [
         cost: ["The Pre-College Program in Computational Biology costs 6,987 USD to enter", true, 6987, "USD"],
         tags: ["STEM", "Science", "Biology", "Coding", "Research", "Computer Science", "Software Engineering"],
         gradeRange: ["Sophomore", "Junior"],
-        id: 550,
+        id: 551,
     },
     {
         title: "CSSSA (California State Summer School for the Arts)",
@@ -14622,7 +14622,7 @@ const list = [
         cost: ["CSSSA (California State Summer School for the Arts) costs $20 to enter", true, 20, "USD"],
         tags: ["Art/Design", "Performing Arts", "Creative Writing", "Animation", "Film/Cinema"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 551,
+        id: 552,
     },
     {
         title: "Hk Maker Lab",
@@ -14647,7 +14647,7 @@ const list = [
         cost: ["Hk Maker Lab is a free activity", false, 0, "unknown"],
         tags: ["Biomedical Engineering", "Design", "Entrepreneurship", "Research"],
         gradeRange: ["Junior", "Senior"],
-        id: 552,
+        id: 553,
     },
     {
         title: "National Youth Science Camp",
@@ -14672,7 +14672,7 @@ const list = [
         cost: ["National Youth Science Camp is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Science", "Math", "Engineering", "Outdoor-adventure", "Arts Program", "Interactive"],
         gradeRange: ["Junior", "Senior", "Graduate"],
-        id: 553,
+        id: 554,
     },
     {
         title: "Bioengineering Immersion Program",
@@ -14697,7 +14697,7 @@ const list = [
         cost: ["Bioengineering Immersion Program costs $6,695 to enter", true, 6695, "USD"],
         tags: ["Bioengineering", "STEM", "Engineering", "Science", "Entrepreneurship"],
         gradeRange: ["Junior", "Senior"],
-        id: 554,
+        id: 555,
     },
     {
         title: "Cybersecurity & Privacy program",
@@ -14722,7 +14722,7 @@ const list = [
         cost: ["Cybersecurity & Privacy program costs $6,695 to enter", true, 6695, "USD"],
         tags: ["STEM", "Science", "Engineering", "Coding", "Computer Science", "Software Engineering", "Cybersecurity"],
         gradeRange: ["Junior", "Senior"],
-        id: 555,
+        id: 556,
     },
     {
         title: "Engineering Innovation & Design Program",
@@ -14747,7 +14747,7 @@ const list = [
         cost: ["Engineering Innovation & Design Program costs $6,695 to enter", true, 6695, "USD"],
         tags: ["Problem Solving", "Creativity", "Innovation", "Hands-on Projects"],
         gradeRange: ["Junior", "Senior"],
-        id: 556,
+        id: 557,
     },
     {
         title: "Entrepreneurship & Innovation for Women Program",
@@ -14781,7 +14781,7 @@ const list = [
             "Diversity and Inclusion",
         ],
         gradeRange: ["Junior", "Senior"],
-        id: 557,
+        id: 558,
     },
     {
         title: "Ethics & Emerging Technologies Program",
@@ -14806,7 +14806,7 @@ const list = [
         cost: ["Ethics & Emerging Technologies Program costs 6,695 USD to enter", true, 6695, "USD"],
         tags: ["Computer Science", "Ethics"],
         gradeRange: ["Junior", "Senior"],
-        id: 558,
+        id: 559,
     },
     {
         title: "Experiential Entrepreneurship Program",
@@ -14840,7 +14840,7 @@ const list = [
             "Politics",
         ],
         gradeRange: ["Junior", "Senior"],
-        id: 559,
+        id: 560,
     },
     {
         title: "Exploring Modern Physics Program",
@@ -14865,7 +14865,7 @@ const list = [
         cost: ["Exploring Modern Physics Program costs $6,695 to enter", true, 6695, "USD"],
         tags: ["STEM", "Science", "Research", "Engineering", "Physics"],
         gradeRange: ["Junior", "Senior"],
-        id: 560,
+        id: 561,
     },
     {
         title: "Genomics Research Internship Program (GRIP)",
@@ -14890,7 +14890,7 @@ const list = [
         cost: ["Genomics Research Internship Program (GRIP) is a free activity", false, 0, "unknown"],
         tags: ["Research", "STEM", "Biology", "Medicine", "Health Sciences"],
         gradeRange: ["Junior", "Senior", "Graduate"],
-        id: 561,
+        id: 562,
     },
     {
         title: "Innovations in Health Professions Program",
@@ -14915,7 +14915,7 @@ const list = [
         cost: ["Innovations in Health Professions Program costs 6,695 USD to enter", true, 6695, "USD"],
         tags: ["Health Sciences", "Medicine", "STEM"],
         gradeRange: ["Junior", "Senior"],
-        id: 562,
+        id: 563,
     },
     {
         title: "Kinhaven Music School Senior Session",
@@ -14940,7 +14940,7 @@ const list = [
         cost: ["Kinhaven Music School Senior Session costs $7,950 to enter", true, 7950, "USD"],
         tags: ["Music", "Performing Arts"],
         gradeRange: ["8th", "9th", "10th", "11th", "12th"],
-        id: 563,
+        id: 564,
     },
     {
         title: "Pomona College Academy for Youth Success",
@@ -14965,7 +14965,7 @@ const list = [
         cost: ["Pomona College Academy for Youth Success is a free activity", false, 0, "unknown"],
         tags: ["Education", "College Prep", "Underrepresented Groups", "Leadership", "Mentoring", "Diversity and Inclusion"],
         gradeRange: ["Freshman"],
-        id: 564,
+        id: 565,
     },
     {
         title: "The James Madison Seminar on the Principles of American Politics",
@@ -14990,7 +14990,7 @@ const list = [
         cost: ["The James Madison Seminar on the Principles of American Politics costs 250 USD to enter", true, 250, "USD"],
         tags: ["Government/Politics", "History"],
         gradeRange: ["Junior", "Senior", "Graduate"],
-        id: 565,
+        id: 566,
     },
     {
         title: "Stanford Institutes of Medicine Summer Research Program",
@@ -15014,7 +15014,7 @@ const list = [
             "To participate in the Stanford Institutes of Medicine Summer Research Program you must:\n\n1) Be currently enrolled as a junior or senior at the time of application (as of the fall of 2022).  Must be in the graduating class of 2023 or 2024.\n\n2) Be 16 years of age or older by the start of the program.\n\n3) Reside in the U.S. AND be U.S. citizens or permanent residents with a green card.",
         cost: ["Stanford Institutes of Medicine Summer Research Program is a free activity", false, 0, "unknown"],
         tags: ["Biology", "Medicine", "STEM", "Health Sciences"],
-        id: 566,
+        id: 567,
     },
     {
         title: "STEM Enhancement in Earth Science (SEES) Summer High School Intern Program",
@@ -15042,7 +15042,7 @@ const list = [
             "unknown",
         ],
         tags: ["STEM", "Earth Science", "Engineering", "Research"],
-        id: 567,
+        id: 568,
     },
     {
         title: "Summer Medical Academy",
@@ -15067,7 +15067,7 @@ const list = [
         cost: ["Summer Medical Academy costs $3,000 to enter", true, 3000, "USD"],
         tags: ["Medicine", "Health Sciences", "STEM", "Pre-med"],
         gradeRange: ["unknown"],
-        id: 568,
+        id: 569,
     },
     {
         title: "Summer Cancer Research Experience Program",
@@ -15092,7 +15092,7 @@ const list = [
         cost: ["Summer Cancer Research Experience Program costs 100 USD to enter", true, 100, "USD"],
         tags: ["STEM", "Science", "Research", "Pre-med", "Biology", "Medicine", "Health"],
         gradeRange: ["Junior"],
-        id: 569,
+        id: 570,
     },
     {
         title: "Notre Dame Summer Scholars",
@@ -15117,7 +15117,7 @@ const list = [
         cost: ["Notre Dame Summer Scholars costs $300 to enter", true, 300, "USD"],
         tags: ["College Preparation", "Academics", "Higher Education", "Student Life", "Social Activities"],
         gradeRange: ["Junior", "Senior"],
-        id: 570,
+        id: 571,
     },
     {
         title: "The Urban Leadership Fellows (ULF) Program",
@@ -15142,7 +15142,7 @@ const list = [
         cost: ["The Urban Leadership Fellows (ULF) Program is a free activity", false, 0, "unknown"],
         tags: ["Finance", "Mentoring"],
         gradeRange: ["Senior"],
-        id: 571,
+        id: 572,
     },
     {
         title: "NIH High School Summer Internship Program",
@@ -15167,7 +15167,7 @@ const list = [
         cost: ["NIH High School Summer Internship Program is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Science", "Math", "Engineering", "Biology", "Chemistry", "Medicine", "Research"],
         gradeRange: ["Junior", "Senior"],
-        id: 572,
+        id: 573,
     },
     {
         title: "SSTP (Secondary Student Training Program)",
@@ -15200,7 +15200,7 @@ const list = [
             "Mentoring",
         ],
         gradeRange: ["Sophomore", "Junior"],
-        id: 573,
+        id: 574,
     },
     {
         title: "CATALYST Academy",
@@ -15224,7 +15224,7 @@ const list = [
             "To participate in the CATALYST Academy you must:\n- Maintain a minimum GPA of 3.0 on a 4.0 scale, with emphasis on math and science courses\n- Be a high school rising junior or senior\n- Demonstrate an academic trajectory that includes calculus, physics and/or chemistry, and at least one additional advanced science and/or math course prior to graduation",
         cost: ["CATALYST Academy costs money to enter", true, "unknown", "unknown"],
         tags: ["Engineering", "STEM"],
-        id: 574,
+        id: 575,
     },
     {
         title: "Clark Scholars Program",
@@ -15249,7 +15249,7 @@ const list = [
         cost: ["Clark Scholars Program is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Science", "Math", "Engineering", "Research", "Leadership", "Medicine", "Health"],
         gradeRange: ["Senior"],
-        id: 575,
+        id: 576,
     },
     {
         title: "CURIE Academy",
@@ -15273,7 +15273,7 @@ const list = [
             "To participate in the CURIE Academy you must:\n- Have a minimum GPA of 3.0 on a 4.0 scale, with strong performance in math and science courses\n- Be a high school rising junior or senior\n- Identify as a young woman\n- Be on an academic trajectory that will include the following courses prior to graduation: calculus, physics and/or chemistry, and at least one additional related, advanced science and/or math course",
         cost: ["CURIE Academy costs money to enter", true, "unknown", "unknown"],
         tags: ["Engineering", "STEM"],
-        id: 576,
+        id: 577,
     },
     {
         title: "Ecuador: The Galapagos Islands & The Andes",
@@ -15298,7 +15298,7 @@ const list = [
         cost: ["Ecuador: The Galapagos Islands & The Andes costs $7,554 to enter", true, 7554, "USD"],
         tags: ["Biology", "Environmental Science", "STEM"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 577,
+        id: 578,
     },
     {
         title: "France: Cultural Discovery",
@@ -15323,7 +15323,7 @@ const list = [
         cost: ["France: Cultural Discovery costs $6,421 to enter", true, 6421, "USD"],
         tags: ["History", "Culture", "Travel"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 578,
+        id: 579,
     },
     {
         title: "Germany: International Relations & The E.U.",
@@ -15348,7 +15348,7 @@ const list = [
         cost: ["Germany: International Relations & The E.U. costs $7,455 to enter", true, 7455, "USD"],
         tags: ["International Studies/Global Affairs", "Government/Politics"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 579,
+        id: 580,
     },
     {
         title: "Ghana: Internship: Ghana Contemporary Art & Culture",
@@ -15373,7 +15373,7 @@ const list = [
         cost: ["Ghana: Internship: Ghana Contemporary Art & Culture costs $6,946 to enter", true, 6946, "USD"],
         tags: ["Art/Design", "International Studies/Global Affairs", "Cultural Clubs"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 580,
+        id: 581,
     },
     {
         title: "Italy: Culinary Training & Culture",
@@ -15398,7 +15398,7 @@ const list = [
         cost: ["Italy: Culinary Training & Culture costs $8,304 to enter", true, 8304, "USD"],
         tags: ["Culinary Arts", "Agriculture"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 581,
+        id: 582,
     },
     {
         title: "Japan: Anime & Manga",
@@ -15423,7 +15423,7 @@ const list = [
         cost: ["Japan: Anime & Manga costs $8,338 to enter", true, 8338, "USD"],
         tags: ["Art/Design", "Animation", "History"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 582,
+        id: 583,
     },
     {
         title: "Japan: Japanese Language & Culture",
@@ -15448,7 +15448,7 @@ const list = [
         cost: ["Japan: Japanese Language & Culture costs $8,442 to enter", true, 8442, "USD"],
         tags: ["Foreign Languages", "Cultural Clubs", "Performing Arts"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 583,
+        id: 584,
     },
     {
         title: "Jordan: Arabic Language & The Middle East",
@@ -15479,7 +15479,7 @@ const list = [
             "International Studies/Global Affairs",
         ],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 584,
+        id: 585,
     },
     {
         title: "Meadowmount School of Music Summer Session",
@@ -15504,7 +15504,7 @@ const list = [
         cost: ["Meadowmount School of Music Summer Session costs 9200 USD to enter", true, 9200, "USD"],
         tags: ["Music", "Performing Arts"],
         gradeRange: ["unknown"],
-        id: 585,
+        id: 586,
     },
     {
         title: "Princeton Summer Journalism Program (PSJP)",
@@ -15540,7 +15540,7 @@ const list = [
             "Residential Program",
         ],
         gradeRange: ["Junior"],
-        id: 586,
+        id: 587,
     },
     {
         title: "South Korea: K-Culture & Peacebuilding",
@@ -15565,7 +15565,7 @@ const list = [
         cost: ["South Korea: K-Culture & Peacebuilding costs 7,442 USD to enter", true, 7442, "USD"],
         tags: ["History", "Social Justice", "Leadership", "International Studies/Global Affairs", "Cultural Clubs"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 587,
+        id: 588,
     },
     {
         title: "Spain: Cultural Discovery",
@@ -15590,7 +15590,7 @@ const list = [
         cost: ["Spain: Cultural Discovery costs $6,274 to enter", true, 6274, "USD"],
         tags: ["History", "Art/Design", "Cultural Clubs"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 588,
+        id: 589,
     },
     {
         title: "Spain: Spanish Language & Culture",
@@ -15615,7 +15615,7 @@ const list = [
         cost: ["Spain: Spanish Language & Culture costs $7,576 to enter", true, 7576, "USD"],
         tags: ["Foreign Languages", "Cultural Clubs"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 589,
+        id: 590,
     },
     {
         title: "Summer Performing Arts with Juilliard",
@@ -15639,7 +15639,7 @@ const list = [
         cost: ["Summer Performing Arts with Juilliard costs $6,350 USD to enter", true, 6350, "USD"],
         tags: ["Performing Arts", "Arts/Design"],
         gradeRange: ["unknown"],
-        id: 590,
+        id: 591,
     },
     {
         title: "Research in Science & Engineering (RISE) Internship/Practicum",
@@ -15663,7 +15663,7 @@ const list = [
             "To participate in the Research in Science & Engineering (RISE) Internship/Practicum, you must:\n\n- Be currently enrolled in their junior year of high school.\n- Possess a strong interest in pursuing the sciences.\n- For Practicum track applicants: Have a laptop capable of running programming software.\n- Participate in a six-week research project supervised by faculty members, postdoctoral fellows, or graduate students (Internship track) or engage in group research in a university laboratory setting (Practicum track).\n- Attend weekly workshops focused on academic and professional skill development.\n- Engage in off-site or on-site interactions with local biotech or pharmaceutical companies.\n- Present research findings at the Poster Symposium concluding the program.",
         cost: ["Research in Science & Engineering (RISE) Internship/Practicum is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Science", "Engineering", "Research"],
-        id: 591,
+        id: 592,
     },
     {
         title: "Sphinx Performance Academy",
@@ -15688,7 +15688,7 @@ const list = [
         cost: ["Sphinx Performance Academy is a free activity", false, 0, "unknown"],
         tags: ["Music", "Performing Arts", "Arts/Design", "Cultural Clubs", "Mentoring"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 592,
+        id: 593,
     },
     {
         title: "Climate Leaders Fellowship",
@@ -15712,7 +15712,7 @@ const list = [
         cost: ["Climate Leaders Fellowship is a free activity", false, 0, "unknown"],
         tags: ["Environmental Science", "Leadership/Management", "Sustainability", "Service"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 593,
+        id: 594,
     },
     {
         title: "LIHSA Summer Program",
@@ -15737,7 +15737,7 @@ const list = [
         cost: ["LIHSA Summer Program cost is TBD", "unknown", "unknown", "unknown"],
         tags: ["Art/Design", "Music", "Theater", "Dance", "Film/Cinema", "Performing Arts"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 594,
+        id: 595,
     },
     {
         title: "UPMC Hillman Cancer Center Academy",
@@ -15767,7 +15767,7 @@ const list = [
         ],
         tags: ["Research", "Medicine", "Computer Science", "STEM"],
         gradeRange: ["Junior", "Senior"],
-        id: 595,
+        id: 596,
     },
     {
         title: "California State Summer School for Math and Science (COSMOS)",
@@ -15792,7 +15792,7 @@ const list = [
         cost: ["California State Summer School for Math and Science (COSMOS) costs $5,007 to enter", true, 5007, "USD"],
         tags: ["Physics", "Chemistry", "Biology", "Computer Science", "Mathematics", "STEM"],
         gradeRange: ["8", "9", "10", "11", "12"],
-        id: 596,
+        id: 597,
     },
     {
         title: "Center Stage Strings",
@@ -15817,7 +15817,7 @@ const list = [
         cost: ["Center Stage Strings costs 4725 USD to enter", true, 4725, "USD"],
         tags: ["Music", "Performing Arts", "Leadership"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 597,
+        id: 598,
     },
     {
         title: "HOPP Summer Student Program",
@@ -15842,7 +15842,7 @@ const list = [
         cost: ["HOPP Summer Student Program is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Science", "Biology", "Research", "Pre-med", "Medicine", "Health Sciences"],
         gradeRange: ["Sophomore", "Junior"],
-        id: 598,
+        id: 599,
     },
     {
         title: "Michigan Health and Sciences Pre-College Exposure Academy",
@@ -15868,7 +15868,7 @@ const list = [
         cost: ["Michigan Health and Sciences Pre-College Exposure Academy is a free activity", false, 0, "unknown"],
         tags: ["Health Sciences", "Pre-med", "Leadership/Management", "Diversity and Inclusion", "Medicine"],
         gradeRange: ["Sophomore", "Junior"],
-        id: 599,
+        id: 600,
     },
     {
         title: "Stanford Humanities Institute (SHI)",
@@ -15893,7 +15893,7 @@ const list = [
         cost: ["Stanford Humanities Institute (SHI) costs $8250 to enter", true, 8250, "USD"],
         tags: ["Humanities", "Writing", "History", "Social Science", "Literature", "Creative Writing"],
         gradeRange: ["Sophomore", "Junior"],
-        id: 600,
+        id: 601,
     },
     {
         title: "Stanford University Mathematics Camp",
@@ -15916,7 +15916,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Stanford University Mathematics Camp costs money to enter", true, "unknown", "unknown"],
         tags: ["Mathematics", "STEM"],
-        id: 601,
+        id: 602,
     },
     {
         title: "Stanford University Mathematics Camp (SUMaC)",
@@ -15941,7 +15941,7 @@ const list = [
         cost: ["Stanford University Mathematics Camp (SUMaC) costs $3,550 to enter", true, 3550, "USD"],
         tags: ["Mathematics", "STEM", "Research", "Education"],
         gradeRange: ["Sophomore", "Junior"],
-        id: 602,
+        id: 603,
     },
     {
         title: "Discovery Guide Volunteer Program",
@@ -15966,7 +15966,7 @@ const list = [
         cost: ["Discovery Guide Volunteer Program is a free activity", false, 0, "unknown"],
         tags: ["Environmental Science", "Education", "Wildlife Conservation", "Volunteer Work/Community Service"],
         gradeRange: ["unknown"],
-        id: 603,
+        id: 604,
     },
     {
         title: "Simons Summer Research Program",
@@ -15990,7 +15990,7 @@ const list = [
             "To participate in the Simons Summer Research Program you must:\n- Be high school juniors (11th grade) at the time of applying\n- Be US citizens or permanent residents\n- Be at least 16 years of age by the start of the program\n- Demonstrate independence, creativity, and an aptitude for hands-on science work",
         cost: ["Simons Summer Research Program is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Research", "Mentoring"],
-        id: 604,
+        id: 605,
     },
     {
         title: "Mosaic Journalism Workshop",
@@ -16023,7 +16023,7 @@ const list = [
             "Photography/Videography",
         ],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 605,
+        id: 606,
     },
     {
         title: "Iowa Young Writers' Studio",
@@ -16047,7 +16047,7 @@ const list = [
             "To participate in the Iowa Young Writers' Studio you must be currently enrolled in the 10th, 11th, or 12th grade.",
         cost: ["Iowa Young Writers' Studio is a free activity", false, 0, "unknown"],
         tags: ["Creative Writing", "Literature"],
-        id: 606,
+        id: 607,
     },
     {
         title: "Summer Health Professions Education Program (SHPEP)",
@@ -16072,7 +16072,7 @@ const list = [
         cost: ["Summer Health Professions Education Program (SHPEP) is a free activity", false, 0, "N/A"],
         tags: ["Medicine", "Health Sciences", "Pre-med", "STEM"],
         gradeRange: ["Freshman", "Sophomore"],
-        id: 607,
+        id: 608,
     },
     {
         title: "Clarinet Institute",
@@ -16097,7 +16097,7 @@ const list = [
         cost: ["Clarinet Institute costs $1,785 to enter", true, 1785, "USD"],
         tags: ["Music", "Performing Arts"],
         gradeRange: ["unknown"],
-        id: 608,
+        id: 609,
     },
     {
         title: "Dance Institute",
@@ -16122,7 +16122,7 @@ const list = [
         cost: ["Dance Institute costs $3,830 to enter", true, 3830, "USD"],
         tags: ["Dance", "Leadership", "Humanities", "Performing Arts"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 609,
+        id: 610,
     },
     {
         title: "Flute Institute",
@@ -16147,7 +16147,7 @@ const list = [
         cost: ["Flute Institute costs $1,785 to enter", true, 1785, "USD"],
         tags: ["Music", "Performing Arts"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 610,
+        id: 611,
     },
     {
         title: "Harp Institute",
@@ -16172,7 +16172,7 @@ const list = [
         cost: ["Harp Institute costs 1860 USD to enter", true, 1860, "USD"],
         tags: ["Music", "Performing Arts", "Leadership"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 611,
+        id: 612,
     },
     {
         title: "High School Division of the Sonia & Celina Sotomayor Judicial Internship Program",
@@ -16202,7 +16202,7 @@ const list = [
         ],
         tags: ["Law", "Government/Politics"],
         gradeRange: ["Junior", "Senior"],
-        id: 612,
+        id: 613,
     },
     {
         title: "Jazz Institute",
@@ -16227,7 +16227,7 @@ const list = [
         cost: ["Jazz Institute costs $1,785 to enter", true, 1785, "USD"],
         tags: ["Music", "Performing Arts", "History"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 613,
+        id: 614,
     },
     {
         title: "Minority Introduction to Science and Engineering (MITES)",
@@ -16252,7 +16252,7 @@ const list = [
         cost: ["Minority Introduction to Science and Engineering (MITES) is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Science", "Engineering", "Diversity and Inclusion", "Mentoring"],
         gradeRange: ["Junior"],
-        id: 614,
+        id: 615,
     },
     {
         title: "Musical Theater Intensive",
@@ -16277,7 +16277,7 @@ const list = [
         cost: ["Musical Theater Intensive costs $4,125 to enter", true, 4125, "USD"],
         tags: ["Performing Arts", "Music"],
         gradeRange: ["unknown"],
-        id: 615,
+        id: 616,
     },
     {
         title: "Percussion Institute",
@@ -16302,7 +16302,7 @@ const list = [
         cost: ["Percussion Institute costs $1,785 to enter", true, 1785, "USD"],
         tags: ["Music", "Performing Arts"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 616,
+        id: 617,
     },
     {
         title: "Rhode Island School of Design Pre-College Program",
@@ -16328,7 +16328,7 @@ const list = [
         cost: ["Rhode Island School of Design Pre-College Program costs $10,700 to enter", true, 10700, "USD"],
         tags: ["Art/Design", "Humanities"],
         gradeRange: ["Junior", "Senior"],
-        id: 617,
+        id: 618,
     },
     {
         title: "Saxophone Institute",
@@ -16353,7 +16353,7 @@ const list = [
         cost: ["Saxophone Institute costs 1785 USD to enter", true, 1785, "USD"],
         tags: ["Music", "Performing Arts"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 618,
+        id: 619,
     },
     {
         title: "Tisch Summer High School Dramatic Writing Program",
@@ -16378,7 +16378,7 @@ const list = [
         cost: ["Tisch Summer High School Dramatic Writing Program costs $14,072 to enter", true, 14072, "USD"],
         tags: ["Writing", "Creative Writing", "Theater", "Drama", "Performing Arts"],
         gradeRange: ["Junior", "Sophomore"],
-        id: 619,
+        id: 620,
     },
     {
         title: "Summer Math and Science Honors Academy (SMASH)",
@@ -16403,7 +16403,7 @@ const list = [
         cost: ["Summer Math and Science Honors Academy (SMASH) is a free activity", false, 0, "unknown"],
         tags: ["Computer Science", "STEM", "Mentoring", "Leadership/Management"],
         gradeRange: ["Sophomore", "Junior"],
-        id: 620,
+        id: 621,
     },
     {
         title: "Summer Percussion Seminar",
@@ -16428,7 +16428,7 @@ const list = [
         cost: ["Summer Percussion Seminar costs $3,500 to enter", true, 3500, "USD"],
         tags: ["Music", "Performing Arts", "Leadership/Management"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 621,
+        id: 622,
     },
     {
         title: "Theatre & Drama Academy",
@@ -16453,7 +16453,7 @@ const list = [
         cost: ["Theatre & Drama Academy costs $3,830 to enter", true, 3830, "USD"],
         tags: ["Performing Arts", "Theatre/Drama", "Dance"],
         gradeRange: ["Junior", "Senior"],
-        id: 622,
+        id: 623,
     },
     {
         title: "Theatre Design & Production Workshop",
@@ -16478,7 +16478,7 @@ const list = [
         cost: ["Theatre Design & Production Workshop costs $3,830 to enter", true, 3830, "USD"],
         tags: ["Theater", "Design", "Humanities", "Drama", "Performing Arts", "Theatre/Drama"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 623,
+        id: 624,
     },
     {
         title: "Women in Construction Management",
@@ -16504,7 +16504,7 @@ const list = [
         cost: ["Women in Construction Management costs 25 USD to enter", true, 25, "USD"],
         tags: ["Engineering", "Architecture", "Business", "STEM"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 624,
+        id: 625,
     },
     {
         title: "Agress Summer Health Corps Program",
@@ -16529,7 +16529,7 @@ const list = [
         cost: ["Agress Summer Health Corps Program is a free activity", false, 0, "unknown"],
         tags: ["Medicine", "Health Sciences", "Service"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 625,
+        id: 626,
     },
     {
         title: "Boston College Public Speaking and Debate Camps",
@@ -16554,7 +16554,7 @@ const list = [
         cost: ["Boston College Public Speaking and Debate Camps costs 2299 USD to enter", true, 2299, "USD"],
         tags: ["Communication", "Persuasion", "Self-Confidence", "Critical Thinking", "Debate", "Public Speaking"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 626,
+        id: 627,
     },
     {
         title: "CAMP CHLA",
@@ -16579,7 +16579,7 @@ const list = [
         cost: ["CAMP CHLA is a free activity", false, 0, "unknown"],
         tags: ["Medicine", "Health Sciences"],
         gradeRange: ["Freshman", "Sophomore", "Junior"],
-        id: 627,
+        id: 628,
     },
     {
         title: "Drew University Public Speaking and Debate Camps",
@@ -16617,7 +16617,7 @@ const list = [
             "Speech",
         ],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 628,
+        id: 629,
     },
     {
         title: "High School Summer Internship Program",
@@ -16642,7 +16642,7 @@ const list = [
         cost: ["High School Summer Internship Program is a free activity", false, 0, "USD"],
         tags: ["STEM", "Science", "Research", "Biology", "Pre-med", "Medicine"],
         gradeRange: ["Sophomore", "Junior"],
-        id: 629,
+        id: 630,
     },
     {
         title: "MERITS Program",
@@ -16667,7 +16667,7 @@ const list = [
         cost: ["MERITS Program is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Science", "Math", "Engineering", "Research", "Internship"],
         gradeRange: ["Junior"],
-        id: 630,
+        id: 631,
     },
     {
         title: "The Hun School of Princeton Public Speaking and Debate Camps",
@@ -16692,7 +16692,7 @@ const list = [
         cost: ["The Hun School of Princeton Public Speaking and Debate Camps costs 2,299 USD to enter", true, 2299, "USD"],
         tags: ["Communication", "Persuasion", "Self-Confidence", "Critical Thinking", "Debate", "Public Speaking"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 631,
+        id: 632,
     },
     {
         title: "University of Pennsylvania Public Speaking and Debate Camps",
@@ -16717,7 +16717,7 @@ const list = [
         cost: ["University of Pennsylvania Public Speaking and Debate Camps costs $2,299 to enter", true, 2299, "USD"],
         tags: ["Public Speaking", "Debate", "Leadership/Management"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 632,
+        id: 633,
     },
     {
         title: "Villanova Public Speaking and Debate Camp",
@@ -16742,7 +16742,7 @@ const list = [
         cost: ["Villanova Public Speaking and Debate Camp costs $2,299 to enter", true, 2299, "USD"],
         tags: ["Debate", "Public Speaking", "Leadership/Management", "Social Sciences and Humanities"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 633,
+        id: 634,
     },
     {
         title: "Girls on Ice Alaska",
@@ -16767,7 +16767,7 @@ const list = [
         cost: ["Girls on Ice Alaska costs $35 to enter", true, 0, "USD"],
         tags: ["Environmental Science", "Outdoor-adventure", "Science", "STEM"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 634,
+        id: 635,
     },
     {
         title: "Summer Student Program",
@@ -16792,7 +16792,7 @@ const list = [
         cost: ["Summer Student Program pays participants 6250 USD", false, 6250, "USD"],
         tags: ["STEM", "Science", "Research", "Biology"],
         gradeRange: ["Senior", "Graduate"],
-        id: 635,
+        id: 636,
     },
     {
         title: "Thurgood Marshall Summer Law Internship Program",
@@ -16818,7 +16818,7 @@ const list = [
         cost: ["Thurgood Marshall Summer Law Internship Program is a free activity", false, 0, "unknown"],
         tags: ["Law", "Government/Politics", "Leadership/Management", "Pre-law"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 636,
+        id: 637,
     },
     {
         title: "Boston University Tanglewood Institute",
@@ -16843,7 +16843,7 @@ const list = [
         cost: ["Boston University Tanglewood Institute costs money to enter", true, "unknown", "unknown"],
         tags: ["Music", "Performing Arts"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 637,
+        id: 638,
     },
     {
         title: "The Michigan Ross Summer Business Academy",
@@ -16868,7 +16868,7 @@ const list = [
         cost: ["The Michigan Ross Summer Business Academy costs $50 to apply and $3,250 to participate", true, 3250, "USD"],
         tags: ["Business", "Economics", "Leadership/Management"],
         gradeRange: ["Senior"],
-        id: 638,
+        id: 639,
     },
     {
         title: "5-Week Summer Ballet Program",
@@ -16892,7 +16892,7 @@ const list = [
         cost: ["5-Week Summer Ballet Program costs $3,340 to enter", true, 3340, "USD"],
         tags: ["Dance", "Performing Arts"],
         gradeRange: ["unknown"],
-        id: 639,
+        id: 640,
     },
     {
         title: "High School Summer Program",
@@ -16918,7 +16918,7 @@ const list = [
         cost: ["High School Summer Program is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Science", "Pre-med", "Research", "Biology", "Medicine", "Health", "Allied Health"],
         gradeRange: ["Senior"],
-        id: 640,
+        id: 641,
     },
     {
         title: "Musical Theatre Workshop",
@@ -16943,7 +16943,7 @@ const list = [
         cost: ["Musical Theatre Workshop costs $5,450 to enter", true, 5450, "USD"],
         tags: ["Performing Arts", "Theatre/Drama"],
         gradeRange: ["Sophomore", "Junior"],
-        id: 641,
+        id: 642,
     },
     {
         title: "RIBS: Research in the Biological Sciences",
@@ -16968,7 +16968,7 @@ const list = [
         cost: ["RIBS: Research in the Biological Sciences costs $13,600 to enter", true, 13600, "USD"],
         tags: ["Biology", "Research", "STEM"],
         gradeRange: ["Sophomore", "Junior"],
-        id: 642,
+        id: 643,
     },
     {
         title: "Student Leaders Program",
@@ -16993,7 +16993,7 @@ const list = [
         cost: ["Student Leaders Program is a free activity", false, 0, "unknown"],
         tags: ["Leadership/Management", "Business", "Economics", "Social Justice", "Community Service"],
         gradeRange: ["Junior", "Senior"],
-        id: 643,
+        id: 644,
     },
     {
         title: "Hutton Junior Fisheries Biology Program",
@@ -17017,7 +17017,7 @@ const list = [
             "To participate in the Hutton Junior Fisheries Biology Program you must:\n- Reside in the United States, Mexico, or Canada.\n- Be from a traditionally excluded background in the fisheries profession.\n- Not have previously participated in the Hutton Program.",
         cost: ["Hutton Junior Fisheries Biology Program is a free activity", false, 0, "unknown"],
         tags: ["Biology", "Environmental Science", "STEM", "Mentoring"],
-        id: 644,
+        id: 645,
     },
     {
         title: "Aspire: Five-Week Music Performance Intensive",
@@ -17042,7 +17042,7 @@ const list = [
         cost: ["Aspire: Five-Week Music Performance Intensive costs $9,430 to enter", true, 9430, "USD"],
         tags: ["Music", "Performing Arts"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 645,
+        id: 646,
     },
     {
         title: "Bass Workshop",
@@ -17067,7 +17067,7 @@ const list = [
         cost: ["Bass Workshop costs $627 to enter", true, 627, "USD"],
         tags: ["Music", "Performing Arts"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 646,
+        id: 647,
     },
     {
         title: "Drum and Percussion workshop",
@@ -17092,7 +17092,7 @@ const list = [
         cost: ["Drum and Percussion workshop costs $1114 to enter", true, 1114, "USD"],
         tags: ["Music", "Performing Arts"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 647,
+        id: 648,
     },
     {
         title: "Bucknell Engineering Camp",
@@ -17117,7 +17117,7 @@ const list = [
         cost: ["Bucknell Engineering Camp costs 1250 USD to enter", true, 1250, "USD"],
         tags: ["Engineering", "STEM", "Higher Education"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 648,
+        id: 649,
     },
     {
         title: "Commercial Dance Intensive",
@@ -17142,7 +17142,7 @@ const list = [
         cost: ["Commercial Dance Intensive costs 2,520 USD to enter", true, 2520, "USD"],
         tags: ["Performing Arts", "Dance", "Music"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 649,
+        id: 650,
     },
     {
         title: "Electron Music Production and Sound Design Workshop",
@@ -17167,7 +17167,7 @@ const list = [
         cost: ["Electron Music Production and Sound Design Workshop costs 2,725 USD to enter", true, 2725, "USD"],
         tags: ["Music", "Sound Design", "Computer Science"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 650,
+        id: 651,
     },
     {
         title: "Film, TV, and Video Game Scoring Program in Los Angeles",
@@ -17192,7 +17192,7 @@ const list = [
         cost: ["Film, TV, and Video Game Scoring Program in Los Angeles costs 1595 USD to enter", true, 1595, "USD"],
         tags: ["Music", "Film/Cinema"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 651,
+        id: 652,
     },
     {
         title: "Global String Program",
@@ -17216,7 +17216,7 @@ const list = [
         cost: ["Global String Program costs 2040 USD to enter", true, 2040, "USD"],
         tags: ["Music", "Performing Arts"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 652,
+        id: 653,
     },
     {
         title: "Gospel Performance Program",
@@ -17241,7 +17241,7 @@ const list = [
         cost: ["Gospel Performance Program costs $1,940 to enter", true, 1940, "USD"],
         tags: ["Music", "Performing Arts", "History"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 653,
+        id: 654,
     },
     {
         title: "Guitar Sessions",
@@ -17266,7 +17266,7 @@ const list = [
         cost: ["Guitar Sessions costs $1,095 to enter", true, 1095, "USD"],
         tags: ["Music", "Performing Arts"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 654,
+        id: 655,
     },
     {
         title: "High School Composition Intensive",
@@ -17291,7 +17291,7 @@ const list = [
         cost: ["High School Composition Intensive costs $2,442 to enter", true, 2442, "USD"],
         tags: ["Music", "Creative Writing"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 655,
+        id: 656,
     },
     {
         title: "Interlochen Arts Camp",
@@ -17325,7 +17325,7 @@ const list = [
             "Visual Arts",
         ],
         gradeRange: ["6", "7", "8", "9", "10", "11", "12"],
-        id: 656,
+        id: 657,
     },
     {
         title: "Mathematics & Science for Minority Students",
@@ -17364,7 +17364,7 @@ const list = [
             "Astronomy",
         ],
         gradeRange: ["Freshman"],
-        id: 657,
+        id: 658,
     },
     {
         title: "Music Business Program",
@@ -17389,7 +17389,7 @@ const list = [
         cost: ["Music Business Program costs 1,095 USD to enter", true, 1095, "USD"],
         tags: ["Music", "Business", "Entrepreneurship", "Leadership/Management", "Marketing/Advertising"],
         gradeRange: ["unknown"],
-        id: 658,
+        id: 659,
     },
     {
         title: "Music Production Workshop",
@@ -17414,7 +17414,7 @@ const list = [
         cost: ["Music Production Workshop costs 2,092 USD to enter", true, 2092, "USD"],
         tags: ["Engineering", "Music"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 659,
+        id: 660,
     },
     {
         title: "Musical Theater Acting Intensive",
@@ -17439,7 +17439,7 @@ const list = [
         cost: ["Musical Theater Acting Intensive costs 2,720 USD to enter", true, 2720, "USD"],
         tags: ["Performing Arts", "Theatre/Drama"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 660,
+        id: 661,
     },
     {
         title: "Musical Theater Dance Intensive",
@@ -17464,7 +17464,7 @@ const list = [
         cost: ["Musical Theater Dance Intensive costs $5020 to enter", true, 5020, "USD"],
         tags: ["Performing Arts", "Dance", "Music"],
         gradeRange: ["unknown"],
-        id: 661,
+        id: 662,
     },
     {
         title: "Musical Theater Workshop",
@@ -17489,7 +17489,7 @@ const list = [
         cost: ["Musical Theater Workshop costs 1,295 USD to enter", true, 1295, "USD"],
         tags: ["Performing Arts", "Dance", "Theater", "Music", "Humanities"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 662,
+        id: 663,
     },
     {
         title: "Piano/Keyboard Workshop",
@@ -17514,7 +17514,7 @@ const list = [
         cost: ["Piano/Keyboard Workshop costs $1,095 to enter", true, 1095, "USD"],
         tags: ["Music", "Performing Arts"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 663,
+        id: 664,
     },
     {
         title: "QuarkNet Summer Research Program ",
@@ -17538,7 +17538,7 @@ const list = [
             "To participate in the QuarkNet Summer Research Program you must:\n- Be high school sophomores, juniors, or seniors.\n- Be Illinois high school enrollees.\n- Be U.S. citizens or permanent residents.\n- Provide evidence of identity and eligibility to work in the U.S.\n- Obtain work authorization if under 16 years of age.\n- Have proof of medical insurance.\n- Commit to attending the entire six-week internship period.",
         cost: ["QuarkNet Summer Research Program is a free activity", false, 0, "unknown"],
         tags: ["Physics", "Engineering"],
-        id: 664,
+        id: 665,
     },
     {
         title: "Songwriting Sessions in Los Angeles",
@@ -17563,7 +17563,7 @@ const list = [
         cost: ["Songwriting Sessions in Los Angeles costs 1,595 USD to enter", true, 1595, "USD"],
         tags: ["Music", "Creative Writing", "Performing Arts"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 665,
+        id: 666,
     },
     {
         title: "Songwriting Workshop",
@@ -17588,7 +17588,7 @@ const list = [
         cost: ["Songwriting Workshop costs $1,095 to enter", true, 1095, "USD"],
         tags: ["Music", "Creative Writing"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 666,
+        id: 667,
     },
     {
         title: "Spain Summer Performance Program",
@@ -17613,7 +17613,7 @@ const list = [
         cost: ["Spain Summer Performance Program costs $2,680 to enter", true, 2680, "USD"],
         tags: ["Music", "Performing Arts"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 667,
+        id: 668,
     },
     {
         title: "Summer Dance Intensive",
@@ -17638,7 +17638,7 @@ const list = [
         cost: ["Summer Dance Intensive costs 5020 USD to enter", true, 5020, "USD"],
         tags: ["Performing Arts", "Dance"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 668,
+        id: 669,
     },
     {
         title: "Fermilab TARGET Program",
@@ -17662,7 +17662,7 @@ const list = [
             "To participate in the Fermilab TARGET Program you must:\n- Complete the online application\n- Submit transcripts\n- Submit two letters of recommendation",
         cost: ["Fermilab TARGET Program is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Science", "Engineering", "Computer Science"],
-        id: 669,
+        id: 670,
     },
     {
         title: "Vocal Summit",
@@ -17687,7 +17687,7 @@ const list = [
         cost: ["Vocal Summit costs 1,095 USD to enter", true, 1095, "USD"],
         tags: ["Music", "Performing Arts", "Theater"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 670,
+        id: 671,
     },
     {
         title: "Vocal/Choral Intensive",
@@ -17712,7 +17712,7 @@ const list = [
         cost: ["Vocal/Choral Intensive costs $3,742 to enter", true, 3742, "USD"],
         tags: ["Music", "Performing Arts"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 671,
+        id: 672,
     },
     {
         title: "Women's Technology Program",
@@ -17735,7 +17735,7 @@ const list = [
         requirements: "To participate in the Women's Technology Program you must have completed their junior year.",
         cost: ["Women's Technology Program is a free activity", false, 0, "unknown"],
         tags: ["Engineering", "Computer Science", "STEM", "Mathematics", "Education", "Diversity and Inclusion"],
-        id: 672,
+        id: 673,
     },
     {
         title: "Youth Musical Theater Summer Program",
@@ -17760,7 +17760,7 @@ const list = [
         cost: ["Youth Musical Theater Summer Program costs $950 to enter", true, 950, "USD"],
         tags: ["Performing Arts", "Theatre/Drama", "Music"],
         gradeRange: ["unknown"],
-        id: 673,
+        id: 674,
     },
     {
         title: "The Governor\u2019s School of New Jersey Program in the Sciences (GSNJS)",
@@ -17790,7 +17790,7 @@ const list = [
         ],
         tags: ["STEM", "Science", "Research", "Mathematics"],
         gradeRange: ["Junior"],
-        id: 674,
+        id: 675,
     },
     {
         title: "High School Scientific Training and Enrichment Program",
@@ -17825,7 +17825,7 @@ const list = [
             "Leadership/Management",
         ],
         gradeRange: ["Junior"],
-        id: 675,
+        id: 676,
     },
     {
         title: "Tisch Summer High School Clive Davis Institute of Recorded Music",
@@ -17855,7 +17855,7 @@ const list = [
         ],
         tags: ["Music", "Business", "Entrepreneurship"],
         gradeRange: ["Junior", "Sophomore"],
-        id: 676,
+        id: 677,
     },
     {
         title: "Tisch Summer High School Dance Program",
@@ -17881,7 +17881,7 @@ const list = [
         cost: ["Tisch Summer High School Dance Program costs $14,072 to enter", true, 14072, "USD"],
         tags: ["Performing Arts", "Dance"],
         gradeRange: ["Junior", "Sophomore"],
-        id: 677,
+        id: 678,
     },
     {
         title: "Tisch Summer High School Drama Program",
@@ -17906,7 +17906,7 @@ const list = [
         cost: ["Tisch Summer High School Drama Program costs $14,188 to enter", true, 14188, "USD"],
         tags: ["Performing Arts", "Theatre/Drama"],
         gradeRange: ["Junior", "Sophomore"],
-        id: 678,
+        id: 679,
     },
     {
         title: "Tisch Summer High School Game Design Program",
@@ -17931,7 +17931,7 @@ const list = [
         cost: ["Tisch Summer High School Game Design Program costs $13,639 to enter", true, 13639, "USD"],
         tags: ["Game Development", "Computer Science", "Art/Design"],
         gradeRange: ["Junior", "Sophomore"],
-        id: 679,
+        id: 680,
     },
     {
         title: "Tisch Summer High School Photography and Imaging Program",
@@ -17956,7 +17956,7 @@ const list = [
         cost: ["Tisch Summer High School Photography and Imaging Program costs $10,956 to enter", true, 10956, "USD"],
         tags: ["Art/Design", "Photography/Videography"],
         gradeRange: ["Junior", "Sophomore"],
-        id: 680,
+        id: 681,
     },
     {
         title: "Tisch Summer High School Production and Design Workshop",
@@ -17981,7 +17981,7 @@ const list = [
         cost: ["Tisch Summer High School Production and Design Workshop costs $14,188 to enter", true, 14188, "USD"],
         tags: ["Performing Arts", "Design"],
         gradeRange: ["Junior", "Sophomore"],
-        id: 681,
+        id: 682,
     },
     {
         title: "WISTEM Program",
@@ -18006,7 +18006,7 @@ const list = [
         cost: ["WISTEM Program is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Science", "Math", "Engineering", "Leadership", "Social Justice", "Diversity and Inclusion"],
         gradeRange: ["Junior"],
-        id: 682,
+        id: 683,
     },
     {
         title: "Yale Young Global Scholars (YYGS)",
@@ -18031,7 +18031,7 @@ const list = [
         cost: ["Yale Young Global Scholars (YYGS) costs $6500 to enter", true, 6500, "USD"],
         tags: ["STEM", "Social Science", "Humanities", "International Studies/Global Affairs", "Leadership/Management"],
         gradeRange: ["Sophomore", "Junior"],
-        id: 683,
+        id: 684,
     },
     {
         title: "Summer Music Theory and Ear Training",
@@ -18055,7 +18055,7 @@ const list = [
         cost: ["Contact Julliard for cost information", "unknown", "unknown", "unknown"],
         tags: ["Music", "Education"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 684,
+        id: 685,
     },
     {
         title: "The Apollo Theater Academy High School Internship Program",
@@ -18078,7 +18078,7 @@ const list = [
         requirements: "Unknown",
         cost: ["The Apollo Theater Academy High School Internship Program is a free activity", false, 0, "unknown"],
         tags: ["Performing Arts", "Arts/Design"],
-        id: 685,
+        id: 686,
     },
     {
         title: "The New Jersey Scholars Program",
@@ -18103,7 +18103,7 @@ const list = [
         cost: ["The New Jersey Scholars Program is a free activity", false, 0, "unknown"],
         tags: ["Humanities", "Writing", "History", "Leadership", "Residential Life", "Athletics", "Summer Program"],
         gradeRange: ["Junior"],
-        id: 686,
+        id: 687,
     },
     {
         title: "Summer Science Research Program",
@@ -18127,7 +18127,7 @@ const list = [
             "To participate in the Summer Science Research Program you must:\n- Be enrolled as a junior or senior in high school\n- Be at least 16 years old at the start of the program\n- Be fully vaccinated against COVID-19\n- Wear a mask and practice social distancing as per university and CDC guidelines\n- Commit to the entirety of the seven-week program\n- Refrain from using any aspect of work performed during the SSRP for science competition submissions",
         cost: ["Summer Science Research Program is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Research", "Medicine"],
-        id: 687,
+        id: 688,
     },
     {
         title: "TELLURIDE ASSOCIATION SUMMER SEMINAR (TASS)",
@@ -18150,7 +18150,7 @@ const list = [
         requirements: "To participate in the TELLURIDE ASSOCIATION SUMMER SEMINAR (TASS) you must:\n- Submit an application",
         cost: ["TELLURIDE ASSOCIATION SUMMER SEMINAR (TASS) is a free activity", false, 0, "unknown"],
         tags: ["Education", "Government/Politics", "Leadership/Management", "Social Science"],
-        id: 688,
+        id: 689,
     },
     {
         title: "Camp ARCH",
@@ -18174,7 +18174,7 @@ const list = [
         cost: ["Camp ARCH costs $1,500 to enter", true, 1500, "USD"],
         tags: ["Architecture", "STEM"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 689,
+        id: 690,
     },
     {
         title: "Fir Acres Writing Workshop",
@@ -18198,7 +18198,7 @@ const list = [
         cost: ["Fir Acres Writing Workshop costs $3,700 to enter", true, 3700, "USD"],
         tags: ["Creative Writing", "Writing"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 690,
+        id: 691,
     },
     {
         title: "Apprenticeship Program",
@@ -18223,7 +18223,7 @@ const list = [
         cost: ["Apprenticeship Program is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Science", "Research", "Pre-med", "Biology", "Medicine", "Health", "Mentoring"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 691,
+        id: 692,
     },
     {
         title: "Juilliard Summer Dance Intensive",
@@ -18248,7 +18248,7 @@ const list = [
         cost: ["Juilliard Summer Dance Intensive costs $3,950 to enter", true, 3950, "USD"],
         tags: ["Performing Arts", "Dance"],
         gradeRange: ["Freshman", "Sophomore", "Junior"],
-        id: 692,
+        id: 693,
     },
     {
         title: "Research Science Institute",
@@ -18273,7 +18273,7 @@ const list = [
         cost: ["Research Science Institute is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Science", "Engineering", "Research"],
         gradeRange: ["Junior"],
-        id: 693,
+        id: 694,
     },
     {
         title: "Garden Apprentice Program (GAP)",
@@ -18298,7 +18298,7 @@ const list = [
         cost: ["Garden Apprentice Program (GAP) costs 50 USD to enter", true, 50, "USD"],
         tags: ["Agriculture", "Environmental Science", "Leadership/Management", "Service"],
         gradeRange: ["Freshman", "Sophomore"],
-        id: 694,
+        id: 695,
     },
     {
         title: "National Youth Orchestra of the United States of America",
@@ -18323,7 +18323,7 @@ const list = [
         cost: ["National Youth Orchestra of the United States of America costs $30 to enter", true, 30, "USD"],
         tags: ["Music", "Performing Arts"],
         gradeRange: ["Sophomore", "Junior", "Senior"],
-        id: 695,
+        id: 696,
     },
     {
         title: "Baruch College Now STEM Research Academy",
@@ -18347,7 +18347,7 @@ const list = [
             "To participate in the Baruch College Now STEM Research Academy you must:\n- Be an NYC public high school 11th grader\n- Have a PSAT/ SAT Verbal score of at least 480 OR an English Language Arts Regents score of at least 75\n- Have a Math Regents score of at least 80 AND a Living Environment Regent score of at least 75\n- Have an overall average of at least 80\n- Have an overall English average of at least 80, a Math average of at least 80, AND a Science average of at least 80",
         cost: ["Baruch College Now STEM Research Academy is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Science", "Research", "Education"],
-        id: 696,
+        id: 697,
     },
     {
         title: "Science, Technology, and Reconstructive Surgery (STaRS) Summer Internship Program",
@@ -18377,7 +18377,7 @@ const list = [
         ],
         tags: ["STEM", "Science", "Research", "Medicine", "Health Sciences"],
         gradeRange: ["unknown"],
-        id: 697,
+        id: 698,
     },
     {
         title: "National Security Language Initiative for Youth",
@@ -18402,7 +18402,7 @@ const list = [
         cost: ["National Security Language Initiative for Youth is a free activity", false, 0, "unknown"],
         tags: ["Foreign Languages", "International Studies/Global Affairs"],
         gradeRange: ["Freshman", "Sophomore", "Junior", "Senior"],
-        id: 698,
+        id: 699,
     },
     {
         title: "Science and Engineering Apprenticeship Program",
@@ -18427,7 +18427,7 @@ const list = [
         cost: ["Science and Engineering Apprenticeship Program is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Science", "Engineering", "Research", "Mentoring", "Internship", "Naval Research"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 699,
+        id: 700,
     },
     {
         title: "National Youth Leadership Forum: Medicine",
@@ -18452,7 +18452,7 @@ const list = [
         cost: ["National Youth Leadership Forum: Medicine costs $3,995-$4,295 to enter", true, 4145, "USD"],
         tags: ["Medicine", "Health Sciences", "STEM", "Pre-med", "Biology", "Service", "Community Service"],
         gradeRange: ["Sophomore", "Junior", "Senior", "Graduate"],
-        id: 700,
+        id: 701,
     },
     {
         title: "Energy Empowerment Program (LEEP) ",
@@ -18475,7 +18475,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Energy Empowerment Program (LEEP) is a free activity", false, 0, "unknown"],
         tags: ["Leadership/Management", "STEM", "Career Development"],
-        id: 701,
+        id: 702,
     },
     {
         title: "National Summer Transportation Institute",
@@ -18498,7 +18498,7 @@ const list = [
         requirements: "To participate in the National Summer Transportation Institute you must:\n- Submit an application",
         cost: ["National Summer Transportation Institute is a free activity", false, 0, "unknown"],
         tags: ["Engineering", "Science", "Architecture", "STEM", "Transportation"],
-        id: 702,
+        id: 703,
     },
     {
         title: "UB/National Grid Leadership Camp",
@@ -18521,7 +18521,7 @@ const list = [
         requirements: "To participate in the UB/National Grid Leadership Camp, you must submit an application.",
         cost: ["UB/National Grid Leadership Camp is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Engineering", "Leadership/Management"],
-        id: 703,
+        id: 704,
     },
     {
         title: "Arkansas Children's Job Shadowing Program",
@@ -18545,7 +18545,7 @@ const list = [
             "To participate in the Arkansas Children's Job Shadowing Program you must be 16 years of age or older.",
         cost: ["Arkansas Children's Job Shadowing Program is a free activity", false, 0, "unknown"],
         tags: ["Medicine", "Health Sciences", "STEM"],
-        id: 704,
+        id: 705,
     },
     {
         title: "Tufts University Biomedical Engineering Research Scholars (TUBERS)",
@@ -18569,7 +18569,7 @@ const list = [
             "To participate in the Tufts University Biomedical Engineering Research Scholars (TUBERS) you must:\n- Be 16 years old by the start of the program on July 5th, 2023\n- Demonstrate a strong interest in biomedical research\n- Commit to working for approximately 6 weeks during the summer in the Biomedical Engineering labs at Tufts\n- Learn about research techniques and a particular field of study in depth while carrying out all steps of the scientific method in their project\n- Find their own transportation to the Tufts University Medford campus\n- Participate in local and national science competitions",
         cost: ["Tufts University Biomedical Engineering Research Scholars (TUBERS) is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Engineering", "Medicine", "Science", "Research", "Education", "High School", "Summer Program"],
-        id: 705,
+        id: 706,
     },
     {
         title: "Art Institute of Chicago Summer Internship",
@@ -18593,7 +18593,7 @@ const list = [
             "To participate in the Art Institute of Chicago Summer Internship, you must:\n- Be a Chicago high school teen\n- Be at least 16 at the start of the internship",
         cost: ["Art Institute of Chicago Summer Internship is a free activity", false, 0, "unknown"],
         tags: ["Art/Design", "Museum", "Education"],
-        id: 706,
+        id: 707,
     },
     {
         title: "AgriTREK/SciTREK and AgDiscovery Summer Programs for High School Students",
@@ -18621,7 +18621,7 @@ const list = [
             "unknown",
         ],
         tags: ["Science", "Engineering", "Agriculture", "Leadership/Management"],
-        id: 707,
+        id: 708,
     },
     {
         title: "Chicago Youth Service Corps",
@@ -18644,7 +18644,7 @@ const list = [
         requirements: "To participate in the Chicago Youth Service Corps you must be between the ages of 16 and 24.",
         cost: ["Chicago Youth Service Corps is a free activity", false, 0, "unknown"],
         tags: ["Leadership/Management", "Volunteer Work/Community Service", "Diversity and Inclusion"],
-        id: 708,
+        id: 709,
     },
     {
         title: "MITES Summer Program",
@@ -18668,7 +18668,7 @@ const list = [
             "To participate in the MITES Summer Program you must:\n- Be U.S. citizens or permanent residents\n- Be high school juniors\n- Demonstrate a passion for science, technology, engineering, and math through extracurricular activities, essays, and letters of recommendation\n- Maintain a strong academic record with good grades",
         cost: ["MITES Summer Program is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Mathematics", "Science", "Engineering"],
-        id: 709,
+        id: 710,
     },
     {
         title: "High School Apprenticeships",
@@ -18692,7 +18692,7 @@ const list = [
             "To participate in the High School Apprenticeships you must:\n- Be enrolled in high school (9-12 Grade) or within 60 months of completing a high school degree\n- Not be enrolled in an undergraduate program",
         cost: ["High School Apprenticeships is a free activity", false, 0, "unknown"],
         tags: ["Science", "Engineering", "STEM", "Robotics"],
-        id: 710,
+        id: 711,
     },
     {
         title: "Careers in Science (CiS) Intern Program",
@@ -18716,7 +18716,7 @@ const list = [
             "To participate in the Careers in Science (CiS) Intern Program, you must:\n\n- Be currently enrolled full time as a 9th or 10th grade student in an SFUSD school\n- Maintain a GPA of 2.5 and a grade of C or higher in science and math\n- Obtain a valid work permit (US citizens and others authorized to work in the US)\n- Commit to all attendance requirements for 2 or 3 years, through high school graduation\n- Commute to the Academy and nearby locations after school and on Saturdays during the school year, and on weekdays in the summer (some remote work may be required)\n- Demonstrate interest and enthusiasm for learning, teaching, and doing science",
         cost: ["Careers in Science (CiS) Intern Program is a free activity", false, 0, "unknown"],
         tags: ["Science", "Computer Science", "Education", "Engineering"],
-        id: 711,
+        id: 712,
     },
     {
         title: "High School Work Study Program",
@@ -18740,7 +18740,7 @@ const list = [
             "To participate in the High School Work Study Program you must:\n- Be high school juniors\n- Be at least 16 years of age",
         cost: ["High School Work Study Program is a free activity", false, 0, "unknown"],
         tags: ["Business", "Computer Science", "Engineering", "STEM"],
-        id: 712,
+        id: 713,
     },
     {
         title: "Counselor in Training",
@@ -18763,7 +18763,7 @@ const list = [
         requirements: "To participate in the Counselor in Training you must be rising juniors or seniors.",
         cost: ["Counselor in Training is a free activity", false, 0, "unknown"],
         tags: ["Leadership/Management", "Outdoor Recreation", "Safety"],
-        id: 713,
+        id: 714,
     },
     {
         title: "The LEAH Knox Data Science and Biomedical Research Summer Internship ",
@@ -18792,7 +18792,7 @@ const list = [
             "unknown",
         ],
         tags: ["Data Science", "Medicine", "STEM"],
-        id: 714,
+        id: 715,
     },
     {
         title: "NLI Challenge",
@@ -18816,7 +18816,7 @@ const list = [
             "To participate in the NLI Challenge you must:\n- Be 13-15 years old\n- Reside or attend school in North Lawndale, Gage Park, or New City/Back of the Yards",
         cost: ["NLI Challenge is a free activity", false, 0, "unknown"],
         tags: ["Leadership/Management", "Social Science", "Government/Politics"],
-        id: 715,
+        id: 716,
     },
     {
         title: "Alamo Academies Internship",
@@ -18839,7 +18839,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Alamo Academies Internship is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Internship", "Education"],
-        id: 716,
+        id: 717,
     },
     {
         title: "Congresswoman Sheila Jackson Lee",
@@ -18862,7 +18862,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Congresswoman Sheila Jackson Lee is a free activity", false, 0, "unknown"],
         tags: ["Government/Politics", "Law"],
-        id: 717,
+        id: 718,
     },
     {
         title: "CSExplore Camp",
@@ -18886,7 +18886,7 @@ const list = [
         requirements: "To participate in the CSExplore Camp you must submit an application.",
         cost: ["CSExplore Camp is a free activity", false, 0, "unknown"],
         tags: ["Engineering", "Computer Science", "STEM", "Robotics", "Game Development", "Coding/Programming"],
-        id: 718,
+        id: 719,
     },
     {
         title: "Youth Conservation Corps",
@@ -18909,7 +18909,7 @@ const list = [
         requirements: "To participate in the Youth Conservation Corps you must be between the ages of 15-18.",
         cost: ["Youth Conservation Corps is a free activity", false, 0, "unknown"],
         tags: ["Environmental Science", "History"],
-        id: 719,
+        id: 720,
     },
     {
         title: "Student Heroes",
@@ -18932,7 +18932,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Student Heroes is a free activity", false, 0, "unknown"],
         tags: ["Nonprofit", "Leadership/Management", "Community Service"],
-        id: 720,
+        id: 721,
     },
     {
         title: "Teen Opportunities at the Adler Planetarium",
@@ -18956,7 +18956,7 @@ const list = [
             "Requirements: To participate in the Teen Opportunities at the Adler Planetarium you must:\n\n- Be enrolled in 8th-11th grade during the 2022-2023 school year (Far Horizons Teens)\n- Be interested in learning new STEM skills (Far Horizons Teens)\n- Be passionate about science (Far Horizons Teens)\n- Be a team player (Far Horizons Teens)\n- Be a current high school student (Summer Internship)\n- Be interested in building professional skills in a supportive and fun environment (Summer Internship)\n- Be excited to work collaboratively as part of a team (Summer Internship)\n- Be available for all onsite program dates (Summer Internship)\n- Be able to attend an orientation (Summer Internship)\n- Be enrolled in 7th-8th grade during the 2022-2023 school year (Mission Near Space)\n- Attend a Chicago Public School (Mission Near Space)\n- Be COVID-19 vaccinated, unless they request and are granted a medical or religious exemption (Mission Near Space)\n- Meet specific application timelines and deadlines (Youth Leadership Council and Youth Organization for Lights Out programs)",
         cost: ["Teen Opportunities at the Adler Planetarium is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Astronomy", "Environmental Science", "Leadership/Management"],
-        id: 721,
+        id: 722,
     },
     {
         title: "High School Internship",
@@ -18980,7 +18980,7 @@ const list = [
             "To participate in the High School Internship you must:\n- Be two to three years from graduating high school (in grades 10 and 11) or obtaining their High School Equivalency degree.\n- Reside in or attend a high school or home school in New York, New Jersey or Connecticut on the application deadline date.\n- Be fully vaccinated and able to show proof by the start of the internship program.",
         cost: ["High School Internship is a free activity", false, 0, "unknown"],
         tags: ["Arts", "Museum", "Education", "Writing", "Art/Design", "Internship"],
-        id: 722,
+        id: 723,
     },
     {
         title: "Internship Program ",
@@ -19003,7 +19003,7 @@ const list = [
         requirements: "To participate in the Internship Program you must be upperclassman high school students.",
         cost: ["Internship Program is a free activity", false, 0, "unknown"],
         tags: ["Law/Advocacy", "Government/Politics"],
-        id: 723,
+        id: 724,
     },
     {
         title: "High School Internship",
@@ -19026,7 +19026,7 @@ const list = [
         requirements: "Unknown",
         cost: ["High School Internship is a free activity", false, 0, "unknown"],
         tags: ["Engineering", "Leadership/Management"],
-        id: 724,
+        id: 725,
     },
     {
         title: "The Retirement Systems Summer Internship Program",
@@ -19050,7 +19050,7 @@ const list = [
             "To participate in the Retirement Systems Summer Internship Program you must:\n\n- Be a high school student or a graduate of high school that is enrolled in a college/university.",
         cost: ["The Retirement Systems Summer Internship Program is a free activity", false, 0, "unknown"],
         tags: ["Finance", "Government/Politics"],
-        id: 725,
+        id: 726,
     },
     {
         title: "Temple of Understanding Internship",
@@ -19080,7 +19080,7 @@ const list = [
             "International Studies/Global Affairs",
             "Model United Nations (MUN)",
         ],
-        id: 726,
+        id: 727,
     },
     {
         title: "Leader-in-Training Program",
@@ -19103,7 +19103,7 @@ const list = [
         requirements: "To participate in the Leader-in-Training Program you must be entering grades 9-12.",
         cost: ["Leader-in-Training Program is a free activity", false, 0, "unknown"],
         tags: ["Leadership/Management", "Education", "Environmental Science", "Biology"],
-        id: 727,
+        id: 728,
     },
     {
         title: "Summer Internship",
@@ -19127,7 +19127,7 @@ const list = [
             "To participate in the Summer Internship you must:\n- Have a strong academic track record\n- Have an interest in pursuing biomedical, medical, bioengineering, and health-oriented professions",
         cost: ["Summer Internship is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Biology", "Health Sciences", "Medicine"],
-        id: 728,
+        id: 729,
     },
     {
         title: "High School Internship ",
@@ -19150,7 +19150,7 @@ const list = [
         requirements: "To participate in the High School Internship you must be New Jersey residents.",
         cost: ["High School Internship is a free activity", false, 0, "unknown"],
         tags: ["Government", "Law/Advocacy", "Politics"],
-        id: 729,
+        id: 730,
     },
     {
         title: "Internship Program ",
@@ -19174,7 +19174,7 @@ const list = [
             "To participate in the Internship Program you must:\n- Demonstrate an interest in the law\n- Possess clear communication skills\n- Exhibit strong research and writing abilities\n- Be proficient in computer usage",
         cost: ["Internship Program is a free activity", false, 0, "unknown"],
         tags: ["Law/Advocacy", "Government/Politics"],
-        id: 730,
+        id: 731,
     },
     {
         title: "SUMMER HIGH SCHOOL ACADEMIC PROGRAM FOR ENGINEERS",
@@ -19197,7 +19197,7 @@ const list = [
         requirements: "Unknown",
         cost: ["SUMMER HIGH SCHOOL ACADEMIC PROGRAM FOR ENGINEERS costs money to enter", true, "unknown", "unknown"],
         tags: ["STEM", "Engineering", "Physics", "Chemistry", "Mathematics"],
-        id: 731,
+        id: 732,
     },
     {
         title: "Paid Summer Internship Program ",
@@ -19221,7 +19221,7 @@ const list = [
             "To participate in the Paid Summer Internship Program you must:\n- Be 14 to 17 years of age (Must be 14 by 6/19/2023 or 17 by 7/14/2023)\n- Reside in city council districts 1-8\n- Be enrolled in the following eligible school districts: San Antonio ISD, Northside ISD, Edgewood ISD, Harlandale ISD, South San ISD, Southside ISD, and Southwest ISD\n- Submit a copy of their social security card\n- Submit a copy of their birth certificate or Texas ID",
         cost: ["Paid Summer Internship Program is a free activity", false, 0, "unknown"],
         tags: ["Internship", "Career Exploration", "Professional Development", "Mentoring"],
-        id: 732,
+        id: 733,
     },
     {
         title: "Science Research Mentoring Program",
@@ -19245,7 +19245,7 @@ const list = [
             "To participate in the Science Research Mentoring Program you must:\n\n- Attend one of the following high schools or partner programs:\n    - Big Brothers Big Sisters\n    - Bronx Center for Science and Mathematics\n    - Harlem Educational Activities Fund (HEAF)\n    - Henry Street Settlement\n    - High School for Health Professions\n    - Manhattan Center for Science and Math\n    - St. Jean Baptiste High School\n    - Sunset Park High School\n    - The Young Women's Leadership School (Harlem)\n    - Uncommon Schools Network\n    - Washington Heights Expeditionary Learning School\n    - Woodside Community Center\n- Participate in and complete:\n    - a course in CodeAMNH\n    - a course in the Science Alliance Program\n    - Science and Nature Program\n- Self-identify as Black, Latinx, Indigenous, and/or first-generation college-bound (encouraged)",
         cost: ["Science Research Mentoring Program is a free activity", false, 0, "unknown"],
         tags: ["Science", "Medicine", "Museum"],
-        id: 733,
+        id: 734,
     },
     {
         title: "Fire Cadet Program",
@@ -19268,7 +19268,7 @@ const list = [
         requirements: "To participate in the Fire Cadet Program you must:\n- Be between the ages of 14-18",
         cost: ["Fire Cadet Program is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Public Safety"],
-        id: 734,
+        id: 735,
     },
     {
         title: "Seed Crew",
@@ -19291,7 +19291,7 @@ const list = [
         requirements: "To participate in the Seed Crew you must be between the ages of 14-17.",
         cost: ["Seed Crew is a free activity", false, 0, "unknown"],
         tags: ["Environmental Science", "Social Science"],
-        id: 735,
+        id: 736,
     },
     {
         title: "Program in Engineering & Technology",
@@ -19316,7 +19316,7 @@ const list = [
             'To participate in the Program in Engineering & Technology you must:\n- Be a New Jersey resident and a high school junior.\n- Demonstrate a strong interest in engineering and technology and a commitment to pursuing knowledge and opportunities in the field.\n- Be willing to reside on campus for the duration of the program, including weekends.\n- Rank among the top students in their school, with primarily "A" grades in honors math and science classes.\n- Achieve outstanding scores on standardized achievement tests, typically above the 90th percentile.\n- Demonstrate exceptional engineering abilities outside the classroom may be considered for admission despite lower standardized test scores.',
         cost: ["Program in Engineering & Technology is a free activity", false, 0, "unknown"],
         tags: ["Engineering", "STEM"],
-        id: 736,
+        id: 737,
     },
     {
         title: "Saper Law Immersion Program",
@@ -19339,7 +19339,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Saper Law Immersion Program costs money to enter", true, "unknown", "unknown"],
         tags: ["Law", "Business", "Social Science"],
-        id: 737,
+        id: 738,
     },
     {
         title: "MGH Youth Scholars",
@@ -19362,7 +19362,7 @@ const list = [
         requirements: "Unknown",
         cost: ["MGH Youth Scholars is a free activity", false, 0, "unknown"],
         tags: ["Medicine", "STEM"],
-        id: 738,
+        id: 739,
     },
     {
         title: "Summer Teen Volunteer Program",
@@ -19386,7 +19386,7 @@ const list = [
             "To participate in the Summer Teen Volunteer Program you must:\n- Obtain a completed Parental Agreement from their parent or guardian\n- Obtain a completed Teacher/Counselor Reference Form from a teacher or guidance counselor\n- Obtain a completed Health Clearance Form from their primary care physician",
         cost: ["Summer Teen Volunteer Program is a free activity", false, 0, "unknown"],
         tags: ["Health Sciences", "Leadership/Management"],
-        id: 739,
+        id: 740,
     },
     {
         title: "Teen Volunteer Program",
@@ -19409,7 +19409,7 @@ const list = [
         requirements: "To participate in the Teen Volunteer Program you must be 13 years of age or older.",
         cost: ["Teen Volunteer Program is a free activity", false, 0, "unknown"],
         tags: ["Medicine", "Social Science"],
-        id: 740,
+        id: 741,
     },
     {
         title: "Internships",
@@ -19432,7 +19432,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Internships is a free activity", false, 0, "unknown"],
         tags: ["Government/Politics", "Law"],
-        id: 741,
+        id: 742,
     },
     {
         title: "UVU Latinos of Tomorrow Summer Bridge Program",
@@ -19456,7 +19456,7 @@ const list = [
             "To participate in the UVU Latinos of Tomorrow Summer Bridge Program, you must:\n\n- Maintain a minimum GPA of 2.5",
         cost: ["UVU Latinos of Tomorrow Summer Bridge Program is a free activity", false, 0, "unknown"],
         tags: ["Mentoring", "Tutoring", "Diversity and Inclusion", "Engineering", "Science", "Computer Science", "Business"],
-        id: 742,
+        id: 743,
     },
     {
         title: "High School Community Service Internship Program ",
@@ -19480,7 +19480,7 @@ const list = [
             "To participate in the High School Community Service Internship Program you must:\n- Have an interest in history or related disciplines\n- Be willing to commit to hours during one school semester\n- Have a desire to expand their knowledge through a valuable community service project",
         cost: ["High School Community Service Internship Program is a free activity", false, 0, "unknown"],
         tags: ["History", "Museum", "Education", "Volunteer Work/Community Service"],
-        id: 743,
+        id: 744,
     },
     {
         title: "Student Internship",
@@ -19503,7 +19503,7 @@ const list = [
         requirements: "To participate in the Student Internship you must be at least 16 years of age.",
         cost: ["Student Internship is a free activity", false, 0, "unknown"],
         tags: ["Health Sciences", "Mentoring"],
-        id: 744,
+        id: 745,
     },
     {
         title: "Sugar Land SciTeen Program",
@@ -19527,7 +19527,7 @@ const list = [
             "To participate in the Sugar Land SciTeen Program you must commit to a minimum of 4 weeks of volunteering during the summer.",
         cost: ["Sugar Land SciTeen Program is a free activity", false, 0, "unknown"],
         tags: ["Science", "STEM", "Education"],
-        id: 745,
+        id: 746,
     },
     {
         title: "The Mini Vet School",
@@ -19550,7 +19550,7 @@ const list = [
         requirements: "To participate in the Mini Vet School you must:\n- Submit an application",
         cost: ["The Mini Vet School costs money to enter", true, "unknown", "unknown"],
         tags: ["Health Sciences", "Veterinary Science"],
-        id: 746,
+        id: 747,
     },
     {
         title: "Mayor's Youth Advisory Commission",
@@ -19575,7 +19575,7 @@ const list = [
             "To participate in the Mayor's Youth Advisory Commission you must:\n- Reside in Tempe, AZ\n- Attend school in Tempe\n- Be enrolled in grades 9-12",
         cost: ["Mayor's Youth Advisory Commission is a free activity", false, 0, "unknown"],
         tags: ["Government/Politics", "Leadership/Management", "Social Science"],
-        id: 747,
+        id: 748,
     },
     {
         title: "Internship Program ",
@@ -19598,7 +19598,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Internship Program is a free activity", false, 0, "unknown"],
         tags: ["Museum", "Education", "History"],
-        id: 748,
+        id: 749,
     },
     {
         title: "High School Summer Internships",
@@ -19622,7 +19622,7 @@ const list = [
             "To participate in the High School Summer Internships you must:\n- Be at least 15 years old at the start of their internship\n- Have taken at least one Writopia Lab 15-hour workshop within the past calendar year\n- Commit to at least two week-long summer workshops or one trimester-long weekly workshop",
         cost: ["High School Summer Internships is a free activity", false, 0, "unknown"],
         tags: ["Mentoring", "Creative Writing", "Education"],
-        id: 749,
+        id: 750,
     },
     {
         title: "Hk Maker Lab",
@@ -19646,7 +19646,7 @@ const list = [
             "To participate in the Hk Maker Lab you must:\n- Attend a NYC high school during this academic school year\n- Note: Due to the rigor and demands of the program, preference will be given to rising juniors and seniors.\n- Demonstrate economic or educational disadvantage based on the below criteria:\na. Applicant attends a NYC high school with a Free and Reduced Price Lunch (FRPL) rate of 70% or higher\nOR\nb. Applicant family income qualifies for FRPL, Medicaid, SNAP, TANF, or other similar government aid but attends a NYC high school with a FRPL rate below 70% (you can check your school here). Documentation of Government aid qualification must be provided with application materials.",
         cost: ["Hk Maker Lab is a free activity", false, 0, "unknown"],
         tags: ["Engineering,Medicine,Science,Business,Art/Design"],
-        id: 750,
+        id: 751,
     },
     {
         title: "Black 14 Social Justice Summer Institute",
@@ -19670,7 +19670,7 @@ const list = [
             "To participate in the Black 14 Social Justice Summer Institute you must:\n- Be enrolled in high school\n- Have a strong interest in social justice issues\n- Be willing to commit to the full program",
         cost: ["Black 14 Social Justice Summer Institute is a free activity", false, 0, "unknown"],
         tags: ["Social Justice", "Community Engagement", "College Preparation", "Academic Support"],
-        id: 751,
+        id: 752,
     },
     {
         title: "Medill Cherubs",
@@ -19694,7 +19694,7 @@ const list = [
             "To participate in the Medill Cherubs you must:\n- Be a high school junior\n- Maintain a strong academic standing\n- Demonstrate interest or experience in journalism",
         cost: ["Medill Cherubs costs money to enter", true, "unknown", "unknown"],
         tags: ["Writing", "Education", "Journalism", "Networking/Collaboration"],
-        id: 752,
+        id: 753,
     },
     {
         title: "Colorado State Patrol Youth Academy",
@@ -19717,7 +19717,7 @@ const list = [
         requirements: "To participate in the Colorado State Patrol Youth Academy you must be 16-18 years of age.",
         cost: ["Colorado State Patrol Youth Academy is a free activity", false, 0, "unknown"],
         tags: ["Law", "Government/Politics"],
-        id: 753,
+        id: 754,
     },
     {
         title: "Newcomb Summer Session",
@@ -19741,7 +19741,7 @@ const list = [
             "To participate in the Newcomb Summer Session, you must be entering their sophomore, junior, or senior year of high school.",
         cost: ["Newcomb Summer Session is a free activity", false, 0, "unknown"],
         tags: ["Law/Advocacy", "Writing", "Education", "History", "Leadership/Management", "Social Science"],
-        id: 754,
+        id: 755,
     },
     {
         title: "Internship Program ",
@@ -19764,7 +19764,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Internship Program is a free activity", false, 0, "unknown"],
         tags: ["Arts", "Leadership/Management"],
-        id: 755,
+        id: 756,
     },
     {
         title: "Pomona College Academy for Youth Success (PAYS)",
@@ -19788,7 +19788,7 @@ const list = [
             "To participate in the Pomona College Academy for Youth Success (PAYS), you must:\n\n- Reside within Los Angeles, Orange, Riverside, San Bernardino, or Ventura County\n- Be a current 9th grade student\n- Be vaccinated for COVID-19 (including Booster)\n- Be a first-generation college-bound student\n- Qualify for Free-Reduced Lunch\n- Be of an underrepresented ethnicity/race (African-American, Latinx, South-East Asian (API), Native American)\n- Currently take Geometry or Integrated Math II",
         cost: ["Pomona College Academy for Youth Success (PAYS) is a free activity", false, 0, "unknown"],
         tags: ["Education", "Financial Aid/Scholarships"],
-        id: 756,
+        id: 757,
     },
     {
         title: "Student Internship Program ",
@@ -19812,7 +19812,7 @@ const list = [
             "To participate in the Student Internship Program you must:\n- Be at least 15 years of age\n- Live in Mercer County or attend a school or university located in Mercer County",
         cost: ["Student Internship Program is a free activity", false, 0, "unknown"],
         tags: ["Government/Politics", "Public Administration"],
-        id: 757,
+        id: 758,
     },
     {
         title: "Teen Night Planning Committee",
@@ -19836,7 +19836,7 @@ const list = [
             "To participate in the Teen Night Planning Committee you must be NYC high school students between the ages of 14 and 19.",
         cost: ["Teen Night Planning Committee is a free activity", false, 0, "unknown"],
         tags: ["Leadership/Management", "Arts", "Activism", "Community Service"],
-        id: 758,
+        id: 759,
     },
     {
         title: "Wisconsin Maritime Museum Volunteer",
@@ -19861,7 +19861,7 @@ const list = [
             "To participate in the Wisconsin Maritime Museum Volunteer you must:\n- Be available to volunteer at least 4 hours per month\n- Be able to work independently and as part of a team\n- Be able to follow instructions and work safely\n- Be able to interact with the public in a positive and professional manner",
         cost: ["Wisconsin Maritime Museum Volunteer is a free activity", false, 0, "unknown"],
         tags: ["Museum", "History", "Education"],
-        id: 759,
+        id: 760,
     },
     {
         title: "Systems Thinkers in STEM Ambassadorship (STiSA)",
@@ -19885,7 +19885,7 @@ const list = [
             "To participate in the Systems Thinkers in STEM Ambassadorship (STiSA) you must be sophomores or juniors in high school.",
         cost: ["Systems Thinkers in STEM Ambassadorship (STiSA) is a free activity", false, 0, "unknown"],
         tags: ["STEM"],
-        id: 760,
+        id: 761,
     },
     {
         title: "Senate Page Program",
@@ -19909,7 +19909,7 @@ const list = [
             "To participate in the Senate Page Program you must:\n- Be in grades ten, eleven, or twelve\n- Be sponsored by a member of the North Carolina Senate\n- Be in good academic standing at their school\n- Have prior approval from their principal if serving as a page during the school year\n- Be able to attend sessions from Monday afternoon to Thursday afternoon of their assigned week\n- Work in appropriate business attire\n- Receive a stipend of $150 or thirty hours of community service\n- Participate in daily senate sessions, committee meetings, and provide office assistance\n- Be helpful, cordial, and polite\n- Avoid wearing jeans, tennis shoes, or thong sandals (flip flops) while on duty",
         cost: ["Senate Page Program is a free activity", false, 0, "unknown"],
         tags: ["Government/Politics", "Law"],
-        id: 761,
+        id: 762,
     },
     {
         title: "The Mayor's Youth Employment Program ",
@@ -19933,7 +19933,7 @@ const list = [
             "To participate in the Mayor's Youth Employment Program you must:\n- Be a current high school junior or senior\n- Reside in Stamford, CT",
         cost: ["The Mayor's Youth Employment Program is a free activity", false, 0, "unknown"],
         tags: ["Business", "Government", "Education", "Mentoring", "Leadership/Management"],
-        id: 762,
+        id: 763,
     },
     {
         title: "Strong Future Las Vegas Youth Employment Program.",
@@ -19957,7 +19957,7 @@ const list = [
             "To participate in the Strong Future Las Vegas Youth Employment Program you must:\n- Be at least 16 years old\n- Be a resident of Las Vegas\n- Complete a seven-session workforce readiness training program\n- Participate in summer or after-school jobs\n- Be willing to work with community partners and businesses",
         cost: ["Strong Future Las Vegas Youth Employment Program. is a free activity", false, 0, "unknown"],
         tags: ["Business", "Economics", "Leadership/Management", "Entrepreneurship"],
-        id: 763,
+        id: 764,
     },
     {
         title: "CSM Summer Academies",
@@ -19981,7 +19981,7 @@ const list = [
             'To participate in the CSM Summer Academies you must:\n- Be young women of color in grades 10 through 12\n- Complete an online application before the deadline\n- Upload a copy of their most recent high school transcript that includes one full academic year of grades\n- Submit an essay of 200-500 words that answers the prompt: "Tell us about yourself and why you are interested in participating in the academies"\n- Pay a $25 registration fee\n- Be prepared to live in the residence halls during the academies',
         cost: ["CSM Summer Academies costs money to enter", true, "unknown", "unknown"],
         tags: ["STEM", "Education", "Leadership/Management", "Mentoring", "Diversity and Inclusion"],
-        id: 764,
+        id: 765,
     },
     {
         title: "After School Matters",
@@ -20005,7 +20005,7 @@ const list = [
             "Requirements: To participate in the After School Matters Nexus, users must:\n- Reside in Chicago\n- Be at least 16 years old (18 years old for certain positions)\n- Have participated in at least three previous After School Matters programs\n- Be eligible for employment and complete the required i9 and W4 forms\n- Be prepared for an interview/audition process (not all programs may interview/audition all applicants)",
         cost: ["After School Matters is a free activity", false, 0, "unknown"],
         tags: ["Internships", "Career Exploration"],
-        id: 765,
+        id: 766,
     },
     {
         title: "Volunteer",
@@ -20028,7 +20028,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Volunteer is a free activity", false, 0, "unknown"],
         tags: ["Volunteer Work/Community Service", "Nonprofit"],
-        id: 766,
+        id: 767,
     },
     {
         title: "Collegiate Seminar Program",
@@ -20053,7 +20053,7 @@ const list = [
             "To participate in the Collegiate Seminar Program you must be U.S. high school students who will be in the 11th grade in Fall 2022.",
         cost: ["Collegiate Seminar Program is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Social Science", "Humanities"],
-        id: 767,
+        id: 768,
     },
     {
         title: "Teaching Assistant Program at the Santa Barbara Museum of Art",
@@ -20077,7 +20077,7 @@ const list = [
             "To participate in the Teaching Assistant Program at the Santa Barbara Museum of Art you must:\n- Be between 15-18 years old\n- Demonstrate interest in art and/or working with children\n- Volunteer their time\n- Assist Teaching Artists in the classroom\n- Prepare materials\n- Assist children with hands-on art-making\n- Serve as role models for students and campers\n- Provide enthusiasm and create a fun environment for art learning",
         cost: ["Teaching Assistant Program at the Santa Barbara Museum of Art is a free activity", false, 0, "unknown"],
         tags: ["Art/Design", "Education"],
-        id: 768,
+        id: 769,
     },
     {
         title: "CITYarts Internship ",
@@ -20101,7 +20101,7 @@ const list = [
             "To participate in the CITYarts Internship you must:\n- Meet the requirements for the specific position they are applying for.",
         cost: ["CITYarts Internship is a free activity", false, 0, "unknown"],
         tags: ["Arts", "Business", "Nonprofit", "Law/Advocacy", "Art/Design", "Education", "Mentoring"],
-        id: 769,
+        id: 770,
     },
     {
         title: "High School Internship Program",
@@ -20125,7 +20125,7 @@ const list = [
             "To participate in the High School Internship Program you must:\n- Reside in or attend school within the Manhattan borough",
         cost: ["High School Internship Program is a free activity", false, 0, "unknown"],
         tags: ["Law/Advocacy", "Government/Politics"],
-        id: 770,
+        id: 771,
     },
     {
         title: "High School Internship",
@@ -20148,7 +20148,7 @@ const list = [
         requirements: "Unknown",
         cost: ["High School Internship is a free activity", false, 0, "unknown"],
         tags: ["Art/Design", "Education", "History"],
-        id: 771,
+        id: 772,
     },
     {
         title: "Teen Art Guide",
@@ -20171,7 +20171,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Teen Art Guide is a free activity", false, 0, "unknown"],
         tags: ["Arts", "Event Planning", "Community Engagement"],
-        id: 772,
+        id: 773,
     },
     {
         title: "Teen Council, Teens Leading Change (TLC), and Teen Volunteer.",
@@ -20195,7 +20195,7 @@ const list = [
             "**Teen Council, Teens Leading Change (TLC), and Teen Volunteer**\n\n**Requirements:**\n\nTo participate in the Teen Council, Teens Leading Change (TLC), and Teen Volunteer, you must:\n\n* Complete a Teen Volunteer Intake Form\n* Obtain a parent or guardian's signature on a Teen Volunteer Waiver Form\n* Be between the ages of 14-19\n* Contact the Young Adult Librarian or Senior Librarian at their nearest library for available opportunities",
         cost: ["Teen Council, Teens Leading Change (TLC), and Teen Volunteer. is a free activity", false, 0, "unknown"],
         tags: ["Leadership/Management", "Volunteer Work/Community Service", "Education"],
-        id: 773,
+        id: 774,
     },
     {
         title: "High School Exploration Internship",
@@ -20218,7 +20218,7 @@ const list = [
         requirements: "Unknown",
         cost: ["High School Exploration Internship is a free activity", false, 0, "unknown"],
         tags: ["Health Sciences", "STEM"],
-        id: 774,
+        id: 775,
     },
     {
         title: "Summer Youth Tillers Internship",
@@ -20241,7 +20241,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Summer Youth Tillers Internship is a free activity", false, 0, "unknown"],
         tags: ["Environmental Activism", "Agriculture", "Leadership/Management"],
-        id: 775,
+        id: 776,
     },
     {
         title: "Physics in and Through Cosmology",
@@ -20265,7 +20265,7 @@ const list = [
             "Requirements: To participate in the Physics in and Through Cosmology you must:\n- Be high school physics teachers or highly motivated high school students\n- Possess a keen interest in STEM\n- Value diversity, equity, and inclusion\n- Be available to participate remotely via Zoom\n- Contact laurie.kerrigan2@gmail.com or apply through the provided link\n- Participate in an overview of cutting-edge research in particle physics and cosmology\n- Form small groups and interview a lab scientist about their work\n- Present a short video or PowerPoint about the scientist's research",
         cost: ["Physics in and Through Cosmology is a free activity", false, 0, "unknown"],
         tags: ["Physics", "STEM"],
-        id: 776,
+        id: 777,
     },
     {
         title: "InternNE",
@@ -20289,7 +20289,7 @@ const list = [
             "To participate in the InternNE you must:\n- Be students actively pursuing a degree or certification program at an accredited post-secondary institution, or have graduated from such an institution within twelve months of application.\n- Provide proof of residency in Nebraska or attend school in Nebraska.\n- Have an available U.S. tax ID number.\n- Undergo a background check and provide additional documentation as required.\n- Match with an employer on the InternNE website with an available internship position that aligns with their career interests and academic background.",
         cost: ["InternNE costs money to enter", true, "unknown", "unknown"],
         tags: ["Government/Politics", "Internships"],
-        id: 777,
+        id: 778,
     },
     {
         title: "Summer Learning Institute (SLI)",
@@ -20312,7 +20312,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Summer Learning Institute (SLI) is a free activity", false, 0, "unknown"],
         tags: ["Education", "Nonprofit", "Leadership/Management", "Mentoring"],
-        id: 778,
+        id: 779,
     },
     {
         title: "Summer Biomedical Internship Program",
@@ -20336,7 +20336,7 @@ const list = [
             "To participate in the Summer Biomedical Internship Program you must:\n- Be at least 16 years of age\n- Be currently enrolled as a junior in high school\n- Have a 3.0 or better grade point average\n- Reside in Fresno, Madera, Merced, Kings, Tulare or Mariposa Counties",
         cost: ["Summer Biomedical Internship Program is a free activity", false, 0, "unknown"],
         tags: ["Biology", "Medicine", "STEM"],
-        id: 779,
+        id: 780,
     },
     {
         title: "Health and Society Institute",
@@ -20359,7 +20359,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Health and Society Institute costs money to enter", true, "unknown", "unknown"],
         tags: ["Medicine", "Science", "Social Science", "Health Sciences"],
-        id: 780,
+        id: 781,
     },
     {
         title: "Summer Academy of Actuarial and Mathematical Sciences",
@@ -20383,7 +20383,7 @@ const list = [
             "To participate in the Summer Academy of Actuarial and Mathematical Sciences you must:\n- Be a rising 11th or 12th grader or a graduating high school senior\n- Be an incoming freshman at Morgan State University\n- Be interested in pursuing a Mathematics, Actuarial Science, or Computer Science degree at Morgan State University",
         cost: ["Summer Academy of Actuarial and Mathematical Sciences is a free activity", false, 0, "unknown"],
         tags: ["Mathematics", "Computer Science", "STEM"],
-        id: 781,
+        id: 782,
     },
     {
         title: "Exelon Foundation STEM Academy",
@@ -20406,7 +20406,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Exelon Foundation STEM Academy is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Leadership/Management", "Environmental Science"],
-        id: 782,
+        id: 783,
     },
     {
         title: "GEM High School Internship Program",
@@ -20429,7 +20429,7 @@ const list = [
         requirements: "To participate in the GEM High School Internship Program you must be high school students.",
         cost: ["GEM High School Internship Program is a free activity", false, 0, "unknown"],
         tags: ["Art/Design", "Business", "Engineering", "History", "STEM"],
-        id: 783,
+        id: 784,
     },
     {
         title: "Student Internships",
@@ -20453,7 +20453,7 @@ const list = [
             "To participate in the Student Internships you must:\n- Contact the Hartford Hospital's Academic Affairs/Medical Education Department by email or by phone at 860.972.4187.\u200b\u200b",
         cost: ["Student Internships is a free activity", false, 0, "unknown"],
         tags: ["Health Sciences", "Medicine", "Science"],
-        id: 784,
+        id: 785,
     },
     {
         title: "Arizona Science Center Volunteer Program",
@@ -20476,7 +20476,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Arizona Science Center Volunteer Program is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Science Education"],
-        id: 785,
+        id: 786,
     },
     {
         title: "BioRocket Internship",
@@ -20500,7 +20500,7 @@ const list = [
             "To participate in the BioRocket Internship you must:\n- Live or attend a NYC Public or Charter School within 45 minutes of Genspace",
         cost: ["BioRocket Internship is a free activity", false, 0, "unknown"],
         tags: ["Biology", "STEM"],
-        id: 786,
+        id: 787,
     },
     {
         title: "Drake Fellows Summer Internship",
@@ -20524,7 +20524,7 @@ const list = [
             "To participate in the Drake Fellows Summer Internship you must:\n- Be a young woman or gender-expansive youth\n- Be between the ages of 16-22",
         cost: ["Drake Fellows Summer Internship is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Mentoring"],
-        id: 787,
+        id: 788,
     },
     {
         title: "Internship Opportunities",
@@ -20548,7 +20548,7 @@ const list = [
             "To participate in the Internship Opportunities you must meet the following requirements:\n- Requirements vary by position",
         cost: ["Internship Opportunities is a free activity", false, 0, "unknown"],
         tags: ["Government/Politics", "International Studies/Global Affairs", "Social Science"],
-        id: 788,
+        id: 789,
     },
     {
         title: "Genesys Works",
@@ -20572,7 +20572,7 @@ const list = [
             "To participate in the Genesys Works you must:\n- Apply through the student application portal on the organization's website.\n- Be high school seniors.\n- Be committed to balancing schoolwork with a 20-hour-per-week internship.\n- Possess a positive attitude and willingness to learn.\n- Attend a Genesys Works partner school or reside in the community where the Genesys Works office is located.\n- Complete the eight-week summer Skills Training Program covering business etiquette, communication skills, and conflict resolution.",
         cost: ["Genesys Works is a free activity", false, 0, "unknown"],
         tags: ["Business and Entrepreneurship", "Leadership/Management"],
-        id: 789,
+        id: 790,
     },
     {
         title: "Today\u2019s Interns, Tomorrow\u2019s Professionals (TIP) Internship Program",
@@ -20602,7 +20602,7 @@ const list = [
             "unknown",
         ],
         tags: ["Business", "Education"],
-        id: 790,
+        id: 791,
     },
     {
         title: "Clinical Internship Program",
@@ -20626,7 +20626,7 @@ const list = [
             "To participate in the Clinical Internship Program you must:\n- Be a qualified high school junior or senior\n- Have a GPA of at least 3.0\n- Be interested in furthering their studies in the medical field\n- Possess physical and mental abilities to perform the major functions required in the internship\n- Have computer literacy or be willing to learn computer skills required",
         cost: ["Clinical Internship Program is a free activity", false, 0, "unknown"],
         tags: ["Health Sciences", "Medicine"],
-        id: 791,
+        id: 792,
     },
     {
         title: "Youth Volunteer Program",
@@ -20649,7 +20649,7 @@ const list = [
         requirements: "To participate in the Youth Volunteer Program you must be between the ages of 14-17.",
         cost: ["Youth Volunteer Program is a free activity", false, 0, "unknown"],
         tags: ["Environmental Science", "Biology"],
-        id: 792,
+        id: 793,
     },
     {
         title: "Tisch Future Artists",
@@ -20674,7 +20674,7 @@ const list = [
             "To participate in the Tisch Future Artists you must be currently enrolled high school students in the 9th, 10th, or 11th grade.",
         cost: ["Tisch Future Artists is a free activity", false, 0, "unknown"],
         tags: ["Art/Design", "Performing Arts", "Creative Writing"],
-        id: 793,
+        id: 794,
     },
     {
         title: "The Arete Internship Program ",
@@ -20698,7 +20698,7 @@ const list = [
             "To participate in the Arete Internship Program you must:\n- Be a current high school student at The Laboratory School of Finance and Technology or Walkabout Bronx High School.\n- Have prior internship experience with Arete Education.\n- Have an Arete supervisor recommendation for a fall internship.\n- Demonstrate effective written and verbal communication skills.\n- Possess the ability to:\n    - Manage time effectively\n    - Go the extra mile and/or try something new\n    - Be empathic and listen to others well\n    - Proactively identify and resolve problems\n    - Be polite, positive, and professional in all communications",
         cost: ["The Arete Internship Program is a free activity", false, 0, "unknown"],
         tags: ["Education", "Arts", "Science", "Engineering", "Computer Science", "Career Exploration", "Skill Development"],
-        id: 794,
+        id: 795,
     },
     {
         title: "Chicago Summer Business Institute Internship Program",
@@ -20722,7 +20722,7 @@ const list = [
             'To participate in the Chicago Summer Business Institute Internship Program you must:\n- Reside in the City of Chicago\n- Be a high school Sophomore or Junior\n- Maintain a "B" or 3.0 GPA\n- Have a family household income below $80k/year',
         cost: ["Chicago Summer Business Institute Internship Program is a free activity", false, 0, "unknown"],
         tags: ["Business", "Finance", "Leadership/Management"],
-        id: 795,
+        id: 796,
     },
     {
         title: "City Council Summer Internship Program",
@@ -20747,7 +20747,7 @@ const list = [
             "To participate in the City Council Summer Internship Program, you must:\n- Be a rising junior or senior\n- Maintain a minimum GPA of 3.3",
         cost: ["City Council Summer Internship Program is a free activity", false, 0, "unknown"],
         tags: ["Government/Politics"],
-        id: 796,
+        id: 797,
     },
     {
         title: "Teenagers Exploring and Explaining Nature and Science (TEENS)",
@@ -20771,7 +20771,7 @@ const list = [
             "To participate in the Teenagers Exploring and Explaining Nature and Science (TEENS) you must:\n- Attend all program dates\n- Be between the ages of 14-19\n- Be a Chicago high school student\n- Reside in Chicago",
         cost: ["Teenagers Exploring and Explaining Nature and Science (TEENS) is a free activity", false, 0, "unknown"],
         tags: ["Environmental Science", "STEM", "Data Science"],
-        id: 797,
+        id: 798,
     },
     {
         title: "Summer Intern Program",
@@ -20796,7 +20796,7 @@ const list = [
             "To participate in the Summer Intern Program you must:\n- Be between the ages of 14-19.\n- Maintain a passing grade in all core content courses required for graduation.\n- Be available to work from 9:30am-3:00pm, Mon-Thurs., on their respective dates of employment.",
         cost: ["Summer Intern Program is a free activity", false, 0, "unknown"],
         tags: ["Business and Entrepreneurship", "Mentoring"],
-        id: 798,
+        id: 799,
     },
     {
         title: "Science Squad",
@@ -20820,7 +20820,7 @@ const list = [
             "To participate in the Science Squad you must:\n- Apply before the deadline for the session they wish to volunteer for.\n- Demonstrate a genuine interest in science and its applications.\n- Possess a desire to engage with museum visitors.\n- Attend trainings on communication, leadership, and job readiness skills.\n- Lead interactive science demonstrations with museum visitors during shifts.\n- Mentor new volunteers and participate in projects that enhance science communication skills (for those continuing beyond the first session).",
         cost: ["Science Squad is a free activity", false, 0, "unknown"],
         tags: ["Science", "Museum", "Education", "Leadership/Management", "Communication", "STEM"],
-        id: 799,
+        id: 800,
     },
     {
         title: "AI 4 All",
@@ -20844,7 +20844,7 @@ const list = [
             "To participate in the AI 4 All you must:\n- Be young women or identify as female\n- Be currently in their sophomore or junior year of high school in the Boston area\n- Pay a non-refundable $100 registration fee\n- Present a small group research project to their friends and families after the program",
         cost: ["AI 4 All is a free activity", false, 0, "unknown"],
         tags: ["Artificial Intelligence (AI)", "Diversity and Inclusion", "STEM"],
-        id: 800,
+        id: 801,
     },
     {
         title: "Bloomberg Arts Internship",
@@ -20868,7 +20868,7 @@ const list = [
             "To participate in the Bloomberg Arts Internship, you must:\n\n- Submit a resume\n- Submit an application essay",
         cost: ["Bloomberg Arts Internship is a free activity", false, 0, "unknown"],
         tags: ["Art/Design", "Education"],
-        id: 801,
+        id: 802,
     },
     {
         title: "National Youth Congress Internship",
@@ -20893,7 +20893,7 @@ const list = [
             "To participate in the National Youth Congress Internship you must be high school youth between the ages of 14-18.",
         cost: ["National Youth Congress Internship is a free activity", false, 0, "unknown"],
         tags: ["Government", "Business", "Law/Advocacy"],
-        id: 802,
+        id: 803,
     },
     {
         title: "Jr. Zoo Keeper Program",
@@ -20916,7 +20916,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Jr. Zoo Keeper Program is a free activity", false, 0, "unknown"],
         tags: ["Environmental Science", "Biology"],
-        id: 803,
+        id: 804,
     },
     {
         title: "Accounting and Information Management (AIM) Academy",
@@ -20940,7 +20940,7 @@ const list = [
             "Requirements: To participate in the Accounting and Information Management (AIM) Academy you must:\n- Be rising high school juniors from underrepresented communities\n- Demonstrate interest in accounting, finance, entrepreneurship, or related fields\n- Commit to attending the six-day summer program\n- Participate in workshops, team-building activities, and college readiness workshops\n- Engage with industry professionals through sessions with industry leaders\n- Submit an application form, current transcript, personal essay, and letter of recommendation",
         cost: ["Accounting and Information Management (AIM) Academy is a free activity", false, 0, "unknown"],
         tags: ["Business", "Entrepreneurship"],
-        id: 804,
+        id: 805,
     },
     {
         title: "High School Student Volunteers",
@@ -20964,7 +20964,7 @@ const list = [
             "Requirements: To participate in the High School Student Volunteers you must:\n- Be between the ages of 14-17 and enrolled in high school\n- Submit an application\n- Provide valid proof of COVID-19 vaccination\n- Complete general volunteer orientation\n- Receive initial and annual health evaluations\n- Get an annual flu vaccine\n- Commit to dedicating a certain number of hours each week to their volunteer assignment, typically four hours per week at a set day and time\n- Choose between clinical or clerical assignments\n- Not perform research or assist medical personnel with procedures",
         cost: ["High School Student Volunteers is a free activity", false, 0, "unknown"],
         tags: ["Medicine", "Health Sciences", "STEM"],
-        id: 805,
+        id: 806,
     },
     {
         title: "PUPP Scholars Program",
@@ -20988,7 +20988,7 @@ const list = [
             "To participate in the PUPP Scholars Program you must:\n- Be a freshman in high school\n- Attend one of the following schools: Ewing High School, Lawrence High School, Nottingham High School (Hamilton, NJ), Princeton High School, or Trenton Central High School",
         cost: ["PUPP Scholars Program is a free activity", false, 0, "unknown"],
         tags: ["Education", "College Prep", "Mentoring", "Leadership/Management", "Diversity and Inclusion"],
-        id: 806,
+        id: 807,
     },
     {
         title: "Office of Internships",
@@ -21012,7 +21012,7 @@ const list = [
             "To participate in the Office of Internships you must:\n- Meet the requirements for the specific position they are applying for.",
         cost: ["Office of Internships is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Art/Design", "History", "Social Science", "Internships"],
-        id: 807,
+        id: 808,
     },
     {
         title: "Student Internship Program ",
@@ -21035,7 +21035,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Student Internship Program is a free activity", false, 0, "unknown"],
         tags: ["Writing", "History", "Museum", "Nonprofit", "Literature"],
-        id: 808,
+        id: 809,
     },
     {
         title: "Berkeley Lab K-12 - Director's Apprenticeship Program",
@@ -21059,7 +21059,7 @@ const list = [
             "Requirements: To participate in the Berkeley Lab K-12 - Director's Apprenticeship Program you must:\n- Be public school students in 10th or 11th grade in the Bay area.\n- Be available to travel to Berkeley Lab for a minimum of six weeks during the summer.\n- Be from underrepresented groups in STEM, including low-income households, first-generation college attendees, and Black, Indigenous, Latinx, and LGBTQ+ students.\n- Visit the Berkeley Lab K-12 website to apply for the BLDAP.",
         cost: ["Berkeley Lab K-12 - Director's Apprenticeship Program is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Research", "Education", "Career Development"],
-        id: 809,
+        id: 810,
     },
     {
         title: "SheTech Summer Internship Exploration program",
@@ -21083,7 +21083,7 @@ const list = [
             "To participate in the SheTech Summer Internship Exploration program, you must be high school students.",
         cost: ["SheTech Summer Internship Exploration program is a free activity", false, 0, "unknown"],
         tags: ["Computer Science", "Engineering", "STEM"],
-        id: 810,
+        id: 811,
     },
     {
         title: "Fresh Coast Ambassoder",
@@ -21106,7 +21106,7 @@ const list = [
         requirements: "To participate in the Fresh Coast Ambassador you must be between the ages of 15 and 23.",
         cost: ["Fresh Coast Ambassoder is a free activity", false, 0, "unknown"],
         tags: ["Environmental Science", "STEM"],
-        id: 811,
+        id: 812,
     },
     {
         title: "Internship Program",
@@ -21130,7 +21130,7 @@ const list = [
             "To participate in the Internship Program you must:\n- Possess a hands-on mentality\n- Be self-motivated, intuitive, and independent\n- Exhibit a strong artistic aesthetic and attention to detail\n- Be able to work remotely and during nonstandard business hours\n- Demonstrate familiarity with and enthusiasm for poetry, literature, theater, and performance art\n- Have experience using Eventbrite, Canva, Mailchimp, Salesforce, Submittable, Squarespace, Quickbooks, Shopify, and/or Google Workspace",
         cost: ["Internship Program is a free activity", false, 0, "unknown"],
         tags: ["Arts", "Writing", "Nonprofit", "Marketing/Advertising", "Public Relations"],
-        id: 812,
+        id: 813,
     },
     {
         title: "Teen Ambassador Program",
@@ -21153,7 +21153,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Teen Ambassador Program is a free activity", false, 0, "unknown"],
         tags: ["History", "Museum", "Public Speaking"],
-        id: 813,
+        id: 814,
     },
     {
         title: "ArtsWestchester Internship",
@@ -21177,7 +21177,7 @@ const list = [
             "To participate in the ArtsWestchester Internship you must:\n- Be a High School Junior or Senior, currently enrolled in college, or a recent graduate\n- Commit to a minimum of 15 hours per week between 9am-5pm, Monday-Friday\n- Attend a mandatory virtual orientation\n- Demonstrate a desire to learn about arts administration",
         cost: ["ArtsWestchester Internship is a free activity", false, 0, "unknown"],
         tags: ["Arts", "Business", "Writing", "Leadership/Management"],
-        id: 814,
+        id: 815,
     },
     {
         title: "High School Internship Program in Integrated Mathematical Oncology",
@@ -21202,7 +21202,7 @@ const list = [
             "Requirements: To participate in the High School Internship Program in Integrated Mathematical Oncology (HIP IMO) you must:\n- Be high school students aged 16 years or older by the time of the internship\n- Demonstrate interest in interdisciplinary cancer research careers\n- Possess a keen interest in developing lifelong research skills\n- Commit to attending the program daily for eight weeks during traditional Hillsborough County public school summer break\n- Submit an application form (Microsoft Word or PDF) by February 1, 2023\n- Secure letters of support from teachers by February 1, 2023\n- Undergo a drug screening, background check, and tuberculosis test (TB) before arrival at Moffitt\n- Acknowledge that the program does not provide a stipend or funding for intern housing\n- Receive a $1,000 scholarship during the first week of HIP IMO",
         cost: ["High School Internship Program in Integrated Mathematical Oncology is a free activity", false, 0, "unknown"],
         tags: ["Mathematics", "Medicine", "Science"],
-        id: 815,
+        id: 816,
     },
     {
         title: "University of Chicago Youth Internship Program",
@@ -21226,7 +21226,7 @@ const list = [
             "To participate in the University of Chicago Youth Internship Program you must:\n- Be motivated, hardworking students with an interest in health sciences, computer sciences, or IT services\n- Be at least 16 years old by June 26, 2023\n- Be authorized to work in the United States\n- Attend a Chicago Public Schools high school and be a current sophomore or junior\n- Have at least a 3.0 unweighted GPA\n- Attend a CPS high school in the Office of Civic Engagement's nine-neighborhood focus area on the South Side\n- Be available to work and attend programming Monday through Thursday, 10:00 a.m. \u2013 4:00 p.m. from June 26 - August 3, 2023",
         cost: ["University of Chicago Youth Internship Program is a free activity", false, 0, "unknown"],
         tags: ["Computer Science", "Health Sciences", "STEM", "Medicine"],
-        id: 816,
+        id: 817,
     },
     {
         title: "High School Summer Program in Biomedical Sciences ",
@@ -21251,7 +21251,7 @@ const list = [
             "To participate in the High School Summer Program in Biomedical Sciences you must:\n- Be a high school senior in Texas\n- Have an interest in a career in an allied health discipline",
         cost: ["High School Summer Program in Biomedical Sciences is a free activity", false, 0, "unknown"],
         tags: ["Biology", "Chemistry", "Medicine"],
-        id: 817,
+        id: 818,
     },
     {
         title: "Internship Program",
@@ -21274,7 +21274,7 @@ const list = [
         requirements: "To participate in the Internship Program you must:\n- Work 40 hours (or more) per week",
         cost: ["Internship Program is a free activity", false, 0, "unknown"],
         tags: ["Engineering", "STEM"],
-        id: 818,
+        id: 819,
     },
     {
         title: "Teen Gallery Guide",
@@ -21298,7 +21298,7 @@ const list = [
             "To participate in the Teen Gallery Guide you must:\n- Demonstrate interest in art\n- Collaborate effectively with teen peers\n- Develop public speaking abilities\n- Engage with art professionals and museum spaces",
         cost: ["Teen Gallery Guide is a free activity", false, 0, "unknown"],
         tags: ["Art/Design", "Public Speaking", "Mentoring"],
-        id: 819,
+        id: 820,
     },
     {
         title: "Garden 2 Market Internship",
@@ -21322,7 +21322,7 @@ const list = [
             "To participate in the Garden 2 Market Internship you must:\n- Be high school students\n- Have an interest in horticulture\n- Be willing to try new things\n- Be interested in starting healthy habits\n- Be interested in learning about green jobs related to gardening and the food system",
         cost: ["Garden 2 Market Internship is a free activity", false, 0, "unknown"],
         tags: ["Agriculture", "Environmental Science"],
-        id: 820,
+        id: 821,
     },
     {
         title: "Summer Youth Employment Program",
@@ -21347,7 +21347,7 @@ const list = [
             "To participate in the Summer Youth Employment Program you must:\n- Be 14-21 years old as of July 1, 2023\n- Reside or attend school in Meriden, CT\n- Meet one of the following income eligibility requirements:\n    - Eligible for Free or Reduced School Meals Program\n    - Family income within 185% of Poverty Income Levels\n    - Member of a family that receives Food Stamps\n    - Foster child\n    - At least 18 years old and living at home, receiving less than 50% support from family (documented)\n    - Documented disability (counted as a family of 1, only applicant's income counted)",
         cost: ["Summer Youth Employment Program is a free activity", false, 0, "unknown"],
         tags: ["Nonprofit", "Business"],
-        id: 821,
+        id: 822,
     },
     {
         title: "Brooklyn College Now STEM Research Academy",
@@ -21371,7 +21371,7 @@ const list = [
             "To participate in the Brooklyn College Now STEM Research Academy you must:\n- Be a NYC public high school sophomore or junior\n- Meet CUNY Eligibility Benchmarks (75+ ELA Regents and/or 80+ Math Regents)\n- Primarily be high school juniors",
         cost: ["Brooklyn College Now STEM Research Academy is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Science", "Biology", "Chemistry", "Physics", "Mathematics"],
-        id: 822,
+        id: 823,
     },
     {
         title: "Art, Community, Education and Science Internship",
@@ -21395,7 +21395,7 @@ const list = [
             "To participate in the Art, Community, Education and Science Internship you must:\n- Be enrolled in high school\n- Be 16 years old by July 5, 2023\n- Be eligible to work in the United States\n- Have a strong interest in arts and science education\n- Be comfortable interacting with members of the public, including children\n- Have regular weekend availability from 9:00AM\u20134:00PM\n- Be available to participate for full 13 months, from June 2023 through June 2024",
         cost: ["Art, Community, Education and Science Internship is a free activity", false, 0, "unknown"],
         tags: ["Art/Design", "Education", "Environmental Science", "Community Outreach"],
-        id: 823,
+        id: 824,
     },
     {
         title: "Student Leadership & Intern Program - CDC & EMS",
@@ -21420,7 +21420,7 @@ const list = [
             "To participate in the Student Leadership & Intern Program - CDC & EMS you must:\n\n- Be committed, compassionate, service-focused, accountable, honest, and adaptable.\n- Be between the ages of 16-20, enrolled as a Junior (will be a rising Senior summer 2023) in a Charleston County Public High School, and a permanent resident of Charleston County. you must upload their most current school transcripts with the application as verification.\n- Maintain grades and attendance throughout the school year. you must not be on any type of Academic Probation.\n- Follow all safety protocols.\n- Be a US citizen, permanent resident, or possess an Employment Authorization Document (EAD).\n- Not have any felony conviction(s); misdemeanor(s) will be evaluated on a case-by-case basis and disposition information must be provided.\n- Pass a background investigation including but not limited to a driving record, employment history, education, and reference check.",
         cost: ["Student Leadership & Intern Program - CDC & EMS is a free activity", false, 0, "unknown"],
         tags: ["Government/Politics", "Medicine", "STEM"],
-        id: 824,
+        id: 825,
     },
     {
         title: "Wheaton College Summer Institute",
@@ -21444,7 +21444,7 @@ const list = [
             "To participate in the Wheaton College Summer Institute you must:\n- Be a rising high school sophomore, junior, or senior\n- Have a strong academic record\n- Submit a letter of recommendation\n- Apply early to secure course selection\n- Submit their high school transcript to WCSI@wheaton.edu",
         cost: ["Wheaton College Summer Institute costs money to enter", true, "unknown", "unknown"],
         tags: ["Education", "STEM", "Social Science", "Leadership/Management"],
-        id: 825,
+        id: 826,
     },
     {
         title: "Art Speak Internship",
@@ -21468,7 +21468,7 @@ const list = [
             "To participate in the Art Speak Internship you must:\n- Be a Bay Area public high school student\n- Be in good standing\n- Be in grades 10, 11, or 12",
         cost: ["Art Speak Internship is a free activity", false, 0, "unknown"],
         tags: ["Arts", "Law/Advocacy", "Museum", "Leadership/Management"],
-        id: 826,
+        id: 827,
     },
     {
         title: "Internship",
@@ -21492,7 +21492,7 @@ const list = [
             "To participate in the Internship you must submit a cover letter, resume, and contact information for 3 references to hello@sparepartssa.org by the corresponding deadlines.",
         cost: ["Internship is a free activity", false, 0, "unknown"],
         tags: ["Business", "Retail Management", "Nonprofit"],
-        id: 827,
+        id: 828,
     },
     {
         title: "Volunteer at Denver Health",
@@ -21517,7 +21517,7 @@ const list = [
             "To participate in the Volunteer at Denver Health you must:\n- Be 16 years of age or older\n- Commit to volunteering 4 hours consistently every week\n- Commit to 150 hours over a 12-month period\n- Attend an interview, orientation and additional trainings as needed\n- Complete a multi-step medical clearance including a two-step TB test, flu shot and providing a copy of immunization records\n- Pass a background screening",
         cost: ["Volunteer at Denver Health is a free activity", false, 0, "unknown"],
         tags: ["Medicine"],
-        id: 828,
+        id: 829,
     },
     {
         title: "Sustainable Food Institute",
@@ -21541,7 +21541,7 @@ const list = [
             "To participate in the Sustainable Food Institute you must be rising sophomores, juniors, or seniors in high school.",
         cost: ["Sustainable Food Institute costs money to enter", true, "unknown", "unknown"],
         tags: ["Agriculture", "Environmental Science", "Health Sciences"],
-        id: 829,
+        id: 830,
     },
     {
         title: "The Intern Project",
@@ -21565,7 +21565,7 @@ const list = [
             "To participate in the Intern Project you must:\n- Be a high school student from Los Angeles County\n- Have a minimum 2.5 GPA\n- Be at least 16 years old by the start of the internship\n- Submit a completed application, including a personal statement, a resume, and two letters of recommendation from teachers or community leaders\n- Attend an interview with finalists\n- Attend an orientation session and comply with all program guidelines and expectations",
         cost: ["The Intern Project is a free activity", false, 0, "unknown"],
         tags: ["Education", "Business", "Social Science"],
-        id: 830,
+        id: 831,
     },
     {
         title: "High School Student Worker",
@@ -21590,7 +21590,7 @@ const list = [
             "To participate in the High School Student Worker you must:\n- Be a student who has completed the 9th grade or is at least 14 years of age.\n- Be a student who has completed the 10th grade and is pursuing a high school diploma or its equivalent, or be employed for a limited term through a subsidized employment program.\n- Work for a maximum of two (2) years.\n- Work a maximum of 1,040 hours in each year of the two (2) year period.",
         cost: ["High School Student Worker is a free activity", false, 0, "unknown"],
         tags: ["Business", "Leadership/Management"],
-        id: 831,
+        id: 832,
     },
     {
         title: "High School Cooperative Education Intern",
@@ -21614,7 +21614,7 @@ const list = [
             "To participate in the High School Cooperative Education Intern you must:\n- Be a junior or senior in high school\n- Be at least 16 years of age\n- Be enrolled in studies related to the functional area of assignment",
         cost: ["High School Cooperative Education Intern is a free activity", false, 0, "unknown"],
         tags: ["Engineering", "Science", "Government"],
-        id: 832,
+        id: 833,
     },
     {
         title: "Summer Research Internships",
@@ -21638,7 +21638,7 @@ const list = [
             "To participate in the Summer Research Internships you must:\n- Have completed their junior or senior year of high school, or freshman through senior year of college\n- Be on track for four years of math, biology, chemistry and/or physics\n- Stipends are paid to all participants\n- The Institute does not provide housing for interns\n- Preference will be given to local high school students\n- Due to liability concerns, out-of-state high school students will not be accepted\n- College students can apply regardless of current location without preference",
         cost: ["Summer Research Internships is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Research", "Medicine"],
-        id: 833,
+        id: 834,
     },
     {
         title: "College Now STEM Research Academy",
@@ -21662,7 +21662,7 @@ const list = [
             "To participate in the College Now STEM Research Academy you must:\n- Be a NYC public high school sophomore or junior\n- Have an 80+ on any Math Regents Exam\n- Have an 80+ on Physics, Chemistry, or Living Environment Regents Exam\n- Have an overall HS average of 80+",
         cost: ["College Now STEM Research Academy is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Science", "Biology"],
-        id: 834,
+        id: 835,
     },
     {
         title: "Ladders for Leaders",
@@ -21686,7 +21686,7 @@ const list = [
             "To participate in the Ladders for Leaders you must:\n- Be between the ages of 16\u201421\n- Be enrolled in high school or college\n- Maintain a minimum GPA of 3.00\n- Reside in one of the five boroughs of New York City\n- Have prior work experience, either paid or volunteer\n- Be legally allowed to work in New York City",
         cost: ["Ladders for Leaders is a free activity", false, 0, "unknown"],
         tags: ["Business", "Leadership/Management", "Government/Politics", "Education"],
-        id: 835,
+        id: 836,
     },
     {
         title: "Biomedical High School Internship",
@@ -21710,7 +21710,7 @@ const list = [
             "To participate in the Biomedical High School Internship you must:\n\u2022\tBe at least 16 years of age as of June 20, 2023\n\u2022\tBe a rising senior in high school (graduating class of 2024)\n\u2022\tDemonstrate experience or dedication to diversity and inclusion\n\u2022\tBe punctual and responsible",
         cost: ["Biomedical High School Internship is a free activity", false, 0, "unknown"],
         tags: ["Science", "Engineering", "Medicine"],
-        id: 836,
+        id: 837,
     },
     {
         title: "The Science and Engineering Apprenticeship Program (SEAP)",
@@ -21734,7 +21734,7 @@ const list = [
             "To participate in the Science and Engineering Apprenticeship Program (SEAP), you must:\n- Be high school students who have completed at least Grade 9\n- Be currently enrolled in high school (or taking college level classes for college credit)\n- Be graduating seniors\n- Be 16 years of age or older by the internship start date\n- Be solely U.S. Citizens",
         cost: ["The Science and Engineering Apprenticeship Program (SEAP) is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Engineering", "Science", "Research", "Education", "Mentoring"],
-        id: 837,
+        id: 838,
     },
     {
         title: "Public Diplomacy and International Exchange Internships",
@@ -21757,7 +21757,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Public Diplomacy and International Exchange Internships costs money to enter", true, "unknown", "unknown"],
         tags: ["International Studies/Global Affairs", "Government/Politics"],
-        id: 838,
+        id: 839,
     },
     {
         title: "Ronald Reagan Presidential Library and Museum Archive Associate Intern",
@@ -21786,7 +21786,7 @@ const list = [
             "unknown",
         ],
         tags: ["History", "Museum", "Writing", "Business"],
-        id: 839,
+        id: 840,
     },
     {
         title: "King Conservation Leadership Academy",
@@ -21810,7 +21810,7 @@ const list = [
             "To participate in the King Conservation Leadership Academy you must:\n\n- Be in high school\n- Have a strong interest in conservation and the environment\n- Attend and participate in all program events\n- Be motivated, involved in their communities, and willing to take on leadership roles\n- Have a minimum 3.0 GPA\n- Provide two letters of recommendation\n- Complete the online application\n- Submit a personal statement expressing their interest in the program and how they hope to contribute to the conservation of the environment",
         cost: ["King Conservation Leadership Academy is a free activity", false, 0, "unknown"],
         tags: ["Environmental Science", "Leadership/Management", "Public Speaking"],
-        id: 840,
+        id: 841,
     },
     {
         title: "Internships",
@@ -21834,7 +21834,7 @@ const list = [
             "To participate in the Internships you must:\n- Submit a resume and cover letter\n- Submit a writing sample (for some positions)",
         cost: ["Internships is a free activity", false, 0, "unknown"],
         tags: ["Business", "Entrepreneurship"],
-        id: 841,
+        id: 842,
     },
     {
         title: "TEEN HEALTHCARE INTERNSHIP",
@@ -21858,7 +21858,7 @@ const list = [
             "To participate in the TEEN HEALTHCARE INTERNSHIP you must:\n- Have at least 2 years remaining in high school\n- Be available from 4:00pm -10:30pm\n- Be available Tuesday nights for student volunteering in Oxnard\n- Be available Wednesday nights for students volunteering in Thousand Oaks\n- Demonstrate compassion, care, hard work, and responsibility\n- Fluency in a second language is preferred\n- Provide proof of COVID-19 vaccination",
         cost: ["TEEN HEALTHCARE INTERNSHIP is a free activity", false, 0, "unknown"],
         tags: ["Medicine", "Health Sciences"],
-        id: 842,
+        id: 843,
     },
     {
         title: "The Princeton Summer Journalism Program",
@@ -21882,7 +21882,7 @@ const list = [
             "To participate in the Princeton Summer Journalism Program you must:\n- Be a junior in high school at the time of application.\n- Reside in the United States and intend to attend college there.\n- Have a minimum unweighted grade point average of 3.5 out of 4.0.\n- Demonstrate an interest in journalism.\n- Meet at least one of the following socioeconomic criteria:\n    - Combined income of parents/guardians and child support payments does not exceed $60,000.\n    - Qualify for free or reduced-price lunch in high school.\n    - Qualify for an SAT or ACT fee waiver.",
         cost: ["The Princeton Summer Journalism Program is a free activity", false, 0, "unknown"],
         tags: ["Writing", "Law/Advocacy", "History ", "Government", "Journalism"],
-        id: 843,
+        id: 844,
     },
     {
         title: "Dig'nIT Internships",
@@ -21906,7 +21906,7 @@ const list = [
             "To participate in the Dig'nIT Internships you must:\n- Complete sophomore or junior year\n- Be at least 16 years old",
         cost: ["Dig'nIT Internships is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Business and Entrepreneurship", "Science", "Engineering", "Computer Science", "Medicine"],
-        id: 844,
+        id: 845,
     },
     {
         title: "High School Internships ",
@@ -21943,7 +21943,7 @@ const list = [
             "Arts",
             "Psychology",
         ],
-        id: 845,
+        id: 846,
     },
     {
         title: "Summer Teen Internships",
@@ -21966,7 +21966,7 @@ const list = [
         requirements: "To participate in the Summer Teen Internships you must be between the ages of 14 and 18.",
         cost: ["Summer Teen Internships is a free activity", false, 0, "unknown"],
         tags: ["Science", "Environment", "Environmental Science"],
-        id: 846,
+        id: 847,
     },
     {
         title: "YouthWorks Internship",
@@ -21990,7 +21990,7 @@ const list = [
             "To participate in the YouthWorks Internship you must:\n- Be currently enrolled high school students ages 15-17.\n- Have completed all nine gallery volunteer opportunities.\n- Maintain a minimum GPA of 2.5.\n- Be active volunteers in good standing.",
         cost: ["YouthWorks Internship is a free activity", false, 0, "unknown"],
         tags: ["Business and Entrepreneurship", "Leadership/Management", "Paid Internships"],
-        id: 847,
+        id: 848,
     },
     {
         title: "High School Apprenticeship Challenge",
@@ -22014,7 +22014,7 @@ const list = [
             "To participate in the High School Apprenticeship Challenge you must:\n- Be at least 16 years old at the time the internship begins\n- Be enrolled in or have recently graduated from a high school",
         cost: ["High School Apprenticeship Challenge is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Biology", "Medicine", "Internships"],
-        id: 848,
+        id: 849,
     },
     {
         title: " Chicago Philharmonic Paid Summer Internship ",
@@ -22038,7 +22038,7 @@ const list = [
             "To participate in the Chicago Philharmonic Paid Summer Internship you must:\n\n- Complete an online application form\n- Submit a resume\n- Submit a cover letter describing their interest in the program, past experiences, and how they hope to grow as an arts administrator\n- Include a letter of recommendation from a teacher, guidance counselor, or community leader",
         cost: ["Chicago Philharmonic Paid Summer Internship is a free activity", false, 0, "unknown"],
         tags: ["Music", "Mentoring"],
-        id: 849,
+        id: 850,
     },
     {
         title: "Training Program Intro to Tech Stipend Internship",
@@ -22062,7 +22062,7 @@ const list = [
             "To participate in the Training Program Intro to Tech Stipend Internship you must:\n- Be a high school student in grades 9-12.",
         cost: ["Training Program Intro to Tech Stipend Internship is a free activity", false, 0, "unknown"],
         tags: ["Computer Science", "Engineering", "STEM"],
-        id: 850,
+        id: 851,
     },
     {
         title: "Summer Extension Internship 2023",
@@ -22086,7 +22086,7 @@ const list = [
             "To participate in the Summer Extension Internship 2023, you must:\n\n- Demonstrate a willingness to learn and engage in various aspects of local Extension programming.\n- Possess a proven ability to collaborate effectively with youth or adults.\n- Exhibit initiative in undertaking projects and activities under supervision.\n- Maintain strong written and verbal communication skills.\n- Demonstrate organizational proficiency.\n- Express a commitment to serving the target audience and program disciplines outlined in the position details.",
         cost: ["Summer Extension Internship 2023 is a free activity", false, 0, "unknown"],
         tags: ["Education", "Youth Development"],
-        id: 851,
+        id: 852,
     },
     {
         title: "NYU Precollege",
@@ -22110,7 +22110,7 @@ const list = [
         requirements: "Unknown",
         cost: ["NYU Precollege costs money to enter", true, "unknown", "unknown"],
         tags: ["STEM", "Social Science", "Humanities"],
-        id: 852,
+        id: 853,
     },
     {
         title: "Rutgers SMART Summer Academy",
@@ -22134,7 +22134,7 @@ const list = [
             "To participate in the Rutgers SMART Summer Academy you must:\n- Be recruited state wide\n- Demonstrate an interest in health science\n- Maintain good school attendance\n- Be motivated to attain academic success\n- Have average or above average academic ability\n- Possess a sense of curiosity",
         cost: ["Rutgers SMART Summer Academy costs money to enter", true, "unknown", "unknown"],
         tags: ["Health Sciences", "STEM"],
-        id: 853,
+        id: 854,
     },
     {
         title: "Summer Programs",
@@ -22157,7 +22157,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Summer Programs costs money to enter", true, "unknown", "unknown"],
         tags: ["STEM", "Sustainability", "Cybersecurity", "Game Development"],
-        id: 854,
+        id: 855,
     },
     {
         title: "Climate Ambassadors",
@@ -22181,7 +22181,7 @@ const list = [
             "To participate in the Climate Ambassadors you must:\n- Be rising 10th, 11th, or 12th graders.\n- Prioritize those from populations historically marginalized in STEM fields, e.g., Black, Indigenous, Latine, Pacific Islander, and those identifying as female.\n- Indicate which environmental Teen Research Program they wish to attend in their application.",
         cost: ["Climate Ambassadors is a free activity", false, 0, "unknown"],
         tags: ["Environmental Science", "Science Communication", "STEM"],
-        id: 855,
+        id: 856,
     },
     {
         title: "High School Intern ",
@@ -22205,7 +22205,7 @@ const list = [
             "To participate in the High School Intern you must:\n- Be dedicated and motivated to spark change in the medical world\n- Have experience in STEM initiatives",
         cost: ["High School Intern is a free activity", false, 0, "unknown"],
         tags: ["Health Sciences", "STEM", "Research"],
-        id: 856,
+        id: 857,
     },
     {
         title: "High School Student Summer Volunteer Program",
@@ -22229,7 +22229,7 @@ const list = [
             "To participate in the High School Student Summer Volunteer Program you must:\n- Be enrolled in a high school",
         cost: ["High School Student Summer Volunteer Program is a free activity", false, 0, "unknown"],
         tags: ["Medicine", "Health Sciences"],
-        id: 857,
+        id: 858,
     },
     {
         title: "Intro to Climate Solutions Internship",
@@ -22258,7 +22258,7 @@ const list = [
             "To participate in the Intro to Climate Solutions Internship you must:\n- Self-identify as a member of an underrepresented group in STEAM fields\n- Provide a reference that can confirm this",
         cost: ["Intro to Climate Solutions Internship is a free activity", false, 0, "unknown"],
         tags: ["Environmental Science", "STEM"],
-        id: 858,
+        id: 859,
     },
     {
         title: "GOALS FOR GIRLS",
@@ -22282,7 +22282,7 @@ const list = [
             "To participate in the GOALS FOR GIRLS you must:\n- Be a female student in 8th or 9th grade in New York City\n- Have an interest in STEM\n- Consider pursuing a STEM major in college or a STEM career",
         cost: ["GOALS FOR GIRLS is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Engineering", "Computer Science", "Aviation/Aerospace"],
-        id: 859,
+        id: 860,
     },
     {
         title: "NASA High School Internship",
@@ -22307,7 +22307,7 @@ const list = [
             "To participate in the NASA High School Internship you must:\n- Be U.S. Citizens\n- Meet a minimum 3.0 GPA requirement",
         cost: ["NASA High School Internship is a free activity", false, 0, "unknown"],
         tags: ["Engineering", "Science", "Computer Science", "STEM", "Astronomy"],
-        id: 860,
+        id: 861,
     },
     {
         title: "Teen Internship Program",
@@ -22330,7 +22330,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Teen Internship Program is a free activity", false, 0, "unknown"],
         tags: ["Social Science", "Leadership/Management"],
-        id: 861,
+        id: 862,
     },
     {
         title: "Youth Forward Program",
@@ -22353,7 +22353,7 @@ const list = [
         requirements: "To participate in the Youth Forward Program you must be between the ages of 14 and 24.",
         cost: ["Youth Forward Program is a free activity", false, 0, "unknown"],
         tags: ["Education", "Career Development", "Youth Empowerment", "Mentoring", "Leadership Development"],
-        id: 862,
+        id: 863,
     },
     {
         title: "Student Intern Program ",
@@ -22377,7 +22377,7 @@ const list = [
             "To participate in the Student Intern Program you must:\n- Be at least 16 years of age\n- Be enrolled full-time at an accredited college, university, or high school\n- Maintain a minimum cumulative GPA of 2.5 for clerical and laborer internships, and 3.0 for all other internships\n- Pass a pre-employment background review and drug screening",
         cost: ["Student Intern Program is a free activity", false, 0, "unknown"],
         tags: ["Government/Politics", "Science", "Engineering"],
-        id: 863,
+        id: 864,
     },
     {
         title: "Introduction to Bioinformatics",
@@ -22401,7 +22401,7 @@ const list = [
             "To participate in the Introduction to Bioinformatics you must:\n- Attend all sessions for the duration of the 6-week program\n- Submit regular oral and written progress reports\n- Complete a final project utilizing genomic data",
         cost: ["Introduction to Bioinformatics is a free activity", false, 0, "unknown"],
         tags: ["Biology", "Computer Science", "STEM"],
-        id: 864,
+        id: 865,
     },
     {
         title: "Central Arkansas Water Customer Service Intern",
@@ -22425,7 +22425,7 @@ const list = [
             "To participate in the Central Arkansas Water Customer Service Intern you must be 16 years of age or older.",
         cost: ["Central Arkansas Water Customer Service Intern is a free activity", false, 0, "unknown"],
         tags: ["Business"],
-        id: 865,
+        id: 866,
     },
     {
         title: "The Junior Academy",
@@ -22449,7 +22449,7 @@ const list = [
             "To participate in the Junior Academy you must:\n- Be between the ages of 13 and 17.\n- Have a strong level of English proficiency.\n- Commit to three to four hours each week during challenge periods.\n- Be from one of the following countries: Algeria, Bahrain, Egypt, Iran, Iraq, Israel, Jordan, Kuwait, Lebanon, Libya, Morocco, Oman, Palestinian Territories, Qatar, Saudi Arabia, Syria, Tunisia, United Arab Emirates, United States of America, or Yemen.",
         cost: ["The Junior Academy is a free activity", false, 0, "unknown"],
         tags: ["Science", "Engineering", "Medicine", "Computer Science", "STEM"],
-        id: 866,
+        id: 867,
     },
     {
         title: "Volunteer",
@@ -22473,7 +22473,7 @@ const list = [
             "To participate in the Volunteer you must:\n- Be 18 years or older\n- Possess excellent communication and customer service skills\n- Have knowledge of Chicago, the Loop, arts, and events\n- Be able to volunteer 6-12 hours per month\n- Be reliable and punctual\n- Have basic computer knowledge and access to email",
         cost: ["Volunteer is a free activity", false, 0, "unknown"],
         tags: ["Nonprofit", "History", "Arts/Culture"],
-        id: 867,
+        id: 868,
     },
     {
         title: "Citywide Youth Council",
@@ -22496,7 +22496,7 @@ const list = [
         requirements: "To participate in the Citywide Youth Council you must be in grades 9-11.",
         cost: ["Citywide Youth Council is a free activity", false, 0, "unknown"],
         tags: ["Government/Politics", "Leadership/Management"],
-        id: 868,
+        id: 869,
     },
     {
         title: "High School Summer Volunteer Program at Children's Hospital Los Angeles.",
@@ -22525,7 +22525,7 @@ const list = [
             "unknown",
         ],
         tags: ["Medicine"],
-        id: 869,
+        id: 870,
     },
     {
         title: "GROW: Greater Boston Research Opportunities for Young Women.",
@@ -22549,7 +22549,7 @@ const list = [
             "To participate in the GROW: Greater Boston Research Opportunities for Young Women, you must:\n- Be entering their senior year in Fall 2023.\n- Reside in Massachusetts and attend school within 30 miles of Boston.\n- Submit an application by April 15, 2023.\n- Attend an orientation on June 28-29.\n- Work in research labs at Boston University from 9:30 AM to 4:30 PM, Monday through Friday, for six weeks (July 5 to August 11).\n- Participate in guest speaker sessions and develop communication skills by presenting research at a culminating symposium.",
         cost: ["GROW: Greater Boston Research Opportunities for Young Women. is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Science", "Engineering", "Education"],
-        id: 870,
+        id: 871,
     },
     {
         title: "Lead Guide (Educator)",
@@ -22573,7 +22573,7 @@ const list = [
             "To participate in the Lead Guide (Educator) you must:\n\n- Have completed vaccinations for COVID-19 (verification required)\n- Demonstrate enthusiasm for Trackers and its programs\n- Be 16 years of age or older\n- Exercise discretion and independent judgment in remote locations\n- Express interest in developing and sharing outdoor skills with youth\n- Adapt to changing logistics and collaborate on solutions in a calm and positive manner\n- Possess the capacity and enthusiasm to learn and teach wilderness skills and techniques\n- Model professionalism while supporting youth, families, colleagues, and supervisors\n- Be able to stand, bend, squat, climb, lift (up to 50 lbs), and hike on and off trail (up to 5 miles) per day\n- For Lead Guides ages 18+, Trackers will complete pre-employment criminal background and references checks\n- Lead Guides need the following certifications (or be able to complete before starting):\n    - CPR/First Aid/Anaphylaxis & Epinephrine Auto-Injector\n    - Food Handlers\n    - (ages 18+) Recognizing & Reporting Child Abuse & Neglect (OR & WA)\n    - (ages 18+) Child Abuse Mandated Reporter Training - General (Oregon)\n    - State fishing license if guiding a program that includes fishing",
         cost: ["Lead Guide (Educator) is a free activity", false, 0, "unknown"],
         tags: ["Education", "Environmental Science"],
-        id: 871,
+        id: 872,
     },
     {
         title: "High School Internships",
@@ -22598,7 +22598,7 @@ const list = [
             'To participate in the High School Internships you must:\n\n- Be entering 10th, 11th, or 12th grade Fall of 2023\n- Have completed and attained at least a "B" in Algebra I\n- Obtain parental/guardian consent for participation\n- Have a weighted GPA of 3.25 or higher (3.00 unweighted GPA or higher)\n- Provide their own reliable transportation to UNO each morning',
         cost: ["High School Internships is a free activity", false, 0, "unknown"],
         tags: ["Engineering", "Science", "Computer Science", "STEM"],
-        id: 872,
+        id: 873,
     },
     {
         title: "JA Job Shadow Blended",
@@ -22622,7 +22622,7 @@ const list = [
             "To participate in the JA Job Shadow Blended program, you must:\n\n- Be high school students in grades 9-12.\n- Participate in career interest assessments, informational interviews, and a multi-hour job shadow experience.\n- Complete self-guided learning experiences and utilize career-planning tools.\n- Learn the design-thinking approach, explore career choices, and create an elevator pitch.\n- Write a professional thank-you note and research potential employers.",
         cost: ["JA Job Shadow Blended is a free activity", false, 0, "unknown"],
         tags: ["Career Exploration", "Professional Development", "Workplace Experience"],
-        id: 873,
+        id: 874,
     },
     {
         title: "Lancaster Performing Arts Center Volunteer ",
@@ -22646,7 +22646,7 @@ const list = [
             "To participate in the Lancaster Performing Arts Center you must:\n\n- Contact for requirements.\n- Submit to a background check.",
         cost: ["Lancaster Performing Arts Center Volunteer is a free activity", false, 0, "unknown"],
         tags: ["Arts", "Education", "Writing", "Performing Arts"],
-        id: 874,
+        id: 875,
     },
     {
         title: "Summer Volunteer Program",
@@ -22670,7 +22670,7 @@ const list = [
             "To participate in the Summer Volunteer Program you must commit to volunteering for one two-week session.",
         cost: ["Summer Volunteer Program is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Science", "Education"],
-        id: 875,
+        id: 876,
     },
     {
         title: "Athena Summer Innovation Institute",
@@ -22694,7 +22694,7 @@ const list = [
             "To participate in the Athena Summer Innovation Institute you must:\n- Be creative, motivated young women with an entrepreneurial spirit.\n- Have an interest in developing ideas for products, services, and experiences that have the potential to challenge the status quo and create social good.\n- Be enthusiastic about working collaboratively to learn more about the startup journey and what it takes to be a member of a founding team.",
         cost: ["Athena Summer Innovation Institute costs money to enter", true, "unknown", "unknown"],
         tags: ["Entrepreneurship", "Leadership/Management", "Social Science"],
-        id: 876,
+        id: 877,
     },
     {
         title: "iCLEM Student Intern",
@@ -22717,7 +22717,7 @@ const list = [
         requirements: "Unknown",
         cost: ["iCLEM Student Intern is a free activity", false, 0, "unknown"],
         tags: ["Environmental Science", "Science"],
-        id: 877,
+        id: 878,
     },
     {
         title: "Crew Member ",
@@ -22741,7 +22741,7 @@ const list = [
             "To participate in the Crew Member you must:\n- Be 15-19 years of age by June 12, 2023\n- Have completed 9th grade\n- Be available to work over the summer during the 8-week program\n- Answer all questions on the Internship Application\n- Provide contact information for two personal or professional references (teacher, employer, coach, counselor, mentor, minister, other)\n- Complete an interview with Green Heart\n- Submit an application and provide references by March 31st, 2023 to be interviewed and considered for the position",
         cost: ["Crew Member is a free activity", false, 0, "unknown"],
         tags: ["Environmental Science", "Agriculture", "Community Service", "Health Sciences"],
-        id: 878,
+        id: 879,
     },
     {
         title: "Greehey CCRI Donald G McEwen Memorial Summer Research Program",
@@ -22764,7 +22764,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Greehey CCRI Donald G McEwen Memorial Summer Research Program is a free activity", false, 0, "unknown"],
         tags: ["Medicine", "STEM"],
-        id: 879,
+        id: 880,
     },
     {
         title: "High School Initiative in Remote Sensing of the Earth Systems Science  & Engineering (HIRES)",
@@ -22793,7 +22793,7 @@ const list = [
             "unknown",
         ],
         tags: ["STEM", "Environmental Science"],
-        id: 880,
+        id: 881,
     },
     {
         title: "Internships and Volunteer Programs",
@@ -22817,7 +22817,7 @@ const list = [
             "To participate in the Internships and Volunteer Programs you must: Check specific opportunities for details",
         cost: ["Internships and Volunteer Programs is a free activity", false, 0, "unknown"],
         tags: ["Government", "Nonprofit", "Leadership/Management"],
-        id: 881,
+        id: 882,
     },
     {
         title: "Learning Intern",
@@ -22841,7 +22841,7 @@ const list = [
             "To participate in the Learning Intern you must:\n- Be highly organized, accurate, and detail-oriented.\n- Be reliable, dependable, focused, and self-motivated.\n- Possess knowledge of orchestral music and music reading skills.\n- Have strong oral and written communication skills.\n- Work well in a high-pressure, fast-paced environment.\n- Be able to work cooperatively in a shared workspace.\n- Be able to work with diverse personalities.\n- Be computer literate (Word, Access, Excel, Outlook).\n- Have an ambition to learn about music education.\n- Maintain confidentiality and handle sensitive situations with excellent judgment and discretion.",
         cost: ["Learning Intern is a free activity", false, 0, "unknown"],
         tags: ["Performing Arts", "Education"],
-        id: 882,
+        id: 883,
     },
     {
         title: "Ronald Reagan Presidential Library and Museum Docent",
@@ -22865,7 +22865,7 @@ const list = [
             "To participate in the Ronald Reagan Presidential Library and Museum Docent you must:\n- Be at least 16 years of age\n- Possess a desire to learn and share the legacy of President Reagan",
         cost: ["Ronald Reagan Presidential Library and Museum Docent is a free activity", false, 0, "unknown"],
         tags: ["Education", "History", "Museum"],
-        id: 883,
+        id: 884,
     },
     {
         title: "Summer Anatomy Program",
@@ -22889,7 +22889,7 @@ const list = [
             "To participate in the Summer Anatomy Program you must:\n- Be at least 16 years old\n- Be a rising junior",
         cost: ["Summer Anatomy Program is a free activity", false, 0, "unknown"],
         tags: ["Science", "Medicine", "Biology", "Health Sciences", "STEM"],
-        id: 884,
+        id: 885,
     },
     {
         title: "PROMISE Scholars Summer Internship",
@@ -22913,7 +22913,7 @@ const list = [
             "To participate in the PROMISE Scholars Summer Internship you must:\n- Be entering their senior year in the upcoming academic school year\n- Be at least 16 years old by June 1\n- Commit to participating in the entire program, working a minimum of 35 hours per week\n- Submit a project proposal before the start of the program\n- Present their research results in a symposium at the end of the program\n- Participate in other Sanford PROMISE programming such as Research Shadowing Program, Teen Science Caf\u00e9, and Community Lecture Series",
         cost: ["PROMISE Scholars Summer Internship is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Biology", "Medicine", "Health Sciences"],
-        id: 885,
+        id: 886,
     },
     {
         title: "Los Angeles County Student Election Worker Program",
@@ -22938,7 +22938,7 @@ const list = [
             "To participate in the Los Angeles County Student Election Worker Program you must:\n\n- Be at least 16 years old by the time of the election\n- Attend a public or private secondary education institution (High School)\n- Be a U.S. citizen or legal permanent resident (Green Card Holder) of the United States\n- Have a good academic standing (G.P.A. of 2.5 or greater)\n- Have teacher and parental consent\n- Be fully vaccinated from Covid-19 and provide proof of vaccination",
         cost: ["Los Angeles County Student Election Worker Program is a free activity", false, 0, "unknown"],
         tags: ["Government/Politics", "Civic Engagement"],
-        id: 886,
+        id: 887,
     },
     {
         title: "ESTEEM Summer Academy",
@@ -22961,7 +22961,7 @@ const list = [
         requirements: "To participate in the ESTEEM Summer Academy you must be in grades 9-12.",
         cost: ["ESTEEM Summer Academy is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Data Science", "Artificial Intelligence (AI)", "Computer Science", "Environmental Science"],
-        id: 887,
+        id: 888,
     },
     {
         title: " Summer Operations Intern ",
@@ -22984,7 +22984,7 @@ const list = [
         requirements: "To participate in the Summer Operations Intern you must be at least 16 years of age by May 26, 2023.",
         cost: ["Summer Operations Intern is a free activity", false, 0, "unknown"],
         tags: ["Education", "Childcare"],
-        id: 888,
+        id: 889,
     },
     {
         title: "Junior Conservation Technician Program",
@@ -23008,7 +23008,7 @@ const list = [
             "To participate in the Junior Conservation Technician Program you must be between the ages of 14 and 17.",
         cost: ["Junior Conservation Technician Program is a free activity", false, 0, "unknown"],
         tags: ["Environmental Science", "STEM", "Mentoring"],
-        id: 889,
+        id: 890,
     },
     {
         title: "Teen Arts Council",
@@ -23032,7 +23032,7 @@ const list = [
             "Requirements: To participate in the Teen Arts Council you must be rising juniors or seniors who attend a Boston public school and/or live in the city of Boston itself. Applications are evaluated on a rolling basis and must be submitted to teens@mfa.org. Those selected for TAC will develop outreach and engagement strategies for the MFA to connect with local teens while learning about professional options and career paths within the arts and cultural sector. Activities will include teen-led tours, workshops and talks with visiting artists, performance events, and Teen Night, an end-of-year celebration hosted by the TAC. Various foundations, endowments, and charitable trusts support the program.",
         cost: ["Teen Arts Council is a free activity", false, 0, "unknown"],
         tags: ["Arts", "Museum", "Education", "Youth Development", "Boston"],
-        id: 890,
+        id: 891,
     },
     {
         title: "Summer Earn and Learn Program",
@@ -23056,7 +23056,7 @@ const list = [
             "To participate in the Summer Earn and Learn Program you must:\n- Have an individualized education plan or a 504 plan\n- Be between the ages of 14 and 22 years old\n- Be less than 22 years old as of September 1, 2022",
         cost: ["Summer Earn and Learn Program is a free activity", false, 0, "unknown"],
         tags: ["Business", "Government", "Education", "Workforce Development", "Disability Services"],
-        id: 891,
+        id: 892,
     },
     {
         title: "City Tech College Now STEM Research Academy",
@@ -23080,7 +23080,7 @@ const list = [
             "To participate in the City Tech College Now STEM Research Academy you must:\n\n- Be a NYC public school sophomore or junior\n- Have an overall high school average of 80+\n- Have an ELA Regents score of 75+ or an SAT Verbal/Critical Reading score of 480+\n- Have an 80+ on Living Environment Regents\n- Have an 80+ on any one Math Regents\n- Have passed all other required math, science, and history Regents exams taken so far",
         cost: ["City Tech College Now STEM Research Academy is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Science"],
-        id: 892,
+        id: 893,
     },
     {
         title: "Summer Internship Program",
@@ -23103,7 +23103,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Summer Internship Program is a free activity", false, 0, "unknown"],
         tags: ["Engineering", "Business", "STEM"],
-        id: 893,
+        id: 894,
     },
     {
         title: "NASA Internships",
@@ -23127,7 +23127,7 @@ const list = [
             "To participate in the NASA Internships you must:\n- Be a high school, undergraduate or graduate student or an educator with relevant background or interest in STEM fields.\n- Apply early as some internships are funded within the centers, requiring outside funding through the Space Grant Consortia or may be available as a Pathways Intern, only introduced to positions to full-time employment upon graduation.",
         cost: ["NASA Internships is a free activity", false, 0, "unknown"],
         tags: ["Science", "Engineering", "STEM"],
-        id: 894,
+        id: 895,
     },
     {
         title: "Student Public Health Ambassador Program",
@@ -23151,7 +23151,7 @@ const list = [
             "To participate in the Student Public Health Ambassador Program you must:\n\n- Register for and attend a once monthly, 60-90-minute virtual training session offered in English and Spanish.\n- Training focuses on COVID-19 and emergent virus prevention and mitigation, mental health and self-care support, and access to Los Angeles County Department of Public Health and other resources.\n- Upon completion of the training, participants will receive a training certificate.",
         cost: ["Student Public Health Ambassador Program is a free activity", false, 0, "unknown"],
         tags: ["Health Sciences", "Public Health"],
-        id: 895,
+        id: 896,
     },
     {
         title: "The Ranger Conservation Corps Internship",
@@ -23174,7 +23174,7 @@ const list = [
         requirements: "Unknown",
         cost: ["The Ranger Conservation Corps Internship is a free activity", false, 0, "unknown"],
         tags: ["Environmental Science", "Biology"],
-        id: 896,
+        id: 897,
     },
     {
         title: "High School Alliance",
@@ -23198,7 +23198,7 @@ const list = [
             'To participate in the High School Alliance you must:\n- Be at least 16 years of age\n- Be a junior or senior in high school\n- Be enrolled in a participating school district for the entire year\n- Have completed and received a grade of "B" or above in Algebra 1, Biology, and a physical science course, as well as a third year of science\n- Have parent or guardian permission to apply\n- Be on track for graduation\n- Complete an in-person interview',
         cost: ["High School Alliance costs money to enter", true, "unknown", "unknown"],
         tags: ["Biology", "Health Sciences", "Medicine"],
-        id: 897,
+        id: 898,
     },
     {
         title: "Summer Legal Internship Program",
@@ -23221,7 +23221,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Summer Legal Internship Program is a free activity", false, 0, "unknown"],
         tags: ["Law/Advocacy", "Government", "Law"],
-        id: 898,
+        id: 899,
     },
     {
         title: "Southwest Airlines High School Internship",
@@ -23245,7 +23245,7 @@ const list = [
             "To participate in the Southwest Airlines High School Internship you must be at least 16 years of age.",
         cost: ["Southwest Airlines High School Internship is a free activity", false, 0, "unknown"],
         tags: ["Business", "Human Resources"],
-        id: 899,
+        id: 900,
     },
     {
         title: "Mus\u00e9e Internship Program",
@@ -23269,7 +23269,7 @@ const list = [
             "To participate in the Mus\u00e9e Internship Program you must:\n- Work independently and collaboratively\n- Possess strong written and verbal skills\n- Demonstrate professionalism and punctuality\n- Be familiar with Mus\u00e9e Magazine",
         cost: ["Mus\u00e9e Internship Program is a free activity", false, 0, "unknown"],
         tags: ["Photography/Videography", "Arts", "Business"],
-        id: 900,
+        id: 901,
     },
     {
         title: "Museum Apprentice Program",
@@ -23292,7 +23292,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Museum Apprentice Program is a free activity", false, 0, "unknown"],
         tags: ["Arts", "History", "Museum", "Art/Design", "Education"],
-        id: 901,
+        id: 902,
     },
     {
         title: "BRAINYAC",
@@ -23315,7 +23315,7 @@ const list = [
         requirements: "Unknown",
         cost: ["BRAINYAC is a free activity", false, 0, "unknown"],
         tags: ["Biology", "STEM", "Neuroscience"],
-        id: 902,
+        id: 903,
     },
     {
         title: "High School Explainer Program",
@@ -23338,7 +23338,7 @@ const list = [
         requirements: "Unknown",
         cost: ["High School Explainer Program is a free activity", false, 0, "unknown"],
         tags: ["Environmental Science", "Education", "Biology"],
-        id: 903,
+        id: 904,
     },
     {
         title: "Applied Research Innovation in Science & Engineering (ARISE)",
@@ -23362,7 +23362,7 @@ const list = [
             "To participate in the Applied Research Innovation in Science & Engineering (ARISE) you must:\n- Possess a passion for STEM\n- Be responsible and highly motivated\n- Demonstrate timeliness, persistence, and commitment fulfillment",
         cost: ["Applied Research Innovation in Science & Engineering (ARISE) is a free activity", false, 0, "unknown"],
         tags: ["Science", "Engineering", "Education"],
-        id: 904,
+        id: 905,
     },
     {
         title: "High School Internship",
@@ -23386,7 +23386,7 @@ const list = [
             'To participate in the High School Internship you must:\n- Be 16 years or older at the time of application submission.\n- Have a genuine interest in STEAM (science, technology, engineering, agriculture, and mathematics) research.\n- Research and understand the type of research being done in the labs at the Center.\n- List up to three labs that match their research interests and explain why they are interested in those labs.\n- Understand which research setting aligns with their interests (traditional or "wet" laboratories, outdoor field plots, greenhouses, or computational settings).',
         cost: ["High School Internship is a free activity", false, 0, "unknown"],
         tags: ["Agriculture", "Science"],
-        id: 905,
+        id: 906,
     },
     {
         title: "JOB1 Summer Internship Program",
@@ -23419,7 +23419,7 @@ const list = [
             "Career Development",
             "Youth Development",
         ],
-        id: 906,
+        id: 907,
     },
     {
         title: "Delaware Public Archives Volunteer and Intern",
@@ -23443,7 +23443,7 @@ const list = [
             "To participate in the Delaware Public Archives Volunteer and Intern you must:\n- Be a high school student",
         cost: ["Delaware Public Archives Volunteer and Intern is a free activity", false, 0, "unknown"],
         tags: ["History", "Government/Politics"],
-        id: 907,
+        id: 908,
     },
     {
         title: "Youth Volunteer",
@@ -23466,7 +23466,7 @@ const list = [
         requirements: "To participate in the Youth Volunteer you must be under 18.",
         cost: ["Youth Volunteer is a free activity", false, 0, "unknown"],
         tags: ["Volunteer Work/Community Service", "Social Sciences and Humanities"],
-        id: 908,
+        id: 909,
     },
     {
         title: "iJAG Associate",
@@ -23490,7 +23490,7 @@ const list = [
             "To participate in the iJAG Associate you must be in their junior year of high school and be rising seniors graduating in 2024.",
         cost: ["iJAG Associate is a free activity", false, 0, "unknown"],
         tags: ["Business", "Finance"],
-        id: 909,
+        id: 910,
     },
     {
         title: "Junior Volunteer Program",
@@ -23513,7 +23513,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Junior Volunteer Program is a free activity", false, 0, "unknown"],
         tags: ["Medicine", "Health Sciences"],
-        id: 910,
+        id: 911,
     },
     {
         title: "Voices of Oklahoma",
@@ -23537,7 +23537,7 @@ const list = [
             "To participate in the Voices of Oklahoma you must:\n\u2022 Be a high school student in 2023-2024\n\u2022 Be a member of the Native American community or from other communities historically excluded from archaeology (e.g., Black and Latinx students)",
         cost: ["Voices of Oklahoma is a free activity", false, 0, "unknown"],
         tags: ["History", "Social Science"],
-        id: 911,
+        id: 912,
     },
     {
         title: "Stanford Medical Youth Science Program",
@@ -23561,7 +23561,7 @@ const list = [
             "To participate in the Stanford Medical Youth Science Program you must:\n- Be a low-income, first-generation high school junior\n- Reside in Northern California",
         cost: ["Stanford Medical Youth Science Program is a free activity", false, 0, "unknown"],
         tags: ["Medicine", "STEM", "Health Sciences"],
-        id: 912,
+        id: 913,
     },
     {
         title: "High School Summer Research Internship",
@@ -23585,7 +23585,7 @@ const list = [
             "To participate in the High School Summer Research Internship you must be high schoolers who will graduate in 2024 or 2025.",
         cost: ["High School Summer Research Internship is a free activity", false, 0, "unknown"],
         tags: ["Engineering", "Science", "Research"],
-        id: 913,
+        id: 914,
     },
     {
         title: "Summer Education Internship",
@@ -23608,7 +23608,7 @@ const list = [
         requirements: "To participate in the Summer Education Internship you must be 18 years of age or older.",
         cost: ["Summer Education Internship is a free activity", false, 0, "unknown"],
         tags: ["Education", "Environmental Science"],
-        id: 914,
+        id: 915,
     },
     {
         title: "Broad Summer Scholars Program",
@@ -23632,7 +23632,7 @@ const list = [
             "Requirements: To participate in the Broad Summer Scholars Program you must:\n- Be a rising senior in high school\n- Attend a high school in MA within commuting distance to the Broad\n- Have earned a B or better in science and math classes\n- Demonstrate excitement for science!\n- Be a US citizen, permanent resident, or non-US citizen with employment authorization\n- Be fully vaccinated against Covid-19 by the program's start date\n- Be available for the entire 6-week duration of the program\n- Meet one or more of the following criteria:\n    - Underrepresented in the sciences\n    - Underserved\n    - First person in their family to attend college\n    - Demonstrate a commitment to issues of diversity and inclusion",
         cost: ["Broad Summer Scholars Program is a free activity", false, 0, "unknown"],
         tags: ["Biology", "Chemistry", "Computer Science", "Medicine", "STEM"],
-        id: 915,
+        id: 916,
     },
     {
         title: "High School Internship",
@@ -23656,7 +23656,7 @@ const list = [
             "To participate in the High School Internship you must be rising juniors or seniors from families with incomes below the HUD median family income.",
         cost: ["High School Internship is a free activity", false, 0, "unknown"],
         tags: ["Engineering", "STEM"],
-        id: 916,
+        id: 917,
     },
     {
         title: "Voelcker Biomedical Research Academy",
@@ -23680,7 +23680,7 @@ const list = [
             "To participate in the Voelcker Biomedical Research Academy you must:\n- Contact their respective schools to ask to be considered as a nominee.",
         cost: ["Voelcker Biomedical Research Academy is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Biology", "Medicine", "Health Sciences"],
-        id: 917,
+        id: 918,
     },
     {
         title: "Accelerate Cancer Education (ACE) Program",
@@ -23704,7 +23704,7 @@ const list = [
             "To participate in the Accelerate Cancer Education (ACE) Program you must email Lisa Harlan-Williams, PhD at lharlan-williams@kumc.edu to apply.",
         cost: ["Accelerate Cancer Education (ACE) Program is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Biology", "Medicine", "Health Sciences"],
-        id: 918,
+        id: 919,
     },
     {
         title: "High School Civic Engagement Internship",
@@ -23727,7 +23727,7 @@ const list = [
         requirements: "Unknown",
         cost: ["High School Civic Engagement Internship is a free activity", false, 0, "unknown"],
         tags: ["Government/Politics", "Law/Advocacy"],
-        id: 919,
+        id: 920,
     },
     {
         title: "Building Department Intern (PT-Seasonal)",
@@ -23752,7 +23752,7 @@ const list = [
             "To participate in the Building Department Intern (PT-Seasonal) you must:\n\n- Possess proficiency in modern office equipment.\n- Be at least 16 years of age.\n- Be physically present at the worksite with reliable transportation.\n- Be able to stand for extended periods and lift up to 25 pounds.",
         cost: ["Building Department Intern (PT-Seasonal) is a free activity", false, 0, "unknown"],
         tags: ["Engineering", "Architecture"],
-        id: 920,
+        id: 921,
     },
     {
         title: "Summer Internship Program",
@@ -23776,7 +23776,7 @@ const list = [
             "To participate in the Summer Internship Program you must:\n- Be enrolled or graduated from nearby Hanover high schools.",
         cost: ["Summer Internship Program is a free activity", false, 0, "unknown"],
         tags: ["Leadership/Management", "Government/Politics", "Business"],
-        id: 921,
+        id: 922,
     },
     {
         title: "Museum Archaeology Program Internship",
@@ -23799,7 +23799,7 @@ const list = [
         requirements: "To participate in the Museum Archaeology Program Internship, you must be students.",
         cost: ["Museum Archaeology Program Internship is a free activity", false, 0, "unknown"],
         tags: ["History", "Museum"],
-        id: 922,
+        id: 923,
     },
     {
         title: "Engineering Summer Program",
@@ -23822,7 +23822,7 @@ const list = [
         requirements: "To participate in the Engineering Summer Program you must:\n\n- Have no set requirements",
         cost: ["Engineering Summer Program costs money to enter", true, "unknown", "unknown"],
         tags: ["Engineering", "Robotics", "Environmental Science"],
-        id: 923,
+        id: 924,
     },
     {
         title: "Writing/Editing Intern",
@@ -23846,7 +23846,7 @@ const list = [
             "To participate in the Writing/Editing Intern you must:\n- Be at least 17 years old with a valid driver's license and reliable transportation\n- Be fluent in the English language\n- Have an overall GPA of 2.5 or higher\n- Possess strong organizational skills\n- Be able to read and follow verbal and written work instructions\n- Work independently\n- Commit to upholding the Division's safety and personnel policies and support its overall mission\n- Professionally represent the Division in all interactions",
         cost: ["Writing/Editing Intern is a free activity", false, 0, "unknown"],
         tags: ["Writing", "Environmental Science", "Journalism"],
-        id: 924,
+        id: 925,
     },
     {
         title: "Math and Science Academy ",
@@ -23870,7 +23870,7 @@ const list = [
             "To participate in the Math and Science Academy you must be high school sophomores, juniors, or seniors.",
         cost: ["Math and Science Academy is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Mathematics", "Chemistry", "Biology"],
-        id: 925,
+        id: 926,
     },
     {
         title: "Workplace Mentoring Program",
@@ -23894,7 +23894,7 @@ const list = [
             "To participate in the Workplace Mentoring Program you must:\n- Be between the ages of 7 and 16.\n- Commit to the program for 8 hours per month, for a minimum of one year.",
         cost: ["Workplace Mentoring Program is a free activity", false, 0, "unknown"],
         tags: ["Mentoring", "Education"],
-        id: 926,
+        id: 927,
     },
     {
         title: "GenCyber Summer",
@@ -23918,7 +23918,7 @@ const list = [
             "To participate in the GenCyber Summer you must:\n- Be entering 9th through 12th grade in the fall of 2023.\n- Demonstrate familiarity with cybersecurity concepts and information technology prowess.\n- Complete an outreach project of their own design to spread the word about cybersecurity to their school and community.",
         cost: ["GenCyber Summer is a free activity", false, 0, "unknown"],
         tags: ["Cybersecurity", "Computer Science"],
-        id: 927,
+        id: 928,
     },
     {
         title: "University of Chicago Medicine ResearchStart Program",
@@ -23943,7 +23943,7 @@ const list = [
             "To participate in the University of Chicago Medicine ResearchStart Program you must:\n- Be a high school junior or senior at time of application.\n- Be at least 16 years of age at start of program.",
         cost: ["University of Chicago Medicine ResearchStart Program is a free activity", false, 0, "unknown"],
         tags: ["Biology", "Health Sciences", "STEM"],
-        id: 928,
+        id: 929,
     },
     {
         title: "CareerLaunch",
@@ -23966,7 +23966,7 @@ const list = [
         requirements: "To participate in the CareerLaunch you must be between the ages of 13-18.",
         cost: ["CareerLaunch costs money to enter", true, "unknown", "unknown"],
         tags: ["Career Exploration", "Job Readiness", "Mentoring", "Job Shadowing", "Training", "Education"],
-        id: 929,
+        id: 930,
     },
     {
         title: "Musical Electronics Camp",
@@ -23990,7 +23990,7 @@ const list = [
             "To participate in the Musical Electronics Camp you must:\n- Be female students in grades 9th-12th for the year 2022-2023.\n- Have a passion for exploring the basics of electronics and how they can be used to generate music.\n- Complete an online registration form and waivers.\n- Attend the camp from June 26-29, 2023, as a day camp from 9 AM - 4:30 PM.\n- Cancel early if unable to attend to allow waitlisted applicants to participate.",
         cost: ["Musical Electronics Camp is a free activity", false, 0, "unknown"],
         tags: ["Engineering", "Computer Science", "Arts", "Music"],
-        id: 930,
+        id: 931,
     },
     {
         title: "Student 5.0 for High School Seniors",
@@ -24014,7 +24014,7 @@ const list = [
             "To participate in the Student 5.0 for High School Seniors you must:\n- Be a senior attending public high school in the Greater Hartford/East Hartford and New Britain/Bristol areas.",
         cost: ["Student 5.0 for High School Seniors is a free activity", false, 0, "unknown"],
         tags: ["College Preparation", "Career Exploration"],
-        id: 931,
+        id: 932,
     },
     {
         title: "Science Honors Program (SHP)",
@@ -24038,7 +24038,7 @@ const list = [
             "To participate in the Science Honors Program (SHP) you must:\n- Be in the eleventh, tenth, or ninth grade\n- Apply online\n- Attend high schools in New York, New Jersey, or Connecticut\n- Live within a 75-mile radius of the Columbia campus",
         cost: ["Science Honors Program (SHP) costs money to enter", true, "unknown", "unknown"],
         tags: ["Medicine", "Science", "Engineering"],
-        id: 932,
+        id: 933,
     },
     {
         title: "Northwestern Pre-College Summer Program",
@@ -24062,7 +24062,7 @@ const list = [
             "To participate in the Northwestern Pre-College Summer Program you must:\n\n- Be high school sophomores, juniors, or seniors at the time of application.\n- Have achieved a minimum unweighted GPA of 3.0 or higher on a 4.0 scale or equivalent.\n- Submit an online application form, high school transcripts, a letter of recommendation from a teacher, and a personal statement detailing their academic goals and why they want to attend the program.\n- Pay the non-refundable application fee before the deadline.",
         cost: ["Northwestern Pre-College Summer Program costs money to enter", true, "unknown", "unknown"],
         tags: ["Education", "STEM", "Social Science", "Humanities"],
-        id: 933,
+        id: 934,
     },
     {
         title: "The Garden Apprentice Program (GAP)",
@@ -24086,7 +24086,7 @@ const list = [
             "To participate in the Garden Apprentice Program (GAP) you must be fully vaccinated against COVID-19 by the start of programs in March 2023.",
         cost: ["The Garden Apprentice Program (GAP) is a free activity", false, 0, "unknown"],
         tags: ["Agriculture", "Environmental Science", "STEM"],
-        id: 934,
+        id: 935,
     },
     {
         title: "Air Force Research Library Scholar Program",
@@ -24110,7 +24110,7 @@ const list = [
             "To participate in the Air Force Research Library Scholar Program you must:\n\n- Maintain a grade point average of at least 3.0 on a 4.0 scale.\n- Be a US Citizen.\n- Be enrolled or accepted at an educational institution taking at least half-time academic course load leading to a degree or certificate for semester immediately preceding internship session.\n- Be in good academic standing.\n- Be at least 16 years of age (by session application deadline) and have a valid driver\u2019s license.\n- Be available to work full-time (40 hours per week) for summer internship positions.\n- Be willing to temporarily relocate to physical work location.\n- Be able to take personal responsibility for arranging transportation to and from worksite each day.\n- Be able to pass a background check, potentially resulting in a Secret Security Clearance.",
         cost: ["Air Force Research Library Scholar Program is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Engineering", "Computer Science", "Aviation/Aerospace"],
-        id: 935,
+        id: 936,
     },
     {
         title: "Biomedical Research Internship for Minority Students",
@@ -24135,7 +24135,7 @@ const list = [
             "To participate in the Biomedical Research Internship for Minority Students you must be graduating high school seniors.",
         cost: ["Biomedical Research Internship for Minority Students is a free activity", false, 0, "unknown"],
         tags: ["Biology", "Medicine", "STEM"],
-        id: 936,
+        id: 937,
     },
     {
         title: "Internships at Frost Science",
@@ -24159,7 +24159,7 @@ const list = [
             "To participate in the Internships at Frost Science you must:\n- Be age 16 or older\n- Commit to at least 10 weeks of full-time work or 20 weeks of part-time work\n- Have a strong interest in STEM or related fields\n- Provide a resume, cover letter, and letter of recommendation\n- Complete an application and potentially participate in an interview\n- Understand that the internship is unpaid but may offer academic credit or community service hours",
         cost: ["Internships at Frost Science is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Science Education"],
-        id: 937,
+        id: 938,
     },
     {
         title: "Sonia and Celina Sotomayor Judicial Internship Program",
@@ -24183,7 +24183,7 @@ const list = [
             'To participate in the Sonia and Celina Sotomayor Judicial Internship Program, you must:\n\n1. Be a current 11th grader in high school.\n2. Reside and attend school in Brooklyn, Bronx, Manhattan, Queens, or Staten Island.\n3. Obtain student working papers or the "Student General Employment Certificate" and email it to hsapplications@scsjip.org by Monday, March 13, 2023.\n4. Be available to attend the 2023 SCS JIP Orientation in Manhattan in May 2023 (final date to be determined).',
         cost: ["Sonia and Celina Sotomayor Judicial Internship Program is a free activity", false, 0, "unknown"],
         tags: ["Law", "Government/Politics"],
-        id: 938,
+        id: 939,
     },
     {
         title: "Summer Excelerator",
@@ -24215,7 +24215,7 @@ const list = [
             "Leadership/Management",
             "Career Exploration",
         ],
-        id: 939,
+        id: 940,
     },
     {
         title: "The Pittsburgh Regional Science and Engineering Fair (PRSEF) High School Internship ",
@@ -24244,7 +24244,7 @@ const list = [
             "unknown",
         ],
         tags: ["Biology", "Medicine", "Research", "STEM"],
-        id: 940,
+        id: 941,
     },
     {
         title: "High School Internship ",
@@ -24268,7 +24268,7 @@ const list = [
             "To participate in the High School Internship you must:\n- Possess social media skills, including TikTok.",
         cost: ["High School Internship is a free activity", false, 0, "unknown"],
         tags: ["Internship", "Career Development"],
-        id: 941,
+        id: 942,
     },
     {
         title: "High School Student Research Apprentice Program",
@@ -24292,7 +24292,7 @@ const list = [
             "To participate in the High School Student Research Apprentice Program you must:\n\n- Have completed their junior year of high school with a \u2018B\u2019 average or better.\n- Have reached their 16th birthday by the start of the program.\n- Be from groups that have been traditionally underrepresented in the health professions (African American, Hispanic/Latino, Native American, Native Alaskan, Native Hawaiian) or others from disadvantaged backgrounds who meet all eligibility criteria and have a high probability of fulfilling the social and educational goals of this program.\n- Be from a Connecticut high school that has an on-site School-to-Career or Career-to-Work Coordinator during the academic year, as well as summer months. This does not apply to Connecticut high school graduates or students who will be 18 years of age at the start of the program.\n- Be a U.S. citizen or permanent resident.",
         cost: ["High School Student Research Apprentice Program is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Medicine", "Research"],
-        id: 942,
+        id: 943,
     },
     {
         title: "High School Fellowships",
@@ -24316,7 +24316,7 @@ const list = [
             "To participate in the High School Fellowships you must:\n- Be completing their sophomore, junior, or senior year of high school.\n- Be from a high school within Stillwater Medical's service area, including: Stillwater, Blackwell, Carney, Coyle, Cushing, Glencoe, Morrison, Mulhall-Orlando, Pawnee, Perkins/Tryon, Perry, Red Rock/Marland, Ripley, or Yale.",
         cost: ["High School Fellowships is a free activity", false, 0, "unknown"],
         tags: ["Medicine", "Health Sciences"],
-        id: 943,
+        id: 944,
     },
     {
         title: "Internships + Students in Construction",
@@ -24340,7 +24340,7 @@ const list = [
             "To participate in the Internships + Students in Construction you must:\n- Be individuals with an entrepreneurial spirit and passion for construction.\n- Be interested in both the office and field aspects of the business.\n- Have a desire to excel in their chosen areas.\n- Submit their resumes to be eligible.",
         cost: ["Internships + Students in Construction is a free activity", false, 0, "unknown"],
         tags: ["Engineering", "Mentoring", "Architecture", "Business"],
-        id: 944,
+        id: 945,
     },
     {
         title: "C.Summer Institutes for High School Students",
@@ -24364,7 +24364,7 @@ const list = [
             "To participate in the Business Summer Institutes for High School Students you must:\n- Be current 9th, 10th, or 11th graders.\n- Have an interest in exploring the business world through Financial Empowerment education and expert panel discussions.",
         cost: ["C.Summer Institutes for High School Students is a free activity", false, 0, "unknown"],
         tags: ["Business", "Economics"],
-        id: 945,
+        id: 946,
     },
     {
         title: "Teen Creative Agency Apprenticeship",
@@ -24387,7 +24387,7 @@ const list = [
         requirements: "To participate in the Teen Creative Agency Apprenticeship you must be alumni of TCA.",
         cost: ["Teen Creative Agency Apprenticeship is a free activity", false, 0, "unknown"],
         tags: ["Art/Design,Leadership/Management,Public Speaking"],
-        id: 946,
+        id: 947,
     },
     {
         title: "Yale Summer Session",
@@ -24411,7 +24411,7 @@ const list = [
             "To participate in the Yale Summer Session you must:\n- Be entering their senior year of high school or freshman year of college.\n- Be 16 years of age or older by their program start date.",
         cost: ["Yale Summer Session costs money to enter", true, "unknown", "unknown"],
         tags: ["Education", "STEM", "Social Science", "Arts"],
-        id: 947,
+        id: 948,
     },
     {
         title: "Volunteering ",
@@ -24434,7 +24434,7 @@ const list = [
         requirements: "To participate in the Volunteering you must:\n- Be willing to contribute their time and effort",
         cost: ["Volunteering is a free activity", false, 0, "unknown"],
         tags: ["Arts", "Education"],
-        id: 948,
+        id: 949,
     },
     {
         title: "Automotive High School Internship Program",
@@ -24459,7 +24459,7 @@ const list = [
             "To participate in the Automotive High School Internship Program you must:\n- Be between 16-22 years of age at the start of the program.\n- Attend school or reside in Manhattan or Staten Island.\n- Express interest in a career in the health field.\n- Submit two recommendations, one from a teacher or faculty member.",
         cost: ["Automotive High School Internship Program is a free activity", false, 0, "unknown"],
         tags: ["Engineering", "STEM"],
-        id: 949,
+        id: 950,
     },
     {
         title: "RISE \u2013 Ragon Institute Summer Experience",
@@ -24483,7 +24483,7 @@ const list = [
             "To participate in the RISE \u2013 Ragon Institute Summer Experience you must:\n- Demonstrate interest in immunology and related fields\n- Meet work hour requirements and participate in all activities\n- Be rising seniors or will graduate from high school in 2023 and be 16 years old or older\n- Show interest in STEM fields through coursework, extra-curricular activities, etc.\n- Have previous participation in a program that supports academic development\n- Submit teacher/mentor recommendations\n- Provide a personal statement of interest",
         cost: ["RISE \u2013 Ragon Institute Summer Experience is a free activity", false, 0, "unknown"],
         tags: ["Medicine", "Science", "Mentoring", "Leadership/Management"],
-        id: 950,
+        id: 951,
     },
     {
         title: "Lehman College Now STEM Research Academy",
@@ -24507,7 +24507,7 @@ const list = [
             "To participate in the Lehman College Now STEM Research Academy you must:\n\n- Be a NYC public high school sophomore or junior\n- Maintain an overall HS average of 80+\n- Have received a 70+ on any Common Core Math Regents\n- Demonstrate a strong interest in science\n- For summer mentorship, also have an ELA Regents score of 70+",
         cost: ["Lehman College Now STEM Research Academy is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Biology", "Research"],
-        id: 951,
+        id: 952,
     },
     {
         title: "Girls Tech Scholars Program",
@@ -24539,7 +24539,7 @@ const list = [
             "Web Development",
             "App Development",
         ],
-        id: 952,
+        id: 953,
     },
     {
         title: "Urban Barcode Research Program",
@@ -24563,7 +24563,7 @@ const list = [
             "To participate in the Urban Barcode Research Program you must:\n\n- Be enrolled in grades 9-12 at a public or private high school in New York City.\n- Reside in New York City.\n- Complete two mandatory courses: Conservation Genetics and DNA Barcoding and Bioinformatics.\n- Submit an online application after completion of the courses.",
         cost: ["Urban Barcode Research Program is a free activity", false, 0, "unknown"],
         tags: ["Biology", "Environmental Science", "STEM"],
-        id: 953,
+        id: 954,
     },
     {
         title: "Inspiring Future Scientists through Shadowing (IFSS)",
@@ -24587,7 +24587,7 @@ const list = [
             "To participate in the Inspiring Future Scientists through Shadowing (IFSS) you must:\n- Be over the age of 16 by the start of the program.\n- Be US citizens or permanent residents.\n- Arrange for their own transportation to/from the Stanford Campus.",
         cost: ["Inspiring Future Scientists through Shadowing (IFSS) is a free activity", false, 0, "unknown"],
         tags: ["Chemistry", "STEM", "Mentoring"],
-        id: 954,
+        id: 955,
     },
     {
         title: "Queensborough Community College Now STEM Research Academy",
@@ -24611,7 +24611,7 @@ const list = [
             "To participate in the Queensborough Community College Now STEM Research Academy you must:\n- Be NYC DOE students on track to graduate high school\n- Meet CUNY Eligibility Benchmarks (75+ ELA Regents and/or 80+ Math Regents)\n- Be primarily high school juniors",
         cost: ["Queensborough Community College Now STEM Research Academy is a free activity", false, 0, "unknown"],
         tags: ["Science", "Engineering", "Computer Science", "Medicine", "Psychology", "STEM"],
-        id: 955,
+        id: 956,
     },
     {
         title: "Teen Art Connect Internship",
@@ -24635,7 +24635,7 @@ const list = [
             "To participate in the Teen Art Connect Internship you must:\n- Be a high school student entering 10th, 11th, or 12th grade in fall 2023.",
         cost: ["Teen Art Connect Internship is a free activity", false, 0, "unknown"],
         tags: ["Arts", "Art/Design", "Leadership/Management", "Performing Arts"],
-        id: 956,
+        id: 957,
     },
     {
         title: "Volunteer",
@@ -24658,7 +24658,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Volunteer is a free activity", false, 0, "unknown"],
         tags: ["Performing Arts", "Arts/Design"],
-        id: 957,
+        id: 958,
     },
     {
         title: "Research Science Institute",
@@ -24682,7 +24682,7 @@ const list = [
             "To participate in the Research Science Institute you must:\n- Be high school juniors at the time of their application\n- Not have participated in RSI before\n- Demonstrate exceptional academic achievement in STEM fields\n- Submit transcripts, test scores, two letters of recommendation, and written responses to essay questions\n- Commit to attending the entire 6-week program at MIT",
         cost: ["Research Science Institute is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Science", "Engineering", "Research", "Education"],
-        id: 958,
+        id: 959,
     },
     {
         title: "The Young Women's Leadership Institute",
@@ -24705,7 +24705,7 @@ const list = [
         requirements: "Unknown",
         cost: ["The Young Women's Leadership Institute costs money to enter", true, "unknown", "unknown"],
         tags: ["Leadership/Management", "Government/Politics", "Social Science", "Arts", "History"],
-        id: 959,
+        id: 960,
     },
     {
         title: "Codebreakers",
@@ -24729,7 +24729,7 @@ const list = [
             "Requirements: To participate in the Codebreakers you must:\n- Be young women entering 10th or 11th grade in fall 2023 at a school in the greater Boston area\n- Reside in and attend school in Massachusetts\n- Have a basic understanding of computer language\n- Submit an application through the Codebreakers website before the deadline\n- Pay a non-refundable registration fee of $100 once accepted to the program",
         cost: ["Codebreakers is a free activity", false, 0, "unknown"],
         tags: ["Computer Science", "Cybersecurity", "STEM"],
-        id: 960,
+        id: 961,
     },
     {
         title: "Summit Program",
@@ -24752,7 +24752,7 @@ const list = [
         requirements: "To participate in the Summit Program you must be students.",
         cost: ["Summit Program is a free activity", false, 0, "unknown"],
         tags: ["Leadership/Management", "Community Service/Volunteer Work", "Personal Growth", "Community Building"],
-        id: 961,
+        id: 962,
     },
     {
         title: "High School Intern ",
@@ -24776,7 +24776,7 @@ const list = [
             "To participate in the High School Intern you must:\n\n- Be 16 years of age or older.\n- Maintain an acceptable attendance record while in the program.\n- Possess strong computer skills.\n- Demonstrate excellent customer service skills.",
         cost: ["High School Intern is a free activity", false, 0, "unknown"],
         tags: ["Engineering", "Business", "Mentoring"],
-        id: 962,
+        id: 963,
     },
     {
         title: "Internship Program ",
@@ -24800,7 +24800,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Internship Program is a free activity", false, 0, "unknown"],
         tags: ["Nonprofit", "Social Science"],
-        id: 963,
+        id: 964,
     },
     {
         title: "Girls Who Code Summer Program",
@@ -24824,7 +24824,7 @@ const list = [
             "To participate in the Girls Who Code Summer Program you must:\n- Be a high school student\n- Complete course projects at their own pace within 6 weeks\n- Have access to intermediate content",
         cost: ["Girls Who Code Summer Program is a free activity", false, 0, "unknown"],
         tags: ["Computer Science", "STEM"],
-        id: 964,
+        id: 965,
     },
     {
         title: "Summer Science Corps",
@@ -24849,7 +24849,7 @@ const list = [
             "To participate in the Summer Science Corps you must:\n- Be a high school student\n- Be 14 years of age or older",
         cost: ["Summer Science Corps is a free activity", false, 0, "unknown"],
         tags: ["Science Education", "Community Service", "Science", "Environment "],
-        id: 965,
+        id: 966,
     },
     {
         title: "Computer Science for Cyber Security (CS4CS)",
@@ -24874,7 +24874,7 @@ const list = [
             "To participate in the Computer Science for Cyber Security (CS4CS) you must:\n- Be currently enrolled in the 8th, 9th, 10th, or 11th grade.\n- Reside in New York City or neighboring cities (e.g., Jersey City, Newark, Hempstead).",
         cost: ["Computer Science for Cyber Security (CS4CS) is a free activity", false, 0, "unknown"],
         tags: ["Computer Science", "Cybersecurity"],
-        id: 966,
+        id: 967,
     },
     {
         title: "High School Internship Program",
@@ -24899,7 +24899,7 @@ const list = [
             "To participate in the High School Internship Program you must:\n- Be at least 16 years of age at the time of application submission\n- Be currently enrolled in high school\n- Have parental or legal guardian consent",
         cost: ["High School Internship Program is a free activity", false, 0, "unknown"],
         tags: ["Business"],
-        id: 967,
+        id: 968,
     },
     {
         title: "River Restoration Internship",
@@ -24923,7 +24923,7 @@ const list = [
             "To participate in the River Restoration Internship you must:\n- Commit 12 hours per week\n- Demonstrate a strong interest in environmental preservation\n- Possess comfort and enthusiasm in leading volunteers",
         cost: ["River Restoration Internship is a free activity", false, 0, "unknown"],
         tags: ["Environmental Science", "Biology"],
-        id: 968,
+        id: 969,
     },
     {
         title: "Teen Volunteer",
@@ -24946,7 +24946,7 @@ const list = [
         requirements: "To participate in the Teen Volunteer you must be high schoolers between the ages of 15-18.",
         cost: ["Teen Volunteer is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Science", "Engineering", "Mathematics"],
-        id: 969,
+        id: 970,
     },
     {
         title: "TEEN MENTORSHIP",
@@ -24970,7 +24970,7 @@ const list = [
             "To participate in the TEEN MENTORSHIP you must:\n- Be in High school.\n- Interview as a part of the application process.\n- Commit to the program for two years. (High school seniors may still apply.)\n- Have Wi-Fi and access to a digital device for Zoom login.\n- Attend mandatory monthly in-person workshops at the Girls Inc. Teen Center (4973 Hollister Ave, Goleta) to develop interpersonal and professional skills for the summer internship.",
         cost: ["TEEN MENTORSHIP is a free activity", false, 0, "unknown"],
         tags: ["Mentoring", "Career Development", "Education", "Youth Development"],
-        id: 970,
+        id: 971,
     },
     {
         title: "GO Getter Summer Internship",
@@ -24994,7 +24994,7 @@ const list = [
             "To participate in the GO Getter Summer Internship you must:\n- Be at least 16 years old as of July 5, 2023\n- Be high school students in good academic standing (rising 10th, 11th, and 12th graders and 2023 high school graduates)\n- Demonstrate a commitment to and belief in all children\u2019s ability to succeed and thrive\n- Demonstrate a commitment to social justice through educational equity\n- Possess the ability to work collaboratively on a team\n- Exhibit strong or emerging leadership skills\n- Maintain punctuality and professionalism",
         cost: ["GO Getter Summer Internship is a free activity", false, 0, "unknown"],
         tags: ["Education", "Leadership/Management"],
-        id: 971,
+        id: 972,
     },
     {
         title: "Teen Council & Teen Summer",
@@ -25017,7 +25017,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Teen Council & Teen Summer is a free activity", false, 0, "unknown"],
         tags: ["Art/Design", "Museum"],
-        id: 972,
+        id: 973,
     },
     {
         title: "Biotechnology for Science & Health Academy",
@@ -25041,7 +25041,7 @@ const list = [
             "To participate in the Biotechnology for Science & Health Academy you must:\n- Be a current or rising high school freshman, sophomore, junior, or senior during the academic year prior to the summer program\n- Show evidence of good academic standing, with at least a 2.0 GPA\n- Be at least 15 years old by the date of check-in",
         cost: ["Biotechnology for Science & Health Academy costs money to enter", true, "unknown", "unknown"],
         tags: ["Biology", "Health Sciences", "Medicine", "STEM"],
-        id: 973,
+        id: 974,
     },
     {
         title: "Summer Youth Internship Program",
@@ -25065,7 +25065,7 @@ const list = [
             "To participate in the Summer Youth Internship Program you must:\n- Be a high school student aged 14-19\n- Be fully vaccinated against COVID-19 (exemptions for qualifying medical disabilities or sincerely held religious objections)\n- Obtain permission from their educational institution for course credit (if desired)\n- Cover their own costs (housing, relocation, etc.)",
         cost: ["Summer Youth Internship Program is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Museum"],
-        id: 974,
+        id: 975,
     },
     {
         title: "Beginner Environmental Leadership Program",
@@ -25089,7 +25089,7 @@ const list = [
             "To participate in the Beginner Environmental Leadership Program you must:\n\n- Be currently enrolled in high school or home school\n- Secure all necessary means of transportation\n- Volunteer at Georgia Aquarium for four months\n- Provide a copy of their birth certificate at interview\n- Provide current government or school-issued photo ID\n- Pay a $45 Administrative Fee one week prior to the start of their program\n- Attend one interview day at Georgia Aquarium\n- Attend one full day of training at Georgia Aquarium\n- Report on time for all training and volunteer positions in proper attire\n- Provide respect, accurate information, and assistance to Aquarium guests, staff, and volunteers\n- Maintain a strong work ethic and positive attitude\n- Demonstrate care for wildlife and support for the Aquarium's mission\n- Abide by Aquarium policies, procedures, and code of conduct, including COVID-19 policies and procedures",
         cost: ["Beginner Environmental Leadership Program is a free activity", false, 0, "unknown"],
         tags: ["Environmental Science", "Leadership/Management", "Education"],
-        id: 975,
+        id: 976,
     },
     {
         title: "City Summer Internship",
@@ -25113,7 +25113,7 @@ const list = [
             "To participate in the City Summer Internship you must:\n- Be entering ninth grade in the fall\n- Be a Boston resident\n- Complete an I-9 form requiring two ID\u2019s\n- Have a social security number",
         cost: ["City Summer Internship is a free activity", false, 0, "unknown"],
         tags: ["Business", "Economics", "Leadership/Management", "STEM"],
-        id: 976,
+        id: 977,
     },
     {
         title: "Kimberly Querrey Summer Research Program",
@@ -25137,7 +25137,7 @@ const list = [
             "To participate in the Kimberly Querrey Summer Research Program, you must be rising high school juniors or seniors.",
         cost: ["Kimberly Querrey Summer Research Program is a free activity", false, 0, "unknown"],
         tags: ["Biology", "STEM", "Health Sciences"],
-        id: 977,
+        id: 978,
     },
     {
         title: "Volunteer Summer Program",
@@ -25161,7 +25161,7 @@ const list = [
             "To participate in the Volunteer Summer Program you must:\n- Be a minimum of 16 years old\n- Have a valid government-issued photo ID\n- Agree to volunteer 50 hours\n- Provide proof of Varicella, MMR, TB, and be fully vaccinated and boosted for COVID-19\n- Attend a mandatory information session\n- Submit all required forms, documents, and proof of immunizations online for review and approval\n- Attend a mandatory in-person orientation on June 21, 2023\n- Complete 50 volunteer hours by August 31, 2023",
         cost: ["Volunteer Summer Program is a free activity", false, 0, "unknown"],
         tags: ["Medicine"],
-        id: 978,
+        id: 979,
     },
     {
         title: "Summer Youth Employment Program",
@@ -25184,7 +25184,7 @@ const list = [
         requirements: "To participate in the Summer Youth Employment Program you must be between the ages of 16-24.",
         cost: ["Summer Youth Employment Program is a free activity", false, 0, "unknown"],
         tags: ["Government/Politics", "Business", "Nonprofit", "Entrepreneurship"],
-        id: 979,
+        id: 980,
     },
     {
         title: "Innovation, Entrepreneurship, and the Science of Smart Cities (ieSoSC)",
@@ -25214,7 +25214,7 @@ const list = [
             "unknown",
         ],
         tags: ["Computer Science", "Engineering", "Entrepreneurship", "STEM"],
-        id: 980,
+        id: 981,
     },
     {
         title: "Queens College Now STEM Research Academy",
@@ -25238,7 +25238,7 @@ const list = [
             "To participate in the Queens College Now STEM Research Academy you must:\n\n- Be a NYC public high school sophomore or junior\n- Meet CUNY Eligibility Benchmarks (75+ ELA Regents and/or 80+ Math Regents)",
         cost: ["Queens College Now STEM Research Academy is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Science", "Research", "Education"],
-        id: 981,
+        id: 982,
     },
     {
         title: "Upward Bound",
@@ -25262,7 +25262,7 @@ const list = [
             "To participate in the Upward Bound you must:\n- Attend Preston High School\n- Meet at least one of the following criteria:\n    - Income-eligible as defined by the federal government\n    - Family taxable income (line 15 of 1040 tax form) is at or below the amount listed on the website\n    - Student will be the first generation to attend college (neither parent has completed a 4-year college degree)",
         cost: ["Upward Bound is a free activity", false, 0, "unknown"],
         tags: ["Education"],
-        id: 982,
+        id: 983,
     },
     {
         title: "High School Law Institute (HSLI)",
@@ -25286,7 +25286,7 @@ const list = [
         requirements: "Unknown",
         cost: ["High School Law Institute (HSLI) is a free activity", false, 0, "unknown"],
         tags: ["Law", "Debate"],
-        id: 983,
+        id: 984,
     },
     {
         title: "Internship",
@@ -25309,7 +25309,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Internship is a free activity", false, 0, "unknown"],
         tags: ["Business", "Education"],
-        id: 984,
+        id: 985,
     },
     {
         title: "OSU High School Internship Program [HSIP]",
@@ -25333,7 +25333,7 @@ const list = [
             'To participate in the OSU High School Internship Program [HSIP] you must:\n- Be a rising high school senior\n- Be enrolled in a public or non-public high school in Ohio\n- Be enrolled in the OSU CCP Dual Enrollment program; "The Ohio Academy."',
         cost: ["OSU High School Internship Program [HSIP] is a free activity", false, 0, "unknown"],
         tags: ["Government/Politics", "Public Service"],
-        id: 985,
+        id: 986,
     },
     {
         title: "Office of Police Accountability and Transparency internships ",
@@ -25357,7 +25357,7 @@ const list = [
             "To participate in the Office of Police Accountability and Transparency internships, you must:\n- Be a current high school student\n- Demonstrate interest in social justice",
         cost: ["Office of Police Accountability and Transparency internships is a free activity", false, 0, "unknown"],
         tags: ["Government/Politics", "Law/Advocacy"],
-        id: 986,
+        id: 987,
     },
     {
         title: "High School Internship ",
@@ -25380,7 +25380,7 @@ const list = [
         requirements: "Unknown",
         cost: ["High School Internship is a free activity", false, 0, "unknown"],
         tags: ["Education", "Nonprofit", "Leadership/Management"],
-        id: 987,
+        id: 988,
     },
     {
         title: "TRIO Upward Bound",
@@ -25404,7 +25404,7 @@ const list = [
             "To participate in the TRIO Upward Bound you must:\n- Be high school students currently enrolled in the Upward Bound program\n- Have completed at least one full academic year of high school\n- Be in good academic standing, with a cumulative GPA of 2.5 or higher\n- Demonstrate a strong interest in pursuing higher education\n- Have a desire to learn and develop their skills\n- Be willing to commit to the full duration of the program\n- Submit a completed application, which includes personal information, academic records, and a statement of interest in the program",
         cost: ["TRIO Upward Bound is a free activity", false, 0, "unknown"],
         tags: ["Education", "Mentoring", "Tutoring"],
-        id: 988,
+        id: 989,
     },
     {
         title: "High School Foundations Summer Internship",
@@ -25428,7 +25428,7 @@ const list = [
             "To participate in the High School Foundations Summer Internship you must:\n- Be a high school student in their sophomore or junior year.\n- Meet certain academic and personal standards, including employability and drug testing.\n- Possess good communication and teamwork skills.",
         cost: ["High School Foundations Summer Internship is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Business", "Law", "Engineering", "Art/Design", "Medicine", "Leadership/Management", "Mentoring"],
-        id: 989,
+        id: 990,
     },
     {
         title: "2023 Summer High School Internship Program",
@@ -25452,7 +25452,7 @@ const list = [
             "To participate in the 2023 Summer High School Internship Program, you must:\n- Be at least 16 years of age and have senior standing at the time the internship begins\n- Maintain a minimum cumulative GPA of 3.0 on a 4.0 scale\n- Attend a high school located in northern New Mexico\n- Pass a pre-employment drug test\n- Apply during the spring semester of their junior year to be considered for an internship the summer prior to beginning their senior year",
         cost: ["2023 Summer High School Internship Program is a free activity", false, 0, "unknown"],
         tags: ["Science", "Environment", "STEM", "Internship", "Career Exploration", "High School Students"],
-        id: 990,
+        id: 991,
     },
     {
         title: "Rebel Research Scholars",
@@ -25476,7 +25476,7 @@ const list = [
             "To participate in the Rebel Research Scholars you must:\n- Participate in either a one or two month summer research program\n- Spend approximately seven hours each day conducting research in a university laboratory setting",
         cost: ["Rebel Research Scholars is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Science", "Engineering", "Research", "University", "High School", "Competitive", "Financial Aid"],
-        id: 991,
+        id: 992,
     },
     {
         title: "UPWARDS High School Summer Research Training Program",
@@ -25501,7 +25501,7 @@ const list = [
             "To participate in the UPWARDS High School Summer Research Training Program you must be a local high school student (incoming senior for the fall of 2024 and 18 years or older by June 3, 2024) who identifies as economically disadvantaged, educationally disadvantaged, with disabilities, or a first-generation student.",
         cost: ["UPWARDS High School Summer Research Training Program is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Medicine", "Science", "Biology", "Research", "Education", "Mentoring", "Career Development"],
-        id: 992,
+        id: 993,
     },
     {
         title: "Summer Immersion",
@@ -25525,7 +25525,7 @@ const list = [
             "To participate in the Summer Immersion you must:\n- Be currently enrolled in school upon applying\n- Be entering grades 9 through 12 or freshman year of college in the fall",
         cost: ["Summer Immersion costs money to enter", true, "unknown", "unknown"],
         tags: ["Education", "College Preparation", "Leadership", "Global Awareness", "STEM"],
-        id: 993,
+        id: 994,
     },
     {
         title: "The Field Museum Internship",
@@ -25549,7 +25549,7 @@ const list = [
             "To participate in the Field Museum Internship you must:\n- Be high school students\n- Apply to several formal programs or as summer volunteers\n- Contact the person they want to work with directly if the opportunity isn't listed",
         cost: ["The Field Museum Internship is a free activity", false, 0, "unknown"],
         tags: ["Museum", "Education", "Science", "History", "Leadership/Management", "STEM"],
-        id: 994,
+        id: 995,
     },
     {
         title: "HOPP Summer Student Program",
@@ -25573,7 +25573,7 @@ const list = [
             "To participate in the HOPP Summer Student Program you must:\n\n- Have completed at least the ninth grade by June 2023\n- Demonstrate a genuine interest in science and laboratory research\n- Maintain a 3.5 grade point average in science subjects\n- Commit to the program for eight weeks\n- Submit application materials by the deadlines (see brochure)\n- Be eligible to work in the United States\n- Be 14 or older by June 2023",
         cost: ["HOPP Summer Student Program is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Biology", "Computer Science", "Health Sciences", "Medicine"],
-        id: 995,
+        id: 996,
     },
     {
         title: "Data Science Institute Summer Lab",
@@ -25596,7 +25596,7 @@ const list = [
         requirements: "To participate in the Data Science Institute Summer Lab you must be current sophomores or juniors.",
         cost: ["Data Science Institute Summer Lab is a free activity", false, 0, "unknown"],
         tags: ["Data Science", "STEM"],
-        id: 996,
+        id: 997,
     },
     {
         title: "St. John's Pleasant Valley Hospital Student Volunteer Program",
@@ -25621,7 +25621,7 @@ const list = [
             "To participate in the St. John's Pleasant Valley Hospital Student Volunteer Program you must be at least 16 years of age.",
         cost: ["St. John's Pleasant Valley Hospital Student Volunteer Program is a free activity", false, 0, "unknown"],
         tags: ["Health Sciences", "Medicine"],
-        id: 997,
+        id: 998,
     },
     {
         title: "Summer High School - Recreation Leaders",
@@ -25646,7 +25646,7 @@ const list = [
             "To participate in the Summer High School - Recreation Leaders you must:\n- Be available to work 20 hours per week for 8 weeks (June - July 2023)\n- Be a current high school student\n- Be at least 15 years of age by May 15th, 2023",
         cost: ["Summer High School - Recreation Leaders is a free activity", false, 0, "unknown"],
         tags: ["Government/Politics"],
-        id: 998,
+        id: 999,
     },
     {
         title: "Zoo Ambassador",
@@ -25669,7 +25669,7 @@ const list = [
         requirements: "To participate in the Zoo Ambassador you must be at least 16 years of age.",
         cost: ["Zoo Ambassador is a free activity", false, 0, "unknown"],
         tags: ["Environmental Science", "Education", "Biology"],
-        id: 999,
+        id: 1000,
     },
     {
         title: "High School Internship",
@@ -25692,7 +25692,7 @@ const list = [
         requirements: "Unknown",
         cost: ["High School Internship is a free activity", false, 0, "unknown"],
         tags: ["History", "Education", "Arts"],
-        id: 1000,
+        id: 1001,
     },
     {
         title: "New York Fellows Program",
@@ -25716,7 +25716,7 @@ const list = [
             "To participate in the New York Fellows Program you must:\n- Be between the ages of 14 and 18.\n- Have no prior filmmaking experience.",
         cost: ["New York Fellows Program is a free activity", false, 0, "unknown"],
         tags: ["Film/Cinema", "Arts/Design", "Education"],
-        id: 1001,
+        id: 1002,
     },
     {
         title: "Student Volunteer Program",
@@ -25740,7 +25740,7 @@ const list = [
             "To participate in the Student Volunteer Program you must:\n\n- Be a U.S. citizen\n- Be at least 16 years of age at the time of appointment\n- Be enrolled or accepted in an accredited educational institution during the upcoming semester or quarter\n- Maintain a satisfactory academic record of a 2.5 or better cumulative grade point average\n- Obtain an agreement from the academic institution to participate\n- Not be a son or daughter of a current U.S. Secret Service employee",
         cost: ["Student Volunteer Program is a free activity", false, 0, "unknown"],
         tags: ["Law/Advocacy", "Government", "Leadership/Management"],
-        id: 1002,
+        id: 1003,
     },
     {
         title: "StandOut Connect High School Internship Program",
@@ -25765,7 +25765,7 @@ const list = [
             "To participate in the StandOut Connect High School Internship Program you must:\n- Be 15+ years of age by the start of the program\n- Demonstrate English fluency\n- Be willing to adapt to a US time zone",
         cost: ["StandOut Connect High School Internship Program costs money to enter", true, "unknown", "unknown"],
         tags: ["Internship", "Networking"],
-        id: 1003,
+        id: 1004,
     },
     {
         title: "The Urban Alliance High School Internship Program",
@@ -25789,7 +25789,7 @@ const list = [
             "To participate in the Urban Alliance High School Internship Program you must be rising seniors at a Chicago high school.",
         cost: ["The Urban Alliance High School Internship Program is a free activity", false, 0, "unknown"],
         tags: ["Business", "Government/Politics", "Leadership/Management", "Internships"],
-        id: 1004,
+        id: 1005,
     },
     {
         title: "Summer High School Research Internship",
@@ -25814,7 +25814,7 @@ const list = [
             "To participate in the Summer High School Research Internship you must:\n- Be currently completing their junior or senior year of high school\n- Be 16 years of age by the start of the program",
         cost: ["Summer High School Research Internship is a free activity", false, 0, "unknown"],
         tags: ["Science", "Education", "Medicine"],
-        id: 1005,
+        id: 1006,
     },
     {
         title: "Job Shadow Program",
@@ -25838,7 +25838,7 @@ const list = [
             "To participate in the Job Shadow Program you must:\n\nContact LES Human Resources at LESCareers@les.com or 402.473.3396.\nSchedule a date and time for their job shadow with LES.\nComplete the required liability form.",
         cost: ["Job Shadow Program is a free activity", false, 0, "unknown"],
         tags: ["Engineering", "Business", "Science", "Computer Science"],
-        id: 1006,
+        id: 1007,
     },
     {
         title: "High School Intern",
@@ -25863,7 +25863,7 @@ const list = [
             "To participate in the High School Intern you must:\n- Be currently enrolled in a High School curriculum or GED/HiSET education program\n- Be a High School Graduate or have successfully completed GED or HiSET within the last two (2) years",
         cost: ["High School Intern is a free activity", false, 0, "unknown"],
         tags: ["Business"],
-        id: 1007,
+        id: 1008,
     },
     {
         title: "Farrell Fellows Summer Internship",
@@ -25886,7 +25886,7 @@ const list = [
         requirements: "To participate in the Farrell Fellows Summer Internship you must be between the ages of 16 and 22.",
         cost: ["Farrell Fellows Summer Internship is a free activity", false, 0, "unknown"],
         tags: ["Museum", "Education", "History", "Art/Design", "Leadership/Management"],
-        id: 1008,
+        id: 1009,
     },
     {
         title: "Summer Lifeguard",
@@ -25910,7 +25910,7 @@ const list = [
             "To participate in the Summer Lifeguard you must:\n- Be 16 years of age or older\n- Hold a current Red Cross Lifeguard Training Certificate, or equivalent\n- Hold a current American Red Cross CPR for the Professional Rescuer certification, or equivalent\n- Hold a current American Red Cross Standard First Aid certification, or equivalent",
         cost: ["Summer Lifeguard is a free activity", false, 0, "unknown"],
         tags: ["Health Sciences", "Emergency Response"],
-        id: 1009,
+        id: 1010,
     },
     {
         title: "Summer Internship Program",
@@ -25934,7 +25934,7 @@ const list = [
             "To participate in the Summer Internship Program you must:\n- Reside in the Monterey Bay Area\n- Be enrolled in High School",
         cost: ["Summer Internship Program is a free activity", false, 0, "unknown"],
         tags: ["Science", "Astronomy", "STEM"],
-        id: 1010,
+        id: 1011,
     },
     {
         title: "High School Interns (Summer)",
@@ -25958,7 +25958,7 @@ const list = [
         requirements: "To participate in the High School Interns (Summer) you must be enrolled in high school.",
         cost: ["High School Interns (Summer) is a free activity", false, 0, "unknown"],
         tags: ["Environmental Science", "Biology"],
-        id: 1011,
+        id: 1012,
     },
     {
         title: "Thurgood Marshall Summer Law Internship Program",
@@ -25982,7 +25982,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Thurgood Marshall Summer Law Internship Program is a free activity", false, 0, "unknown"],
         tags: ["Law", "Diversity and Inclusion"],
-        id: 1012,
+        id: 1013,
     },
     {
         title: "Teen Jobs",
@@ -26005,7 +26005,7 @@ const list = [
         requirements: "To participate in the Teen Jobs you must be 16 years of age or older.",
         cost: ["Teen Jobs is a free activity", false, 0, "unknown"],
         tags: ["Youth Employment", "Customer Service"],
-        id: 1013,
+        id: 1014,
     },
     {
         title: "Mary Miller Summer Program",
@@ -26029,7 +26029,7 @@ const list = [
             "To participate in the Mary Miller Summer Program you must:\n\n- Be an active and registered high school junior or senior as of the 2023-2024 school year.\n- Uphold steadfast principles and strong moral character.\n- Demonstrate an excellent work ethic, positive attitude, and willingness to learn.\n- Possess Microsoft Office knowledge (i.e., WORD, EXCEL, PowerPoint) and technical aptitude to learn new applications quickly.\n- Manage multiple assignments simultaneously, efficiently, and effectively.\n- Exhibit strategic and creative thinking, as well as distinguished written and verbal communications skills.\n- Possess unrestricted work authorization and not require future sponsorship.",
         cost: ["Mary Miller Summer Program is a free activity", false, 0, "unknown"],
         tags: ["Business and Entrepreneurship", "Leadership/Management", "STEM", "Social Sciences and Humanities"],
-        id: 1014,
+        id: 1015,
     },
     {
         title: "Roswell Park\u2019s Summer Cancer Research Experience Program",
@@ -26058,7 +26058,7 @@ const list = [
             "unknown",
         ],
         tags: ["Medicine", "Science", "Education"],
-        id: 1015,
+        id: 1016,
     },
     {
         title: "Junior Volunteer",
@@ -26082,7 +26082,7 @@ const list = [
             "To participate in the Junior Volunteer you must:\n- Provide MMR vaccine (measles/mumps/rubella) documentation or titer\n- Provide Varicella vaccine (chickenpox) documentation or titer\n- Provide Pertussis vaccine (Tdap) documentation\n- Provide COVID vaccination documentation or receive vaccine from Sharp HealthCare\n- Provide Influenza vaccination documentation, sign declination, or receive vaccine annually from Sharp HealthCare\n- Provide TB testing: QFT blood draw administered by Sharp HealthCare or provide documentation of QFT within 90 days of scheduled appointment",
         cost: ["Junior Volunteer costs money to enter", true, "unknown", "unknown"],
         tags: ["Medicine", "Volunteer Work/Community Service"],
-        id: 1016,
+        id: 1017,
     },
     {
         title: "Unity Gardens Internship",
@@ -26105,7 +26105,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Unity Gardens Internship is a free activity", false, 0, "unknown"],
         tags: ["Environmental Science", "Sustainability"],
-        id: 1017,
+        id: 1018,
     },
     {
         title: "Teen Internship",
@@ -26129,7 +26129,7 @@ const list = [
             "To participate in the Teen Internship you must be at least 14 years old by the start of the internship.",
         cost: ["Teen Internship is a free activity", false, 0, "unknown"],
         tags: ["Education", "Youth Development", "Community Involvement"],
-        id: 1018,
+        id: 1019,
     },
     {
         title: "Museum of Science and Industry Teen Program",
@@ -26152,7 +26152,7 @@ const list = [
         requirements: "To participate in the Museum of Science and Industry Teen Program, you must be high school students.",
         cost: ["Museum of Science and Industry Teen Program is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Education", "Science", "Engineering", "Public Speaking"],
-        id: 1019,
+        id: 1020,
     },
     {
         title: "Coastal Classroom",
@@ -26176,7 +26176,7 @@ const list = [
             "To participate in the Coastal Classroom you must:\n- Be enrolled in High School\n- Be at least 16 years old or older (and will be 16 by July 1, 2023)\n- Demonstrate knowledge of coastal ecology\n- Have an interest in working with upper elementary and middle school-aged kids\n- Be able to commit to attending the summer training and internship work schedule",
         cost: ["Coastal Classroom is a free activity", false, 0, "unknown"],
         tags: ["Environmental Science", "Environmental Activism"],
-        id: 1020,
+        id: 1021,
     },
     {
         title: "Job Trainings & Internships",
@@ -26200,7 +26200,7 @@ const list = [
             "To participate in the Job Trainings & Internships you must:\n- Attend public high school in the Santa Barbara County\n- Be 15 years or older",
         cost: ["Job Trainings & Internships is a free activity", false, 0, "unknown"],
         tags: ["Engineering", "Medicine", "Government", "Education", "Architecture", "Business"],
-        id: 1021,
+        id: 1022,
     },
     {
         title: "City College College Now STEM Research Academy",
@@ -26224,7 +26224,7 @@ const list = [
             "To participate in the City College College Now STEM Research Academy you must:\n- Be a New York City Public High School 10th or 11th-grader\n- Have received a 75 or above on the English Language Arts (ELA) Regents OR 480+ on SAT Verbal or PSAT Critical Reading\n- Have an overall HS average of at least 80\n- Have passed the following Regents exams with a grade of 66 or better:\n    - Algebra\n    - Geometry\n    - Living Environment\n    - Earth Science\n    - Global Studies",
         cost: ["City College College Now STEM Research Academy is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Science", "Research", "Education"],
-        id: 1022,
+        id: 1023,
     },
     {
         title: "Page Program",
@@ -26247,7 +26247,7 @@ const list = [
         requirements: "To participate in the Page Program you must be high school juniors or seniors.",
         cost: ["Page Program is a free activity", false, 0, "unknown"],
         tags: ["Government/Politics"],
-        id: 1023,
+        id: 1024,
     },
     {
         title: "BDL Debate Camp",
@@ -26270,7 +26270,7 @@ const list = [
         requirements: "Unknown",
         cost: ["BDL Debate Camp is a free activity", false, 0, "unknown"],
         tags: ["Debate", "Education", "Leadership/Management", "Mentoring"],
-        id: 1024,
+        id: 1025,
     },
     {
         title: "Los Angeles Medical Center Volunteer Program",
@@ -26295,7 +26295,7 @@ const list = [
             "Requirements: To participate in the Los Angeles Medical Center Volunteer Program you must:\n- Commit to a minimum of 200 hours over a period of 1 year\n- Communicate well in English\n- Be fully vaccinated against COVID-19, including boosters\n- Pass a background check\n- Complete an interview\n- Submit applications outside of blackout months (July and December)",
         cost: ["Los Angeles Medical Center Volunteer Program is a free activity", false, 0, "unknown"],
         tags: ["Medicine", "Health Sciences"],
-        id: 1025,
+        id: 1026,
     },
     {
         title: "Chicago EYES on Cancer Program",
@@ -26320,7 +26320,7 @@ const list = [
             "To participate in the Chicago EYES on Cancer Program you must:\n- Be a high school sophomore, junior, or senior at the time of application.\n- Be at least 16 years of age at the start of the program.",
         cost: ["Chicago EYES on Cancer Program is a free activity", false, 0, "unknown"],
         tags: ["Biology", "Medicine", "STEM", "Research"],
-        id: 1026,
+        id: 1027,
     },
     {
         title: "VALOR JROTC",
@@ -26344,7 +26344,7 @@ const list = [
             "To participate in the VALOR JROTC you must:\n- Be a Military Veteran or JROTC High School Graduate\n- Provide proof of identity and eligibility to work in the United States",
         cost: ["VALOR JROTC is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Engineering", "Physics", "Leadership/Management"],
-        id: 1027,
+        id: 1028,
     },
     {
         title: "Future Speakers Summer Session 2023",
@@ -26368,7 +26368,7 @@ const list = [
             "To participate in the Future Speakers Summer Session 2023 you must:\n- Be in Grades 5-9\n- Have an interest in speech and debate or desire to enhance their public speaking skills",
         cost: ["Future Speakers Summer Session 2023 is a free activity", false, 0, "unknown"],
         tags: ["Public Speaking", "Education", "Law/Advocacy"],
-        id: 1028,
+        id: 1029,
     },
     {
         title: "WBA Experiential Learning Opportunity",
@@ -26391,7 +26391,7 @@ const list = [
         requirements: "To participate in the WBA Experiential Learning Opportunity you must be high school or college age.",
         cost: ["WBA Experiential Learning Opportunity is a free activity", false, 0, "unknown"],
         tags: ["Sports", "Business", "Marketing/Advertising", "Mentoring"],
-        id: 1029,
+        id: 1030,
     },
     {
         title: "Teen Council",
@@ -26415,7 +26415,7 @@ const list = [
             "To participate in the Teen Council you must:\n- Be between the ages of 15 and 18\n- Reside in Bexar County",
         cost: ["Teen Council is a free activity", false, 0, "unknown"],
         tags: ["Art/Design", "Leadership/Management", "Community Involvement"],
-        id: 1030,
+        id: 1031,
     },
     {
         title: "Mayor\u2019s Office Internship Program",
@@ -26439,7 +26439,7 @@ const list = [
             "To participate in the Mayor\u2019s Office Internship Program you must:\n\n- Be 16 years of age or older.\n- Have current working papers/employment certification at the time of application.\n- Be enrolled in high school or accepted to an undergraduate degree program.",
         cost: ["Mayor\u2019s Office Internship Program is a free activity", false, 0, "unknown"],
         tags: ["Government/Politics", "Leadership/Management"],
-        id: 1031,
+        id: 1032,
     },
     {
         title: "Internship Program ",
@@ -26462,7 +26462,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Internship Program is a free activity", false, 0, "unknown"],
         tags: ["Business", "Engineering", "Leadership/Management"],
-        id: 1032,
+        id: 1033,
     },
     {
         title: " Lamont-Doherty Earth Observatory Secondary School Field Research Program",
@@ -26491,7 +26491,7 @@ const list = [
             "unknown",
         ],
         tags: ["Environmental Science", "STEM"],
-        id: 1033,
+        id: 1034,
     },
     {
         title: "High School Internship",
@@ -26515,7 +26515,7 @@ const list = [
             "To participate in the High School Internship you must:\n- Be at least 16 years old\n- Be able to commit to a recurring weekday schedule (between 8am - 6pm) over the course of a six-month internship\n- Complete a minimum of 8 hours of service each month",
         cost: ["High School Internship is a free activity", false, 0, "unknown"],
         tags: ["Nonprofit", "Veterinary Science"],
-        id: 1034,
+        id: 1035,
     },
     {
         title: "High School Explainer Program",
@@ -26539,7 +26539,7 @@ const list = [
             "To participate in the High School Explainer Program you must:\n- Be high school aged students (including students in traditional and alternate post-high school programs)\n- Obtain a valid work permit\n- Attend all basic training dates",
         cost: ["High School Explainer Program is a free activity", false, 0, "unknown"],
         tags: ["Science", "Education", "Communication", "Interpersonal Skills"],
-        id: 1035,
+        id: 1036,
     },
     {
         title: "Pre-Med Summer Scholar Program",
@@ -26564,7 +26564,7 @@ const list = [
             "To participate in the Pre-Med Summer Scholar Program you must:\n- Be at least 16 years old\n- Not yet be attending college",
         cost: ["Pre-Med Summer Scholar Program costs money to enter", true, "unknown", "unknown"],
         tags: ["Medicine", "STEM"],
-        id: 1036,
+        id: 1037,
     },
     {
         title: "Get Inspired Houston (GIH) Internship",
@@ -26587,7 +26587,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Get Inspired Houston (GIH) Internship is a free activity", false, 0, "unknown"],
         tags: ["Nonprofit", "Social Science", "Leadership/Management", "Diversity and Inclusion"],
-        id: 1037,
+        id: 1038,
     },
     {
         title: "High School Summer Internship Program (HS-SIP)",
@@ -26611,7 +26611,7 @@ const list = [
             "To participate in the High School Summer Internship Program (HS-SIP) you must:\n\n- Be seventeen (17) years of age or older by June 15, 2023.\n- Be high school juniors or seniors at the time of application.\n- Be U.S. citizens or permanent residents.\n- If under 18 years of age on June 15, 2023, live within 40 miles of the NIH campus on which they will intern.\n- Pass a Federal background check using Standard Form-85.",
         cost: ["High School Summer Internship Program (HS-SIP) is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Medicine"],
-        id: 1038,
+        id: 1039,
     },
     {
         title: "Internship Program ",
@@ -26634,7 +26634,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Internship Program is a free activity", false, 0, "unknown"],
         tags: ["Social Science", "Health Sciences", "Nonprofit", "Law/Advocacy"],
-        id: 1039,
+        id: 1040,
     },
     {
         title: "Malott Family Zoo Intern Program",
@@ -26658,7 +26658,7 @@ const list = [
             "To participate in the Malott Family Zoo Intern Program, you must:\n\n- Reside in the City of Chicago\n- Be entering grades 10-12 or their freshman year of college in fall 2023\n- Be 15-18 years old by June 26, 2023\n- Be legally authorized to work in the United States and provide proof of identity and work authorization\n- Be available for all training days during the first two weeks of the program\n- Obtain a student work permit if 15 years old\n- Request supervisor approval for planned absences outside of training; extended absences may disqualify applicants",
         cost: ["Malott Family Zoo Intern Program is a free activity", false, 0, "unknown"],
         tags: ["Environmental Science", "Biology", "Education"],
-        id: 1040,
+        id: 1041,
     },
     {
         title: "Mikva Summer Fellowship",
@@ -26682,7 +26682,7 @@ const list = [
             "To participate in the Mikva Summer Fellowship you must:\n- Be between 17-20 years of age\n- Reside in Chicago or Cook County\n- Meet IDHS criteria for employment",
         cost: ["Mikva Summer Fellowship is a free activity", false, 0, "unknown"],
         tags: ["Government/Politics", "Leadership/Management"],
-        id: 1041,
+        id: 1042,
     },
     {
         title: "Technology Support \u2013 Student Interns",
@@ -26705,7 +26705,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Technology Support \u2013 Student Interns is a free activity", false, 0, "unknown"],
         tags: ["Computer Science", "Engineering"],
-        id: 1042,
+        id: 1043,
     },
     {
         title: "LLRISE Workshop",
@@ -26729,7 +26729,7 @@ const list = [
             "Requirements: To participate in the LLRISE Workshop you must:\n- Be a U.S. citizen or permanent resident\n- Be a junior in high school\n- Apply online and upload supporting materials (transcripts, test scores, essays)\n- Have math and science teachers complete recommendation forms",
         cost: ["LLRISE Workshop is a free activity", false, 0, "unknown"],
         tags: ["Engineering", "STEM", "Robotics"],
-        id: 1043,
+        id: 1044,
     },
     {
         title: "Vocational Internship Program",
@@ -26753,7 +26753,7 @@ const list = [
             "Requirements: To participate in the Vocational Internship Program you must:\n- Be a rising senior attending a vocational or technical high school in Massachusetts\n- Be approved to participate in a co-op program by their school's administration\n- Not be in poor standing with their school\n- Not be current full- or part-time employees of the potential host employer\n- Not be family members of employers or owners of the host employer\n- Have their Co-op Coordinator submit an online application on their behalf\n- Have a profile in the student database for employers to confirm their eligibility with MassCEC for the program",
         cost: ["Vocational Internship Program is a free activity", false, 0, "unknown"],
         tags: ["Engineering", "Environmental Science", "Science", "Business", "Economics"],
-        id: 1044,
+        id: 1045,
     },
     {
         title: "8-Week Summer Internship for Rising Seniors",
@@ -26777,7 +26777,7 @@ const list = [
             "To participate in the 8-Week Summer Internship for Rising Seniors you must be rising high school seniors.",
         cost: ["8-Week Summer Internship for Rising Seniors is a free activity", false, 0, "unknown"],
         tags: ["Engineering", "Science", "Environment ", "Computer Science", "Medicine", "STEM"],
-        id: 1045,
+        id: 1046,
     },
     {
         title: "AMRI High School Summer Research Program",
@@ -26800,7 +26800,7 @@ const list = [
         requirements: "To participate in the AMRI High School Summer Research Program, you must be enrolled in high school.",
         cost: ["AMRI High School Summer Research Program is a free activity", false, 0, "unknown"],
         tags: ["Physics", "Chemistry", "Engineering", "STEM"],
-        id: 1046,
+        id: 1047,
     },
     {
         title: "Executive and General Positions",
@@ -26824,7 +26824,7 @@ const list = [
             "To participate in the Executive and General Positions you must:\n- Possess a passion for biology, medicine, the sciences, and/or STEM\n- Uphold the mission statement of the organization\n- Be open to applying for general department or medical committee positions",
         cost: ["Executive and General Positions is a free activity", false, 0, "unknown"],
         tags: ["Medicine", "STEM", "Leadership/Management"],
-        id: 1047,
+        id: 1048,
     },
     {
         title: "SeA Bilingual STEM Camp",
@@ -26848,7 +26848,7 @@ const list = [
             "To participate in the SeA Bilingual STEM Camp you must:\n- Be English-learning/Spanish-English bilingual students in grades 10 to 12\n- Have an interest in STEM and career opportunities at Berkeley Lab\n- Be available to attend the program on the specified dates and times\n- Follow all COVID-19 protocols, including proof of vaccination and/or testing",
         cost: ["SeA Bilingual STEM Camp is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Science", "Engineering", "Computer Science", "Mathematics"],
-        id: 1048,
+        id: 1049,
     },
     {
         title: "Young Scientist Program (YSP) Summer Focus",
@@ -26872,7 +26872,7 @@ const list = [
             "To participate in the Young Scientist Program (YSP) Summer Focus, you must:\n\n- Be rising juniors or seniors\n- Reside in the St. Louis metropolitan area\n- Maintain a minimum GPA of 3.0 on a 4.0 scale\n- Have completed at least one year of biology or chemistry\n- Demonstrate interest in pursuing a STEM career\n- Commit to attending and actively participating in all program activities\n- Submit an application form, academic transcripts, two letters of recommendation, and a personal statement outlining their interests, goals, and qualifications",
         cost: ["Young Scientist Program (YSP) Summer Focus is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Science", "Biology", "Chemistry", "Physics", "Mentoring", "Tutoring"],
-        id: 1049,
+        id: 1050,
     },
     {
         title: "Riverside Teen Corps Horticulture Internship Program",
@@ -26895,7 +26895,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Riverside Teen Corps Horticulture Internship Program is a free activity", false, 0, "unknown"],
         tags: ["Environmental Science", "Agriculture"],
-        id: 1050,
+        id: 1051,
     },
     {
         title: "Student Internship",
@@ -26919,7 +26919,7 @@ const list = [
             "To participate in the Student Internship you must:\n- Be a current resident of or attend school in Bergen County\n- Be enrolled in a high school or college internship program\n- Contact their high school or college internship coordinator to ensure that all school requirements will be met\n- Call the Community Outreach Unit at 201-336-3540 to ensure that applications are being accepted for the semester in which they are interested prior to submitting an application",
         cost: ["Student Internship is a free activity", false, 0, "unknown"],
         tags: ["Law Enforcement", "Internship", "Government/Politics"],
-        id: 1051,
+        id: 1052,
     },
     {
         title: "High School Apprenticeship Program",
@@ -26942,7 +26942,7 @@ const list = [
         requirements: "Unknown",
         cost: ["High School Apprenticeship Program is a free activity", false, 0, "unknown"],
         tags: ["Museum", "History", "Art/Design", "Education"],
-        id: 1052,
+        id: 1053,
     },
     {
         title: "KU Medical Center Educational Experience (KEE)",
@@ -26967,7 +26967,7 @@ const list = [
             "To participate in the KU Medical Center Educational Experience (KEE) you must:\n- Be a U.S. citizen, permanent resident, or DACA recipient age 16 or older.\n- Obtain parental or guardian permission if under 18 years of age.\n- Submit to a background check if age 18 or older.",
         cost: ["KU Medical Center Educational Experience (KEE) is a free activity", false, 0, "unknown"],
         tags: ["Medicine", "STEM", "Biology"],
-        id: 1053,
+        id: 1054,
     },
     {
         title: "Public Policy Research Intern",
@@ -26990,7 +26990,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Public Policy Research Intern is a free activity", false, 0, "unknown"],
         tags: ["Nonprofit", "Government/Politics", "Social Science"],
-        id: 1054,
+        id: 1055,
     },
     {
         title: "Los Angeles County Office of Education's Career Technical Education",
@@ -27019,7 +27019,7 @@ const list = [
             "unknown",
         ],
         tags: ["STEM", "Education"],
-        id: 1055,
+        id: 1056,
     },
     {
         title: "THE ACT PROGRAM AT SLO REP TEEN INTERNSHIP",
@@ -27043,7 +27043,7 @@ const list = [
             "To participate in the THE ACT PROGRAM AT SLO REP TEEN INTERNSHIP you must:\n- Be available to work full days (8:45am-4:15pm) or half days (mornings 8:45am-12:15pm or afternoons 12:45-4:15pm)\n- Have experience working in theatre and with kids\n- Submit a general availability form\n- Complete a short and informal video interview",
         cost: ["THE ACT PROGRAM AT SLO REP TEEN INTERNSHIP is a free activity", false, 0, "unknown"],
         tags: ["Performing Arts", "Theatre/Drama"],
-        id: 1056,
+        id: 1057,
     },
     {
         title: "High School Honors Science, Math and Engineering Program (HSHSP)",
@@ -27072,7 +27072,7 @@ const list = [
             "unknown",
         ],
         tags: ["STEM", "Science", "Engineering", "Mathematics"],
-        id: 1057,
+        id: 1058,
     },
     {
         title: "Seasonal Positions & Front Office Openings ",
@@ -27096,7 +27096,7 @@ const list = [
             "To participate in the Seasonal Positions & Front Office Openings you must meet the following requirements:\n- Requirements vary by position",
         cost: ["Seasonal Positions & Front Office Openings is a free activity", false, 0, "unknown"],
         tags: ["Sports", "Business"],
-        id: 1058,
+        id: 1059,
     },
     {
         title: "York College Now STEM Research Academy",
@@ -27120,7 +27120,7 @@ const list = [
             "To participate in the York College Now STEM Research Academy you must:\n- Be a NYC public high school student in good standing\n- Have an 80+ on Math Regents and 75+ on the Living Environment and ELA Regents\n- Be a high school junior\n- Be recommended by a high school administrator or teacher",
         cost: ["York College Now STEM Research Academy is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Science", "Biology", "Chemistry", "Research"],
-        id: 1059,
+        id: 1060,
     },
     {
         title: "STEM Academy at Oak Ridge",
@@ -27144,7 +27144,7 @@ const list = [
             "To participate in the STEM Academy at Oak Ridge you must:\n- Be middle or high school students or teachers from the Appalachian region with an interest in STEM-related fields.\n- Be able to commit to the two-week summer program (high school students) or one-week summer program (middle school students).\n- Participate in hands-on learning experiences involving scientists from Oak Ridge National Laboratory (ORNL) and other STEM experts in the region.\n- Work on inquiry-based, applied projects in science, math, and research-related computer technology.\n- Promote teamwork, explore college opportunities, and cultivate cultural richness and historical importance of the Appalachian region.\n- Participate in group presentations where students and teachers discuss their projects and research findings.",
         cost: ["STEM Academy at Oak Ridge is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Education", "College Preparation", "Research"],
-        id: 1060,
+        id: 1061,
     },
     {
         title: "Junior Curators",
@@ -27168,7 +27168,7 @@ const list = [
             "To participate in the Junior Curators you must:\n- Be in grades 9-12 during the 2023-2024 school year.\n- Demonstrate an intense interest in conservation, animal care, and field biology.\n- Commit to attending one required monthly meeting with Living Collections staff, two required monthly group meetings with guest scientists and researchers, optional trips, field experiences, and service projects across North Carolina and beyond at an additional fee, and an annual group retreat in August and graduation event in May.\n- Pay an annual program fee of $75, which covers equipment, snacks for meetings, and a Junior Curator t-shirt.\n- Uphold the required volunteer time commitment and attend all meetings and volunteer shifts.",
         cost: ["Junior Curators costs money to enter", true, "unknown", "unknown"],
         tags: ["Environmental Science", "Biology", "Museum"],
-        id: 1061,
+        id: 1062,
     },
     {
         title: "Summer High School Institute",
@@ -27192,7 +27192,7 @@ const list = [
             "To participate in the Summer High School Institute you must:\n- Be in the 10th grade at a public or private high school in Wyoming or homeschooled\n- Be current residents of Wyoming\n- Intend to return to a Wyoming school for the next term\n- Be committed to participate fully and remain for the entire three weeks of the program",
         cost: ["Summer High School Institute costs money to enter", true, "unknown", "unknown"],
         tags: ["Education", "Personal Growth", "Leadership/Management"],
-        id: 1062,
+        id: 1063,
     },
     {
         title: "Wayne State Discovery to Cure High School Internship Program",
@@ -27222,7 +27222,7 @@ const list = [
             "unknown",
         ],
         tags: ["Biology", "Medicine", "STEM"],
-        id: 1063,
+        id: 1064,
     },
     {
         title: "High School Intern Program",
@@ -27246,7 +27246,7 @@ const list = [
             "To participate in the High School Intern Program you must:\n- Be a current high school junior\n- Be enrolled in SFUSD or an SF charter school or be a College Track SF participant\n- Come from a background underrepresented in the sciences",
         cost: ["High School Intern Program is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Medicine"],
-        id: 1064,
+        id: 1065,
     },
     {
         title: "Summer Challenge",
@@ -27270,7 +27270,7 @@ const list = [
             "To participate in the Summer Challenge you must be rising high school sophomores, juniors, or seniors.",
         cost: ["Summer Challenge costs money to enter", true, "unknown", "unknown"],
         tags: ["Computer Science", "Medicine", "Science", "Writing"],
-        id: 1065,
+        id: 1066,
     },
     {
         title: "Youth Community Groups",
@@ -27295,7 +27295,7 @@ const list = [
             "To participate in the Youth Community Groups you must be high school youth between the ages of 14-18.",
         cost: ["Youth Community Groups is a free activity", false, 0, "unknown"],
         tags: ["Leadership/Management", "Community Service", "Youth Development"],
-        id: 1066,
+        id: 1067,
     },
     {
         title: "Youth Arts Enterprise",
@@ -27319,7 +27319,7 @@ const list = [
             "To participate in the Youth Arts Enterprise you must:\n- Be at least 14 years old\n- Attend a Boston public school or reside in Boston\n- Attend program hours:\n    - Tuesday, Wednesday, and Thursday from 3:00 p.m. - 6:00 p.m. during the school year\n    - Monday-Friday from 12:00 noon - 5:30 p.m. during summer\n- Complete an unpaid apprenticeship period of 36 hours\n- Attend an AFH Open House tour\n- Fill out an online job application\n- Complete an Orientation & Interview\n- Successfully complete their apprenticeship",
         cost: ["Youth Arts Enterprise is a free activity", false, 0, "unknown"],
         tags: ["Art/Design", "Graphic Design", "Business"],
-        id: 1067,
+        id: 1068,
     },
     {
         title: "High School Intern Program Research",
@@ -27343,7 +27343,7 @@ const list = [
             "To participate in the High School Intern Program Research you must:\n- Want to participate in scientific research\n- Be a junior or senior (at time of application)\n- Have advanced to senior status or graduated from high school by the start of the program\n- Have a minimum GPA of 3.0",
         cost: ["High School Intern Program Research is a free activity", false, 0, "unknown"],
         tags: ["Physics", "Engineering", "Computer Science", "Business"],
-        id: 1068,
+        id: 1069,
     },
     {
         title: "Explorers Teen Program",
@@ -27367,7 +27367,7 @@ const list = [
             "To participate in the Explorers Teen Program you must be rising freshmen, sophomores, or juniors within the Newark area.",
         cost: ["Explorers Teen Program is a free activity", false, 0, "unknown"],
         tags: ["Education", "College and Career Readiness", "Life Skills", "Museum Education"],
-        id: 1069,
+        id: 1070,
     },
     {
         title: "Louis Stokes Internship Program",
@@ -27392,7 +27392,7 @@ const list = [
             "To participate in the Louis Stokes Internship Program you must:\n\n- Have completed the 8th grade\n- Be enrolled in a high school",
         cost: ["Louis Stokes Internship Program is a free activity", false, 0, "unknown"],
         tags: ["Medicine", "STEM"],
-        id: 1070,
+        id: 1071,
     },
     {
         title: " M.I.N.D.S. (Medical Internship Navigating Diversity and Science)",
@@ -27416,7 +27416,7 @@ const list = [
             "To participate in the M.I.N.D.S. you must:\n- Begin their junior or senior year in September 2023\n- Identify as African American, Latinos/Hispanic American, and Native American (American Indian, Alaska Native, or Native Hawaiian), first generation, OR financially disadvantaged\n- Complete an application\n- Submit an unofficial transcript with a cumulative GPA of 3.0 or higher",
         cost: ["M.I.N.D.S. (Medical Internship Navigating Diversity and Science) is a free activity", false, 0, "unknown"],
         tags: ["Medicine", "Health Sciences", "STEM"],
-        id: 1071,
+        id: 1072,
     },
     {
         title: "Social Justice Internship",
@@ -27440,7 +27440,7 @@ const list = [
             "To participate in the Social Justice Internship you must:\n- Be high school students entering grades 11 or 12\n- Be selected sophomores in or around Boston\n- Commit to 5 hours per week for 12 weeks\n- Demonstrate a commitment to social change\n- Express interest in gaining work experience in a nonprofit organization focused on dismantling oppression and promoting liberation\n- Participate in conferences, workshops, and activities designed to educate and train them as effective change-makers\n- Engage with local and national leaders to foster learning, growth, and connections",
         cost: ["Social Justice Internship costs money to enter", true, "unknown", "unknown"],
         tags: ["Social Science", "Government/Politics", "Law/Advocacy"],
-        id: 1072,
+        id: 1073,
     },
     {
         title: "Upward Bound Math Science Summer Program",
@@ -27464,7 +27464,7 @@ const list = [
             "To participate in the Upward Bound Math Science Summer Program you must:\n\n- Meet certain federal guidelines such as income and first-generation verification\n- Attend high school in the following locations:\n\nAlbany County\nFremont County\nLaramie County\nNatrona & Converse County\nLovell, WY",
         cost: ["Upward Bound Math Science Summer Program is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Mathematics", "Education"],
-        id: 1073,
+        id: 1074,
     },
     {
         title: "High School Health Careers Program (HSHCP)",
@@ -27488,7 +27488,7 @@ const list = [
             "To participate in the High School Health Careers Program (HSHCP) you must:\n\n- Be a Massachusetts resident\n- Be a sophomore or junior in a Massachusetts high school\n- Be from a group that is under-represented in BBHP and/or have a disadvantaged background",
         cost: ["High School Health Careers Program (HSHCP) is a free activity", false, 0, "unknown"],
         tags: ["Health Sciences", "STEM", "Medicine"],
-        id: 1074,
+        id: 1075,
     },
     {
         title: "High School Intern ",
@@ -27512,7 +27512,7 @@ const list = [
             "To participate in the High School Intern you must:\n- Have a presence on at least one of the following social media platforms: TikTok, Instagram, Facebook, or Twitter\n- Have experience in at least one of the following areas: Grant or Creative Writing, Discord Community Management, Graphic Design, or Research & Data Entry",
         cost: ["High School Intern is a free activity", false, 0, "unknown"],
         tags: ["Artificial Intelligence (AI)", "Education", "Business"],
-        id: 1075,
+        id: 1076,
     },
     {
         title: "Health Sciences Enrichment Institute",
@@ -27537,7 +27537,7 @@ const list = [
             "To participate in the Health Sciences Enrichment Institute you must:\n\n- Be accepted to or currently enrolled as a freshman or sophomore in an institution of higher education.\n- Maintain a minimum GPA of 3.0 on a 4.0 scale at the college level or 3.0 at the high school level.\n- Complete at least one science course, one math course, and one English course at the college level or two science and two math courses at the high school level.\n- Demonstrate a commitment to diversity.",
         cost: ["Health Sciences Enrichment Institute is a free activity", false, 0, "unknown"],
         tags: ["Biology", "Anatomy", "Microbiology", "Research", "Medicine"],
-        id: 1076,
+        id: 1077,
     },
     {
         title: "Observers/Job Shadows",
@@ -27560,7 +27560,7 @@ const list = [
         requirements: "To participate in the Observers/Job Shadows you must be 18 years of age or older.",
         cost: ["Observers/Job Shadows is a free activity", false, 0, "unknown"],
         tags: ["Medicine", "Health Sciences", "STEM"],
-        id: 1077,
+        id: 1078,
     },
     {
         title: "Student Leader Program",
@@ -27585,7 +27585,7 @@ const list = [
             "To participate in the Student Leader Program you must:\n\n- Be a junior or senior in high school\n- Reside in an eligible market\n- Participate in an 8-week paid internship at a local nonprofit/charitable organization (35 hours per week)\n- Be legally authorized to work in the US without sponsorship through September 2023\n- Attend a week-long Student Leadership Summit in Washington, DC (July 17-24, 2023)\n- Maintain good academic standing",
         cost: ["Student Leader Program is a free activity", false, 0, "unknown"],
         tags: ["Leadership/Management", "Nonprofit"],
-        id: 1078,
+        id: 1079,
     },
     {
         title: "Education Curatorial Intern",
@@ -27609,7 +27609,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Education Curatorial Intern costs money to enter", true, "unknown", "unknown"],
         tags: ["Education", "College Admissions"],
-        id: 1079,
+        id: 1080,
     },
     {
         title: "Learning at the Bench (LAB) Jumpstart",
@@ -27633,7 +27633,7 @@ const list = [
             "To participate in the Learning at the Bench (LAB) Jumpstart you must:\n- Reside in New York City\n- Be 16 years old at the program's commencement\n- Demonstrate a genuine interest in scientific research\n- Commit to the program's duration, March through August",
         cost: ["Learning at the Bench (LAB) Jumpstart is a free activity", false, 0, "unknown"],
         tags: ["Science", "STEM"],
-        id: 1080,
+        id: 1081,
     },
     {
         title: "Work Study ND - High School Program",
@@ -27657,7 +27657,7 @@ const list = [
             "To participate in the Work Study ND - High School Program you must:\n\n- Be 16 years of age or older\n- Be present and punctual for work\n- Undergo pre-employment drug testing\n- Be high school students interested in diesel technology or parts/warehouse fields\n- Demonstrate a desire to pursue further education in these areas",
         cost: ["Work Study ND - High School Program is a free activity", false, 0, "unknown"],
         tags: ["Engineering", "STEM", "Agriculture"],
-        id: 1081,
+        id: 1082,
     },
     {
         title: "High School Internship",
@@ -27680,7 +27680,7 @@ const list = [
         requirements: "Unknown",
         cost: ["High School Internship is a free activity", false, 0, "unknown"],
         tags: ["Law", "Government"],
-        id: 1082,
+        id: 1083,
     },
     {
         title: "HighTech Bound",
@@ -27704,7 +27704,7 @@ const list = [
             "To participate in the HighTech Bound you must:\n- Be entering their senior year of high school\n- Meet the academic requirements set by the University of New Hampshire InterOperability Lab\n- Be highly motivated, academically outstanding, and demonstrate an interest in computer technology and networking\n- Have experience in computer science or engineering\n- Be able to work well in a team-oriented environment\n- Possess excellent problem-solving and communication skills",
         cost: ["HighTech Bound is a free activity", false, 0, "unknown"],
         tags: ["Computer Science", "STEM", "Mentoring"],
-        id: 1083,
+        id: 1084,
     },
     {
         title: "Congresswoman Anna Eshoo's Student Advisory Board",
@@ -27728,7 +27728,7 @@ const list = [
             "To participate in the Congresswoman Anna Eshoo's Student Advisory Board you must:\n- Be current high school freshmen, sophomores, juniors, or seniors\n- Reside or attend school in the 18th Congressional District\n- Be responsible, creative, enthusiastic, and dedicated",
         cost: ["Congresswoman Anna Eshoo's Student Advisory Board is a free activity", false, 0, "unknown"],
         tags: ["Government/Politics", "Law/Advocacy", "Education"],
-        id: 1084,
+        id: 1085,
     },
     {
         title: "Charleston Tours & Events Intern",
@@ -27751,7 +27751,7 @@ const list = [
         requirements: "To participate in the Charleston Tours & Events Intern you must be rising seniors.",
         cost: ["Charleston Tours & Events Intern is a free activity", false, 0, "unknown"],
         tags: ["Business and Entrepreneurship", "Marketing/Advertising", "History"],
-        id: 1085,
+        id: 1086,
     },
     {
         title: "High School Internships",
@@ -27775,7 +27775,7 @@ const list = [
             "Requirements: To participate in the High School Internships you must:\n- Be a high school senior\n- Have a GPA of 2.5 or higher\n- Follow the attendance rules and policies of the internship and business site\n- Be responsible for transportation to and from the training site\n- Complete the application process, including submitting a resume and recommendation from the school counselor\n- Interview with the internship program coordinator and a business or agency",
         cost: ["High School Internships costs money to enter", true, "unknown", "unknown"],
         tags: ["Business", "Medicine", "Education", "Career Exploration/Development"],
-        id: 1086,
+        id: 1087,
     },
     {
         title: " Office of Workforce Development Student Training Program",
@@ -27800,7 +27800,7 @@ const list = [
             "To participate in the Office of Workforce Development Student Training Program you must:\n- Have a 2.0 GPA and good school attendance record\n- Be a Boston resident\n- Be affiliated with one of the following high schools: Fenway High School, John D. O\u2019Bryant School of Mathematics & Science, Madison Park Technical Vocational High School, Sociedad Latina, or Youth Enrichment Services\n- Be a rising sophomore or higher\n- Be interested in clinical, research or health administration careers\n- Commit to participating in an all-day orientation, working 30 hours per week for 7 weeks, and taking mandatory weekly college and career readiness workshops and college tours during the summer\n- Be eligible for scholarship funding as a graduating senior\n- Work 8 to 15 hours per week from October to June, attend the summer program, and participate in twice-monthly college and career readiness workshops and field trips as an academic-year program participant",
         cost: ["Office of Workforce Development Student Training Program is a free activity", false, 0, "unknown"],
         tags: ["Healthcare", "Mentoring", "College Preparation", "Scholarship"],
-        id: 1087,
+        id: 1088,
     },
     {
         title: "Teen Advisory Board",
@@ -27823,7 +27823,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Teen Advisory Board is a free activity", false, 0, "unknown"],
         tags: ["Arts", "Museum", "Social Justice", "Diversity and Inclusion"],
-        id: 1088,
+        id: 1089,
     },
     {
         title: "Montana Models",
@@ -27847,7 +27847,7 @@ const list = [
             "To participate in the Montana Models you must:\n- Be students entering grades 7th to 12th in the fall 2022.\n- Form teams with an adult mentor.\n- Contact their 4-H County Agent or other potential adult leader.",
         cost: ["Montana Models is a free activity", false, 0, "unknown"],
         tags: ["Mathematics", "STEM"],
-        id: 1089,
+        id: 1090,
     },
     {
         title: "InterseXtions: Gender & Sexuality",
@@ -27871,7 +27871,7 @@ const list = [
             "To participate in the InterseXtions: Gender & Sexuality you must:\n- Be a NYC teen between the ages of 14-19\n- Identify as lesbian, gay, bisexual, trans*, two-spirit, nonbinary, gender nonconforming, questioning, queer, intersex, and/or asexual.",
         cost: ["InterseXtions: Gender & Sexuality is a free activity", false, 0, "unknown"],
         tags: ["Arts", "Law/Advocacy", "LGBTQ+ Advocacy", "Writing", "Museum"],
-        id: 1090,
+        id: 1091,
     },
     {
         title: "NDSU Temp Plant Pathology Summer Intern",
@@ -27896,7 +27896,7 @@ const list = [
             "To participate in the NDSU Temp Plant Pathology Summer Intern, you must:\n\n- Be a high school student\n- Be over the age of 16\n- Possess a valid driver's license or reliable transportation to work\n- Demonstrate a positive attitude and willingness to work hard\n- Express interest in agriculture, research, and outdoor work\n- Be available to work a full-time schedule during the summer",
         cost: ["NDSU Temp Plant Pathology Summer Intern is a free activity", false, 0, "unknown"],
         tags: ["Biology", "Agriculture", "Environmental Science"],
-        id: 1091,
+        id: 1092,
     },
     {
         title: "Academy/DPHA Internship",
@@ -27919,7 +27919,7 @@ const list = [
         requirements: "To participate in the Academy/DPHA Internship you must be students of an academic institution.",
         cost: ["Academy/DPHA Internship is a free activity", false, 0, "unknown"],
         tags: ["Public Health", "Medicine"],
-        id: 1092,
+        id: 1093,
     },
     {
         title: "Congressional District Internship",
@@ -27942,7 +27942,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Congressional District Internship is a free activity", false, 0, "unknown"],
         tags: ["Government/Politics", "Law"],
-        id: 1093,
+        id: 1094,
     },
     {
         title: "Internships",
@@ -27970,7 +27970,7 @@ const list = [
             "Government/Politics",
             "International Studies/Global Affairs",
         ],
-        id: 1094,
+        id: 1095,
     },
     {
         title: "Mining & Explosives Camp",
@@ -27994,7 +27994,7 @@ const list = [
             "To participate in the Mining & Explosives Camp you must:\n- Be current high school juniors or seniors for the 2022-2023 academic year\n- Complete an online registration\n- Provide a statement\n- Provide a teacher letter of recommendation\n- Submit all documents by March 30, 2023\n- Sign waivers\n- Notify Brittani Webb at Brittani.Webb@sdsmt.edu or 605-394-6144 in case of cancellation",
         cost: ["Mining & Explosives Camp is a free activity", false, 0, "unknown"],
         tags: ["Chemistry", "Engineering", "Physics"],
-        id: 1095,
+        id: 1096,
     },
     {
         title: "Eight Judicial District High School Internship Program",
@@ -28019,7 +28019,7 @@ const list = [
             "To participate in the Eight Judicial District High School Internship Program you must:\n\n- Submit a cover letter\n- Submit a resume\n- Provide proof of Covid-19 vaccination\n- Complete an application",
         cost: ["Eight Judicial District High School Internship Program is a free activity", false, 0, "unknown"],
         tags: ["Law", "Government/Politics"],
-        id: 1096,
+        id: 1097,
     },
     {
         title: "New York Bioforce",
@@ -28043,7 +28043,7 @@ const list = [
             "To participate in the New York Bioforce you must:\n- Attend a NYC public high school during the academic school year\n- Demonstrate economic or educational need based on the following criteria:\n- Student attends a NYC high school with a Free and Reduced Price Lunch (FRPL) rate of 50% or higher\n- Student qualifies for FRPL but attends a NYC high school with an FRPL rate below 50%\n- Preference will be given to current juniors and seniors due to the rigor and demands of the program.",
         cost: ["New York Bioforce is a free activity", false, 0, "unknown"],
         tags: ["Biology", "Medicine", "STEM", "Health Sciences"],
-        id: 1097,
+        id: 1098,
     },
     {
         title: "State Pre-College Enrichment Program (S-PREP)",
@@ -28068,7 +28068,7 @@ const list = [
             "To participate in the State Pre-College Enrichment Program (S-PREP), you must:\n\n- Be enrolled in Grades 7-12\n- Reside in New York State as a resident or permanent resident\n- Meet economic disadvantage criteria or identify as Black/African American, Hispanic/Latino, Alaskan Native, or American Indian\n- Demonstrate academic potential in math and science\n- Maintain an 80% grade average\n- Exhibit a strong interest in medicine or STEM\n- Commit to the program schedule\n- Conduct themselves professionally and respectfully",
         cost: ["State Pre-College Enrichment Program (S-PREP) is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Medicine", "Science", "Mathematics", "Health Sciences"],
-        id: 1098,
+        id: 1099,
     },
     {
         title: "Junior Summer Volunteer Program",
@@ -28092,7 +28092,7 @@ const list = [
             "To participate in the Junior Summer Volunteer Program you must be in high school and rising juniors or seniors.",
         cost: ["Junior Summer Volunteer Program is a free activity", false, 0, "unknown"],
         tags: ["Medicine", "Health Sciences"],
-        id: 1099,
+        id: 1100,
     },
     {
         title: "Henry Mayo Newhall Hospital Volunteer Program",
@@ -28116,7 +28116,7 @@ const list = [
             "To participate in the Henry Mayo Newhall Hospital Volunteer Program you must:\n- Be at least 15 years of age\n- Maintain a 3.0 GPA or higher",
         cost: ["Henry Mayo Newhall Hospital Volunteer Program is a free activity", false, 0, "unknown"],
         tags: ["Health Sciences", "Medicine"],
-        id: 1100,
+        id: 1101,
     },
     {
         title: "Environmental Education Internship  ",
@@ -28140,7 +28140,7 @@ const list = [
             "To participate in the Environmental Education Internship you must:\n- Demonstrate a strong interest in environmental education, marine science, animal husbandry, and working with children\n- Possess flexibility and the ability to work independently and collaboratively\n- Commit to working at least one day per week, between 2:00-6:00 pm, for six to ten weeks\n- Have reliable transportation\n- Be proficient in computer applications, including MS Word, Excel, and PowerPoint\n- Exhibit strong communication and phone skills\n- Possess analytical and organizational abilities\n- Thrive in a high-energy, fast-paced environment\n- Be at least 16 years of age\n- Undergo a background check if 18 years of age or older",
         cost: ["Environmental Education Internship is a free activity", false, 0, "unknown"],
         tags: ["Environmental Science", "Education"],
-        id: 1101,
+        id: 1102,
     },
     {
         title: "Pre-Baccalaureate Program",
@@ -28163,7 +28163,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Pre-Baccalaureate Program costs money to enter", true, "unknown", "unknown"],
         tags: ["Education", "STEM", "Arts", "Social Science", "History", "Writing", "Psychology"],
-        id: 1102,
+        id: 1103,
     },
     {
         title: "Beaver Works Summer Institute ",
@@ -28187,7 +28187,7 @@ const list = [
             "To participate in the Beaver Works Summer Institute (BWSI), you must:\n- Submit an application form\n- Maintain a minimum GPA of 3.5\n- Be a high school student\n- Complete pre-requisite coursework\n- Submit at least one letter of recommendation from a teacher",
         cost: ["Beaver Works Summer Institute is a free activity", false, 0, "unknown"],
         tags: ["Engineering", "STEM", "Robotics", "Computer Science"],
-        id: 1103,
+        id: 1104,
     },
     {
         title: "UW Allen School Changemakers in Computing",
@@ -28212,7 +28212,7 @@ const list = [
             "To participate in the UW Allen School Changemakers in Computing you must be Washington State High School Students.",
         cost: ["UW Allen School Changemakers in Computing is a free activity", false, 0, "unknown"],
         tags: ["Computer Science", "STEM", "Engineering"],
-        id: 1104,
+        id: 1105,
     },
     {
         title: "SF YouthWorks & MYEEP",
@@ -28236,7 +28236,7 @@ const list = [
             "To participate in the SF YouthWorks & MYEEP you must:\n- Reside or attend school in SF\n- Be between the ages of 14-18 for MYEEP\n- Be a rising Junior, rising Senior, or graduating Senior for SF YouthWorks",
         cost: ["SF YouthWorks & MYEEP is a free activity", false, 0, "unknown"],
         tags: ["Job Training/Internship", "Career Exploration"],
-        id: 1105,
+        id: 1106,
     },
     {
         title: "New Victory Usher Corps",
@@ -28260,7 +28260,7 @@ const list = [
             "To participate in the New Victory Usher Corps you must:\n- Be enrolled as a junior in high school or the equivalent in an HSE/GED program.\n- Be able to work a minimum of three shifts each week (between shifts in the theater and workshops), including day, evening, and weekend shifts.\n- Be able to attend mandatory weekday after-school workshops.",
         cost: ["New Victory Usher Corps is a free activity", false, 0, "unknown"],
         tags: ["Performing Arts", "Arts", "Education", "Leadership/Management"],
-        id: 1106,
+        id: 1107,
     },
     {
         title: "The Gatton Academy",
@@ -28284,7 +28284,7 @@ const list = [
             "To participate in The Gatton Academy you must:\n- Be a current domiciled resident of the state of Kentucky as stated by the Kentucky Council of Postsecondary Education\n- Be a sophomore or have achieved sophomore status (as stated by their sending school) at the time of application (February 1)\n- Be a junior (as stated by their sending school) at the time of enrollment to The Gatton Academy (August 1 of the same application year)\n- Complete Algebra I, Geometry and Algebra II prior to enrollment\n- Score a minimum 22 math on the ACT or score a minimum 540 math on the SAT\n- Submit all required materials no later than February 1, 2023",
         cost: ["The Gatton Academy is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Mathematics", "Engineering", "Science", "Education"],
-        id: 1107,
+        id: 1108,
     },
     {
         title: "Woodland Ecology Research Mentorship (WERM)",
@@ -28308,7 +28308,7 @@ const list = [
             "To participate in the Woodland Ecology Research Mentorship (WERM) you must:\n\n- Be currently enrolled in high school with a strong interest in scientific research and the urban environment\n- Be 16 years old by July 5, 2023 and be a New York City resident eligible to work in the United States\n- Be able to make a 14-month commitment from June 2023 through August 2024, including Saturdays during the school year\n- Preference will be given to WERM applicants who live in the Bronx or Upper Manhattan",
         cost: ["Woodland Ecology Research Mentorship (WERM) is a free activity", false, 0, "unknown"],
         tags: ["Environmental Science", "Biology", "STEM", "Mentoring"],
-        id: 1108,
+        id: 1109,
     },
     {
         title: "High School and College Student Internship Program",
@@ -28332,7 +28332,7 @@ const list = [
             "To participate in the High School and College Student Internship Program you must:\n- Be at least 16 years old\n- Be enrolled in a secondary educational institute within the East Baton Rouge Parish",
         cost: ["High School and College Student Internship Program is a free activity", false, 0, "unknown"],
         tags: ["Education", "Government", "Career Exploration"],
-        id: 1109,
+        id: 1110,
     },
     {
         title: "The Summer Youth Employment Program",
@@ -28356,7 +28356,7 @@ const list = [
             "To participate in the Summer Youth Employment Program you must:\n- Be a rising high school sophomore or junior\n- Have a family income at or below 250% of the Federal Poverty Level\n- Require transportation (i.e., cannot own a car)\n- Be willing to learn and work hard\n- Be vaccinated against Covid-19",
         cost: ["The Summer Youth Employment Program is a free activity", false, 0, "unknown"],
         tags: ["Business and Entrepreneurship", "Job Training/Career Development"],
-        id: 1110,
+        id: 1111,
     },
     {
         title: "Urban Design and Planning Pre-College Fellowship",
@@ -28380,7 +28380,7 @@ const list = [
             "To participate in the Urban Design and Planning Pre-College Fellowship you must be high school students.",
         cost: ["Urban Design and Planning Pre-College Fellowship costs money to enter", true, "unknown", "unknown"],
         tags: ["Architecture", "Environmental Science", "Art/Design"],
-        id: 1111,
+        id: 1112,
     },
     {
         title: "Next Generation Pathways to Computing Program (NEXTGENCOMPUTING)",
@@ -28405,7 +28405,7 @@ const list = [
             "To participate in the Next Generation Pathways to Computing Program (NEXTGENCOMPUTING), you must:\n\n- Be at least 16 years old at the time of appointment\n- Have a minimum GPA of 3.0/4.0\n- Participate 40 hours per week, with a maximum of 5 missed days without stipend\n- Be U.S. citizens or legal permanent residents\n- Be rising juniors/seniors or recently graduated seniors who have not yet enrolled in college\n- Complete an online application through Zintellect\n- Obtain at least one recommendation from a STEM teacher and a principal or curriculum coordinator\n- Complete pre- and post-appointment surveys\n- Behave in a responsible and professional manner\n- Avoid activities that interfere with the appointment period\n- Complete a report at the end of the appointment, as per the provided rubric",
         cost: ["Next Generation Pathways to Computing Program (NEXTGENCOMPUTING) is a free activity", false, 0, "unknown"],
         tags: ["Computer Science", "STEM", "Robotics"],
-        id: 1112,
+        id: 1113,
     },
     {
         title: "Be Your Own Boss Internship",
@@ -28429,7 +28429,7 @@ const list = [
             "To participate in the Be Your Own Boss Internship you must be high school students of Chicago public & charter schools.",
         cost: ["Be Your Own Boss Internship is a free activity", false, 0, "unknown"],
         tags: ["Entrepreneurship", "Business and Entrepreneurship"],
-        id: 1113,
+        id: 1114,
     },
     {
         title: "Environmentor Program",
@@ -28454,7 +28454,7 @@ const list = [
             "To participate in the Environmentor Program you must:\n- Be in the 10th or 11th grade\n- Reside or attend school in the Rockaway Peninsula (or adjacent city neighborhoods)\n- Commit to the full program timeframe (January - August)",
         cost: ["Environmentor Program is a free activity", false, 0, "unknown"],
         tags: ["Environmental Science", "STEM"],
-        id: 1114,
+        id: 1115,
     },
     {
         title: "Governor's Scholar",
@@ -28479,7 +28479,7 @@ const list = [
             "To participate in the Governor's Scholar you must:\n- Be in the 11th grade at the time of selection and intend to return to a Kentucky school district for the next school term.\n- Be a current resident of Kentucky.\n- Have taken the ACT, PSAT, or SAT in the 9th, 10th or 11th grades.",
         cost: ["Governor's Scholar is a free activity", false, 0, "unknown"],
         tags: ["Government/Politics", "Leadership/Management", "Social Science"],
-        id: 1115,
+        id: 1116,
     },
     {
         title: "Young Adult Leadership Council",
@@ -28503,7 +28503,7 @@ const list = [
             "To participate in the Young Adult Leadership Council you must:\n- Possess strong verbal and written communication skills\n- Demonstrate reliability and flexibility\n- Exhibit a passion for the arts\n- Commit to attending all scheduled meetings",
         cost: ["Young Adult Leadership Council is a free activity", false, 0, "unknown"],
         tags: ["Leadership/Management", "Education/Youth Development"],
-        id: 1116,
+        id: 1117,
     },
     {
         title: "Internships",
@@ -28526,7 +28526,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Internships is a free activity", false, 0, "unknown"],
         tags: ["Sports", "Nonprofit", "Business", "Marketing/Advertising", "Leadership/Management"],
-        id: 1117,
+        id: 1118,
     },
     {
         title: "Teen Conservation Leaders",
@@ -28550,7 +28550,7 @@ const list = [
             "To participate in the Teen Conservation Leaders you must:\n- Be entering 10th, 11th, or 12th grade in the fall of 2023\n- Be at least 14 years old by June 5, 2023",
         cost: ["Teen Conservation Leaders is a free activity", false, 0, "unknown"],
         tags: ["Environmental Science", "Leadership/Management"],
-        id: 1118,
+        id: 1119,
     },
     {
         title: "The Urban Journalism Workshop",
@@ -28573,7 +28573,7 @@ const list = [
         requirements: "Unknown",
         cost: ["The Urban Journalism Workshop is a free activity", false, 0, "unknown"],
         tags: ["Journalism", "Writing"],
-        id: 1119,
+        id: 1120,
     },
     {
         title: "Meta Summer Academy",
@@ -28597,7 +28597,7 @@ const list = [
             "To participate in the Meta Summer Academy you must:\n- Be sophomores in high school\n- Be full-year residents of either: East Palo Alto, Belle Haven, North Fair Oaks, or Redwood City\n- Have a minimum 2.5 Cumulative GPA",
         cost: ["Meta Summer Academy is a free activity", false, 0, "unknown"],
         tags: ["Engineering", "Computer Science", "Business", "STEM"],
-        id: 1120,
+        id: 1121,
     },
     {
         title: "Center for Imaging Science Summer High School Intern Program",
@@ -28620,7 +28620,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Center for Imaging Science Summer High School Intern Program is a free activity", false, 0, "unknown"],
         tags: ["Physics", "Engineering", "Computer Science", "STEM"],
-        id: 1121,
+        id: 1122,
     },
     {
         title: "Aspirnaut Summer Research Internship at U-M",
@@ -28644,7 +28644,7 @@ const list = [
             "To participate in the Aspirnaut Summer Research Internship at U-M you must:\n- Be present and on campus for the duration of the program\n- Have health insurance coverage for the duration of the program\n- Be responsible for transportation to and from the program\n- Have an interest in basic science research\n- Be willing to become immersed in a hands-on science laboratory experience\n- Be committed to conducting their own research project\n- Gather results that contribute to cutting-edge research\n- Present their findings to peers and mentors at the end of the experience",
         cost: ["Aspirnaut Summer Research Internship at U-M is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Science"],
-        id: 1122,
+        id: 1123,
     },
     {
         title: "Online Courses for High School Students",
@@ -28667,7 +28667,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Online Courses for High School Students costs money to enter", true, "unknown", "unknown"],
         tags: ["Education", "STEM"],
-        id: 1123,
+        id: 1124,
     },
     {
         title: "Summer 2023 Programming",
@@ -28691,7 +28691,7 @@ const list = [
             "To participate in the Summer 2023 Programming you must:\n- Meet specific requirements for each opportunity.",
         cost: ["Summer 2023 Programming is a free activity", false, 0, "unknown"],
         tags: ["Computer Science", "STEM"],
-        id: 1124,
+        id: 1125,
     },
     {
         title: "Internship Program",
@@ -28715,7 +28715,7 @@ const list = [
             "To participate in the Internship Program you must:\n- Be a high school or college-level student.\n- Reside in Connecticut's 4th Congressional District (priority given).",
         cost: ["Internship Program is a free activity", false, 0, "unknown"],
         tags: ["Government/Politics", "Law", "History"],
-        id: 1125,
+        id: 1126,
     },
     {
         title: "Santa Clarita Valley Historical Society Docent",
@@ -28739,7 +28739,7 @@ const list = [
             "To participate in the Santa Clarita Valley Historical Society Docent you must:\n- Be open to people of all ages and backgrounds.",
         cost: ["Santa Clarita Valley Historical Society Docent is a free activity", false, 0, "unknown"],
         tags: ["History", "Education", "Museum"],
-        id: 1126,
+        id: 1127,
     },
     {
         title: "Oschner STAR Summer Scholars Program",
@@ -28763,7 +28763,7 @@ const list = [
             "To participate in the Oschner STAR Summer Scholars Program you must:\n- Be at least 16 by the start of the program.\n- Be residents of and attend high school in Louisiana.\n- Be advancing into the 12th grade.",
         cost: ["Oschner STAR Summer Scholars Program is a free activity", false, 0, "unknown"],
         tags: ["Science", "Medicine", "Leadership/Management", "Diversity and Inclusion"],
-        id: 1127,
+        id: 1128,
     },
     {
         title: "Women Empowered Through Business (WEB) Institute",
@@ -28787,7 +28787,7 @@ const list = [
             "To participate in the Women Empowered Through Business (WEB) Institute you must:\n- Be female rising juniors in high school\n- Be from under-represented communities, including low-income households and/or communities of color\n- Demonstrate academic excellence, leadership potential, and a strong interest in technology and business\n- Attend the six-day program sessions in person\n- Be committed to fully participate in all aspects of the program",
         cost: ["Women Empowered Through Business (WEB) Institute is a free activity", false, 0, "unknown"],
         tags: ["Business", "Computer Science", "Entrepreneurship", "Leadership/Management", "STEM", "Women in STEM"],
-        id: 1128,
+        id: 1129,
     },
     {
         title: "PopHealthExperience",
@@ -28810,7 +28810,7 @@ const list = [
         requirements: "To participate in the PopHealthExperience you must be rising 8th to 12th graders (ages 12-17).",
         cost: ["PopHealthExperience costs money to enter", true, "unknown", "unknown"],
         tags: ["Public Health", "Health Sciences", "Leadership/Management", "Mentoring"],
-        id: 1129,
+        id: 1130,
     },
     {
         title: "Pathways Internship Program",
@@ -28834,7 +28834,7 @@ const list = [
             "To participate in the Pathways Internship Program you must:\n- Be U.S. Citizens\n- Be at least 16 years of age by the closing date of the announcement\n- Be subject to random drug testing\n- Be able to receive a Secret or Top Secret security clearance\n- Maintain student eligibility for the duration of the internship\n- Have a cumulative GPA of 2.0 at the time of application and throughout the internship appointment",
         cost: ["Pathways Internship Program is a free activity", false, 0, "unknown"],
         tags: ["Government/Politics", "International Studies/Global Affairs"],
-        id: 1130,
+        id: 1131,
     },
     {
         title: "The Norman Mineta Bay Area Summer Academy",
@@ -28858,7 +28858,7 @@ const list = [
             "To participate in the Norman Mineta Bay Area Summer Academy you must:\n- Reside in the Bay Area and attend a local high school\n- Be at least 16 years old and have completed the ninth grade by the beginning of the Academy\n- Attend online seminars and present on a topic related to the seminars\n- Obtain parental or guardian permission if under 18 years of age",
         cost: ["The Norman Mineta Bay Area Summer Academy is a free activity", false, 0, "unknown"],
         tags: ["Engineering", "Government/Politics", "STEM"],
-        id: 1131,
+        id: 1132,
     },
     {
         title: "Einstein Montefiore Summer High School Research Program",
@@ -28882,7 +28882,7 @@ const list = [
             "To participate in the Einstein Montefiore Summer High School Research Program you must:\n- Be U.S. citizens\n- Currently attend high school in the United States\n- Be from an underserved population (strongly encouraged)",
         cost: ["Einstein Montefiore Summer High School Research Program is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Science", "Medicine"],
-        id: 1132,
+        id: 1133,
     },
     {
         title: "Young Leaders Academy",
@@ -28905,7 +28905,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Young Leaders Academy is a free activity", false, 0, "unknown"],
         tags: ["Leadership/Management", "History", "Government/Politics", "Education"],
-        id: 1133,
+        id: 1134,
     },
     {
         title: "Change Creators",
@@ -28928,7 +28928,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Change Creators is a free activity", false, 0, "unknown"],
         tags: ["Photography/Videography", "Social Science", "Arts/Design"],
-        id: 1134,
+        id: 1135,
     },
     {
         title: "TECH360 Summer Bootcamp Program",
@@ -28952,7 +28952,7 @@ const list = [
             "To participate in the TECH360 Summer Bootcamp Program, you must:\n- Be rising high school juniors or seniors between the ages of 15-19.\n- Currently attend a high school in New York City (all boroughs), Los Angeles County, or Miami / Broward.\n- Not be graduating high school seniors (Class of '22).\n- Prioritize self-identification as:\n    - Hispanic / Latinx\n    - African American / Black\n    - Female and/or girl and/or non-binary\n    - LGBTQIA+\n- Attend a NYC, LA, or Miami / Broward high school that meets the Economic Needs Index.",
         cost: ["TECH360 Summer Bootcamp Program is a free activity", false, 0, "unknown"],
         tags: ["Coding/Programming", "Web Development", "Computer Science"],
-        id: 1135,
+        id: 1136,
     },
     {
         title: "Lancaster Museum of Art and History Volunteer",
@@ -28976,7 +28976,7 @@ const list = [
             "To participate in the Lancaster Museum of Art and History Volunteer you must:\n- Submit to fingerprinting and a criminal background check\n- Submit a PPD Skin Test (TB) clearance",
         cost: ["Lancaster Museum of Art and History Volunteer is a free activity", false, 0, "unknown"],
         tags: ["Arts", "History ", "Education", "Museum", "Art/Design"],
-        id: 1136,
+        id: 1137,
     },
     {
         title: "Clinical Internship Program",
@@ -29001,7 +29001,7 @@ const list = [
             "To participate in the Clinical Internship Program you must:\n- Be a High School Junior or Senior\n- Have a GPA of 3.0",
         cost: ["Clinical Internship Program is a free activity", false, 0, "unknown"],
         tags: ["Health Sciences", "Medicine"],
-        id: 1137,
+        id: 1138,
     },
     {
         title: "Odysea Aquarium  Internship Program",
@@ -29024,7 +29024,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Odysea Aquarium  Internship Program is a free activity", false, 0, "unknown"],
         tags: ["Education", "STEM"],
-        id: 1138,
+        id: 1139,
     },
     {
         title: "Environmental Internship for High School Students",
@@ -29047,7 +29047,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Environmental Internship for High School Students is a free activity", false, 0, "unknown"],
         tags: ["Environmental Science"],
-        id: 1139,
+        id: 1140,
     },
     {
         title: "Volunteer Services",
@@ -29070,7 +29070,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Volunteer Services is a free activity", false, 0, "unknown"],
         tags: ["Education", "Medicine", "Science", "Tutoring", "Mentoring"],
-        id: 1140,
+        id: 1141,
     },
     {
         title: "Pre-College Research Internship for Students from Minority Backgrounds [PRISM]",
@@ -29099,7 +29099,7 @@ const list = [
             "unknown",
         ],
         tags: ["Medicine", "Science", "STEM"],
-        id: 1141,
+        id: 1142,
     },
     {
         title: "Discovery Program",
@@ -29123,7 +29123,7 @@ const list = [
             "To participate in the Discovery Program you must:\n- Be at least 15 years of age.\n- Be entering sophomore or junior year of high school. Seniors will be accepted on a limited basis.\n- Have an academic GPA of at least 3.0 on a 4.0 GPA scale. Students with a GPA below 3.0 can explain any unique circumstances on their application and may still be considered.\n- Commit to the program, including attendance at all Discovery Program meetings and community service activities.\u00a0No more than two excused absences are permitted.\n- Commit to abide by all Discovery Program guidelines and policies, including providing proof of COVID-19 vaccination.\n- Submit the completed application to the appropriate chapter.",
         cost: ["Discovery Program costs money to enter", true, "unknown", "unknown"],
         tags: ["STEM", "Medicine", "Leadership/Management", "Mentoring", "Diversity and Inclusion"],
-        id: 1142,
+        id: 1143,
     },
     {
         title: "Youth Conservation Corp Crew Member Application",
@@ -29147,7 +29147,7 @@ const list = [
             "To participate in the Youth Conservation Corp Crew Member Application you must complete the application.",
         cost: ["Youth Conservation Corp Crew Member Application is a free activity", false, 0, "unknown"],
         tags: ["Environmental Science", "Engineering"],
-        id: 1143,
+        id: 1144,
     },
     {
         title: "Student Historian Internship Program ",
@@ -29171,7 +29171,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Student Historian Internship Program is a free activity", false, 0, "unknown"],
         tags: ["History", "Museum", "Leadership/Management", "Public Speaking"],
-        id: 1144,
+        id: 1145,
     },
     {
         title: "Summer Youth Internship - Charleston County",
@@ -29195,7 +29195,7 @@ const list = [
             "To participate in the Summer Youth Internship - Charleston County you must:\n- Be between the ages of 16-21 at the start of the program\n- Be currently enrolled in high school or college\n- Be a resident of Charleston County\n- Have an active email and voicemail account and respond promptly to communication\n- Complete an online application to the program by May 5th\n- Be available to work from June 16th until July 27th, with an average of 4-hour shifts per day\n- Attend training on June 16th and graduation on July 27th",
         cost: ["Summer Youth Internship - Charleston County is a free activity", false, 0, "unknown"],
         tags: ["Government/Politics", "Education"],
-        id: 1145,
+        id: 1146,
     },
     {
         title: "Women in Engineering Summer Program (WIESP)",
@@ -29219,7 +29219,7 @@ const list = [
             "To participate in the Women in Engineering Summer Program (WIESP) you must:\n- Be in 11th or 12th grade by Fall 2023.\n- Have an overall grade point average of 3.2 or higher.\n- Have grades of As and Bs in math and science classes.\n- Be an active member of a STEM-related club or organization.",
         cost: ["Women in Engineering Summer Program (WIESP) is a free activity", false, 0, "unknown"],
         tags: ["Engineering", "STEM", "Business"],
-        id: 1146,
+        id: 1147,
     },
     {
         title: "Research Mentorship Program (RMP)",
@@ -29253,7 +29253,7 @@ const list = [
             "Writing",
             "Psychology",
         ],
-        id: 1147,
+        id: 1148,
     },
     {
         title: "BioBus Junior Scientist Internship",
@@ -29277,7 +29277,7 @@ const list = [
             "To participate in the BioBus Junior Scientist Internship you must:\n- Be available for the full duration of the 12\u2013month internship\n- Be currently enrolled in 9th, 10th, or 11th grade in a New York City high school\n- Demonstrate a genuine interest in scientific discovery and research\n- Have an interest in working with the public to cultivate scientific curiosity\n- Possess leadership and teaching experience (preferred)",
         cost: ["BioBus Junior Scientist Internship is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Science", "Medicine"],
-        id: 1148,
+        id: 1149,
     },
     {
         title: "Summer Program",
@@ -29301,7 +29301,7 @@ const list = [
             "To participate in the Summer Program you must:\n- Be a full-time, under-represented minority(1) freshman (BESt I), sophomore (BESt II), or junior (BESt III) student currently enrolled in a St. Louis regional high school (St. Louis City, St. Louis and St. Charles, MO counties, and Madison, St. Claire, IL counties).\n- Have a cumulative GPA of 3.0 or higher based on a 4.0 scale.\n- Be a high-potential student, participating in at least one extra-curricular activity or organization.\n- Be a successful high school graduate, under-represented minority(1), accepted and fully committed to attending a university or college as an incoming freshman (BESt IV applicants only).",
         cost: ["Summer Program is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Health Sciences", "Mentoring"],
-        id: 1149,
+        id: 1150,
     },
     {
         title: "Emma Bowen Foundation Internship ",
@@ -29325,7 +29325,7 @@ const list = [
             "To participate in the Emma Bowen Foundation Internship you must:\n\n- Be a student of color (Asian, American Indian/Alaskan Native, Black, Hawaiian/Pacific Islander, Hispanic/Latino, or Multi-Racial)\n- Be a graduating high school senior or an undergraduate college student (undergraduates graduating in Spring 2023 are eligible to apply)\n- Plan to attend or be a current student at a four-year accredited U.S. college or university (This includes students who will transfer to a four-year accredited U.S. college or university in Spring 2023 or Fall 2023)\n- Have a cumulative grade point average of at least 3.0\n- Be interested in pursuing a career in media and tech\n- Be a U.S. citizen or U.S. permanent resident\n- Speak and write English fluently",
         cost: ["Emma Bowen Foundation Internship is a free activity", false, 0, "unknown"],
         tags: ["Media/Broadcasting", "Journalism", "Web Development", "Business", "Computer Science"],
-        id: 1150,
+        id: 1151,
     },
     {
         title: "Health Careers Summer Internship Program",
@@ -29349,7 +29349,7 @@ const list = [
             "To participate in the Health Careers Summer Internship Program, you must be high school juniors or seniors.",
         cost: ["Health Careers Summer Internship Program is a free activity", false, 0, "unknown"],
         tags: ["Health Sciences", "Medicine"],
-        id: 1151,
+        id: 1152,
     },
     {
         title: "Youth Summer Program",
@@ -29374,7 +29374,7 @@ const list = [
             "To participate in the Youth Summer Program you must:\n- Be enrolled in High School\n- Be 16 years old by June 1, 2023\n- Be a resident of the City of Boston, MA\n- Be COVID vaccinated",
         cost: ["Youth Summer Program is a free activity", false, 0, "unknown"],
         tags: ["Medicine", "Health Sciences", "STEM"],
-        id: 1152,
+        id: 1153,
     },
     {
         title: "Teen Volunteer Program",
@@ -29397,7 +29397,7 @@ const list = [
         requirements: "To participate in the Teen Volunteer Program you must be in grades 9-12.",
         cost: ["Teen Volunteer Program is a free activity", false, 0, "unknown"],
         tags: ["Job Skills/Career Development", "Education/Learning", "Writing"],
-        id: 1153,
+        id: 1154,
     },
     {
         title: "RCPD Internships",
@@ -29421,7 +29421,7 @@ const list = [
             "To participate in the RCPD Internships you must:\n- Be eligible to receive college credit for completing the internship\n- Submit an application\n- Sign a ride-along waiver\n- Pass a criminal history background check\n- Comply with the Department dress code\n- Work with the University Internship Coordinator and Police Department to determine goals and expectations\n- Be assigned a project and successfully complete it\n- Prioritize a career in law enforcement or police work (due to limited resources)\n- Follow the detailed application procedure outlined on the department's website (for Evidence Section/Forensic Labs internships)",
         cost: ["RCPD Internships is a free activity", false, 0, "unknown"],
         tags: ["Law/Advocacy", "Leadership/Management"],
-        id: 1154,
+        id: 1155,
     },
     {
         title: "Laboratory Learning Program",
@@ -29445,7 +29445,7 @@ const list = [
             "To participate in the Laboratory Learning Program you must:\n- Be a US citizen, legal permanent resident, or international student currently attending a US high school.",
         cost: ["Laboratory Learning Program is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Research"],
-        id: 1155,
+        id: 1156,
     },
     {
         title: "Internships for Credit &/or Experience",
@@ -29468,7 +29468,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Internships for Credit &/or Experience is a free activity", false, 0, "unknown"],
         tags: ["Government/Politics", "Education"],
-        id: 1156,
+        id: 1157,
     },
     {
         title: "Anchorage Fishing Intern",
@@ -29491,7 +29491,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Anchorage Fishing Intern is a free activity", false, 0, "unknown"],
         tags: ["Environmental Science", "Environmental Activism"],
-        id: 1157,
+        id: 1158,
     },
     {
         title: "PATHS-UP Young Scholars",
@@ -29514,7 +29514,7 @@ const list = [
         requirements: "Unknown",
         cost: ["PATHS-UP Young Scholars is a free activity", false, 0, "unknown"],
         tags: ["Science", "Engineering", "Medicine", "Computer Science", "Physics", "Robotics"],
-        id: 1158,
+        id: 1159,
     },
     {
         title: "Internship Program",
@@ -29537,7 +29537,7 @@ const list = [
         requirements: "To participate in the Internship Program you must commit 10 hours per week.",
         cost: ["Internship Program is a free activity", false, 0, "unknown"],
         tags: ["Law/Advocacy", "Government", "Business", "Leadership/Management", "Diversity and Inclusion"],
-        id: 1159,
+        id: 1160,
     },
     {
         title: "Summer Camp Counselor",
@@ -29561,7 +29561,7 @@ const list = [
             "To participate in the Summer Camp Counselor you must:\n- Be approved by the camp director and Director of Camping and Youth\n- Be 16 years of age and at least four years older than the age range of the campers\n- Pass a background check\n- Be committed to Jesus Christ and want to serve through the camp experience\n- Be an active worshiper in the WV Baptist Convention ministry",
         cost: ["Summer Camp Counselor is a free activity", false, 0, "unknown"],
         tags: ["Education", "Youth Development"],
-        id: 1160,
+        id: 1161,
     },
     {
         title: "2023 High School Technical Intern",
@@ -29586,7 +29586,7 @@ const list = [
             "To participate in the 2023 High School Technical Intern you must:\n\n- Successfully complete the Northrop Grumman HIP Mentoring Program\n- Be a high school senior enrolled in an accredited high school\n- Intend to major in engineering, physics, math, cyber, computer science, or manufacturing\n- Have an overall cumulative GPA of 3.0/4.0 or higher (unofficial academic transcripts must be provided at time of application by uploading the documents to your application or profile)\n- Be at least 16 years of age",
         cost: ["2023 High School Technical Intern is a free activity", false, 0, "unknown"],
         tags: ["Engineering", "Aviation/Aerospace"],
-        id: 1161,
+        id: 1162,
     },
     {
         title: "Next Gen High School Internship Program",
@@ -29610,7 +29610,7 @@ const list = [
             "To participate in the Next Gen High School Internship Program you must:\n- Be a rising junior or senior in high school\n- Be 16 years old by June 1st, 2023\n- Be from a historically underrepresented minority group",
         cost: ["Next Gen High School Internship Program is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Education"],
-        id: 1162,
+        id: 1163,
     },
     {
         title: "Science Internship Program",
@@ -29634,7 +29634,7 @@ const list = [
         requirements: "To participate in the Science Internship Program you must be enrolled in a high school.",
         cost: ["Science Internship Program is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Biology", "Medicine", "Health Sciences"],
-        id: 1163,
+        id: 1164,
     },
     {
         title: "Summer Student Research Program",
@@ -29658,7 +29658,7 @@ const list = [
             "To participate in the Summer Student Research Program you must:\n- Be a high school student in their junior or senior year\n- Have at least one completed year in math and biology\n- Be 16 years of age or older by June 1st of year of program\n- Be from a background considered under-represented in the sciences",
         cost: ["Summer Student Research Program is a free activity", false, 0, "unknown"],
         tags: ["Health Sciences", "Mentoring", "Research", "Education"],
-        id: 1164,
+        id: 1165,
     },
     {
         title: "Student Research Internship",
@@ -29683,7 +29683,7 @@ const list = [
             "To participate in the Student Research Internship you must:\n- Demonstrate a strong interest in genomics or mHealth translational research.\n- Be at least 16 years of age before the start of their internship.",
         cost: ["Student Research Internship is a free activity", false, 0, "unknown"],
         tags: ["Science", "Medicine", "STEM"],
-        id: 1165,
+        id: 1166,
     },
     {
         title: "Junior Science and Humanities Symposium",
@@ -29707,7 +29707,7 @@ const list = [
             "To participate in the Junior Science and Humanities Symposium you must:\n- Be high school students in grades 9-12\n- Conduct research in STEM disciplines\n- Present original research results in an oral or poster session",
         cost: ["Junior Science and Humanities Symposium is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Science", "Computer Science", "Engineering"],
-        id: 1166,
+        id: 1167,
     },
     {
         title: "Discovery Squad",
@@ -29730,7 +29730,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Discovery Squad is a free activity", false, 0, "unknown"],
         tags: ["Education", "Mentoring"],
-        id: 1167,
+        id: 1168,
     },
     {
         title: "Youth Employment Services (YES) Program",
@@ -29755,7 +29755,7 @@ const list = [
             "To participate in the Youth Employment Services (YES) Program you must:\n\n- Be 16 to 18 years old and still in high school (15 to 19 summer only).\n- Have no previous work experience.\n- Receive a modified lunch program at school.\n- Be high-risk (low grades; on probation; recovering from addiction; in the DCFS or foster care system; behavioral issues; or have trouble finding a job).\n- Have a minimum of 2.0 GPA to be issued a work permit by the school.\n- Reside in Santa Clarita.",
         cost: ["Youth Employment Services (YES) Program is a free activity", false, 0, "unknown"],
         tags: ["Business and Entrepreneurship", "Job Training/Career Development"],
-        id: 1168,
+        id: 1169,
     },
     {
         title: " Berkeley Lab K-12 - Experiences in Research",
@@ -29779,7 +29779,7 @@ const list = [
             "Requirements: To participate in the Berkeley Lab K-12 - Experiences in Research you must:\n- Be current 10th, 11th, or 12th-grade students enrolled in a Northern California educational institution.\n- Have independent work experience.\n- Be interested in gaining hands-on experience with professionals at Berkeley Lab in various STEM fields.\n- Complete the six-week program from June 20 - July 28, 2023.\n- Work for about 20 hours a week.\n- Submit applications through the Application Page. Applications open in early February 2023 and close on April 3, 2023.",
         cost: ["Berkeley Lab K-12 - Experiences in Research is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Computer Science", "Engineering", "Data Science"],
-        id: 1169,
+        id: 1170,
     },
     {
         title: "SAGE Summer Camp Director's Apprenticeship Program",
@@ -29803,7 +29803,7 @@ const list = [
             "To participate in the SAGE Summer Camp Director's Apprenticeship Program you must:\n- Be high school students aged between 14 and 17 years.\n- Be interested in pursuing careers in STEM fields.\n- Be curious and passionate about STEM.\n- Have a strong desire to become part of the STEM community.\n- Understand that STEM fields allow individuals to balance multiple interests.\n- Submit applications between October 15, 2022, and March 15, 2023, at 11:59 pm PST.",
         cost: ["SAGE Summer Camp Director's Apprenticeship Program is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Diversity and Inclusion"],
-        id: 1170,
+        id: 1171,
     },
     {
         title: "Internship Program ",
@@ -29826,7 +29826,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Internship Program is a free activity", false, 0, "unknown"],
         tags: ["International Studies/Global Affairs", "Business"],
-        id: 1171,
+        id: 1172,
     },
     {
         title: "GGG Teen Entrepreneur",
@@ -29850,7 +29850,7 @@ const list = [
             "To participate in the GGG Teen Entrepreneur you must be an upcoming sophomore, junior, or senior in high school.",
         cost: ["GGG Teen Entrepreneur is a free activity", false, 0, "unknown"],
         tags: ["Entrepreneurship", "Social Science"],
-        id: 1172,
+        id: 1173,
     },
     {
         title: "Kendall Smith Healthcare Exploration Scholarship",
@@ -29875,7 +29875,7 @@ const list = [
             "To participate in the Kendall Smith Healthcare Exploration Scholarship you must:\n- Reside in one of the following towns: Arlington Heights, Buffalo Grove, Des Plaines, Elk Grove Village, Harwood Heights, Morton Grove, Mount Prospect, Niles, Norridge, Palatine, Park Ridge, Prospect Heights, Rolling Meadows, Skokie, or Wheeling.",
         cost: ["Kendall Smith Healthcare Exploration Scholarship is a free activity", false, 0, "unknown"],
         tags: ["Medicine", "Research", "Career Exploration"],
-        id: 1173,
+        id: 1174,
     },
     {
         title: "Teen Intern (Library)",
@@ -29899,7 +29899,7 @@ const list = [
             "To participate in the Teen Intern (Library) you must:\n\n- Be 16 years of age\n- Possess the ability to secure a work permit\n- Be enrolled in high school",
         cost: ["Teen Intern (Library) is a free activity", false, 0, "unknown"],
         tags: ["Education", "Leadership/Management"],
-        id: 1174,
+        id: 1175,
     },
     {
         title: "Engineering High School Intern",
@@ -29923,7 +29923,7 @@ const list = [
             "To participate in the Engineering High School Intern you must:\n- Maintain a positive attitude and a willingness to learn new skills and tools\n- Possess strong communication skills\n- Excel in both team and individual work environments\n- Have a working knowledge of Windows and Microsoft Office (Word, PowerPoint, Excel)\n- Have some programming experience in languages such as Python, C, C++, or Java (for some positions)\n- Participate in STEM extra-curricular activities (e.g., Science Olympiad, FIRST Robotics, Career Days, field trips, or summer camps)\n- Enroll in STEM elective courses in Junior/Senior high school",
         cost: ["Engineering High School Intern is a free activity", false, 0, "unknown"],
         tags: ["Engineering", "Science", "Computer Science", "Business", "Mentoring"],
-        id: 1175,
+        id: 1176,
     },
     {
         title: "YouthBridge-NY Fellowship",
@@ -29947,7 +29947,7 @@ const list = [
             "To participate in the YouthBridge-NY Fellowship you must:\n- Be a high school sophomore\n- Be able to travel to NYC for every meeting (weekday evenings)\n- Be willing to learn about new perspectives and share their own",
         cost: ["YouthBridge-NY Fellowship is a free activity", false, 0, "unknown"],
         tags: ["Leadership/Management", "Diversity and Inclusion", "Youth Empowerment"],
-        id: 1176,
+        id: 1177,
     },
     {
         title: "High School Learn and Earn Program",
@@ -29971,7 +29971,7 @@ const list = [
             "To participate in the High School Learn and Earn Program you must:\n- Be at least 16 years of age or older\n- Be enrolled as a student at an accredited high school within an MDC member town\n- Be referred by a guidance counselor (applications submitted without a referral from a guidance counselor will not be accepted)\n- Be a Junior or Senior student",
         cost: ["High School Learn and Earn Program is a free activity", false, 0, "unknown"],
         tags: ["Environmental Science", "Engineering", "Government"],
-        id: 1177,
+        id: 1178,
     },
     {
         title: "Journey to Leadership Program",
@@ -29995,7 +29995,7 @@ const list = [
             "To participate in the Journey to Leadership Program you must:\n- Be between the ages of 13-21\n- Reside in or be from the NYC metropolitan area\n- Complete an application and attend a short interview\n- Priority will be given to youth from underserved neighborhoods and/or schools",
         cost: ["Journey to Leadership Program is a free activity", false, 0, "unknown"],
         tags: ["Leadership/Management", "Government/Politics"],
-        id: 1178,
+        id: 1179,
     },
     {
         title: "Haggerty Scholars Program",
@@ -30019,7 +30019,7 @@ const list = [
             "To participate in the Haggerty Scholars Program you must:\n- Be current high school juniors (graduating in 2024)\n- Have an interest in law and civil rights\n- Be willing to meet with an attorney mentor on a regular basis\n- Attend on-line meetings or panel discussions related to law and civil rights during the 2023-2024 school year\n- Follow COVID-safe protocols for in-person events, if offered",
         cost: ["Haggerty Scholars Program is a free activity", false, 0, "unknown"],
         tags: ["Law", "Mentoring", "Government/Politics"],
-        id: 1179,
+        id: 1180,
     },
     {
         title: "High School Program",
@@ -30043,7 +30043,7 @@ const list = [
             "To participate in the High School Program you must:\n- Reside permanently in a Northern California Kaiser Permanente designated service area.\n- Provide proof of legal eligibility to work in the United States.\n- Be between the ages of 16 and 19 by June 1st.",
         cost: ["High School Program is a free activity", false, 0, "unknown"],
         tags: ["Medicine", "Health Sciences", "STEM"],
-        id: 1180,
+        id: 1181,
     },
     {
         title: "Research Internship",
@@ -30067,7 +30067,7 @@ const list = [
             "To participate in the Research Internship you must:\n- Be a junior or senior in good standing enrolled in the Jackson Public School District, specifically at Murrah High School.\n- Have a passion for science and be willing to commit to an intensive, long-term biomedical research experience guided by a UMMC faculty member.\n- Complete an online application, which includes two essays, one from the student and one from a teacher or counselor, detailing the student's academic history, career aspirations, and reasons for wanting to participate in the program.\n- Have a minimum GPA of 3.0.\n- Commit to attending the program for at least two consecutive academic years.",
         cost: ["Research Internship is a free activity", false, 0, "unknown"],
         tags: ["Biology", "Medicine", "STEM"],
-        id: 1181,
+        id: 1182,
     },
     {
         title: "California State Parks Student Employment Program",
@@ -30091,7 +30091,7 @@ const list = [
             "To participate in the California State Parks Student Employment Program you must:\n- Be currently enrolled in high school, college, or graduate school.\n- Want to learn about career opportunities in California State Parks.\n- Want to develop their professional skills.\n- Want to earn money.",
         cost: ["California State Parks Student Employment Program is a free activity", false, 0, "unknown"],
         tags: ["Environmental Science", "Engineering", "Architecture", "Law"],
-        id: 1182,
+        id: 1183,
     },
     {
         title: "Hands on Experience and Internships",
@@ -30116,7 +30116,7 @@ const list = [
             "To participate in the Hands on Experience and Internships you must:\n- Be high school juniors eligible for graduation in the spring of their senior year\n- Have a cumulative 3.0 or higher GPA\n- Meet the admission criteria set by the University of Central Missouri\n- Provide their own transportation to the internship site\n- Interview with MIC business partners for their internships before the end of their junior summer\n- Secure an internship to remain in the MIC program before starting their senior year in high school, based on internship availability",
         cost: ["Hands on Experience and Internships is a free activity", false, 0, "unknown"],
         tags: ["Internships", "Career Preparation", "Engineering"],
-        id: 1183,
+        id: 1184,
     },
     {
         title: "Creative Practice",
@@ -30140,7 +30140,7 @@ const list = [
             "To participate in the Creative Practice you must:\n- Be enrolled in high school as a sophomore, junior, or senior as of the fall.\n- Be between the ages of 15-19.\n- Reside in NYC.",
         cost: ["Creative Practice is a free activity", false, 0, "unknown"],
         tags: ["Art/Design", "Museum", "Education"],
-        id: 1184,
+        id: 1185,
     },
     {
         title: "The Office of Undergraduate Research (OUR) Research Education Program (REP) for High School Students",
@@ -30169,7 +30169,7 @@ const list = [
             "unknown",
         ],
         tags: ["STEM", "Research", "Education", "Interdisciplinary", "Critical Thinking", "Communication"],
-        id: 1185,
+        id: 1186,
     },
     {
         title: "High School Internship (Venture Analyst)",
@@ -30193,7 +30193,7 @@ const list = [
             "To participate in the High School Internship (Venture Analyst) you must:\n- Maintain a strong academic record\n- Demonstrate interest in venture capital and technology\n- Possess strong financial and analytical skills, including proficiency in Google Sheets and Excel\n- Exhibit excellent written and verbal communication skills\n- Be self-motivated and capable of working independently and as part of a team\n- Have an entrepreneurial mindset and passion for technology and innovation",
         cost: ["High School Internship (Venture Analyst) is a free activity", false, 0, "unknown"],
         tags: ["Finance", "Business", "Entrepreneurship"],
-        id: 1186,
+        id: 1187,
     },
     {
         title: "High School Internship Program",
@@ -30217,7 +30217,7 @@ const list = [
             "To participate in the High School Internship Program you must:\n- Reside or attend school in New Jersey\n- Possess a keen interest in governance, politics, and improving New Jersey\n- Demonstrate proficiency in research, writing, and verbal communication\n- Be enrolled as a high school junior, senior, or college/graduate student\n- Indicate interest in joining the communications, research, or grassroots teams",
         cost: ["High School Internship Program is a free activity", false, 0, "unknown"],
         tags: ["Writing", "Nonprofit", "Law/Advocacy", "Government/Politics"],
-        id: 1187,
+        id: 1188,
     },
     {
         title: "Teen Work Study Program",
@@ -30241,7 +30241,7 @@ const list = [
             "To participate in the Teen Work Study Program you must:\n- Be a bright, outgoing, and motivated Chicago area teen\n- Possess or want to develop strong communication skills\n- Have a connection to Shedd's collection and mission\n- Have a desire to work in a team environment interacting with the public",
         cost: ["Teen Work Study Program is a free activity", false, 0, "unknown"],
         tags: ["Environmental Science", "Biology"],
-        id: 1188,
+        id: 1189,
     },
     {
         title: "STEAM Team",
@@ -30265,7 +30265,7 @@ const list = [
             "To participate in the STEAM Team you must:\n- Be rising sophomores attending a Boston public school or living in Boston.\n- Demonstrate interest in exploring potential STEAM careers (Science, Technology, Engineering, Art, and Mathematics).\n- Show willingness to learn and participate in hands-on learning activities with MFA staff mentors in each corresponding STEAM discipline.\n- Build strong connections with professionals in their field of interest.\n- Cultivate team-building and leadership skills with peers.",
         cost: ["STEAM Team is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Engineering", "Art/Design", "Science", "Mathematics", "Leadership/Management"],
-        id: 1189,
+        id: 1190,
     },
     {
         title: "Summer 2023 Youth Journalism Internship",
@@ -30289,7 +30289,7 @@ const list = [
             "To participate in the Summer 2023 Youth Journalism Internship you must:\n- Be between the ages of 14-19\n- Reside in Arlington or surrounding areas",
         cost: ["Summer 2023 Youth Journalism Internship is a free activity", false, 0, "unknown"],
         tags: ["Journalism", "Photography/Videography", "Writing"],
-        id: 1190,
+        id: 1191,
     },
     {
         title: "Student Internship Job",
@@ -30313,7 +30313,7 @@ const list = [
             "To participate in the Student Internship Job you must:\n- Be in good academic standing\n- Be on track to graduate prior to enrolling in the internship program\n- Be enrolled in a high school part of Aztec Municipal School District",
         cost: ["Student Internship Job is a free activity", false, 0, "unknown"],
         tags: ["Internship", "Career Exploration"],
-        id: 1191,
+        id: 1192,
     },
     {
         title: "PrepareRI High School Internship Program",
@@ -30337,7 +30337,7 @@ const list = [
             "To participate in the PrepareRI High School Internship Program, you must:\n\n- Attend a Rhode Island public high school, public charter high school, or home school with an identified local LEA\n- Be a current junior in high school during the 2022/2023 school year\n- Have parental/guardian consent to participate\n- Be a Rhode Island resident\n- Be at least 16 years of age by March 1, 2023\n- Complete the online PrepareRI High School Internship Application\n- Successfully complete an interview with both SkillsRI and employer(s)\n- Attend the mandatory 40-hour paid work-readiness bootcamp\n- Complete a minimum of 175 hours of work over a six-week period\n- Have a flexible schedule for work during the summer of 2023\n- Be eligible to work in the United States",
         cost: ["PrepareRI High School Internship Program is a free activity", false, 0, "unknown"],
         tags: ["Business and Entrepreneurship", "STEM"],
-        id: 1192,
+        id: 1193,
     },
     {
         title: "QCaMP",
@@ -30361,7 +30361,7 @@ const list = [
             "To participate in the QCaMP you must:\n- Be high school students or teachers\n- Have basic algebra knowledge\n- Demonstrate an interest in quantum information science and technology",
         cost: ["QCaMP is a free activity", false, 0, "unknown"],
         tags: ["Science", "Engineering", "Physics", "Computer Science", "STEM"],
-        id: 1193,
+        id: 1194,
     },
     {
         title: "Young Scholars Program (YSP)",
@@ -30385,7 +30385,7 @@ const list = [
             "To participate in the Young Scholars Program (YSP) you must:\n\n1) Be permanent Massachusetts residents who have completed their junior year of high school (i.e. rising seniors), and must live within commutable distance of Northeastern University.\n2) Be eligible to apply from any school (public, private, homeschooled, etc).\n3) Be selected from a diverse range of demographic backgrounds, with an even number of males and females.\n4) Prioritize those students who have low access to similar programs.\n5) Submit a completed YSP application, a recent transcript, two letters of recommendation, and a short essay describing their interest in engineering, science research, and this program.\n6) Adhere to the application timeline, with applications typically opening in January, closing in March, and results being posted by April.",
         cost: ["Young Scholars Program (YSP) is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Research", "Education", "Outreach"],
-        id: 1194,
+        id: 1195,
     },
     {
         title: "UChicago Summer Session Pre-College Program",
@@ -30409,7 +30409,7 @@ const list = [
             "To participate in the UChicago Summer Session Pre-College Program you must:\n- Be high school students\n- Be passionate about learning\n- Be willing to take intellectual risks",
         cost: ["UChicago Summer Session Pre-College Program costs money to enter", true, "unknown", "unknown"],
         tags: ["Education"],
-        id: 1195,
+        id: 1196,
     },
     {
         title: "The Summer Bridge Programs",
@@ -30433,7 +30433,7 @@ const list = [
             "To participate in the Summer Bridge Programs you must:\n- Be high school students or admitted first-year UIC students\n- Meet the minimum GPA requirement (usually 2.5 or higher)\n- Exhibit an interest in the program's field of study\n- Meet any additional requirements specific to the program they are applying to",
         cost: ["The Summer Bridge Programs is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Education", "Mentoring"],
-        id: 1196,
+        id: 1197,
     },
     {
         title: "Summer Internship Program",
@@ -30457,7 +30457,7 @@ const list = [
             "To participate in the Summer Internship Program you must:\n- Be a resident of the City of Chicago\n- Be a high school Sophomore or Junior (2022-2023 school year)\n- Maintain a \u201cB\u201d or 3.0 average on report cards\n- Have Family Household Income below $80,000/year",
         cost: ["Summer Internship Program is a free activity", false, 0, "unknown"],
         tags: ["Business", "Law"],
-        id: 1197,
+        id: 1198,
     },
     {
         title: "Summer Internship",
@@ -30480,7 +30480,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Summer Internship is a free activity", false, 0, "unknown"],
         tags: ["Environmental Science", "Biology"],
-        id: 1198,
+        id: 1199,
     },
     {
         title: "Artslife",
@@ -30503,7 +30503,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Artslife is a free activity", false, 0, "unknown"],
         tags: ["Art/Design", "Education", "Leadership/Management", "Museum Studies"],
-        id: 1199,
+        id: 1200,
     },
     {
         title: "Internship Program ",
@@ -30528,7 +30528,7 @@ const list = [
             "To participate in the Internship Program you must:\n\n- Be at least 16 years of age.\n- Be enrolled as a student at an accredited high school, college, or university.\n- Submit proof of enrollment along with the online application.\n- Complete the online application process.\n- Submit a resume and current transcripts.\n- Reside in New Haven (preference will be given to those residing in New Haven).",
         cost: ["Internship Program is a free activity", false, 0, "unknown"],
         tags: ["Government/Politics", "Leadership/Management", "Education"],
-        id: 1200,
+        id: 1201,
     },
     {
         title: "Emerging Filmmaker Program",
@@ -30552,7 +30552,7 @@ const list = [
         requirements: "Unknown",
         cost: ["Emerging Filmmaker Program is a free activity", false, 0, "unknown"],
         tags: ["Film/Cinema", "Arts/Design"],
-        id: 1201,
+        id: 1202,
     },
     {
         title: "Internship Program",
@@ -30576,7 +30576,7 @@ const list = [
             "To participate in the Internship Program you must:\n- Be enrolled in high school in New York City\n- Be at least 16 years old\n- Have a valid working card\n- Be eligible to lawfully work in the United States",
         cost: ["Internship Program is a free activity", false, 0, "unknown"],
         tags: ["Business", "Mentoring"],
-        id: 1202,
+        id: 1203,
     },
     {
         title: "Harvard Pre-College Program",
@@ -30600,7 +30600,7 @@ const list = [
             "To participate in the Harvard Pre-College Program you must:\n- Be rising juniors or seniors\n- Be at least 16 years old by June 17, 2023\n- Not turn 19 years old before July 31, 2023\n- Be mature and academically motivated\n- Be interested in exploring a potential major or learning about college life",
         cost: ["Harvard Pre-College Program costs money to enter", true, "unknown", "unknown"],
         tags: ["Education", "STEM", "Social Science"],
-        id: 1203,
+        id: 1204,
     },
     {
         title: "Vermont Adaptive\u2019s Apprenticeship Program",
@@ -30624,7 +30624,7 @@ const list = [
             "To participate in the Vermont Adaptive\u2019s Apprenticeship Program you must be between the ages of 14-17.",
         cost: ["Vermont Adaptive\u2019s Apprenticeship Program is a free activity", false, 0, "unknown"],
         tags: ["Sports", "Non-Profit Management"],
-        id: 1204,
+        id: 1205,
     },
     {
         title: "The Columbia Climate School in the Green Mountains",
@@ -30648,7 +30648,7 @@ const list = [
             "To participate in the Columbia Climate School in the Green Mountains you must:\n- Be a student in grades 9-12 or a motivated rising 9th grade student.",
         cost: ["The Columbia Climate School in the Green Mountains costs money to enter", true, "unknown", "unknown"],
         tags: ["Environmental Science", "Climate Change"],
-        id: 1205,
+        id: 1206,
     },
     {
         title: "Legacy Youth Leadership Program",
@@ -30671,7 +30671,7 @@ const list = [
         requirements: "To participate in the Legacy Youth Leadership Program you must:\n\n- Be a high school student",
         cost: ["Legacy Youth Leadership Program is a free activity", false, 0, "unknown"],
         tags: ["Leadership/Management", "History"],
-        id: 1206,
+        id: 1207,
     },
     {
         title: "American Red Cross Teen Volunteer",
@@ -30694,7 +30694,7 @@ const list = [
         requirements: "To participate in the American Red Cross Teen Volunteer you must be 15-18 years of age.",
         cost: ["American Red Cross Teen Volunteer is a free activity", false, 0, "unknown"],
         tags: ["Leadership/Management", "Volunteer Work/Community Service"],
-        id: 1207,
+        id: 1208,
     },
     {
         title: "Next Generation STEM Internship Program",
@@ -30718,7 +30718,7 @@ const list = [
             "Requirements: To participate in the Next Generation STEM Internship Program (NGSI) you must:\n- Be rising juniors/seniors or recently graduated seniors (within two years of graduation who have not yet enrolled in college)\n- Be in good standing at an accredited high school or enrolled in an accredited home school program in Anderson, Blount, Knox, Roane, or Loudon County\n- Be at least 16 years old by the appointment period start date\n- Have a minimum GPA of 3.0/4.0\n- Be U.S. citizens or legal permanent residents at the time of application\n- Participate 40 hours per week\n- Miss a maximum of 5 days (without stipend) during the appointment period if necessary for other commitments\n- Complete an online application via Zintillect\n- Obtain two STEM teacher and principal (curriculum coordinator for home school students) recommendations through the same system\n- Complete pre- and post-appointment surveys\n- Behave in a responsible and professional manner\n- Avoid activities that interfere with their appointment period\n- Complete a report at the end of the appointment",
         cost: ["Next Generation STEM Internship Program is a free activity", false, 0, "unknown"],
         tags: ["Science", "Engineering", "Computer Science", "Research", "Internship"],
-        id: 1208,
+        id: 1209,
     },
     {
         title: "Raleigh Summer Youth Employment Program (RSYEP)",
@@ -30742,7 +30742,7 @@ const list = [
             "To participate in the Raleigh Summer Youth Employment Program (RSYEP), you must:\n\n- Be between the ages of 15 and 18 as of May 31, 2023\n- Reside within Raleigh city limits\n- Be available to work from June 20 to August 4\n- Attend the mandatory in-person program orientation on May 20\n- Not miss more than four program days or be enrolled in summer school\n- Be the sole household member participating in the program\n- Have computer and internet access (if choosing the virtual option)\n- Possess an NC State Issued ID, Learner\u2019s Permit, Driver\u2019s License, or current school report card with a Raleigh zip code at the time of interview\n- Be fully vaccinated against COVID-19 for in-person or hybrid work (vaccination not required for virtual/remote employment)",
         cost: ["Raleigh Summer Youth Employment Program (RSYEP) is a free activity", false, 0, "unknown"],
         tags: ["Business", "Government", "Leadership/Management", "Mentoring", "Social Sciences and Humanities"],
-        id: 1209,
+        id: 1210,
     },
     {
         host: "Oxford University",
@@ -30770,7 +30770,7 @@ const list = [
         cost: ["COMPOS (Comprehensive Oxford Maths and Physics Online School) costs 25 GBP to enter", true, 25, "GBP"],
         tags: ["STEM", "Mathematics", "Physics", "Diversity and Inclusion"],
         type: ["Summer Program", "Internship", "Research", "Competition"],
-        id: 1210,
+        id: 1211,
     },
     {
         host: "Harvard Crimson",
@@ -30793,7 +30793,7 @@ const list = [
         cost: ["HCGEC Essay Competition costs 12 USD to enter", true, 12, "USD"],
         tags: ["Creative Writing", "Journalism", "Literature"],
         type: ["Summer Program", "Internship", "Research", "Competition"],
-        id: 1211,
+        id: 1212,
     },
     {
         host: "SARC",
@@ -30816,7 +30816,7 @@ const list = [
         cost: ["SARC Research Competition costs 15 USD to enter", true, 15, "USD"],
         tags: ["STEM", "Research", "Writing"],
         type: ["Summer Program", "Internship", "Research", "Competition"],
-        id: 1212,
+        id: 1213,
     },
     {
         host: "ISRO",
@@ -30839,7 +30839,7 @@ const list = [
         cost: ["ISRO Young Scientist Programme is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Astronomy", "Engineering"],
         type: ["Summer Program", "Internship", "Research", "Competition"],
-        id: 1213,
+        id: 1214,
     },
     {
         host: "Ashoka University",
@@ -30862,7 +30862,7 @@ const list = [
         cost: ["Ashoka University Young Scholars Programme costs 49000 INR to enter", true, 49000, "INR"],
         tags: ["Liberal Arts", "Education"],
         type: ["Summer Program", "Internship", "Research", "Competition"],
-        id: 1214,
+        id: 1215,
     },
     {
         host: "Stiftung Entrepreneurship",
@@ -30885,7 +30885,7 @@ const list = [
         cost: ["Youth Citizen Entrepreneurship Competition costs 800 EUR to enter", true, 800, "EUR"],
         tags: ["Entrepreneurship", "Social Impact", "Business"],
         type: ["Summer Program", "Internship", "Research", "Competition"],
-        id: 1215,
+        id: 1216,
     },
     {
         host: "Global Genius Music Competition",
@@ -30908,7 +30908,7 @@ const list = [
         cost: ["Global Genius Music Competition costs 65 GBP to enter", true, 65, "GBP"],
         tags: ["Music"],
         type: ["Summer Program", "Internship", "Research", "Competition"],
-        id: 1216,
+        id: 1217,
     },
     {
         host: "Foyle Foundation",
@@ -30931,7 +30931,7 @@ const list = [
         cost: ["Foyle Young Poets Award is a free activity", false, 0, "unknown"],
         tags: ["Literature", "Creative Writing"],
         type: ["Summer Program", "Internship", "Research", "Competition"],
-        id: 1217,
+        id: 1218,
     },
     {
         host: "BETA Camp",
@@ -30954,7 +30954,7 @@ const list = [
         cost: ["BETA Camp costs 3500 USD to enter", true, 3500, "USD"],
         tags: ["Business and Entrepreneurship", "Entrepreneurship"],
         type: ["Summer Program", "Internship", "Research", "Competition"],
-        id: 1218,
+        id: 1219,
     },
     {
         host: "University of Pennsylvania",
@@ -30977,7 +30977,7 @@ const list = [
         cost: ["Provost\u2019s Summer Mentorship Program is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Biology", "Mentoring"],
         type: ["Summer Program", "Internship", "Research", "Competition"],
-        id: 1219,
+        id: 1220,
     },
     {
         host: "Oxford University",
@@ -31000,7 +31000,7 @@ const list = [
         cost: ["Engineering Academy costs 6995 GBP to enter", true, 6995, "GBP"],
         tags: ["Engineering,STEM,Mathematics,Debate,Public Speaking"],
         type: ["Summer Program", "Internship", "Research", "Competition"],
-        id: 1220,
+        id: 1221,
     },
     {
         host: "Parsons New School",
@@ -31023,7 +31023,7 @@ const list = [
         cost: ["Parsons Summer Intensive Studies costs 5145 USD to enter", true, 5145, "USD"],
         tags: ["Art/Design"],
         type: ["Summer Program", "Internship", "Research", "Competition"],
-        id: 1221,
+        id: 1222,
     },
     {
         host: "Kode with Klossy",
@@ -31047,7 +31047,7 @@ const list = [
         cost: ["Klossy coding program is a free activity", false, 0, "unknown"],
         tags: ["Computer Science", "STEM"],
         type: ["Summer Program", "Internship", "Research", "Competition"],
-        id: 1222,
+        id: 1223,
     },
     {
         host: "Ghetto Film School",
@@ -31070,7 +31070,7 @@ const list = [
         cost: ["NYC ghetto filmmaking course is a free activity", false, 0, "unknown"],
         tags: ["Art/Design", "Film/Cinema", "Business and Entrepreneurship"],
         type: ["Summer Program", "Internship", "Research", "Competition"],
-        id: 1223,
+        id: 1224,
     },
     {
         host: "EnergyMag",
@@ -31093,7 +31093,7 @@ const list = [
         cost: ["EnergyMag research internship costs money to enter", true, 0, "unknown"],
         tags: ["Environmental Science", "STEM", "Business"],
         type: ["Summer Program", "Internship", "Research", "Competition"],
-        id: 1224,
+        id: 1225,
     },
     {
         host: "Cornell University",
@@ -31116,7 +31116,7 @@ const list = [
         cost: ["ART 1101 Art as Experience costs 5040 USD to enter", true, 5040, "USD"],
         tags: ["Art/Design", "Visual Arts"],
         type: ["Summer Program", "Internship", "Research", "Competition"],
-        id: 1225,
+        id: 1226,
     },
     {
         host: "Harvard University",
@@ -31140,7 +31140,7 @@ const list = [
         cost: ["Entrepreneur Bootcamp costs 1750 USD to enter", true, 1750, "USD"],
         tags: ["Entrepreneurship", "Business"],
         type: ["Summer Program", "Internship", "Research", "Competition"],
-        id: 1226,
+        id: 1227,
     },
     {
         host: "Aalto University Finland",
@@ -31163,7 +31163,7 @@ const list = [
         cost: ["Circular Economy Summer Program costs 590 GBP to enter", true, 590, "GBP"],
         tags: ["Environmental Science", "Economics", "Engineering"],
         type: ["Summer Program", "Internship", "Research", "Competition"],
-        id: 1227,
+        id: 1228,
     },
     {
         host: "Massachusetts Institute of Technology",
@@ -31187,7 +31187,7 @@ const list = [
         cost: ["MIT Mechanical Engineering Program is a free activity", false, 0, "unknown"],
         tags: ["Engineering"],
         type: ["Summer Program", "Internship", "Research", "Competition"],
-        id: 1228,
+        id: 1229,
     },
     {
         host: "Harvard University",
@@ -31210,7 +31210,7 @@ const list = [
         cost: ["CS50's Introduction to Game Development is a free activity", false, 0, "unknown"],
         tags: ["Game Development", "Computer Science"],
         type: ["Summer Program", "Internship", "Research", "Competition"],
-        id: 1229,
+        id: 1230,
     },
     {
         host: "Lumiere Education",
@@ -31234,7 +31234,7 @@ const list = [
         cost: ["Bretton Woods International Economics Competition costs 39 USD to enter", true, 39, "USD"],
         tags: ["Economics"],
         type: ["Summer Program", "Internship", "Research", "Competition"],
-        id: 1230,
+        id: 1231,
     },
     {
         host: "Stanford University",
@@ -31257,7 +31257,7 @@ const list = [
         cost: ["Introduction to Probability Management is a free activity", false, 0, "unknown"],
         tags: ["Mathematics", "Statistics"],
         type: ["Summer Program", "Internship", "Research", "Competition"],
-        id: 1231,
+        id: 1232,
     },
     {
         host: "The California Institute of Technology ",
@@ -31280,7 +31280,7 @@ const list = [
         cost: ["Ph2a Online: Vibrations & Waves is a free activity", false, 0, "unknown"],
         tags: ["Physics"],
         type: ["Summer Program", "Internship", "Research", "Competition"],
-        id: 1232,
+        id: 1233,
     },
     {
         host: "Brown University",
@@ -31304,7 +31304,7 @@ const list = [
         cost: ["BrownX: Introduction to Engineering and Design is a free activity", false, 0, "unknown"],
         tags: ["Engineering", "Art/Design", "STEM"],
         type: ["Summer Program", "Internship", "Research", "Competition"],
-        id: 1233,
+        id: 1234,
     },
     {
         host: "Indian Institute Of Management\u2013Bangalore",
@@ -31328,7 +31328,7 @@ const list = [
         cost: ["IIMBx: Marketing Management is a free activity", false, 0, "unknown"],
         tags: ["Marketing/Advertising", "Business"],
         type: ["Summer Program", "Internship", "Research", "Competition"],
-        id: 1234,
+        id: 1235,
     },
     {
         host: "University Of California , Berkeley",
@@ -31352,7 +31352,7 @@ const list = [
         cost: ["BerkeleyX: The Science of Happiness is a free activity", false, 0, "unknown"],
         tags: ["Social Science", "Psychology"],
         type: ["Summer Program", "Internship", "Research", "Competition"],
-        id: 1235,
+        id: 1236,
     },
     {
         host: "International Business Machines Corporation",
@@ -31376,7 +31376,7 @@ const list = [
         cost: ["IBM: Analyzing Data with Excel is a free activity", false, 0, "USD"],
         tags: ["Business", "Data Science"],
         type: ["Summer Program", "Internship", "Research", "Competition"],
-        id: 1236,
+        id: 1237,
     },
     {
         host: "Australian National University",
@@ -31400,7 +31400,7 @@ const list = [
         cost: ["ANUx: Greatest Unsolved Mysteries of the Universe is a free activity", false, 0, "unknown"],
         tags: ["Astronomy", "Physics"],
         type: ["Summer Program", "Internship", "Research", "Competition"],
-        id: 1237,
+        id: 1238,
     },
     {
         host: "The University Of Maryland College",
@@ -31424,7 +31424,7 @@ const list = [
         cost: ["UMD, USMx: Data Science and Agile Systems for Product Management is a free activity", false, 0, "unknown"],
         tags: ["Computer Science", "Business", "Data Science"],
         type: ["Summer Program", "Internship", "Research", "Competition"],
-        id: 1238,
+        id: 1239,
     },
     {
         host: "Rochester Institute Of Technology",
@@ -31448,7 +31448,7 @@ const list = [
         cost: ["RITx: Storytelling in the Workplace is a free activity", false, 0, "unknown"],
         tags: ["Communication", "Public Speaking"],
         type: ["Summer Program", "Internship", "Research", "Competition"],
-        id: 1239,
+        id: 1240,
     },
     {
         host: "Harvard University",
@@ -31472,7 +31472,7 @@ const list = [
         cost: ["HarvardX: Exercising Leadership: Foundational Principles is a free activity", false, 0, "unknown"],
         tags: ["Leadership/Management"],
         type: ["Summer Program", "Internship", "Research", "Competition"],
-        id: 1240,
+        id: 1241,
     },
     {
         host: "Massachusetts Institute of Technology",
@@ -31496,7 +31496,7 @@ const list = [
         cost: ["MITx: Becoming an Entrepreneur is a free activity", false, 0, "unknown"],
         tags: ["Entrepreneurship"],
         type: ["Summer Program", "Internship", "Research", "Competition"],
-        id: 1241,
+        id: 1242,
     },
     {
         title: "Blue Ocean Competition",
@@ -31520,7 +31520,7 @@ const list = [
             "To participate in the Blue Ocean Competition you must:\n\n1. Visit the official Blue Ocean Competition website to learn about the competition details and requirements.\n2. Form a team of 3-5 high school students who are interested in participating in the competition.\n3. Choose a business concept or idea to develop and present at the competition.\n4. Register their team for the competition by filling out the online registration form on the competition website.\n5. Pay the registration fee, if required, to complete the registration process.\n6. Develop a comprehensive business plan and presentation for their chosen business concept.\n7. Submit their business plan and presentation materials by the specified deadline.\n8. Wait for confirmation of acceptance and details about the competition date, location, and format.",
         cost: ["Blue Ocean Competition is a free activity", false, 0, "unknown"],
         tags: ["Business", "Entrepreneurship"],
-        id: 1242,
+        id: 1243,
     },
     {
         title: "Cooper Hewitt Design Competition",
@@ -31544,7 +31544,7 @@ const list = [
             'To participate in the Cooper Hewitt Design Competition you must:\n\n1. Visit the official website.\n2. Navigate to the "Join" or "Participate" section.\n3. Review the guidelines and eligibility requirements.\n4. Complete the online registration form.\n5. Submit any required documentation.\n6. Pay any registration fees.\n7. Await confirmation of registration.',
         cost: ["Cooper Hewitt Design Competition is a free activity", false, 0, "unknown"],
         tags: ["Art/Design", "Business", "Entrepreneurship"],
-        id: 1243,
+        id: 1244,
     },
     {
         title: "Diamond Challenge",
@@ -31568,7 +31568,7 @@ const list = [
             "To participate in the Diamond Challenge you must:\n\n1. Access the registration form on the Diamond Challenge website.\n2. Complete the registration form accurately and promptly.\n3. Submit the registration form before the deadline.\n4. Await confirmation of registration and further instructions.\n5. Prepare and submit the required business plan or pitch according to guidelines.\n6. Attend mandatory orientation sessions or workshops.\n7. Participate in preliminary rounds and advance to the final round if eligible.",
         cost: ["Diamond Challenge is a free activity", false, 0, "unknown"],
         tags: ["Business and Entrepreneurship", "Entrepreneurship"],
-        id: 1244,
+        id: 1245,
     },
     {
         title: "Global Youth Entrepreneurship Challenge",
@@ -31592,7 +31592,7 @@ const list = [
             "To participate in the Global Youth Entrepreneurship Challenge you must:\n\n1. Research the competition's objectives and requirements.\n2. Confirm eligibility criteria.\n3. Form a team of interested classmates.\n4. Develop a business plan that aligns with the competition's theme and guidelines.\n5. Register for the competition by submitting the required application materials.\n6. Prepare for the competition by refining the business plan, practicing presentations, and seeking mentorship.\n7. Attend any required orientation sessions or workshops.\n8. Participate in the competition, presenting the business plan to a panel of judges and engaging in any additional activities or tasks required.",
         cost: ["Global Youth Entrepreneurship Challenge is a free activity", false, 0, "unknown"],
         tags: ["Business and Entrepreneurship", "Leadership/Management"],
-        id: 1245,
+        id: 1246,
     },
     {
         title: "Conrad Challenge",
@@ -31616,7 +31616,7 @@ const list = [
             "To participate in the Conrad Challenge you must:\n\n1. Visit the Conrad Challenge website to learn about the competition and its guidelines.\n2. Form a team of 2-5 high school students and identify a mentor.\n3. Choose a challenge category.\n4. Develop an innovative product or service.\n5. Write a business plan.\n6. Submit the business plan and any required materials by the specified deadline.\n7. Await notification of acceptance and further instructions from the Conrad Challenge organizers.",
         cost: ["Conrad Challenge costs money to enter", true, "unknown", "unknown"],
         tags: ["Business", "Entrepreneurship"],
-        id: 1246,
+        id: 1247,
     },
     {
         title: "Venture Capital Investment Competition",
@@ -31640,7 +31640,7 @@ const list = [
             "To participate in the Venture Capital Investment Competition you must:\n\n1. Research the competition requirements and rules.\n2. Form a team of 3-5 members with diverse skill sets.\n3. Register the team online and pay any required fees.\n4. Prepare a business plan and financial model outlining their investment strategy and potential returns.\n5. Submit the business plan and financial model by the deadline.\n6. Attend the competition and present their investment strategy to judges.\n7. Participate in a Q&A session with judges to defend their decisions.\n8. Await competition results and judge feedback.",
         cost: ["Venture Capital Investment Competition is a free activity", false, 0, "unknown"],
         tags: ["Business", "Entrepreneurship"],
-        id: 1247,
+        id: 1248,
     },
     {
         title: "DECA",
@@ -31664,7 +31664,7 @@ const list = [
             "To participate in the DECA you must:\n\n1. Research DECA program and competition guidelines.\n2. Contact the high school's DECA advisor or club leader.\n3. Complete necessary paperwork or registration forms.\n4. Attend required meetings or training sessions.\n5. Prepare a business or marketing project or presentation.\n6. Submit project or presentation according to competition deadlines.\n7. Participate in the competition event.",
         cost: ["DECA costs money to enter", true, "unknown", "unknown"],
         tags: ["Business", "Marketing/Advertising"],
-        id: 1248,
+        id: 1249,
     },
     {
         title: "Paradigm Challenge",
@@ -31688,7 +31688,7 @@ const list = [
             'To participate in the Paradigm Challenge you must:\n1. Visit the official website.\n2. Navigate to the "Competition" section.\n3. Read the rules and regulations.\n4. Complete the online registration form.\n5. Pay the registration fee, if applicable.\n6. Submit the required documents or materials.\n7. Await confirmation of entry from the competition organizers.',
         cost: ["Paradigm Challenge is a free activity", false, 0, "unknown"],
         tags: ["Business and Entrepreneurship"],
-        id: 1249,
+        id: 1250,
     },
     {
         title: "Technovation Challenge",
@@ -31712,7 +31712,7 @@ const list = [
             "To participate in the Technovation Challenge you must:\n1. Form a team of 1-5 high school students.\n2. Secure a mentor to guide the team through the competition.\n3. Register for the Technovation Challenge on their website.\n4. Download the Technovation Challenge curriculum and commence project development.\n5. Develop a mobile app or business plan that tackles a social or environmental issue.\n6. Submit the project before the competition deadline.\n7. Participate in the regional pitch event if the team's project is selected.",
         cost: ["Technovation Challenge is a free activity", false, 0, "unknown"],
         tags: ["Computer Science", "Entrepreneurship", "STEM"],
-        id: 1250,
+        id: 1251,
     },
     {
         title: "SAGE World Series of Innovation",
@@ -31736,7 +31736,7 @@ const list = [
             'To participate in the SAGE World Series of Innovation you must:\n\n1. Visit the SAGE World Series of Innovation website.\n2. Click on the "Join" or "Register" button.\n3. Complete the registration form.\n4. Submit any necessary documents or materials.\n5. Pay any registration fees, if applicable.\n6. Await confirmation of registration and further instructions.',
         cost: ["SAGE World Series of Innovation is a free activity", false, 0, "unknown"],
         tags: ["Business", "Innovation"],
-        id: 1251,
+        id: 1252,
     },
     {
         title: "YouthBiz",
@@ -31760,7 +31760,7 @@ const list = [
             'To participate in the YouthBiz you must:\n1. Visit the official YouthBiz website and navigate to the "Competitions" section.\n2. Review the eligibility requirements and competition guidelines to ensure compliance.\n3. Complete the online registration form, providing all necessary information and documentation.\n4. Pay the registration fee, if applicable, and submit any required materials.\n5. Await confirmation of registration and receive further instructions on competition dates and requirements.\n6. Prepare thoroughly for the competition, including refining business concepts and presentation skills.\n7. Attend the scheduled competition and participate in all required activities as outlined by YouthBiz.\n8. Engage in the judging process and await the results to determine standing in the competition.',
         cost: ["YouthBiz is a free activity", false, 0, "unknown"],
         tags: ["Business", "Entrepreneurship"],
-        id: 1252,
+        id: 1253,
     },
     {
         title: "USA Computing Olympiad (USACO)",
@@ -31784,7 +31784,7 @@ const list = [
             "To participate in the USA Computing Olympiad (USACO) you must:\n1. Visit the USACO website and create an account.\n2. Complete the online registration form with personal and school information.\n3. Pay the registration fee, if applicable.\n4. Familiarize themselves with the USACO competition format and rules by reviewing the official website's resources.\n5. Practice solving past USACO problems to prepare for the competition.\n6. Check the competition schedule and register for the appropriate division (Bronze, Silver, Gold, or Platinum) based on their skill level.\n7. Participate in the designated competition rounds, which typically consist of a set of programming problems to be solved within a specified time frame.\n8. Submit their solutions through the USACO website during the designated competition window.",
         cost: ["USA Computing Olympiad (USACO) is a free activity", false, 0, "unknown"],
         tags: ["Computer Science", "STEM"],
-        id: 1253,
+        id: 1254,
     },
     {
         title: "American Computer Science League (ACSL)",
@@ -31808,7 +31808,7 @@ const list = [
             "To participate in the American Computer Science League (ACSL) you must:\n\n1. Visit the ACSL website.\n2. Register with the required information.\n3. Pay the registration fee, if applicable.\n4. Review the competition rules and guidelines.\n5. Form a team with other interested students, if applicable.\n6. Practice and prepare using the resources on the ACSL website.\n7. Attend informational sessions or meetings.\n8. Submit required documents by the deadline.\n9. Monitor updates and announcements from the ACSL.",
         cost: ["American Computer Science League (ACSL) costs money to enter", true, "unknown", "unknown"],
         tags: ["Computer Science", "STEM"],
-        id: 1254,
+        id: 1255,
     },
     {
         title: "CyberPatriot",
@@ -31832,7 +31832,7 @@ const list = [
             "To participate in the CyberPatriot you must:\n\n1. Form a team of 2-6 high school students with a faculty advisor.\n2. Register for the CyberPatriot competition on the official website.\n3. Complete the required forms and pay the registration fee.\n4. Attend a mandatory training session.\n5. Download and install the competition software.\n6. Participate in the online qualifying round.\n7. Advance to the next rounds of the competition if qualified.",
         cost: ["CyberPatriot is a free activity", false, 0, "unknown"],
         tags: ["Computer Science", "Cybersecurity"],
-        id: 1255,
+        id: 1256,
     },
     {
         title: "PicoCTF",
@@ -31856,7 +31856,7 @@ const list = [
             'To participate in the PicoCTF you must:\n\n1. Visit the PicoCTF website and locate the "Sign Up" or "Register" button.\n2. Create an account by providing a valid email address and setting a password.\n3. Complete the registration form, providing any required personal information.\n4. Verify their email address by clicking on the verification link sent to the email provided during registration.\n5. Log in to their account and access the competition platform to familiarize themselves with the interface and rules.',
         cost: ["PicoCTF is a free activity", false, 0, "unknown"],
         tags: ["Cybersecurity", "Computer Science"],
-        id: 1256,
+        id: 1257,
     },
     {
         title: "HPE CodeWars",
@@ -31880,7 +31880,7 @@ const list = [
             "To participate in the HPE CodeWars you must:\n1. Visit the official HPE CodeWars website.\n2. Register by providing team name, school information, and contact details.\n3. Prepare by practicing coding challenges and problem-solving exercises.\n4. Arrive at the designated location with necessary materials on the day of the competition.\n5. Follow the rules and guidelines provided by the organizers.\n6. Submit team solutions and await results.",
         cost: ["HPE CodeWars is a free activity", false, 0, "unknown"],
         tags: ["Computer Science", "Coding/Programming"],
-        id: 1257,
+        id: 1258,
     },
     {
         title: "Stanford ACM ProCo",
@@ -31904,7 +31904,7 @@ const list = [
             'To participate in the Stanford ACM ProCo you must:\n\n1. Visit the Stanford ACM ProCo website.\n2. Navigate to the "Join" or "Registration" section of the website.\n3. Complete the registration form with personal information (name, school, contact details).\n4. Pay any required registration fees.\n5. Await confirmation email or notification from the organizers.\n6. Follow any additional instructions provided by the organizers.\n7. Prepare for the competition by studying and practicing computer science concepts and problems.',
         cost: ["Stanford ACM ProCo costs money to enter", true, "unknown", "unknown"],
         tags: ["Computer Science", "STEM"],
-        id: 1258,
+        id: 1259,
     },
     {
         title: "Harker Programming Invitational",
@@ -31928,7 +31928,7 @@ const list = [
             'To participate in the Harker Programming Invitational you must:\n\n1. Visit the official Harker Programming Invitational website.\n2. Click on the "Registration" or "Join" tab on the website.\n3. Complete the online registration form with the required information.\n4. Pay the registration fee, if applicable.\n5. Review the competition rules and guidelines.\n6. Submit the registration form and await confirmation of participation.',
         cost: ["Harker Programming Invitational costs money to enter", true, "unknown", "unknown"],
         tags: ["Computer Science", "Social Science"],
-        id: 1259,
+        id: 1260,
     },
     {
         title: "Girls Programming League Challenge",
@@ -31952,7 +31952,7 @@ const list = [
             "To participate in the Girls Programming League Challenge you must:\n1. Visit the Girls Programming League Challenge website.\n2. Complete the registration form with personal and school information.\n3. Form a team of 1-4 high school students and designate a team captain.\n4. Receive a confirmation email with further instructions for the competition.\n5. Submit any required forms or waivers by the deadline.\n6. Pay any applicable registration fees.\n7. Attend any mandatory orientation or training sessions.\n8. Prepare for the competition by studying provided materials and practicing coding skills.\n9. Participate in the competition on the designated date and time.\n10. Await the final results and any potential awards or recognition.",
         cost: ["Girls Programming League Challenge is a free activity", false, 0, "unknown"],
         tags: ["Computer Science", "Coding/Programming"],
-        id: 1260,
+        id: 1261,
     },
     {
         title: "Technovation Girls",
@@ -31976,7 +31976,7 @@ const list = [
             "To participate in the Technovation Girls you must:\n1. Visit the Technovation Girls website to learn about the competition and its requirements.\n2. Form a team of 1-5 high school girls and identify an adult mentor to guide the team.\n3. Register for the competition by filling out the online application form and paying the registration fee.\n4. Download the Technovation Girls curriculum and start working on the project, following the guidelines and deadlines provided.\n5. Attend any required training or workshops provided by Technovation Girls to enhance skills and knowledge.\n6. Submit the completed project and business plan by the specified deadline.\n7. Await the judging results and feedback from the competition organizers.",
         cost: ["Technovation Girls is a free activity", false, 0, "unknown"],
         tags: ["Computer Science", "STEM", "Coding/Programming", "App Development"],
-        id: 1261,
+        id: 1262,
     },
     {
         title: "Google Code Jam",
@@ -32000,7 +32000,7 @@ const list = [
             'To participate in the Google Code Jam you must:\n\n1. Visit the Google Code Jam website.\n2. Click on the "Register" or "Sign Up" button.\n3. Fill out the registration form with their personal details and contact information.\n4. Verify their email address by clicking on the link sent to them by Google Code Jam.\n5. Create a username and password for their account.\n6. Complete any additional required information or tasks, such as agreeing to the competition rules or submitting a coding sample.\n7. Once their registration is complete, they will receive confirmation and further instructions for participating in the competition.',
         cost: ["Google Code Jam is a free activity", false, 0, "unknown"],
         tags: ["Computer Science", "Coding/Programming"],
-        id: 1262,
+        id: 1263,
     },
     {
         title: "USA Physics Olympiad",
@@ -32024,7 +32024,7 @@ const list = [
             "To participate in the USA Physics Olympiad you must:\n\n1. Register for the competition on the official USA Physics Olympiad website.\n2. Study and prepare for the first round exam, the F=ma Exam, typically held in January.\n3. Take the F=ma Exam at a designated testing center or under the supervision of a proctor.\n4. If qualified based on the F=ma Exam score, take the second round exam, the USA Physics Olympiad Exam, typically held in April.\n5. Take the USA Physics Olympiad Exam at a designated testing center or under the supervision of a proctor.\n6. Based on performance on the USA Physics Olympiad Exam, you may be selected to attend the U.S. Physics Team Training Camp and potentially represent the United States at the International Physics Olympiad.",
         cost: ["USA Physics Olympiad is a free activity", false, 0, "unknown"],
         tags: ["Physics", "STEM"],
-        id: 1263,
+        id: 1264,
     },
     {
         title: "Physics Bowl",
@@ -32048,7 +32048,7 @@ const list = [
             "To participate in the Physics Bowl you must:\n\n1. Determine if their high school participates in the competition.\n2. If not, inquire with a physics teacher or school administration about forming a team.\n3. If participating, contact the faculty advisor or physics teacher to express interest.\n4. Obtain registration forms and information.\n5. Attend informational meetings and training sessions.\n6. Study physics concepts and practice sample questions.\n7. Participate in practice sessions and mock competitions.\n8. Submit registration forms and fees by the deadline.\n9. Represent their school in the competition.",
         cost: ["Physics Bowl is a free activity", false, 0, "unknown"],
         tags: ["Physics", "STEM"],
-        id: 1264,
+        id: 1265,
     },
     {
         title: "Physics Brawl",
@@ -32072,7 +32072,7 @@ const list = [
             "To participate in the Physics Brawl you must:\n\n1. Visit the official website of Physics Brawl.\n2. Locate the registration link on the website.\n3. Complete the registration form with personal and school information.\n4. Submit the registration fee, if applicable.\n5. Await a confirmation email from Physics Brawl with further instructions.\n6. Follow the instructions to complete any additional requirements, such as submitting a project or attending a qualifying exam.",
         cost: ["Physics Brawl is a free activity", false, 0, "unknown"],
         tags: ["Physics"],
-        id: 1265,
+        id: 1266,
     },
     {
         title: "Sir Isaac Newton Exam",
@@ -32096,7 +32096,7 @@ const list = [
             "To participate in the Sir Isaac Newton Exam you must:\n1. Visit the Sir Isaac Newton Exam website for competition information.\n2. Register by completing the form with personal details.\n3. Pay the registration fee, if applicable.\n4. Receive confirmation email with exam details.\n5. Prepare by studying physics concepts and practicing sample questions.\n6. Attend the exam and complete it within the time frame.\n7. Await results to determine performance.",
         cost: ["Sir Isaac Newton Exam is a free activity", false, 0, "unknown"],
         tags: ["Physics"],
-        id: 1266,
+        id: 1267,
     },
     {
         title: "Physics Unlimited Premier Competition",
@@ -32120,7 +32120,7 @@ const list = [
             "To participate in the Physics Unlimited Premier Competition you must:\n\n1. Visit the Physics Unlimited Premier Competition website.\n2. Register as a participant using the online registration form.\n3. Provide all required personal and contact information.\n4. Pay the registration fee, if applicable.\n5. Receive a confirmation email with all necessary details and competition rules.\n6. Prepare for the competition by studying relevant physics concepts and problem solving strategies.\n7. Attend the competition on the specified date and time.\n8. Participate in the competition by completing the assigned tasks or problems.\n9. Await the results and any further instructions from the competition organizers.",
         cost: ["Physics Unlimited Premier Competition costs money to enter", true, "unknown", "unknown"],
         tags: ["Physics"],
-        id: 1267,
+        id: 1268,
     },
     {
         title: "Apparatus Competition",
@@ -32144,7 +32144,7 @@ const list = [
             "To participate in the Apparatus Competition you must:\n\n1. Obtain competition guidelines and rules from their high school's Physics teacher or department.\n2. Form a team of 2-4 students.\n3. Select a team captain as the main point of contact.\n4. Register their team by the deadline, providing all required information.\n5. Prepare a project proposal outlining their apparatus and physics principles.\n6. Build and test their apparatus to meet competition criteria.\n7. Practice presenting their apparatus and physics principles.\n8. Attend the competition and present their apparatus to judges.\n9. Participate in any additional rounds or activities as required.",
         cost: ["Apparatus Competition costs money to enter", true, "unknown", "unknown"],
         tags: ["Physics", "STEM", "Engineering"],
-        id: 1268,
+        id: 1269,
     },
     {
         title: "Physics Cup",
@@ -32168,7 +32168,7 @@ const list = [
             "To participate in the Physics Cup you must:\n\n1. Visit the official Physics Cup website.\n2. Locate the registration section.\n3. Complete the registration form with personal and contact information.\n4. Pay any applicable registration fees.\n5. Review and accept the competition rules and regulations.\n6. Submit the completed registration form.\n7. Await confirmation of registration and further instructions from the Physics Cup organizers.",
         cost: ["Physics Cup is a free activity", false, 0, "unknown"],
         tags: ["Physics"],
-        id: 1269,
+        id: 1270,
     },
     {
         title: "AAPT High School Physics Photo Contest",
@@ -32192,7 +32192,7 @@ const list = [
             "To participate in the AAPT High School Physics Photo Contest you must:\n\n1. Visit the AAPT website and navigate to the High School Physics Photo Contest page.\n2. Review the contest rules and guidelines, including eligibility criteria and submission requirements.\n3. Select a physics-related topic or concept to capture in a photograph.\n4. Capture a high-quality photograph that effectively communicates the chosen topic or concept.\n5. Complete the online submission form, providing necessary details such as name, school, and contact information.\n6. Upload the photograph according to the specified file format and size requirements.\n7. Review and confirm the submission to ensure accuracy of all information and materials.\n8. Await confirmation of receipt and further instructions from the contest organizers.",
         cost: ["AAPT High School Physics Photo Contest is a free activity", false, 0, "unknown"],
         tags: ["Physics", "Photography/Videography"],
-        id: 1270,
+        id: 1271,
     },
     {
         title: "United States Association for Young Physicists Tournaments",
@@ -32221,7 +32221,7 @@ const list = [
             "unknown",
         ],
         tags: ["Physics", "STEM"],
-        id: 1271,
+        id: 1272,
     },
     {
         title: "International Astronomy and Astrophysics Competition",
@@ -32245,7 +32245,7 @@ const list = [
             "To participate in the International Astronomy and Astrophysics Competition you must:\n\n1. Visit the official IAAC website.\n2. Register for an account.\n3. Complete the registration form.\n4. Pay the registration fee (if applicable).\n5. Receive a confirmation email with login details.\n6. Access the competition platform and review the rules and guidelines.\n7. Complete the required tasks and submit the necessary materials.\n8. Await the results announcement or feedback from the organizers.",
         cost: ["International Astronomy and Astrophysics Competition is a free activity", false, 0, "unknown"],
         tags: ["Astronomy", "STEM"],
-        id: 1272,
+        id: 1273,
     },
     {
         title: "Chemagination (ACS)",
@@ -32269,7 +32269,7 @@ const list = [
             "To participate in the Chemagination (ACS) you must:\n\n1. Research the Chemagination competition on the American Chemical Society (ACS) website.\n2. Review eligibility requirements to ensure compliance.\n3. Form a team of up to four high school students and one adult advisor.\n4. Submit the online registration form by the deadline, providing all required information and fees.\n5. Prepare a project that aligns with the competition's theme and guidelines.\n6. Submit the project proposal by the designated deadline, including a detailed description and supporting materials.\n7. Present the project at the ACS National Meeting if selected, where winners will be announced.",
         cost: ["Chemagination (ACS) is a free activity", false, 0, "unknown"],
         tags: ["Chemistry", "STEM"],
-        id: 1273,
+        id: 1274,
     },
     {
         title: "Chemistry Olympiad Local Sections Exam (ACS)",
@@ -32293,7 +32293,7 @@ const list = [
             "To participate in the Chemistry Olympiad Local Sections Exam (ACS) you must:\n\n1. Visit the ACS website to locate the local section offering the exam.\n2. Contact the local section coordinator for registration and eligibility details.\n3. Complete the registration process, including submitting an application and paying any fees.\n4. Prepare for the exam by studying chemistry concepts and practicing with past exam questions.\n5. Attend the scheduled exam at the designated location.\n6. Take the exam and await results to determine eligibility for the next competition round.",
         cost: ["Chemistry Olympiad Local Sections Exam (ACS) is a free activity", false, 0, "unknown"],
         tags: ["Chemistry"],
-        id: 1274,
+        id: 1275,
     },
     {
         title: "Chemistry Challenge (RSC)",
@@ -32317,7 +32317,7 @@ const list = [
             'To participate in the Chemistry Challenge (RSC) you must:\n1. Visit the Royal Society of Chemistry (RSC) website.\n2. Navigate to the "Competitions" section.\n3. Locate the Chemistry Challenge competition.\n4. Review the eligibility requirements and rules for participation.\n5. Register for the competition by completing the online registration form.\n6. Pay any required registration fees, if applicable.\n7. Prepare for the competition by studying and reviewing chemistry concepts and principles.',
         cost: ["Chemistry Challenge (RSC) is a free activity", false, 0, "unknown"],
         tags: ["Chemistry"],
-        id: 1275,
+        id: 1276,
     },
     {
         title: "You Be The Chemist Challenge",
@@ -32341,7 +32341,7 @@ const list = [
             "To participate in the You Be The Chemist Challenge you must:\n\n1. Research the competition requirements and registration process.\n2. Determine if their high school has a team or is willing to sponsor one.\n3. Recruit classmates to form a team if necessary.\n4. Register the team and submit any required information and fees.\n5. Obtain study materials and resources.\n6. Schedule regular study sessions and team meetings.\n7. Attend mandatory orientation sessions or training workshops.\n8. Prepare for and advance through qualifying rounds to reach the national competition.",
         cost: ["You Be The Chemist Challenge costs money to enter", true, "unknown", "unknown"],
         tags: ["Chemistry"],
-        id: 1276,
+        id: 1277,
     },
     {
         title: "International Chemistry Olympiad (IChO)",
@@ -32365,7 +32365,7 @@ const list = [
             "To participate in the International Chemistry Olympiad (IChO), you must:\n\n1. Verify eligibility requirements on the official IChO website.\n2. Express interest to their high school chemistry teacher or faculty advisor.\n3. Participate in qualifying exams or competitions, if applicable.\n4. Register with their national chemistry olympiad organization for team consideration.\n5. Prepare for theoretical and practical exams.\n6. Participate in the national selection process.\n7. Complete necessary paperwork and arrangements for international competition, if selected.",
         cost: ["International Chemistry Olympiad (IChO) is a free activity", false, 0, "unknown"],
         tags: ["Chemistry", "STEM"],
-        id: 1277,
+        id: 1278,
     },
     {
         title: "Canadian Chemistry Contest (CIC)",
@@ -32389,7 +32389,7 @@ const list = [
             "To participate in the Canadian Chemistry Contest (CIC) you must:\n\n1. Visit the official CIC website for registration information.\n2. Review eligibility criteria, including grade level and prerequisites.\n3. Complete the online registration form with personal and academic information.\n4. Pay the registration fee, if applicable.\n5. Receive confirmation of registration and login credentials.\n6. Prepare by studying chemistry concepts and practicing past questions.\n7. Log in to the contest platform on the designated date and time.\n8. Complete the competition within the specified time frame.\n9. Await results and potential recognition for top performers.",
         cost: ["Canadian Chemistry Contest (CIC) is a free activity", false, 0, "unknown"],
         tags: ["Chemistry"],
-        id: 1278,
+        id: 1279,
     },
     {
         title: "Titration Competition (RSC)",
@@ -32413,7 +32413,7 @@ const list = [
             "To participate in the Titration Competition (RSC) you must:\n\n1. Visit the Royal Society of Chemistry (RSC) website.\n2. Navigate to the Events section and search for the Titration Competition.\n3. Register for the competition by completing the required forms and providing necessary information.\n4. Pay any registration fees, if applicable.\n5. Receive confirmation of registration and any additional details or instructions from the RSC.",
         cost: ["Titration Competition (RSC) is a free activity", false, 0, "unknown"],
         tags: ["Chemistry"],
-        id: 1279,
+        id: 1280,
     },
     {
         title: "National Science Bowl (Chemistry Section)",
@@ -32437,7 +32437,7 @@ const list = [
             "To participate in the National Science Bowl (Chemistry Section) you must:\n\n1. Verify their high school's registration for the competition.\n2. Inquire about the selection process for the Chemistry section.\n3. Prepare for qualifying exams or interviews, if applicable.\n4. Attend training sessions or study groups organized by their school.\n5. Register as a member of their school's Chemistry team.\n6. Study Chemistry concepts and practice problem-solving skills.\n7. Participate in the Chemistry section of the National Science Bowl competition.",
         cost: ["National Science Bowl (Chemistry Section) is a free activity", false, 0, "unknown"],
         tags: ["Chemistry", "STEM"],
-        id: 1280,
+        id: 1281,
     },
     {
         title: "North American Computational Chemistry Olympiad (NACCO)",
@@ -32461,7 +32461,7 @@ const list = [
             "To participate in the North American Computational Chemistry Olympiad (NACCO), you must:\n\n1. Access the official NACCO website for registration and competition details.\n2. Register online using the provided form.\n3. Submit payment and required documentation as specified.\n4. Study and practice computational chemistry concepts.\n5. Participate in competition rounds and complete tasks.\n6. Await results and further announcements from NACCO organizers.",
         cost: ["North American Computational Chemistry Olympiad (NACCO) is a free activity", false, 0, "unknown"],
         tags: ["Chemistry", "STEM"],
-        id: 1281,
+        id: 1282,
     },
     {
         title: "American Association of Chemistry Teachers (AACT) High School Chemistry Contest",
@@ -32490,7 +32490,7 @@ const list = [
             "unknown",
         ],
         tags: ["Chemistry"],
-        id: 1282,
+        id: 1283,
     },
     {
         title: "NSPC Health Science Competition",
@@ -32514,7 +32514,7 @@ const list = [
             "To participate in the NSPC Health Science Competition you must:\n\n1. Research the specific requirements and guidelines for joining the competition.\n2. Determine eligibility criteria, such as grade level or academic standing.\n3. Obtain an application form or registration materials from the designated competition organizers or website.\n4. Complete the application form with accurate personal and academic information.\n5. Submit the application form along with any required documents, such as academic records or recommendation letters, before the specified deadline.\n6. Await confirmation of application and any further instructions for participating in the competition.",
         cost: ["NSPC Health Science Competition costs money to enter", true, "unknown", "unknown"],
         tags: ["Health Sciences", "Biology"],
-        id: 1283,
+        id: 1284,
     },
     {
         title: "US Brain Bee",
@@ -32538,7 +32538,7 @@ const list = [
             "To participate in the US Brain Bee you must:\n1. Locate a participating high school or organization in their area that hosts the competition.\n2. Obtain and complete the registration form.\n3. Submit the registration form along with any required fees or documentation by the specified deadline.\n4. Prepare for the competition by studying the provided study materials and practicing sample questions.\n5. Attend the scheduled date and location for the competition to compete against other participants in a series of biology-related challenges.",
         cost: ["US Brain Bee is a free activity", false, 0, "unknown"],
         tags: ["Biology", "Medicine"],
-        id: 1284,
+        id: 1285,
     },
     {
         title: "Annual DNA Day Essay Contest",
@@ -32562,7 +32562,7 @@ const list = [
             "To participate in the Annual DNA Day Essay Contest you must:\n\n1. Visit the official website.\n2. Review eligibility criteria.\n3. Read guidelines and essay prompt.\n4. Write an original 750-1,000 word essay.\n5. Complete the online submission form.\n6. Upload the essay in the specified format.\n7. Submit before the deadline.\n8. Await confirmation of receipt.\n9. Winners will be notified via email and announced on the website.",
         cost: ["Annual DNA Day Essay Contest is a free activity", false, 0, "unknown"],
         tags: ["Biology", "STEM"],
-        id: 1285,
+        id: 1286,
     },
     {
         title: "National Biology Bowl",
@@ -32586,7 +32586,7 @@ const list = [
             "To participate in the National Biology Bowl you must:\n\n1. Visit the National Biology Bowl website for competition information.\n2. Register individually or as a school team via the online registration form.\n3. Submit the registration fee, if applicable, to secure participation.\n4. Utilize provided study materials or engage in independent study to enhance biology knowledge.\n5. Attend the scheduled competition date and location to participate in the National Biology Bowl.",
         cost: ["National Biology Bowl costs money to enter", true, "unknown", "unknown"],
         tags: ["Biology"],
-        id: 1286,
+        id: 1287,
     },
     {
         title: "National Ocean Sciences Bowl",
@@ -32610,7 +32610,7 @@ const list = [
             "To participate in the National Ocean Sciences Bowl you must:\n\n1. Research and gather information about the NOSB Biology competition.\n2. Form a team of high school students interested in participating in the competition.\n3. Register the team for the NOSB Biology competition on the official website.\n4. Review the competition rules and guidelines to understand the format and requirements.\n5. Study and prepare for the competition by reviewing biology concepts and ocean sciences topics.\n6. Participate in any practice rounds or study sessions to enhance knowledge and skills.\n7. Attend the regional or qualifying rounds to compete for a spot in the national competition.\n8. If successful, advance to the national competition and compete against other high school teams in the NOSB Biology competition.",
         cost: ["National Ocean Sciences Bowl is a free activity", false, 0, "unknown"],
         tags: ["STEM", "Environmental Science"],
-        id: 1287,
+        id: 1288,
     },
     {
         title: "iGEM Competition",
@@ -32634,7 +32634,7 @@ const list = [
             "To participate in the iGEM Competition, you must:\n\n1. Form a team of high school students with an interest in biology and biotechnology.\n2. Research the iGEM competition and familiarize themselves with its rules, guidelines, and past projects.\n3. Register their team on the official iGEM website.\n4. Select a project idea related to synthetic biology, genetic engineering, or bioinformatics.\n5. Develop a project proposal outlining their research question, methodology, and expected outcomes.\n6. Seek guidance and mentorship from a biology teacher or professional in the field.\n7. Design and conduct experiments to test their project hypothesis.\n8. Document their progress and findings through written reports, presentations, and videos.\n9. Submit their final project and presentation to the iGEM competition by the designated deadline.\n10. Prepare to present their project at the iGEM Jamboree, where teams from around the world showcase their work and compete for awards.",
         cost: ["iGEM Competition costs money to enter", true, "unknown", "unknown"],
         tags: ["Biology", "Engineering", "Computer Science"],
-        id: 1288,
+        id: 1289,
     },
     {
         title: "Genes in Space Competition",
@@ -32658,7 +32658,7 @@ const list = [
             'To participate in the Genes in Space Competition you must:\n\n1. Visit the Genes in Space website and navigate to the "Competition" section.\n2. Review eligibility requirements to ensure compliance.\n3. Register for the competition by completing the online registration form with personal and school information.\n4. Prepare a proposal outlining an original DNA experiment to be conducted aboard the International Space Station.\n5. Submit the proposal through the designated online portal by the specified deadline.\n6. Await confirmation of receipt and further instructions from the competition organizers.',
         cost: ["Genes in Space Competition is a free activity", false, 0, "unknown"],
         tags: ["Biology", "Medicine", "STEM", "Astronomy"],
-        id: 1289,
+        id: 1290,
     },
     {
         title: "American Academy of Neurology \u2013 Neuroscience Research Prize",
@@ -32682,7 +32682,7 @@ const list = [
             'To participate in the American Academy of Neurology \u2013 Neuroscience Research Prize you must:\n\n1. Visit the American Academy of Neurology website and navigate to the "Neuroscience Research Prize" page.\n2. Review the eligibility requirements and guidelines for the competition to ensure qualification.\n3. Complete the online registration form, providing all required personal and academic information.\n4. Submit a research project or paper related to neurology and neuroscience, following the specified submission guidelines.\n5. Await confirmation of submission and any additional instructions from the competition organizers.\n6. Prepare for potential presentations or interviews as part of the competition process, if applicable.\n7. Stay updated on competition deadlines and announcements regarding finalists or winners.',
         cost: ["American Academy of Neurology \u2013 Neuroscience Research Prize is a free activity", false, 0, "unknown"],
         tags: ["Biology", "STEM", "Medicine"],
-        id: 1290,
+        id: 1291,
     },
     {
         title: "BioGENEius Challenge",
@@ -32706,7 +32706,7 @@ const list = [
             "To participate in the BioGENEius Challenge you must:\n\n1. Research the competition rules and requirements.\n2. Obtain a letter of support from a high school teacher, mentor, or advisor.\n3. Develop a research project in biotechnology or life sciences that aligns with the competition's criteria.\n4. Complete and submit the online application form, including a project abstract, research plan, and relevant academic transcripts.\n5. Prepare a research poster or presentation that effectively communicates the project's objectives, methods, and findings.\n6. Attend any required regional or local competitions to showcase the project and compete for advancement to the national level.\n7. Adhere to all deadlines and guidelines provided by the BioGENEius Challenge organizers, and ensure that all required materials are submitted in a timely manner.",
         cost: ["BioGENEius Challenge is a free activity", false, 0, "unknown"],
         tags: ["Biology", "STEM", "Engineering"],
-        id: 1291,
+        id: 1292,
     },
     {
         title: "USA Biology Olympiad",
@@ -32730,7 +32730,7 @@ const list = [
             "To participate in the USA Biology Olympiad you must:\n\n1. Meet eligibility criteria and requirements.\n2. Register by completing the online application and paying the fee.\n3. Study and prepare for the preliminary exam covering biology topics.\n4. Take the preliminary exam at a designated testing center or online.\n5. Qualify for the next round based on preliminary exam results.\n6. Prepare for and compete in semifinal and final rounds, including laboratory practicals and theoretical assessments.\n7. Place in the competition to qualify for further opportunities.",
         cost: ["USA Biology Olympiad is a free activity", false, 0, "unknown"],
         tags: ["Biology"],
-        id: 1292,
+        id: 1293,
     },
     {
         title: "National Geographic Photo Contest",
@@ -32754,7 +32754,7 @@ const list = [
             'To participate in the National Geographic Photo Contest you must:\n\n1. Visit the National Geographic website.\n2. Locate the "Photo Contest" section.\n3. Review the competition rules and guidelines.\n4. Prepare their best environmental-themed photographs.\n5. Register for an account on the National Geographic website.\n6. Submit their photos through the designated contest submission portal.\n7. Provide the required information and accept the terms and conditions.\n8. Await the judging period to determine if their photos are selected as winners.',
         cost: ["National Geographic Photo Contest is a free activity", false, 0, "unknown"],
         tags: ["Environmental Science", "Photography/Videography"],
-        id: 1293,
+        id: 1294,
     },
     {
         title: "MATE ROV Competition",
@@ -32778,7 +32778,7 @@ const list = [
             "To participate in the MATE ROV Competition, you must:\n\n1. Review the competition rules and regulations on the MATE ROV Competition website.\n2. Form a team of 4-6 high school students and an adult mentor.\n3. Register their team by submitting forms and fees by the deadline.\n4. Design and build an ROV that meets competition specifications and mission requirements.\n5. Test the ROV in underwater tasks to ensure compliance with competition standards.\n6. Prepare a technical report on the ROV's design and construction, and a marketing presentation on the team's efforts.\n7. Attend the regional or national competition to compete against other high school teams.",
         cost: ["MATE ROV Competition costs money to enter", true, "unknown", "unknown"],
         tags: ["Engineering", "Physics", "STEM", "Robotics"],
-        id: 1294,
+        id: 1295,
     },
     {
         title: "TEAMS",
@@ -32802,7 +32802,7 @@ const list = [
             "To participate in the TEAMS you must:\n\n1. Register for the competition on the official TEAMS website.\n2. Designate a team leader to coordinate registration and serve as the primary contact.\n3. Provide all necessary information, including team name, school affiliation, and contact details for all members.\n4. Submit the registration fee, if applicable.\n5. Assemble a team of 3-8 students and a faculty advisor.\n6. Familiarize themselves with competition guidelines and rules.\n7. Prepare for the competition through research, solution development, and presentation practice.\n8. Submit all required materials by the deadline.\n9. Participate in scheduled competition events and activities.",
         cost: ["TEAMS costs money to enter", true, "unknown", "unknown"],
         tags: ["Environmental Science", "STEM"],
-        id: 1295,
+        id: 1296,
     },
     {
         title: "Envirothon",
@@ -32826,7 +32826,7 @@ const list = [
             "To participate in the Envirothon you must:\n\n1. Research the competition to understand its purpose and structure.\n2. Determine eligibility requirements, including grade level and team size.\n3. Contact the designated coordinator to express interest.\n4. Form a team with classmates interested in environmental topics.\n5. Register the team by the deadline and provide required documentation.\n6. Study designated environmental topics.\n7. Participate in training sessions or workshops.\n8. Attend the competition and compete in environmental challenges and tests.",
         cost: ["Envirothon costs money to enter", true, "unknown", "unknown"],
         tags: ["Environmental Science"],
-        id: 1296,
+        id: 1297,
     },
     {
         title: "Odyssey of the Mind",
@@ -32850,7 +32850,7 @@ const list = [
             "To participate in the Odyssey of the Mind you must:\n\n1. Determine if their high school has an existing team or club.\n2. Contact the team leader or advisor to express interest in joining.\n3. If no team exists, gather interested students and secure a teacher or staff member as an advisor.\n4. Register the team with Odyssey of the Mind and pay registration fees.\n5. Study the rules and guidelines for the environmental competition category.\n6. Develop an innovative solution to the environmental problem presented in the competition prompt.\n7. Practice and refine the solution through regular team meetings and rehearsals.\n8. Participate in qualifying competitions to advance to higher levels.",
         cost: ["Odyssey of the Mind costs money to enter", true, "unknown", "unknown"],
         tags: ["Environmental Science", "STEM"],
-        id: 1297,
+        id: 1298,
     },
     {
         title: "Science Olympiad",
@@ -32874,7 +32874,7 @@ const list = [
             "To participate in the Science Olympiad you must:\n1. Research the Science Olympiad website for information on the Environmental Science event.\n2. Contact the high school's Science Olympiad coach or sponsor to express interest in participating in the Environmental Science event.\n3. Obtain the rules and guidelines for the Environmental Science event from the coach or sponsor.\n4. Form a team with other interested students and register for the Science Olympiad competition through the school.\n5. Attend team meetings and prepare for the Environmental Science event by studying relevant scientific concepts and conducting research.\n6. Participate in local and regional Science Olympiad competitions to qualify for the state and national levels.",
         cost: ["Science Olympiad is a free activity", false, 0, "unknown"],
         tags: ["Environmental Science"],
-        id: 1298,
+        id: 1299,
     },
     {
         title: "Clean Tech Challenge",
@@ -32898,7 +32898,7 @@ const list = [
             "To participate in the Clean Tech Challenge you must:\n\n1. Visit the Clean Tech Challenge website or contact their high school science or environmental science teacher for information on how to participate.\n2. Form a team of 2-4 high school students interested in environmental sustainability and clean technology innovation.\n3. Choose a team captain to coordinate communication with the competition organizers and lead the team in the competition.\n4. Register their team for the Clean Tech Challenge by submitting the required forms and information, including team members' names and contact information.\n5. Review the competition guidelines and rules to understand the requirements for the project and presentation.\n6. Brainstorm and research potential environmental problems or challenges to focus their project on.\n7. Develop a project proposal outlining their team's innovative solution to the environmental challenge they have chosen.\n8. Build a prototype or model of their solution and prepare a presentation to showcase their project to the competition judges.\n9. Submit their project proposal and presentation materials by the competition deadline.\n10. Wait for notification from the competition organizers regarding the status of their team's entry and any further instructions for the competition.",
         cost: ["Clean Tech Challenge is a free activity", false, 0, "unknown"],
         tags: ["Environmental Science", "STEM"],
-        id: 1299,
+        id: 1300,
     },
     {
         title: "Project Green Challenge",
@@ -32922,7 +32922,7 @@ const list = [
             'To participate in the Project Green Challenge you must:\n\n1. Visit the Project Green Challenge website.\n2. Click on the "Join Now" or "Sign Up" button.\n3. Complete the registration form with personal information.\n4. Create or join a team.\n5. Review competition rules and guidelines.\n6. Submit necessary forms or waivers.\n7. Pay registration fees if applicable.\n8. Receive confirmation of registration via email.',
         cost: ["Project Green Challenge is a free activity", false, 0, "unknown"],
         tags: ["Environmental Science", "Environmental Activism"],
-        id: 1300,
+        id: 1301,
     },
     {
         title: "Brower Youth Awards",
@@ -32946,7 +32946,7 @@ const list = [
             "To participate in the Brower Youth Awards you must:\n1. Visit the Brower Youth Awards website to learn about the competition and its requirements.\n2. Review the eligibility criteria to ensure they meet the age and project requirements.\n3. Prepare a project that addresses an environmental issue and aligns with the competition's goals.\n4. Write an essay that describes their project, its impact, and their personal commitment to environmental advocacy.\n5. Gather letters of recommendation from teachers, mentors, or community leaders who can speak to the impact of their project.\n6. Complete the online application form, including their personal information, project details, and supporting documents.\n7. Submit the application and required materials by the specified deadline.\n8. Wait for notification from the Brower Youth Awards team regarding the status of their application.",
         cost: ["Brower Youth Awards is a free activity", false, 0, "unknown"],
         tags: ["Environmental Science", "Leadership/Management"],
-        id: 1301,
+        id: 1302,
     },
     {
         title: "Genius Olympiad",
@@ -32970,7 +32970,7 @@ const list = [
             "To participate in the Genius Olympiad, you must:\n\n1. Review competition guidelines and eligibility requirements on the Genius Olympiad website.\n2. Complete the online registration form with personal and school information.\n3. Prepare an environmental project or research on a specified topic, adhering to guidelines and criteria.\n4. Submit the project or research with required documentation by the deadline.\n5. Await notification from Genius Olympiad organizers regarding submission status and further instructions.",
         cost: ["Genius Olympiad is a free activity", false, 0, "unknown"],
         tags: ["Environmental Science"],
-        id: 1302,
+        id: 1303,
     },
     {
         title: "VEX Robotics",
@@ -32994,7 +32994,7 @@ const list = [
             'To participate in the VEX Robotics you must:\n\n1. Visit the VEX Robotics website.\n2. Locate the "Competitions" section on the website.\n3. Find the specific high school competition event of interest.\n4. Register for the event by completing the necessary forms and providing the required information.\n5. Pay the registration fee, if applicable, to secure a spot in the competition.\n6. Review the competition rules and guidelines to ensure preparation for the event.\n7. Prepare the robot and team for the competition according to the competition requirements and specifications.\n8. Attend the competition on the scheduled date and compete against other teams in the event.',
         cost: ["VEX Robotics costs money to enter", true, "unknown", "unknown"],
         tags: ["Engineering,Computer Science,Physics,Robotics"],
-        id: 1303,
+        id: 1304,
     },
     {
         title: "FIRST Robotics",
@@ -33018,7 +33018,7 @@ const list = [
             "To participate in the FIRST Robotics you must:\n\n1. Identify a high school with an existing FIRST Robotics team or initiate the formation of a new team at their school.\n2. Express interest in joining the team by contacting the coach or mentor.\n3. Complete all required paperwork and registration forms.\n4. Attend team meetings and actively participate in team activities to gain knowledge of the competition and team objectives.\n5. Contribute to the team through assistance with construction, programming, or other necessary tasks.\n6. Prepare for the competition by attending workshops, training sessions, and practice matches with the team.\n7. Adhere to team guidelines and regulations regarding conduct, attendance, and responsibilities throughout the competition season.",
         cost: ["FIRST Robotics costs money to enter", true, "unknown", "unknown"],
         tags: ["Robotics", "STEM", "Engineering"],
-        id: 1304,
+        id: 1305,
     },
     {
         title: "SeaPerch",
@@ -33042,7 +33042,7 @@ const list = [
             "To participate in the SeaPerch you must:\n\n1. Verify if their high school has a SeaPerch team or is willing to establish one.\n2. Ascertain the registration process and deadlines for the SeaPerch competition via the official website.\n3. Complete the registration form, providing all requisite information and settling any applicable fees.\n4. Assemble a team of students eager to partake in the SeaPerch competition.\n5. Collaborate with their team to design and construct an underwater remotely operated vehicle (ROV) adhering to competition specifications.\n6. Test and refine their ROV to guarantee its functionality and ability to execute competition tasks.\n7. Attend any mandatory training sessions or workshops offered by SeaPerch in preparation for the competition.\n8. Submit any necessary documentation, such as a technical report or engineering notebook, as per competition guidelines.\n9. Travel to the competition venue and participate in the SeaPerch competition.",
         cost: ["SeaPerch is a free activity", false, 0, "unknown"],
         tags: ["Robotics", "Engineering", "STEM"],
-        id: 1305,
+        id: 1306,
     },
     {
         title: "BEST Robotics Competition",
@@ -33066,7 +33066,7 @@ const list = [
             "To participate in the BEST Robotics Competition you must:\n\n1. Research the competition to understand the requirements and rules.\n2. Find or form a high school team.\n3. Register the team online.\n4. Pay the registration fee, if required.\n5. Attend the kickoff event to receive game rules and materials.\n6. Design and build a robot within the given time frame, following competition guidelines.\n7. Test the robot and make any necessary adjustments before the competition.\n8. Attend the regional competition and compete against other high school teams.\n9. Advance to the regional championship and potentially the national championship if the team performs well.",
         cost: ["BEST Robotics Competition is a free activity", false, 0, "unknown"],
         tags: ["Robotics", "STEM", "Engineering", "Computer Science"],
-        id: 1306,
+        id: 1307,
     },
     {
         title: "National Robotics League",
@@ -33090,7 +33090,7 @@ const list = [
             "To participate in the National Robotics League you must:\n\n1. Research the NRL and review its rules and guidelines.\n2. Form a team with a faculty advisor or mentor.\n3. Register the team by submitting forms and fees.\n4. Design and build a combat robot meeting competition requirements.\n5. Test and refine the robot's performance.\n6. Attend the NRL competition event.\n7. Compete in tournament rounds and follow the NRL's code of conduct and safety protocols.",
         cost: ["National Robotics League costs money to enter", true, "unknown", "unknown"],
         tags: ["Robotics", "STEM"],
-        id: 1307,
+        id: 1308,
     },
     {
         title: "RoboCup",
@@ -33114,7 +33114,7 @@ const list = [
             "To participate in the RoboCup you must:\n\n1. Research and identify a local high school Robotics club or team that participates in RoboCup.\n2. Contact the club or team leader to inquire about joining and any specific requirements or qualifications.\n3. Complete all necessary paperwork or registration forms.\n4. Attend informational meetings or training sessions to learn about the competition and team expectations.\n5. Participate in tryouts or skill assessments to demonstrate abilities and commitment.\n6. Pay any necessary club or team dues or fees upon acceptance.\n7. Train and participate in team practices to prepare for the competition.\n8. Travel with the team to the RoboCup competition and compete as a team member.",
         cost: ["RoboCup costs money to enter", true, "unknown", "unknown"],
         tags: ["Robotics", "STEM", "Engineering"],
-        id: 1308,
+        id: 1309,
     },
     {
         title: "Zero Robotics Competition",
@@ -33138,7 +33138,7 @@ const list = [
             'To participate in the Zero Robotics Competition you must:\n\n1. Visit the Zero Robotics website and navigate to the "Competitions" section.\n2. Find and click on the "High School" competition option.\n3. Review the competition rules, requirements, and deadlines.\n4. Register as a team or individual participant by completing the online registration form.\n5. Pay the registration fee, if required.\n6. Form a team with other interested students, if applicable.\n7. Attend any mandatory pre-competition meetings or workshops.\n8. Download the necessary software and resources to begin working on the competition challenges.',
         cost: ["Zero Robotics Competition is a free activity", false, 0, "unknown"],
         tags: ["Robotics", "Computer Science", "STEM", "Astronomy"],
-        id: 1309,
+        id: 1310,
     },
     {
         title: "Botball Educational Robotics Program",
@@ -33162,7 +33162,7 @@ const list = [
             "To participate in the Botball Educational Robotics Program you must:\n\n1. Visit the Botball Educational Robotics Program website.\n2. Review the eligibility requirements, including grade level and team composition.\n3. Complete the online registration form, providing all required information and documentation.\n4. Pay any registration fees, if applicable.\n5. Attend any mandatory orientation or training sessions.\n6. Assemble a team, if necessary, and designate a team leader.\n7. Obtain the necessary robotics kit and materials for competition.\n8. Review the official competition rules and guidelines.\n9. Design and build the robot according to competition specifications.\n10. Test and refine the robot's performance in preparation for the competition.",
         cost: ["Botball Educational Robotics Program costs money to enter", true, "unknown", "unknown"],
         tags: ["STEM", "Robotics", "Engineering", "Computer Science"],
-        id: 1310,
+        id: 1311,
     },
     {
         title: "Human Exploration Rover Challenge",
@@ -33186,7 +33186,7 @@ const list = [
             "To participate in the Human Exploration Rover Challenge you must:\n\n1. Research the competition guidelines and requirements.\n2. Form a team of interested high school students.\n3. Identify a faculty advisor or mentor for guidance.\n4. Register the team and submit fees.\n5. Design and build a rover meeting technical specifications and safety requirements.\n6. Test and refine the rover for task completion.\n7. Submit documentation, including a technical paper and rover specifications.\n8. Participate in the event, following all rules and guidelines.",
         cost: ["Human Exploration Rover Challenge is a free activity", false, 0, "unknown"],
         tags: ["Engineering", "STEM"],
-        id: 1311,
+        id: 1312,
     },
     {
         title: "Intel International Science and Engineering Fair",
@@ -33210,7 +33210,7 @@ const list = [
             "To participate in the Intel International Science and Engineering Fair you must:\n\n1. Identify the specific category and project requirements for the fair.\n2. Develop a research project that aligns with the designated category and meets the competition's criteria.\n3. Obtain approval and support from a qualified mentor or sponsor for the research project.\n4. Complete and submit the required registration materials, including project abstract, research plan, and relevant documents, by the specified deadline.\n5. Await notification of acceptance or rejection from the fair organizers.\n6. Prepare and present the research project at the designated fair location and adhere to all competition guidelines and regulations.\n7. Participate in judging and evaluation processes as outlined by the fair organizers.\n8. Await results and awards announcements following the conclusion of the fair.",
         cost: ["Intel International Science and Engineering Fair is a free activity", false, 0, "unknown"],
         tags: ["Engineering", "STEM"],
-        id: 1312,
+        id: 1313,
     },
     {
         title: "National STEM League (NSL)",
@@ -33234,7 +33234,7 @@ const list = [
             "To participate in the National STEM League (NSL), you must:\n\n1. Visit the NSL website to learn about the competition and its requirements.\n2. Register as a team or individual participant on the NSL website.\n3. Pay the registration fee, if applicable, and complete any necessary paperwork or documentation.\n4. Review the competition rules and guidelines to understand the format and expectations.\n5. Formulate a team and choose a team captain to coordinate communication and logistics.\n6. Attend any pre-competition workshops or training sessions offered by NSL to prepare for the competition.\n7. Practice and refine their engineering skills and projects in preparation for the competition.\n8. Submit any required project proposals or documentation by the specified deadline.\n9. Participate in the competition events, following all rules and regulations set by NSL.\n10. Communicate with NSL organizers and other participants as needed throughout the competition.",
         cost: ["National STEM League (NSL) costs money to enter", true, "unknown", "unknown"],
         tags: ["STEM", "Engineering", "Computer Science", "Robotics"],
-        id: 1313,
+        id: 1314,
     },
     {
         title: "FPSPI",
@@ -33258,7 +33258,7 @@ const list = [
             "To participate in the FPSPI you must:\n\n1. Research the requirements and deadlines for joining the FPSPI high school Engineering competition.\n2. Form a team of 3-7 high school students with an adult coach to oversee the team's progress.\n3. Register the team on the FPSPI website and pay the registration fees.\n4. Access the competition materials and guidelines provided by FPSPI to understand the requirements and expectations for the competition.\n5. Develop a project or solution that aligns with the competition's theme and requirements.\n6. Prepare a written report and presentation to showcase the team's project or solution.\n7. Submit the project report and presentation to FPSPI by the specified deadline.\n8. Wait for confirmation of acceptance into the competition and receive further instructions for the competition day.",
         cost: ["FPSPI costs money to enter", true, "unknown", "unknown"],
         tags: ["Engineering", "STEM"],
-        id: 1314,
+        id: 1315,
     },
     {
         title: "Brookhaven National Laboratory Highschool Bridge Building Contest",
@@ -33282,7 +33282,7 @@ const list = [
             "To participate in the Brookhaven National Laboratory Highschool Bridge Building Contest you must:\n1. Visit the official website.\n2. Register online.\n3. Submit required documents.\n4. Pay registration fees.\n5. Await confirmation.\n6. Plan and build bridge.\n7. Attend competition.",
         cost: ["Brookhaven National Laboratory Highschool Bridge Building Contest is a free activity", false, 0, "unknown"],
         tags: ["Engineering", "Competition"],
-        id: 1315,
+        id: 1316,
     },
     {
         title: "American Rocketry Challenge",
@@ -33306,7 +33306,7 @@ const list = [
             "To participate in the American Rocketry Challenge you must:\n\n1. Form a team of 3-10 high school students and secure a teacher or mentor to supervise the team.\n2. Register for the competition on the American Rocketry Challenge website and pay the registration fee.\n3. Review the competition rules and guidelines to understand the requirements and constraints of the challenge.\n4. Design and build a rocket that meets the specified criteria and can carry a raw egg to a certain altitude and return it safely to the ground within a given time frame.\n5. Test and refine the rocket design to ensure it meets the performance and safety standards set by the competition.\n6. Submit a written report detailing the rocket design, construction, and testing process, as well as a video of a successful flight of the rocket.\n7. Participate in the regional qualifying event to demonstrate the rocket's performance and qualify for the national finals.\n8. If successful, compete in the national finals and present the rocket to a panel of judges for evaluation and potential awards.",
         cost: ["American Rocketry Challenge costs money to enter", true, "unknown", "unknown"],
         tags: ["Engineering", "STEM", "Aviation/Aerospace"],
-        id: 1316,
+        id: 1317,
     },
     {
         title: "Rube Goldberg Machine Contest",
@@ -33330,7 +33330,7 @@ const list = [
             "To participate in the Rube Goldberg Machine Contest you must:\n1. Research the contest requirements and rules.\n2. Form a team of interested high school students.\n3. Identify a supervising teacher or mentor.\n4. Develop a concept for a machine that meets the contest criteria.\n5. Create a detailed design and construction plan.\n6. Obtain necessary materials and resources.\n7. Assemble the machine according to the plan.\n8. Test the machine to ensure functionality.\n9. Document the construction process and performance.\n10. Submit the entry by the deadline.",
         cost: ["Rube Goldberg Machine Contest is a free activity", false, 0, "unknown"],
         tags: ["Engineering", "STEM"],
-        id: 1317,
+        id: 1318,
     },
     {
         title: "Future Engineers Competiton",
@@ -33354,7 +33354,7 @@ const list = [
             "To participate in the Future Engineers Competition you must:\n\n1. Visit the Future Engineers website to learn about the competition and its requirements.\n2. Review the guidelines and rules for the competition to ensure eligibility and understanding of the project requirements.\n3. Register for the competition by filling out the online registration form and paying any necessary fees.\n4. Form a team with classmates or individually if allowed, and select a project topic within the designated engineering theme.\n5. Develop and design a project that meets the competition's criteria and guidelines.\n6. Submit the project entry by the specified deadline along with any required documentation or materials.\n7. Wait for the results to be announced and follow any instructions for further participation or presentation of the project.",
         cost: ["Future Engineers Competiton is a free activity", false, 0, "unknown"],
         tags: ["Engineering", "STEM"],
-        id: 1318,
+        id: 1319,
     },
     {
         title: "American Mathematics Competitions (AMC) 10 and AMC 12",
@@ -33378,7 +33378,7 @@ const list = [
             "To participate in the American Mathematics Competitions (AMC) 10 and AMC 12, you must:\n\n1. Access the AMC website for details on the competitions.\n2. Establish an account and provide personal and academic information.\n3. Submit the registration fee, if applicable.\n4. Engage in preparatory study and practice using past exam materials.\n5. Present valid identification at the testing location.\n6. Adhere to exam instructions during the competition.\n7. Anticipate the release of results to assess performance.",
         cost: ["American Mathematics Competitions (AMC) 10 and AMC 12 costs money to enter", true, "unknown", "unknown"],
         tags: ["Mathematics"],
-        id: 1319,
+        id: 1320,
     },
     {
         title: "Mandelbrot Competition",
@@ -33402,7 +33402,7 @@ const list = [
             "To participate in the Mandelbrot Competition you must:\n\n1. Visit the official Mandelbrot Competition website.\n2. Register online by completing the registration form.\n3. Pay the registration fee, if applicable.\n4. Receive a confirmation email with further instructions.\n5. Access practice materials and competition details.\n6. Prepare for the competition by studying relevant math topics and practicing past competition questions.\n7. Attend the competition on the scheduled date and time.",
         cost: ["Mandelbrot Competition costs money to enter", true, "unknown", "unknown"],
         tags: ["Mathematics", "STEM"],
-        id: 1320,
+        id: 1321,
     },
     {
         title: "Purple Comet! Math Meet",
@@ -33426,7 +33426,7 @@ const list = [
             'To participate in the Purple Comet! Math Meet you must:\n\n1. Visit the official Purple Comet! Math Meet website.\n2. Click on the "Registration" or "Sign Up" link.\n3. Complete the registration form with the required information, including team name, coach\'s contact information, and team members\' details.\n4. Pay the registration fee, if applicable, using the provided payment methods.\n5. Wait for a confirmation email from the competition organizers acknowledging your registration.\n6. Ensure that the team members and coach are familiar with the competition rules and format by referring to the official rules and guidelines provided on the website.\n7. Prepare for the competition by practicing past competition problems and familiarizing yourself with the types of questions that may be asked.',
         cost: ["Purple Comet! Math Meet is a free activity", false, 0, "unknown"],
         tags: ["Mathematics"],
-        id: 1321,
+        id: 1322,
     },
     {
         title: "Math Madness",
@@ -33450,7 +33450,7 @@ const list = [
             "To participate in the Math Madness you must:\n1. Visit the Math Madness website.\n2. Register by completing the form with name, school, grade level, and contact details.\n3. Pay registration fees, if applicable.\n4. Log in to the competition platform using provided credentials.\n5. Review competition rules and guidelines.\n6. Participate in the competition as per the scheduled rounds and topics.",
         cost: ["Math Madness is a free activity", false, 0, "unknown"],
         tags: ["Mathematics", "STEM"],
-        id: 1322,
+        id: 1323,
     },
     {
         title: "Rocket City Math League (RCML)",
@@ -33474,7 +33474,7 @@ const list = [
             "To participate in the Rocket City Math League (RCML), you must:\n\n1. Visit the RCML website.\n2. Register by completing the form with personal and academic information.\n3. Pay the registration fee, if applicable.\n4. Review competition rules and guidelines.\n5. Prepare for the competition by studying and practicing math concepts.\n6. Attend the scheduled competition.",
         cost: ["Rocket City Math League (RCML) is a free activity", false, 0, "unknown"],
         tags: ["Mathematics", "STEM"],
-        id: 1323,
+        id: 1324,
     },
     {
         title: "MathCON",
@@ -33498,7 +33498,7 @@ const list = [
             "To participate in the MathCON you must:\n\n1. Visit the MathCON website to find the registration form.\n2. Fill out the registration form with accurate personal and school information.\n3. Pay the registration fee, if applicable, using the accepted payment methods.\n4. Submit any required documentation, such as a teacher recommendation or proof of eligibility.\n5. Await confirmation of registration and further instructions from the MathCON organizers.\n6. Prepare for the competition by studying the required math topics and practicing sample problems.\n7. Attend the scheduled competition date and location, following all rules and guidelines set by MathCON.",
         cost: ["MathCON costs money to enter", true, "unknown", "unknown"],
         tags: ["Mathematics", "STEM"],
-        id: 1324,
+        id: 1325,
     },
     {
         title: "Math Kangaroo",
@@ -33522,7 +33522,7 @@ const list = [
             "To participate in the Math Kangaroo you must:\n1. Register for the competition on the official Math Kangaroo website.\n2. Complete the registration form with personal and school information.\n3. Pay the registration fee, if applicable.\n4. Receive a confirmation email with further instructions.\n5. Prepare for the competition by studying math concepts and practicing sample problems.\n6. Attend the competition at the designated location and time.",
         cost: ["Math Kangaroo costs money to enter", true, "unknown", "unknown"],
         tags: ["Mathematics", "STEM"],
-        id: 1325,
+        id: 1326,
     },
     {
         title: "Harvard-MIT Mathematics Tournament (HMMT)",
@@ -33546,7 +33546,7 @@ const list = [
             "To participate in the Harvard-MIT Mathematics Tournament (HMMT), you must:\n\n1. Visit the official HMMT website for competition details, including registration dates and requirements.\n2. Form a team of up to 8 high school students and a coach.\n3. Register online during the specified period.\n4. Pay the registration fee, if applicable.\n5. Prepare by studying past problems and practicing problem-solving techniques.\n6. Attend the competition on the designated date.",
         cost: ["Harvard-MIT Mathematics Tournament (HMMT) costs money to enter", true, "unknown", "unknown"],
         tags: ["Mathematics", "STEM"],
-        id: 1326,
+        id: 1327,
     },
     {
         title: "Math League Contests",
@@ -33570,7 +33570,7 @@ const list = [
             "To participate in the Math League Contests you must:\n\n1. Visit the Math League Contests website.\n2. Register online by completing the form with personal details, school information, and payment.\n3. Prepare for the competition by studying math concepts and practicing problems.\n4. Attend the scheduled competition at the designated location and time.",
         cost: ["Math League Contests costs money to enter", true, "unknown", "unknown"],
         tags: ["Mathematics", "STEM"],
-        id: 1327,
+        id: 1328,
     },
     {
         title: "Australian Math Contest",
@@ -33594,7 +33594,7 @@ const list = [
             'To participate in the Australian Math Contest you must:\n\n1. Visit the Australian Mathematics Trust website.\n2. Navigate to the "Competitions" section.\n3. Select the "Australian Math Contest" from the list of available competitions.\n4. Review the competition details and requirements, including eligibility and registration deadlines.\n5. Register for the competition by completing the online registration form and paying the registration fee, if applicable.\n6. Receive a confirmation email with further instructions and details about the competition.\n7. Prepare for the competition by studying relevant math concepts and practicing sample problems.',
         cost: ["Australian Math Contest costs money to enter", true, "unknown", "unknown"],
         tags: ["Mathematics"],
-        id: 1328,
+        id: 1329,
     },
     {
         title: "Scholastic Art & Writing Awards",
@@ -33618,7 +33618,7 @@ const list = [
             'To participate in the Scholastic Art & Writing Awards you must:\n1. Visit the Scholastic Art & Writing Awards website.\n2. Click on the "Enter" or "Submit" button.\n3. Create an account if one does not already exist.\n4. Log in to the account.\n5. Complete the entry form with personal information and contact details.\n6. Select the category and division for entry (e.g. poetry, short story, etc.).\n7. Upload the writing piece according to the file format and size requirements.\n8. Pay the entry fee, if applicable.\n9. Review and submit the entry.\n10. Await confirmation and further instructions from the competition organizers.',
         cost: ["Scholastic Art & Writing Awards is a free activity", false, 0, "unknown"],
         tags: ["Art/Design", "Literature", "Creative Writing", "Journalism"],
-        id: 1329,
+        id: 1330,
     },
     {
         title: "National Student Poets Program",
@@ -33642,7 +33642,7 @@ const list = [
             "To participate in the National Student Poets Program you must:\n\n1. Meet the eligibility requirements, such as age and grade level.\n2. Submit a portfolio of original poems that showcases their writing skills and creativity.\n3. Complete the application form available on the program's official website.\n4. Submit the required materials, including the application form and portfolio, by the specified deadline.\n5. Await notification regarding the status of their application and the next steps in the selection process.",
         cost: ["National Student Poets Program is a free activity", false, 0, "unknown"],
         tags: ["Literature", "Creative Writing"],
-        id: 1330,
+        id: 1331,
     },
     {
         title: "John F. Kennedy Profile in Courage Essay Contest",
@@ -33666,7 +33666,7 @@ const list = [
             "To participate in the John F. Kennedy Profile in Courage Essay Contest, you must:\n\n- Visit the official website and review eligibility requirements.\n- Read the essay prompt and guidelines.\n- Brainstorm and research potential essay topics.\n- Write an essay that follows all guidelines and requirements.\n- Proofread and edit for grammar, punctuation, and clarity.\n- Submit the essay through the online portal.\n- Complete any additional forms or documentation.\n- Await confirmation of receipt.\n- Stay updated on the contest timeline and announcement of winners.",
         cost: ["John F. Kennedy Profile in Courage Essay Contest is a free activity", false, 0, "unknown"],
         tags: ["Government/Politics", "History"],
-        id: 1331,
+        id: 1332,
     },
     {
         title: "The Patricia Grodd Poetry Prize for Young Writers",
@@ -33690,7 +33690,7 @@ const list = [
             "To participate in the Patricia Grodd Poetry Prize for Young Writers you must:\n\n1. Review the competition website for eligibility requirements, including age and residency restrictions.\n2. Familiarize themselves with the submission guidelines, including the specific theme or prompt for the current year.\n3. Compose an original poem adhering to the length and format requirements outlined in the guidelines.\n4. Proofread the poem for grammatical, spelling, and punctuation errors.\n5. Create a cover letter that includes their contact information, a brief bio, and the title of their poem.\n6. Submit their poem and cover letter through the designated online submission portal on the competition website.\n7. Pay any required entry fees, if applicable, and retain a confirmation of their submission.\n8. Await the announcement of the winners and any feedback from the judges.",
         cost: ["The Patricia Grodd Poetry Prize for Young Writers is a free activity", false, 0, "unknown"],
         tags: ["Creative Writing", "Literature"],
-        id: 1332,
+        id: 1333,
     },
     {
         title: "Letters About Literature",
@@ -33714,7 +33714,7 @@ const list = [
             "To participate in the Letters About Literature you must:\n\n1. Review the competition guidelines and rules on the official website.\n\n2. Select a book that has significantly impacted their life and compose a personal letter to the author, detailing its influence.\n\n3. Submit their letter online or via mail, adhering to the submission instructions provided on the competition website.\n\n4. Include a completed entry coupon or form with their submission, along with any required documentation.\n\n5. Ensure their submission meets all specified requirements, including word count and formatting guidelines.\n\n6. Monitor the submission deadline and submit their entry before the specified date.\n\n7. Await the announcement of competition results and follow any further instructions provided by the competition organizers.",
         cost: ["Letters About Literature is a free activity", false, 0, "unknown"],
         tags: ["Literature", "Creative Writing"],
-        id: 1333,
+        id: 1334,
     },
     {
         title: "Adroit Prizes for Poetry and Prose",
@@ -33738,7 +33738,7 @@ const list = [
             "To participate in the Adroit Prizes for Poetry and Prose you must:\n1. Visit the Adroit Journal website.\n2. Review the guidelines and submission requirements for the Writing competition.\n3. Prepare their poetry or prose submission according to the guidelines.\n4. Complete the online submission form with their contact information and submission materials.\n5. Pay the submission fee, if applicable.\n6. Submit their entry before the deadline.",
         cost: ["Adroit Prizes for Poetry and Prose costs money to enter", true, "unknown", "unknown"],
         tags: ["Literature", "Creative Writing"],
-        id: 1334,
+        id: 1335,
     },
     {
         title: "National Poetry Month Poster Contest",
@@ -33762,7 +33762,7 @@ const list = [
             "To participate in the National Poetry Month Poster Contest you must:\n\n1. Visit the official website.\n2. Review the guidelines and rules.\n3. Submit original writing or poetry.\n4. Create a poster design following the guidelines.\n5. Complete the online entry form.\n6. Review the submission for accuracy.\n7. Submit before the deadline, considering any additional requirements.",
         cost: ["National Poetry Month Poster Contest is a free activity", false, 0, "unknown"],
         tags: ["Art/Design", "Literature"],
-        id: 1335,
+        id: 1336,
     },
     {
         title: "Ayn Rand Essay Contests",
@@ -33786,7 +33786,7 @@ const list = [
             'To participate in the Ayn Rand Essay Contests you must:\n1. Visit the official website of the Ayn Rand Institute.\n2. Navigate to the "Essay Contests" section.\n3. Select the "High School" category.\n4. Read the guidelines and prompts.\n5. Prepare an essay according to the guidelines and prompts.\n6. Submit the essay online through the designated submission portal.\n7. Complete the entry form with personal and contact information.\n8. Verify compliance with all submission requirements and deadlines.\n9. Await the announcement of winners on the Ayn Rand Institute website.',
         cost: ["Ayn Rand Essay Contests is a free activity", false, 0, "unknown"],
         tags: ["Literature", "Philosophy", "Critical Thinking", "Writing"],
-        id: 1336,
+        id: 1337,
     },
     {
         title: "Creative Communication Poetry and Essay Contests",
@@ -33810,7 +33810,7 @@ const list = [
             'To participate in the Creative Communication Poetry and Essay Contests you must:\n\n1. Visit the Creative Communication website.\n2. Select the "Contests" tab from the menu.\n3. Choose the Poetry or Essay contest to enter.\n4. Review the guidelines and submission requirements for the selected contest.\n5. Complete the registration and entry form online.\n6. Write and submit an original poem or essay according to the specified guidelines.\n7. Pay the entry fee, if applicable.\n8. Await confirmation of submission and results announcement.',
         cost: ["Creative Communication Poetry and Essay Contests costs money to enter", true, "unknown", "unknown"],
         tags: ["Creative Writing", "Literature"],
-        id: 1337,
+        id: 1338,
     },
     {
         title: "The Bennington Young Writers Awards",
@@ -33834,7 +33834,7 @@ const list = [
             'To participate in the Bennington Young Writers Awards you must:\n1. Visit the Bennington College website.\n2. Navigate to the "Young Writers Awards" section.\n3. Read the submission guidelines and requirements carefully.\n4. Prepare an original writing piece according to the specified guidelines.\n5. Complete the online submission form.\n6. Upload the writing piece and any required documents.\n7. Submit the form and wait for confirmation of receipt.',
         cost: ["The Bennington Young Writers Awards is a free activity", false, 0, "unknown"],
         tags: ["Creative Writing", "Literature"],
-        id: 1338,
+        id: 1339,
     },
     {
         title: "PLURAL+ Youth Video Festival",
@@ -33858,7 +33858,7 @@ const list = [
             "To participate in the PLURAL+ Youth Video Festival, you must:\n\n1. Register for an account on the PLURAL+ Youth Video Festival website.\n2. Create a video addressing migration, diversity, social inclusion, and xenophobia prevention.\n3. Submit the video using the submission form, providing title, description, and credits.\n4. Ensure the video meets technical requirements and guidelines.\n5. Submit the video before the deadline.\n6. Await confirmation of submission and communication regarding the entry's status.\n7. Follow additional instructions for selected videos.",
         cost: ["PLURAL+ Youth Video Festival is a free activity", false, 0, "unknown"],
         tags: ["Film/Cinema", "Social Science", "Diversity and Inclusion"],
-        id: 1339,
+        id: 1340,
     },
     {
         title: "Science without Borders\u00ae Challenge",
@@ -33882,7 +33882,7 @@ const list = [
             "To participate in the Science without Borders\u00ae Challenge you must:\n\n1. Visit the Science Without Borders\u00ae Challenge website.\n2. Review the competition guidelines and rules.\n3. Prepare an original piece of artwork that aligns with the theme of the competition.\n4. Complete the online registration form and submit the artwork according to the specified deadline.\n5. Await notification of acceptance and further instructions from the competition organizers.",
         cost: ["Science without Borders\u00ae Challenge is a free activity", false, 0, "unknown"],
         tags: ["Art/Design", "Environmental Science"],
-        id: 1340,
+        id: 1341,
     },
     {
         title: "Sony World Photography Awards Youth Competition",
@@ -33906,7 +33906,7 @@ const list = [
             'To participate in the Sony World Photography Awards Youth Competition you must:\n\n1. Visit the Sony World Photography Awards website.\n2. Navigate to the Youth competition section.\n3. Click on the "Enter Now" button.\n4. Create an account or log in if you already have one.\n5. Complete the entry form with personal details and image submission.\n6. Pay the entry fee, if applicable.\n7. Submit the entry before the deadline.\n8. Await the judging process and results announcement.',
         cost: ["Sony World Photography Awards Youth Competition is a free activity", false, 0, "unknown"],
         tags: ["Photography/Videography", "Art/Design"],
-        id: 1341,
+        id: 1342,
     },
     {
         title: "Bow Seat's Ocean Awareness Contest",
@@ -33930,7 +33930,7 @@ const list = [
             "To participate in the Bow Seat's Ocean Awareness Contest you must:\n\n1. Visit the Bow Seat website and navigate to the Ocean Awareness Contest page.\n2. Review the contest guidelines, including eligibility requirements and submission deadlines.\n3. Register for the contest by filling out the online registration form with their personal information.\n4. Choose a category to enter, such as visual art, film, or creative writing.\n5. Create and submit their original artwork or project based on the contest theme and guidelines.\n6. Complete the submission process by uploading their work to the contest website and providing any required documentation or artist statements.",
         cost: ["Bow Seat's Ocean Awareness Contest is a free activity", false, 0, "unknown"],
         tags: ["Art/Design", "Environmental Science"],
-        id: 1342,
+        id: 1343,
     },
     {
         title: "YoungArts Competition",
@@ -33954,7 +33954,7 @@ const list = [
             'To participate in the YoungArts Competition you must:\n\n1. Visit the YoungArts website.\n2. Navigate to the "Apply" section.\n3. Create an account or log in.\n4. Complete the application form.\n5. Upload digital images or videos of artwork.\n6. Pay the application fee, if applicable.\n7. Submit the application before the deadline.\n8. Await notification of selection or rejection.',
         cost: ["YoungArts Competition is a free activity", false, 0, "unknown"],
         tags: ["Art/Design", "Performing Arts"],
-        id: 1343,
+        id: 1344,
     },
     {
         title: "Embracing Our Differences",
@@ -33978,7 +33978,7 @@ const list = [
             "To participate in the Embracing Our Differences you must:\n\n1. Visit the Embracing Our Differences website.\n2. Review the competition guidelines.\n3. Create original art reflecting the theme.\n4. Ensure artwork meets size and format requirements.\n5. Complete the online submission form.\n6. Upload a high-resolution image of the artwork.\n7. Pay the submission fee (if applicable).\n8. Submit the form and artwork before the deadline.\n9. Await confirmation of submission and notification of results.",
         cost: ["Embracing Our Differences is a free activity", false, 0, "unknown"],
         tags: ["Art/Design", "Diversity and Inclusion"],
-        id: 1344,
+        id: 1345,
     },
     {
         title: "Congressional Art Competition",
@@ -34002,7 +34002,7 @@ const list = [
             "To participate in the Congressional Art Competition you must:\n\n1. Review eligibility requirements, including residency and submission guidelines.\n2. Create original artwork meeting competition criteria (size, medium).\n3. Complete and submit entry form with artwork description and documentation.\n4. Obtain necessary signatures/approvals from teacher, parent/guardian.\n5. Submit artwork and entry form by deadline.\n6. Await notification of results and further instructions.",
         cost: ["Congressional Art Competition is a free activity", false, 0, "unknown"],
         tags: ["Art/Design", "Government/Politics"],
-        id: 1345,
+        id: 1346,
     },
     {
         title: "Vans Custom Culture",
@@ -34026,7 +34026,7 @@ const list = [
             "To participate in the Vans Custom Culture you must:\n1. Visit the Vans Custom Culture website to review competition guidelines.\n2. Register their high school online.\n3. Form a team with a faculty advisor.\n4. Design and customize four pairs of Vans shoes according to the competition theme.\n5. Document the design process and final products with photos and videos.\n6. Submit designs and documentation by the deadline.\n7. Await the judging panel's review and announcement of finalists and winners.",
         cost: ["Vans Custom Culture is a free activity", false, 0, "unknown"],
         tags: ["Art/Design"],
-        id: 1346,
+        id: 1347,
     },
     {
         title: "The International Environmental Children\u2019s Drawing Contest",
@@ -34050,7 +34050,7 @@ const list = [
             'To participate in the The International Environmental Children\u2019s Drawing Contest you must:\n\n1. Visit the official website of The International Environmental Children\u2019s Drawing Contest.\n2. Locate and click on the "Registration" or "Join" tab on the website.\n3. Fill out the registration form with accurate personal information and contact details.\n4. Submit the required artwork according to the specified guidelines and theme of the contest.\n5. Pay any required entry fee, if applicable.\n6. Await confirmation of successful registration and submission from the contest organizers.\n7. Adhere to any additional instructions or deadlines provided by the contest organizers.',
         cost: ["The International Environmental Children\u2019s Drawing Contest is a free activity", false, 0, "unknown"],
         tags: ["Art/Design", "Environmental Science"],
-        id: 1347,
+        id: 1348,
     },
     {
         title: "National History Bee",
@@ -34074,7 +34074,7 @@ const list = [
             "To participate in the National History Bee you must:\n\n1. Visit the National History Bee website.\n2. Register by completing the form with personal information, including name, school, grade, and contact details.\n3. Pay the registration fee, if applicable.\n4. Prepare for the competition by studying historical events, figures, and facts.\n5. Attend the scheduled competition date and location.",
         cost: ["National History Bee costs money to enter", true, "unknown", "unknown"],
         tags: ["History"],
-        id: 1348,
+        id: 1349,
     },
     {
         title: "National History Day",
@@ -34098,7 +34098,7 @@ const list = [
             "To participate in the National History Day you must:\n1. Select a topic aligned with the annual theme.\n2. Conduct thorough research from diverse sources.\n3. Formulate a thesis and supporting argument.\n4. Choose an appropriate project category.\n5. Create a project effectively conveying the historical significance of the topic.\n6. Revise and refine the project to meet competition standards.\n7. Register through the official website or designated channels.\n8. Submit the completed project by the established deadline.\n9. Participate in the competition and present the project for evaluation.",
         cost: ["National History Day is a free activity", false, 0, "unknown"],
         tags: ["History", "Public Speaking"],
-        id: 1349,
+        id: 1350,
     },
     {
         title: "International History Olympiad",
@@ -34122,7 +34122,7 @@ const list = [
             "To participate in the International History Olympiad you must:\n\n1. Visit the official International History Olympiad website.\n2. Navigate to the registration section on the website.\n3. Complete the registration form with the required personal and school information.\n4. Review and accept the terms and conditions of the competition.\n5. Submit the registration fee, if applicable.\n6. Submit the completed registration form before the deadline.\n7. Await confirmation of registration and further instructions from the competition organizers.",
         cost: ["International History Olympiad costs money to enter", true, "unknown", "unknown"],
         tags: ["History"],
-        id: 1350,
+        id: 1351,
     },
     {
         title: "Humanities, and Social Sciences (INSPIRE)",
@@ -34146,7 +34146,7 @@ const list = [
             "To participate in the Humanities, and Social Sciences (INSPIRE) you must:\n\n1. Visit the official INSPIRE competition website or contact the school's History department for registration and eligibility information.\n2. Complete the online registration form, providing all required personal and academic details.\n3. Prepare a research paper or project on a relevant topic within the humanities or social sciences, adhering to the competition's guidelines and criteria.\n4. Submit the research paper or project by the specified deadline, following the submission instructions provided by the competition organizers.\n5. Await confirmation of acceptance and further instructions for the competition, including any additional requirements or deadlines for participation.",
         cost: ["Humanities, and Social Sciences (INSPIRE) is a free activity", false, 0, "unknown"],
         tags: ["Social Science", "History"],
-        id: 1351,
+        id: 1352,
     },
     {
         title: "George S. & Stella M. Knight Essay Contest",
@@ -34170,7 +34170,7 @@ const list = [
             "To participate in the George S. & Stella M. Knight Essay Contest, you must:\n\n1. Research the contest and review eligibility and essay requirements.\n2. Note the submission deadline.\n3. Select a relevant topic and develop an original, well-researched essay.\n4. Adhere to specified guidelines (word count, formatting).\n5. Proofread and edit for accuracy and writing quality.\n6. Submit the essay online or by mail before the deadline, including any necessary documents.\n7. Anticipate the announcement of winners and potential recognition.",
         cost: ["George S. & Stella M. Knight Essay Contest is a free activity", false, 0, "unknown"],
         tags: ["History", "Writing"],
-        id: 1352,
+        id: 1353,
     },
     {
         title: "National History Bowl",
@@ -34194,7 +34194,7 @@ const list = [
             'To participate in the National History Bowl you must:\n\n1. Visit the National History Bowl website.\n2. Click on the "Join" or "Register" button.\n3. Complete the online registration form.\n4. Pay the registration fee, if applicable.\n5. Review the competition rules and guidelines.\n6. Prepare for the competition by studying historical events, figures, and important dates.',
         cost: ["National History Bowl costs money to enter", true, "unknown", "unknown"],
         tags: ["History"],
-        id: 1353,
+        id: 1354,
     },
     {
         title: "World Historian Student Essay Competition",
@@ -34218,7 +34218,7 @@ const list = [
             "To participate in the World Historian Student Essay Competition you must:\n\n1. Research the competition's requirements, including topic, word count, and submission deadline.\n2. Develop a thesis statement that aligns with the competition's theme.\n3. Conduct thorough research on the chosen topic, utilizing credible sources.\n4. Write a well-structured, persuasive essay that demonstrates a deep understanding of historical events and their impact.\n5. Proofread and edit the essay to ensure it is free of grammatical errors and effectively communicates the intended message.\n6. Submit the essay according to the competition's guidelines.\n7. Await the competition results and feedback from the judges.",
         cost: ["World Historian Student Essay Competition is a free activity", false, 0, "unknown"],
         tags: ["History", "Social Science"],
-        id: 1354,
+        id: 1355,
     },
     {
         title: "American History Essay Contest",
@@ -34242,7 +34242,7 @@ const list = [
             "To participate in the American History Essay Contest you must:\n\n1. Familiarize themselves with the contest rules and guidelines.\n2. Select a specific historical topic related to American history.\n3. Compose an original essay adhering to the specified word count and formatting requirements.\n4. Review and edit their essay for clarity, coherence, and grammar.\n5. Submit their essay by the designated deadline, including any necessary entry forms or documentation.\n6. Await notification of the results from the contest organizers.",
         cost: ["American History Essay Contest is a free activity", false, 0, "unknown"],
         tags: ["History", "Writing"],
-        id: 1355,
+        id: 1356,
     },
     {
         title: "Write Your Own Historical Fiction Competition",
@@ -34267,7 +34267,7 @@ const list = [
             "To participate in the Write Your Own Historical Fiction Competition you must:\n\n1. Visit the competition website or contact the competition organizers for entry information.\n2. Review the competition guidelines and requirements, including word count, theme, and submission deadline.\n3. Write an original historical fiction story that meets the competition criteria.\n4. Revise and edit the story to ensure it meets the competition's standards.\n5. Format the story according to the competition's submission guidelines, including font size and spacing.\n6. Submit the story through the designated method, such as online form or email, along with any required entry forms or fees.\n7. Await confirmation of receipt and any further instructions from the competition organizers.",
         cost: ["Write Your Own Historical Fiction Competition is a free activity", false, 0, "unknown"],
         tags: ["Creative Writing", "History"],
-        id: 1356,
+        id: 1357,
     },
     {
         title: "US Medicine & Disease Olympiad (USMDO)",
@@ -34291,7 +34291,7 @@ const list = [
             "To participate in the US Medicine & Disease Olympiad (USMDO), you must:\n\n1. Access competition information and registration details on the USMDO website.\n2. Ensure eligibility and meet registration deadlines.\n3. Complete the online registration form with accurate personal and school information.\n4. Pay the registration fee, if applicable, to secure participation.\n5. Study medical topics and diseases outlined in the competition syllabus.\n6. Attend the designated competition location on the scheduled date.",
         cost: ["US Medicine & Disease Olympiad (USMDO) costs money to enter", true, "unknown", "unknown"],
         tags: ["Medicine"],
-        id: 1357,
+        id: 1358,
     },
     {
         title: "Medic Mentor Essay Competition",
@@ -34315,7 +34315,7 @@ const list = [
             "To participate in the Medic Mentor Essay Competition you must:\n\n1. Visit the Medic Mentor website.\n2. Navigate to the Medical Essay Competition page.\n3. Review the competition guidelines and eligibility requirements.\n4. Prepare an original essay on the given topic.\n5. Complete the online application form with personal details and essay submission.\n6. Pay the entry fee if applicable.\n7. Submit the application before the deadline.",
         cost: ["Medic Mentor Essay Competition is a free activity", false, 0, "unknown"],
         tags: ["Medicine"],
-        id: 1358,
+        id: 1359,
     },
     {
         title: "HOSA Future Health Professionals:",
@@ -34339,7 +34339,7 @@ const list = [
             "To participate in the HOSA Future Health Professionals you must:\n\n1. Determine if their high school or local area has a HOSA chapter.\n\n2. Contact the HOSA chapter advisor or faculty member to express interest in joining.\n\n3. Complete membership forms and pay dues to become a HOSA member.\n\n4. Inquire about Medical competition requirements and deadlines.\n\n5. Study competition guidelines and practice skills and knowledge.\n\n6. Register for the competition by submitting forms and fees.\n\n7. Attend mandatory meetings or training sessions.\n\n8. Participate in the competition and demonstrate medical skills and knowledge.\n\n9. Network with students and professionals to enhance understanding and passion for the medical field.",
         cost: ["HOSA Future Health Professionals: costs money to enter", true, "unknown", "unknown"],
         tags: ["Medicine", "Health Sciences"],
-        id: 1359,
+        id: 1360,
     },
     {
         title: "Brain Bee",
@@ -34363,7 +34363,7 @@ const list = [
             "To participate in the Brain Bee you must:\n1. Determine if their high school has a Brain Bee club or if nearby schools participate in the competition.\n2. Contact the club advisor or teacher in charge of Brain Bee to express interest in joining the competition.\n3. Obtain necessary information or paperwork to officially sign up for the competition.\n4. Study and prepare for the competition by reviewing designated study materials and practicing sample questions.\n5. Attend meetings or study sessions organized by the Brain Bee club to further prepare for the competition.\n6. Register for the competition by submitting required forms or fees by the specified deadline.\n7. Participate in the competition on the scheduled date and location.",
         cost: ["Brain Bee is a free activity", false, 0, "unknown"],
         tags: ["Medicine"],
-        id: 1360,
+        id: 1361,
     },
     {
         title: "National Medical Quiz Bowl",
@@ -34387,7 +34387,7 @@ const list = [
             "To participate in the National Medical Quiz Bowl you must:\n\n1. Visit the official website of the National Medical Quiz Bowl.\n2. Locate the registration or sign-up section on the website.\n3. Complete the registration form with accurate personal and school information.\n4. Submit any required documentation or proof of eligibility.\n5. Pay the registration fee, if applicable.\n6. Await confirmation of registration and further instructions from the organizers.\n7. Prepare for the competition by studying medical knowledge and practicing quiz bowl-style questions.",
         cost: ["National Medical Quiz Bowl costs money to enter", true, "unknown", "unknown"],
         tags: ["Medicine", "STEM"],
-        id: 1361,
+        id: 1362,
     },
     {
         title: "Vision Global Health",
@@ -34411,8 +34411,8 @@ const list = [
             "To participate in the Vision Global Health you must:\n1. Review the eligibility requirements and guidelines for the competition.\n2. Complete the online registration form.\n3. Obtain consent from a parent or legal guardian if under 18.\n4. Submit a written essay or research project.\n5. Await confirmation of participation.\n6. Attend any required orientation sessions or training workshops.",
         cost: ["Vision Global Health costs money to enter", true, "unknown", "unknown"],
         tags: ["Medicine", "Health Sciences"],
-        id: 1362,
+        id: 1363,
     },
 ];
 
-export default list
+export default list;

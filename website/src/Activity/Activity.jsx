@@ -282,7 +282,7 @@ export default function Activity() {
                                     )}
                             </div>
 
-                            {activityDocument.deadline != "unknown" && (
+                            {/* {activityDocument.deadline != "unknown" && (
                                 <div className="deadlineDiv">
                                     Deadline: <span className="username">{activityDocument.deadline.trim()}</span>
                                 </div>
@@ -300,7 +300,7 @@ export default function Activity() {
                                         This activity goes on for
                                         <span className="username"> {activityDocument.duration}</span>
                                     </div>
-                                )}
+                                )} */}
                             {activityDocument && (
                                 <div className="form-div">
                                     {user && userDoc && authIsReady && !isActivityAdded && (

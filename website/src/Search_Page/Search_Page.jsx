@@ -367,7 +367,7 @@ export default function Search() {
                                     hidePickedOptions
                                 />
                             </div>
-
+{/* 
                             <div className="search_filter_input_main_div" id="date_filter_div">
                                 <DatePickerInput
                                     clearable
@@ -380,7 +380,7 @@ export default function Search() {
                                         setDate(e);
                                     }}
                                 />
-                            </div>
+                            </div> */}
 
                             <div className="search_filter_input_main_div" id="location_filter_div">
                                 <MultiSelect
